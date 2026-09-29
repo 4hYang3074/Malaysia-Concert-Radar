@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>已确定的演唱会 · 马来西亚演唱会雷达</title>
+<meta name="theme-color" content="#15171c">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div class="wrap view">
+  <h1>✅ 已确定的演唱会</h1>
+  <p class="lede" id="desc">按售票时间分类，点明星看详细资料。</p>
+  <div class="segs" id="segs"></div>
+  <input class="search" id="q" type="search" placeholder="搜索明星、演出、场馆或城市…">
+  <div class="list" id="list"></div>
+  <div id="foot"></div>
+</div>
+<script src="assets/app.js"></script>
+<script>
+loadData().then(d => {
+  nav(d, "confirmed");
+  const now = new Date();
+  const byCat = {all: d.events};
+  for (const c of CATS) byCat[c.key] = d.events.filter(e => category(e, now) === c.key);
+  // 默认打开“即将开售”（重点是未来抢票日期）
+  let cat = qs("cat");
+  if (!byCat[cat]) {
+    cat = "soon";
+    history.replaceState(null, "", "confirmed.html?cat=" + cat);
+  }
+  const tabs = [...CATS, {key: "all", icon: "📋", label: "全部", desc: "所有已上架的演出，按演出日期排序。"}];
+  $("#segs").innerHTML = tabs.map(c => `<a class="seg ${c.key === cat ? "on" : ""}" href="confirmed.html?cat=${c.key}">${c.icon} ${c.label}<b>${byCat[c.key].length}</b></a>`).join("");
+  $("#desc").textContent = tabs.find(c => c.key === cat).desc;
+  document.querySelector(".seg.on")?.scrollIntoView({inline: "center", block: "nearest"});
+
+  function render() {
+    const q = $("#q").value.trim().toLowerCase();
+    const list = sortFor(cat, byCat[cat].filter(e =>
+      !q || `${e.artist_name} ${e.name} ${e.venue || ""} ${e.city || ""}`.toLowerCase().includes(q)), now);
+    $("#list").innerHTML = list.length ? list.map(e => {
+      const st = status(e, now);
+      const when = e.dates.length ? e.dates.map(s => fmt(s, false)).join("、") : "日期未公布";
+      return `<a class="row" href="event.html?id=${encodeURIComponent(e.id)}">
+        ${avatar(e.avatar, e.artist_name, 64, e.avatar_kind)}
+        <div class="body">
+          <div class="name">${badges(e, now)}${esc(e.artist_name)}</div>
+          <div class="ev">${esc(e.name)}</div>
+          <div class="info">📅 ${esc(when)} · 📍 ${esc(e.city || e.venue || "场馆未公布")}</div>
+          <span class="pill ${st.cls}">${esc(st.short || st.text)}</span>
+        </div>
+        <span class="chev">›</span>
+      </a>`;
+    }).join("") : `<div class="card empty">${q ? "没有符合搜索的演出。"
+      : cat === "soon" ? `售票平台上暂时没有“已公布开售时间、还没开卖”的演出。<br>官方 IG 先公布的开售时间，请看 <a href="index.html">📅 抢票日历</a>。`
+      : "这一类目前没有演出。"}</div>`;
+  }
+  $("#q").addEventListener("input", render);
+  render();
+  $("#foot").innerHTML = footer(d);
+}).catch(() => { nav(null, "confirmed"); fail($("#list")); });
+</script>
+</body>
+</html>

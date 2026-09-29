@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>演出详情 · 马来西亚演唱会雷达</title>
+<meta name="theme-color" content="#15171c">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div class="wrap view" id="app"></div>
+<script src="assets/app.js"></script>
+<script>
+loadData().then(d => {
+  nav(d, "confirmed");
+  const e = d.byId[qs("id")];
+  if (!e) { location.replace("confirmed.html"); return; }   // 找不到（已结束或下架）就回列表
+  const now = new Date();
+  const cat = category(e, now), st = status(e, now);
+  document.title = `${e.artist_name} · 马来西亚演唱会雷达`;
+  const tiers = e.tiers || [];
+  const maps = (e.seat_maps || []).map(localUrl).filter(Boolean);
+  const sales = (e.sales || []).filter(s => s.start || s.end || s.queue);
+  const rel = d.leadsByEvent[e.id] || [];
+  const fee = e.source === "GoLive" || e.source === "Ticket2U" ? "（价格未含手续费）" : "";
+  const next = nextSale(e, now);
+
+  $("#app").innerHTML = `
+    <a class="back" href="confirmed.html?cat=${cat}">‹ 返回${esc(CATS.find(c => c.key === cat).label)}</a>
+    <div class="card hero" style="margin-top:6px">
+      ${avatar(e.avatar, e.artist_name, 120, e.avatar_kind)}
+      <h1>${esc(e.artist_name)}</h1>
+      <div class="sub">${esc(e.name)}</div>
+      <div style="margin-top:8px">${badges(e, now)}<span class="badge">${esc(e.source)}</span></div>
+      <div class="facts">
+        <div class="fact"><div class="k">📅 演出日期</div><div class="v">${e.dates.length ? e.dates.map(s => esc(fmt(s))).join("<br>") : "未公布"}</div></div>
+        <div class="fact"><div class="k">📍 场馆</div><div class="v">${esc(e.venue || "未公布")}${e.city ? `<br><small>${esc(e.city)}</small>` : ""}</div></div>
+        <div class="fact"><div class="k">⏰ 下一个售票节点</div><div class="v">${next ? `${esc(next.name || "开售")}<br>${esc(fmt(next.start))}` : esc(st.short || st.text)}</div></div>
+        ${e.limit ? `<div class="fact"><div class="k">🎟 限购</div><div class="v">每笔最多 ${e.limit} 张</div></div>` : ""}
+      </div>
+      <div class="banner ${st.cls}">${esc(st.text)}</div>
+      <a class="btn" href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">到 ${esc(e.source)} 购票 ↗</a>
+    </div>
+
+    ${sales.length ? `<h3>⏰ 售票时间</h3><div class="card"><table>
+      <tr><th>轮次</th><th>开始</th><th>结束</th></tr>
+      ${sales.map(s => `<tr class="${s.end && toDate(s.end) < now ? "past" : ""}">
+        <td><b>${esc(s.name || "")}</b>${s.code_required ? "<br><small>需要预售码</small>" : ""}${s.queue ? `<br><small>排队开放 ${esc(fmt(s.queue))}</small>` : ""}</td>
+        <td>${esc(fmt(s.start) || "—")}</td><td>${esc(fmt(s.end) || "未公布")}</td></tr>`).join("")}
+    </table></div>` : ""}
+
+    <h3>💺 座位图与票价${fee}</h3>
+    <div class="card">
+      ${maps.length ? `<div class="maps">${maps.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener"><img src="${esc(u)}" alt="官方座位图"></a>`).join("")}
+        <div class="meta" style="margin:6px 0 12px">官方座位图（来源：${esc(e.source)}，点图可放大）</div></div>`
+        : `<div class="empty">官方座位图还没公布，公布后会自动加上并通知你。</div>`}
+      ${tiers.length ? `<table class="pricetable"><tr><th>票区</th><th style="text-align:right">价格</th></tr>
+        ${tiers.map(t => `<tr><td>${esc(t.name)}${t.desc ? ` <small>· ${esc(t.desc)}</small>` : ""}${t.sold_out ? ' <span class="soldout">售罄</span>' : ""}</td><td class="price">${esc(t.price || "—")}</td></tr>`).join("")}</table>`
+        : e.price_text ? `<div class="note">${esc(e.price_text)}</div>`
+        : e.price_from ? `<div class="note">最低 ${esc(e.price_from)} 起（详细票区请看官网）</div>`
+        : `<div class="note">${maps.length ? "官方还没有用文字公布票价（目前只有座位图）。文字票价一公布，这里会自动变成价格表，并通知你。" : "票价还没公布，公布后会自动更新并通知你。"}</div>`}
+    </div>
+
+    ${Object.keys(e.notes || {}).length ? `<h3>📋 购票须知（官网原文）</h3><div class="card">${Object.entries(e.notes).map(([k, v]) =>
+      `<details><summary>${esc(k)}</summary><div class="note">${esc(v)}</div></details>`).join("")}</div>` : ""}
+
+    <h3>📣 相关消息</h3>
+    <div class="list">${rel.length ? rel.slice(0, 10).map(l => `
+      <a class="row" href="lead.html?id=${encodeURIComponent(l.id)}">
+        ${avatar(l.avatar, l.from.replace(/^[@#]/, ""), 40)}
+        <div class="body"><div class="ev" style="color:var(--ink);font-weight:600">${esc(l.title)}</div>
+          <div class="info">${esc(l.kind)} · ${esc(l.from)} · ${esc(fmt(l.time) || l.first_seen)}</div></div>
+        <span class="chev">›</span>
+      </a>`).join("") : `<div class="card empty">目前没有 IG 或新闻提到这场演出。</div>`}</div>
+
+    <div class="meta" style="margin-top:16px">首次发现：${esc(e.first_seen || "")} · 最后更新：${esc(d.generated_at)}</div>
+    ${footer(d)}`;
+}).catch(() => { nav(null, "confirmed"); fail($("#app")); });
+</script>
+</body>
+</html>

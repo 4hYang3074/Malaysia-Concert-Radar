@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>待确定的消息 · 马来西亚演唱会雷达</title>
+<meta name="theme-color" content="#15171c">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div class="wrap view">
+  <h1>🕒 待确定的消息</h1>
+  <p class="lede">这些消息提到了演唱会，但售票平台还没上架。上架后会自动移到“已确定”，并通知你。</p>
+  <div class="segs" id="segs"></div>
+  <div class="list" id="list"></div>
+  <a class="btn ghost" href="https://github.com/4hYang3074/Malaysia-Concert-Radar/issues/new?template=lead.yml" target="_blank" rel="noopener">＋ 我看到一个消息（例如小红书），提交给雷达</a>
+  <div id="foot"></div>
+</div>
+<script src="assets/app.js"></script>
+<script>
+const KINDS = [
+  {key: "all", label: "📋 全部"},
+  {key: "official", label: "📸 官方 IG", test: l => l.kind === "IG" && l.from.startsWith("@")},
+  {key: "tag", label: "#️⃣ IG 标签", test: l => l.kind === "IG" && l.from.startsWith("#")},
+  {key: "news", label: "📰 新闻", test: l => l.kind === "新闻"},
+  {key: "manual", label: "✋ 你提交的", test: l => l.kind === "人工"},
+];
+const ICON = {"IG": "📸", "新闻": "📰", "人工": "✋"};
+loadData().then(d => {
+  nav(d, "pending");
+  const k = KINDS.find(x => x.key === qs("kind")) || KINDS[0];
+  const count = x => x.test ? d.pending.filter(x.test).length : d.pending.length;
+  $("#segs").innerHTML = KINDS.map(x => `<a class="seg ${x === k ? "on" : ""}" href="pending.html?kind=${x.key}">${x.label}<b>${count(x)}</b></a>`).join("");
+  const list = k.test ? d.pending.filter(k.test) : d.pending;
+  $("#list").innerHTML = list.length ? list.slice(0, 100).map(l => `
+    <a class="row" href="lead.html?id=${encodeURIComponent(l.id)}">
+      ${l.avatar ? avatar(l.avatar, l.from.replace(/^[@#]/, ""), 52) : `<span class="av" style="width:52px;height:52px;font-size:24px">${ICON[l.kind] || "•"}</span>`}
+      <div class="body">
+        <div class="name" style="font-size:15.5px">${esc(l.title)}</div>
+        <div class="info">${esc(l.from)}${l.from_name ? "（" + esc(l.from_name) + "）" : ""} · ${esc(fmt(l.time) || l.first_seen)}</div>
+        ${(l.hints || []).length ? `<div class="info" style="color:var(--ink)">${esc(l.hints[0])}</div>` : ""}
+      </div>
+      <span class="chev">›</span>
+    </a>`).join("") : `<div class="card empty">这一类目前没有待确定的消息。</div>`;
+  $("#foot").innerHTML = footer(d);
+}).catch(() => { nav(null, "pending"); fail($("#list")); });
+</script>
+</body>
+</html>

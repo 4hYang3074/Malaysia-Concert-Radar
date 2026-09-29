@@ -10,6 +10,7 @@ import json
 import os
 import re
 import time
+import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -188,6 +189,7 @@ def golive(h):
             "sold_out": bool(d.get("is_sold_out")),
             "selling_fast": bool(d.get("is_selling_fast")),
             "url": f"https://www.golive-asia.com/event/{d['id']}",
+            "poster": d.get("portrait_image") or (d.get("images") or [None])[0] or d.get("event_logo"),
         })
     return out
 
@@ -251,7 +253,7 @@ def ticket2u(h):
             "limit": None,
             "sold_out": bool(sold) and all(sold),
             "url": r.get("link"),
-            "image": r.get("avatar"),
+            "poster": r.get("avatar"),
         })
     return out
 
@@ -284,7 +286,7 @@ def bookmyshow(h):
             "sold_out": False,
             "stop_sales": bool(x.get("stopSales")),
             "url": f"https://my.bookmyshow.com/en/events/{slug}/{x.get('code')}",
-            "image": f"https://{img}" if img and not img.startswith("http") else img,
+            "poster": f"https://{img}" if img and not img.startswith("http") else img,
         })
     return out
 
@@ -319,7 +321,8 @@ def ig_leads(h, cfg, token, state, health):
     leads, bad, ok = [], [], 0
     n = cfg.get("ig_posts_per_account", 10)
     for user in cfg["ig_accounts"]:
-        fields = f"business_discovery.username({user}){{username,name,media.limit({n}){{caption,timestamp,permalink,media_type}}}}"
+        fields = (f"business_discovery.username({user}){{username,name,profile_picture_url,"
+                  f"media.limit({n}){{caption,timestamp,permalink,media_type}}}}")
         try:
             bd = call(uid, {"fields": fields})["business_discovery"]
             ok += 1
@@ -330,7 +333,9 @@ def ig_leads(h, cfg, token, state, health):
         for m in (bd.get("media") or {}).get("data") or []:
             cap = m.get("caption") or ""
             if relevant(cap, kw, need_malaysia=global_acct):
-                leads.append(ig_lead(m, f"@{bd.get('username', user)}", bd.get("name")))
+                lead = ig_lead(m, f"@{bd.get('username', user)}", bd.get("name"))
+                lead["avatar_src"] = bd.get("profile_picture_url")
+                leads.append(lead)
         time.sleep(SLEEP)
 
     tag_ids = state.setdefault("hashtag_ids", {})
@@ -362,7 +367,7 @@ def ig_lead(m, where, name):
     t = datetime.strptime(ts, "%Y-%m-%dT%H:%M:%S%z").astimezone(MYT).strftime("%Y-%m-%d %H:%M") if ts else None
     return {"id": "ig-" + lead_id(m.get("permalink") or cap), "kind": "IG", "from": where, "from_name": name,
             "title": short(cap.split("\n")[0], 120), "text": short(cap, 900), "time": t,
-            "url": m.get("permalink"), "hints": sale_hints(cap)}
+            "url": m.get("permalink"), "hints": sale_hints(cap), "sale_times": sale_times(cap, t)}
 
 
 def sale_hints(text):
@@ -376,6 +381,60 @@ def sale_hints(text):
         if len(out) >= 5:
             break
     return out
+
+
+MONTHS = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
+SALE_LINE = re.compile(r"(?i)on-?\s?sale|presale|pre-sale|general sale|ticket(s|ing)? (sale|on sale|go live|available)|"
+                       r"开售|開售|公售|预售|預售|抢票|搶票|开抢|開搶|jualan tiket|tiket dijual|waiting room|queue")
+# “已经在卖”的句子里的日期通常是演出日期，不是开售日期
+ONSALE_NOW = re.compile(r"(?i)on sale now|now on sale|available now|selling now|sold out|现正发售|現正發售|火热售票中|熱賣中|售票中")
+EN_DATE = re.compile(r"(?i)\b(\d{1,2})(?:st|nd|rd|th)?\s+(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?(?:,?\s+(20\d\d))?"
+                     r"|\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(\d{1,2})(?:st|nd|rd|th)?(?:,?\s+(20\d\d))?")
+ZH_DATE = re.compile(r"(?:(20\d\d)\s*年\s*)?(\d{1,2})\s*月\s*(\d{1,2})\s*[日号號]")
+TIME = re.compile(r"(?i)(上午|中午|下午|晚上)?\s*(\d{1,2})(?:[:：.](\d{2}))?\s*(am|pm|点|點)|(\d{1,2})[:：](\d{2})")
+
+
+def sale_times(text, posted):
+    """从官方公告的“开售/预售”行读出开售时间（马来西亚时间）。只看提到售票的行，避免把演出日期当成开售日期。"""
+    base = datetime.strptime(posted, "%Y-%m-%d %H:%M") if posted else datetime.now(MYT).replace(tzinfo=None)
+    out = []
+    for line in unicodedata.normalize("NFKC", text).split("\n"):  # 𝐎𝐧-𝐒𝐚𝐥𝐞 这类花体字转回普通字母
+        if not SALE_LINE.search(line) or ONSALE_NOW.search(line):
+            continue
+        m = EN_DATE.search(line)
+        z = ZH_DATE.search(line)
+        if m:
+            day = int(m.group(1) or m.group(5))
+            mon = MONTHS[(m.group(2) or m.group(4)).lower()[:3]]
+            year = m.group(3) or m.group(6)
+        elif z:
+            year, mon, day = z.group(1), int(z.group(2)), int(z.group(3))
+        else:
+            continue
+        rest = line[(m or z).end():]
+        t = TIME.search(rest) or TIME.search(line)
+        hh = mm = None
+        if t:
+            if t.group(5):
+                hh, mm = int(t.group(5)), int(t.group(6))
+            else:
+                hh, mm = int(t.group(2)), int(t.group(3) or 0)
+                if (t.group(4) or "").lower() == "pm" or t.group(1) in ("下午", "晚上"):
+                    hh = hh % 12 + 12
+                elif (t.group(4) or "").lower() == "am" and hh == 12:
+                    hh = 0
+        y = int(year) if year else base.year
+        try:
+            when = datetime(y, mon, day, hh if hh is not None and hh < 24 else 0, mm or 0)
+        except ValueError:
+            continue
+        if not year and when < base - timedelta(days=60):  # 例如 12 月贴文讲 1 月开售
+            when = when.replace(year=y + 1)
+        if when < base - timedelta(days=1):
+            continue
+        out.append({"time": when.strftime("%Y-%m-%d %H:%M") if hh is not None else when.strftime("%Y-%m-%d"),
+                    "line": line.strip(" ⁠⁠")[:140]})
+    return out[:4]
 
 
 def news_leads(h, cfg, health):
@@ -426,7 +485,8 @@ def manual_leads(h, health):
         out.append({"id": f"manual-{i['number']}", "kind": "人工", "from": "你提交的线索",
                     "title": i["title"][4:].strip() or "（没有标题）", "text": short(body, 600),
                     "time": local(i.get("created_at")), "url": link.group(0) if link else i.get("html_url"),
-                    "issue": i.get("html_url"), "hints": []})
+                    "issue": i.get("html_url"), "hints": sale_hints(body),
+                    "sale_times": sale_times(body, local(i.get("created_at")))})
     health["人工线索"] = {"ok": True, "count": len(out)}
     return out
 
@@ -504,6 +564,131 @@ def track_prices(events, state, now_s, first_run):
             updated.append(e)
         seen[e["id"]] = n
     return updated
+
+
+# ---------- 明星名字与头像 ----------
+
+TITLE_NOISE = re.compile(
+    r"(?i)\b(konsert|concert|live in concert|live in|live|world tour|asia tour|asian tour|tour|showcase|"
+    r"in kuala lumpur|kuala lumpur|in malaysia|malaysia|johor bahru|in sabah|sabah|penang|"
+    r"20\d\d(-\d\d)?|anniversary|\d+(st|nd|rd|th)|feat\.?|ft\.?|presents?|bnpl|the)\b")
+
+
+def norm(s):
+    return re.sub(r"[\W_]+", "", (s or "").lower())
+
+
+def title_queries(e):
+    """从演出名称猜几个可能的艺人名，拿去 Deezer 搜索。"""
+    # Deezer 搜索不会忽略多余字词（“Air Supply A Matter of Time” 搜不到，“Air Supply” 才行），
+    # 所以试：官方艺人栏位、“by 某某”、冒号前的部分，再从名称开头取前 3/2/1 个词
+    name = re.sub(r"\[[^\]]*\]|【[^】]*】|<[^>]*>", " ", html.unescape(e["name"]))
+    out = [e.get("artist")]
+    by = re.search(r"(?i)\bby\s+([^:：《(（\[|]+)", name)
+    if by:
+        out.append(TITLE_NOISE.sub(" ", by.group(1)))
+    out.append(TITLE_NOISE.sub(" ", re.split(r"\s*[:：《「(（|]|\s[-–]\s", name)[0]))
+    words = re.sub(r"\s+", " ", TITLE_NOISE.sub(" ", re.sub(r"[^\w\s'&.]", " ", name))).strip().split(" ")
+    for n in (3, 2, 1):
+        if len(words) >= n:
+            out.append(" ".join(words[:n]))
+    seen, res = set(), []
+    for q in out:
+        q = (q or "").strip(" -–'\"")
+        if len(norm(q)) >= 3 and norm(q) not in seen:
+            seen.add(norm(q))
+            res.append(q)
+    return res
+
+
+def deezer_artist(h, e):
+    """回传 (艺人名, 头像网址)。只接受名字确实出现在演出名称里的结果，避免认错人。"""
+    title = norm(html.unescape(e["name"]) + " " + (e.get("artist") or ""))
+    found = {}
+    for q in title_queries(e):
+        try:
+            res = h.json("https://api.deezer.com/search/artist?q=" + urllib.parse.quote(q) + "&limit=10", retries=2)
+        except Exception:
+            continue
+        time.sleep(0.3)
+        for a in res.get("data") or []:
+            n = norm(a.get("name"))
+            if len(n) < 2 or n not in title or not a.get("picture_medium") or "/artist//" in a["picture_medium"]:
+                continue  # 名字要出现在演出名称里；Deezer 没有照片时是预设灰图
+            # 演出名称里的普通单词（Spotlight、Cadenza、Dior…）常撞到同名小账号：用粉丝数把关
+            if re.search(r"[^\x00-\x7f]", a["name"]):
+                need = 20            # 中文等名字本身就很特定
+            elif " " not in a["name"].strip():
+                need = 5000          # 单个英文词
+            else:
+                need = 300
+            if a.get("nb_fan", 0) >= need:
+                found[a["id"]] = a
+    if not found:
+        return None, None
+    best = max(found.values(), key=lambda a: (len(norm(a["name"])), a.get("nb_fan", 0)))
+    return best["name"], best.get("picture_big") or best["picture_medium"]
+
+
+def download_image(h, url, rel, max_bytes=3_000_000):
+    path = ROOT / "docs" / rel
+    if path.exists():
+        return rel
+    try:
+        with h.opener.open(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=40) as r:
+            blob = r.read(max_bytes + 1)
+            ctype = r.headers.get("Content-Type") or ""
+        if len(blob) > max_bytes or not ctype.startswith("image/"):
+            return None
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(blob)
+        return rel
+    except Exception as ex:
+        print(f"  image {rel}: {ex}", flush=True)
+        return None
+
+
+def add_avatars(h, events, leads, state, today):
+    """每场演出：先找 Deezer 的艺人照片，找不到用官方海报。结果存进 state 避免每次重查；
+    没找到的 7 天后再试。图片下载到 docs/avatars/。"""
+    cache = state.setdefault("artists", {})
+    used = set()
+    for e in events:
+        c = cache.get(e["id"])
+        if not c or (not c.get("photo") and c.get("checked", "") < (datetime.fromisoformat(today) - timedelta(days=7)).strftime("%Y-%m-%d")):
+            name, pic = deezer_artist(h, e)
+            c = {"name": name, "photo": None, "checked": today}
+            if pic:
+                c["photo"] = download_image(h, pic, f"avatars/a-{hashlib.sha1(norm(name).encode()).hexdigest()[:12]}.jpg")
+            cache[e["id"]] = c
+        guesses = title_queries(e)
+        e["artist_name"] = c.get("name") or e.get("artist") or (guesses[0] if guesses else e["name"])
+        avatar, kind = c.get("photo"), "artist"
+        if not avatar and not e.get("poster") and e.get("avatar") and (ROOT / "docs" / e["avatar"]).exists():
+            avatar, kind = e["avatar"], e.get("avatar_kind") or "poster"  # 来源这次被挡、沿用上次资料
+        elif not avatar and e.get("poster"):
+            ext = ".png" if ".png" in e["poster"].split("?")[0].lower() else ".jpg"
+            avatar, kind = download_image(h, e["poster"], f"avatars/p-{e['id']}{ext}"), "poster"
+        e["avatar"], e["avatar_kind"] = (avatar, kind) if avatar else (None, None)
+        e.pop("poster", None)  # 签名链接会失效，不放进输出
+        if avatar:
+            used.add(avatar)
+    for l in leads:
+        src = l.pop("avatar_src", None)
+        if l["kind"] == "IG" and l["from"].startswith("@"):
+            rel = f"avatars/ig-{norm(l['from'])}.jpg"
+            if src and not (ROOT / "docs" / rel).exists():
+                download_image(h, src, rel)
+            if (ROOT / "docs" / rel).exists():
+                l["avatar"] = rel
+                used.add(rel)
+    for k in [k for k in cache if k not in {e["id"] for e in events}]:
+        del cache[k]
+    folder = ROOT / "docs" / "avatars"
+    if folder.exists():
+        for f in folder.iterdir():
+            if f"avatars/{f.name}" not in used:
+                f.unlink()
 
 
 def match_names(ev):
@@ -603,6 +788,15 @@ def main():
     for l in leads:
         blob = f"{l.get('title', '')} {l.get('text') or ''}".lower()
         l["matches"] = [eid for eid, ns in names.items() if any(n in blob for n in ns)][:5]
+        if l["kind"] in ("IG", "人工"):  # 旧线索也用最新规则重读开售时间
+            l["sale_times"] = sale_times(l.get("text") or "", l.get("time"))
+    add_avatars(h, events, leads, state, today)
+    # 用 Deezer 确认过的艺人名再对一次线索（例如贴文写 “Siti Nurhaliza”，演出名称很长）
+    for l in leads:
+        blob = norm(f"{l.get('title', '')} {l.get('text') or ''}")
+        for e in events:
+            if e["id"] not in l["matches"] and len(norm(e.get("artist_name"))) >= 4 and norm(e["artist_name"]) in blob:
+                l["matches"].append(e["id"])
 
     out = {
         "generated_at": now.strftime("%Y-%m-%d %H:%M"),
