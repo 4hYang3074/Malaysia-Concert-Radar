@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-29 18:22",
+ "generated_at": "2026-09-29 18:33",
  "health": {
   "GoLive": {
    "ok": true,
@@ -30,7 +30,7 @@
   },
   "Google News": {
    "ok": true,
-   "count": 42,
+   "count": 41,
    "error": null
   },
   "东方日报 娱乐": {
@@ -1331,6 +1331,7 @@
    "poster_img": "avatars/p-bms-MJ116MYS.jpg",
    "avatar": "avatars/p-bms-MJ116MYS.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -1382,6 +1383,7 @@
    "poster_img": "avatars/p-nol-26012515.jpg",
    "avatar": "avatars/a-de78cd0f19da.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -1441,6 +1443,7 @@
    "poster_img": null,
    "avatar": "avatars/a-27e09d26eb62.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Fantopia",
@@ -1500,6 +1503,7 @@
    "poster_img": "avatars/p-fantopia-zmm0u8rr.jpg",
    "avatar": "avatars/p-fantopia-zmm0u8rr.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Fantopia",
@@ -1595,6 +1599,7 @@
    "poster_img": "avatars/p-t2u-50157.jpg",
    "avatar": "avatars/a-718c50a0b6ca.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -1636,6 +1641,7 @@
    "poster_img": "avatars/p-t2u-50764.jpg",
    "avatar": "avatars/p-t2u-50764.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -1724,6 +1730,7 @@
    "poster_img": "avatars/p-t2u-49360.jpg",
    "avatar": "avatars/a-d76cdf460109.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -1774,6 +1781,7 @@
    "poster_img": "avatars/p-nol-26013484.jpg",
    "avatar": "avatars/p-nol-26013484.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -1824,6 +1832,7 @@
    "poster_img": "avatars/p-bms-MOO4WARD.jpg",
    "avatar": "avatars/a-288863a00fae.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -1912,6 +1921,7 @@
    "poster_img": "avatars/p-t2u-49422.jpg",
    "avatar": "avatars/p-t2u-49422.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -1988,6 +1998,7 @@
    "poster_img": "avatars/p-t2u-51955.jpg",
    "avatar": "avatars/p-t2u-51955.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -2039,6 +2050,7 @@
    "poster_img": "avatars/p-fantopia-ij5i3kyk.jpg",
    "avatar": "avatars/p-fantopia-ij5i3kyk.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "Fantopia",
@@ -2144,6 +2156,7 @@
    "poster_img": "avatars/p-t2u-51240.jpg",
    "avatar": "avatars/a-cfce53b21fa2.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -2195,6 +2208,7 @@
    "poster_img": "avatars/p-nol-26012968.jpg",
    "avatar": "avatars/a-78053d283a69.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -2254,6 +2268,7 @@
    "poster_img": "avatars/p-nol-26013319.jpg",
    "avatar": "avatars/p-nol-26013319.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -2310,6 +2325,7 @@
    "poster_img": "avatars/p-nol-26014131.jpg",
    "avatar": "avatars/p-nol-26014131.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -2367,6 +2383,7 @@
    "poster_img": "avatars/p-nol-26013882.jpg",
    "avatar": "avatars/p-nol-26013882.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -2449,6 +2466,7 @@
    "poster_img": "avatars/p-t2u-50486.jpg",
    "avatar": "avatars/p-t2u-50486.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -2500,6 +2518,7 @@
    "poster_img": "avatars/p-fantopia-5xkjkqxv.png",
    "avatar": "avatars/p-fantopia-5xkjkqxv.png",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "Fantopia",
@@ -2559,6 +2578,7 @@
    "poster_img": "avatars/p-fantopia-eh4ddk7l.png",
    "avatar": "avatars/p-fantopia-eh4ddk7l.png",
    "avatar_kind": "poster",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Fantopia",
@@ -2610,6 +2630,7 @@
    "poster_img": "avatars/p-bms-ERIC2026.jpg",
    "avatar": "avatars/a-633eb63d856e.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -2698,6 +2719,7 @@
    "poster_img": "avatars/p-t2u-52015.jpg",
    "avatar": "avatars/a-16a79681ebd2.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -2740,6 +2762,7 @@
    "poster_img": "avatars/p-bms-ROSE26KL.png",
    "avatar": "avatars/p-bms-ROSE26KL.png",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -2791,6 +2814,7 @@
    "poster_img": "avatars/p-fantopia-jiyb5116.jpg",
    "avatar": "avatars/a-907e082a348c.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Fantopia",
@@ -2850,6 +2874,7 @@
    "poster_img": "avatars/p-nol-26013793.jpg",
    "avatar": "avatars/p-nol-26013793.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -2906,6 +2931,7 @@
    "poster_img": "avatars/p-nol-26013311.jpg",
    "avatar": "avatars/a-214c418002e3.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -2956,6 +2982,7 @@
    "poster_img": "avatars/p-bms-AUNTHENN.jpg",
    "avatar": "avatars/p-bms-AUNTHENN.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -3042,6 +3069,7 @@
    "poster_img": "avatars/p-t2u-50832.jpg",
    "avatar": "avatars/p-t2u-50832.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -3164,6 +3192,7 @@
    "poster_img": "avatars/p-t2u-51322.png",
    "avatar": "avatars/a-6332b22dde1c.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -3206,6 +3235,7 @@
    "poster_img": "avatars/p-bms-40FINGER.jpg",
    "avatar": "avatars/a-f90c61da1bd0.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -3316,6 +3346,7 @@
    "poster_img": "avatars/p-golive-167.jpg",
    "avatar": "avatars/a-1e4ae86c2335.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "GoLive",
@@ -3486,6 +3517,7 @@
    "poster_img": "avatars/p-golive-173.jpg",
    "avatar": "avatars/a-bccb871505ba.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "GoLive",
@@ -3559,6 +3591,7 @@
    "poster_img": "avatars/p-nol-26013897.jpg",
    "avatar": "avatars/p-nol-26013897.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -3671,6 +3704,7 @@
    "poster_img": "avatars/p-golive-180.jpg",
    "avatar": "avatars/a-9bdc84268bc0.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "GoLive",
@@ -3745,6 +3779,7 @@
    "poster_img": "avatars/p-nol-26013510.jpg",
    "avatar": "avatars/p-nol-26013510.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -3793,6 +3828,7 @@
    "poster_img": "avatars/p-bms-QWER2026.png",
    "avatar": "avatars/p-bms-QWER2026.png",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -3844,6 +3880,7 @@
    "poster_img": "avatars/p-fantopia-vp48mq9j.jpg",
    "avatar": "avatars/a-c78a949018af.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Fantopia",
@@ -3903,6 +3940,7 @@
    "poster_img": null,
    "avatar": "avatars/a-910706c961d7.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Fantopia",
@@ -3962,6 +4000,7 @@
    "poster_img": null,
    "avatar": null,
    "avatar_kind": null,
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Fantopia",
@@ -4058,9 +4097,10 @@
    "artist_name": "Cadenza of   Soul",
    "fans": 0,
    "region": "其他",
-   "poster_img": "avatars/p-t2u-51416.jpg",
+   "poster_img": "avatars/p-fantopia-0z4vnc9x.jpg",
    "avatar": "avatars/p-t2u-51416.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -4135,6 +4175,7 @@
    "poster_img": "avatars/p-fantopia-4v266ql6.jpg",
    "avatar": "avatars/a-7b5867292193.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Fantopia",
@@ -4194,6 +4235,7 @@
    "poster_img": "avatars/p-nol-26013161.jpg",
    "avatar": "avatars/a-05509e4345b8.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -4252,6 +4294,7 @@
    "poster_img": "avatars/p-fantopia-m3vmif9o.jpg",
    "avatar": "avatars/p-fantopia-m3vmif9o.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "Fantopia",
@@ -4392,6 +4435,7 @@
    "poster_img": "avatars/p-golive-176.jpg",
    "avatar": "avatars/a-a8aa1fae8702.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "GoLive",
@@ -4466,6 +4510,7 @@
    "poster_img": "avatars/p-fantopia-vzov1t8m.jpg",
    "avatar": "avatars/a-3f068ff661d7.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "Fantopia",
@@ -4525,6 +4570,7 @@
    "poster_img": "avatars/p-fantopia-404os4yr.jpg",
    "avatar": "avatars/p-fantopia-404os4yr.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Fantopia",
@@ -4584,6 +4630,7 @@
    "poster_img": null,
    "avatar": null,
    "avatar_kind": null,
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Fantopia",
@@ -4643,6 +4690,7 @@
    "poster_img": "avatars/p-fantopia-59ndm2v2.png",
    "avatar": "avatars/p-fantopia-59ndm2v2.png",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "Fantopia",
@@ -4747,6 +4795,7 @@
    "poster_img": "avatars/p-golive-171.jpg",
    "avatar": "avatars/a-cea3e2f62602.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "GoLive",
@@ -4855,6 +4904,7 @@
    "poster_img": "avatars/p-golive-149.jpg",
    "avatar": "avatars/a-0288748996d6.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "GoLive",
@@ -4920,6 +4970,7 @@
    "poster_img": "avatars/p-nol-26013132.jpg",
    "avatar": "avatars/a-9c70ac6b8a41.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -4990,6 +5041,7 @@
    "poster_img": "avatars/p-t2u-50151.jpg",
    "avatar": "avatars/p-t2u-50151.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -5041,6 +5093,7 @@
    "poster_img": "avatars/p-fantopia-mtqy32gw.png",
    "avatar": "avatars/a-87933da598d1.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Fantopia",
@@ -5159,9 +5212,10 @@
    "artist_name": "wave to earth",
    "fans": 43094,
    "region": "K-pop",
-   "poster_img": "avatars/p-golive-174.jpg",
+   "poster_img": "avatars/p-fantopia-a7drtkag.png",
    "avatar": "avatars/a-f89c58d47eef.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "GoLive",
@@ -5245,6 +5299,7 @@
    "poster_img": "avatars/p-nol-26013810.jpg",
    "avatar": "avatars/a-b74a9c679454.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -5302,6 +5357,7 @@
    "poster_img": "avatars/p-fantopia-9aexklho.jpg",
    "avatar": "avatars/a-27e09d26eb62.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Fantopia",
@@ -5374,6 +5430,7 @@
    "poster_img": "avatars/p-t2u-49498.jpg",
    "avatar": "avatars/p-t2u-49498.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -5509,6 +5566,7 @@
    "poster_img": "avatars/p-golive-172.jpg",
    "avatar": "avatars/a-b7fabeaaf23e.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "GoLive",
@@ -5619,6 +5677,7 @@
    "poster_img": "avatars/p-t2u-52040.jpg",
    "avatar": "avatars/a-e49cedcbacd9.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -5670,6 +5729,7 @@
    "poster_img": null,
    "avatar": null,
    "avatar_kind": null,
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Fantopia",
@@ -5729,6 +5789,7 @@
    "poster_img": "avatars/p-nol-26012669.jpg",
    "avatar": "avatars/a-12748ff9b92c.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -5844,6 +5905,7 @@
    "poster_img": "avatars/p-golive-177.jpg",
    "avatar": "avatars/a-43f3d68eb130.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "GoLive",
@@ -5955,6 +6017,7 @@
    "poster_img": "avatars/p-t2u-52058.jpg",
    "avatar": "avatars/a-727f268331b4.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -6031,6 +6094,7 @@
    "poster_img": "avatars/p-t2u-51768.jpg",
    "avatar": "avatars/a-07be15b54c67.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -6149,9 +6213,10 @@
    "artist_name": "Khalid",
    "fans": 1761107,
    "region": "欧美",
-   "poster_img": "avatars/p-golive-178.jpg",
+   "poster_img": "avatars/p-fantopia-zc4rh0tl.jpg",
    "avatar": "avatars/a-94ca247fff5a.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "GoLive",
@@ -6267,6 +6332,7 @@
    "poster_img": "avatars/p-t2u-50805.png",
    "avatar": "avatars/a-29cb0f7a11ee.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Ticket2U",
@@ -6378,6 +6444,7 @@
    "poster_img": "avatars/p-golive-181.jpg",
    "avatar": "avatars/a-eb5e7c01ca48.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "GoLive",
@@ -6447,6 +6514,7 @@
    "poster_img": "avatars/p-nol-26014056.jpg",
    "avatar": "avatars/a-3357f10441d0.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -6503,6 +6571,7 @@
    "poster_img": "avatars/p-nol-26013663.jpg",
    "avatar": "avatars/a-b74a9c679454.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -6538,14 +6607,16 @@
    ],
    "sales": [
     {
-     "name": "加场开票（#klconcert 公告）",
+     "name": "加场 · 公售（#klconcert）",
      "start": "2026-09-29 15:00",
      "end": null,
      "queue": null,
      "available": true,
      "code_required": false,
      "url": "https://www.instagram.com/p/Dd0RNZPR-Tq/",
-     "announced": true
+     "announced": true,
+     "added": true,
+     "source_line": "🎟 General sale: 29 September 2026, from 3PM"
     }
    ],
    "tiers": [],
@@ -6563,6 +6634,7 @@
    "poster_img": "avatars/p-bms-DIORINKL.jpg",
    "avatar": "avatars/a-95a9b1d6ee20.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -6592,8 +6664,8 @@
    "sale_state": "ON_SALE",
    "sale_evidence": [
     {
-     "src": "加场开票（#klconcert 公告）",
-     "text": "加场开票（#klconcert 公告）",
+     "src": "加场 · 公售（#klconcert）",
+     "text": "加场 · 公售（#klconcert）",
      "time": "2026-09-29 15:00"
     }
    ]
@@ -6718,6 +6790,7 @@
    "poster_img": "avatars/p-golive-175.jpg",
    "avatar": "avatars/a-f6ff067421fb.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "GoLive",
@@ -6786,6 +6859,7 @@
    "poster_img": "avatars/p-nol-26013730.jpg",
    "avatar": "avatars/a-b74a9c679454.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -6843,6 +6917,7 @@
    "poster_img": "avatars/p-fantopia-vi4b75bp.jpg",
    "avatar": "avatars/a-348e6d4d6a5c.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Fantopia",
@@ -6902,6 +6977,7 @@
    "poster_img": null,
    "avatar": null,
    "avatar_kind": null,
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Fantopia",
@@ -6947,6 +7023,42 @@
      "available": true,
      "code_required": false,
      "url": "https://www.fantopia.io/events-tickets?eventsKey=0peucdui"
+    },
+    {
+     "name": "公售（东方日报 娱乐）",
+     "start": "2026-09-22",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.orientaldaily.com.my/news/entertainment/2026/09/23/849841",
+     "announced": true,
+     "added": false,
+     "source_line": "随后于9月22日开启的公开发售"
+    },
+    {
+     "name": "加场 · 预售（东方日报 娱乐）",
+     "start": "2026-09-24",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.orientaldaily.com.my/news/entertainment/2026/09/23/849841",
+     "announced": true,
+     "added": true,
+     "source_line": "门票将在9月24日开放V.I.P会员预售"
+    },
+    {
+     "name": "加场 · 公售（东方日报 娱乐）",
+     "start": "2026-09-29 10:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.orientaldaily.com.my/news/entertainment/2026/09/23/849841",
+     "announced": true,
+     "added": true,
+     "source_line": "公售日则是9月29日早上10时"
     }
    ],
    "tiers": [],
@@ -6962,6 +7074,7 @@
    "poster_img": "avatars/p-fantopia-0peucdui.jpg",
    "avatar": "avatars/a-910706c961d7.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "Fantopia",
@@ -6978,6 +7091,7 @@
     "time": "2026-09-23",
     "from": "orientaldaily.com.my"
    },
+   "sales_closed": false,
    "news_added": {
     "title": "#SHOWBIZ: BIGBANG add second KL show after tickets sell out in minutes - NST Online",
     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTFhRVjNxRWJtWkdvcHRLb19yX1dNa1VrbjcxQVNDbkFCV0VPWmlUYXRPd3FqLWRDcmxrWFJJUF9OQ3JDMG1peTdsX2xaZS1DQUN1ckZURGFVbmsyaC01M1B5MHZFWjVRQjY2cDYwZmE0TjFJUnNHYlNRNzZQeDROZzJDNXIzTVRCX2QwZ3ctY0pPMXhkYXp1NkVPOWtxUG9vLXRhTW00R0h4bEpCYjNoblFzS284R2VXZVdTbEln?oc=5",
@@ -6988,6 +7102,21 @@
    "opened_approx": false,
    "sale_state": "ON_SALE",
    "sale_evidence": [
+    {
+     "src": "加场 · 公售（东方日报 娱乐）",
+     "text": "加场 · 公售（东方日报 娱乐）",
+     "time": "2026-09-29 10:00"
+    },
+    {
+     "src": "加场 · 预售（东方日报 娱乐）",
+     "text": "加场 · 预售（东方日报 娱乐）",
+     "time": "2026-09-24"
+    },
+    {
+     "src": "公售（东方日报 娱乐）",
+     "text": "公售（东方日报 娱乐）",
+     "time": "2026-09-22"
+    },
     {
      "src": "Fantopia 售票轮次",
      "text": "开售",
@@ -7107,6 +7236,7 @@
    "poster_img": "avatars/p-golive-179.jpg",
    "avatar": "avatars/a-0e3d1767480e.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "GoLive",
@@ -7188,6 +7318,7 @@
    "poster_img": "avatars/p-bms-JC27WTMY.jpg",
    "avatar": "avatars/a-25b49f3d15e7.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -7258,6 +7389,7 @@
    "poster_img": "avatars/p-golive-159.jpg",
    "avatar": "avatars/a-4c9a82ce72ca.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": false,
    "platforms": [
     {
      "source": "GoLive",
@@ -7322,6 +7454,7 @@
    "poster_img": "avatars/p-fantopia-n0wwcatg.jpg",
    "avatar": "avatars/a-348e6d4d6a5c.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "Fantopia",
@@ -7378,6 +7511,7 @@
    "poster_img": "avatars/p-nol-26013626.jpg",
    "avatar": "avatars/a-aceafd9e8cae.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -7435,6 +7569,7 @@
    "poster_img": "avatars/p-fantopia-rx6i8tz7.jpg",
    "avatar": "avatars/p-fantopia-rx6i8tz7.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "Fantopia",
@@ -7483,6 +7618,7 @@
    "poster_img": "avatars/p-bms-BMSYSG26.jpg",
    "avatar": "avatars/a-c78a949018af.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -7523,6 +7659,7 @@
    "poster_img": "avatars/p-bms-BMSQFZKL.jpg",
    "avatar": "avatars/a-3f068ff661d7.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -7563,6 +7700,7 @@
    "poster_img": "avatars/p-bms-BMSASP26.jpg",
    "avatar": "avatars/a-907e082a348c.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -7603,6 +7741,7 @@
    "poster_img": "avatars/p-bms-BMSATMYS.jpg",
    "avatar": "avatars/a-f1446a3aa5e2.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -7643,6 +7782,7 @@
    "poster_img": "avatars/p-bms-BMSBND26.jpg",
    "avatar": "avatars/a-348e6d4d6a5c.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -7683,6 +7823,7 @@
    "poster_img": "avatars/p-bms-BMSHENRY.png",
    "avatar": "avatars/a-27e09d26eb62.jpg",
    "avatar_kind": "artist",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -7723,6 +7864,7 @@
    "poster_img": "avatars/p-bms-BMSIDOLR.jpg",
    "avatar": "avatars/p-bms-BMSIDOLR.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -7763,6 +7905,7 @@
    "poster_img": "avatars/p-bms-BMSCAPKL.jpg",
    "avatar": "avatars/p-bms-BMSCAPKL.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -7803,6 +7946,7 @@
    "poster_img": "avatars/p-bms-BMSCAPPG.jpg",
    "avatar": "avatars/p-bms-BMSCAPPG.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -7843,6 +7987,7 @@
    "poster_img": "avatars/p-bms-BMSSNG26.jpg",
    "avatar": "avatars/p-bms-BMSSNG26.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -7883,6 +8028,7 @@
    "poster_img": "avatars/p-bms-BMS26SSX.jpg",
    "avatar": "avatars/p-bms-BMS26SSX.jpg",
    "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "BookMyShow",
@@ -8566,7 +8712,9 @@
     {
      "time": "2026-09-29 15:00",
      "line": "🎟 General sale: 29 September 2026, from 3PM",
-     "past": false
+     "past": false,
+     "kind": "general",
+     "added": false
     }
    ],
    "first_seen": "2026-09-29 08:34",
@@ -9293,8 +9441,10 @@
    "sale_times": [
     {
      "time": "2026-10-08 12:00",
-     "line": "🎟 General Sale: 12:00 PM 8th Oct. (Local Time)",
-     "past": false
+     "line": "🎟售票日期:10月8日中午12點(當地時間)",
+     "past": false,
+     "kind": "sale",
+     "added": false
     }
    ],
    "first_seen": "2026-09-29 08:34",
@@ -9707,11 +9857,40 @@
    "country": "MY",
    "from": "东方日报 娱乐",
    "title": "BIGBANG《XX : COSMOS》大马站门票25分钟售罄　1月10日加场！",
-   "text": "（吉隆坡23日讯）韩国传奇天团BIGBANG正式重返世界舞台，开启备受全球瞩目的全新巡回演唱会《BIGBANG 2026-2027 WORLD TOUR < XX : COSMOS >》。自巡演消息公布以来，便在全世界粉丝间掀起现象级讨论。日前，吉隆坡站门票一经开售，即引爆抢购狂潮，全数门票在短时间内火速售罄，再次展现了BIGBANG不可撼动的“K-POP王者”号召力！ BIGBANG魅力无法挡，演唱会公售日门票仅仅25分钟就完售！ 2026年适逢BIGBANG出道20周年的里程碑时刻，继今年8...",
+   "text": "（吉隆坡23日讯）韩国传奇天团BIGBANG正式重返世界舞台，开启备受全球瞩目的全新巡回演唱会《BIGBANG 2026-2027 WORLD TOUR < XX : COSMOS >》。自巡演消息公布以来，便在全世界粉丝间掀起现象级讨论。日前，吉隆坡站门票一经开售，即引爆抢购狂潮，全数门票在短时间内火速售罄，再次展现了BIGBANG不可撼动的“K-POP王者”号召力！ BIGBANG魅力无法挡，演唱会公售日门票仅仅25分钟就完售！ 2026年适逢BIGBANG出道20周年的里程碑时刻，继今年8...\n（吉隆坡23日讯）韩国传奇天团BIGBANG正式重返世界舞台，开启备受全球瞩目的全新巡回演唱会《BIGBANG 2026-2027 WORLD TOUR < XX : COSMOS >》。自巡演消息公布以来，便在全世界粉丝间掀起现象级讨论。日前，吉隆坡站门票一经开售，即引爆抢购狂潮，全数门票在短时间内火速售罄，再次展现了BIGBANG不可撼动的“K-POP王者”号召力！\n2026年适逢BIGBANG出道20周年的里程碑时刻，继今年8月19日重磅回归并推出震撼单曲《BiiiG》后，团员们便正式拉开了这趟意义非凡的世界巡演序幕。作为巡演首站的韩国高阳站，更是吸引了来自全球各地的V.I.P（官方粉丝名称）朝圣，现场人潮汹涌、盛况空前，一举拉满全球巡演的期待值。\n时隔11年，BIGBANG终于带著全新的顶级视听盛宴回归大马舞台！《BIGBANG 2026-2027 WORLD TOUR < XX : COSMOS > IN KUALA LUMPUR》将于2027年1月9日（星期六），首度隆重登场马电讯国家体育场（TM Stadium Nasional）开唱。\n主办单位iMe Malaysia表示，BIGBANG V.I.P.会员优先预售于9月17日率先开启，仅用了短短90分钟宣布售罄；随后于9月22日开启的公开发售，更是引发了全城抢票热潮，所有门票在25分钟31秒被一扫而空，战绩斐然！\n为了不让粉丝失望，主办方昨午也宣布演唱会加场，第二场演出在1月10日（星期日）、晚上7时在同样地点演出，门票将在9月24日开放V.I.P会员预售、公售日则是9月29日早上10时。更多后续最新消息与官方动态，敬请粉丝们密切关注iMe Malaysia官方社交媒体平台。\n要看最快最熱資訊，請來Follow我們 《東方日報》 WhatsApp Channel .\nIOS： https://odn.my/ios\nGoogle Play： https://odn.my/android\nHUAWEI AppGallery： https://odn.my/appgallery",
    "time": "2026-09-23 11:05",
    "url": "https://www.orientaldaily.com.my/news/entertainment/2026/09/23/849841",
    "hints": [],
-   "sale_times": [],
+   "sale_times": [
+    {
+     "time": "2026-09-17",
+     "line": "BIGBANG V.I.P.会员优先预售于9月17日率先开启",
+     "past": true,
+     "kind": "presale",
+     "added": false
+    },
+    {
+     "time": "2026-09-22",
+     "line": "随后于9月22日开启的公开发售",
+     "past": true,
+     "kind": "general",
+     "added": false
+    },
+    {
+     "time": "2026-09-24",
+     "line": "门票将在9月24日开放V.I.P会员预售",
+     "past": true,
+     "kind": "presale",
+     "added": true
+    },
+    {
+     "time": "2026-09-29 10:00",
+     "line": "公售日则是9月29日早上10时",
+     "past": false,
+     "kind": "general",
+     "added": true
+    }
+   ],
    "first_seen": "2026-09-29 17:48",
    "matches": [
     "fantopia-0peucdui"

@@ -1054,8 +1054,10 @@
    "sale_times": [
     {
      "time": "2026-10-08 12:00",
-     "line": "🎟 General Sale: 12:00 PM 8th Oct. (Local Time)",
-     "past": false
+     "line": "🎟售票日期:10月8日中午12點(當地時間)",
+     "past": false,
+     "kind": "sale",
+     "added": false
     }
    ],
    "first_seen": "2026-09-29 08:34",
@@ -1256,7 +1258,9 @@
     {
      "time": "2026-09-29 15:00",
      "line": "🎟 General sale: 29 September 2026, from 3PM",
-     "past": false
+     "past": false,
+     "kind": "general",
+     "added": false
     }
    ],
    "first_seen": "2026-09-29 08:34",
@@ -2252,11 +2256,40 @@
    "country": "MY",
    "from": "东方日报 娱乐",
    "title": "BIGBANG《XX : COSMOS》大马站门票25分钟售罄　1月10日加场！",
-   "text": "（吉隆坡23日讯）韩国传奇天团BIGBANG正式重返世界舞台，开启备受全球瞩目的全新巡回演唱会《BIGBANG 2026-2027 WORLD TOUR < XX : COSMOS >》。自巡演消息公布以来，便在全世界粉丝间掀起现象级讨论。日前，吉隆坡站门票一经开售，即引爆抢购狂潮，全数门票在短时间内火速售罄，再次展现了BIGBANG不可撼动的“K-POP王者”号召力！ BIGBANG魅力无法挡，演唱会公售日门票仅仅25分钟就完售！ 2026年适逢BIGBANG出道20周年的里程碑时刻，继今年8...",
+   "text": "（吉隆坡23日讯）韩国传奇天团BIGBANG正式重返世界舞台，开启备受全球瞩目的全新巡回演唱会《BIGBANG 2026-2027 WORLD TOUR < XX : COSMOS >》。自巡演消息公布以来，便在全世界粉丝间掀起现象级讨论。日前，吉隆坡站门票一经开售，即引爆抢购狂潮，全数门票在短时间内火速售罄，再次展现了BIGBANG不可撼动的“K-POP王者”号召力！ BIGBANG魅力无法挡，演唱会公售日门票仅仅25分钟就完售！ 2026年适逢BIGBANG出道20周年的里程碑时刻，继今年8...\n（吉隆坡23日讯）韩国传奇天团BIGBANG正式重返世界舞台，开启备受全球瞩目的全新巡回演唱会《BIGBANG 2026-2027 WORLD TOUR < XX : COSMOS >》。自巡演消息公布以来，便在全世界粉丝间掀起现象级讨论。日前，吉隆坡站门票一经开售，即引爆抢购狂潮，全数门票在短时间内火速售罄，再次展现了BIGBANG不可撼动的“K-POP王者”号召力！\n2026年适逢BIGBANG出道20周年的里程碑时刻，继今年8月19日重磅回归并推出震撼单曲《BiiiG》后，团员们便正式拉开了这趟意义非凡的世界巡演序幕。作为巡演首站的韩国高阳站，更是吸引了来自全球各地的V.I.P（官方粉丝名称）朝圣，现场人潮汹涌、盛况空前，一举拉满全球巡演的期待值。\n时隔11年，BIGBANG终于带著全新的顶级视听盛宴回归大马舞台！《BIGBANG 2026-2027 WORLD TOUR < XX : COSMOS > IN KUALA LUMPUR》将于2027年1月9日（星期六），首度隆重登场马电讯国家体育场（TM Stadium Nasional）开唱。\n主办单位iMe Malaysia表示，BIGBANG V.I.P.会员优先预售于9月17日率先开启，仅用了短短90分钟宣布售罄；随后于9月22日开启的公开发售，更是引发了全城抢票热潮，所有门票在25分钟31秒被一扫而空，战绩斐然！\n为了不让粉丝失望，主办方昨午也宣布演唱会加场，第二场演出在1月10日（星期日）、晚上7时在同样地点演出，门票将在9月24日开放V.I.P会员预售、公售日则是9月29日早上10时。更多后续最新消息与官方动态，敬请粉丝们密切关注iMe Malaysia官方社交媒体平台。\n要看最快最熱資訊，請來Follow我們 《東方日報》 WhatsApp Channel .\nIOS： https://odn.my/ios\nGoogle Play： https://odn.my/android\nHUAWEI AppGallery： https://odn.my/appgallery",
    "time": "2026-09-23 11:05",
    "url": "https://www.orientaldaily.com.my/news/entertainment/2026/09/23/849841",
    "hints": [],
-   "sale_times": [],
+   "sale_times": [
+    {
+     "time": "2026-09-17",
+     "line": "BIGBANG V.I.P.会员优先预售于9月17日率先开启",
+     "past": true,
+     "kind": "presale",
+     "added": false
+    },
+    {
+     "time": "2026-09-22",
+     "line": "随后于9月22日开启的公开发售",
+     "past": true,
+     "kind": "general",
+     "added": false
+    },
+    {
+     "time": "2026-09-24",
+     "line": "门票将在9月24日开放V.I.P会员预售",
+     "past": true,
+     "kind": "presale",
+     "added": true
+    },
+    {
+     "time": "2026-09-29 10:00",
+     "line": "公售日则是9月29日早上10时",
+     "past": false,
+     "kind": "general",
+     "added": true
+    }
+   ],
    "first_seen": "2026-09-29 17:48",
    "matches": [
     "fantopia-0peucdui"
@@ -13197,5 +13230,8 @@
   "bms-BMSCAPPG": 0,
   "bms-BMSSNG26": 0,
   "bms-BMS26SSX": 0
+ },
+ "article_texts": {
+  "https://www.orientaldaily.com.my/news/entertainment/2026/09/23/849841": "（吉隆坡23日讯）韩国传奇天团BIGBANG正式重返世界舞台，开启备受全球瞩目的全新巡回演唱会《BIGBANG 2026-2027 WORLD TOUR < XX : COSMOS >》。自巡演消息公布以来，便在全世界粉丝间掀起现象级讨论。日前，吉隆坡站门票一经开售，即引爆抢购狂潮，全数门票在短时间内火速售罄，再次展现了BIGBANG不可撼动的“K-POP王者”号召力！\n2026年适逢BIGBANG出道20周年的里程碑时刻，继今年8月19日重磅回归并推出震撼单曲《BiiiG》后，团员们便正式拉开了这趟意义非凡的世界巡演序幕。作为巡演首站的韩国高阳站，更是吸引了来自全球各地的V.I.P（官方粉丝名称）朝圣，现场人潮汹涌、盛况空前，一举拉满全球巡演的期待值。\n时隔11年，BIGBANG终于带著全新的顶级视听盛宴回归大马舞台！《BIGBANG 2026-2027 WORLD TOUR < XX : COSMOS > IN KUALA LUMPUR》将于2027年1月9日（星期六），首度隆重登场马电讯国家体育场（TM Stadium Nasional）开唱。\n主办单位iMe Malaysia表示，BIGBANG V.I.P.会员优先预售于9月17日率先开启，仅用了短短90分钟宣布售罄；随后于9月22日开启的公开发售，更是引发了全城抢票热潮，所有门票在25分钟31秒被一扫而空，战绩斐然！\n为了不让粉丝失望，主办方昨午也宣布演唱会加场，第二场演出在1月10日（星期日）、晚上7时在同样地点演出，门票将在9月24日开放V.I.P会员预售、公售日则是9月29日早上10时。更多后续最新消息与官方动态，敬请粉丝们密切关注iMe Malaysia官方社交媒体平台。\n要看最快最熱資訊，請來Follow我們 《東方日報》 WhatsApp Channel .\nIOS： https://odn.my/ios\nGoogle Play： https://odn.my/android\nHUAWEI AppGallery： https://odn.my/appgallery"
  }
 }
