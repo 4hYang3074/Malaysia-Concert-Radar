@@ -1838,12 +1838,35 @@ def extra_seatmaps(h, events, leads, cfg, state, limit=10):
     done = state.setdefault("seatmap_extra", {})
     need = [e for e in events if not e.get("hidden") and not e.get("seat_maps") and e.get("artist_name")]
 
-    def keep(e, blob, source):
+    def keep(e, blob, source, text=None):
+        digest = hashlib.sha1(blob).hexdigest()
+        if any(v and v.get("hash") == digest and k != e["id"] for k, v in done.items()):
+            return False  # 同一张图已经给了别场演出
         folder.mkdir(parents=True, exist_ok=True)
         ext = ".png" if blob[:8] == b"\x89PNG\r\n\x1a\n" else ".jpg"
         rel = f"maps-extra/{re.sub(r'[^A-Za-z0-9_.-]', '_', e['id'])}{ext}"
         (ROOT / "docs" / rel).write_bytes(blob)
-        done[e["id"]] = {"rel": rel, "source": source}
+        done[e["id"]] = {"rel": rel, "source": source, "hash": digest, "text": (text or "")[:1500],
+                         "tried": datetime.now(MYT).strftime("%Y-%m-%d")}
+        return True
+
+    # 之前找到的图：用现在的规则再检查一次（例如只凭场馆对上、其实是别场演出的座位图 → 删掉，3 天后重搜）
+    by_id = {e["id"]: e for e in events}
+    for k, v in list(done.items()):
+        if not v or not v.get("rel") or k not in by_id:
+            continue
+        path = ROOT / "docs" / v["rel"]
+        text = v.get("text")
+        if text is None and path.exists():
+            text = ocr_text(path)
+            if text is None:
+                continue  # 没装 OCR（本机测试），不动
+        if not path.exists() or not seatmap_for_event(by_id[k], text):
+            if path.exists():
+                path.unlink()
+            done[k] = {"rel": None, "tried": datetime.now(MYT).strftime("%Y-%m-%d")}
+        else:
+            v["text"] = text[:1500]
 
     # 1. IG 贴文图片：第一张已下载在 docs/posts/ 并 OCR 过；多图贴文的其他张（座位图常在后面）这里才下载来读
     ocr_cache = state.setdefault("ocr_ig_more", {})
@@ -1856,9 +1879,9 @@ def extra_seatmaps(h, events, leads, cfg, state, limit=10):
                 continue
             src = f"IG {l['from']} 贴文（{(l.get('time') or '')[:10]}）"
             path = ROOT / "docs" / f"posts/{l['id']}.jpg"
-            if looks_like_seatmap(l.get("image_text")) and path.exists():
-                keep(e, path.read_bytes(), src)
-                break
+            if seatmap_for_event(e, l.get("image_text")) and path.exists():
+                if keep(e, path.read_bytes(), src, l.get("image_text")):
+                    break
             hit = False
             for i, url in enumerate(l.get("more_images") or []):
                 key = f"{l['id']}#{i + 1}"
@@ -1876,9 +1899,8 @@ def extra_seatmaps(h, events, leads, cfg, state, limit=10):
                     text = ocr_text(tp)
                 if text is None:
                     break  # 没装 OCR（本机测试）
-                ocr_cache[key] = looks_like_seatmap(text)
-                if ocr_cache[key]:
-                    keep(e, blob, src + f" 第 {i + 2} 张图")
+                ocr_cache[key] = seatmap_for_event(e, text)
+                if ocr_cache[key] and keep(e, blob, src + f" 第 {i + 2} 张图", text):
                     hit = True
                     break
             if hit:
@@ -1900,7 +1922,8 @@ def extra_seatmaps(h, events, leads, cfg, state, limit=10):
             break
         searched += 1
         done[e["id"]] = {"rel": None, "tried": today}
-        q = f'{e["artist_name"]} {e["venue"]} seating plan'
+        year = (e.get("dates") or [""])[0][:4]
+        q = f'"{e["artist_name"]}" {e["venue"]} {year} seating plan'
         cands = []
         try:
             if serp:
@@ -1929,9 +1952,9 @@ def extra_seatmaps(h, events, leads, cfg, state, limit=10):
                 path = Path(tmp) / "img"
                 path.write_bytes(blob)
                 size, text = img_size(path), ocr_text(path)
-            if size and max(size) >= 1000 and looks_like_seatmap(text) and mentions_any(e, text):
-                keep(e, blob, f"Google 图片（{urllib.parse.urlparse(page or url).netloc}）")
-                break
+            if size and max(size) >= 1000 and seatmap_for_event(e, text):
+                if keep(e, blob, f"Google 图片（{urllib.parse.urlparse(page or url).netloc}）", text):
+                    break
         time.sleep(SLEEP)
 
     # 套用（每次扫描都套上之前找到的）并清掉已下架演出的图
@@ -1947,11 +1970,22 @@ def extra_seatmaps(h, events, leads, cfg, state, limit=10):
             (ROOT / "docs" / rel).unlink()
 
 
-def mentions_any(e, text):
-    """图片文字里要提到这场演出的艺人或场馆（避免抓到别场演出的座位图）。"""
-    t = norm(text)
-    return any(len(norm(x)) >= 3 and norm(x) in t for x in (e.get("artist_name"), e.get("venue"), e.get("name")) if x) \
-        or any(len(w) >= 4 and w.lower() in (text or "").lower() for w in re.findall(r"[A-Za-z]+", e.get("venue") or ""))
+def seatmap_for_event(e, text):
+    """图片是不是“这场演出”的座位图（同一个场馆有很多演出，只看场馆会抓错）：
+    1. 像座位图（舞台 + 票价 / 区号）
+    2. 图上要有艺人名（中英混合艺名的中文或英文部分也算）
+    3. 图上写的年份要是这场演出的年份（例如 2024 年的旧座位图不收）"""
+    if not looks_like_seatmap(text):
+        return False
+    t, low = norm(text), (text or "").lower()
+    a = e.get("artist_name") or ""
+    parts = [a] + re.findall(r"[㐀-鿿]{2,}", a) + [w for w in re.findall(r"[A-Za-z][A-Za-z0-9'&.-]*(?:\s+[A-Za-z0-9'&.-]+)*", a)]
+    named = any((len(norm(x)) >= 3 or re.fullmatch(r"[㐀-鿿]{2,}", x)) and norm(x) in t for x in parts if x and not generic_name(x))
+    if not named:
+        return False
+    years = set(re.findall(r"\b(20\d\d)\b", text or ""))
+    show_years = {d[:4] for d in e.get("dates") or []}
+    return not years or not show_years or bool(years & show_years)
 
 
 def web_search(h, artist, country, cfg, state):
