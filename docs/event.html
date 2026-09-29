@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>演出详情 · 马来西亚演唱会雷达</title>
 <meta name="theme-color" content="#15171c">
-<link rel="stylesheet" href="assets/app.css?v=20260929x">
+<link rel="stylesheet" href="assets/app.css?v=20260929y">
 </head>
 <body>
 <div class="wrap view" id="app"></div>
-<script src="assets/app.js?v=20260929x"></script>
+<script src="assets/app.js?v=20260929y"></script>
 <script>
 loadData(false).then(d => {
   nav(d, "confirmed");
@@ -45,7 +45,7 @@ loadData(false).then(d => {
     <h3>💺 座位图与票价${fee}</h3>
     <div class="card">
       ${maps.length ? `<div class="maps">${maps.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener"><img src="${esc(u)}" alt="官方座位图"></a>`).join("")}
-        <div class="meta" style="margin:6px 0 12px">官方座位图（来源：${esc(e.source)}，点图可放大）</div></div>`
+        <div class="meta" style="margin:6px 0 12px">${e.seat_map_source ? `座位图来源：${esc(e.seat_map_source)}` : `官方座位图（来源：${esc(e.source)}）`}，点图可放大</div></div>`
         : `<div class="empty">官方座位图还没公布，公布后会自动加上并通知你。</div>`}
       ${tiers.length || ocr.length ? `<table class="pricetable"><tr><th>票区</th><th style="text-align:right">价格</th></tr>
         ${tiers.map(t => `<tr><td>${esc(t.name)}${t.desc ? ` <small>· ${esc(t.desc)}</small>` : ""}${t.sold_out ? ' <span class="soldout">售罄</span>' : ""}</td><td class="price">${esc(t.price || "—")}</td></tr>`).join("")}

@@ -314,6 +314,33 @@ def fantopia_area(h, area, currency):
                 time.sleep(0.2)
             except Exception as ex:
                 print(f"  fantopia detail {x.get('eventsKey')}: {ex}", flush=True)
+        # 官方活动说明：每一轮的名称和时间（VIP 预售、Trip.com 预售、公售…）、票价表、座位图
+        info, maps, tiers = {}, [], []
+        if not end or end[:10] >= datetime.now(MYT).strftime("%Y-%m-%d"):
+            try:
+                info = h.json("https://www.fantopia.io/fanapiWeb/eventsInfo/getEventsInfoByEventsKey?eventsKey="
+                              + urllib.parse.quote(x.get("eventsKey") or ""), headers={"area": area, "Referer": "https://www.fantopia.io/"},
+                              retries=1).get("data") or {}
+                time.sleep(0.2)
+            except Exception as ex:
+                print(f"  fantopia info {x.get('eventsKey')}: {ex}", flush=True)
+        desc = html.unescape(re.sub(r"<[^>]+>", "", re.sub(r"(?i)<br\s*/?>|</p>|</div>|</li>", "\n", info.get("description") or "")))
+        posted = (info.get("updateTime") or info.get("createTime") or "")[:16] or None
+        for st in sale_times(desc, posted) if desc else []:
+            same = [s for s in sales if s["start"][:16] == st["time"][:16]]
+            if same:  # 同一个时间：用官方说明里的轮次名称
+                same[0]["name"] = st.get("name") or same[0]["name"]
+                same[0]["kind"] = st.get("kind")
+            else:
+                sales.append({"name": st.get("name") or {"presale": "Presale", "general": "General Sale"}.get(st.get("kind"), "开售"),
+                              "start": st["time"], "end": None, "queue": None, "available": True,
+                              "code_required": st.get("kind") == "presale", "url": url, "kind": st.get("kind")})
+        if isinstance(info.get("seatImg"), str) and info["seatImg"].startswith("http"):
+            maps.append(info["seatImg"])
+        sym = {"MYR": "RM", "SGD": "S$", "THB": "฿"}[currency]
+        for t in info.get("ticketSimpleInfoVos") or []:
+            if t.get("title") and t.get("price") is not None:
+                tiers.append({"name": t["title"].strip(), "price": f"{sym} {t['price'] / 100:,.0f}"})
         # 列表的开卖时间（通常是第一轮）如果不在详细资料里，也保留
         if sale_start and not any(s["start"][:10] == sale_start[:10] for s in sales):
             sales.append({"name": "开售", "start": sale_start, "end": None, "queue": None, "available": True,
@@ -330,7 +357,9 @@ def fantopia_area(h, area, currency):
             "city": None,
             "dates": dates,
             "sales": sales,
-            "tiers": [],
+            "tiers": tiers,
+            "seat_maps": maps,
+            "notes": {"官方说明": short(desc.strip(), 1500)} if desc.strip() else {},
             "price_from": f"{ {'MYR': 'RM', 'SGD': 'S$', 'THB': '฿'}[currency]} {x['minPrice'] / 100:,.2f}" if x.get("minPrice") else None,
             "limit": x.get("limitCount") or None,
             "sold_out": x.get("sellStatus") == 2,
@@ -524,6 +553,24 @@ def sale_times(text, posted):
     out = []
     # 先按句子（。！？换行）切，再按分句（，；、）切：一段新闻常同时写预售、公售、加场，还夹着演出日期
     # 只从“提到售票的分句”拿日期；句子提到加场的，这几轮算加场的票
+    # 官方公告常把轮次名和日期分两行写（“GENERAL ON-SALE” 下一行才是 “29 Sep (Tue), 10AM”）：
+    # 只有日期、没有售票字眼的行，接上前面最近的一行“轮次标题”
+    lines, heading, fixed = (text or "").split("\n"), None, []
+    for line in lines:
+        n = unicodedata.normalize("NFKC", line).strip()
+        has_date = EN_DATE.search(n) or ZH_DATE.search(n)
+        if n and SALE_LINE.search(n) and not has_date and len(n) <= 80:
+            heading = n.rstrip(":： ")
+            fixed.append(line)
+            continue
+        if has_date and heading and not SALE_LINE.search(n):
+            fixed.append(f"{heading}: {n}")
+            heading = None
+            continue
+        if n:
+            heading = None if has_date else heading
+        fixed.append(line)
+    text = "\n".join(fixed)
     for sent in re.split(r"[\n。！？]", text or ""):
         sent_added = bool(ADDED_RE.search(unicodedata.normalize("NFKC", sent)))
         # 中文句子按全形标点切；英文句子只按分号切（英文日期里常有逗号，例如 29 September 2026, from 3PM）
@@ -536,6 +583,12 @@ def sale_times(text, posted):
             seen.add(x["time"])
             uniq.append(x)
     return uniq[:8]
+
+
+def round_title(s):
+    """日期前面的轮次名称（例如 “BIGBANG V.I.P MEMBERSHIP PRESALE”、“GENERAL ON-SALE”）；不像轮次名称就回传 None。"""
+    s = re.sub(r"^[^\w]+|[\s:：\-–—|(（]+$", "", s.strip())
+    return s if 3 <= len(s) <= 60 and SALE_LINE.search(s) else None
 
 
 def _clause_sale(line, base, added):
@@ -578,7 +631,8 @@ def _clause_sale(line, base, added):
         past = when + (timedelta(days=1) if hh is None else timedelta(hours=12)) < now  # 开票半天后就当已结束（只有日期的算一天）
         kind = "presale" if PRESALE_RE.search(line) and not GENERAL_RE.search(line) else "general" if GENERAL_RE.search(line) else "sale"
         out.append({"time": when.strftime("%Y-%m-%d %H:%M") if hh is not None else when.strftime("%Y-%m-%d"),
-                    "line": line.strip(" ⁠⁠")[:140], "past": past, "kind": kind, "added": added})
+                    "line": line.strip(" ⁠⁠")[:140], "past": past, "kind": kind, "added": added,
+                    "name": round_title(line[:(m or z).start()])})
     return out
 
 
@@ -1715,6 +1769,76 @@ def news_check(h, artist, country, cfg, today, sale=False, deep=False):
             "added": bool(added), "added_news": added[0] if added else None}
 
 
+def _search_budget(cfg, state):
+    """网页搜索每月额度：还有就扣一次、回传 True。"""
+    month = datetime.now(MYT).strftime("%Y-%m")
+    use = state.setdefault("web_search_usage", {})
+    for k in [k for k in use if k != month]:
+        del use[k]
+    if use.get(month, 0) >= (cfg.get("web_search") or {}).get("monthly_limit", 200):
+        return False
+    use[month] = use.get(month, 0) + 1
+    return True
+
+
+def web_seatmaps(h, events, cfg, state, now_s, first_run, limit=10):
+    """售票平台没有座位图的演出（BookMyShow、NOL World 等）：用图片搜索找“艺人 + 场馆 + 座位图”。
+    只收高清图（长边 ≥ 1000 像素），而且 OCR 要读到舞台（STAGE / 舞台 / 무대）或多个票价，确认真的是座位图。
+    每场只搜一次（结果存 state）；需要 SERPAPI_KEY 或 BRAVE_API_KEY。"""
+    import tempfile
+    serp, brave = os.environ.get("SERPAPI_KEY"), os.environ.get("BRAVE_API_KEY")
+    if not serp and not brave:
+        return
+    done = state.setdefault("seatmap_search", {})
+    todo = [e for e in events if not e.get("hidden") and not e.get("seat_maps") and e.get("artist_name")
+            and e.get("venue") and (e.get("country") or "MY") in ("MY", "SG") and e["id"] not in done]
+    found = []
+    for e in todo[:limit]:
+        if not _search_budget(cfg, state):
+            break
+        q = f'"{e["artist_name"]}" {e["venue"]} seating plan seat map 座位图'
+        cands = []
+        try:
+            if serp:
+                r = h.json("https://serpapi.com/search.json?" + urllib.parse.urlencode(
+                    {"engine": "google_images", "q": q, "gl": (e.get("country") or "MY").lower(), "api_key": serp}), retries=1)
+                cands = [(x.get("original"), x.get("original_width") or 0, x.get("original_height") or 0) for x in r.get("images_results") or []]
+            else:
+                r = h.json("https://api.search.brave.com/res/v1/images/search?" + urllib.parse.urlencode({"q": q, "count": 30}),
+                           headers={"X-Subscription-Token": brave, "Accept": "application/json"}, retries=1)
+                cands = [((x.get("properties") or {}).get("url"), (x.get("properties") or {}).get("width") or 0,
+                          (x.get("properties") or {}).get("height") or 0) for x in r.get("results") or []]
+        except Exception as ex:
+            print(f"  seat map search {e['artist_name']}: {ex}", flush=True)
+        done[e["id"]] = None
+        for url, w, hgt in cands[:12]:
+            if not url or max(w, hgt) < 1000:
+                continue  # 只要高清图
+            with tempfile.TemporaryDirectory() as tmp:
+                path = Path(tmp) / "img"
+                try:
+                    with h.opener.open(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=30) as resp:
+                        path.write_bytes(resp.read(8_000_000))
+                except Exception:
+                    continue
+                size = img_size(path)
+                text = ocr_text(path) or ""
+            prices = re.findall(r"(?i)(?:RM|S\$|MYR|SGD)\s?\d", text)
+            if size and max(size) >= 1000 and (re.search(r"(?i)stage|舞台|무대|panggung", text) or len(prices) >= 3):
+                done[e["id"]] = url
+                e["seat_maps"] = [url]
+                e["seat_map_source"] = "图片搜索（非官方来源，请以官网为准）"
+                found.append(e)
+                break
+        time.sleep(SLEEP)
+    if found:
+        save_maps(h, found, state, now_s, first_run)
+        add_ocr_tiers(found, state)
+    live = {e["id"] for e in events}
+    for k in [k for k in done if k not in live]:
+        del done[k]
+
+
 def web_search(h, artist, country, cfg, state):
     """一般网页搜索（Google News 只收新闻网站，XUAN、Facebook 专页等搜不到）。
     GitHub Secrets 有 SERPAPI_KEY 就用 SerpApi（真的 Google 结果），有 BRAVE_API_KEY 就用 Brave；都没有就跳过。
@@ -1722,15 +1846,9 @@ def web_search(h, artist, country, cfg, state):
     serp, brave = os.environ.get("SERPAPI_KEY"), os.environ.get("BRAVE_API_KEY")
     if not serp and not brave:
         return []
-    month = datetime.now(MYT).strftime("%Y-%m")
-    use = state.setdefault("web_search_usage", {})
-    for k in [k for k in use if k != month]:
-        del use[k]
-    limit = (cfg.get("web_search") or {}).get("monthly_limit", 200)
-    if use.get(month, 0) >= limit:
-        print(f"  web search: 本月额度 {limit} 次已用完", flush=True)
+    if not _search_budget(cfg, state):
+        print("  web search: 本月额度已用完", flush=True)
         return []
-    use[month] = use.get(month, 0) + 1
     # 一次搜你关注的四个国家（马来西亚、新加坡、韩国、泰国），每个结果再判断提到哪个国家
     q = (f'"{artist}" (马来西亚 OR 大马 OR 来马 OR Malaysia OR 新加坡 OR Singapore OR 韩国 OR Korea OR 泰国 OR Thailand) '
          f'(演唱会 OR 演唱會 OR 开唱 OR 開唱 OR 巡演 OR concert OR tour)')
@@ -2045,6 +2163,7 @@ def main():
     # 同一场演出在几个平台卖 → 合并成一张卡；线索里对应的演出 id 也跟着换
     events, idmap = merge_events(events)
     apply_filters(events, cfg)
+    web_seatmaps(h, events, cfg, state, now_s, first_run)  # 平台没有座位图的：图片搜索（高清 + OCR 确认）
     for l in leads:
         l["matches"] = list(dict.fromkeys(idmap.get(m, m) for m in l.get("matches", [])))
         l["platforms"] = detect_platforms(lead_blob(l), cfg)
