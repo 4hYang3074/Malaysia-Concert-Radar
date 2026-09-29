@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-29 17:37",
+ "generated_at": "2026-09-29 17:41",
  "health": {
   "GoLive": {
    "ok": true,
@@ -24,8 +24,8 @@
   },
   "Instagram": {
    "ok": true,
-   "count": 38,
-   "checked": 10,
+   "count": 46,
+   "checked": 11,
    "error": null
   },
   "Google News": {
@@ -45,7 +45,8 @@
   "ticket2u.official",
   "golive.asia",
   "imcliveglobal",
-  "zeppkualalumpur"
+  "zeppkualalumpur",
+  "hellouniversemy"
  ],
  "hashtags": [
   "konsertmalaysia",
@@ -1133,6 +1134,63 @@
    "note": "主办方，IG 有追踪"
   }
  ],
+ "promoters": [
+  {
+   "name": "Hello Universe",
+   "ig": "hellouniversemy",
+   "site": "https://www.hellouniverse.asia/",
+   "platforms": [
+    "GoLive"
+   ],
+   "note": "My Chemical Romance、Muse、ONE OK ROCK"
+  },
+  {
+   "name": "Live Nation Malaysia",
+   "ig": "livenation.my",
+   "site": "https://www.livenation.my/",
+   "platforms": [
+    "GoLive",
+    "Ticketmaster SG"
+   ],
+   "note": "前身 PR Worldwide；会员预售"
+  },
+  {
+   "name": "Star Planet",
+   "ig": "starplanetmy",
+   "site": "https://starplanet.com.my/",
+   "platforms": [
+    "BookMyShow",
+    "Ticket2U"
+   ],
+   "note": "华语天王天后（周杰伦、张学友、五月天）"
+  },
+  {
+   "name": "IMC Live Global",
+   "ig": "imcliveglobal",
+   "site": "https://imclive-group.com/",
+   "platforms": [
+    "Fantopia",
+    "BookMyShow"
+   ],
+   "note": "K-pop、华语，跨国巡演"
+  },
+  {
+   "name": "GoLive",
+   "ig": "golive.asia",
+   "site": "https://www.golive-asia.com/",
+   "platforms": [
+    "GoLive"
+   ],
+   "note": "售票平台兼主办"
+  },
+  {
+   "name": "Zepp Kuala Lumpur",
+   "ig": "zeppkualalumpur",
+   "site": "https://www.zepp.co.jp/hall/kualalumpur/",
+   "platforms": [],
+   "note": "场馆"
+  }
+ ],
  "events": [
   {
    "id": "bms-MJ116MYS",
@@ -1171,7 +1229,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "nol-26012515",
@@ -1218,7 +1278,17 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "opened_at": "2026-09-28 17:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-09-28 17:00"
+    }
+   ]
   },
   {
    "id": "fantopia-40f309cj",
@@ -1253,7 +1323,7 @@
    "artist_name": "Henry Lau",
    "fans": 603,
    "region": "K-pop",
-   "poster_img": "avatars/p-fantopia-40f309cj.jpg",
+   "poster_img": null,
    "avatar": "avatars/a-27e09d26eb62.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -1266,7 +1336,17 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-07-17 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-07-17 12:00"
+    }
+   ]
   },
   {
    "id": "fantopia-zmm0u8rr",
@@ -1314,7 +1394,17 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-09-01 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-09-01 12:00"
+    }
+   ]
   },
   {
    "id": "t2u-50157",
@@ -1397,7 +1487,9 @@
      "price_from": "RM 98.00"
     }
    ],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "t2u-50764",
@@ -1434,7 +1526,9 @@
      "price_from": "RM 170.00"
     }
    ],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "t2u-49360",
@@ -1519,7 +1613,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "nol-26013484",
@@ -1565,7 +1661,17 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "opened_at": "2026-09-23 19:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-09-23 19:00"
+    }
+   ]
   },
   {
    "id": "bms-MOO4WARD",
@@ -1604,7 +1710,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "t2u-49422",
@@ -1688,7 +1796,9 @@
      "price_from": "RM 150.00"
     }
    ],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "t2u-51955",
@@ -1760,7 +1870,9 @@
      "price_from": "RM 238.00"
     }
    ],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "fantopia-ij5i3kyk",
@@ -1807,7 +1919,17 @@
      "price_from": "RM 68.00"
     }
    ],
-   "hidden": "不是演唱会（football）"
+   "hidden": "不是演唱会（football）",
+   "opened_at": "2026-07-30 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-07-30 12:00"
+    }
+   ]
   },
   {
    "id": "t2u-51240",
@@ -1901,7 +2023,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "nol-26012968",
@@ -1948,7 +2072,17 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "opened_at": "2026-09-23 19:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-09-23 19:00"
+    }
+   ]
   },
   {
    "id": "nol-26013319",
@@ -1995,7 +2129,15 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-09-30 13:00"
+    }
+   ]
   },
   {
    "id": "nol-26014131",
@@ -2041,7 +2183,15 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-10-01 15:00"
+    }
+   ]
   },
   {
    "id": "nol-26013882",
@@ -2088,7 +2238,15 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-10-01 18:00"
+    }
+   ]
   },
   {
    "id": "t2u-50486",
@@ -2160,7 +2318,9 @@
      "price_from": "RM 150.00"
     }
    ],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "fantopia-5xkjkqxv",
@@ -2207,7 +2367,17 @@
      "price_from": "S$ 188.00"
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "opened_at": "2026-09-04 12:00",
+   "opened_approx": false,
+   "sale_state": "SOLD_OUT",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-09-04 12:00"
+    }
+   ]
   },
   {
    "id": "fantopia-eh4ddk7l",
@@ -2254,7 +2424,17 @@
      "price_from": "RM 208.00"
     }
    ],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "opened_at": "2026-04-13 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-04-13 12:00"
+    }
+   ]
   },
   {
    "id": "bms-ERIC2026",
@@ -2294,7 +2474,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "t2u-52015",
@@ -2378,7 +2560,9 @@
      "price_from": "RM 188.00"
     }
    ],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "bms-ROSE26KL",
@@ -2417,7 +2601,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "fantopia-jiyb5116",
@@ -2465,7 +2651,17 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-05-10 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-05-10 12:00"
+    }
+   ]
   },
   {
    "id": "nol-26013793",
@@ -2512,7 +2708,15 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-10-12 19:00"
+    }
+   ]
   },
   {
    "id": "nol-26013311",
@@ -2558,7 +2762,15 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-09-29 18:00"
+    }
+   ]
   },
   {
    "id": "bms-AUNTHENN",
@@ -2596,7 +2808,9 @@
      "price_from": null
     }
    ],
-   "hidden": "不是演唱会（脱口秀）"
+   "hidden": "不是演唱会（脱口秀）",
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "t2u-50832",
@@ -2688,8 +2902,21 @@
    "ocr_tiers": null,
    "stop_sales": false,
    "sales_closed": false,
+   "official_text": null,
+   "tickets_created": null,
+   "organizers": [],
    "updates": {},
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "opened_at": "2026-07-15 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Ticket2U 售票轮次",
+     "text": "Fantopia · 开售",
+     "time": "2026-07-15 12:00"
+    }
+   ]
   },
   {
    "id": "t2u-51322",
@@ -2785,7 +3012,9 @@
      "price_from": "RM 99.00"
     }
    ],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "bms-40FINGER",
@@ -2824,7 +3053,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "golive-167",
@@ -2907,9 +3138,14 @@
    "sold_out": false,
    "sales_closed": false,
    "selling_fast": false,
+   "organizers": [
+    "Live Nation Malaysia"
+   ],
+   "tickets_created": "2026-03-18 11:07",
    "url": "https://www.golive-asia.com/event/167",
    "country": "MY",
    "first_seen": "2026-09-29 08:34",
+   "official_text": "SAG\n레떼\nLS\nve\nBs\nkaw\nSTEP\nLANY: soft world tour in Kuala Lumpur\naa\n3/4\nshow pai\n‘sun 01 Nov 2026 20.00\nChoose payment\nmethod\n‘Remark\nBOOKING DETAILS\nLANY: soft world tour in Kuala Lumpur\nColive Asia\nnum\nsae\n9800\nim)\noot\na9\n00\neth\net\n00\n00\ncredit/debit cord\nsr\n00\nby clicking the\nath\npony\nfie\nnd\n1033.00\n0033\n| understand that the event organiser reserves the right to cancel, reschedule and/or\nrelocate the event, including rearrangement of current seating allocations, under unforeseen\ncircumstance and in acc\n1ce with prevailing Goverment gu\nConfirm payment\nGOUIVE READY (ADD-ON)\nWs package i\nclude\nrote\ning\njatform Fee,\nto leo\nn more\n06",
    "artist_name": "LANY",
    "fans": 104018,
    "region": "欧美",
@@ -2926,7 +3162,42 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-03-30 10:30",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "GoLive 售票轮次",
+     "text": "General Sales",
+     "time": "2026-04-02 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Mastercard Preferred",
+     "time": "2026-04-02 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Live Nation Presale",
+     "time": "2026-04-01 12:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Mastercard Presale",
+     "time": "2026-03-31 10:30"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Artist Presale",
+     "time": "2026-03-30 10:30"
+    },
+    {
+     "src": "GoLive 票种建立时间",
+     "text": "平台建立票种（通常就是开票前后）",
+     "time": "2026-03-18 11:07"
+    }
+   ]
   },
   {
    "id": "golive-173",
@@ -3010,6 +3281,10 @@
    "sold_out": false,
    "sales_closed": false,
    "selling_fast": false,
+   "organizers": [
+    "Live Nation Malaysia"
+   ],
+   "tickets_created": null,
    "url": "https://www.golive-asia.com/event/173",
    "country": "MY",
    "first_seen": "2026-09-29 08:34",
@@ -3039,6 +3314,7 @@
      "price": "RM 258"
     }
    ],
+   "official_text": "WT -\noy\nNOV4&5\nKUALA LUMPUR\nTM STADIUM NASIONAL\nULTIMATE VIP PACKAGE\nOne (1) first tier floor seated ticket\nUnprecedented stage access for a photo opportunity with your\nParty by a professional photographer from where The Weeknd\nwill perform later*\nExclusive Photo Souvenir: Capture your evening with a special\nkeepsake from The Weeknd Photo Booth*\nLimited edition The Weeknd gift item\nVIP laminate and lanyard\nExciusive VIP only wristband\nPriority merchandise shopping (if applicable)\n*No artist participation\nDetails for VIP entitlements will be released with an event guide nearer to the show date.\n‘Stay tuned to Live Nation Malaysia's social media channels for more updates.\nWWW.LIVENATION.MY | @@@ OLIVENATION.MY\nvisa\nESPRESSO.\n[mxemew]\nNov 4\nIMPUR-\nTM STADIUM NASIONAL\nGOLD VIP PACKAGE\nOne (1) first tier floor seated ticket\nExclusive Photo Souvenir: Capture your evening with a special\nkeepsake from The Weeknd Photo Booth\nLimited edition The Weeknd gift item\nVIP taminate and lanyard\nExclusive VIP only wristband\nPriority merchandise shopping (if applicable)\n*No artist participation\nDetails for VIP entitlements will be released with an event guide nearer to the show date.\n‘Stay tuned to Live Nation Malaysia's social media channels for more updates.\nWWWLLIVENATION.MY | @@@ OLIVENATIONMY\nVISA\nQmaybank\nNESPRESSO\n으으으\nNov 4\nIMPUR-\nTM STADIUM NASIONAL\nHOT SEAT PACKAGE\nOne (1) second tier floor seated ticket\nExclusive Photo Souvenir: Capture your evening with a special\nkeepsake from The Weeknd Photo Booth\nLimited edition The Weeknd gift item\nVIP laminate and lanyard\nExclusive VIP only wristband\nPriority merchandise shopping (if applicable)\n*No artist participation\nDetails for VIP entitlements will be released with an event guide nearer to the show date.\n‘Stay tuned to Live Nation Malaysia's social media channels for more updates.\nWWW.LIVENATION.MY | @@@ OLIVENATION.MY\nVisA\nQmaybani\nESPRESSO",
    "artist_name": "The Weeknd",
    "fans": 14707352,
    "region": "欧美",
@@ -3055,7 +3331,32 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-05-18 10:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "GoLive 售票轮次",
+     "text": "General Sales",
+     "time": "2026-09-29 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Live Nation Presale",
+     "time": "2026-05-20 12:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Maybank Visa Credit Card Presale",
+     "time": "2026-05-19 10:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Artist Presale",
+     "time": "2026-05-18 10:00"
+    }
+   ]
   },
   {
    "id": "nol-26013897",
@@ -3101,7 +3402,17 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "opened_at": "2026-09-23 17:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-09-23 17:00"
+    }
+   ]
   },
   {
    "id": "golive-180",
@@ -3178,9 +3489,14 @@
    "sold_out": false,
    "sales_closed": false,
    "selling_fast": false,
+   "organizers": [
+    "Live Nation Malaysia"
+   ],
+   "tickets_created": null,
    "url": "https://www.golive-asia.com/event/180",
    "country": "MY",
    "first_seen": "2026-09-29 08:34",
+   "official_text": "VIP ENTITLEMENTS\nVIP MEET & GREET PACKAGE\n(ONE (1) FREE SEATING TICKET\n* PRE-SHOW INDIVIDUAL PHOTO OPPORTUNITY\nWITH YUNG KAI\nVIP ONLY EXCLUSIVE MERCH ITEM\n+ VIP LAMINATE AND LANYARD\nSTAY WITH\nEARLY ENTRY INTO PERFORMANCE HALL\nPRIORITY MERCHANDISE SHOPPING\n项。 AsATouR2026\n(IF APPLICABLE)\nNOVEMBER 6 | KUALALI\nnena on orm se\nLin\na eae are gant tow AE.\nTHE PLATFORM, MENARA\nTICKETING DETAILS AT GOLIVE-ASIA.COM\n[aay are",
    "artist_name": "Yung Kai",
    "fans": 8016,
    "region": "欧美",
@@ -3197,7 +3513,32 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-08-03 11:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "GoLive 售票轮次",
+     "text": "General Sale",
+     "time": "2026-08-06 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Live Nation Presale",
+     "time": "2026-08-05 12:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Mastercard Presale",
+     "time": "2026-08-04 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Artist Presale",
+     "time": "2026-08-03 11:00"
+    }
+   ]
   },
   {
    "id": "nol-26013510",
@@ -3244,7 +3585,15 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-10-01 17:00"
+    }
+   ]
   },
   {
    "id": "bms-QWER2026",
@@ -3283,7 +3632,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "fantopia-vp48mq9j",
@@ -3331,7 +3682,17 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-08-28 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-08-28 12:00"
+    }
+   ]
   },
   {
    "id": "fantopia-ku9ajljg",
@@ -3383,7 +3744,17 @@
     "title": "#SHOWBIZ: BIGBANG add second KL show after tickets sell out in minutes - NST Online",
     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTFhRVjNxRWJtWkdvcHRLb19yX1dNa1VrbjcxQVNDbkFCV0VPWmlUYXRPd3FqLWRDcmxrWFJJUF9OQ3JDMG1peTdsX2xaZS1DQUN1ckZURGFVbmsyaC01M1B5MHZFWjVRQjY2cDYwZmE0TjFJUnNHYlNRNzZQeDROZzJDNXIzTVRCX2QwZ3ctY0pPMXhkYXp1NkVPOWtxUG9vLXRhTW00R0h4bEpCYjNoblFzS284R2VXZVdTbEln?oc=5",
     "time": "2026-09-23"
-   }
+   },
+   "opened_at": "2026-08-30 13:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-08-30 13:00"
+    }
+   ]
   },
   {
    "id": "fantopia-zk3x1r1c",
@@ -3418,9 +3789,9 @@
    "artist_name": "世界巡回演唱会",
    "fans": 0,
    "region": "华语",
-   "poster_img": "avatars/p-fantopia-zk3x1r1c.jpg",
-   "avatar": "avatars/p-fantopia-zk3x1r1c.jpg",
-   "avatar_kind": "poster",
+   "poster_img": null,
+   "avatar": null,
+   "avatar_kind": null,
    "platforms": [
     {
      "source": "Fantopia",
@@ -3431,7 +3802,17 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-08-17 13:28",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-08-17 13:28"
+    }
+   ]
   },
   {
    "id": "t2u-51416",
@@ -3528,8 +3909,21 @@
    "ocr_tiers": null,
    "stop_sales": false,
    "sales_closed": false,
+   "official_text": null,
+   "tickets_created": null,
+   "organizers": [],
    "updates": {},
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "opened_at": "2026-08-05 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Ticket2U 售票轮次",
+     "text": "Fantopia · 开售",
+     "time": "2026-08-05 12:00"
+    }
+   ]
   },
   {
    "id": "fantopia-4v266ql6",
@@ -3577,7 +3971,17 @@
      "price_from": "RM 208.00"
     }
    ],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "opened_at": "2026-09-11 10:00",
+   "opened_approx": false,
+   "sale_state": "SOLD_OUT",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-09-11 10:00"
+    }
+   ]
   },
   {
    "id": "nol-26013161",
@@ -3624,7 +4028,15 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-10-06 19:00"
+    }
+   ]
   },
   {
    "id": "fantopia-m3vmif9o",
@@ -3673,7 +4085,17 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-08-22 14:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-08-22 14:00"
+    }
+   ]
   },
   {
    "id": "golive-176",
@@ -3743,6 +4165,11 @@
    "sold_out": false,
    "sales_closed": false,
    "selling_fast": false,
+   "organizers": [
+    "Live Nation Malaysia",
+    "iMe Malaysia"
+   ],
+   "tickets_created": null,
    "url": "https://www.golive-asia.com/event/176",
    "country": "MY",
    "first_seen": "2026-09-29 08:34",
@@ -3780,6 +4207,7 @@
      "price": "RM 398"
     }
    ],
+   "official_text": "VIP ENTITLEMENTS\nVIP PACKAGE (SEATED)\nRM1,198\n‘ON (2) PREMIUM SEATED TICKET\n[ACCESS TO THE PRE-SHOW SOUNDCHECK PARTY\nBABYMONSTER\n‘iP LAMINATE & LANYARD\nxcu\nve phorocaRo saT\nEXCLUSIVE ViP arrrrew\nCHOOM\nEARLY ACCESS TO MERCHANDISE BOOTH\n2026-27 WORLD TOUR\nIN KUALA LUMPUR\nVIP PACKAGE (STANDING)\nRM1,098\nUNIFI ARENA\nONE « STANOING TIeKET\n[ACCESS TO THE PRE-SHOW SOUNDCHECK PARTY\nVIP LAMINATE & LANYARD\nexcusv\nPHoTocano ser\nExctos\nje vie airy ra\n[EARLY ACCESS TO MERCHANDISE BOOTH\nWT -\noy",
    "artist_name": "BABYMONSTER",
    "fans": 217722,
    "region": "K-pop",
@@ -3796,7 +4224,32 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-06-30 11:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "GoLive 售票轮次",
+     "text": "General Sales",
+     "time": "2026-07-03 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Live Nation Presale",
+     "time": "2026-07-02 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Mastercard Presale",
+     "time": "2026-07-01 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "MONSTIEZ MEMBERSHIP (GLOBAL) PRESALE",
+     "time": "2026-06-30 11:00"
+    }
+   ]
   },
   {
    "id": "fantopia-vzov1t8m",
@@ -3844,7 +4297,17 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-08-14 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-08-14 12:00"
+    }
+   ]
   },
   {
    "id": "fantopia-404os4yr",
@@ -3892,7 +4355,17 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-08-18 13:28",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-08-18 13:28"
+    }
+   ]
   },
   {
    "id": "fantopia-6fk8t9ph",
@@ -3940,7 +4413,17 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-08-19 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-08-19 12:00"
+    }
+   ]
   },
   {
    "id": "fantopia-59ndm2v2",
@@ -3987,7 +4470,17 @@
      "price_from": "RM 180.00"
     }
    ],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "opened_at": "2026-08-24 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-08-24 12:00"
+    }
+   ]
   },
   {
    "id": "golive-171",
@@ -4056,9 +4549,14 @@
    "sold_out": false,
    "sales_closed": false,
    "selling_fast": false,
+   "organizers": [
+    "SAH Entertainment"
+   ],
+   "tickets_created": "2026-04-27 13:10",
    "url": "https://www.golive-asia.com/event/171",
    "country": "MY",
    "first_seen": "2026-09-29 08:34",
+   "official_text": "-aNOROBSESSIONES\n(WIRASTANDING)\nBENEFITS\nRM 918\nONE (1) STANDING TICKET\nEXCLUSIVE ACCESS TO THE SSOS PRE-SHOW SOUNDCHECK AND PRESS\n(CONFERENCE WITH AN OPPORTUNITY TO ASK THE BAND AQUESTION*\nEXCLUSIVE SPECIALLY DESIGNED VIP GIFT ITEM\n+ VIP _LAMINATEAND LANYARD\nEXCLUSIVE NO.1 OBSESSION PACKAGE WRISTBAND\nPHOTO OPPORTUNITY IM FRONT OF THE VIP BACKDROP TO COMMEMORATE\nYOUR EVENING**\nEARLY ENTRY INTO PERFORMANCE HALL\nPRIORITY MERCHANDISE SHOPPING\nDEDICATED VIP ENTRANCE AND ON-SITE VIPTEAM\n*ALL QuEsI\nwe\neNO.\nsae avoves\nPiY\ninant em\nime or posrins.\n‘an\nayer ra oman\nSAFI\nerent epi rarrauns\nWon oreuzz CEI ETza hitz\nPaNOfOBSESSIONES\n(WIEXSEATING)\nBENEFITS\n(ONE (1) SEATED TICKET\nEXCLUSIVE ACCESS TO THE 5SOS PRE-SHOW SOUNDCHECK AND PRESS:\n(CONFERENCE WITH AN OPPORTUNITY TO ASK THE BAND A QUESTION’\nEXCLUSIVE SPECIALLY DESIGNED VIP GIFT ITEM\nVIPLAMINATE AND LANYARD\nEXCLUSIVE NO.1 OBSESSION PACKAGE WRISTBAND\nPHOTO OPPORTUNITY IN FRONT OF THE VIP BACKDROP TO\nCOMMEMORATE YOUR EVENING ~\nPRIORITY MERCHANDISE SHOPPING\nDEDICATED VIPENTRANCE AND ON-SITE VIP TEAM\nsau\nERED\nrae anew vara\ncians ace\nHH\nDT\n이 suaster re onanat\nSAFI\nrrr sna ramen,\nWorworeuzz GTS £724 hitz\nBITE THEAPPEE\nUPGRADE\nUPGRADE |S AVAILABLEAS AN ADD-ON FOR ALL TICKET-HOLDERS!\n+ EXGLUSIVE AGGESS TO THE SSOS PRE-SHOW SOUNDCHEGK AND PRESS\nCONFERENCE WITH AN OPPORTUNITY TO ASK THE BAND A QUESTION*\nVIP LAMINATE AND LANYARD\nPHOTO OPPORTUNITY IN FRONT OF THE VIP BACKDROP TO COMMEMORATE\nVOUR EVENING**\nEARLY ENTRY INTO PERFORMANCE HALL (APPLICABLE FOR CAT 3 STANDING\nNLTD\nPRIORITY MERCHANDISE SHOPPING\nDEDICATED VIP ENTRANCE AND ON-SITE VIP TEAM\nPLEASE NOTE: YOUMUST HAVE PURCHASED A TICKET TO THE EVENT IN\nORDER TO USE THIS UPGRADE TICKET\n+ THIS PAGMAGE DOES NOT INCLUDEA TICKET TO THE SHOW\nQUESTIONS MAY NOT am\nswine\nRTI\nPoem ENTRY.\nyw WILL BI\nTER Wi\nSESSION STANDII\nUROMASEN:\nanon\n198 sm\nme errei\neat\nCH\nsun\nJone e matt ax ouanats\nSAFI\nreat maou ranmatms\nwon oreucz GE ETza hitz\nW 해\nADY",
    "artist_name": "5 Seconds Of Summer",
    "fans": 1975875,
    "region": "欧美",
@@ -4075,7 +4573,32 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-06-22 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "GoLive 售票轮次",
+     "text": "General Sale",
+     "time": "2026-06-23 12:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Bite The Apple (Upgrade)",
+     "time": "2026-06-23 12:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Artist Presale",
+     "time": "2026-06-22 12:00"
+    },
+    {
+     "src": "GoLive 票种建立时间",
+     "text": "平台建立票种（通常就是开票前后）",
+     "time": "2026-04-27 13:10"
+    }
+   ]
   },
   {
    "id": "golive-149",
@@ -4103,6 +4626,10 @@
    "sold_out": false,
    "sales_closed": true,
    "selling_fast": false,
+   "organizers": [
+    "Hello Universe"
+   ],
+   "tickets_created": "2025-07-09 03:41",
    "url": "https://www.golive-asia.com/event/149",
    "country": "MY",
    "first_seen": "2026-09-29 08:34",
@@ -4136,6 +4663,7 @@
      "price": "RM 299"
     }
    ],
+   "official_text": "22\nsiz 一 一\n= Xs\nSe\nANCE\nBG\nam\neS\ncw\nSS\nSS\n- 77\nez\n‘ce\nws\nay.\nSs\nNSS\nee\nJ? “Gs\n~ = 100 --\nPE\nSOUTH\nEAST\nASIA\n2026\nSU THU 19 NOV 2026\nSI OUT\nFRI 20 NOV 2026\nKUALA LUMPUR, MALAYSIA\nNATIONAL STADIUM\nBUKIT JALIL\nDEDICATED ENTRANCE\nEXCLUSIVE MCR GIFTS\n(SEATING)\nONE (1) COMMEMORATIVE CONCERT TOTE BAG\nRM1099\n- ONE (1) COMMEMORATIVE CONCERT LANYARD\nDETAILS FOR VIP ENTITLEMENTS WILL BE RELEASED WITH AN EVENT GUIDE NEARER TO THE SHOW DATE.\n‘STAY TUNED TO HELLO UNIVERSE'S SOCIAL MEDIA CHANNELS FOR MORE UPDATES.\nSOUTH\nEAST\nASIA\n2026\n90001 THU 19 NOV 2026\nsi ~ FRI 20 NOV 2026\nKUALA LUMPUR, MALAYSIA\nNATIONAL STADIUM\nBUKIT JALIL\nEARLY ACCESS TO\nSTANDING AREA\n(DON'T LOVE YOU\nCEARLY ENTRY)\n‘early access timing to be informed closer to concert day\nRM799\nEXCLUSIVE WRIST TAG\nDETAILS FOR VIP ENTITLEMENTS WILL BE RELEASED WITH AN EVENT GUIDE NEARER TO THE SHOW DATE.\n‘STAY TUNED TO HELLO UNIVERSE'S SOCIAL MEDIA CHANNELS FOR MORE UPDATES.",
    "artist_name": "My Chemical Romance",
    "fans": 1839299,
    "region": "欧美",
@@ -4152,7 +4680,22 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2025-07-09",
+   "opened_approx": true,
+   "sale_state": "SALE_CLOSED",
+   "sale_evidence": [
+    {
+     "src": "GoLive 票种建立时间",
+     "text": "平台建立票种（通常就是开票前后）",
+     "time": "2025-07-09 03:41"
+    }
+   ],
+   "watch": {
+    "since": "2026-09-29 17:41",
+    "checks": 1,
+    "last_check": "2026-09-29 17:41"
+   }
   },
   {
    "id": "nol-26013132",
@@ -4199,7 +4742,15 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-09-30 19:00"
+    }
+   ]
   },
   {
    "id": "t2u-50151",
@@ -4259,7 +4810,9 @@
      "price_from": "RM 20.00"
     }
    ],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "fantopia-mtqy32gw",
@@ -4307,7 +4860,17 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-05-04 11:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-05-04 11:00"
+    }
+   ]
   },
   {
    "id": "golive-174",
@@ -4379,6 +4942,10 @@
    "sold_out": false,
    "sales_closed": false,
    "selling_fast": false,
+   "organizers": [
+    "Live Nation Malaysia"
+   ],
+   "tickets_created": "2026-05-18 08:09",
    "url": "https://www.golive-asia.com/event/174",
    "country": "MY",
    "first_seen": "2026-09-29 08:34",
@@ -4396,6 +4963,7 @@
      "price": "RM 328"
     }
    ],
+   "official_text": "ai\nPEA |\nVj\nYyy\nyj\nWS\nWT -\noy\nwave to earth world tour 2026\nNOV. 22\nKuala Lumpur\nIdea Live Arena\nOne standing ticket\nOne pre-show group picture with wave to earth (Group of 6)\nAccess to wave to earth's pre-show soundcheck\nVIP only merchandise package, specially curated by wave to earth\nEarly entry to the venue (‘Skip the Line’) (1st tier)\nEarly Access to merchandise table\nDetails for VIP entitlements will be released with an event guide nearer to the show date.\nStay tuned to Live Nation Malaysia's social media channels for more updates.\nWWWLIVENATION.MY | @@@ @LIVENATION.AY\nwave to earth world tour 2026\nNOV. 22\nKuala Lumpur\nIdea Live Arena\nOne standing ticket\nAccess to wave to earth's pre-show soundcheck\nVIP only merchandise item\nEarly entry to the venue (‘Skip the Line’) (2nd tier)\nEarly Access to merchandise table\nOne seated ticket\nAccess to wave to earth's pre-show soundcheck\nVIP only merchandise item\nEarly Access to merchandise table\nDetails for VIP entitlements will be released with an event guide nearer to the show date.\nStay tuned to Live Nation Malaysia's social media channels for more updates.\nWWWLIVENATION.MY | @@@ @LIVENATION.MY\nteen 50991",
    "artist_name": "wave to earth",
    "fans": 43094,
    "region": "K-pop",
@@ -4421,7 +4989,32 @@
    "stop_sales": false,
    "updates": {},
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-05-27 11:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "GoLive 售票轮次",
+     "text": "GoLive · General Sales",
+     "time": "2026-05-28 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Fantopia · 开售",
+     "time": "2026-05-28 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "GoLive · Live Nation Presale",
+     "time": "2026-05-27 11:00"
+    },
+    {
+     "src": "GoLive 票种建立时间",
+     "text": "平台建立票种（通常就是开票前后）",
+     "time": "2026-05-18 08:09"
+    }
+   ]
   },
   {
    "id": "nol-26013810",
@@ -4468,7 +5061,15 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-09-29 19:00"
+    }
+   ]
   },
   {
    "id": "fantopia-9aexklho",
@@ -4516,7 +5117,17 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-08-15 13:00",
+   "opened_approx": false,
+   "sale_state": "SOLD_OUT",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-08-15 13:00"
+    }
+   ]
   },
   {
    "id": "t2u-49498",
@@ -4576,7 +5187,9 @@
      "price_from": "RM 118.00"
     }
    ],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "golive-172",
@@ -4650,6 +5263,10 @@
    "sold_out": false,
    "sales_closed": false,
    "selling_fast": false,
+   "organizers": [
+    "Hello Universe"
+   ],
+   "tickets_created": "2026-04-27 16:57",
    "url": "https://www.golive-asia.com/event/172",
    "country": "MY",
    "first_seen": "2026-09-29 08:34",
@@ -4687,6 +5304,7 @@
      "price": "RM 199"
     }
    ],
+   "official_text": "THE ONLY SOUTHEAST ASIA SHOW\nWw\nEVANE\nWITH SPECIAL GUESTS\nEARLY ENTRY\n“early access timing tobe informed closer to concert day\nEXCLUSIVE MERCHANDISE\nEXCLUSIVE VIP\nEXCLUSIVE SIGNED POSTER\nEXPERIENCE\nA DRINK VOUCHER\n(UPGRADE)\nRM888\nEXCLUSIVE BEHIND THE\nSCENES STADIUM TOUR\nDETAILS FOR VIP ENTITLEMENTS WILL BE RELEASED WITH AN EVENT GUIDE NEARER TO THE SHOW DATE.\n‘STAY TUNED TO HELLO UNIVERSE'S SOCIAL MEDIA CHANNELS FOR MORE UPDATES.\nTHE ONLY SOUTHEAST ASIA SHOW\nCE\nEVAN!\nWITH SPECIAL GUESTS\n28 NOVEMBER 2026\nNATIONAL HOCKEY STADIUM\nKUALA LUMPUR\nDEDICATED ENTRANCE\nEXCLUSIVE EVANESCENCE GIFTS\n- ONE (1) COMMEMORATIVE CONCERT TOTE BAG.\n(SEATING)\nRM1199\n- ONE (1) COMMEMORATIVE CONCERT LANYARD\nDETAILS FOR VIP ENTITLEMENTS WILL BE RELEASED WITH AN EVENT GUIDE NEARER TO THE SHOW DATE.\n‘STAY TUNED TO HELLO UNIVERSE'S SOCIAL MEDIA CHANNELS FOR MORE UPDATES.",
    "artist_name": "Evanescence",
    "fans": 3784894,
    "region": "欧美",
@@ -4703,7 +5321,37 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-06-25 10:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "GoLive 售票轮次",
+     "text": "General Sales",
+     "time": "2026-06-26 10:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "STANDING VIP (UPGRADE)",
+     "time": "2026-06-25 10:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "SEATING VIP (UPGRADE)",
+     "time": "2026-06-25 10:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Hello Special Access",
+     "time": "2026-06-25 10:00"
+    },
+    {
+     "src": "GoLive 票种建立时间",
+     "text": "平台建立票种（通常就是开票前后）",
+     "time": "2026-04-27 16:57"
+    }
+   ]
   },
   {
    "id": "t2u-52040",
@@ -4781,7 +5429,9 @@
      "price_from": "RM 99.00"
     }
    ],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "fantopia-xngkbueb",
@@ -4816,9 +5466,9 @@
    "artist_name": "世界巡回演唱会",
    "fans": 0,
    "region": "华语",
-   "poster_img": "avatars/p-fantopia-xngkbueb.jpg",
-   "avatar": "avatars/p-fantopia-xngkbueb.jpg",
-   "avatar_kind": "poster",
+   "poster_img": null,
+   "avatar": null,
+   "avatar_kind": null,
    "platforms": [
     {
      "source": "Fantopia",
@@ -4829,7 +5479,17 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-08-19 13:28",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-08-19 13:28"
+    }
+   ]
   },
   {
    "id": "nol-26012669",
@@ -4876,7 +5536,17 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "opened_at": "2026-09-26 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-09-26 12:00"
+    }
+   ]
   },
   {
    "id": "golive-177",
@@ -4956,9 +5626,14 @@
    "sold_out": false,
    "sales_closed": false,
    "selling_fast": false,
+   "organizers": [
+    "Live Nation Malaysia"
+   ],
+   "tickets_created": null,
    "url": "https://www.golive-asia.com/event/177",
    "country": "MY",
    "first_seen": "2026-09-29 08:34",
+   "official_text": "ifs\nts\nal\nrete\nPox\nxx\nvel\n=e bk\nWT -\noy",
    "artist_name": "FKJ",
    "fans": 157158,
    "region": "欧美",
@@ -4975,7 +5650,32 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-07-06 11:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "GoLive 售票轮次",
+     "text": "General Sale",
+     "time": "2026-07-09 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Live Nation Presale",
+     "time": "2026-07-08 12:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Mastercard Presale",
+     "time": "2026-07-07 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Artist Presale",
+     "time": "2026-07-06 11:00"
+    }
+   ]
   },
   {
    "id": "t2u-52058",
@@ -5059,7 +5759,9 @@
      "price_from": "RM 97.00"
     }
    ],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "t2u-51768",
@@ -5131,7 +5833,9 @@
      "price_from": "RM 188.00"
     }
    ],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）"
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "golive-178",
@@ -5225,9 +5929,14 @@
    "sold_out": false,
    "sales_closed": false,
    "selling_fast": false,
+   "organizers": [
+    "Live Nation Malaysia"
+   ],
+   "tickets_created": null,
    "url": "https://www.golive-asia.com/event/178",
    "country": "MY",
    "first_seen": "2026-09-29 08:34",
+   "official_text": "VIP ENTITLEMENTS\n42\nPt\nKHALID MEET & GREET EXPERIENCE\n(ONE STANDING TICKET\nMEET @ GREET WITH KHALID\niy\nUp\nINDIVIDUAL PHOTO OPPORTUNITY WITH KHALID\n(ONE VIP EXCLUSIVE MERCH PACK, CURATED BY KHALIO\n(ONE COMMEMORATIVE VIP LAMINATE, SIGNED BY KHALIO\nPRIORITY MERCHANDISE SHOPPING\nEARLY ENTRY INTO PERFORMANCE HALL (TIER 1\nIT'S ALWAYS\nKHALID VIP MERCH PACKAGE\nONE STANDING TICKET\nSUMMER\nONE VIP EXCLUSIVE MERCH PACK, CURATED BY KHALIO\nSOMEWHERE\n(ONE COMMEMORATIVE VIP LAMINATE\nEARLY ENTRY INTO PERFORMANCE HALL CTIER 21\nED)\nPRIORITY MERCHANDISE SHOPPING\nwet Wat\n1st oe etme nee\noT\neros aw os\nWEDNESDAY,\nDECEMBER 9\noy\noat\ncs\nhoy\nIDEA LIVE ARENA\nKUALA LUMPUR\nWT -\noy",
    "artist_name": "Khalid",
    "fans": 1761107,
    "region": "欧美",
@@ -5254,7 +5963,37 @@
    "stop_sales": false,
    "updates": {},
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-07-13 11:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "GoLive 售票轮次",
+     "text": "GoLive · General Sale",
+     "time": "2026-07-16 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Fantopia · 开售",
+     "time": "2026-07-16 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "GoLive · Live Nation Presale",
+     "time": "2026-07-15 12:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "GoLive · Mastercard Presale",
+     "time": "2026-07-14 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "GoLive · Artist Presale",
+     "time": "2026-07-13 11:00"
+    }
+   ]
   },
   {
    "id": "t2u-50805",
@@ -5328,7 +6067,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "golive-181",
@@ -5412,9 +6153,14 @@
    "sold_out": true,
    "sales_closed": false,
    "selling_fast": false,
+   "organizers": [
+    "Live Nation Malaysia"
+   ],
+   "tickets_created": null,
    "url": "https://www.golive-asia.com/event/181",
    "country": "MY",
    "first_seen": "2026-09-29 08:34",
+   "official_text": "CW 20\nDo That Again Tour si\nVIP ENTITLEMENTS\n\"MALCOLM TODD ULTIMATE EXPERIENCE\nale\n[Oronn ‘ACOUSTIC EXPERIENCE\nMalan fa\nMalcolm Todd\nMALCOLM TODD EARLY ENTRY VIF PACKAGE\n9 December, 2026\nKL\nKuala Lumpur\nEn\ngm\nWT -\noy",
    "artist_name": "Malcolm Todd",
    "fans": 30697,
    "region": "欧美",
@@ -5430,7 +6176,27 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "opened_at": "2026-09-21 11:00",
+   "opened_approx": false,
+   "sale_state": "SOLD_OUT",
+   "sale_evidence": [
+    {
+     "src": "GoLive 售票轮次",
+     "text": "General Sales",
+     "time": "2026-09-23 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Live Nation Presale",
+     "time": "2026-09-22 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Artist Presale",
+     "time": "2026-09-21 11:00"
+    }
+   ]
   },
   {
    "id": "nol-26014056",
@@ -5477,7 +6243,15 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-10-08 18:00"
+    }
+   ]
   },
   {
    "id": "nol-26013663",
@@ -5523,7 +6297,15 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-09-30 18:00"
+    }
+   ]
   },
   {
    "id": "bms-DIORINKL",
@@ -5537,7 +6319,18 @@
     "2026-12-12 17:23",
     "2026-12-13 17:23"
    ],
-   "sales": [],
+   "sales": [
+    {
+     "name": "加场开票（#klconcert 公告）",
+     "start": "2026-09-29 15:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.instagram.com/p/Dd0RNZPR-Tq/",
+     "announced": true
+    }
+   ],
    "tiers": [],
    "limit": 4,
    "organiser": "CK STAR MALAYSIA SDN. BHD.",
@@ -5563,7 +6356,18 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "sales_closed": false,
+   "news_added": null,
+   "opened_at": "2026-09-29 15:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "加场开票（#klconcert 公告）",
+     "text": "加场开票（#klconcert 公告）",
+     "time": "2026-09-29 15:00"
+    }
+   ]
   },
   {
    "id": "golive-175",
@@ -5629,6 +6433,10 @@
    "sold_out": true,
    "sales_closed": false,
    "selling_fast": false,
+   "organizers": [
+    "Live Nation Malaysia"
+   ],
+   "tickets_created": null,
    "url": "https://www.golive-asia.com/event/175",
    "country": "MY",
    "first_seen": "2026-09-29 08:34",
@@ -5674,6 +6482,7 @@
      "price": "RM 268"
     }
    ],
+   "official_text": "hat\neo\nAY\n二 一 一 一 一\nTid\n{ po\n网 人\nLy\nLex\nWe\n[나 ij F\nWT -\noy",
    "artist_name": "BTS",
    "fans": 3862685,
    "region": "K-pop",
@@ -5689,7 +6498,27 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "opened_at": "2026-06-03 11:00",
+   "opened_approx": false,
+   "sale_state": "SOLD_OUT",
+   "sale_evidence": [
+    {
+     "src": "GoLive 售票轮次",
+     "text": "GENERAL ONSALE",
+     "time": "2026-06-05 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "LIVE NATION PRESALE",
+     "time": "2026-06-04 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "ARMY MEMBERSHIP PRESALE",
+     "time": "2026-06-03 11:00"
+    }
+   ]
   },
   {
    "id": "nol-26013730",
@@ -5735,7 +6564,15 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-09-30 19:00"
+    }
+   ]
   },
   {
    "id": "fantopia-vi4b75bp",
@@ -5783,7 +6620,17 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-07-27 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-07-27 12:00"
+    }
+   ]
   },
   {
    "id": "fantopia-c2h998m1",
@@ -5831,7 +6678,17 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-07-14 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-07-14 12:00"
+    }
+   ]
   },
   {
    "id": "fantopia-0peucdui",
@@ -5884,7 +6741,17 @@
     "title": "#SHOWBIZ: BIGBANG add second KL show after tickets sell out in minutes - NST Online",
     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTFhRVjNxRWJtWkdvcHRLb19yX1dNa1VrbjcxQVNDbkFCV0VPWmlUYXRPd3FqLWRDcmxrWFJJUF9OQ3JDMG1peTdsX2xaZS1DQUN1ckZURGFVbmsyaC01M1B5MHZFWjVRQjY2cDYwZmE0TjFJUnNHYlNRNzZQeDROZzJDNXIzTVRCX2QwZ3ctY0pPMXhkYXp1NkVPOWtxUG9vLXRhTW00R0h4bEpCYjNoblFzS284R2VXZVdTbEln?oc=5",
     "time": "2026-09-23"
-   }
+   },
+   "opened_at": "2026-09-17 10:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-09-17 10:00"
+    }
+   ]
   },
   {
    "id": "golive-179",
@@ -5984,9 +6851,14 @@
    "sold_out": false,
    "sales_closed": false,
    "selling_fast": false,
+   "organizers": [
+    "Live Nation Malaysia"
+   ],
+   "tickets_created": null,
    "url": "https://www.golive-asia.com/event/179",
    "country": "MY",
    "first_seen": "2026-09-29 08:34",
+   "official_text": "25 YEARS OF HITS\nMIPENTITLEMENTS 0\nWESTLIFE\nGOLD VIP PACKAGE\n+ ONE (1) FIRST TIER SEATED TICKET\n‘+ EXCLUSIVE WESTLIFE VIP GIFT\n+ VIP LAMINATE AND LANYARD\n+ PRIORITY MERCHANDISE SHOPPING.\n(UP APPLICABLE)\nSILVER VIP PACKAGE\n+ ONE (1) SECOND TIER SEATED TICKET\n+ EXCLUSIVE WESTLIFE VIP GIFT\nTHE ANNIVERSARY\nWORLD TOUR\n+ VIP LAMINATE AND LANYARD.\n+ PRIORITY MERCHANDISE SHOPPING.\n(IF APPLICABLE)\n13 & 14 JANUARY 2027\noe\nrss\ncr\nmv\noe\nUNIFI ARENA, KUALA LUMPUR\nSee\n‘TICKETING DETAILS AT GOLIVE-ASIA.COM.\nwe\ncro a\nLa VIPLIVENNTION AA\nWT -\noy",
    "artist_name": "Westlife",
    "fans": 497123,
    "region": "欧美",
@@ -6003,7 +6875,37 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-07-20 11:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "GoLive 售票轮次",
+     "text": "GENERAL SALES (13TH JAN SHOW)",
+     "time": "2026-09-28 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Mastercard Preferred (14th Jan Show)",
+     "time": "2026-07-22 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "General Sales (14TH JAN SHOW)",
+     "time": "2026-07-22 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Live Nation Presale",
+     "time": "2026-07-21 11:00"
+    },
+    {
+     "src": "GoLive 售票轮次",
+     "text": "Mastercard Presale",
+     "time": "2026-07-20 11:00"
+    }
+   ]
   },
   {
    "id": "bms-JC27WTMY",
@@ -6042,7 +6944,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "golive-159",
@@ -6085,9 +6989,14 @@
    "sold_out": false,
    "sales_closed": false,
    "selling_fast": false,
+   "organizers": [
+    "Live Nation Malaysia"
+   ],
+   "tickets_created": "2025-11-03 12:32",
    "url": "https://www.golive-asia.com/event/159",
    "country": "MY",
    "first_seen": "2026-09-29 08:34",
+   "official_text": "BLUE\n25™ ANNIVERSARY TOUR\n24 January 2027\nONE LOVE VIP PACKAGE\nㆍ One standing ticket\nPre-show group photo with BLUE (Group of 5)\nPre-show soundcheck with BLUE\nVIP laminate and lanyard\nEarly Entry into the venue\nExclusive poster autographed by BLUE\nDETAILS FOR VIP ENTITLEMENTS WILL BE RELEASED WITH AN EVENT GUIDE NEARER TO THE SHOW DATE.\nSTAY TUNED TO LIVE NATION MALAYSIAS SOCIAL MEDIA CHANNELS FOR MORE UPDATES,\nwwwuwpwm 10020] oee euvguroun\n12:42\nal Fe\nPayment metho\n‘ONE OK ROCK DETOX\nia Tour\n6 in Kuala\nLumpur\nSf\net\nxd 29 Apr 2\nection\nnm\nbs\nnbe\nPrice\n00\nxing\nage\nTi\nket P\nE-ticket\nProce\ning\notal\nour\nMYR\naa\nhome\nuct part\ncnon\nDS\nONE OK ROCK DETOX Asia Tour 2026 in Kuala Lumpur\nSTEP\nom\n3/4\nChoose payment\n‘Show Date Wed 29 Ape 2028 2030\nmethod\nRemnant\nOK Re\n708\nlato\nuala Lump\nrecit/ det\net\nes\ntunde\n1d that\n0090\nWe\nrose\nyost\nright to\nncol, ro\nedule and/or\nlocal\nnt including rea\nng\nnt of curr\ng allo\n‘und\n05600\nmatar\n‘and\nnacco\njonce wi\nall\nsoverme\nona\nTicke\ntoc\n(rad on\n[016 undorwrit\nTw\ner\nBerhad,\nbuted by Mind\nnal\nsdn Bhd as the qu\nsd agent regi\nod\ntn\nConfirm payment\nPIAM. Tune\nsurance Malaysia Be\nad is 0\nwembs\n(OM. The bor\npayable under\n56019\nprot\ndb\ntoP\nor\ngible pol\nMM up to limit\ncontact Tun\nmsuron\noysia\nPioM",
    "artist_name": "Blue",
    "fans": 141502,
    "region": "欧美",
@@ -6104,7 +7013,22 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2025-11-06 11:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "GoLive 售票轮次",
+     "text": "General Sales",
+     "time": "2025-11-06 11:00"
+    },
+    {
+     "src": "GoLive 票种建立时间",
+     "text": "平台建立票种（通常就是开票前后）",
+     "time": "2025-11-03 12:32"
+    }
+   ]
   },
   {
    "id": "fantopia-n0wwcatg",
@@ -6152,7 +7076,15 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-10-04 13:00"
+    }
+   ]
   },
   {
    "id": "nol-26013626",
@@ -6198,7 +7130,15 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-09-30 11:00"
+    }
+   ]
   },
   {
    "id": "fantopia-rx6i8tz7",
@@ -6246,7 +7186,17 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "opened_at": "2026-08-10 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "开售",
+     "time": "2026-08-10 12:00"
+    }
+   ]
   },
   {
    "id": "bms-BMSYSG26",
@@ -6283,7 +7233,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "bms-BMSQFZKL",
@@ -6320,7 +7272,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "bms-BMSASP26",
@@ -6357,7 +7311,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "bms-BMSATMYS",
@@ -6393,7 +7349,9 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "bms-BMSBND26",
@@ -6430,7 +7388,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "bms-BMSHENRY",
@@ -6467,7 +7427,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "bms-BMSIDOLR",
@@ -6504,7 +7466,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "bms-BMSCAPKL",
@@ -6540,7 +7504,9 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "bms-BMSCAPPG",
@@ -6576,7 +7542,9 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "bms-BMSSNG26",
@@ -6613,7 +7581,9 @@
     }
    ],
    "hidden": null,
-   "news_added": null
+   "news_added": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "bms-BMS26SSX",
@@ -6649,7 +7619,9 @@
      "price_from": null
     }
    ],
-   "hidden": null
+   "hidden": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   }
  ],
  "leads": [
@@ -6944,11 +7916,31 @@
    "listed": true
   },
   {
+   "id": "news-9a64e28dfee6fe66",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "TicketNews",
+   "title": "Singapore Police Report At Least 14 BTS Concert Ticket Scams Since June 1 - TicketNews",
+   "text": null,
+   "time": "2026-09-29 02:00",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOcHdwUFdwYVIySWFKdmxSOU1oa3RIVlhKeTJtSWlnbVZkSDFNbUtuZFhlbmdsZHZpUXdOWkgzSEVmUlpkYnhUZVdVRG5kWUVvdTloS0Utak1OMUprQ005SWcyQUdCel9TWEdPTEtyM3hyVGZBV0ptOGxwM1I1ekxqbFo1UUtDZl9HZmYzYVRWX3Q?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 17:41",
+   "matches": [
+    "golive-175"
+   ],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": null,
+   "listed": true
+  },
+  {
    "id": "news-5ebb35decba5f75d",
    "kind": "新闻",
    "country": "SG",
-   "from": "asiaone.com",
-   "title": "Kard return to Singapore after 7 years for final world tour, fans hope this isn't goodbye , Entertainment News - asiaone.com",
+   "from": "AsiaOne",
+   "title": "Kard return to Singapore after 7 years for final world tour, fans hope this isn't goodbye , Entertainment News - AsiaOne",
    "text": null,
    "time": "2026-09-28 18:50",
    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOOGdia05ZMlNCQlNucEVxWE1DemRSaHdyTGhQSjc4X1IxRVNzbHNSdGxaRFJGSGhmc0Eyal82dF9QMDZwbmtZLVV3Y09tTVBTbzFxMFdNOXAxV1lycWpydjAwUEZJQUxkVEdHMzdRcjBzb0JRM0VYdWhFT2F3TlBqX2ZSYW9iTEhWNVVoMkFB?oc=5",
@@ -7269,15 +8261,16 @@
     }
    ],
    "first_seen": "2026-09-29 08:34",
-   "matches": [],
+   "matches": [
+    "bms-DIORINKL"
+   ],
    "status": "announced",
    "platforms": [
     "BookMyShow"
    ],
    "image_text": "060 R >\n2 0 2 志和\nSH sz\nae\neas\npun\ngan\nRE\nWO Re»\nwd A\nod\nait, >\nKUALA LUM? 배\nAS ty\n2/1\n02\n23PM\nRE\n售 聲\nTICKE\nICES\n6 / RM5\nIM486 /\n1386 /\nRM286 / RM206-/ RM166\nww\n站 TICKETS AVAIL,\nAT: MY.BOOKMYSHOW.COM\nOFFICIAL BANK PARTNER\n“Tost CONTROL\ntit UOB\nMY 60400 ~ xuen boss\nASE",
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false,
-   "image": "posts/ig-e9e4a0a260caf28f.jpg"
+   "hidden": null,
+   "listed": true
   },
   {
    "id": "ig-f9c836d74fd4a03e",
@@ -7480,8 +8473,8 @@
    "id": "news-426726332efd619a",
    "kind": "新闻",
    "country": "SG",
-   "from": "GameTrader.SG",
-   "title": "AFA Singapore 2026 Tickets: VIP Sale Opens Monday + Night 2 Finally Revealed - GameTrader.SG",
+   "from": "gametrader.sg",
+   "title": "AFA Singapore 2026 Tickets: VIP Sale Opens Monday + Night 2 Finally Revealed - gametrader.sg",
    "text": null,
    "time": "2026-09-27 02:19",
    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE8tcHhIbmQ2ZVVONFpaYjAxOWVkNUFPU2dQZFJzZXFlbmo1X1Y1VnlyTW1tYlNZXzJRV1JnQ05Fb0dkb2ZOV1dianpubzZjUklXaGE2MUhyX3A5V0xfV3lNR1MtYmJpdmFuMzAyNTAxSXFiWmZDb280bi1JV0l6UQ?oc=5",
@@ -7498,11 +8491,11 @@
    "id": "news-64bbd8137cbf1c2d",
    "kind": "新闻",
    "country": "SG",
-   "from": "timesofindia.indiatimes.com",
-   "title": "Anirudh Ravichander surprises fans with unreleased ‘Jailer 2’ song at Singapore concert ahead of Rajinika - timesofindia.indiatimes.com",
+   "from": "The Times of India",
+   "title": "Anirudh Ravichander surprises fans with unreleased ‘Jailer 2’ song at Singapore concert ahead of Rajinika - The Times of India",
    "text": null,
    "time": "2026-09-26 22:13",
-   "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxQRjhGcnpSMmt0RUR2dktzbWlneXAyRm8xUWN3Sld5b1dnMjJ4bzdlejJjNVk5R1hrTGxyNUZJLW9FZTB3SWwzU3hqMTVfaWxncEZhUHlQb1BobFpKa25TV3dNeDRSZmVQT3RQVjBhNTdaRDZaY3NoSE5LZ1dlUUdTMWh5OG5tU3kyUzNSOVpNZEwyUmpFbGFHWTJ2WU9XcGh1bVdYbHMwUjF6SW1pZHNLbjFzM3Q0QXZoN0VYWVdFYUloSHd0U3FsTTBOYkV2OG9YbE9iNjdBNFFIY0c2djlCblEyaE5DQlFhV1IxdjBiNzZZeGMyRGd0ZVRmRnBQOUdka3VVM2dTOXJ3N2lfbzZ4QVF1Q3J5Rk9vTWVLcm1xZHptQ0FkYmJscHZ1Q0xKYVJzMkViMWwwUG1xS3NFVGVFQU1B0gHHAkFVX3lxTE0tdkk4cmNXMmN2U2NBRjBOOTZUckRpV0pJTmpVTXBkVXV6STh3VU5iTmVDRXI4M1haVkdBSkxaYmt0NV9ycUdKcEx2NktxTmc5M216aEdzUDM4WDIwd3pVRzY5d3c4c3luUWRFSDVsbndSME13azJiWklIb1VsX19saEtzZ3lfNmJ2R1RkT0Jyem0xeUhLclJQeU4yaWwwaUk3cmtSeU94UEJtQmQ0MUtreWdfUllyNWE3LTQ0RHdVOHUtM1Q5d2JSQVBQcXF3QnNkUWcySTdrLUpuX0RSYm14UTlBbmd0Vk44cHNNNGQ0bGFSd2gzZ18xQlE1a1BmWXlhNGdlb3VLbWdId1lxazFZTDhuQXdGZGZNZmlORkljOFFIZDNDUmNheExzbTJiVDhGQ0ZOakx2NVR3R1pEU1dNWUJ1ak5CWQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNLXZJOHJjVzJjdlNjQUYwTjk2VHJEaVdKSU5qVU1wZFV1ekk4d1VOYk5lQ0VyODNYWlZHQUpMWmJrdDVfcnFHSnBMdjZLcU5nOTNtemhHc1AzOFgyMHd6VUc2OXd3OHN5blFkRUg1bG53UjBNd2syYlpJSG9VbF9fbGhLc2d5XzZidkdUZE9CcnptMXlIS3JSUHlOMmlsMGlJN3JrUnlPeFBCbUJkNDFLa3lnX1JZcjVhNy00NER3VTh1LTNUOXdiUkFQUHFxd0JzZFFnMkk3ay1Kbl9EUmJteFE5QW5ndFZOOHBzTTRkNGxhUndoM2dfMUJRNWtQZll5YTRnZW91S21nSHdZcWsxWUw4bkF3RmRmTWZpTkZJYzhRSGQzQ1JjYXhMc20yYlQ4RkNGTmpMdjVUd0daRFNXTVlCdWpOQlnSAccCQVVfeXFMTS12SThyY1cyY3ZTY0FGME45NlRyRGlXSklOalVNcGRVdXpJOHdVTmJOZUNFcjgzWFpWR0FKTFpia3Q1X3JxR0pwTHY2S3FOZzkzbXpoR3NQMzhYMjB3elVHNjl3dzhzeW5RZEVINWxud1IwTXdrMmJaSUhvVWxfX2xoS3NneV82YnZHVGRPQnJ6bTF5SEtyUlB5TjJpbDBpSTdya1J5T3hQQm1CZDQxS2t5Z19SWXI1YTctNDREd1U4dS0zVDl3YlJBUFBxcXdCc2RRZzJJN2stSm5fRFJibXhROUFuZ3RWTjhwc000ZDRsYVJ3aDNnXzFCUTVrUGZZeWE0Z2VvdUttZ0h3WXFrMVlMOG5Bd0ZkZk1maU5GSWM4UUhkM0NSY2F4THNtMmJUOEZDRk5qTHY1VHdHWkRTV01ZQnVqTkJZ?oc=5",
    "hints": [],
    "first_seen": "2026-09-29 17:13",
    "matches": [],
@@ -8012,8 +9005,8 @@
    "id": "news-79b630a6cd0697f7",
    "kind": "新闻",
    "country": "SG",
-   "from": "thesmartlocal.com",
-   "title": "9 Hotels Near National Stadium, From Affordable To Bougie Options, To Book For Upcoming Concerts In SG - thesmartlocal.com",
+   "from": "TheSmartLocal",
+   "title": "9 Hotels Near National Stadium, From Affordable To Bougie Options, To Book For Upcoming Concerts In SG - TheSmartLocal",
    "text": null,
    "time": "2026-09-23 17:53",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBkRFZVZ0NiTW54UEZPMV94RlkxdGs5bUpBbVZGSFBlY1Z1bEVOd25GQzlGZ2kyNWxrWXBtVGw1dEpTSzJxU0FtR3B6UWVydERDNFlkU2RaUllEWXlwOWFNRFBfQlpmTW52ZEZoTNIBckFVX3lxTE04ZElvRzdZR2YzOW5nQTJBSVFrNmxtZDFhbGwyZjh5RHdpNVdCbVh0dmhmcWpyOE1ybXFGQ2xhMmstXy1RZ0RxYTlYMmI2aFFUdFJYWEJaOUNGLXFYRHNXZm8yN0lnbzJRTVZsNXdiWG91QQ?oc=5",
@@ -8574,6 +9567,34 @@
    "image": "posts/ig-dc395a405bb09221.jpg",
    "hidden": "演出已经结束（回顾 / 感谢贴）",
    "listed": false
+  },
+  {
+   "id": "ig-56e37d928d9e3e09",
+   "kind": "IG",
+   "from": "@hellouniversemy",
+   "from_name": "Hello Universe",
+   "title": "We’ve been quiet. November won’t be. 🖤",
+   "text": "We’ve been quiet. November won’t be. 🖤\n\nEVANESCENCE takes over Kuala Lumpur this 28 November with special guest POPPY, exclusively for Southeast Asia.\nThe countdown starts again.\n\n📍 National Hockey Stadium, Bukit Jalil\n📅 28 November 2026\n\nTickets available at golive-asia.com\n\n#Evanescence #EvanescenceLiveInKL #ImPoppy #HelloUniverse",
+   "time": "2026-09-10 11:16",
+   "url": "https://www.instagram.com/reel/DdF2UguxNrP/",
+   "hints": [
+    "📍 National Hockey Stadium, Bukit Jalil",
+    "📅 28 November 2026",
+    "Tickets available at golive-asia.com"
+   ],
+   "sale_times": [],
+   "first_seen": "2026-09-29 17:41",
+   "image_text": "THE ONLY SOUTHEAST ASIA SHO\nBANDS\nWITH\n28 NOVEMBER 2026\nNATIONAL HOCKEY SE LUN\nKUA\nWWwW.GOLIVE“ASIA.COM\nDON'T MISS\nTHE NIGHT\nNOVEMBER IS CALLING\nPROMOTED BY:\nHe\nUNIVERSE",
+   "matches": [
+    "golive-172"
+   ],
+   "status": "rumor",
+   "avatar": "avatars/ig-hellouniversemy.jpg",
+   "platforms": [
+    "GoLive"
+   ],
+   "hidden": null,
+   "listed": true
   },
   {
    "id": "ig-ba3f876f0ef083d0",
