@@ -232,7 +232,8 @@ function dateRange(dates) {
   return dates.length > 1 && a !== b ? `${a.replace(/（.*）/, "")} – ${b.replace(/（.*）/, "")}` : a;
 }
 function posterCard(e, now = new Date()) {
-  const img = localUrl(e.poster_img) || localUrl(e.avatar);
+  // 卡片优先用艺人照片（Deezer 头像）；没有才用官方海报
+  const img = (e.avatar_kind === "artist" && localUrl(e.avatar)) || localUrl(e.poster_img) || localUrl(e.avatar);
   const s = nextSale(e, now), cat = category(e, now);
   let cd = "", hot = false;
   // 卡片上直接显示开票日期，不用点进去看

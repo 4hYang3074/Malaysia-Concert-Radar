@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>演出详情 · 马来西亚演唱会雷达</title>
 <meta name="theme-color" content="#15171c">
-<link rel="stylesheet" href="assets/app.css?v=20260929q">
+<link rel="stylesheet" href="assets/app.css?v=20260929r">
 </head>
 <body>
 <div class="wrap view" id="app"></div>
-<script src="assets/app.js?v=20260929q"></script>
+<script src="assets/app.js?v=20260929r"></script>
 <script>
 loadData(false).then(d => {
   nav(d, "confirmed");
@@ -46,7 +46,7 @@ loadData(false).then(d => {
         if (!same.length) return "";
         return `<div class="banner warn" style="text-align:left">➕ <b>加场消息</b>${same.map(x => `<div style="margin-top:6px">${flag(x.country || "MY")} <b>${esc(ADDED_LABEL[x.added_status])}</b> · ${esc(x.venue || "")} · ${esc(dateRange(x.dates))}
           ${x.added_status === "rumor" ? "（新闻说要加场，平台还没上架新场次）" : "（平台已上架加场的场次）"}
-          ${x.news_added ? `<br><small>📰 <a href="${esc(safeUrl(x.news_added.url))}" target="_blank" rel="noopener">${esc(x.news_added.title)}</a>（${esc(x.news_added.time || "")}）</small>` : ""}
+          ${x.news_added ? `<br><small>${x.news_added.from ? esc(x.news_added.from) + " · " : "📰 "}<a href="${esc(safeUrl(x.news_added.url))}" target="_blank" rel="noopener">${esc(x.news_added.title)}</a>（${esc(x.news_added.time || "")}）</small>` : ""}
           ${x.id !== e.id ? ` <a href="event.html?id=${encodeURIComponent(x.id)}">查看 ›</a>` : ""}</div>`).join("")}</div>`;
       })()}
       <div class="meta" style="margin-top:14px">${platformsOf(e).length > 1 ? `这场演出在 ${platformsOf(e).length} 个官方平台售票：` : "官方售票平台："}</div>

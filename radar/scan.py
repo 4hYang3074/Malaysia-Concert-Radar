@@ -1411,14 +1411,51 @@ def apply_filters(events, cfg):
             e["hidden"] = f"歌手类别：{e.get('region') or '未知'}（只看{'、'.join(sorted(keep))}，其他要 {min_fans // 10000} 万粉丝以上）"
 
 
-def merge_announcements(leads, events):
+GENERIC_NAME = re.compile(r"(?i)世界|巡回|巡迴|巡演|演唱会|演唱會|音乐会|音樂會|个人|個人|演出|吉隆坡|马来西亚|馬來西亞|新加坡|"
+                          r"\b(world|asia|tour|concert|live|in|the|kuala|lumpur|malaysia|singapore|fan ?meeting|fancon|showcase|kl|20\d\d)\b")
+
+
+def generic_name(name):
+    """“世界巡回演唱会”、“World Tour”这类只有通用字、没有艺人名的名字（平台标题没写艺人时会被当成艺人名）。"""
+    return len(norm(GENERIC_NAME.sub(" ", name or ""))) < 2
+
+
+def lead_countries(l, cfg):
+    """线索提到你关注的哪几个国家（马来西亚 / 新加坡 / 韩国 / 泰国）；没提到就回传空（不限制）。"""
+    if not cfg:
+        return []
+    blob = lead_blob(l)
+    where = [k for k in PLACES if place_hit(blob, cfg, k)]
+    # 内文没写国家（例如马来文“Tiket konsert BigBang licin…”）：用来源的国家（马来西亚媒体 / 账号 → 马来西亚）
+    return where or ([l["country"]] if l.get("country") else [])
+
+
+def filter_matches_by_country(leads, events, cfg):
+    """线索说的是哪个国家，就只对上那个国家的场次（例如“大马站加场”不能套到同一艺人的泰国场）；
+    也不对上艺人名只是通用字（世界巡回演唱会）的场次。"""
+    ev_by_id = {e["id"]: e for e in events}
+    for l in leads:
+        where = lead_countries(l, cfg)
+        l["matches"] = [m for m in l.get("matches", []) if m in ev_by_id
+                        and not generic_name(ev_by_id[m].get("artist_name"))
+                        and (not where or (ev_by_id[m].get("country") or "MY") in where)]
+
+
+def merge_announcements(leads, events, cfg=None):
     """官方公告（IG / 你提交的）读到的未来开票时间，并入对应的演出——例如平台还没更新的“加场”开票。重复呼叫不会重复加。"""
+    if cfg:
+        filter_matches_by_country(leads, events, cfg)
     ev_by_id = {e["id"]: e for e in events}
     for l in leads:
         target = next((ev_by_id[m] for m in l.get("matches", []) if m in ev_by_id), None)
         if not target:
             continue
-        added = re.search(r"(?i)加场|加場|added show|additional show|extra show|new show|another chance", lead_blob(l))
+        added = re.search(r"(?i)加场|加場|added show|additional show|extra show|new show|another chance", lead_blob(l)) \
+            or ADDED_RE.search(lead_blob(l))
+        if added and not l.get("hidden") and (l.get("time") or "") >= (target.get("added_source") or {}).get("time", ""):
+            # 加场的来源（IG / 本地媒体 / 你提交的线索）：“加场”区块和详细页用
+            target["added_source"] = {"title": short(l.get("title") or "", 120), "url": l.get("url"), "time": (l.get("time") or "")[:10],
+                                      "from": l.get("from")}
         for st in l.get("sale_times") or []:
             if any((s.get("start") or "")[:len(st["time"])] == st["time"] for s in target.get("sales") or []):
                 continue  # 平台（或之前的公告）已经有同一个开票时间
@@ -1439,7 +1476,7 @@ def apply_lead_filters(leads, events, cfg):
     min_fans = f.get("min_fans_other_regions", 1_000_000)
     by_artist = {}
     for e in events:
-        if len(norm(e.get("artist_name"))) >= 2:
+        if len(norm(e.get("artist_name"))) >= 2 and not generic_name(e.get("artist_name")):
             by_artist.setdefault(norm(e["artist_name"]), []).append(e)
     ev_by_id = {e["id"]: e for e in events}
     for l in leads:
@@ -1647,6 +1684,8 @@ def track_added(events, state):
         n = len(e.get("dates") or [])
         first = seen.setdefault(e["id"], n)
         grew = n > first
+        # 加场来源：Google 新闻，或 IG / 本地媒体 RSS / 你提交的线索（已对上这场演出的）
+        e["news_added"] = e.get("news_added") or e.get("added_source")
         if e.get("news_added") and n >= 2 or grew:
             e["added_status"] = "confirmed"
         elif e.get("news_added"):
@@ -1868,22 +1907,26 @@ def main():
         raw = unicodedata.normalize("NFKC", lead_blob(l)).lower()
         blob = norm(raw)
         for e in events:
-            if e["id"] in l["matches"]:
+            if e["id"] in l["matches"] or generic_name(e.get("artist_name")):
                 continue
-            for name in [e.get("artist_name") or ""] + aliases.get(e.get("artist_name") or "", []):
+            a = e.get("artist_name") or ""
+            # 中英混合艺名（“DIOR 大穎”）：报导常只写中文部分，中文部分（2 个字以上）也拿来对
+            cjk = "".join(re.findall(r"[㐀-鿿]+", a)) if re.search(r"[A-Za-z]", a) else ""
+            for name in [a] + aliases.get(a, []) + ([cjk] if len(cjk) >= 2 and not generic_name(cjk) else []):
                 n = norm(name)
-                if len(n) < 3:
+                zh = bool(re.fullmatch(r"[㐀-鿿]+", n))
+                if len(n) < (2 if zh else 3):
                     continue
-                # 短名字（FKJ、BTS）要整个词出现才算，避免撞到别的字
-                if n in blob if len(n) >= 4 else re.search(rf"(?<![a-z0-9]){re.escape(name.lower())}(?![a-z0-9])", raw):
+                # 短名字（FKJ、BTS）要整个词出现才算，避免撞到别的字；中文名直接找
+                if n in blob if zh or len(n) >= 4 else re.search(rf"(?<![a-z0-9]){re.escape(name.lower())}(?![a-z0-9])", raw):
                     l["matches"].append(e["id"])
                     break
-    merge_announcements(leads, events)
+    merge_announcements(leads, events, cfg)
     more, watch_out = group_pending(h, events, leads, state, cfg)
     used |= more
     cleanup_images(used)
     apply_lead_filters(leads, events, cfg)
-    merge_announcements(leads, events)  # 用艺人名新对上的公告，开票时间也并进去
+    merge_announcements(leads, events, cfg)  # 用艺人名新对上的公告，开票时间也并进去
     watch = set(state.get("watchlist", {}))
     checks = news_verify(h, leads, events, cfg, state, today, watch=watch)  # Google 通道：查证待确定的明星、已上架演出的开票 / 加场
     merge_news_sales(events, checks)
