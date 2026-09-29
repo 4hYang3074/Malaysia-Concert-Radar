@@ -177,6 +177,7 @@ def golive(h):
                 "end": local(s.get("end_date")),
                 "queue": local(s.get("early_queue_date")),
                 "available": s.get("status") == "ACTIVE",
+                "status": s.get("status"),
                 "code_required": bool(s.get("require_presale_code")),
                 "url": s.get("url"),
             } for s in d.get("EventSalesDate") or []],
@@ -186,7 +187,12 @@ def golive(h):
             "limit": int(limit.group(1)) if limit else None,
             "notes": {k: short(v, 700) for k, v in info.items()
                       if any(w in k.lower() for w in ("ticketing", "admission", "vip", "important"))},
-            "sold_out": bool(d.get("is_sold_out")),
+            # 售罄：整场标记售罄，或公售（General）那一轮标 SOLD_OUT
+            "sold_out": bool(d.get("is_sold_out")) or any(
+                s.get("status") == "SOLD_OUT" and re.search(r"(?i)general|public|公售", s.get("name") or "")
+                for s in d.get("EventSalesDate") or []),
+            # 没有任何售票轮次、也不能购买：售票已结束（轮次被官方撤下）或根本没公开售票
+            "sales_closed": not (d.get("EventSalesDate") or []) and not d.get("is_purchasable"),
             "selling_fast": bool(d.get("is_selling_fast")),
             "url": f"https://www.golive-asia.com/event/{d['id']}",
             "poster": d.get("portrait_image") or (d.get("images") or [None])[0] or d.get("event_logo"),
@@ -260,7 +266,7 @@ def ticket2u(h):
 
 def fantopia(h):
     out = []
-    for area, cur in (("MY", "MYR"), ("SG", "SGD")):
+    for area, cur in (("MY", "MYR"), ("SG", "SGD"), ("TH", "THB")):
         out += fantopia_area(h, area, cur)
         time.sleep(SLEEP)
     return out
@@ -294,7 +300,7 @@ def fantopia_area(h, area, currency):
             "sales": [{"name": "开售", "start": sale_start, "end": None, "queue": None, "available": True,
                        "code_required": False, "url": url}] if sale_start else [],
             "tiers": [],
-            "price_from": f"{'RM' if currency == 'MYR' else 'S$'} {x['minPrice'] / 100:,.2f}" if x.get("minPrice") else None,
+            "price_from": f"{ {'MYR': 'RM', 'SGD': 'S$', 'THB': '฿'}[currency]} {x['minPrice'] / 100:,.2f}" if x.get("minPrice") else None,
             "limit": x.get("limitCount") or None,
             "sold_out": x.get("sellStatus") == 2,
             "url": url,
@@ -518,7 +524,7 @@ def sale_times(text, posted):
             when = when.replace(year=y + 1)
         # 已经过去的开售日期也回传（past=True），用来判断这则公告是否已过期
         now = datetime.now(MYT).replace(tzinfo=None)
-        past = when + timedelta(days=1) < now  # 开卖一天后就当已结束
+        past = when + (timedelta(days=1) if hh is None else timedelta(hours=12)) < now  # 开票半天后就当已结束（只有日期的算一天）
         out.append({"time": when.strftime("%Y-%m-%d %H:%M") if hh is not None else when.strftime("%Y-%m-%d"),
                     "line": line.strip(" ⁠⁠")[:140], "past": past})
     return out[:4]
@@ -1129,6 +1135,7 @@ def merge_events(events):
             p["limit"] = p.get("limit") or next((e.get("limit") for e in g if e.get("limit")), None)
             p["sold_out"] = all(e.get("sold_out") for e in g)
             p["stop_sales"] = all(e.get("stop_sales") or e.get("sold_out") for e in g)
+            p["sales_closed"] = all(e.get("sales_closed") for e in g)  # 所有平台都没在卖才算结束
             p["first_seen"] = min(e.get("first_seen") or "9999" for e in g)
             p["fans"] = max(e.get("fans") or 0 for e in g)
             p["updates"] = {k: v for e in g for k, v in (e.get("updates") or {}).items()}
@@ -1254,7 +1261,11 @@ def main():
         blob = lead_blob(l).lower()
         l["matches"] = [eid for eid, ns in names.items() if any(n in blob for n in ns)][:5]
         if l["kind"] in ("IG", "人工"):  # 旧线索也用最新规则重读开售时间
+            # 开票时间来源：贴文文字 + 图片上 OCR 读出来的字（例如只印在海报上的加场开票日）
             found = sale_times(l.get("text") or "", l.get("time"))
+            for s in sale_times(l.get("image_text") or "", l.get("time")):
+                if all(s["time"] != x["time"] for x in found):
+                    found.append(dict(s, line="（图片）" + s["line"]))
             l["sale_times"] = [s for s in found if not s["past"]]
         else:
             found, l["sale_times"] = [], []
@@ -1281,6 +1292,20 @@ def main():
             hit = n in blob if len(n) >= 4 else re.search(rf"(?<![a-z0-9]){re.escape(e['artist_name'].lower())}(?![a-z0-9])", raw)
             if hit:
                 l["matches"].append(e["id"])
+    # 官方公告（IG / 你提交的）读到的未来开票时间，并入对应的演出——例如平台还没更新的“加场”开票
+    ev_by_id = {e["id"]: e for e in events}
+    for l in leads:
+        target = next((ev_by_id[m] for m in l.get("matches", []) if m in ev_by_id), None)
+        if not target:
+            continue
+        added = re.search(r"(?i)加场|加場|added show|additional show|extra show|new show|another chance", lead_blob(l))
+        for st in l.get("sale_times") or []:
+            if any((s.get("start") or "")[:len(st["time"])] == st["time"] for s in target.get("sales") or []):
+                continue  # 平台已经有同一个开票时间
+            target.setdefault("sales", []).append({
+                "name": f"{'加场开票' if added else '开票'}（{l['from']} 公告）", "start": st["time"], "end": None,
+                "queue": None, "available": True, "code_required": False, "url": l.get("url"), "announced": True})
+            target["sales_closed"] = False
     more, watch_out = group_pending(h, events, leads, state, cfg)
     used |= more
     cleanup_images(used)

@@ -14,7 +14,7 @@ function fmt(s, withTime = true) {
   return `${m.getUTCMonth() + 1}月${m.getUTCDate()}日（周${WD[m.getUTCDay()]}）` + (withTime && s.length > 10 ? " " + s.slice(11) : "");
 }
 // ---------- 国家 ----------
-const COUNTRIES = {MY: "🇲🇾 马来西亚", SG: "🇸🇬 新加坡", KR: "🇰🇷 韩国"};
+const COUNTRIES = {MY: "🇲🇾 马来西亚", SG: "🇸🇬 新加坡", KR: "🇰🇷 韩国", TH: "🇹🇭 泰国"};
 const flag = c => (COUNTRIES[c] || "").split(" ")[0];
 // 目前选的国家（网址 ?c=MY 优先，其次记在浏览器里；ALL = 全部）
 function currentCountry() {
@@ -22,9 +22,12 @@ function currentCountry() {
   if (q && (q === "ALL" || COUNTRIES[q])) { try { localStorage.setItem("country", q); } catch (e) {} return q; }
   try { return localStorage.getItem("country") || "ALL"; } catch (e) { return "ALL"; }
 }
+// 歌星：只看华语、欧美、K-pop；其他（马来、印尼、印度、泰国等）要真的很红（Deezer 100 万粉丝以上）才列
+const HOT_REGIONS = ["华语", "K-pop", "欧美"];
+const isWanted = e => HOT_REGIONS.includes(e.region) || (e.fans || 0) >= 1e6;
 function byCountry(d, c = currentCountry()) {
-  if (c === "ALL") return d;
-  const events = d.events.filter(e => (e.country || "MY") === c);
+  const events = d.events.filter(e => isWanted(e) && (c === "ALL" || (e.country || "MY") === c));
+  if (c === "ALL") return {...d, events, byId: Object.fromEntries(events.map(e => [e.id, e]))};
   const ids = new Set(events.map(e => e.id));
   // 线索只收录提到马来西亚/新加坡/韩国的；没有标国家的当作马来西亚
   const leads = d.leads.filter(l => (l.country || "MY") === c);
@@ -46,13 +49,18 @@ function countdown(target, now = new Date()) {
 const qs = k => new URLSearchParams(location.search).get(k);
 
 // ---------- 分类：按售票时间 ----------
+// 分类规则（综合所有平台和官方公告验证）：
+//   soon    = 任何平台或官方公告有未来的开票时间（或开票不到半天：正在抢票）
+//   soldout = 平台标示售罄
+//   opened  = 开票时间都已过半天 / 平台已撤下售票轮次 / 平台已在卖但没公布开票时间
+//   tba     = 平台上架了，但完全没有售票资讯（不会出现在首页）
 const CATS = [
-  {key: "soon", icon: "🔥", label: "即将开售", desc: "开卖时间还没到，或刚开卖不到一天（正在抢票）。按开卖时间排序。"},
-  {key: "opened", icon: "✔️", label: "已开卖", desc: "开卖时间已经过了一天以上。要不要补票，请到官网看余票。按演出日期排序。"},
-  {key: "tba", icon: "⏳", label: "开售时间未公布", desc: "演出已经上架，但还没公布什么时候开卖。公布后会通知你。"},
+  {key: "soon", icon: "🔥", label: "即将开票", desc: "开票时间还没到，或刚开票不到半天（正在抢票）。按开票时间排序。"},
+  {key: "opened", icon: "✔️", label: "已开票", desc: "开票时间已经过了半天以上（抢票已结束）。按演出日期排序。"},
+  {key: "tba", icon: "❔", label: "售票资讯不明", desc: "平台上有这场演出，但没有任何开票资讯。"},
   {key: "soldout", icon: "🔴", label: "已售罄", desc: "官方显示售罄或停止售票，可以留意加场或释票。"},
 ];
-const LIVE_MS = 864e5;  // 开卖后一天内算“正在抢票”，之后就当这一轮已经结束
+const LIVE_MS = 12 * 3600e3;  // 开票后半天（12 小时）内算“正在抢票”，之后就当这一轮已经结束
 
 // 还没开卖、或开卖不到一天的轮次（最近的一轮）
 function nextSale(e, now) {
@@ -64,7 +72,7 @@ function lastStart(e) {
 function category(e, now = new Date()) {
   if (e.sold_out || e.stop_sales) return "soldout";
   if (nextSale(e, now)) return "soon";
-  if (lastStart(e)) return "opened";
+  if (lastStart(e) || e.sales_closed) return "opened";
   // Ticket2U、BookMyShow 没有公布开卖时间，但已经上架在卖
   if (platformsOf(e).some(p => p.source === "Ticket2U" || p.source === "BookMyShow")) return "opened";
   return "tba";
@@ -79,9 +87,10 @@ function status(e, now = new Date()) {
   }
   if (c === "opened") {
     const last = lastStart(e);
-    return {cls: "sub", text: last ? `已开卖（最后一轮 ${fmt(last)}）· 余票请到官网确认` : "已在平台开卖 · 余票请到官网确认", short: "已开卖"};
+    return {cls: "sub", text: last ? `已开票（${fmt(last)}）· 抢票已结束，余票请到官网确认` : "平台已结束售票或已在卖 · 余票请到官网确认",
+      short: last ? `✔️ ${fmt(last)} 已开票` : "✔️ 已开票"};
   }
-  return {cls: "sub", text: "开售时间还没公布，公布后会通知你", short: "开售时间未公布"};
+  return {cls: "sub", text: "平台没有任何开票资讯", short: "❔ 售票资讯不明"};
 }
 function sortFor(cat, list, now = new Date()) {
   const first = e => e.dates[0] || "9999";
@@ -144,22 +153,19 @@ function fansText(n) {
   if (!n) return "";
   return n >= 1e4 ? `${(n / 1e4).toFixed(n >= 1e5 ? 0 : 1)} 万粉丝` : `${n} 粉丝`;
 }
-const HOT_REGIONS = ["华语", "K-pop", "欧美"];  // Highlights 只看这三类（不含马来、印尼、印度等）
 function highlights(d, now = new Date(), limit = 8) {
   const items = [];
-  // tier：0 = 还没开票（即将开卖 / 开票时间未公布 / 传出要来），1 = 正在抢票，2 = 已开票的新上架
+  // 只列经过所有平台验证、还没开票（或正在抢票）的；tier：0 = 即将开票 / 传出要来，1 = 正在抢票
   for (const e of d.events) {
-    if (e.sold_out || !HOT_REGIONS.includes(e.region)) continue;
-    const s = nextSale(e, now), fans = e.fans || 0, cat = category(e, now);
+    if (e.sold_out || !isWanted(e)) continue;
+    const s = nextSale(e, now), fans = e.fans || 0;
     const base = {ev: e, name: e.artist_name, photo: e.avatar, kind: e.avatar_kind, fans, region: e.region, country: e.country || "MY", href: `event.html?id=${encodeURIComponent(e.id)}`};
     if (s && toDate(s.start) > now) {
-      items.push({...base, tier: 0, tag: "⏰ 即将开卖", cls: "warn", line: `${fmt(s.start)} 开卖 · ${countdown(toDate(s.start), now)}`});
+      items.push({...base, tier: 0, tag: "⏰ 即将开票", cls: "warn", line: `${fmt(s.start)} 开票 · ${countdown(toDate(s.start), now)}`});
     } else if (s) {
-      items.push({...base, tier: 1, tag: "🔥 正在抢票", cls: "bad", line: `${s.name || "开卖"} · ${fmt(s.start)} 开卖`});
-    } else if (cat === "tba") {
-      items.push({...base, tier: 0, tag: "⏳ 开票时间未公布", cls: "sub", line: `${e.dates[0] ? fmt(e.dates[0], false) + " 演出" : "演出日期未公布"} · ${platformsOf(e).map(p => p.source).join("、")}`});
+      items.push({...base, tier: 1, tag: "🔥 正在抢票", cls: "bad", line: `${s.name || "开票"} · ${fmt(s.start)} 开票`});
     }
-    // 已经开票超过一天的不列（首页只看未来要开票的）
+    // 已开票超过半天、售罄、售票资讯不明的不列（首页只看未来要开票的）
   }
   for (const g of pendingGroups(d).groups) {
     if (!g.leads.length || !HOT_REGIONS.includes(g.leads[0].artist_region)) continue;
@@ -198,10 +204,12 @@ function posterCard(e, now = new Date()) {
   const img = localUrl(e.poster_img) || localUrl(e.avatar);
   const s = nextSale(e, now), cat = category(e, now);
   let cd = "", hot = false;
+  // 卡片上直接显示开票日期，不用点进去看
   if (s && toDate(s.start) > now) cd = `⏰ ${fmt(s.start)} 开票<br>${countdown(toDate(s.start), now)}`;
-  else if (s) { cd = `🔥 正在抢票`; hot = true; }
-  else if (cat === "tba") cd = "⏳ 开票时间未公布";
+  else if (s) { cd = `🔥 正在抢票 · ${fmt(s.start)} 开票`; hot = true; }
   else if (cat === "soldout") cd = "🔴 已售罄";
+  else if (cat === "opened") cd = lastStart(e) ? `✔️ ${fmt(lastStart(e))} 已开票` : "✔️ 已开票（抢票已结束）";
+  else cd = "❔ 售票资讯不明";
   return `<a class="pcard" href="event.html?id=${encodeURIComponent(e.id)}">
     <div class="ph">
       <div class="ini">${esc((e.artist_name || "?").slice(0, 1))}</div>
