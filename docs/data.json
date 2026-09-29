@@ -1,21 +1,25 @@
 {
- "generated_at": "2026-09-29 09:32",
+ "generated_at": "2026-09-29 10:40",
  "health": {
   "GoLive": {
    "ok": true,
    "count": 15
   },
-  "Ticket2U": {
+  "Fantopia": {
    "ok": true,
-   "count": 17
+   "count": 100
   },
   "BookMyShow": {
    "ok": false,
    "error": "HTTP 403"
   },
+  "Ticket2U": {
+   "ok": true,
+   "count": 17
+  },
   "Instagram": {
    "ok": true,
-   "count": 40,
+   "count": 39,
    "checked": 10,
    "error": null
   },
@@ -44,17 +48,92 @@
   "klconcert",
   "吉隆坡演唱会"
  ],
- "watch_artists": [
+ "watch_artists": [],
+ "events": [
   {
-   "name": "A-Lin",
-   "photo": "avatars/a-06dfcd795a5c.jpg"
+   "id": "fantopia-40f309cj",
+   "source": "Fantopia",
+   "name": "HENRY LAU 2026 “ENJOY THE SHOW” WORLD TOUR — KUALA LUMPUR",
+   "artist": null,
+   "type": null,
+   "venue": "Idea Live Arena",
+   "city": null,
+   "dates": [
+    "2026-10-03 19:00"
+   ],
+   "sales": [
+    {
+     "name": "开售",
+     "start": "2026-07-17 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=40f309cj"
+    }
+   ],
+   "tiers": [],
+   "price_from": "RM 398.00",
+   "limit": 2,
+   "sold_out": false,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=40f309cj",
+   "first_seen": "2026-09-29 10:40",
+   "seat_maps": [],
+   "artist_name": "Henry Lau",
+   "avatar": "avatars/a-27e09d26eb62.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=40f309cj",
+     "id": "fantopia-40f309cj",
+     "sold_out": false,
+     "price_from": "RM 398.00"
+    }
+   ]
   },
   {
-   "name": "周兴哲",
-   "photo": "avatars/a-633eb63d856e.jpg"
-  }
- ],
- "events": [
+   "id": "fantopia-zmm0u8rr",
+   "source": "Fantopia",
+   "name": "2026 IDOL RADIO LIVE IN KUALA LUMPUR",
+   "artist": null,
+   "type": null,
+   "venue": "Inspire Live Arena",
+   "city": null,
+   "dates": [
+    "2026-10-03 20:00"
+   ],
+   "sales": [
+    {
+     "name": "开售",
+     "start": "2026-09-01 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=zmm0u8rr"
+    }
+   ],
+   "tiers": [],
+   "price_from": "RM 398.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=zmm0u8rr",
+   "first_seen": "2026-09-29 10:40",
+   "seat_maps": [],
+   "artist_name": "IDOL RADIO",
+   "avatar": "avatars/p-fantopia-zmm0u8rr.jpg",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=zmm0u8rr",
+     "id": "fantopia-zmm0u8rr",
+     "sold_out": false,
+     "price_from": "RM 398.00"
+    }
+   ]
+  },
   {
    "id": "t2u-50157",
    "source": "Ticket2U",
@@ -122,7 +201,16 @@
    "seat_maps": [],
    "artist_name": "Faizal Tahir",
    "avatar": "avatars/a-718c50a0b6ca.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/50157/faizal-tahir-suara-rakyat",
+     "id": "t2u-50157",
+     "sold_out": false,
+     "price_from": "RM 98.00"
+    }
+   ]
   },
   {
    "id": "t2u-50764",
@@ -145,7 +233,16 @@
    "seat_maps": [],
    "artist_name": "JIWARASA Nizam Laksamana & Kawan-Kawan 5.0",
    "avatar": "avatars/p-t2u-50764.jpg",
-   "avatar_kind": "poster"
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/50764/showcase-jiwarasa-nizam-laksamana-kawan-kawan-5.0",
+     "id": "t2u-50764",
+     "sold_out": false,
+     "price_from": "RM 170.00"
+    }
+   ]
   },
   {
    "id": "t2u-49360",
@@ -215,7 +312,16 @@
    "seat_maps": [],
    "artist_name": "Anoushka Shankar",
    "avatar": "avatars/a-d76cdf460109.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/49360/anoushka-shankar-live-in-kuala-lumpur",
+     "id": "t2u-49360",
+     "sold_out": false,
+     "price_from": "RM 155.00"
+    }
+   ]
   },
   {
    "id": "t2u-49422",
@@ -285,7 +391,16 @@
    "seat_maps": [],
    "artist_name": "Srinivas Saregama Season 5",
    "avatar": "avatars/p-t2u-49422.jpg",
-   "avatar_kind": "poster"
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/49422/srinivas-saregama-season-5-live-concert",
+     "id": "t2u-49422",
+     "sold_out": false,
+     "price_from": "RM 150.00"
+    }
+   ]
   },
   {
    "id": "t2u-51955",
@@ -343,7 +458,58 @@
    "seat_maps": [],
    "artist_name": "GVM",
    "avatar": "avatars/p-t2u-51955.jpg",
-   "avatar_kind": "poster"
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/51955/gvm-2026-ondra-renda-25-years-concert",
+     "id": "t2u-51955",
+     "sold_out": false,
+     "price_from": "RM 238.00"
+    }
+   ]
+  },
+  {
+   "id": "fantopia-ij5i3kyk",
+   "source": "Fantopia",
+   "name": "香港明星FC3马来西亚友谊赛 The Bridge of Legends Hong Kong Celebrities Football Friendly Match",
+   "artist": null,
+   "type": null,
+   "venue": "MBPJ Stadium, Kelana Jaya",
+   "city": null,
+   "dates": [
+    "2026-10-10 20:00"
+   ],
+   "sales": [
+    {
+     "name": "开售",
+     "start": "2026-07-30 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=ij5i3kyk"
+    }
+   ],
+   "tiers": [],
+   "price_from": "RM 68.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=ij5i3kyk",
+   "first_seen": "2026-09-29 10:40",
+   "seat_maps": [],
+   "artist_name": "香港明星FC3马来西亚友谊赛   Bridge of Legends Hong Kong Celebrities Football Friendly Match",
+   "avatar": "avatars/p-fantopia-ij5i3kyk.jpg",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=ij5i3kyk",
+     "id": "fantopia-ij5i3kyk",
+     "sold_out": false,
+     "price_from": "RM 68.00"
+    }
+   ]
   },
   {
    "id": "t2u-51240",
@@ -422,7 +588,16 @@
    "seat_maps": [],
    "artist_name": "Nastia",
    "avatar": "avatars/a-cfce53b21fa2.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/51240/nastia-project-concert-feat-fynn-jamal-liyana-fizi",
+     "id": "t2u-51240",
+     "sold_out": false,
+     "price_from": "RM 98.00"
+    }
+   ]
   },
   {
    "id": "t2u-50486",
@@ -480,7 +655,58 @@
    "seat_maps": [],
    "artist_name": "SPOTLIGHT KLCC Convention Centre",
    "avatar": "avatars/p-t2u-50486.jpg",
-   "avatar_kind": "poster"
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/50486/spotlight-klcc-convention-centre-(24-oct-2026)-orked-farhan-ashnyz",
+     "id": "t2u-50486",
+     "sold_out": false,
+     "price_from": "RM 150.00"
+    }
+   ]
+  },
+  {
+   "id": "fantopia-eh4ddk7l",
+   "source": "Fantopia",
+   "name": "Ghibli Jazz Night Featuring All That Jazz",
+   "artist": null,
+   "type": null,
+   "venue": "Zepp KL",
+   "city": null,
+   "dates": [
+    "2026-10-24 20:00"
+   ],
+   "sales": [
+    {
+     "name": "开售",
+     "start": "2026-04-13 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=eh4ddk7l"
+    }
+   ],
+   "tiers": [],
+   "price_from": "RM 208.00",
+   "limit": 10,
+   "sold_out": false,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=eh4ddk7l",
+   "first_seen": "2026-09-29 10:40",
+   "seat_maps": [],
+   "artist_name": "Ghibli Jazz Night Featuring All That Jazz",
+   "avatar": "avatars/p-fantopia-eh4ddk7l.png",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=eh4ddk7l",
+     "id": "fantopia-eh4ddk7l",
+     "sold_out": false,
+     "price_from": "RM 208.00"
+    }
+   ]
   },
   {
    "id": "t2u-52015",
@@ -550,7 +776,58 @@
    "seat_maps": [],
    "artist_name": "Misha Omar",
    "avatar": "avatars/a-16a79681ebd2.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/52015/-aku-lelaki-2026-showcase-by-misha-omar",
+     "id": "t2u-52015",
+     "sold_out": false,
+     "price_from": "RM 188.00"
+    }
+   ]
+  },
+  {
+   "id": "fantopia-jiyb5116",
+   "source": "Fantopia",
+   "name": "Air Supply A Matter of Time Tour",
+   "artist": null,
+   "type": null,
+   "venue": "Sibu Indoor Stadium, Sarawak",
+   "city": null,
+   "dates": [
+    "2026-10-28 19:30"
+   ],
+   "sales": [
+    {
+     "name": "开售",
+     "start": "2026-05-10 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=jiyb5116"
+    }
+   ],
+   "tiers": [],
+   "price_from": "RM 238.00",
+   "limit": 10,
+   "sold_out": false,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=jiyb5116",
+   "first_seen": "2026-09-29 10:40",
+   "seat_maps": [],
+   "artist_name": "Air Supply",
+   "avatar": "avatars/a-907e082a348c.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=jiyb5116",
+     "id": "fantopia-jiyb5116",
+     "sold_out": false,
+     "price_from": "RM 238.00"
+    }
+   ]
   },
   {
    "id": "t2u-50832",
@@ -565,13 +842,22 @@
    ],
    "sales": [
     {
-     "name": "售票",
+     "name": "Ticket2U · 售票",
      "start": null,
      "end": "2026-10-31 22:00",
      "queue": null,
      "available": true,
      "code_required": false,
      "url": "https://www.ticket2u.com.my/event/50832/konsert-muzik-d.r.a.s.-in-kuala-lumpur-2026"
+    },
+    {
+     "name": "Fantopia · 开售",
+     "start": "2026-07-15 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=4m9cn4g4"
     }
    ],
    "tiers": [
@@ -602,14 +888,32 @@
     }
    ],
    "price_from": "RM 188.00",
-   "limit": null,
+   "limit": 6,
    "sold_out": false,
    "url": "https://www.ticket2u.com.my/event/50832/konsert-muzik-d.r.a.s.-in-kuala-lumpur-2026",
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "Muzik D.R.A.S.",
    "avatar": "avatars/p-t2u-50832.jpg",
-   "avatar_kind": "poster"
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/50832/konsert-muzik-d.r.a.s.-in-kuala-lumpur-2026",
+     "id": "t2u-50832",
+     "sold_out": false,
+     "price_from": "RM 188.00"
+    },
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=4m9cn4g4",
+     "id": "fantopia-4m9cn4g4",
+     "sold_out": false,
+     "price_from": "RM 188.00"
+    }
+   ],
+   "stop_sales": false,
+   "updates": {}
   },
   {
    "id": "t2u-51322",
@@ -691,7 +995,16 @@
    "seat_maps": [],
    "artist_name": "Vijay Antony",
    "avatar": "avatars/a-6332b22dde1c.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/51322/vijay-antony-live-in-concert-2026",
+     "id": "t2u-51322",
+     "sold_out": false,
+     "price_from": "RM 99.00"
+    }
+   ]
   },
   {
    "id": "golive-167",
@@ -772,7 +1085,16 @@
    "first_seen": "2026-09-29 08:34",
    "artist_name": "LANY",
    "avatar": "avatars/a-1e4ae86c2335.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "GoLive",
+     "url": "https://www.golive-asia.com/event/167",
+     "id": "golive-167",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
   },
   {
    "id": "golive-173",
@@ -816,10 +1138,10 @@
     },
     {
      "name": "General Sales",
-     "start": "2026-07-10 11:00",
+     "start": "2026-09-29 11:00",
      "end": null,
-     "queue": "2026-07-10 10:30",
-     "available": false,
+     "queue": "2026-09-29 10:30",
+     "available": true,
      "code_required": false,
      "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=467"
     }
@@ -855,7 +1177,16 @@
    "first_seen": "2026-09-29 08:34",
    "artist_name": "The Weeknd",
    "avatar": "avatars/a-bccb871505ba.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "GoLive",
+     "url": "https://www.golive-asia.com/event/173",
+     "id": "golive-173",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
   },
   {
    "id": "golive-180",
@@ -931,7 +1262,100 @@
    "first_seen": "2026-09-29 08:34",
    "artist_name": "Yung Kai",
    "avatar": "avatars/a-9bdc84268bc0.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "GoLive",
+     "url": "https://www.golive-asia.com/event/180",
+     "id": "golive-180",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "fantopia-vp48mq9j",
+   "source": "Fantopia",
+   "name": "2026 YESUNG 10TH ANNIVERSARY TOUR [ABOUT THE THINGS WE CALLED ORDINARY] IN KUALA LUMPUR",
+   "artist": null,
+   "type": null,
+   "venue": "Zepp KL",
+   "city": null,
+   "dates": [
+    "2026-11-07 20:00"
+   ],
+   "sales": [
+    {
+     "name": "开售",
+     "start": "2026-08-28 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=vp48mq9j"
+    }
+   ],
+   "tiers": [],
+   "price_from": "RM 398.00",
+   "limit": 2,
+   "sold_out": false,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=vp48mq9j",
+   "first_seen": "2026-09-29 10:40",
+   "seat_maps": [],
+   "artist_name": "YESUNG",
+   "avatar": "avatars/a-c78a949018af.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=vp48mq9j",
+     "id": "fantopia-vp48mq9j",
+     "sold_out": false,
+     "price_from": "RM 398.00"
+    }
+   ]
+  },
+  {
+   "id": "fantopia-zk3x1r1c",
+   "source": "Fantopia",
+   "name": "[我自成我] 世界巡回演唱会 - 吉隆坡 [I Am What I Am] World Tour - Kuala Lumpur",
+   "artist": null,
+   "type": null,
+   "venue": "Unifi Arena, Bukit Jalil",
+   "city": null,
+   "dates": [
+    "2026-11-07 20:00"
+   ],
+   "sales": [
+    {
+     "name": "开售",
+     "start": "2026-08-17 13:28",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=zk3x1r1c"
+    }
+   ],
+   "tiers": [],
+   "price_from": "RM 288.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=zk3x1r1c",
+   "first_seen": "2026-09-29 10:40",
+   "seat_maps": [],
+   "artist_name": "世界巡回演唱会",
+   "avatar": "avatars/p-fantopia-zk3x1r1c.jpg",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=zk3x1r1c",
+     "id": "fantopia-zk3x1r1c",
+     "sold_out": false,
+     "price_from": "RM 288.00"
+    }
+   ]
   },
   {
    "id": "t2u-51416",
@@ -946,13 +1370,22 @@
    ],
    "sales": [
     {
-     "name": "售票",
+     "name": "Ticket2U · 售票",
      "start": null,
      "end": "2026-11-08 23:00",
      "queue": null,
      "available": true,
      "code_required": false,
      "url": "https://www.ticket2u.com.my/event/51416/cadenza-of-the-soul-noh-salleh-with-aubrey-suwito-orchestra"
+    },
+    {
+     "name": "Fantopia · 开售",
+     "start": "2026-08-05 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=0z4vnc9x"
     }
    ],
    "tiers": [
@@ -995,7 +1428,111 @@
    "seat_maps": [],
    "artist_name": "Cadenza of   Soul",
    "avatar": "avatars/p-t2u-51416.jpg",
-   "avatar_kind": "poster"
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/51416/cadenza-of-the-soul-noh-salleh-with-aubrey-suwito-orchestra",
+     "id": "t2u-51416",
+     "sold_out": false,
+     "price_from": "RM 188.00"
+    },
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=0z4vnc9x",
+     "id": "fantopia-0z4vnc9x",
+     "sold_out": false,
+     "price_from": "RM 188.00"
+    }
+   ],
+   "stop_sales": false,
+   "updates": {}
+  },
+  {
+   "id": "fantopia-4v266ql6",
+   "source": "Fantopia",
+   "name": "TREVOR NOAH ASIA TOUR 2026",
+   "artist": null,
+   "type": null,
+   "venue": "Idea Live Arena",
+   "city": null,
+   "dates": [
+    "2026-11-09 20:00",
+    "2026-11-10 23:00"
+   ],
+   "sales": [
+    {
+     "name": "开售",
+     "start": "2026-09-11 10:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=4v266ql6"
+    }
+   ],
+   "tiers": [],
+   "price_from": "RM 208.00",
+   "limit": null,
+   "sold_out": true,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=4v266ql6",
+   "first_seen": "2026-09-29 10:40",
+   "seat_maps": [],
+   "artist_name": "Trevor Noah",
+   "avatar": "avatars/a-7b5867292193.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=4v266ql6",
+     "id": "fantopia-4v266ql6",
+     "sold_out": true,
+     "price_from": "RM 208.00"
+    }
+   ]
+  },
+  {
+   "id": "fantopia-m3vmif9o",
+   "source": "Fantopia",
+   "name": "2026叁缺壹巡演吉隆坡站 [2026 THREE MISSING ONE TOUR IN KUALA LUMPUR]",
+   "artist": null,
+   "type": null,
+   "venue": "Idea Live Arena",
+   "city": null,
+   "dates": [
+    "2026-11-13 20:00",
+    "2026-11-15 23:00"
+   ],
+   "sales": [
+    {
+     "name": "开售",
+     "start": "2026-08-22 14:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=m3vmif9o"
+    }
+   ],
+   "tiers": [],
+   "price_from": "RM 500.00",
+   "limit": 6,
+   "sold_out": false,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=m3vmif9o",
+   "first_seen": "2026-09-29 10:40",
+   "seat_maps": [],
+   "artist_name": "2026叁缺壹巡演吉隆坡站",
+   "avatar": "avatars/p-fantopia-m3vmif9o.jpg",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=m3vmif9o",
+     "id": "fantopia-m3vmif9o",
+     "sold_out": false,
+     "price_from": "RM 500.00"
+    }
+   ]
   },
   {
    "id": "golive-176",
@@ -1064,7 +1601,100 @@
    "first_seen": "2026-09-29 08:34",
    "artist_name": "BABYMONSTER",
    "avatar": "avatars/a-a8aa1fae8702.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "GoLive",
+     "url": "https://www.golive-asia.com/event/176",
+     "id": "golive-176",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "fantopia-vzov1t8m",
+   "source": "Fantopia",
+   "name": "2026 邱鋒澤 Feng Ze Bend The Lines Concert - Malaysia",
+   "artist": null,
+   "type": null,
+   "venue": "Zepp KL",
+   "city": null,
+   "dates": [
+    "2026-11-14 20:00"
+   ],
+   "sales": [
+    {
+     "name": "开售",
+     "start": "2026-08-14 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=vzov1t8m"
+    }
+   ],
+   "tiers": [],
+   "price_from": "RM 188.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=vzov1t8m",
+   "first_seen": "2026-09-29 10:40",
+   "seat_maps": [],
+   "artist_name": "邱鋒澤",
+   "avatar": "avatars/a-3f068ff661d7.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=vzov1t8m",
+     "id": "fantopia-vzov1t8m",
+     "sold_out": false,
+     "price_from": "RM 188.00"
+    }
+   ]
+  },
+  {
+   "id": "fantopia-59ndm2v2",
+   "source": "Fantopia",
+   "name": "DOES Live “Thanksloving! Overseas” in Kuala Lumpur",
+   "artist": null,
+   "type": null,
+   "venue": "Vox Live Kuala Lumpur",
+   "city": null,
+   "dates": [
+    "2026-11-15 19:30"
+   ],
+   "sales": [
+    {
+     "name": "开售",
+     "start": "2026-08-24 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=59ndm2v2"
+    }
+   ],
+   "tiers": [],
+   "price_from": "RM 180.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=59ndm2v2",
+   "first_seen": "2026-09-29 10:40",
+   "seat_maps": [],
+   "artist_name": "DOES   “Thanksloving! Overseas”",
+   "avatar": "avatars/p-fantopia-59ndm2v2.png",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=59ndm2v2",
+     "id": "fantopia-59ndm2v2",
+     "sold_out": false,
+     "price_from": "RM 180.00"
+    }
+   ]
   },
   {
    "id": "golive-171",
@@ -1133,7 +1763,16 @@
    "first_seen": "2026-09-29 08:34",
    "artist_name": "5 Seconds Of Summer",
    "avatar": "avatars/a-cea3e2f62602.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "GoLive",
+     "url": "https://www.golive-asia.com/event/171",
+     "id": "golive-171",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
   },
   {
    "id": "golive-149",
@@ -1164,7 +1803,16 @@
    "first_seen": "2026-09-29 08:34",
    "artist_name": "My Chemical Romance",
    "avatar": "avatars/a-0288748996d6.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "GoLive",
+     "url": "https://www.golive-asia.com/event/149",
+     "id": "golive-149",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
   },
   {
    "id": "t2u-50151",
@@ -1210,7 +1858,58 @@
    "seat_maps": [],
    "artist_name": "Thalapathy Saravedi / தளபதி சரவெடி",
    "avatar": "avatars/p-t2u-50151.jpg",
-   "avatar_kind": "poster"
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/50151/thalapathy-saravedi-தளபதி-சரவெடி",
+     "id": "t2u-50151",
+     "sold_out": false,
+     "price_from": "RM 20.00"
+    }
+   ]
+  },
+  {
+   "id": "fantopia-mtqy32gw",
+   "source": "Fantopia",
+   "name": "Simple Plan “Bigger Than You Think!” Tour – Malaysia",
+   "artist": null,
+   "type": null,
+   "venue": "Idea Live Arena",
+   "city": null,
+   "dates": [
+    "2026-11-21 18:30"
+   ],
+   "sales": [
+    {
+     "name": "开售",
+     "start": "2026-05-04 11:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=mtqy32gw"
+    }
+   ],
+   "tiers": [],
+   "price_from": "RM 288.00",
+   "limit": 5,
+   "sold_out": false,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=mtqy32gw",
+   "first_seen": "2026-09-29 10:40",
+   "seat_maps": [],
+   "artist_name": "Simple Plan",
+   "avatar": "avatars/a-87933da598d1.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=mtqy32gw",
+     "id": "fantopia-mtqy32gw",
+     "sold_out": false,
+     "price_from": "RM 288.00"
+    }
+   ]
   },
   {
    "id": "golive-174",
@@ -1225,7 +1924,7 @@
    ],
    "sales": [
     {
-     "name": "Live Nation Presale",
+     "name": "GoLive · Live Nation Presale",
      "start": "2026-05-27 11:00",
      "end": "2026-05-27 23:59",
      "queue": null,
@@ -1234,13 +1933,22 @@
      "url": "https://www.livenation.my/event/wave-to-earth-the-pieces-tour-kuala-lumpur-tickets-edp1674881"
     },
     {
-     "name": "General Sales",
+     "name": "GoLive · General Sales",
      "start": "2026-05-28 11:00",
      "end": null,
      "queue": null,
      "available": true,
      "code_required": false,
      "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=527"
+    },
+    {
+     "name": "Fantopia · 开售",
+     "start": "2026-05-28 11:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=a7drtkag"
     }
    ],
    "tiers": [
@@ -1274,7 +1982,25 @@
    "first_seen": "2026-09-29 08:34",
    "artist_name": "wave to earth",
    "avatar": "avatars/a-f89c58d47eef.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "GoLive",
+     "url": "https://www.golive-asia.com/event/174",
+     "id": "golive-174",
+     "sold_out": false,
+     "price_from": null
+    },
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=a7drtkag",
+     "id": "fantopia-a7drtkag",
+     "sold_out": false,
+     "price_from": "RM 328.00"
+    }
+   ],
+   "stop_sales": false,
+   "updates": {}
   },
   {
    "id": "t2u-49498",
@@ -1320,7 +2046,16 @@
    "seat_maps": [],
    "artist_name": "ASMARALOKA",
    "avatar": "avatars/p-t2u-49498.jpg",
-   "avatar_kind": "poster"
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/49498/asmaraloka-2026",
+     "id": "t2u-49498",
+     "sold_out": false,
+     "price_from": "RM 118.00"
+    }
+   ]
   },
   {
    "id": "golive-172",
@@ -1393,7 +2128,16 @@
    "first_seen": "2026-09-29 08:34",
    "artist_name": "Evanescence",
    "avatar": "avatars/a-b7fabeaaf23e.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "GoLive",
+     "url": "https://www.golive-asia.com/event/172",
+     "id": "golive-172",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
   },
   {
    "id": "t2u-52040",
@@ -1457,7 +2201,58 @@
    "seat_maps": [],
    "artist_name": "Sid Sriram",
    "avatar": "avatars/a-e49cedcbacd9.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/52040/sid-sriram-live-in-johor-bahru",
+     "id": "t2u-52040",
+     "sold_out": false,
+     "price_from": "RM 99.00"
+    }
+   ]
+  },
+  {
+   "id": "fantopia-xngkbueb",
+   "source": "Fantopia",
+   "name": "[我自成我] 世界巡回演唱会 - 槟城 [I Am What I Am] World Tour - Penang",
+   "artist": null,
+   "type": null,
+   "venue": "Setia Spice Arena, Penang",
+   "city": null,
+   "dates": [
+    "2026-11-28 20:00"
+   ],
+   "sales": [
+    {
+     "name": "开售",
+     "start": "2026-08-19 13:28",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=xngkbueb"
+    }
+   ],
+   "tiers": [],
+   "price_from": "RM 288.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=xngkbueb",
+   "first_seen": "2026-09-29 10:40",
+   "seat_maps": [],
+   "artist_name": "世界巡回演唱会",
+   "avatar": "avatars/p-fantopia-xngkbueb.jpg",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=xngkbueb",
+     "id": "fantopia-xngkbueb",
+     "sold_out": false,
+     "price_from": "RM 288.00"
+    }
+   ]
   },
   {
    "id": "golive-177",
@@ -1536,7 +2331,16 @@
    "first_seen": "2026-09-29 08:34",
    "artist_name": "FKJ",
    "avatar": "avatars/a-43f3d68eb130.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "GoLive",
+     "url": "https://www.golive-asia.com/event/177",
+     "id": "golive-177",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
   },
   {
    "id": "t2u-52058",
@@ -1606,7 +2410,16 @@
    "seat_maps": [],
    "artist_name": "Kangen Band",
    "avatar": "avatars/a-727f268331b4.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/52058/kangen-band-21st-anniversary-concert",
+     "id": "t2u-52058",
+     "sold_out": false,
+     "price_from": "RM 97.00"
+    }
+   ]
   },
   {
    "id": "t2u-51768",
@@ -1664,7 +2477,16 @@
    "seat_maps": [],
    "artist_name": "Rizky Febian",
    "avatar": "avatars/a-07be15b54c67.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/51768/diorama-by-rizky-febian-live-in-sabah",
+     "id": "t2u-51768",
+     "sold_out": false,
+     "price_from": "RM 188.00"
+    }
+   ]
   },
   {
    "id": "golive-178",
@@ -1679,7 +2501,7 @@
    ],
    "sales": [
     {
-     "name": "Artist Presale",
+     "name": "GoLive · Artist Presale",
      "start": "2026-07-13 11:00",
      "end": "2026-07-13 23:59",
      "queue": "2026-07-13 10:30",
@@ -1688,7 +2510,7 @@
      "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=623"
     },
     {
-     "name": "Mastercard Presale",
+     "name": "GoLive · Mastercard Presale",
      "start": "2026-07-14 11:00",
      "end": "2026-07-15 11:00",
      "queue": "2026-07-14 10:30",
@@ -1697,7 +2519,7 @@
      "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=623"
     },
     {
-     "name": "Live Nation Presale",
+     "name": "GoLive · Live Nation Presale",
      "start": "2026-07-15 12:00",
      "end": "2026-07-15 23:59",
      "queue": "2026-07-15 11:30",
@@ -1706,13 +2528,22 @@
      "url": "https://www.livenation.my/event/khalid-it-s-always-summer-somewhere-tour-kuala-lumpur-tickets-edp1685525"
     },
     {
-     "name": "General Sale",
+     "name": "GoLive · General Sale",
      "start": "2026-07-16 11:00",
      "end": null,
      "queue": "2026-07-16 10:30",
      "available": true,
      "code_required": false,
      "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=623"
+    },
+    {
+     "name": "Fantopia · 开售",
+     "start": "2026-07-16 11:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=zc4rh0tl"
     }
    ],
    "tiers": [
@@ -1748,7 +2579,25 @@
    "first_seen": "2026-09-29 08:34",
    "artist_name": "Khalid",
    "avatar": "avatars/a-94ca247fff5a.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "GoLive",
+     "url": "https://www.golive-asia.com/event/178",
+     "id": "golive-178",
+     "sold_out": false,
+     "price_from": null
+    },
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=zc4rh0tl",
+     "id": "fantopia-zc4rh0tl",
+     "sold_out": false,
+     "price_from": "RM 398.00"
+    }
+   ],
+   "stop_sales": false,
+   "updates": {}
   },
   {
    "id": "t2u-50805",
@@ -1807,7 +2656,16 @@
    "seat_maps": [],
    "artist_name": "Limp Bizkit",
    "avatar": "avatars/a-29cb0f7a11ee.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/50805/limp-bizkit-live-in-malaysia-one-stop-asia-show",
+     "id": "t2u-50805",
+     "sold_out": false,
+     "price_from": "RM 398.00"
+    }
+   ]
   },
   {
    "id": "golive-181",
@@ -1891,7 +2749,16 @@
    "first_seen": "2026-09-29 08:34",
    "artist_name": "Malcolm Todd",
    "avatar": "avatars/a-eb5e7c01ca48.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "GoLive",
+     "url": "https://www.golive-asia.com/event/181",
+     "id": "golive-181",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
   },
   {
    "id": "golive-175",
@@ -1957,7 +2824,101 @@
    "first_seen": "2026-09-29 08:34",
    "artist_name": "BTS",
    "avatar": "avatars/a-f6ff067421fb.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "GoLive",
+     "url": "https://www.golive-asia.com/event/175",
+     "id": "golive-175",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "fantopia-vi4b75bp",
+   "source": "Fantopia",
+   "name": "BOYNEXTDOOR TOUR 'KNOCK ON Vol.2' IN KUALA LUMPUR",
+   "artist": null,
+   "type": null,
+   "venue": "Unifi Arena, Bukit Jalil",
+   "city": null,
+   "dates": [
+    "2026-12-26 17:00"
+   ],
+   "sales": [
+    {
+     "name": "开售",
+     "start": "2026-07-27 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=vi4b75bp"
+    }
+   ],
+   "tiers": [],
+   "price_from": "RM 398.00",
+   "limit": 2,
+   "sold_out": false,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=vi4b75bp",
+   "first_seen": "2026-09-29 10:40",
+   "seat_maps": [],
+   "artist_name": "BOYNEXTDOOR",
+   "avatar": "avatars/a-348e6d4d6a5c.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=vi4b75bp",
+     "id": "fantopia-vi4b75bp",
+     "sold_out": false,
+     "price_from": "RM 398.00"
+    }
+   ]
+  },
+  {
+   "id": "fantopia-0peucdui",
+   "source": "Fantopia",
+   "name": "BIGBANG 2026-2027 WORLD TOUR < XX : COSMOS > IN KUALA LUMPUR MALAYSIA",
+   "artist": null,
+   "type": null,
+   "venue": "TM Stadium Nasional",
+   "city": null,
+   "dates": [
+    "2027-01-09 20:00",
+    "2027-01-10 22:00"
+   ],
+   "sales": [
+    {
+     "name": "开售",
+     "start": "2026-09-17 10:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=0peucdui"
+    }
+   ],
+   "tiers": [],
+   "price_from": "RM 498.00",
+   "limit": 2,
+   "sold_out": false,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=0peucdui",
+   "first_seen": "2026-09-29 10:40",
+   "seat_maps": [],
+   "artist_name": "BIGBANG",
+   "avatar": "avatars/a-910706c961d7.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=0peucdui",
+     "id": "fantopia-0peucdui",
+     "sold_out": false,
+     "price_from": "RM 498.00"
+    }
+   ]
   },
   {
    "id": "golive-179",
@@ -2055,7 +3016,16 @@
    "first_seen": "2026-09-29 08:34",
    "artist_name": "Westlife",
    "avatar": "avatars/a-0e3d1767480e.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "GoLive",
+     "url": "https://www.golive-asia.com/event/179",
+     "id": "golive-179",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
   },
   {
    "id": "golive-159",
@@ -2100,10 +3070,104 @@
    "first_seen": "2026-09-29 08:34",
    "artist_name": "Blue",
    "avatar": "avatars/a-4c9a82ce72ca.jpg",
-   "avatar_kind": "artist"
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "GoLive",
+     "url": "https://www.golive-asia.com/event/159",
+     "id": "golive-159",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "fantopia-rx6i8tz7",
+   "source": "Fantopia",
+   "name": "【那些年的歌，我们的成名曲】演唱会 Songs That Keep Us Together",
+   "artist": null,
+   "type": null,
+   "venue": "Unifi Arena, Bukit Jalil",
+   "city": null,
+   "dates": [
+    "2027-02-27 20:00"
+   ],
+   "sales": [
+    {
+     "name": "开售",
+     "start": "2026-08-10 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=rx6i8tz7"
+    }
+   ],
+   "tiers": [],
+   "price_from": "RM 88.00",
+   "limit": 10,
+   "sold_out": false,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=rx6i8tz7",
+   "first_seen": "2026-09-29 10:40",
+   "seat_maps": [],
+   "artist_name": "演唱会 Songs That Keep Us Together",
+   "avatar": "avatars/p-fantopia-rx6i8tz7.jpg",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=rx6i8tz7",
+     "id": "fantopia-rx6i8tz7",
+     "sold_out": false,
+     "price_from": "RM 88.00"
+    }
+   ]
   }
  ],
  "leads": [
+  {
+   "id": "ig-08b56d3d94823b20",
+   "kind": "IG",
+   "from": "@livenation.my",
+   "from_name": "Live Nation Malaysia",
+   "title": "🚨 Additional tickets for The Weeknd: After Hours Til Dawn Tour in Kuala Lumpur are officially available!⁠",
+   "text": "🚨 Additional tickets for The Weeknd: After Hours Til Dawn Tour in Kuala Lumpur are officially available!⁠\n⁠\nLimited tickets for the 2-days show will be released at 11AM today! Join the queue now and get ready to secure yours before it completely sells out… AGAIN. 🎟️🔥⁠\n⁠\nHead over to golive-asia.com now and don’t miss your shot!⁠\n⁠\n📹: Courtesy of XO Records. Video by Evan Larsen ⁠\n⁠\n𝗧𝗵𝗲 𝗪𝗲𝗲𝗸𝗻𝗱: 𝗔𝗳𝘁𝗲𝗿 𝗛𝗼𝘂𝗿𝘀 𝗧𝗶𝗹 𝗗𝗮𝘄𝗻 𝗧𝗼𝘂𝗿⁠\n📅 4 & 5 November 2026 (WED & THURS)⁠\n📍TM Stadium Nasional (previously known as Bukit Jalil National Stadium)⁠\n🎫: www.golive-asia.com⁠\n⁠\n#AfterHoursTilDawnTour #TheWeekndinKL #TheWeeknd #KualaLumpur #LiveNationMY #KLHeadlineSeason",
+   "time": "2026-09-29 10:33",
+   "url": "https://www.instagram.com/reel/Dd2sLaUk_um/",
+   "hints": [
+    "🚨 Additional tickets for The Weeknd: After Hours Til Dawn Tour in Kuala Lumpur are officially available!",
+    "Limited tickets for the 2-days show will be released at 11AM today! Join the queue now and get ready to secure yours before it completely sells out… AGAIN. 🎟️🔥",
+    "📅 4 & 5 November 2026 (WED & THURS)",
+    "📍TM Stadium Nasional (previously known as Bukit Jalil National Stadium)",
+    "🎫: www.golive-asia.com"
+   ],
+   "sale_times": [],
+   "first_seen": "2026-09-29 10:40",
+   "matches": [
+    "golive-173"
+   ],
+   "avatar": "avatars/ig-livenationmy.jpg",
+   "platforms": [
+    "GoLive"
+   ]
+  },
+  {
+   "id": "ig-189601edc7fd9c75",
+   "kind": "IG",
+   "from": "#konsertmalaysia",
+   "from_name": null,
+   "title": "🎸🔥 SPIDERAYA: BISA 30 TAHUN MASIH MENUSUK!",
+   "text": "🎸🔥 SPIDERAYA: BISA 30 TAHUN MASIH MENUSUK!\n\nTiga dekad bukan tempoh yang singkat. Namun, bisa muzik Spider masih terasa, membuktikan karya dan perjalanan mereka terus hidup dalam ingatan peminat muzik rock tanah air. 🤘\n\nMenerusi Spideraya, ulang tahun ke-30 diraikan dengan 30 lagu, imbasan kenangan bersama Tony dan Napie, serta seruan untuk terus menghargai perjalanan sebuah kumpulan yang meninggalkan jejak tersendiri dalam industri muzik Malaysia. 🎶\n\nBukan sekadar konsert ulang tahun, tetapi sebuah penghormatan kepada muzik, persahabatan dan legasi yang terus dikenang. ❤️‍🔥\n\n👉 Baca selanjutnya di:\nhttps://msmusicscene.com/spideraya-bisa-30-tahun-masih-menusuk/\n\n#MMS #MyMediaSyndicate #Spider #Spideraya #Spider30Tahun #Bisa30TahunMasihMenusuk #TonySpider #NapieSpider #RockMalaysia #RockKapak #MuzikMalaysia #MalaysianRock #LegendaRock #KonsertMalaysia #KonsertRock #NostalgiaRock #Industri…",
+   "time": "2026-09-29 09:46",
+   "url": "https://www.instagram.com/p/Dd2nK0pn4VM/",
+   "hints": [],
+   "sale_times": [],
+   "first_seen": "2026-09-29 10:40",
+   "matches": [
+    "golive-167"
+   ],
+   "platforms": []
+  },
   {
    "id": "news-45afdaedd5868897",
    "kind": "新闻",
@@ -2114,7 +3178,8 @@
    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPMURBTU51LWlCaUxxUFJRUmlfZFV1VzIweWdwNzByUlZpb192LW54QzZaVS1nQTRkQzhONTZtUFQ3TjJLQ3hMWFptUk5VNnkzSEZGdW5iRFlSbERMM0FPM0lkZlhuWFBNNVJkWGtYUF9GNG9LTjFJN2tWTjBqX0dCWk94eG1oeVQya3BGVWJZVUNnbTl2VTl4NFFqY0xobkFwaVUzY0N5ZlhUbkkydEE?oc=5",
    "hints": [],
    "first_seen": "2026-09-29 08:34",
-   "matches": []
+   "matches": [],
+   "platforms": []
   },
   {
    "id": "news-0bc4402037ac7817",
@@ -2127,6 +3192,7 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "platforms": [],
    "artist": "Israel Houghton",
    "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
@@ -2149,6 +3215,9 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [],
    "avatar": "avatars/ig-ticket2uofficial.jpg",
+   "platforms": [
+    "Ticket2U"
+   ],
    "image": "posts/ig-ad06e147fdd8408f.jpg"
   },
   {
@@ -2162,6 +3231,7 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "platforms": [],
    "artist": "Israel Houghton",
    "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
@@ -2182,10 +3252,11 @@
    ],
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
-   "matches": [],
-   "artist": "Alan Tam",
-   "artist_photo": "avatars/a-f1446a3aa5e2.jpg",
-   "image": "posts/ig-b1ddc111b0d99ba9.jpg"
+   "matches": [
+    "fantopia-zk3x1r1c",
+    "fantopia-xngkbueb"
+   ],
+   "platforms": []
   },
   {
    "id": "news-eccf3d2fa3abec2e",
@@ -2198,6 +3269,7 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "platforms": [],
    "artist": "Israel Houghton",
    "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
@@ -2219,6 +3291,9 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [],
    "avatar": "avatars/ig-livenationmy.jpg",
+   "platforms": [
+    "Live Nation"
+   ],
    "image": "posts/ig-dc28c0a3b4cff020.jpg"
   },
   {
@@ -2232,6 +3307,7 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "platforms": [],
    "artist": "Israel Houghton",
    "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
@@ -2246,6 +3322,7 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "platforms": [],
    "artist": "Israel Houghton",
    "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
@@ -2259,7 +3336,8 @@
    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNby1Ba2RoZmh5eWZhWE5kRFF6NU5fc3dwXzVKUWx3V0liemZEQ1lubmswUllJdFpiUWxzLVo3V0l2RHVJMWE3RW53QWVnLVNKM00wdWJ0VWdUZDdmLVRWcVhVbnVOV3JSSXVqQ2RlTjd0OE9nVDdWT1dLc0FuTVY3QVpaeVRqd2NHeE1raDJoZ1hGdEhYNndpQ3VqRXZ2ckluMlhR?oc=5",
    "hints": [],
    "first_seen": "2026-09-29 08:34",
-   "matches": []
+   "matches": [],
+   "platforms": []
   },
   {
    "id": "ig-e9e4a0a260caf28f",
@@ -2281,6 +3359,7 @@
    ],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "platforms": [],
    "image": "posts/ig-e9e4a0a260caf28f.jpg"
   },
   {
@@ -2309,7 +3388,10 @@
    "matches": [
     "golive-179"
    ],
-   "avatar": "avatars/ig-livenationmy.jpg"
+   "avatar": "avatars/ig-livenationmy.jpg",
+   "platforms": [
+    "GoLive"
+   ]
   },
   {
    "id": "ig-deb10a832500b6c7",
@@ -2324,6 +3406,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "platforms": [],
    "image": "posts/ig-deb10a832500b6c7.jpg"
   },
   {
@@ -2347,7 +3430,12 @@
    "matches": [
     "golive-174"
    ],
-   "avatar": "avatars/ig-livenationmy.jpg"
+   "avatar": "avatars/ig-livenationmy.jpg",
+   "platforms": [
+    "GoLive",
+    "Fantopia",
+    "Live Nation"
+   ]
   },
   {
    "id": "ig-b637c98408e5ff84",
@@ -2370,7 +3458,11 @@
    "matches": [
     "golive-180"
    ],
-   "avatar": "avatars/ig-livenationmy.jpg"
+   "avatar": "avatars/ig-livenationmy.jpg",
+   "platforms": [
+    "GoLive",
+    "Live Nation"
+   ]
   },
   {
    "id": "news-a288e5f3ada76076",
@@ -2382,7 +3474,8 @@
    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNSmRsOUgxY3lkSzRBcFZhdGlaMVFNUDFqRWNIazhpSVdBVjVNUDJxcVNjUG5pbHhtaXZNZ1BfTXJjS19iZUotMDZpZW45eUV0UVBwV1NHR25HemdNTkZjczFlclRvLUtJNHd1OXZoQ3dNZzdWRDBxT2d2WGtGZVpERkdOQmhydGtjQVJnRUoxQjlwalRCenhr?oc=5",
    "hints": [],
    "first_seen": "2026-09-29 08:34",
-   "matches": []
+   "matches": [],
+   "platforms": []
   },
   {
    "id": "news-b3b14997d36d71c8",
@@ -2394,7 +3487,8 @@
    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNSmRsOUgxY3lkSzRBcFZhdGlaMVFNUDFqRWNIazhpSVdBVjVNUDJxcVNjUG5pbHhtaXZNZ1BfTXJjS19iZUotMDZpZW45eUV0UVBwV1NHR25HemdNTkZjczFlclRvLUtJNHd1OXZoQ3dNZzdWRDBxT2d2WGtGZVpERkdOQmhydGtjQVJnRUoxQjlwalRCenhr?oc=5",
    "hints": [],
    "first_seen": "2026-09-29 09:32",
-   "matches": []
+   "matches": [],
+   "platforms": []
   },
   {
    "id": "ig-3aa0a74802f697e8",
@@ -2421,7 +3515,10 @@
    "matches": [
     "golive-179"
    ],
-   "avatar": "avatars/ig-livenationmy.jpg"
+   "avatar": "avatars/ig-livenationmy.jpg",
+   "platforms": [
+    "GoLive"
+   ]
   },
   {
    "id": "ig-ca041f421306d42c",
@@ -2443,7 +3540,11 @@
    "matches": [
     "golive-167"
    ],
-   "avatar": "avatars/ig-livenationmy.jpg"
+   "avatar": "avatars/ig-livenationmy.jpg",
+   "platforms": [
+    "GoLive",
+    "Live Nation"
+   ]
   },
   {
    "id": "ig-1ce6d872b51cafac",
@@ -2463,7 +3564,11 @@
    "matches": [
     "golive-159"
    ],
-   "avatar": "avatars/ig-livenationmy.jpg"
+   "avatar": "avatars/ig-livenationmy.jpg",
+   "platforms": [
+    "GoLive",
+    "Live Nation"
+   ]
   },
   {
    "id": "news-13481ebd3810997a",
@@ -2475,7 +3580,8 @@
    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX2VLUkZ0bWlEQkN4eWJUSnBQU0pGY3MxSjIwTHlrLXY5VEF3VWIxbC1BOWxmV2VucWppS1NKcUJiUTdTWUNfX0lEVnExUkEzanBuRGpCbjBZeXVxbFF1WHdrNlpGS2xhWDVVU3NJSFAzVFRMem9rdFV0THpJcWNMbVpzajhYbXpZeFppVWt2MUFNa3kyY1VoYktlbjBMLTJ4Y3c?oc=5",
    "hints": [],
    "first_seen": "2026-09-29 08:34",
-   "matches": []
+   "matches": [],
+   "platforms": []
   },
   {
    "id": "ig-71f6a14bf1403957",
@@ -2497,7 +3603,11 @@
    "matches": [
     "golive-177"
    ],
-   "avatar": "avatars/ig-livenationmy.jpg"
+   "avatar": "avatars/ig-livenationmy.jpg",
+   "platforms": [
+    "GoLive",
+    "Live Nation"
+   ]
   },
   {
    "id": "news-c6d3c2a8d991fa79",
@@ -2509,7 +3619,8 @@
    "url": "https://news.google.com/rss/articles/CBMi8wJBVV95cUxQQmdsdzJic3RxUmg5VkljM2hRU3NnblJneHl1eDBQVDFKbnR1Q2Q5TXdaby1MUmF2QnowTDA2N3BsbnNwZVE5NlBVWmNqcWFoQjF4NzdRbUNoU1h2S3RyX3VGUWhJbUpNMHJUOUhtQm1WSGZ6U0hjRDNIVkk4X04zN0tLTEZ6d3lCMjdTLVNXMThkZHZpbTU4TC15em8tNWRsSVJodlpPRnRJeGtkb0JNSGQyWDVsRDVueVFFQjNEeTZrcndJTWYyY0E3NF9tT0hiUVF5dm9EYjItT1dCRnBBTFRZRVNMdXJVWk1HM0IzcTBNRnJJNG40Z1RiNWNmYmpVbEJIZk9kcExwMTRjMnVGR0NWRTVRb01hYTF5WURDVzh0ajFSYzhaRzZoYVQzZDFtdkxCc1NsV2xRYWJxa1lLLVh6bFdOYkVKY2FmYm0yYkFrbVFGbDR1M19TTnZCaTdPYzhveGpFbHVZdnhYLVcxbnBqaw?oc=5",
    "hints": [],
    "first_seen": "2026-09-29 08:34",
-   "matches": []
+   "matches": [],
+   "platforms": []
   },
   {
    "id": "news-76088e616d67d232",
@@ -2521,7 +3632,8 @@
    "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxQLXp0b0tyQVhGYmJSVl9PSnFRUWJ3NXZWcWp3S3AycVExaXVzWGRCRkpaU1l2TUs4N2VZbGxtcWx4SFlLUjYyQU9lU0xUZ0lWbWI5eWZGN1VpSEg2VTZVdHNfUzhNUDdiY0J0WFJyRV9ZbXF2SnBSbzhqUTZQZFZyYWUteDVtd242S1dyOTdMeFJCWG5vWHRTY1V0TUt0NFlLeEFkTlhJd0xpVTNzb2FaZFg1anZnMGhnTjd4MW40MmNqTlFhaERMeUFvZGpfeU9tR3R0cEdsX1FMZFA2TkllVy1tV3I2eFpQeDUzVEJEYU14TEYtekd0ZzJmOWFsTU1pVGdteGNZaElYLUlvaTkzQV9B?oc=5",
    "hints": [],
    "first_seen": "2026-09-29 08:34",
-   "matches": []
+   "matches": [],
+   "platforms": []
   },
   {
    "id": "ig-581b336a50c66216",
@@ -2549,7 +3661,10 @@
    "matches": [
     "golive-179"
    ],
-   "avatar": "avatars/ig-livenationmy.jpg"
+   "avatar": "avatars/ig-livenationmy.jpg",
+   "platforms": [
+    "GoLive"
+   ]
   },
   {
    "id": "ig-6ec66f6e17ad7b3e",
@@ -2568,6 +3683,7 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [],
    "avatar": "avatars/ig-zeppkualalumpur.jpg",
+   "platforms": [],
    "image": "posts/ig-6ec66f6e17ad7b3e.jpg"
   },
   {
@@ -2588,7 +3704,10 @@
    "matches": [
     "golive-177"
    ],
-   "avatar": "avatars/ig-zeppkualalumpur.jpg"
+   "avatar": "avatars/ig-zeppkualalumpur.jpg",
+   "platforms": [
+    "GoLive"
+   ]
   },
   {
    "id": "ig-8c0ee5a62b633007",
@@ -2615,6 +3734,7 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [],
    "avatar": "avatars/ig-zeppkualalumpur.jpg",
+   "platforms": [],
    "artist": "izna",
    "artist_photo": "avatars/a-988ff669d789.jpg",
    "image": "posts/ig-8c0ee5a62b633007.jpg"
@@ -2639,7 +3759,11 @@
    "matches": [
     "golive-178"
    ],
-   "avatar": "avatars/ig-livenationmy.jpg"
+   "avatar": "avatars/ig-livenationmy.jpg",
+   "platforms": [
+    "GoLive",
+    "Live Nation"
+   ]
   },
   {
    "id": "ig-71c7e57bcbecf581",
@@ -2653,11 +3777,12 @@
    "hints": [],
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
-   "matches": [],
+   "matches": [
+    "fantopia-zk3x1r1c",
+    "fantopia-xngkbueb"
+   ],
    "avatar": "avatars/ig-starplanetmy.jpg",
-   "artist": "Alan Tam",
-   "artist_photo": "avatars/a-f1446a3aa5e2.jpg",
-   "image": "posts/ig-71c7e57bcbecf581.jpg"
+   "platforms": []
   },
   {
    "id": "ig-7550194807af9184",
@@ -2677,7 +3802,10 @@
    "matches": [
     "t2u-51955"
    ],
-   "avatar": "avatars/ig-ticket2uofficial.jpg"
+   "avatar": "avatars/ig-ticket2uofficial.jpg",
+   "platforms": [
+    "Ticket2U"
+   ]
   },
   {
    "id": "ig-5f87c4ea441d2a37",
@@ -2694,11 +3822,12 @@
    ],
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
-   "matches": [],
+   "matches": [
+    "fantopia-zk3x1r1c",
+    "fantopia-xngkbueb"
+   ],
    "avatar": "avatars/ig-starplanetmy.jpg",
-   "artist": "Alan Tam",
-   "artist_photo": "avatars/a-f1446a3aa5e2.jpg",
-   "image": "posts/ig-5f87c4ea441d2a37.jpg"
+   "platforms": []
   },
   {
    "id": "ig-f54a07a6ff3b2bd7",
@@ -2719,6 +3848,9 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [],
    "avatar": "avatars/ig-ticket2uofficial.jpg",
+   "platforms": [
+    "Ticket2U"
+   ],
    "image": "posts/ig-f54a07a6ff3b2bd7.jpg"
   },
   {
@@ -2736,11 +3868,12 @@
    ],
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
-   "matches": [],
+   "matches": [
+    "fantopia-zk3x1r1c",
+    "fantopia-xngkbueb"
+   ],
    "avatar": "avatars/ig-starplanetmy.jpg",
-   "artist": "Alan Tam",
-   "artist_photo": "avatars/a-f1446a3aa5e2.jpg",
-   "image": "posts/ig-dd6ab7404f161b2e.jpg"
+   "platforms": []
   },
   {
    "id": "ig-0e203eac935fb3b1",
@@ -2756,11 +3889,12 @@
    ],
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
-   "matches": [],
+   "matches": [
+    "fantopia-zk3x1r1c",
+    "fantopia-xngkbueb"
+   ],
    "avatar": "avatars/ig-starplanetmy.jpg",
-   "artist": "Alan Tam",
-   "artist_photo": "avatars/a-f1446a3aa5e2.jpg",
-   "image": "posts/ig-0e203eac935fb3b1.jpg"
+   "platforms": []
   },
   {
    "id": "ig-67a45fe4ea901b79",
@@ -2780,7 +3914,10 @@
    "matches": [
     "t2u-51240"
    ],
-   "avatar": "avatars/ig-zeppkualalumpur.jpg"
+   "avatar": "avatars/ig-zeppkualalumpur.jpg",
+   "platforms": [
+    "Ticket2U"
+   ]
   },
   {
    "id": "ig-9fe801a879852720",
@@ -2794,11 +3931,12 @@
    "hints": [],
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
-   "matches": [],
+   "matches": [
+    "fantopia-zk3x1r1c",
+    "fantopia-xngkbueb"
+   ],
    "avatar": "avatars/ig-starplanetmy.jpg",
-   "artist": "Alan Tam",
-   "artist_photo": "avatars/a-f1446a3aa5e2.jpg",
-   "image": "posts/ig-9fe801a879852720.jpg"
+   "platforms": []
   },
   {
    "id": "ig-29722acba3fd56a2",
@@ -2816,11 +3954,12 @@
    ],
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
-   "matches": [],
+   "matches": [
+    "fantopia-zk3x1r1c",
+    "fantopia-xngkbueb"
+   ],
    "avatar": "avatars/ig-starplanetmy.jpg",
-   "artist": "Alan Tam",
-   "artist_photo": "avatars/a-f1446a3aa5e2.jpg",
-   "image": "posts/ig-29722acba3fd56a2.jpg"
+   "platforms": []
   },
   {
    "id": "ig-e0ffcb61950bedc7",
@@ -2843,7 +3982,10 @@
    "matches": [
     "t2u-51768"
    ],
-   "avatar": "avatars/ig-ticket2uofficial.jpg"
+   "avatar": "avatars/ig-ticket2uofficial.jpg",
+   "platforms": [
+    "Ticket2U"
+   ]
   },
   {
    "id": "ig-c2c64f7ed6183fcd",
@@ -2864,6 +4006,9 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [],
    "avatar": "avatars/ig-ticket2uofficial.jpg",
+   "platforms": [
+    "Ticket2U"
+   ],
    "image": "posts/ig-c2c64f7ed6183fcd.jpg"
   },
   {
@@ -2885,6 +4030,9 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [],
    "avatar": "avatars/ig-ticket2uofficial.jpg",
+   "platforms": [
+    "Ticket2U"
+   ],
    "artist": "LA LA LAND",
    "artist_photo": "avatars/a-5081d27aec33.jpg",
    "image": "posts/ig-d3a0195748b7f50c.jpg"
@@ -2906,6 +4054,7 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [],
    "avatar": "avatars/ig-zeppkualalumpur.jpg",
+   "platforms": [],
    "image": "posts/ig-122e0282dea47f05.jpg"
   },
   {
@@ -2928,6 +4077,9 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [],
    "avatar": "avatars/ig-zeppkualalumpur.jpg",
+   "platforms": [
+    "Ticketmelon"
+   ],
    "image": "posts/ig-588402d2f742aaaa.jpg"
   },
   {
@@ -2942,11 +4094,12 @@
    "hints": [],
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
-   "matches": [],
+   "matches": [
+    "fantopia-zk3x1r1c",
+    "fantopia-xngkbueb"
+   ],
    "avatar": "avatars/ig-starplanetmy.jpg",
-   "artist": "Alan Tam",
-   "artist_photo": "avatars/a-f1446a3aa5e2.jpg",
-   "image": "posts/ig-6ada4d5a1b5a79a4.jpg"
+   "platforms": []
   },
   {
    "id": "ig-282652f7f72e19d2",
@@ -2966,6 +4119,9 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [],
    "avatar": "avatars/ig-goliveasia.jpg",
+   "platforms": [
+    "GoLive"
+   ],
    "image": "posts/ig-282652f7f72e19d2.jpg"
   },
   {
@@ -2982,6 +4138,7 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [],
    "avatar": "avatars/ig-starplanetmy.jpg",
+   "platforms": [],
    "artist": "Hillsong Worship",
    "artist_photo": "avatars/a-15aedfa2f076.jpg",
    "image": "posts/ig-2c4b06f41775438c.jpg"
@@ -3002,6 +4159,7 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [],
    "avatar": "avatars/ig-starplanetmy.jpg",
+   "platforms": [],
    "artist": "Hillsong Worship",
    "artist_photo": "avatars/a-15aedfa2f076.jpg",
    "image": "posts/ig-5d1413380bf9952f.jpg"
@@ -3026,6 +4184,7 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [],
    "avatar": "avatars/ig-zeppkualalumpur.jpg",
+   "platforms": [],
    "image": "posts/ig-3ee2b599eece6970.jpg"
   },
   {
@@ -3044,6 +4203,7 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [],
    "avatar": "avatars/ig-starplanetmy.jpg",
+   "platforms": [],
    "artist": "Hillsong Worship",
    "artist_photo": "avatars/a-15aedfa2f076.jpg",
    "image": "posts/ig-dc395a405bb09221.jpg"
@@ -3067,6 +4227,7 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [],
    "avatar": "avatars/ig-zeppkualalumpur.jpg",
+   "platforms": [],
    "artist": "JEONG EUN JI",
    "artist_photo": "avatars/a-feca6f372bf8.jpg",
    "image": "posts/ig-ba3f876f0ef083d0.jpg"
