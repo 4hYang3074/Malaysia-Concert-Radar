@@ -1,0 +1,3047 @@
+{
+ "generated_at": "2026-09-29 08:34",
+ "health": {
+  "GoLive": {
+   "ok": true,
+   "count": 15
+  },
+  "Ticket2U": {
+   "ok": true,
+   "count": 18
+  },
+  "BookMyShow": {
+   "ok": false,
+   "error": "HTTP 403"
+  },
+  "Instagram": {
+   "ok": true,
+   "count": 49,
+   "checked": 10,
+   "error": "4 个账号/标签失败"
+  },
+  "Google News": {
+   "ok": true,
+   "count": 11,
+   "error": null
+  },
+  "人工线索": {
+   "ok": true,
+   "count": 0
+  }
+ },
+ "ig_bad": [
+  {
+   "account": "bookmyshowmy",
+   "error": "Invalid user id"
+  },
+  {
+   "account": "prworldwide",
+   "error": "Invalid user id"
+  },
+  {
+   "account": "unusualentertainment",
+   "error": "Invalid user id"
+  },
+  {
+   "account": "unifiarena",
+   "error": "Invalid user id"
+  }
+ ],
+ "ig_accounts": [
+  "livenation.my",
+  "starplanetmy",
+  "ticket2u.official",
+  "golive.asia",
+  "bookmyshowmy",
+  "imcliveglobal",
+  "prworldwide",
+  "unusualentertainment",
+  "unifiarena",
+  "zeppkualalumpur"
+ ],
+ "hashtags": [
+  "konsertmalaysia",
+  "concertmalaysia",
+  "klconcert",
+  "吉隆坡演唱会"
+ ],
+ "events": [
+  {
+   "id": "t2u-50157",
+   "source": "Ticket2U",
+   "name": "Faizal Tahir : Suara Rakyat",
+   "artist": null,
+   "type": "Concert",
+   "venue": "Unifi Arena Bukit Jalil",
+   "city": "Selangor",
+   "dates": [
+    "2026-10-03 20:00"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-10-03 21:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/50157/faizal-tahir-suara-rakyat"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "MIP",
+     "price": "RM 719.26",
+     "sold_out": false
+    },
+    {
+     "name": "VVIP",
+     "price": "RM 616.46",
+     "sold_out": false
+    },
+    {
+     "name": "VIP",
+     "price": "RM 513.66",
+     "sold_out": false
+    },
+    {
+     "name": "Block 106, Block 107, Block 108 等 8 区",
+     "price": "RM 410.86",
+     "sold_out": false
+    },
+    {
+     "name": "Block 307, Block 308, Block 317 等 4 区",
+     "price": "RM 266.94",
+     "sold_out": true
+    },
+    {
+     "name": "Block 304, Block 305, Block 306 等 7 区",
+     "price": "RM 205.26",
+     "sold_out": false
+    },
+    {
+     "name": "Block 401, Block 402, Block 403 等 13 区",
+     "price": "RM 112.74",
+     "sold_out": true
+    }
+   ],
+   "price_from": "RM 98.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/50157/faizal-tahir-suara-rakyat",
+   "image": "https://images.t2u.io/upload/event/listing/0-50157-AWSS34605c85c-4bf7-468e-8d0c-b5cfff8a8ada-C0lx_X.jpg",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "t2u-50764",
+   "source": "Ticket2U",
+   "name": "Showcase JIWARASA Nizam Laksamana & Kawan-Kawan 5.0",
+   "artist": null,
+   "type": "Concert",
+   "venue": "Noah Ballroom Melawati",
+   "city": "WP Kuala Lumpur",
+   "dates": [
+    "2026-10-03 20:00"
+   ],
+   "sales": [],
+   "tiers": [],
+   "price_from": "RM 170.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/50764/showcase-jiwarasa-nizam-laksamana-kawan-kawan-5.0",
+   "image": "https://images.t2u.io/upload/event/listing/0-50764-AWSS34c2bc74c-a76b-4c4d-b1a5-3872f16e08be-8Ovg_X.jpeg",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "t2u-49360",
+   "source": "Ticket2U",
+   "name": "Anoushka Shankar Live In Kuala Lumpur",
+   "artist": null,
+   "type": "Concert",
+   "venue": "Plenary Hall, KLCC",
+   "city": "WP Kuala Lumpur",
+   "dates": [
+    "2026-10-04 20:00"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-10-04 21:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/49360/anoushka-shankar-live-in-kuala-lumpur"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "VIP",
+     "price": "RM 755.00",
+     "desc": "Numbered Seating",
+     "sold_out": false
+    },
+    {
+     "name": "DIAMOND",
+     "price": "RM 595.00",
+     "desc": "Numbered Seating",
+     "sold_out": false
+    },
+    {
+     "name": "PLATINUM.",
+     "price": "RM 395.00",
+     "desc": "Numbered Seat",
+     "sold_out": false
+    },
+    {
+     "name": "GOLD.",
+     "price": "RM 295.00",
+     "desc": "Numbered Seat",
+     "sold_out": false
+    },
+    {
+     "name": "SILVER.",
+     "price": "RM 195.00",
+     "desc": "Numbered Seat",
+     "sold_out": false
+    },
+    {
+     "name": "BRONZE.",
+     "price": "RM 155.00",
+     "desc": "Numbered Seat",
+     "sold_out": false
+    }
+   ],
+   "price_from": "RM 155.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/49360/anoushka-shankar-live-in-kuala-lumpur",
+   "image": "https://images.t2u.io/upload/event/listing/0-49360-AWSS3e10a5721-2b48-4528-8fea-5a4cd13511b3-cvrO_X.jpg",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "t2u-49422",
+   "source": "Ticket2U",
+   "name": "Srinivas Saregama Season 5 Live Concert",
+   "artist": null,
+   "type": "Concert",
+   "venue": "Regent Hall",
+   "city": "Negeri Sembilan",
+   "dates": [
+    "2026-10-10 18:00"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-10-10 19:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/49422/srinivas-saregama-season-5-live-concert"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "MIP",
+     "price": "RM 1,500.00",
+     "desc": "Free Seating",
+     "sold_out": true
+    },
+    {
+     "name": "VIP",
+     "price": "RM 1,200.00",
+     "desc": "Free Seating",
+     "sold_out": false
+    },
+    {
+     "name": "DIAMOND",
+     "price": "RM 700.00",
+     "desc": "Free Seating",
+     "sold_out": false
+    },
+    {
+     "name": "GOLD",
+     "price": "RM 450.00",
+     "desc": "Free Seating",
+     "sold_out": false
+    },
+    {
+     "name": "SILVER",
+     "price": "RM 350.00",
+     "desc": "Free Seating",
+     "sold_out": false
+    },
+    {
+     "name": "BRONZE",
+     "price": "RM 250.00",
+     "desc": "Free Seating",
+     "sold_out": false
+    }
+   ],
+   "price_from": "RM 150.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/49422/srinivas-saregama-season-5-live-concert",
+   "image": "https://images.t2u.io/upload/event/listing/0-49422-AWSS3bb0926af-c477-436b-8755-36e817af5029-fcTB_X.jpeg",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "t2u-51955",
+   "source": "Ticket2U",
+   "name": "GVM 2026 - ONDRA RENDA 25 YEARS CONCERT",
+   "artist": null,
+   "type": "Concert",
+   "venue": "The Arch Galeries",
+   "city": "WP Kuala Lumpur",
+   "dates": [
+    "2026-10-10 19:45"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-10-10 21:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/51955/gvm-2026-ondra-renda-25-years-concert"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "MIP",
+     "price": "RM 1,288.00",
+     "desc": "- Numbered Seated\n- Exclusive Check-in Lane\n- Meal Box\n- Parking Pass\n- Goodie Bag",
+     "sold_out": false
+    },
+    {
+     "name": "VIP",
+     "price": "RM 788.00",
+     "desc": "Numbered Seated",
+     "sold_out": false
+    },
+    {
+     "name": "PLATINUM",
+     "price": "RM 428.00",
+     "desc": "Numbered Seated",
+     "sold_out": false
+    },
+    {
+     "name": "GOLD",
+     "price": "RM 328.00",
+     "desc": "Numbered Seated",
+     "sold_out": false
+    }
+   ],
+   "price_from": "RM 238.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/51955/gvm-2026-ondra-renda-25-years-concert",
+   "image": "https://images.t2u.io/upload/event/listing/0-51955-AWSS368307a03-ca3d-45b7-8aa6-dafa28b8f7bb-eZFX_X.jpg",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "t2u-51240",
+   "source": "Ticket2U",
+   "name": "Nastia Project CONCERT Feat Fynn Jamal & Liyana Fizi",
+   "artist": null,
+   "type": "Concert",
+   "venue": "Zepp Kuala Lumpur",
+   "city": "WP Kuala Lumpur",
+   "dates": [
+    "2026-10-16 18:00"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-10-16 18:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/51240/nastia-project-concert-feat-fynn-jamal-liyana-fizi"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "VIP BOX 4, VIP BOX 8",
+     "price": "RM 654.40",
+     "sold_out": true
+    },
+    {
+     "name": "VIP BOX 3, VIP BOX 7",
+     "price": "RM 524.40",
+     "sold_out": true
+    },
+    {
+     "name": "VIP BOX 2, VIP BOX 6",
+     "price": "RM 394.40",
+     "sold_out": true
+    },
+    {
+     "name": "VIP BOX 1, VIP BOX 5",
+     "price": "RM 329.40",
+     "sold_out": true
+    },
+    {
+     "name": "RAPUH",
+     "price": "RM 251.92",
+     "sold_out": true
+    },
+    {
+     "name": "TANPAMU",
+     "price": "RM 199.92",
+     "sold_out": false
+    },
+    {
+     "name": "MEET & GREET",
+     "price": "RM 160.40",
+     "sold_out": false
+    },
+    {
+     "name": "KISAH KITA.",
+     "price": "RM 147.92",
+     "sold_out": false
+    },
+    {
+     "name": "SEMESTA CINTA.",
+     "price": "RM 127.12",
+     "sold_out": false
+    }
+   ],
+   "price_from": "RM 98.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/51240/nastia-project-concert-feat-fynn-jamal-liyana-fizi",
+   "image": "https://images.t2u.io/upload/event/listing/0-51240-AWSS36d56a5e3-193a-4cda-a348-e4f2fffe9a6a-YJU4_X.jpeg",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "t2u-50709",
+   "source": "Ticket2U",
+   "name": "Konsert Gema Bumantara Dato' Sri Siti Nurhaliza",
+   "artist": null,
+   "type": "Concert",
+   "venue": "National Stadium Bukit Jalil",
+   "city": "Outside Malaysia",
+   "dates": [
+    "2026-10-17 20:30"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-10-17 23:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/50709/konsert-gema-bumantara-dato-sri-siti-nurhaliza"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "Block A1 (L), Block A1 (R)",
+     "price": "RM 1,745.48",
+     "sold_out": true
+    },
+    {
+     "name": "Block A2 (L), Block A2 (R)",
+     "price": "RM 1,540.48",
+     "sold_out": true
+    },
+    {
+     "name": "Block A3 (L), Block A3 (R), Block B1 (L) 等 14 区",
+     "price": "RM 925.48",
+     "sold_out": false
+    },
+    {
+     "name": "Block D1 (L), Block D1 (R), Block D2 (L) 等 6 区",
+     "price": "RM 720.48",
+     "sold_out": false
+    },
+    {
+     "name": "Block A4 (L), Block A4 (R), Block B4 (L) 等 8 区",
+     "price": "RM 587.23",
+     "sold_out": false
+    },
+    {
+     "name": "Block E1 (L), Block E1 (R), Block E2 (L) 等 8 区",
+     "price": "RM 484.73",
+     "sold_out": false
+    },
+    {
+     "name": "Block A5 (L), Block A5 (R), Block C5 (L) 等 6 区",
+     "price": "RM 382.23",
+     "sold_out": false
+    },
+    {
+     "name": "Block 106, Block 107, Block 108 等 18 区",
+     "price": "RM 311.50",
+     "sold_out": false
+    },
+    {
+     "name": "Block 113 - OKU, Block 114 - OKU, Block 115 - OKU 等 5 区",
+     "price": "RM 260.25",
+     "sold_out": false
+    },
+    {
+     "name": "Block 204, Block 205, Block 206 等 19 区",
+     "price": "RM 209.00",
+     "sold_out": false
+    },
+    {
+     "name": "Block 306, Block 307, Block 308 等 19 区",
+     "price": "RM 106.50",
+     "sold_out": true
+    },
+    {
+     "name": "Block 104, Block 105, Block 124 等 8 区",
+     "price": "RM 76.00",
+     "sold_out": true
+    }
+   ],
+   "price_from": "RM 70.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/50709/konsert-gema-bumantara-dato-sri-siti-nurhaliza",
+   "image": "https://images.t2u.io/upload/event/listing/0-50709-AWSS31d6ba88c-2894-45e6-b48a-6427152231d4-2oPo_X.jpg",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "t2u-50486",
+   "source": "Ticket2U",
+   "name": "SPOTLIGHT KLCC Convention Centre (24 OCT 2026)* : Orked Farhan - ASHNYZ",
+   "artist": null,
+   "type": "Concert",
+   "venue": "Plenary Theatre, KLCC",
+   "city": "WP Kuala Lumpur",
+   "dates": [
+    "2026-10-24 16:30"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-10-24 21:30",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/50486/spotlight-klcc-convention-centre-(24-oct-2026)-orked-farhan-ashnyz"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "PREMIUM*",
+     "price": "RM 100.00",
+     "desc": "Row A-E",
+     "sold_out": false
+    },
+    {
+     "name": "STANDARD*",
+     "price": "RM 70.00",
+     "desc": "Row F-R",
+     "sold_out": false
+    },
+    {
+     "name": "PREMIUM",
+     "price": "RM 200.00",
+     "desc": "Row A-J",
+     "sold_out": false
+    },
+    {
+     "name": "STANDARD",
+     "price": "RM 150.00",
+     "desc": "Row K-R",
+     "sold_out": false
+    }
+   ],
+   "price_from": "RM 150.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/50486/spotlight-klcc-convention-centre-(24-oct-2026)-orked-farhan-ashnyz",
+   "image": "https://images.t2u.io/upload/event/listing/0-50486-AWSS3709f1e71-43c8-4837-9657-89fbbd44b733-7NrZ_X.jpg",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "t2u-52015",
+   "source": "Ticket2U",
+   "name": "'Aku & Lelaki' 2026 Showcase by Misha Omar",
+   "artist": null,
+   "type": "Concert",
+   "venue": "JioSpace",
+   "city": "Selangor",
+   "dates": [
+    "2026-10-24 20:30"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-10-24 21:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/52015/-aku-lelaki-2026-showcase-by-misha-omar"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "VIP 1",
+     "price": "RM 592.40",
+     "desc": "- Numbered Seated\n- Level 1\n- With 1:1 Photo Session",
+     "sold_out": false
+    },
+    {
+     "name": "VIP 2",
+     "price": "RM 492.40",
+     "desc": "- Numbered Seated\n- Level 1",
+     "sold_out": false
+    },
+    {
+     "name": "CAT 1",
+     "price": "RM 462.40",
+     "desc": "- Numbered Seated\n- Level 1",
+     "sold_out": false
+    },
+    {
+     "name": "CAT 2",
+     "price": "RM 292.40",
+     "desc": "- Free Standing\n- Level 1",
+     "sold_out": false
+    },
+    {
+     "name": "CAT 3",
+     "price": "RM 192.40",
+     "desc": "- Free Standing\n- Level 1",
+     "sold_out": true
+    },
+    {
+     "name": "MEZZANINE",
+     "price": "RM 462.40",
+     "desc": "- Numbered Seated\n- Level 2",
+     "sold_out": false
+    }
+   ],
+   "price_from": "RM 188.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/52015/-aku-lelaki-2026-showcase-by-misha-omar",
+   "image": "https://images.t2u.io/upload/event/listing/0-52015-AWSS3a4904574-e9e2-482e-bfd3-89d8b6a70a80-GjjY_X.jpg",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "t2u-50832",
+   "source": "Ticket2U",
+   "name": "Konsert Muzik D.R.A.S. in Kuala Lumpur 2026",
+   "artist": null,
+   "type": "Concert",
+   "venue": "idea Live Arena",
+   "city": "Selangor",
+   "dates": [
+    "2026-10-31 20:00"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-10-31 22:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/50832/konsert-muzik-d.r.a.s.-in-kuala-lumpur-2026"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "Section VIP (L), Section VIP (R)",
+     "price": "RM 594.48",
+     "sold_out": false
+    },
+    {
+     "name": "Section P1 (L), Section P1 (R), Section U1 等 4 区",
+     "price": "RM 504.48",
+     "sold_out": false
+    },
+    {
+     "name": "Section U2, Section U3, Section U7 等 4 区",
+     "price": "RM 404.48",
+     "sold_out": false
+    },
+    {
+     "name": "Section LD1, Section LD2, Section U4 等 5 区",
+     "price": "RM 294.48",
+     "sold_out": false
+    },
+    {
+     "name": "Section U4., Section U5., Section U6.",
+     "price": "RM 194.48",
+     "sold_out": true
+    }
+   ],
+   "price_from": "RM 188.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/50832/konsert-muzik-d.r.a.s.-in-kuala-lumpur-2026",
+   "image": "https://images.t2u.io/upload/event/listing/0-50832-AWSS35aba1825-b109-4840-96b7-40f18c9d57fb-fOte_X.jpeg",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "t2u-51322",
+   "source": "Ticket2U",
+   "name": "VIJAY ANTONY LIVE IN CONCERT 2026",
+   "artist": null,
+   "type": "Concert",
+   "venue": "National Hockey Stadium",
+   "city": "WP Kuala Lumpur",
+   "dates": [
+    "2026-11-01 16:00"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-11-01 22:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/51322/vijay-antony-live-in-concert-2026"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "MIP",
+     "price": "RM 1,999.00",
+     "desc": "Free Seating",
+     "sold_out": false
+    },
+    {
+     "name": "VIP",
+     "price": "RM 999.00",
+     "desc": "Free Seating",
+     "sold_out": false
+    },
+    {
+     "name": "NAAKA MUKKA",
+     "price": "RM 299.00",
+     "desc": "Free Standing",
+     "sold_out": false
+    },
+    {
+     "name": "FANPIT",
+     "price": "RM 259.00",
+     "desc": "Free Standing",
+     "sold_out": true
+    },
+    {
+     "name": "PLATINUM",
+     "price": "RM 259.00",
+     "desc": "Free Seating",
+     "sold_out": false
+    },
+    {
+     "name": "GOLD",
+     "price": "RM 209.00",
+     "desc": "Free Seating",
+     "sold_out": false
+    },
+    {
+     "name": "SEXY LADY KITTA VAADI",
+     "price": "RM 159.00",
+     "desc": "Free Standing",
+     "sold_out": false
+    },
+    {
+     "name": "SILVER",
+     "price": "RM 159.00",
+     "desc": "Free Seating",
+     "sold_out": true
+    }
+   ],
+   "price_from": "RM 99.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/51322/vijay-antony-live-in-concert-2026",
+   "image": "https://images.t2u.io/upload/event/listing/0-51322-AWSS3f2722a89-8870-4224-b729-a3668d01f78d-b3JW_X.png",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "golive-167",
+   "source": "GoLive",
+   "name": "LANY: soft world tour in Kuala Lumpur",
+   "artist": "LANY",
+   "type": "Concert",
+   "venue": "Unifi Arena",
+   "city": "Bukit Jalil",
+   "dates": [
+    "2026-11-01 20:00"
+   ],
+   "sales": [
+    {
+     "name": "Artist Presale",
+     "start": "2026-03-30 10:30",
+     "end": "2026-03-30 23:59",
+     "queue": null,
+     "available": false,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=987"
+    },
+    {
+     "name": "Mastercard Presale",
+     "start": "2026-03-31 10:30",
+     "end": "2026-04-01 11:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=987"
+    },
+    {
+     "name": "Live Nation Presale",
+     "start": "2026-04-01 12:00",
+     "end": "2026-04-01 23:59",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.livenation.my/event/lany-soft-world-tour-kuala-lumpur-tickets-edp1661582"
+    },
+    {
+     "name": "General Sales",
+     "start": "2026-04-02 11:00",
+     "end": null,
+     "queue": null,
+     "available": false,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=987"
+    },
+    {
+     "name": "Mastercard Preferred",
+     "start": "2026-04-02 11:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=416"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "The Soft VIP Package",
+     "price": "RM 676"
+    }
+   ],
+   "price_text": null,
+   "seat_maps": [],
+   "limit": null,
+   "notes": {
+    "Ticketing Information": "You will need to sign up for a GoLive account before purchasing tickets. Please ensure that you register using a valid and active email address. For security reasons, the email linked to your tickets cannot be changed once the purchase is completed.\nPayment Method: VISA & MASTERCARD CREDIT/DEBIT Card, and GoLive Now Paylater payments are accepted.\nOnly one principal name on tickets needed per transaction.\nCustomers are advised to double-check your booking details (ticket quantity, type, add-ons, and total cost) on the summary page before proceeding to payment.\nAll ticket sales are final. NO cancellations, refunds, or exchanges are allowed once confirmed.",
+    "Important Information": "Reselling your tickets or purchasing from an unauthorised ticket seller or scalper is strictly prohibited. Tickets may not be bought and resold for advertising and/or promotional purposes. The Event Organizer/Promoter reserves the right to cancel such tickets without compensation and/or refuse entry to the event.\nVideo Recording and photo shoots will be taking place on site. Please acknowledge that by entering the site you hereby agree to the possible exposure to the recordings and the photo shoots and the promoter will not be responsible for any violation of tour publicity rights.\nPlease note that each presale provides exclusive or priority access to ticket purchases, but seat assignments a…",
+    "Admission Policy": "General Admission/Standing Zone\nStanding Zone is restricted to individuals aged 14+. All minors between the ages 14 - 16 must be accompanied by a ticket-bearing legal guardian aged 18 or above.\nPregnant women and patrons with medical conditions will not be permitted entry to this section/zone.\nBabies and toddlers are strictly not allowed.\nReserved Seating\nSeated sections are open to ages 6 years old and above. However, attendees below 16 years old must be accompanied by a ticket-bearing legal guardian aged 18 and above.\nBabies and toddlers are strictly not allowed.\nSome seats, including the first row and portions of the second and third rows, may have restricted views due to production equip…",
+    "VIP Package Information": "The Last Forever Fan Experience (RM 1,193)\nInclusions\nOne general admission ticket\nFirst access into the venue (1st tier)\nAccess to an Intimate preshow performance by LANY\nExclusive Trivia + Q&A session with Jake and Paul\nGroup photograph in front of the stage with LANY\nAutographed LANY VIP merchandise package\nCommemorative VIP laminate & lanyard\nPriority merchandise shopping before doors\nLimited availability\n*All questions may not be answered\nThe Soft VIP Package (RM676)\nInclusions\nOne general admission ticket\nEarly entry into the venue (2nd tier)\nLANY VIP merchandise package\nCommemorative VIP laminate & lanyard\nPriority merchandise shopping before doors\nLimited availability"
+   },
+   "sold_out": false,
+   "selling_fast": false,
+   "url": "https://www.golive-asia.com/event/167",
+   "first_seen": "2026-09-29 08:34"
+  },
+  {
+   "id": "golive-173",
+   "source": "GoLive",
+   "name": "The Weeknd: After Hours Til Dawn Tour",
+   "artist": "The Weeknd",
+   "type": "Concert",
+   "venue": "TM Stadium Nasional",
+   "city": "Bukit Jalil",
+   "dates": [
+    "2026-11-04 20:30",
+    "2026-11-05 20:30"
+   ],
+   "sales": [
+    {
+     "name": "Artist Presale",
+     "start": "2026-05-18 10:00",
+     "end": "2026-05-18 23:59",
+     "queue": "2026-05-18 09:00",
+     "available": false,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=467"
+    },
+    {
+     "name": "Maybank Visa Credit Card Presale",
+     "start": "2026-05-19 10:00",
+     "end": "2026-05-20 10:00",
+     "queue": "2026-05-19 09:00",
+     "available": false,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=467"
+    },
+    {
+     "name": "Live Nation Presale",
+     "start": "2026-05-20 12:00",
+     "end": "2026-05-20 23:59",
+     "queue": "2026-05-20 11:00",
+     "available": false,
+     "code_required": false,
+     "url": "https://www.livenation.my/event/the-weeknd-after-hours-til-dawn-tour-kuala-lumpur-tickets-edp1672816"
+    },
+    {
+     "name": "General Sales",
+     "start": "2026-07-10 11:00",
+     "end": null,
+     "queue": "2026-07-10 10:30",
+     "available": false,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=467"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "ULTIMATE VIP PACKAGE",
+     "price": "RM 2,888"
+    },
+    {
+     "name": "GOLD VIP PACKAGE",
+     "price": "RM 2,088"
+    },
+    {
+     "name": "HOT SEAT PACKAGE",
+     "price": "RM 1,788"
+    }
+   ],
+   "price_text": null,
+   "seat_maps": [
+    "maps/golive-173/fe3224cc-704e-43e4-b52e-1e1b3a2ddb3b.webp"
+   ],
+   "limit": 6,
+   "notes": {
+    "Ticketing Information": "You may purchase up to 6 tickets per transaction.\nTicket prices shown exclude a Ticket Fee (RM12.96) and Booking Charges (RM21.60) per transaction. All fees are subject to SST.\nA 3% processing fee of the total amount will be charged if you choose to check out using SPaylater\nYou will need to sign up for a GoLive account before purchasing tickets. Please ensure that you register using a valid and active email address. For security reasons, the email linked to your tickets cannot be changed once the purchase is completed.\nPayment Method: VISA & MASTERCARD CREDIT/DEBIT Card, and GoLive Now Paylater payments are accepted.\nOnly one principal name on tickets needed per transaction.\nCustomers are a…",
+    "Important Information": "Reselling your tickets or purchasing from an unauthorised ticket seller or scalper is strictly prohibited. Tickets may not be bought and resold for advertising and/or promotional purposes. The Event Organizer/Promoter reserves the right to cancel such tickets without compensation and/or refuse entry to the event.\nVideo Recording and photo shoots will be taking place on site. Please acknowledge that by entering the site you hereby agree to the possible exposure to the recordings and the photo shoots and the promoter will not be responsible for any violation of tour publicity rights.\nPlease note that each presale provides exclusive or priority access to ticket purchases, but seat assignments a…",
+    "Admission Policy": "Reserved Seating\nSeated sections are open to ages 6 years old and above. However, attendees below 16 years old must be accompanied by a ticket-bearing legal guardian aged 18 and above.\nBabies and toddlers are strictly not allowed.\nSome seats, including the first row and portions of the second and third rows, may have restricted views due to production equipment, handrails, or safety installations (e.g. stage mechanics, cameras, FOH). Obstruction levels vary by seat location — please carefully consider before purchasing.",
+    "VIP Entitlements": "ULTIMATE VIP PACKAGE (RM2,888)\nInclusions:\nOne (1) first-tier floor seated ticket\nUnprecedented stage access for a photo opportunity with your party by a professional photographer from where The Weeknd will perform later*\nExclusive Photo Souvenir: Capture your evening with a special keepsake from The Weeknd Photo Booth*\nLimited edition The Weeknd gift item\nVIP laminate and lanyard\nExclusive VIP only wristband\nPriority merchandise shopping (if applicable)\n*No artist participation\nGOLD VIP PACKAGE (RM2,088)\nInclusions:\nOne (1) first-tier floor seated ticket\nExclusive Photo Souvenir: Capture your evening with a special keepsake from The Weeknd Photo Booth*\nLimited edition The Weeknd gift item\nV…"
+   },
+   "sold_out": false,
+   "selling_fast": false,
+   "url": "https://www.golive-asia.com/event/173",
+   "first_seen": "2026-09-29 08:34"
+  },
+  {
+   "id": "golive-180",
+   "source": "GoLive",
+   "name": "yung kai - stay with the ocean, i’ll find you: asia tour 2026",
+   "artist": "yung kai",
+   "type": "Concert",
+   "venue": "The Platform, Menara KEN, TTDI",
+   "city": "Kuala Lumpur",
+   "dates": [
+    "2026-11-06 20:00"
+   ],
+   "sales": [
+    {
+     "name": "Artist Presale",
+     "start": "2026-08-03 11:00",
+     "end": "2026-08-03 23:59",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=757"
+    },
+    {
+     "name": "Mastercard Presale",
+     "start": "2026-08-04 11:00",
+     "end": "2026-08-05 11:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=757"
+    },
+    {
+     "name": "Live Nation Presale",
+     "start": "2026-08-05 12:00",
+     "end": "2026-08-05 23:59",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.livenation.my/event/yung-kai-stay-with-the-ocean-i-ll-find-you-asia-2026-kuala-lumpur-tickets-edp1688868"
+    },
+    {
+     "name": "General Sale",
+     "start": "2026-08-06 11:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=757"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "VIP MEET & GREET PACKAGE (FREE SEATING)",
+     "price": "RM 598"
+    },
+    {
+     "name": "GENERAL ADMISSION (FREE SEATING)",
+     "price": "RM 248"
+    }
+   ],
+   "price_text": null,
+   "seat_maps": [],
+   "limit": 4,
+   "notes": {
+    "Ticketing Information": "You may purchase up to 4 tickets per transaction.\nTicket prices shown exclude a Ticket Fee (RM12.96) and Booking Charges (RM12.96) per transaction. All fees are subject to SST.\nA 3% processing fee of the total amount will be charged if you choose to check out using SPaylater.\nYou will need to sign up for a GoLive account before purchasing tickets. Please ensure that you register using a valid and active email address. For security reasons, the email linked to your tickets cannot be changed once the purchase is completed.\nPayment Method: VISA & MASTERCARD CREDIT/DEBIT Card, and SPayLater payments are accepted.\nOnly one principal name on tickets is needed per transaction.\nCustomers are advised…",
+    "Important Information": "Reselling your tickets or purchasing from an unauthorised ticket seller or scalper is strictly prohibited. Tickets may not be bought and resold for advertising and/or promotional purposes. The Event Organizer/Promoter reserves the right to cancel such tickets without compensation and/or refuse entry to the event.\nVideo Recording and photo shoots will be taking place on site. Please acknowledge that by entering the site you hereby agree to the possible exposure to the recordings and the photo shoots and the promoter will not be responsible for any violation of tour publicity rights.\nPlease note that each presale provides exclusive or priority access to ticket purchases, but seat assignments a…",
+    "Admission Policy": "● Seating is open to ages 6 years old and above. However, attendees below 16 years old must be accompanied by a ticket-bearing legal guardian aged 18 and above.\n● This event operates on a free seating (first-come, first-served) basis within your ticket category:\nVIP Ticket Holder: Rows B – E\nGeneral Ticket Holders: Level 1, Row F onwards\n● Babies and toddlers are strictly not allowed.",
+    "VIP Information": "VIP MEET & GREET PACKAGE [RM 598]\nOne standing ticket\nPre-show individual photo opportunity with Yung Kai\nVIP only exclusive merch item\nVIP laminate and lanyard\nEarly entry into performance hall\nPriority merchandise shopping (if applicable)"
+   },
+   "sold_out": false,
+   "selling_fast": false,
+   "url": "https://www.golive-asia.com/event/180",
+   "first_seen": "2026-09-29 08:34"
+  },
+  {
+   "id": "t2u-51416",
+   "source": "Ticket2U",
+   "name": "Cadenza of the Soul: Noh Salleh with Aubrey Suwito Orchestra",
+   "artist": null,
+   "type": "Concert",
+   "venue": "idea Live Arena",
+   "city": "Selangor",
+   "dates": [
+    "2026-11-08 20:30"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-11-08 23:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/51416/cadenza-of-the-soul-noh-salleh-with-aubrey-suwito-orchestra"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "VVIP L, VVIP R",
+     "price": "RM 594.48",
+     "sold_out": false
+    },
+    {
+     "name": "VIP L, VIP R",
+     "price": "RM 494.48",
+     "sold_out": false
+    },
+    {
+     "name": "Block S1, Block S2, Block S3 等 4 区",
+     "price": "RM 400.48",
+     "sold_out": false
+    },
+    {
+     "name": "CAT 1 L, CAT 1 R, Block U1 等 4 区",
+     "price": "RM 374.48",
+     "sold_out": false
+    },
+    {
+     "name": "Block LD1, Block LD2, Block U2 等 7 区",
+     "price": "RM 274.48",
+     "sold_out": true
+    },
+    {
+     "name": "Block U3, Block U4., Block U6. 等 4 区",
+     "price": "RM 194.48",
+     "sold_out": true
+    }
+   ],
+   "price_from": "RM 188.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/51416/cadenza-of-the-soul-noh-salleh-with-aubrey-suwito-orchestra",
+   "image": "https://images.t2u.io/upload/event/listing/0-51416-AWSS347042081-fffd-4155-bd2d-39b46f624a17-5dNL_X.jpg",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "golive-176",
+   "source": "GoLive",
+   "name": "2026-27 BABYMONSTER WORLD TOUR [춤 (CHOOM)] IN KUALA LUMPUR",
+   "artist": "BABYMONSTER",
+   "type": "Concert",
+   "venue": "Unifi Arena",
+   "city": "Bukit Jalil",
+   "dates": [
+    "2026-11-14 17:00"
+   ],
+   "sales": [
+    {
+     "name": "MONSTIEZ MEMBERSHIP (GLOBAL) PRESALE",
+     "start": "2026-06-30 11:00",
+     "end": "2026-06-30 23:59",
+     "queue": "2026-06-30 10:00",
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=585"
+    },
+    {
+     "name": "Mastercard Presale",
+     "start": "2026-07-01 11:00",
+     "end": "2026-07-01 23:59",
+     "queue": "2026-07-01 10:00",
+     "available": false,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=585"
+    },
+    {
+     "name": "Live Nation Presale",
+     "start": "2026-07-02 11:00",
+     "end": "2026-07-02 23:59",
+     "queue": "2026-07-02 10:00",
+     "available": false,
+     "code_required": false,
+     "url": "https://www.livenation.my/event/2026-27-babymonster-world-tour-%EC%B6%A4-choom-in-kuala-lumpur-kuala-lumpur-tickets-edp1682916"
+    },
+    {
+     "name": "General Sales",
+     "start": "2026-07-03 11:00",
+     "end": null,
+     "queue": "2026-07-03 10:00",
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=585"
+    }
+   ],
+   "tiers": [],
+   "price_text": null,
+   "seat_maps": [
+    "maps/golive-176/3d0f3dae-d6d4-45ca-95a1-a9d26868f137.webp"
+   ],
+   "limit": 4,
+   "notes": {
+    "VIP Information": "VIP PACKAGE (SEATED)\n⚬ One (1) Premium Seated Ticket.\n⚬ Access to the Pre-Show Soundcheck Party\n⚬ VIP Laminate & Lanyard\n⚬ Exclusive Photocard set\n⚬ Exclusive VIP Gift Item\n⚬ Early access to merchandise booth\nVIP PACKAGE (STANDING)\n⚬ One (1) Standing Ticket\n⚬ Access to the Pre-Show Soundcheck Party\n⚬ VIP Laminate & Lanyard\n⚬ Exclusive Photocard set\n⚬ Exclusive VIP Gift Item\n⚬ Early access to merchandise booth",
+    "Ticketing Information": "Maximum 4 tickets per transaction.\nYou can purchase up to only TWO (2) tickets per Weverse ID, per show date for 𝐌𝐎𝐍𝐒𝐓𝐈𝐄𝐙 𝐌𝐄𝐌𝐁𝐄𝐑𝐒𝐇𝐈𝐏 (𝐆𝐋𝐎𝐁𝐀𝐋) 𝐏𝐑𝐄𝐒𝐀𝐋𝐄\nTicket prices shown exclude a Ticket Fee (RM12.96) per ticket, and Booking Charges (RM16.20) per transaction. All fees include SST.\nA 3% processing fee of the total amount will be charged if you choose to check out using SPayLater\nYou will need to sign up for a GoLive account before purchasing tickets. Please ensure that you register using a valid and active email address. For security reasons, the email linked to your tickets cannot be changed once the purchase is completed.\nPayment Method: VISA & MASTERCARD CREDIT/DEBIT Card, and SPayLater pa…",
+    "Important Information": "Seats may have obstructed views due to handrails, equipment, or cameras, and gaps may exist between consecutive seats.\nThe seating arrangement and stage setup may change without prior notice due to adjustments in performance design.\nViews from some areas/seats may be obstructed due to structures of the venue (handrails, pillars, etc.) and the stage or camera equipment, depending on the location of your seat. Ticket cancellations, exchanges, or refunds will not be available for obstructed views.\nReselling your tickets or purchasing from an unauthorised ticket seller or scalper is strictly prohibited. Tickets may not be bought and resold for advertising and/or promotional purposes. The Event O…",
+    "Admission Policy": "General Admission/Standing Zone\nStanding Zone is restricted to individuals aged 14+ . All minors between the age 14 - 16 must be accompanied by a ticket-bearing legal guardian aged 18 or above.\nPregnant women and patrons with medical conditions will not be permitted entry to this section/zone.\nBabies and toddlers are strictly not allowed.\nReserved Seating\nSeated sections are open to ages 6 years old and above. However, attendees below 16 years old must be accompanied by a ticket-bearing legal guardian aged 18 and above.\nBabies and toddlers are strictly not allowed.\nWheelchair Access\nWheelchair-accessible tickets for 2026-27 BABYMONSTER WORLD TOUR [춤 (CHOOM)] IN KUALA LUMPUR are only availabl…"
+   },
+   "sold_out": false,
+   "selling_fast": false,
+   "url": "https://www.golive-asia.com/event/176",
+   "first_seen": "2026-09-29 08:34"
+  },
+  {
+   "id": "golive-171",
+   "source": "GoLive",
+   "name": "5 Seconds of Summer: Everyone’s a Star",
+   "artist": "5 Seconds of Summer",
+   "type": "Concert",
+   "venue": "Unifi Arena",
+   "city": "Bukit Jalil",
+   "dates": [
+    "2026-11-17 20:00",
+    "2026-12-04 20:00"
+   ],
+   "sales": [
+    {
+     "name": "Artist Presale",
+     "start": "2026-06-22 12:00",
+     "end": "2026-06-22 23:59",
+     "queue": "2026-06-22 11:30",
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=466"
+    },
+    {
+     "name": "General Sale",
+     "start": "2026-06-23 12:00",
+     "end": null,
+     "queue": "2026-06-23 11:30",
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=466"
+    },
+    {
+     "name": "Bite The Apple (Upgrade)",
+     "start": "2026-06-23 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=484"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "VIP No 1 Obsession Seating",
+     "price": "RM 1,118"
+    },
+    {
+     "name": "VIP No 1 Obsession Standing",
+     "price": "RM 918"
+    }
+   ],
+   "price_text": null,
+   "seat_maps": [
+    "maps/golive-171/3ec8472c-6111-4093-a0cb-eeb507452c96"
+   ],
+   "limit": null,
+   "notes": {
+    "Ticketing Information": "You will need to sign up for a GoLive account before purchasing tickets. Please ensure that you register using a valid and active email address. For security reasons, the email linked to your tickets cannot be changed once the purchase is completed.\nThe waiting room opens half an hour before the ticket sale starts .\nPayment Method: VISA & MASTERCARD CREDIT/DEBIT Card, and GoLive Now Paylater payments are accepted.\nOnly one principal name on tickets needed per transaction.\nCustomers are advised to double-check your booking details (ticket quantity, type, add-ons, and total cost) on the summary page before proceeding to payment.\nAll ticket sales are final. NO cancellations, refunds, or exchang…",
+    "Admission Policy": "General Admission/Standing Zone\nStanding Zone is restricted to individuals aged 14+. All minors between the ages 14 - 16 must be accompanied by a ticket-bearing legal guardian aged 18 or above.\nPregnant women and patrons with medical conditions will not be permitted entry to this section/zone.\nBabies and toddlers are strictly not allowed.\nReserved Seating\nSeated sections are open to ages 6 years old and above. However, attendees below 16 years old must be accompanied by a ticket-bearing legal guardian aged 18 and above.\nBabies and toddlers are strictly not allowed.\nSome seats, including the first row and portions of the second and third rows, may have restricted views due to production equip…",
+    "VIP Package Information": "VIP No 1 Obsession Seating (RM 1,118)\nONE (1) SEATED TICKET\nEXCLUSIVE ACCESS TO THE 5SOS PRE-SHOW SOUNDCHECK AND PRESS CONFERENCE WITH AN OPPORTUNITY TO ASK THE BAND A QUESTION\nEXCLUSIVE SPECIALLY DESIGNED VIP GIFT ITEM\nVIP LAMINATE AND LANYARD\nEXCLUSIVE NO.1 OBSESSION PACKAGE WRISTBAND\nPHOTO OPPORTUNITY IN FRONT OF THE VIP BACKDROP TO\nCOMMEMORATE YOUR EVENING**\nPRIORITY MERCHANDISE SHOPPING\nDEDICATED VIP ENTRANCE AND ON-SITE VIP TEAM\nVIP No 1 Obsession Standing (RM 918)\nONE (1) STANDING TICKET\nEXCLUSIVE ACCESS TO THE 5SOS PRE-SHOW SOUNDCHECK AND PRESS CONFERENCE WITH AN OPPORTUNITY TO ASK THE BAND A QUESTION*\nEXCLUSIVE SPECIALLY DESIGNED VIP GIFT ITEM\nVIP LAMINATE AND LANYARD\nEXCLUSIVE NO.1…"
+   },
+   "sold_out": false,
+   "selling_fast": false,
+   "url": "https://www.golive-asia.com/event/171",
+   "first_seen": "2026-09-29 08:34"
+  },
+  {
+   "id": "golive-149",
+   "source": "GoLive",
+   "name": "MY CHEMICAL ROMANCE SOUTH EAST ASIA 2026",
+   "artist": "My Chemical Romance",
+   "type": "Concert",
+   "venue": "Bukit Jalil National Stadium",
+   "city": "Kuala Lumpur",
+   "dates": [
+    "2026-11-19 20:30",
+    "2026-11-20 20:30"
+   ],
+   "sales": [],
+   "tiers": [],
+   "price_text": null,
+   "seat_maps": [
+    "maps/golive-149/1871b27c-a954-49a1-8c2c-1f8fff9c6bb5"
+   ],
+   "limit": null,
+   "notes": {
+    "Admission Policy": "General Admission/Standing Zone\nThis section is open to ages 14 years old and above only. However, attendee below 16 years old must be accompanied by a ticket-bearing legal guardian aged 18 and above.\nPregnant women and patrons with medical conditions will not be permitted entry to this section/zone.\nBabies and toddlers are strictly not allowed.\nReserved Seating\nSeated sections are open to ages 6 years old and above. However, attendee below 16 years old must be accompanied by a ticket-bearing legal guardian aged 18 and above.\nBabies and toddlers are strictly not allowed",
+    "Important Information": "Limited to 6 tickers per transaction\nReselling your tickets or purchasing from an unauthorised ticket seller or scalper is strictly prohibited. Tickets may not be bought and resold for advertising and/or promotional purposes. The Event Organizer/Promoter reserves the right to cancel such tickets without compensation and/or refuse entry to the event.\nActual performance time is based on on-site situations. Please be sure to visit the Promoter official website and socials for door time and event guide before show day.\nThe promoter reserves the right to change these terms & conditions at any time."
+   },
+   "sold_out": false,
+   "selling_fast": false,
+   "url": "https://www.golive-asia.com/event/149",
+   "first_seen": "2026-09-29 08:34"
+  },
+  {
+   "id": "t2u-50151",
+   "source": "Ticket2U",
+   "name": "Thalapathy Saravedi / தளபதி சரவெடி",
+   "artist": null,
+   "type": "Concert",
+   "venue": "Koodam Banquet Hall",
+   "city": "Selangor",
+   "dates": [
+    "2026-11-21 17:30"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-11-28 22:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/50151/thalapathy-saravedi-தளபதி-சரவெடி"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "Nanba/Nanbi",
+     "price": "RM 30.00",
+     "desc": "1 Pax",
+     "sold_out": false
+    },
+    {
+     "name": "Thalapathy Family",
+     "price": "RM 200.00",
+     "desc": "Group purchase. Total up to 7 pax per ticket. (1 table)",
+     "sold_out": false
+    }
+   ],
+   "price_from": "RM 20.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/50151/thalapathy-saravedi-தளபதி-சரவெடி",
+   "image": "https://images.t2u.io/upload/event/listing/0-50151-AWSS3fcbf1c45-c53f-48f4-846b-01d91f2d213b-PK8R_X.jpg",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "golive-174",
+   "source": "GoLive",
+   "name": "wave to earth - the pieces tour",
+   "artist": "wave to earth",
+   "type": "Concert",
+   "venue": "Idea Live Arena",
+   "city": "Petaling Jaya",
+   "dates": [
+    "2026-11-22 20:00"
+   ],
+   "sales": [
+    {
+     "name": "Live Nation Presale",
+     "start": "2026-05-27 11:00",
+     "end": "2026-05-27 23:59",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.livenation.my/event/wave-to-earth-the-pieces-tour-kuala-lumpur-tickets-edp1674881"
+    },
+    {
+     "name": "General Sales",
+     "start": "2026-05-28 11:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=527"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "VIP M&G PACKAGE",
+     "price": "RM 818"
+    },
+    {
+     "name": "VIP EARLY ENTRY & SOUNDCHECK PACKAGE",
+     "price": "RM 588"
+    },
+    {
+     "name": "VIP SOUNDCHECK PACKAGE",
+     "price": "RM 758"
+    }
+   ],
+   "price_text": null,
+   "seat_maps": [
+    "maps/golive-174/4c3aa113-bd91-4712-8eb0-1061a155703c.webp"
+   ],
+   "limit": 6,
+   "notes": {
+    "Ticketing Information": "You may purchase up to 6 tickets per transaction.\nTicket prices shown exclude a Ticket Fee (RM12.96) and Booking Charges (RM12.96) per transaction. All fees are subject to SST.\nA 3% processing fee of the total amount will be charged if you choose to check out using SPaylater\nYou will need to sign up for a GoLive account before purchasing tickets. Please ensure that you register using a valid and active email address. For security reasons, the email linked to your tickets cannot be changed once the purchase is completed.\nPayment Method: VISA & MASTERCARD CREDIT/DEBIT Card, and SPaylater payments are accepted.\nOnly one principal name on tickets is needed per transaction.\nCustomers are advised…",
+    "Important Information": "Reselling your tickets or purchasing from an unauthorised ticket seller or scalper is strictly prohibited. Tickets may not be bought and resold for advertising and/or promotional purposes. The Event Organizer/Promoter reserves the right to cancel such tickets without compensation and/or refuse entry to the event.\nVideo Recording and photo shoots will be taking place on site. Please acknowledge that by entering the site you hereby agree to the possible exposure to the recordings and the photo shoots and the promoter will not be responsible for any violation of tour publicity rights.\nPlease note that each presale provides exclusive or priority access to ticket purchases, but seat assignments a…",
+    "Admission Policy": "General Admission/Standing Zone\nStanding Zone is restricted to individuals aged 14+ . All minors between the age 14 - 16 must be accompanied by a ticket-bearing legal guardian aged 18 or above.\nKindly refer to the official event guide available nearer to the event date for updates. The promoter reserves the right to amend these terms & conditions at any time without prior notice.\nPregnant women and patrons with medical conditions will not be permitted entry to this section/zone.\nBabies and toddlers are strictly not allowed.\nReserved Seating\nSeated sections are open to ages 6 years old and above. However, attendees below 16 years old must be accompanied by a ticket-bearing legal guardian aged…",
+    "VIP Information": "VIP M&G PACKAGE (RM 818）\nInclusions\nOne (1) standing ticket\nOne pre-show group picture with wave to earth (Group of 6)\nAccess to wave to earth's pre-show soundcheck\nVIP only merchandise package, specially curated by wave to earth\nEarly entry to the standing zone ('Skip the Line') (1st tier)\nEarly Access to merchandise table\nVIP EARLY ENTRY & SOUNDCHECK PACKAGE（RM 588)\nInclusions\nOne (1) standing ticket\nAccess to wave to earth's pre-show soundcheck\nVIP only merchandise item\nEarly entry to the standing zone ('Skip the Line') (2nd tier)\nEarly Access to merchandise table\nVIP SOUNDCHECK PACKAGE（RM758）\nInclusions\nOne (1) premium seated ticket\nAccess to wave to earth's pre-show soundcheck\nVIP only…"
+   },
+   "sold_out": false,
+   "selling_fast": false,
+   "url": "https://www.golive-asia.com/event/174",
+   "first_seen": "2026-09-29 08:34"
+  },
+  {
+   "id": "t2u-49498",
+   "source": "Ticket2U",
+   "name": "ASMARALOKA 2026",
+   "artist": null,
+   "type": "Concert",
+   "venue": "Ipoh Convention Centre (ICC)",
+   "city": "Perak",
+   "dates": [
+    "2026-11-28 20:00"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-11-28 21:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/49498/asmaraloka-2026"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "MATI RASA",
+     "price": "RM 178.00",
+     "desc": "",
+     "sold_out": false
+    },
+    {
+     "name": "PATAH HATI",
+     "price": "RM 148.00",
+     "desc": "",
+     "sold_out": false
+    }
+   ],
+   "price_from": "RM 118.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/49498/asmaraloka-2026",
+   "image": "https://images.t2u.io/upload/event/listing/0-49498-AWSS3832f5a24-a015-4df3-b8ad-e3d7680be567-uiYi_X.jpeg",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "golive-172",
+   "source": "GoLive",
+   "name": "Evanescence Live in Kuala Lumpur 2026",
+   "artist": "Evanescence",
+   "type": "Concert",
+   "venue": "National Hockey Stadium, Bukit Jalil",
+   "city": "Kuala Lumpur",
+   "dates": [
+    "2026-11-28 20:00"
+   ],
+   "sales": [
+    {
+     "name": "General Sales",
+     "start": "2026-06-26 10:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=468"
+    },
+    {
+     "name": "STANDING VIP (UPGRADE)",
+     "start": "2026-06-25 10:00",
+     "end": null,
+     "queue": null,
+     "available": false,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=496"
+    },
+    {
+     "name": "SEATING VIP (UPGRADE)",
+     "start": "2026-06-25 10:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=495"
+    },
+    {
+     "name": "Hello Special Access",
+     "start": "2026-06-25 10:00",
+     "end": "2026-06-25 23:59",
+     "queue": "2026-06-25 09:30",
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=468"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "EXCLUSIVE VIP EXPERIENCE",
+     "price": "RM 888"
+    }
+   ],
+   "price_text": null,
+   "seat_maps": [
+    "maps/golive-172/cb15ead1-62cf-4803-856f-1190552ea643"
+   ],
+   "limit": null,
+   "notes": {
+    "Ticketing Information": "You will need to sign up for a GoLive account before purchasing tickets. Please ensure that you register using a valid and active email address. For security reasons, the email linked to your tickets cannot be changed once the purchase is completed.\nThe waiting room opens half an hour before the ticket sale starts .\nPayment Method: VISA & MASTERCARD CREDIT/DEBIT Card, and GoLive Now Paylater payments are accepted.\nOnly one principal name on tickets needed per transaction.\nCustomers are advised to double-check your booking details (ticket quantity, type, add-ons, and total cost) on the summary page before proceeding to payment.\nAll ticket sales are final. NO cancellations, refunds, or exchang…",
+    "Admission Policy": "General Admission/Standing Zone\nStanding Zone is restricted to individuals aged 14+. All minors between the ages 14 - 16 must be accompanied by a ticket-bearing legal guardian aged 18 or above.\nPregnant women and patrons with medical conditions will not be permitted entry to this section/zone.\nBabies and toddlers are strictly not allowed.\nReserved Seating\nSeated sections are open to ages 6 years old and above. However, attendees below 16 years old must be accompanied by a ticket-bearing legal guardian aged 18 and above.\nBabies and toddlers are strictly not allowed.\nSome seats, including the first row and portions of the second and third rows, may have restricted views due to production equip…",
+    "EXCLUSIVE VIP EXPERIENCE (UPGRADE)": "EXCLUSIVE VIP EXPERIENCE: RM 888\nThis upgrade is applicable only to BRING ME BACK TO LIFE and MY IMMORTAL tickets:\n- Early Entry\n- Exclusive Merchandise\n- Exclusive Signed Poster\n- A Drink Voucher\n- Exclusive Behind-the-scenes Stadium Tour"
+   },
+   "sold_out": false,
+   "selling_fast": false,
+   "url": "https://www.golive-asia.com/event/172",
+   "first_seen": "2026-09-29 08:34"
+  },
+  {
+   "id": "t2u-52040",
+   "source": "Ticket2U",
+   "name": "Sid Sriram Live in Johor Bahru",
+   "artist": null,
+   "type": "Concert",
+   "venue": "Arena Larkin Indoor Stadium",
+   "city": "Johor",
+   "dates": [
+    "2026-11-28 20:00"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-11-28 21:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/52040/sid-sriram-live-in-johor-bahru"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "MIP",
+     "price": "RM 1,399.00",
+     "desc": "- Elevated Premium Armchair Seating\n- Goodie Bag\n- Official Event T-Shirt\n- Photo Session with Artist\n- Exclusive Pre-Show Lounge Access\n- Complimentary Free-Flow Beverages\n- Complimentary Arena Parking\n\n",
+     "sold_out": false
+    },
+    {
+     "name": "VIP",
+     "price": "RM 499.00",
+     "desc": "- Elevated Banquet Seating\n- Goodie Bag\n- Official Event T-Shirt",
+     "sold_out": false
+    },
+    {
+     "name": "GOLD",
+     "price": "RM 189.00",
+     "desc": "Free Seating",
+     "sold_out": false
+    },
+    {
+     "name": "SILVER",
+     "price": "RM 139.00",
+     "desc": "Free Seating",
+     "sold_out": false
+    },
+    {
+     "name": "ROCKZONE",
+     "price": "RM 139.00",
+     "desc": "Free Standing",
+     "sold_out": false
+    }
+   ],
+   "price_from": "RM 99.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/52040/sid-sriram-live-in-johor-bahru",
+   "image": "https://images.t2u.io/upload/event/listing/0-52040-AWSS37bdf61ca-1e57-4ff3-94fe-3502014b42e6-Knl3_X.jpg",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "golive-177",
+   "source": "GoLive",
+   "name": "FKJ – Tyber Tour in Kuala Lumpur",
+   "artist": "FKJ",
+   "type": "Concert",
+   "venue": "ZEPP KL",
+   "city": "Kuala Lumpur",
+   "dates": [
+    "2026-12-01 20:30"
+   ],
+   "sales": [
+    {
+     "name": "Artist Presale",
+     "start": "2026-07-06 11:00",
+     "end": "2026-07-06 23:59",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=568"
+    },
+    {
+     "name": "Mastercard Presale",
+     "start": "2026-07-07 11:00",
+     "end": "2026-07-08 11:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=568"
+    },
+    {
+     "name": "Live Nation Presale",
+     "start": "2026-07-08 12:00",
+     "end": "2026-07-08 23:59",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.livenation.my/event/fkj-tyber-tour-kuala-lumpur-tickets-edp1685096"
+    },
+    {
+     "name": "General Sale",
+     "start": "2026-07-09 11:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=568"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "BOX",
+     "price": "RM 4,000"
+    },
+    {
+     "name": "CAT 1 (SEATED)",
+     "price": "RM 428"
+    },
+    {
+     "name": "STANDING ZONE",
+     "price": "RM 328"
+    }
+   ],
+   "price_text": null,
+   "seat_maps": [],
+   "limit": 8,
+   "notes": {
+    "Ticketing Information": "You may purchase up to 8 tickets per transaction.\nTicket prices shown exclude a Ticket Fee (RM12.96) and Booking Charges (RM12.96) per transaction. All fees are subject to SST.\nA 3% processing fee of the total amount will be charged if you choose to check out using SPaylater\nYou will need to sign up for a GoLive account before purchasing tickets. Please ensure that you register using a valid and active email address. For security reasons, the email linked to your tickets cannot be changed once the purchase is completed.\nPayment Method: VISA & MASTERCARD CREDIT/DEBIT Card, and GoLive Now Paylater payments are accepted.\nOnly one principal name on tickets is needed per transaction.\nCustomers ar…",
+    "Important Information": "Reselling your tickets or purchasing from an unauthorised ticket seller or scalper is strictly prohibited. Tickets may not be bought and resold for advertising and/or promotional purposes. The Event Organizer/Promoter reserves the right to cancel such tickets without compensation and/or refuse entry to the event.\nVideo Recording and photo shoots will be taking place on site. Please acknowledge that by entering the site you hereby agree to the possible exposure to the recordings and the photo shoots and the promoter will not be responsible for any violation of tour publicity rights.\nPlease note that each presale provides exclusive or priority access to ticket purchases, but seat assignments a…",
+    "Admission Policy": "General Admission / Standing Zone\nThis section is open to ages 14 years old and above only.\nPregnant women and patrons with medical conditions will not be permitted entry for this event.\nBabies and toddlers are strictly not allowed.\nReserved Seating\nSeated sections are open to ages 6 years old and above, however, they must be accompanied by a ticket-bearing legal guardian aged 18 and above\nBabies and toddlers are strictly not allowed\nBOX\nSuite Box tickets can admit up to 8 attendees.\nThese sections are open to ages 6 years old and above; however, they must be accompanied by a ticket-bearing legal guardian aged 18 and above\nBabies and toddlers are strictly not allowed"
+   },
+   "sold_out": false,
+   "selling_fast": false,
+   "url": "https://www.golive-asia.com/event/177",
+   "first_seen": "2026-09-29 08:34"
+  },
+  {
+   "id": "t2u-52058",
+   "source": "Ticket2U",
+   "name": "KANGEN BAND 21ST ANNIVERSARY CONCERT",
+   "artist": null,
+   "type": "Concert",
+   "venue": "Sabah International Convention Centre",
+   "city": "Sabah",
+   "dates": [
+    "2026-12-04 20:00"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-11-24 00:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/52058/kangen-band-21st-anniversary-concert"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "CINTA SAMPAI MATI",
+     "price": "RM 577.00",
+     "desc": "Seated",
+     "sold_out": false
+    },
+    {
+     "name": "YOLANDA",
+     "price": "RM 377.00",
+     "desc": "Seated",
+     "sold_out": false
+    },
+    {
+     "name": "PUJAAN HATI",
+     "price": "RM 277.00",
+     "desc": "Free Standing",
+     "sold_out": false
+    },
+    {
+     "name": "KEMBALI PULANG (L)",
+     "price": "RM 177.00",
+     "desc": "",
+     "sold_out": false
+    },
+    {
+     "name": "KEMBALI PULANG (R)",
+     "price": "RM 177.00",
+     "desc": "",
+     "sold_out": false
+    },
+    {
+     "name": "TERBANG BERSAMAKU",
+     "price": "RM 97.00",
+     "desc": "",
+     "sold_out": false
+    }
+   ],
+   "price_from": "RM 97.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/52058/kangen-band-21st-anniversary-concert",
+   "image": "https://images.t2u.io/upload/event/listing/0-52058-AWSS368aa80b1-1e3d-4c3c-bee8-c696386b6cf0-wkek_X.jpeg",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "t2u-51768",
+   "source": "Ticket2U",
+   "name": "DIORAMA by RIZKY FEBIAN LIVE IN SABAH",
+   "artist": null,
+   "type": "Concert",
+   "venue": "Sabah International Convention Centre",
+   "city": "Sabah",
+   "dates": [
+    "2026-12-05 20:30"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-12-05 20:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/51768/diorama-by-rizky-febian-live-in-sabah"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "CHUNK & DUNK ZONE",
+     "price": "RM 788.00",
+     "desc": "",
+     "sold_out": false
+    },
+    {
+     "name": "CAT 1",
+     "price": "RM 588.00",
+     "desc": "",
+     "sold_out": false
+    },
+    {
+     "name": "CAT 2",
+     "price": "RM 288.00",
+     "desc": "",
+     "sold_out": false
+    },
+    {
+     "name": "CAT 3",
+     "price": "RM 188.00",
+     "desc": "",
+     "sold_out": false
+    }
+   ],
+   "price_from": "RM 188.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/51768/diorama-by-rizky-febian-live-in-sabah",
+   "image": "https://images.t2u.io/upload/event/listing/0-51768-AWSS34d01f24f-0097-46ee-8107-a98bc27aa1d1-hTv6_X.jpg",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "golive-178",
+   "source": "GoLive",
+   "name": "Khalid: It's Always Summer Somewhere Tour in Kuala Lumpur",
+   "artist": "Khalid",
+   "type": "Concert",
+   "venue": "Idea Live Arena",
+   "city": "Petaling Jaya",
+   "dates": [
+    "2026-12-09 20:00"
+   ],
+   "sales": [
+    {
+     "name": "Artist Presale",
+     "start": "2026-07-13 11:00",
+     "end": "2026-07-13 23:59",
+     "queue": "2026-07-13 10:30",
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=623"
+    },
+    {
+     "name": "Mastercard Presale",
+     "start": "2026-07-14 11:00",
+     "end": "2026-07-15 11:00",
+     "queue": "2026-07-14 10:30",
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=623"
+    },
+    {
+     "name": "Live Nation Presale",
+     "start": "2026-07-15 12:00",
+     "end": "2026-07-15 23:59",
+     "queue": "2026-07-15 11:30",
+     "available": true,
+     "code_required": false,
+     "url": "https://www.livenation.my/event/khalid-it-s-always-summer-somewhere-tour-kuala-lumpur-tickets-edp1685525"
+    },
+    {
+     "name": "General Sale",
+     "start": "2026-07-16 11:00",
+     "end": null,
+     "queue": "2026-07-16 10:30",
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=623"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "KHALID MEET & GREET EXPERIENCE",
+     "price": "RM 1,450"
+    },
+    {
+     "name": "KHALID VIP MERCH PACKAGE",
+     "price": "RM 798"
+    },
+    {
+     "name": "STANDING",
+     "price": "RM 398"
+    },
+    {
+     "name": "SEATED",
+     "price": "RM 358 - 498"
+    }
+   ],
+   "price_text": null,
+   "seat_maps": [],
+   "limit": 6,
+   "notes": {
+    "Ticketing Information": "You may purchase up to 6 tickets per transaction.\nTicket prices shown exclude a Ticket Fee (RM12.96) and Booking Charges (RM12.96) per transaction. All fees are subject to SST.\nA 3% processing fee of the total amount will be charged if you choose to check out using SPaylater\nYou will need to sign up for a GoLive account before purchasing tickets. Please ensure that you register using a valid and active email address. For security reasons, the email linked to your tickets cannot be changed once the purchase is completed.\nPayment Method: VISA & MASTERCARD CREDIT/DEBIT Card, and SPaylater payments are accepted.\nOnly one principal name on tickets is needed per transaction.\nCustomers are advised…",
+    "Important Information": "Reselling your tickets or purchasing from an unauthorised ticket seller or scalper is strictly prohibited. Tickets may not be bought and resold for advertising and/or promotional purposes. The Event Organizer/Promoter reserves the right to cancel such tickets without compensation and/or refuse entry to the event.\nVideo Recording and photo shoots will be taking place on site. Please acknowledge that by entering the site you hereby agree to the possible exposure to the recordings and the photo shoots and the promoter will not be responsible for any violation of tour publicity rights.\nPlease note that each presale provides exclusive or priority access to ticket purchases, but seat assignments a…",
+    "Admission Policy": "General Admission / Standing Zone\nStanding Zone is restricted to individuals aged 14+. All minors between the age 14 - 16 must be accompanied by a ticket-bearing legal guardian aged 18 or above.\nPregnant women and patrons with medical conditions will not be permitted entry for this event.\nBabies and toddlers are strictly not allowed.\nReserved Seating\nSeated sections are open to ages 6 years old and above, however, they must be accompanied by a ticket-bearing legal guardian aged 18 and above\nBabies and toddlers are strictly not allowed",
+    "VIP Information": "Khalid Meet & Greet Experience (RM 1,450)\nOne standing ticket\nMeet & Greet with Khalid\nIndividual photo opportunity with Khalid\nOne VIP exclusive merch pack, curated by Khalid\nOne commemorative VIP laminate, signed by Khalid\nEarly entry into performance hall (Tier 1)\nPriority merchandise shopping\nKhalid VIP Merch Package (RM 798)\nOne standing ticket\nOne VIP exclusive merch pack, curated by Khalid\nOne commemorative VIP laminate\nEarly entry into performance hall (Tier 2)\nPriority merchandise shopping"
+   },
+   "sold_out": false,
+   "selling_fast": false,
+   "url": "https://www.golive-asia.com/event/178",
+   "first_seen": "2026-09-29 08:34"
+  },
+  {
+   "id": "t2u-50805",
+   "source": "Ticket2U",
+   "name": "Limp Bizkit Live in Malaysia - One-Stop Asia Show",
+   "artist": null,
+   "type": "Concert",
+   "venue": "National Hockey Stadium",
+   "city": "WP Kuala Lumpur",
+   "dates": [
+    "2026-12-09 20:00"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-12-09 21:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/50805/limp-bizkit-live-in-malaysia-one-stop-asia-show"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "EARLY ENTRY ROCKZONE",
+     "price": "RM 828.01",
+     "sold_out": false
+    },
+    {
+     "name": "Block 101, Block 102, Block 116",
+     "price": "RM 737.54",
+     "sold_out": true
+    },
+    {
+     "name": "Block 103, Block 115, Block 201 等 7 区",
+     "price": "RM 634.74",
+     "sold_out": false
+    },
+    {
+     "name": "ROCKZONE, Block 104, Block 105 等 7 区",
+     "price": "RM 531.94",
+     "sold_out": false
+    },
+    {
+     "name": "Block 107, Block 108, Block 109 等 17 区",
+     "price": "RM 429.14",
+     "sold_out": false
+    }
+   ],
+   "price_from": "RM 398.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/50805/limp-bizkit-live-in-malaysia-one-stop-asia-show",
+   "image": "https://images.t2u.io/upload/event/listing/0-50805-AWSS3119cdc08-9732-4163-8d21-0e15f99389c5-kp3y_X.png",
+   "first_seen": "2026-09-29 08:34",
+   "seat_maps": []
+  },
+  {
+   "id": "golive-181",
+   "source": "GoLive",
+   "name": "Malcolm Todd: Do That Again Tour in Kuala Lumpur",
+   "artist": "Malcolm Todd",
+   "type": "Concert",
+   "venue": "ZEPP KL",
+   "city": "Kuala Lumpur",
+   "dates": [
+    "2026-12-09 20:00",
+    "2026-12-10 20:00"
+   ],
+   "sales": [
+    {
+     "name": "Artist Presale",
+     "start": "2026-09-21 11:00",
+     "end": "2026-09-21 23:59",
+     "queue": "2026-09-21 10:30",
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=712"
+    },
+    {
+     "name": "Live Nation Presale",
+     "start": "2026-09-22 11:00",
+     "end": "2026-09-22 23:59",
+     "queue": "2026-09-22 10:30",
+     "available": false,
+     "code_required": false,
+     "url": "https://www.livenation.my/event/malcolm-todd-do-that-again-tour-kuala-lumpur-tickets-edp1696772"
+    },
+    {
+     "name": "General Sales",
+     "start": "2026-09-23 11:00",
+     "end": null,
+     "queue": "2026-09-23 10:30",
+     "available": false,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=712"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "MALCOLM TODD ULTIMATE EXPERIENCE (STANDING ZONE)",
+     "price": "RM 1148"
+    },
+    {
+     "name": "MALCOLM TODD ACOUSTIC EXPERIENCE (STANDING ZONE)",
+     "price": "RM 868"
+    },
+    {
+     "name": "MALCOLM TODD EARLY ENTRY VIP PACKAGE (STANDING ZONE)",
+     "price": "RM 618"
+    },
+    {
+     "name": "BOX (ADMITS 4 PAX)",
+     "price": "RM 1432"
+    },
+    {
+     "name": "STANDING ZONE",
+     "price": "RM 268"
+    },
+    {
+     "name": "SEATED",
+     "price": "RM 328 - 428"
+    }
+   ],
+   "price_text": null,
+   "seat_maps": [],
+   "limit": 4,
+   "notes": {
+    "Ticketing Information": "You may purchase up to 4 tickets per transaction.\nTicket prices shown exclude a Ticket Fee (RM12.96) and Booking Charges (RM12.96) per transaction. All fees are subject to SST.\nA 3% processing fee of the total amount will be charged if you choose to check out using SPaylater\nYou will need to sign up for a GoLive account before purchasing tickets. Please ensure that you register using a valid and active email address. For security reasons, the email linked to your tickets cannot be changed once the purchase is completed.\nPayment Method: VISA & MASTERCARD CREDIT/DEBIT Card, and GoLive Now Paylater payments are accepted.\nOnly one principal name on tickets is needed per transaction.\nCustomers ar…",
+    "Important Information": "Reselling your tickets or purchasing from an unauthorised ticket seller or scalper is strictly prohibited. Tickets may not be bought and resold for advertising and/or promotional purposes. The Event Organizer/Promoter reserves the right to cancel such tickets without compensation and/or refuse entry to the event.\nVideo Recording and photo shoots will be taking place on site. Please acknowledge that by entering the site you hereby agree to the possible exposure to the recordings and the photo shoots and the promoter will not be responsible for any violation of tour publicity rights.\nPlease note that each presale provides exclusive or priority access to ticket purchases, but seat assignments a…",
+    "Admission Policy": "General Admission / Standing Zone\nStanding Zone is restricted to individuals aged 14+. All minors between the age 14 - 16 must be accompanied by a ticket-bearing legal guardian aged 18 or above.\nPregnant women and patrons with medical conditions will not be permitted entry for this event.\nBabies and toddlers are strictly not allowed.\nReserved Seating\nSeated sections are open to ages 6 years old and above, however, they must be accompanied by a ticket-bearing legal guardian aged 18 and above\nBabies and toddlers are strictly not allowed\nBOX\nSuite Box tickets can admit up to 4 attendees.\nThese sections are open to ages 6 years old and above; however, they must be accompanied by a ticket-bearing…",
+    "VIP Information": "MALCOLM TODD ULTIMATE EXPERIENCE [RM 1,148]\nOne standing ticket\nMeet & Greet and individual photo opportunity with Malcolm Todd\nAccess to the pre-show Q&A and acoustic performance of one song by Malcolm Todd *\nOne autographed VIP poster\nExclusive VIP merch pack\nSpecially designed tour keychain\nOfficial VIP laminate, lanyard and ultimate experience wristband\nEarly entry into the performance hall (Tier 1)\nPriority merchandise shopping (if applicable)\nMALCOLM TODD ACOUSTIC EXPERIENCE [RM 868]\nOne standing ticket\nAccess to the pre-show Q&A and acoustic performance of one song by Malcolm Todd *\nExclusive VIP merch pack\nSpecially designed tour keychain\nOfficial VIP laminate, lanyard and acoustic e…"
+   },
+   "sold_out": false,
+   "selling_fast": false,
+   "url": "https://www.golive-asia.com/event/181",
+   "first_seen": "2026-09-29 08:34"
+  },
+  {
+   "id": "golive-175",
+   "source": "GoLive",
+   "name": "BTS WORLD TOUR 'ARIRANG' IN KUALA LUMPUR",
+   "artist": "BTS",
+   "type": "Concert",
+   "venue": "TM Stadium Nasional",
+   "city": "Bukit Jalil",
+   "dates": [
+    "2026-12-12 19:30",
+    "2026-12-13 19:30"
+   ],
+   "sales": [
+    {
+     "name": "ARMY MEMBERSHIP PRESALE",
+     "start": "2026-06-03 11:00",
+     "end": "2026-06-03 22:00",
+     "queue": "2026-06-03 10:00",
+     "available": false,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=528"
+    },
+    {
+     "name": "LIVE NATION PRESALE",
+     "start": "2026-06-04 11:00",
+     "end": "2026-06-04 22:00",
+     "queue": "2026-06-04 10:00",
+     "available": false,
+     "code_required": false,
+     "url": "https://www.livenation.my/event/bts-world-tour-arirang-in-kuala-lumpur-kuala-lumpur-tickets-edp1675786"
+    },
+    {
+     "name": "GENERAL ONSALE",
+     "start": "2026-06-05 11:00",
+     "end": null,
+     "queue": "2026-06-05 10:00",
+     "available": false,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=528"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "SOUNDCHECK VIP PACKAGE",
+     "price": "RM 1,288"
+    }
+   ],
+   "price_text": null,
+   "seat_maps": [
+    "maps/golive-175/2a635df0-53ac-4613-961e-42810f5ce79c.webp"
+   ],
+   "limit": 4,
+   "notes": {
+    "Ticketing Information": "Maximum 4 tickets per transaction.\nYou can purchase up to only FOUR (4) tickets per Weverse ID, per show date for ARMY MEMBERSHIP PRESALE.\nThe overall ticket limit is 8 tickets per show date, covering LIVE NATION PRESALE and the GENERAL ONSALE. (Please note: If you have already reached the 8‑ticket limit during LIVE NATION PRESALE, you will not be able to purchase additional tickets in the GENERAL ONSALE.)\nTicket prices shown exclude a Ticket Fee (RM16.20) per ticket, and Booking Charges (RM21.60) per transaction. All fees include SST.\nA 3% processing fee of the total amount will be charged if you choose to check out using SPayLater\nYou will need to sign up for a GoLive account before purcha…",
+    "Important Information": "This is an all-seated, open-air stadium event where distance and views vary.\nSeats may have obstructed views due to handrails, equipment, or cameras, and gaps may exist between consecutive seats. Floor seating has no elevation, with portable chairs installed.\nThe seating arrangement and stage setup may change without prior notice due to adjustments in performance design.\nThis concert will be held on a 360-degree stage, with no designated front stage location, allowing viewing from anywhere in the entire venue. However, please understand that, due to the characteristics of the stage, even if your seat is not classified as a restricted view seat, your view may be partially obstructed by stage…",
+    "Admission Policy": "Reserved Seating\nSeated sections are open to ages 6 years old and above. However, attendees below 16 years old must be accompanied by a ticket-bearing legal guardian aged 18 and above.\nBabies and toddlers are strictly not allowed.\nWheelchair Access\nWheelchair-accessible tickets for BTS WORLD TOUR 'ARIRANG' IN KUALA LUMPUR are only available at selected sections within level 1 .\nKindly email ticketing@mindful-tech.com with the email subject “ BTS WHEELCHAIR ACCESS ”\nWheelchair-access customers will need to provide GoLive Asia with their Authorised Medical Certificate/Card as proof of disability.\nSlots are limited and available on a first-come, first-served basis.",
+    "VIP Information": "SOUNDCHECK VIP PACKAGE (RM1,288)\nInclusions\nOne (1) Premium Seated Ticket\nAccess to the Pre-Show Soundcheck Party\nExclusive VIP Laminate & Lanyard\nExclusive VIP Gift Item\nEarly access to the merchandise booth"
+   },
+   "sold_out": false,
+   "selling_fast": false,
+   "url": "https://www.golive-asia.com/event/175",
+   "first_seen": "2026-09-29 08:34"
+  },
+  {
+   "id": "golive-179",
+   "source": "GoLive",
+   "name": "WESTLIFE 25: THE ANNIVERSARY WORLD TOUR IN KUALA LUMPUR",
+   "artist": "WESTLIFE",
+   "type": "Concert",
+   "venue": "Unifi Arena",
+   "city": "Bukit Jalil",
+   "dates": [
+    "2027-01-13 20:00",
+    "2027-01-14 20:00"
+   ],
+   "sales": [
+    {
+     "name": "Mastercard Presale",
+     "start": "2026-07-20 11:00",
+     "end": "2026-07-20 23:59",
+     "queue": "2026-07-20 10:30",
+     "available": false,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=487"
+    },
+    {
+     "name": "Live Nation Presale",
+     "start": "2026-07-21 11:00",
+     "end": "2026-07-21 23:59",
+     "queue": "2026-07-21 10:30",
+     "available": true,
+     "code_required": false,
+     "url": "https://www.livenation.my/event/westlife-25-the-anniversary-world-tour-kuala-lumpur-tickets-edp1686551"
+    },
+    {
+     "name": "Mastercard Preferred (14th Jan Show)",
+     "start": "2026-07-22 11:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=665"
+    },
+    {
+     "name": "General Sales (14TH JAN SHOW)",
+     "start": "2026-07-22 11:00",
+     "end": null,
+     "queue": "2026-07-22 10:30",
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=487"
+    },
+    {
+     "name": "GENERAL SALES (13TH JAN SHOW)",
+     "start": "2026-09-28 11:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=774"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "GOLD VIP PACKAGE",
+     "price": "RM 1588"
+    },
+    {
+     "name": "SILVER VIP PACKAGE",
+     "price": "RM 1398"
+    },
+    {
+     "name": "FLOOR",
+     "price": "RM 798 - RM 1,088"
+    },
+    {
+     "name": "TIER 1",
+     "price": "RM 798 - RM 898"
+    },
+    {
+     "name": "TIER 2",
+     "price": "RM 398 - RM 698"
+    }
+   ],
+   "price_text": null,
+   "seat_maps": [],
+   "limit": 6,
+   "notes": {
+    "VIP Information": "GOLD VIP PACKAGE (RM 1,588)\nOne (1) First Tier Seated Ticket\nExclusive Westlife VIP gift\nVIP laminate and lanyard\nPriority merchandise shopping (if applicable)\nSILVER VIP PACKAGE (RM 1,398)\nOne (1) Second Tier Seated Ticket\nExclusive Westlife VIP gift\nVIP laminate and lanyard\nPriority merchandise shopping (if applicable)",
+    "Ticketing Information": "Maximum 6 tickets per transaction.\nTicket prices shown exclude a Ticket Fee (RM12.96) per ticket and Booking Charges (RM16.20) per transaction. All fees include SST.\nA 3% processing fee of the total amount will be charged if you choose to check out using SPayLater\nYou will need to sign up for a GoLive account before purchasing tickets. Please ensure that you register using a valid and active email address. For security reasons, the email linked to your tickets cannot be changed once the purchase is completed.\nPayment Method: VISA & MASTERCARD CREDIT/DEBIT Card, and SPayLater payments are accepted.\nOnly one principal name on tickets is needed per transaction.\nCustomers are advised to double-c…",
+    "Important Information": "Seats may have obstructed views due to handrails, equipment, or cameras, and gaps may exist between consecutive seats. Floor seating has no elevation, with portable chairs installed. Ticket cancellations, exchanges, or refunds will not be available for obstructed views.\nThe seating arrangement and stage setup may change without prior notice due to adjustments in performance design.\nReselling your tickets or purchasing from an unauthorised ticket seller or scalper is strictly prohibited. Tickets may not be bought and resold for advertising and/or promotional purposes. The Event Organiser/Promoter reserves the right to cancel such tickets without compensation and/or refuse entry to the event.…",
+    "Admission Policy": "Reserved Seating\nSeated sections are open to ages 6 years old and above. However, attendees below 16 years old must be accompanied by a ticket-bearing legal guardian aged 18 and above.\nBabies and toddlers are strictly not allowed.\nWheelchair Access\nWheelchair-accessible tickets for WESTLIFE 25: THE ANNIVERSARY WORLD TOUR IN KUALA LUMPUR are only available at selected sections within second tier.\nKindly email ticketing@mindful-tech.com with the email subject “ WESTLIFE 25 WHEELCHAIR ACCESS ” before 20 July 2026.\nWheelchair-access customers will need to provide GoLive Asia with their Authorised Medical Certificate/Card as proof of disability.\nSlots are limited and available on a first-come, fi…"
+   },
+   "sold_out": false,
+   "selling_fast": false,
+   "url": "https://www.golive-asia.com/event/179",
+   "first_seen": "2026-09-29 08:34"
+  },
+  {
+   "id": "golive-159",
+   "source": "GoLive",
+   "name": "Blue 25th Anniversary Tour in Kuala Lumpur",
+   "artist": "Blue",
+   "type": "Concert",
+   "venue": "ZEPP KL",
+   "city": "Kuala Lumpur",
+   "dates": [
+    "2027-01-24 20:30"
+   ],
+   "sales": [
+    {
+     "name": "General Sales",
+     "start": "2025-11-06 11:00",
+     "end": null,
+     "queue": null,
+     "available": false,
+     "code_required": false,
+     "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=763"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "ONE LOVE VIP PACKAGE",
+     "price": "RM 888"
+    }
+   ],
+   "price_text": null,
+   "seat_maps": [],
+   "limit": null,
+   "notes": {
+    "Ticketing Information": "You will need to sign up to a GoLive Account before purchasing tickets.\nPlease ensure that you create your account using a valid email to receive your Booking Confirmation.\nE-tickets will only be issued to your GoLive Account only. Your tickets will NOT be emailed to you. Please login to your GoLive Account to view your tickets\nTickets can only be purchased through the web browser at www.golive-asia.com . GoLive Ticketing App will NOT be accessible. (For Apple ID logins, please access using your Apple devices browser to ensure smooth login.)\nCustomers are advised to double-check your booking details (ticket quantity, type, add-ons, and total cost) on the summary page before proceeding to pay…",
+    "Important Information": "Reselling your tickets or purchasing from an unauthorised ticket seller or scalper is strictly prohibited. Tickets may not be bought and resold for advertising and/or promotional purposes. The Event Organizer/Promoter reserves the right to cancel such tickets without compensation and/or refuse entry to the event.\nPayment Method: VISA & MASTERCARD CREDIT / DEBIT Card and GoLive Now Paylater payments are accepted.\nVideo Recording and photo shoots will be taking place on site. Please acknowledge that by entering the site you hereby agree to the possible exposure to the recordings and the photo shoots and the promoter will not be responsible for any violation of tour publicity rights.\nPlease not…",
+    "Admission Policy": "General Admission/Standing Zone\nStanding Zone is restricted to individuals aged 14+ and/or with a minimum height of 150 cm. All minors aged between14-16 must be accompanied by a ticket-bearing legal guardian aged 18 or above.\nKindly refer to the official event guide available nearer to the event date for updates. The promoter reserves the right to amend these terms & conditions at any time without prior notice.\nPregnant women and patrons with medical conditions will not be permitted entry to this section/zone.\nBabies and toddlers are strictly not allowed.\nReserved Seating\nSeated sections are open to ages 6 years old and above. However, attendee below 16 years old must be accompanied by a tic…",
+    "VIP Information": "ONE LOVE VIP PACKAGE: RM 888\nOne standing ticket\nPre-show group photo with BLUE (Group of 5)\nPre-show soundcheck with BLUE\nVIP laminate and lanyard\nEarly Entry into the venue\nExclusive poster autographed by BLUE"
+   },
+   "sold_out": false,
+   "selling_fast": false,
+   "url": "https://www.golive-asia.com/event/159",
+   "first_seen": "2026-09-29 08:34"
+  }
+ ],
+ "leads": [
+  {
+   "id": "news-45afdaedd5868897",
+   "kind": "新闻",
+   "from": "Newswav",
+   "title": "Polis Sabah nasihat konsert penyanyi AS tidak diadakan buat masa ini - Newswav",
+   "text": null,
+   "time": "2026-09-28 17:41",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPMURBTU51LWlCaUxxUFJRUmlfZFV1VzIweWdwNzByUlZpb192LW54QzZaVS1nQTRkQzhONTZtUFQ3TjJLQ3hMWFptUk5VNnkzSEZGdW5iRFlSbERMM0FPM0lkZlhuWFBNNVJkWGtYUF9GNG9LTjFJN2tWTjBqX0dCWk94eG1oeVQya3BGVWJZVUNnbTl2VTl4NFFqY0xobkFwaVUzY0N5ZlhUbkkydEE?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "news-0bc4402037ac7817",
+   "kind": "新闻",
+   "from": "Free Malaysia Today",
+   "title": "Polis Sabah nasihat tangguh konsert Israel Houghton - Free Malaysia Today",
+   "text": null,
+   "time": "2026-09-28 17:06",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPakMteDVYNm90bTBXQzA0TlN1emU5TTJKV0Y3Zk1URHhTcmdCU0NtYkthZVYzQ25SOE5JYXYxN0tWb1kwaU9wM2lVZUJ1d241elhibkc4d2pwLThqeEo2RXhXUlBqMUNnbHV1X25Danp6b3dlMWMtWTZyaG9MWmFaOGdNV3dMeVhHcF9ZaDE1NHNfMWROd2l2THV0bFNJX1RXbWhnNTdxUHJmTEJSQkpNZkJhQy1JWWdiNFZ4TGRB?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-ad06e147fdd8408f",
+   "kind": "IG",
+   "from": "@ticket2u.official",
+   "from_name": "Ticket2U",
+   "title": "🚨 SCAM ALERT! PLEASE READ 🚨",
+   "text": "🚨 SCAM ALERT! PLEASE READ 🚨\n\n⚠️ TICKET2U DOES NOT SELL TICKETS VIA WHATSAPP.\n\nIf someone contacts you on WhatsApp and offers to sell you a Ticket2U ticket:\n\n❌ DO NOT BUY\n❌ DO NOT MAKE PAYMENT\n❌ DO NOT SHARE YOUR DETAILS\n\n🎟️ Buy your tickets ONLY through the official #Ticket2U website:\nwww.ticket2u.com.my\n\n⚠️ Always verify before you pay. Stay alert and stay safe!",
+   "time": "2026-09-28 15:56",
+   "url": "https://www.instagram.com/p/Dd0srgSppZL/",
+   "hints": [
+    "⚠️ TICKET2U DOES NOT SELL TICKETS VIA WHATSAPP.",
+    "If someone contacts you on WhatsApp and offers to sell you a Ticket2U ticket:",
+    "🎟️ Buy your tickets ONLY through the official #Ticket2U website:",
+    "www.ticket2u.com.my"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "news-334dd06258fdf348",
+   "kind": "新闻",
+   "from": "Utusan Borneo",
+   "title": "Polis Sabah terima dua laporan berkaitan Konsert Israel Houghton - Utusan Borneo",
+   "text": null,
+   "time": "2026-09-28 14:58",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQWGFnN3YyVEx1dGI2NENUanZ1OUlZUXpmZVRfeHhGaGRmWEt3Z0hNQmxlenRiS3lkQlJha2Q3U2M3M2xRUFRJUEVsMnI3c2hoWU1xRWt5RDg0WFlzY2RWR0pkbnZvZm51VllpQ1AtTzdyTHREeU5haGhVRjJHMk41RlFxWWdrMnVwV1A1ZXNJMWcySTFFSTJoR3FUaTYzUFFJZVF2UFZXS0N6akU?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-496a5b8368aebac3",
+   "kind": "IG",
+   "from": "@imcliveglobal",
+   "from_name": "IMC Live Global",
+   "title": "中秋假期，angela_zhangshaohan 带着「玩家」巡演再度来到歌迷之城太原，四年之内三度打卡山西体育中心体育场，解锁全新纪录，成为目前在此开演场次最多的女歌手。除此之外，「玩家」太原解锁全新舞台装置，“巨型彗星”降落，来自WIN…",
+   "text": "中秋假期，angela_zhangshaohan 带着「玩家」巡演再度来到歌迷之城太原，四年之内三度打卡山西体育中心体育场，解锁全新纪录，成为目前在此开演场次最多的女歌手。除此之外，「玩家」太原解锁全新舞台装置，“巨型彗星”降落，来自WINDOWSEN特别定制的“星际甜心”常驻新造型登场。更有盛大的无人机烟花在体育场上空绽放，“活在此刻，生命万岁”，在盛大的烟花里我们共享此刻的美好，圆满中秋。下一站，10月3日洛阳，「玩家」继续约定！#张韶涵玩家巡回演唱会",
+   "time": "2026-09-28 14:41",
+   "url": "https://www.instagram.com/p/Dd0kJn4CYRb/",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-b1ddc111b0d99ba9",
+   "kind": "IG",
+   "from": "#吉隆坡演唱会",
+   "from_name": null,
+   "title": "Alan Tam 谭咏麟《UNFORGETTABLE 刻骨铭心》世界巡回演唱会 — 马来西亚站 🇲🇾✨",
+   "text": "Alan Tam 谭咏麟《UNFORGETTABLE 刻骨铭心》世界巡回演唱会 — 马来西亚站 🇲🇾✨\n\n经典从来不会过时。\n两晚不同主题，一起重温属于谭咏麟的时代与回忆 💫\n\n📅 28 & 29 November 2026\n⏰ 8PM\n📍 Unifi Arena, Kuala Lumpur\n\nVVIP / VIP / P1 / P2 / P3 available 🎫\n座位详情 / 票务询问欢迎 DM 💌\n\n˚₊⋅─── /ᐠ - ˕ -マ ───⋅₊˚\n🎟 Concert Updates • Priority Booking • Ticket Enquiries\n\n📲 Follow • More links in bio\nIG: beebe.concerts\n\n🔔 Telegram & More\nhttps://beacons.ai/beebe.concerts\n\n#AlanTam #谭咏麟 #AlanTamMalaysia #MalaysiaConcert #吉隆坡演唱会",
+   "time": "2026-09-28 14:10",
+   "url": "https://www.instagram.com/p/Dd0ghRTJ3kd/",
+   "hints": [
+    "📅 28 & 29 November 2026",
+    "📍 Unifi Arena, Kuala Lumpur",
+    "VVIP / VIP / P1 / P2 / P3 available 🎫",
+    "🎟 Concert Updates • Priority Booking • Ticket Enquiries"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "news-eccf3d2fa3abec2e",
+   "kind": "新闻",
+   "from": "Sinar Harian",
+   "title": "Polis Sabah nasihat tangguh konsert Israel Houghton | Sinar Harian - Sinar Harian",
+   "text": null,
+   "time": "2026-09-28 13:57",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcTVVWGI1MHowMnFjRlhNajlJOEN6Skc5QzBpTDlBLUstZFFkSExmcEc3d0ptREFOSWVhNHc0c1BzQ3B5aUdVVE5hMmhRbDJvalpHekVlTXNnN3VKejZjVTEzN09ieVNZUnYwdGIzQlZ0dDlBUDVDYTBsTkF0ZHRmZFJ3ekN3RG9lbFlSWEdoQ0kza2tOZ2g2Vk5MN1RwT2h0SjQtRDRuRGtWLU9TazRhRkdMcjdXZWhX0gFcQVVfeXFMUEQ5TmFZSVdERkdVM1pHUnBqaGJpbnA5TkJiRVI0VFhZM3Q5cmluVE9URmxGVlNlR3Q3aW1XSU9fcmk2eHRyZXpZbWJHaThIdEtEWjNmVzNqbEZoVE0?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-dc28c0a3b4cff020",
+   "kind": "IG",
+   "from": "@livenation.my",
+   "from_name": "Live Nation Malaysia",
+   "title": "Not ready to say goodbye to Concert Week just yet?⁠",
+   "text": "Not ready to say goodbye to Concert Week just yet?⁠\n⁠\n🎊 Good news! We’re extending the 20% OFF deal until 30 September, 11:59PM! ⁠\n⁠\nONE LAST CHANCE! Grab your tickets before it ends!⁠\n⁠\n📅 Only from 23 September (Wed), 1pm – 30 September (Wed), 11:59pm⁠\n🎟️ Limited tickets available. While stocks last. T&Cs apply.⁠\n🔗 For more details, visit livenation.my/concertweek2026 (link in bio).⁠\n*Check FAQ tab for eligible categories. ⁠\n⁠\n#ConcertWeek2026 #LiveNationMY #KLHeadlineSeason",
+   "time": "2026-09-28 13:23",
+   "url": "https://www.instagram.com/reel/Dd0a5agFHAZ/",
+   "hints": [
+    "ONE LAST CHANCE! Grab your tickets before it ends!",
+    "📅 Only from 23 September (Wed), 1pm – 30 September (Wed), 11:59pm",
+    "🎟️ Limited tickets available. While stocks last. T&Cs apply."
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "news-8f579075eb828492",
+   "kind": "新闻",
+   "from": "Harian Metro",
+   "title": "Konsert Israel Houghton: Polis Sabah pantau, terima dua laporan - Harian Metro",
+   "text": null,
+   "time": "2026-09-28 12:43",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPU0VlLU93Ul8xOFpNd2FtSnhPUlRvcEpfNWdlRFR5VTdOTVFBSFFfbDRESUJvR1dCd2pfV2xTTEhUR1VRdHBvVVkxWE12cTM4bFN3aG04S2NSYkg2cGctMG5JdXVIMmdTT3lCZHB1NkxXdUpXSmNZSHNaOG5yUG8xM3FXM2RIeWVXUXktc2ZqNzlLSDlPTTdzUDBJVFNmdGVIdU5ZRFF5N3BNb3IwR0FhRGFn?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "news-f985c43c8c2ccbec",
+   "kind": "新闻",
+   "from": "Sabah Media",
+   "title": "Israel Houghton: Belum ada permohonan rasmi adakan konsert di Sabah - Sabah Media",
+   "text": null,
+   "time": "2026-09-28 12:10",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPeWR6NHluel95WTRqeXAyTWQwUVpVNVloZHlNNkR5S3pSR0ZKODBCUksyZXBjM2xlMVdITlF4QXhqZTRmck5Ncms3TkFwWFVGWHJwUFU2eWhFNEpaYWI3bGtxRF9PMlJraUpOdFozeEU4SjdjNHRyYWFyZ0ZJVlNma3lwR1NOZlpqN2d0QlRMckhrU3Y0Sk9qWFNZNW1USjNmcWhJ?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "news-fcdaeab133451b7d",
+   "kind": "新闻",
+   "from": "Buletin TV3",
+   "title": "Polis nasihat konsert penyanyi AS tidak diadakan di Kota Kinabalu - Buletin TV3",
+   "text": null,
+   "time": "2026-09-28 12:06",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNby1Ba2RoZmh5eWZhWE5kRFF6NU5fc3dwXzVKUWx3V0liemZEQ1lubmswUllJdFpiUWxzLVo3V0l2RHVJMWE3RW53QWVnLVNKM00wdWJ0VWdUZDdmLVRWcVhVbnVOV3JSSXVqQ2RlTjd0OE9nVDdWT1dLc0FuTVY3QVpaeVRqd2NHeE1raDJoZ1hGdEhYNndpQ3VqRXZ2ckluMlhR?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-e9e4a0a260caf28f",
+   "kind": "IG",
+   "from": "#klconcert",
+   "from_name": null,
+   "title": "SOLD OUT in just 2 hours — and now, there’s another chance. 🎤✨",
+   "text": "SOLD OUT in just 2 hours — and now, there’s another chance. 🎤✨\n\nFollowing the overwhelming response to the Kuala Lumpur show, diorlying has officially announced an additional date for her “KAMPUNG GIRL 普通人” World Tour, happening on 12 December 2026 at Unifi Arena Bukit Jalil. \n\nMarking the tour’s one-year anniversary, the KL shows will also feature an upgraded stage production, including a brand-new M-shaped extended stage, a pink-themed visual concept inspired by DIOR’s favourite colour, and an exclusive KL limited-edition lightstickfor every concertgoer. \n\nAnd that’s not all — DIOR is currently working on five new songs, sharing that she has recently found a whole new excitement and passion for songwriting. \n\n🎟 General sale: 29 September 2026, from 3PM\n\nckstar.my \n\n#DIOR大颖 #KampungGirl #KampungGirlWorldTour #KualaLumpur #KLConcert MalaysianArtist theCOVERAsia",
+   "time": "2026-09-28 11:56",
+   "url": "https://www.instagram.com/p/Dd0RNZPR-Tq/",
+   "hints": [
+    "🎟 General sale: 29 September 2026, from 3PM"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-0568ae8b0d50ff8e",
+   "kind": "IG",
+   "from": "@imcliveglobal",
+   "from_name": "IMC Live Global",
+   "title": "南海沙滩，阳光灿烂！🎮各位玩家请注意‼#张韶涵玩家巡回演唱会 湛江站定档成功！相约踏沙逐浪，一起游戏闯关，欢迎「玩家」提前预约！",
+   "text": "南海沙滩，阳光灿烂！🎮各位玩家请注意‼#张韶涵玩家巡回演唱会 湛江站定档成功！相约踏沙逐浪，一起游戏闯关，欢迎「玩家」提前预约！\n\t\n👉【湛江站】\n📅 2026/11/21\n🏟️湛江奥林匹克体育中心体育场\n🎫大麦/猫眼/携程\n\t\n港城游戏副本开启中，🥳 𝙇𝙚𝙩’𝙨 𝙥𝙡𝙖𝙮!",
+   "time": "2026-09-28 10:54",
+   "url": "https://www.instagram.com/p/Dd0KIEoCQwi/",
+   "hints": [
+    "📅 2026/11/21",
+    "🎫大麦/猫眼/携程"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-f9c836d74fd4a03e",
+   "kind": "IG",
+   "from": "@livenation.my",
+   "from_name": "Live Nation Malaysia",
+   "title": "Malaysia, 30 MINUTES TO GO! ⏰⁠",
+   "text": "Malaysia, 30 MINUTES TO GO! ⏰⁠\n⁠\n25 years of songs, and another night of memories waiting to be made. ✨⁠\n⁠\nThe waiting room is open! Join now, get ready and secure your tickets when General On-Sale for the Added Show goes LIVE at 11AM TODAY!⁠\n⁠\n𝐖𝐄𝐒𝐓𝐋𝐈𝐅𝐄 𝟐𝟓: 𝐓𝐇𝐄 𝐀𝐍𝐍𝐈𝐕𝐄𝐑𝐒𝐀𝐑𝐘 𝐖𝐎𝐑𝐋𝐃 𝐓𝐎𝐔𝐑 𝐈𝐍 𝐊𝐔𝐀𝐋𝐀 𝐋𝐔𝐌𝐏𝐔𝐑⁠\n📅 13 & 14 January 2027 (WED & THURS)⁠\n📍Unifi Arena⁠\n🎫  www.golive-asia.com ⁠\n⁠\nSave the date! ⁠\n⁠\n🎫 𝐆𝐞𝐧𝐞𝐫𝐚𝐥 𝐎𝐧-𝐒𝐚𝐥𝐞: Mon, 28 Sept, 11am onwards.⁠\n⁠\n#Westlife25TheAnniversaryWorldTour #WestlifeinKL #KualaLumpur #LiveNationMY",
+   "time": "2026-09-28 10:33",
+   "url": "https://www.instagram.com/reel/Dd0HX7XEWsd/",
+   "hints": [
+    "The waiting room is open! Join now, get ready and secure your tickets when General On-Sale for the Added Show goes LIVE at 11AM TODAY!",
+    "📅 13 & 14 January 2027 (WED & THURS)",
+    "📍Unifi Arena",
+    "🎫  www.golive-asia.com",
+    "🎫 𝐆𝐞𝐧𝐞𝐫𝐚𝐥 𝐎𝐧-𝐒𝐚𝐥𝐞: Mon, 28 Sept, 11am onwards."
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": [
+    "golive-179"
+   ]
+  },
+  {
+   "id": "ig-deb10a832500b6c7",
+   "kind": "IG",
+   "from": "#concertmalaysia",
+   "from_name": null,
+   "title": "🏆🔥 ALPHA RAIH DUA TROFI AIM25, KONSERT SULUNG JADI MALAM PALING BERMAKNA!",
+   "text": "🏆🔥 ALPHA RAIH DUA TROFI AIM25, KONSERT SULUNG JADI MALAM PALING BERMAKNA!\n\nMalam penuh kenangan buat ALPHA apabila tujuh anggota kumpulan itu meraikan kejayaan meraih dua trofi di AIM25, sebelum melangkah ke satu lagi detik istimewa menerusi konsert sulung mereka. ✨\n\nDua trofi tersebut menjadi bukti bermakna dalam perjalanan ALPHA, manakala The First… pula menambah satu lagi memori penting buat kumpulan dan para peminat mereka. 🎤💫\n\nDaripada pentas anugerah ke pentas konsert, perjalanan ALPHA terus mencipta momen yang pastinya sukar dilupakan. 🇲🇾❤️\n\n👉 Baca selanjutnya di:\nhttps://msmusicscene.com/alpha-raih-dua-trofi-aim25-konsert-sulung-jadi-malam-paling-bermakna\n\n#MMS #MyMediaSyndicate #ALPHA #ALPHAMalaysia #AIM25 #AnugerahIndustriMuzik #AnugerahIndustriMuzik25 #TheFirst #KonsertALPHA #KonsertMalaysia #ConcertMalaysia #MuzikMalaysia #MalaysianMusic #PenyanyiMalaysia #ArtisMalaysia #Musi…",
+   "time": "2026-09-28 09:47",
+   "url": "https://www.instagram.com/p/Dd0ChY7H5Ey/",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-cfabeaf919d43de2",
+   "kind": "IG",
+   "from": "@livenation.my",
+   "from_name": "Live Nation Malaysia",
+   "title": "𝙩𝙖𝙡𝙠𝙞𝙣𝙜 ‘𝙗𝙤𝙪𝙩 how good wave to earth sound live… 🎶⁠",
+   "text": "𝙩𝙖𝙡𝙠𝙞𝙣𝙜 ‘𝙗𝙤𝙪𝙩 how good wave to earth sound live… 🎶⁠\n⁠\nIf you’ve been thinking about seeing them in KL, today is the LAST DAY to enjoy 20% OFF your Cat 3 tickets!⁠\n⁠\nVisit livenation.my/concertweek2026 for more details.⁠\n⁠\n𝐰𝐚𝐯𝐞 𝐭𝐨 𝐞𝐚𝐫𝐭𝐡 - 𝐭𝐡𝐞 𝐩𝐢𝐞𝐜𝐞𝐬 𝐭𝐨𝐮𝐫⁠\n📅 22 November 2026 (SUN)⁠\n📍 Idea Live Arena⁠⁠\n🎫 www.golive-asia.com⁠ / GoLive Ticketing App⁠ ⁠\n⁠\nTickets are also available on fantopia.io⁠\n⁠\n#wavetoearth #wavetoearthinKL #thepiecestour #KualaLumpur #LiveNationMY #KLHeadlineSeason⁠",
+   "time": "2026-09-27 18:03",
+   "url": "https://www.instagram.com/reel/DdyWFtKm2-v/",
+   "hints": [
+    "If you’ve been thinking about seeing them in KL, today is the LAST DAY to enjoy 20% OFF your Cat 3 tickets!",
+    "📅 22 November 2026 (SUN)",
+    "📍 Idea Live Arena",
+    "🎫 www.golive-asia.com⁠ / GoLive Ticketing App",
+    "Tickets are also available on fantopia.io"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": [
+    "golive-174"
+   ]
+  },
+  {
+   "id": "ig-b637c98408e5ff84",
+   "kind": "IG",
+   "from": "@livenation.my",
+   "from_name": "Live Nation Malaysia",
+   "title": "Ready to revisit some of yung kai’s best tracks? 👀💙 ⁠",
+   "text": "Ready to revisit some of yung kai’s best tracks? 👀💙 ⁠\n⁠\nThese are the songs you’ll want to be singing along to when yung kai takes the stage this November! 🎶⁠\n⁠\n🚨JUST 1 DAY LEFT🚨 to enjoy 20% OFF on selected ticket categories! 🎟️ Head to livenation.my/concertweek2026 to find out more and secure your tickets! ⁠\n⁠\nDrop a comment to let us know your favourite song! 💬 ⁠\n⁠\n𝐲𝐮𝐧𝐠 𝐤𝐚𝐢 - 𝐬𝐭𝐚𝐲 𝐰𝐢𝐭𝐡 𝐭𝐡𝐞 𝐨𝐜𝐞𝐚𝐧, 𝐢’𝐥𝐥 𝐟𝐢𝐧𝐝 𝐲𝐨𝐮: 𝐚𝐬𝐢𝐚 𝐭𝐨𝐮𝐫 𝟐𝟎𝟐𝟔⁠\n📅 6 November 2026 (FRI)⁠\n📍 The Platform, Menara KEN TTDI⁠\n🎫  www.golive-asia.com / GoLive Ticketing App⁠\n⁠\nTickets start from RM198 onwards. ⁠\n*For more details, visit golive-asia.com⁠\n⁠\n#yungkai #yungkaiinKL #KualaLumpur #LiveNationMY #KLHeadlineSeason⁠",
+   "time": "2026-09-27 14:33",
+   "url": "https://www.instagram.com/p/Ddx-bX1FO8w/",
+   "hints": [
+    "🚨JUST 1 DAY LEFT🚨 to enjoy 20% OFF on selected ticket categories! 🎟️ Head to livenation.my/concertweek2026 to find out more and secure your tickets!",
+    "📅 6 November 2026 (FRI)",
+    "📍 The Platform, Menara KEN TTDI",
+    "🎫  www.golive-asia.com / GoLive Ticketing App",
+    "Tickets start from RM198 onwards."
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": [
+    "golive-180"
+   ]
+  },
+  {
+   "id": "news-a288e5f3ada76076",
+   "kind": "新闻",
+   "from": "Budiey",
+   "title": "Alpha Raikan Setahun Perjalanan Seni Menerusi Konsert The First Wave - Budiey",
+   "text": null,
+   "time": "2026-09-27 12:07",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNSmRsOUgxY3lkSzRBcFZhdGlaMVFNUDFqRWNIazhpSVdBVjVNUDJxcVNjUG5pbHhtaXZNZ1BfTXJjS19iZUotMDZpZW45eUV0UVBwV1NHR25HemdNTkZjczFlclRvLUtJNHd1OXZoQ3dNZzdWRDBxT2d2WGtGZVpERkdOQmhydGtjQVJnRUoxQjlwalRCenhr?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-3aa0a74802f697e8",
+   "kind": "IG",
+   "from": "@livenation.my",
+   "from_name": "Live Nation Malaysia",
+   "title": "𝘼𝙣𝙙 𝙬𝙝𝙚𝙣 𝙨𝙝𝙚 𝙬𝙖𝙠𝙚𝙨 𝙪𝙥 𝙖𝙣𝙙 𝙢𝙖𝙠𝙚𝙨 𝙪𝙥 𝙝𝙚𝙧 𝙢𝙞𝙣𝙙… she knows she’s seeing Westlife in KL 👀🫶🏻⁠",
+   "text": "𝘼𝙣𝙙 𝙬𝙝𝙚𝙣 𝙨𝙝𝙚 𝙬𝙖𝙠𝙚𝙨 𝙪𝙥 𝙖𝙣𝙙 𝙢𝙖𝙠𝙚𝙨 𝙪𝙥 𝙝𝙚𝙧 𝙢𝙞𝙣𝙙… she knows she’s seeing Westlife in KL 👀🫶🏻⁠\n⁠\nWho else can’t wait to catch this song live? 😆⁠\n⁠\nIf you haven’t got your tickets yet, General On-sale for the Added Show starts TOMORROW, 11am! 🎟️ Set your alarms and get ready to secure your tickets to see Westlife LIVE in KL! 🎶⁠\n⁠\n𝐖𝐄𝐒𝐓𝐋𝐈𝐅𝐄 𝟐𝟓: 𝐓𝐇𝐄 𝐀𝐍𝐍𝐈𝐕𝐄𝐑𝐒𝐀𝐑𝐘 𝐖𝐎𝐑𝐋𝐃 𝐓𝐎𝐔𝐑 𝐈𝐍 𝐊𝐔𝐀𝐋𝐀 𝐋𝐔𝐌𝐏𝐔𝐑⁠\n📅 13 & 14 January 2027 (WED & THURS)⁠\n📍Unifi Arena⁠\n🎫  www.golive-asia.com ⁠\n⁠\nSave the date! ⁠\n⁠\n🎫 𝐆𝐞𝐧𝐞𝐫𝐚𝐥 𝐎𝐧-𝐒𝐚𝐥𝐞: Mon, 28 Sept, 11am onwards.⁠\n⁠\n#Westlife25TheAnniversaryWorldTour #WestlifeinKL #KualaLumpur #LiveNationMY⁠",
+   "time": "2026-09-27 11:03",
+   "url": "https://www.instagram.com/reel/DdxmH7DjwEp/",
+   "hints": [
+    "📅 13 & 14 January 2027 (WED & THURS)",
+    "📍Unifi Arena",
+    "🎫  www.golive-asia.com",
+    "🎫 𝐆𝐞𝐧𝐞𝐫𝐚𝐥 𝐎𝐧-𝐒𝐚𝐥𝐞: Mon, 28 Sept, 11am onwards."
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": [
+    "golive-179"
+   ]
+  },
+  {
+   "id": "ig-ca041f421306d42c",
+   "kind": "IG",
+   "from": "@livenation.my",
+   "from_name": "Live Nation Malaysia",
+   "title": "Less than 2 months to go until LANY is back in KL! 🖤 ⁠",
+   "text": "Less than 2 months to go until LANY is back in KL! 🖤 ⁠\n⁠\n⏳ If you haven’t got your tickets yet, you’ve still got 2 DAYS LEFT to enjoy 20% OFF Tier 1 tickets! 👀⁠\n⁠\nLimited-time only!⁠\nVisit livenation.my/concertweek2026 for more details.⁠\n⁠\n𝗟𝗔𝗡𝗬: 𝘀𝗼𝗳𝘁 𝘄𝗼𝗿𝗹𝗱 𝘁𝗼𝘂𝗿 𝗶𝗻 𝗞𝘂𝗮𝗹𝗮 𝗟𝘂𝗺𝗽𝘂𝗿⁠\n📅: 1 November 2026, 8PM⁠\n📍: Unifi Arena⁠\n🎫: www.golive-asia.com⁠ / GoLive Ticketing App⁠\n⁠\n#LANY #LANYinKL #softworldtour #KLHeadlineSeason #LiveNationMY⁠\n⁠",
+   "time": "2026-09-26 20:03",
+   "url": "https://www.instagram.com/reel/Ddv_DACkbld/",
+   "hints": [
+    "⏳ If you haven’t got your tickets yet, you’ve still got 2 DAYS LEFT to enjoy 20% OFF Tier 1 tickets! 👀",
+    "📅: 1 November 2026, 8PM",
+    "📍: Unifi Arena",
+    "🎫: www.golive-asia.com⁠ / GoLive Ticketing App"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": [
+    "golive-167"
+   ]
+  },
+  {
+   "id": "ig-1ce6d872b51cafac",
+   "kind": "IG",
+   "from": "@livenation.my",
+   "from_name": "Live Nation Malaysia",
+   "title": "𝙄𝙩 𝙬𝙖𝙨 𝙨𝙩𝙞𝙡𝙡 𝙬𝙖𝙧𝙢, 𝙡𝙖𝙩𝙚 𝙎𝙚𝙥𝙩𝙚𝙢𝙗𝙚𝙧, and before September ends, 𝙮𝙤𝙪 𝙨𝙝𝙤𝙪𝙡𝙙 𝙠𝙣𝙤𝙬 that there are only 2 DAYS LEFT to enjoy 2…",
+   "text": "𝙄𝙩 𝙬𝙖𝙨 𝙨𝙩𝙞𝙡𝙡 𝙬𝙖𝙧𝙢, 𝙡𝙖𝙩𝙚 𝙎𝙚𝙥𝙩𝙚𝙢𝙗𝙚𝙧, and before September ends, 𝙮𝙤𝙪 𝙨𝙝𝙤𝙪𝙡𝙙 𝙠𝙣𝙤𝙬 that there are only 2 DAYS LEFT to enjoy 20% OFF selected ticket categories to see Blue LIVE in Kuala Lumpur! 🎟️💙⁠\n⁠\nLimited-time offer only. Visit livenation.my/concertweek2026 for more details.⁠\n⁠\n*Check FAQ for eligible categories.⁠\n⁠\n𝗕𝗹𝘂𝗲 𝟮𝟱𝘁𝗵 𝗔𝗻𝗻𝗶𝘃𝗲𝗿𝘀𝗮𝗿𝘆 𝗧𝗼𝘂𝗿⁠\n📅: 24 January 2027, 8:30pm⁠\n🏟️: Zepp KL⁠\n🎫: www.golive-asia.com⁠ / GoLive Ticketing App⁠ ⁠\n⁠\n#Blue #BlueinKL #Blue25thAnniversaryTour #LiveinKualaLumpur #LiveNationMY⁠",
+   "time": "2026-09-26 18:35",
+   "url": "https://www.instagram.com/reel/Ddv1AMJE_MM/",
+   "hints": [
+    "📅: 24 January 2027, 8:30pm",
+    "🎫: www.golive-asia.com⁠ / GoLive Ticketing App"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": [
+    "golive-159"
+   ]
+  },
+  {
+   "id": "news-13481ebd3810997a",
+   "kind": "新闻",
+   "from": "Vietnam.vn",
+   "title": "Konsert Tinh Ha “Say Hi” D-3 mengumumkan jadual jualan tiket, mendedahkan faedah bas ulang-alik. - Vietnam.vn",
+   "text": null,
+   "time": "2026-09-26 18:31",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX2VLUkZ0bWlEQkN4eWJUSnBQU0pGY3MxSjIwTHlrLXY5VEF3VWIxbC1BOWxmV2VucWppS1NKcUJiUTdTWUNfX0lEVnExUkEzanBuRGpCbjBZeXVxbFF1WHdrNlpGS2xhWDVVU3NJSFAzVFRMem9rdFV0THpJcWNMbVpzajhYbXpZeFppVWt2MUFNa3kyY1VoYktlbjBMLTJ4Y3c?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-71f6a14bf1403957",
+   "kind": "IG",
+   "from": "@livenation.my",
+   "from_name": "Live Nation Malaysia",
+   "title": "Current 𝙄𝙣𝙨𝙩𝙖𝙣𝙩 𝙉𝙚𝙚𝙙: being in the crowd for FKJ live in KL. 🎹✨⁠",
+   "text": "Current 𝙄𝙣𝙨𝙩𝙖𝙣𝙩 𝙉𝙚𝙚𝙙: being in the crowd for FKJ live in KL. 🎹✨⁠\n⁠\n⏰ JUST 2 DAYS LEFT to enjoy 20% OFF selected ticket categories for FKJ - Tyber Tour! 🎟️ Don’t miss the offer! Head to livenation.my/concertweek2026 to find out more and secure your tickets now! 🔥⁠\n⁠\n𝐅𝐊𝐉 – 𝐓𝐲𝐛𝐞𝐫 𝐓𝐨𝐮𝐫⁠\n📅 1 December 2026 (Tues), 8:30pm\t⁠\n📍 Zepp KL ⁠\n🎫 www.golive-asia.com / GoLive Ticketing App⁠\n⁠\nTickets start from RM328 onwards. ⁠\n*For more details visit www.golive-asia.com⁠\n⁠\n#FKJ #FKJTyberTour #FKJinKL #LiveNationMY #KLHeadlineSeason⁠",
+   "time": "2026-09-26 15:23",
+   "url": "https://www.instagram.com/reel/DdvfAAaEwYS/",
+   "hints": [
+    "📅 1 December 2026 (Tues), 8:30pm\t",
+    "📍 Zepp KL",
+    "🎫 www.golive-asia.com / GoLive Ticketing App",
+    "Tickets start from RM328 onwards."
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "news-c6d3c2a8d991fa79",
+   "kind": "新闻",
+   "from": "联合日报",
+   "title": "Dior Daying’s Concert Sold Out In 2 Hours – Kuala Lumpur Adds Extra Show To Celebrate One-Year Anniversary - 联合日报",
+   "text": null,
+   "time": "2026-09-26 12:29",
+   "url": "https://news.google.com/rss/articles/CBMi8wJBVV95cUxQQmdsdzJic3RxUmg5VkljM2hRU3NnblJneHl1eDBQVDFKbnR1Q2Q5TXdaby1MUmF2QnowTDA2N3BsbnNwZVE5NlBVWmNqcWFoQjF4NzdRbUNoU1h2S3RyX3VGUWhJbUpNMHJUOUhtQm1WSGZ6U0hjRDNIVkk4X04zN0tLTEZ6d3lCMjdTLVNXMThkZHZpbTU4TC15em8tNWRsSVJodlpPRnRJeGtkb0JNSGQyWDVsRDVueVFFQjNEeTZrcndJTWYyY0E3NF9tT0hiUVF5dm9EYjItT1dCRnBBTFRZRVNMdXJVWk1HM0IzcTBNRnJJNG40Z1RiNWNmYmpVbEJIZk9kcExwMTRjMnVGR0NWRTVRb01hYTF5WURDVzh0ajFSYzhaRzZoYVQzZDFtdkxCc1NsV2xRYWJxa1lLLVh6bFdOYkVKY2FmYm0yYkFrbVFGbDR1M19TTnZCaTdPYzhveGpFbHVZdnhYLVcxbnBqaw?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "news-76088e616d67d232",
+   "kind": "新闻",
+   "from": "联合日报",
+   "title": "Bestards Bring Brand New Creations to KL for 1121 Concert - 联合日报",
+   "text": null,
+   "time": "2026-09-26 12:27",
+   "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxQLXp0b0tyQVhGYmJSVl9PSnFRUWJ3NXZWcWp3S3AycVExaXVzWGRCRkpaU1l2TUs4N2VZbGxtcWx4SFlLUjYyQU9lU0xUZ0lWbWI5eWZGN1VpSEg2VTZVdHNfUzhNUDdiY0J0WFJyRV9ZbXF2SnBSbzhqUTZQZFZyYWUteDVtd242S1dyOTdMeFJCWG5vWHRTY1V0TUt0NFlLeEFkTlhJd0xpVTNzb2FaZFg1anZnMGhnTjd4MW40MmNqTlFhaERMeUFvZGpfeU9tR3R0cEdsX1FMZFA2TkllVy1tV3I2eFpQeDUzVEJEYU14TEYtekd0ZzJmOWFsTU1pVGdteGNZaElYLUlvaTkzQV9B?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-581b336a50c66216",
+   "kind": "IG",
+   "from": "@livenation.my",
+   "from_name": "Live Nation Malaysia",
+   "title": "Westlife: Waiting for tour to start 🤝 ⁠",
+   "text": "Westlife: Waiting for tour to start 🤝 ⁠\nUs: Waiting to see them in KL 😭⁠\n⁠\nThey can’t wait to see you, and neither can we! 💙⁠\n⁠\n2 days to-go until General On-sale begins for the Added Show! Are you ready yet?⁠\n⁠\n𝐖𝐄𝐒𝐓𝐋𝐈𝐅𝐄 𝟐𝟓: 𝐓𝐇𝐄 𝐀𝐍𝐍𝐈𝐕𝐄𝐑𝐒𝐀𝐑𝐘 𝐖𝐎𝐑𝐋𝐃 𝐓𝐎𝐔𝐑 𝐈𝐍 𝐊𝐔𝐀𝐋𝐀 𝐋𝐔𝐌𝐏𝐔𝐑⁠\n📅 13 & 14 January 2027 (WED & THURS)⁠\n📍Unifi Arena⁠\n🎫  www.golive-asia.com ⁠\n⁠\nSave the date! ⁠\n⁠\n🎫 𝐆𝐞𝐧𝐞𝐫𝐚𝐥 𝐎𝐧-𝐒𝐚𝐥𝐞: Mon, 28 Sept, 11am onwards.⁠\n⁠\n#Westlife25TheAnniversaryWorldTour #WestlifeinKL #KualaLumpur #LiveNationMY",
+   "time": "2026-09-26 11:03",
+   "url": "https://www.instagram.com/reel/DdvBQjzIxf2/",
+   "hints": [
+    "2 days to-go until General On-sale begins for the Added Show! Are you ready yet?",
+    "📅 13 & 14 January 2027 (WED & THURS)",
+    "📍Unifi Arena",
+    "🎫  www.golive-asia.com",
+    "🎫 𝐆𝐞𝐧𝐞𝐫𝐚𝐥 𝐎𝐧-𝐒𝐚𝐥𝐞: Mon, 28 Sept, 11am onwards."
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": [
+    "golive-179"
+   ]
+  },
+  {
+   "id": "ig-6ec66f6e17ad7b3e",
+   "kind": "IG",
+   "from": "@zeppkualalumpur",
+   "from_name": "Zepp Kuala Lumpur",
+   "title": "Some flavours linger as sudden echoes of the past; some melodies unfold like a key, unlocking the exact second our heart…",
+   "text": "Some flavours linger as sudden echoes of the past; some melodies unfold like a key, unlocking the exact second our hearts stood still🍋🌶️🍯\n\nThis time, Shi Shi is weaving every drop of sweetness, bitterness, and everything in between from her journey straight into her music-and bringing her brand-new EP The Taste Of... from your headphones into an intimate live experience.\n\n✨Shi Shi \"The Taste Of... \" World Tour - Kuala Lumpur is officially announced! ✨\n\n📆Date: 06 Dec 2026 (SUN) | 6 PM\n📍Venue: Zepp Kuala Lumpur\n\nKuala Lumpur - this stop is extra special. Why? Because this marks Shi Shi's very first solo concert in Malaysia! ❤️\n\nWith fresh visual displays, revamped live arrangements, and the cozy, up-close energy of a Live House, it won't just be her singing and us listening. It'l be a shared space of raw emotions, packing all our stories into one unforgettable night.\n\n🎟️Tickets go on sale…",
+   "time": "2026-09-25 15:26",
+   "url": "https://www.instagram.com/p/Dds65HoEzro/",
+   "hints": [
+    "📍Venue: Zepp Kuala Lumpur",
+    "🎟️Tickets go on sale 07 September at 2:00 PM!"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-ea3eb2cec7961842",
+   "kind": "IG",
+   "from": "@zeppkualalumpur",
+   "from_name": "Zepp Kuala Lumpur",
+   "title": "Tuesday | 1 December 2026",
+   "text": "Tuesday | 1 December 2026\n\nFKJ - Tyber Tour\n\n📆1 December 2026\n📍Zepp KL\n🎫 www.golivea-asia.com\n\n#FKJ #FKJTyberTour #Zepp #ZeppKL #ZeppKualaLumpur",
+   "time": "2026-09-25 15:16",
+   "url": "https://www.instagram.com/p/Dds5vSmE57l/",
+   "hints": [
+    "📍Zepp KL",
+    "🎫 www.golivea-asia.com"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-8c0ee5a62b633007",
+   "kind": "IG",
+   "from": "@zeppkualalumpur",
+   "from_name": "Zepp Kuala Lumpur",
+   "title": "2026 izna Concert Tour: WHO DAT GIRL? in KUALA LUMPUR",
+   "text": "2026 izna Concert Tour: WHO DAT GIRL? in KUALA LUMPUR\n\n⚡ izna 真的要來了！吉隆坡站正式引爆！\n💥準備好跟izna一起炸翻全場，感受獨一無二的Girl Crush魅力，共度一個熱血難忘的演唱會之夜吧！\n\n📅演出日期：2026年12月5日（星期六）\n🕕演出時間：下午7:00（當地時間）\n📍演出地點：Zepp Kuala Lumpur\n🎫門票售價：RM698 / RM598 / RM498\n🎟售票日期：10月8日中午12點（當地時間）\n售票網站：\n主辦單位：萬星國際娛樂文化\n經紀公司：WAKEONE\n\n• 每筆交易最多購買6張門票。\n• 實際演出時間以現場情況為準。\n• 請密切關注萬星國際娛樂文化，掌握有關izna馬來西亞演唱會的更多資訊。\n• 主辦單位保留隨時更改條款與細則的權利。\n\n📺—————————🎤—————————📺\n\n2026 izna CONCERT TOUR <WHO DAT GIRL?> IN KUALA LUMPUR 🔥\n\n⚡ izna is finally coming! They are officially hitting Kuala Lumpur!\n💥 Get ready to tear up the stage with izna and experience their one-of-a-kind Girl Crush charm for an unforgettable night of pure excitement!\n\n📅 Date: 5th December 2026 (Saturday)\n🕕 Time: 7:00 PM (Local Time)\n📍 Venue: Zepp Kuala Lumpur\n🎫 Ticket Prices: RM698 / RM598 / RM498\n🎟 General Sale: 12:00 PM 8th Oct. (Local Time)\nTicketing Website: \nOrganizer: Wanxing Entertainment…",
+   "time": "2026-09-25 14:53",
+   "url": "https://www.instagram.com/p/Dds3H2bk36I/",
+   "hints": [
+    "📅演出日期：2026年12月5日（星期六）",
+    "📍演出地點：Zepp Kuala Lumpur",
+    "🎫門票售價：RM698 / RM598 / RM498",
+    "🎟售票日期：10月8日中午12點（當地時間）",
+    "• 每筆交易最多購買6張門票。"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-e32982bb6f0ab691",
+   "kind": "IG",
+   "from": "@livenation.my",
+   "from_name": "Live Nation Malaysia",
+   "title": "𝙄𝙨𝙣'𝙩 𝙞𝙩 𝙡𝙤𝙫𝙚𝙡𝙮 to be listening to Khalid LIVE? 🥹🎶⁠",
+   "text": "𝙄𝙨𝙣'𝙩 𝙞𝙩 𝙡𝙤𝙫𝙚𝙡𝙮 to be listening to Khalid LIVE? 🥹🎶⁠\n⁠\n3 DAYS LEFT to enjoy 20% OFF your tickets to see Khalid live in KL! 🎟️✨ Selected categories, for limited time only, visit livenation.my/concertweek2026 to find out more! ⁠\n⁠\n*Check FAQ for eligible categories.⁠\n⁠\n𝐊𝐡𝐚𝐥𝐢𝐝: 𝐈𝐭'𝐬 𝐀𝐥𝐰𝐚𝐲𝐬 𝐒𝐮𝐦𝐦𝐞𝐫 𝐒𝐨𝐦𝐞𝐰𝐡𝐞𝐫𝐞 𝐓𝐨𝐮𝐫 ⁠\n📅 9 December 2026 (Wed) ⁠\n📍Idea Live Arena⁠\n🎫  www.golive-asia.com ⁠\n⁠\nTickets start from RM358 onwards. ⁠\n*For more details visit livenation.my ⁠\n⁠\n#Khalid #ItsAlwaysSummerSomewhereTour #KhalidinKL #KLHeadlineSeason #LiveNationMY",
+   "time": "2026-09-25 14:03",
+   "url": "https://www.instagram.com/reel/DdsxJ0diVpu/",
+   "hints": [
+    "📅 9 December 2026 (Wed)",
+    "📍Idea Live Arena",
+    "🎫  www.golive-asia.com",
+    "Tickets start from RM358 onwards."
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": [
+    "golive-178"
+   ]
+  },
+  {
+   "id": "ig-1042610eec90ad81",
+   "kind": "IG",
+   "from": "@imcliveglobal",
+   "from_name": "IMC Live Global",
+   "title": "#张韶涵玩家巡回演唱会",
+   "text": "#张韶涵玩家巡回演唱会\n太原站👾倒计时1天\n月满龙城🎮共庆中秋\n玩家团聚🔥携手通关\n𝙇𝙚𝙩’𝙨 𝙥𝙡𝙖𝙮! 🥳明晚见！",
+   "time": "2026-09-25 10:05",
+   "url": "https://www.instagram.com/p/DdsWIniCGnN/",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-71c7e57bcbecf581",
+   "kind": "IG",
+   "from": "@starplanetmy",
+   "from_name": "StarPlanet 星艺娱乐",
+   "title": "当岁月的歌声化作眼角的泪光，才知道‘刻骨铭心’这四个字有多沉。",
+   "text": "当岁月的歌声化作眼角的泪光，才知道‘刻骨铭心’这四个字有多沉。\n\n谢谢你惊艳了我们的青春❤️\n\n最后的大型巡演，谭咏麟与您《刻骨铭心》巡演大马站，11月28和29日，Unifi Arena KL, 我们一起见证，一起珍重。✨\n\n #谭咏麟 #AlanTam  #刻骨铭心世界巡回演唱会AlanTamUnforgettableWorldTour  #刻骨铭心世界巡回演唱会 #StarPlanet星艺娱乐",
+   "time": "2026-09-24 20:50",
+   "url": "https://www.instagram.com/reel/Ddq7EtUzq7J/",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-7550194807af9184",
+   "kind": "IG",
+   "from": "@ticket2u.official",
+   "from_name": "Ticket2U",
+   "title": "🎶 25 Years of GVM. One unforgettable night. ❤️",
+   "text": "🎶 25 Years of GVM. One unforgettable night. ❤️\n\nFrom Minnale to Vinnaithaandi Varuvaayaa, relive the songs and stories that shaped a generation of romance. 🎬✨\n\nOndra Renda – 25 Years of GVM is coming to KL on 10 October 2026 at The Arch Galeries, with live performances by Karthik, Krish, Shruti Haasan, Blaaze, Saindhavi, Paal Dabba and more.\n\nDon’t just remember the songs. Experience them live.\n🎟️ Grab your tickets now on #Ticket2U!\nhttps://www.ticket2u.com.my/event/51955\n\n#OndraRenda #25YearsofGVM #GVM",
+   "time": "2026-09-24 17:23",
+   "url": "https://www.instagram.com/p/DdqjYIhJ9Ce/",
+   "hints": [
+    "🎟️ Grab your tickets now on #Ticket2U!",
+    "https://www.ticket2u.com.my/event/51955"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-5f87c4ea441d2a37",
+   "kind": "IG",
+   "from": "@starplanetmy",
+   "from_name": "StarPlanet 星艺娱乐",
+   "title": "你和谭校长的故事，是从哪首歌开始的？🎶 是一段刻在心底的熟悉旋律，还是某个被歌声触动的瞬间？",
+   "text": "你和谭校长的故事，是从哪首歌开始的？🎶 是一段刻在心底的熟悉旋律，还是某个被歌声触动的瞬间？\n\n这一次，Alan Tam 带着满满的诚意，越洋发来了一段专属视频！11月28日与29日，让我们齐聚吉隆坡 Unifi Arena，把那些陪伴我们多年的经典，唱成现场最动人的回忆！❤️\n\n🔥 门票火热抢购中，目前仅剩少量 VIP 门票，欲购从速！\n*** *** *** *** ***\nWhat song started your story with Alan Tam? 🎶 Was it a familiar melody etched in your heart, or a moment deeply touched by his voice?\n\nThis time, Alan Tam has sent a personal video invitation just for you! On November 28th and 29th, let's gather at Unifi Arena, Kuala Lumpur, and turn the songs that have accompanied us through the years into live memories we will never forget! ❤️\n\n🔥 Tickets are selling fast, with only a limited number of VIP tickets remaining. Secure yours before they're gone!\n\n#谭咏麟 #AlanTam #刻骨铭心世界巡回演唱会 #刻骨铭心世界巡回演唱会AlanTamUnforgettableWorldTour #StarPlanet星艺娱乐 #MahSing #spritzer #SOGO",
+   "time": "2026-09-24 12:01",
+   "url": "https://www.instagram.com/reel/Ddp-jtPjrU6/",
+   "hints": [
+    "🔥 门票火热抢购中，目前仅剩少量 VIP 门票，欲购从速！",
+    "🔥 Tickets are selling fast, with only a limited number of VIP tickets remaining. Secure yours before they're gone!"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-f54a07a6ff3b2bd7",
+   "kind": "IG",
+   "from": "@ticket2u.official",
+   "from_name": "Ticket2U",
+   "title": "Jom kita berkumpul beramai2 di Stadium Titiwangsa KL pada 26-27/9/2026. 14 talipinggang Menjadi Rebutan Termasuk 2 Dari…",
+   "text": "Jom kita berkumpul beramai2 di Stadium Titiwangsa KL pada 26-27/9/2026. 14 talipinggang Menjadi Rebutan Termasuk 2 Dari CTDK Dan SIMPLYSITI 🔥🥊\n\n🥊INTERNATIONAL MUAYTHAI CHALLENGE 2026 ‘SUPER CHAMPIONSHIP’🥊\n\n📅 26 - 27 September 2026\n⏰ 8:30PM\n📍 Stadium Titiwangsa Kuala Lumpur\n\nDapatkan tiket and sekarang di #Ticket2U\n🎟️https://www.ticket2u.com.my/event/50651",
+   "time": "2026-09-24 09:57",
+   "url": "https://www.instagram.com/reel/DdpwaW2JaJX/",
+   "hints": [
+    "📅 26 - 27 September 2026",
+    "📍 Stadium Titiwangsa Kuala Lumpur",
+    "Dapatkan tiket and sekarang di #Ticket2U",
+    "🎟️https://www.ticket2u.com.my/event/50651"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-1239881936dc5351",
+   "kind": "IG",
+   "from": "@imcliveglobal",
+   "from_name": "IMC Live Global",
+   "title": "#5566永不落幕巡回演唱会",
+   "text": "#5566永不落幕巡回演唱会 \n📍广州站 · 预售售罄🔥\n这一场青春不散场，广州站，准备入场！\n10月31日，等你一起见证「永不落幕」\n\n#5566广州演唱会 #5566 #5566永不落幕巡回演唱会广州站",
+   "time": "2026-09-23 17:47",
+   "url": "https://www.instagram.com/p/DdoBd6ViTzk/",
+   "hints": [
+    "📍广州站 · 预售售罄🔥"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-dd6ab7404f161b2e",
+   "kind": "IG",
+   "from": "@starplanetmy",
+   "from_name": "StarPlanet 星艺娱乐",
+   "title": "数十年不离不弃的支持，无数共同回忆，还有一份从未褪色的爱。❤️",
+   "text": "数十年不离不弃的支持，无数共同回忆，还有一份从未褪色的爱。❤️\n\n一路走来，歌迷始终陪伴谭校长走过音乐旅程的每个篇章，而这份深厚的支持与情谊，他也一直珍而重之。\n\n现在，轮到马来西亚延续这段「刻骨铭心」的音乐旅程！🇲🇾✨\n\n《谭咏麟与您「刻骨铭心」世界巡回演唱会 — 终极篇》马来西亚站门票已经开售啦！ 🎫\n\n岁月流转，情不变，爱依然。❤️\n\nDecades of unwavering support, a love that never fades, and a bond that spans generations. Alan Tam’s fans have stood faithfully by his side through every chapter of his incredible musical journey.\n\nFor Alan, that loyalty and love have never been taken for granted. Every cheer, every familiar face, and every voice singing along means more than words can say.\n\nNow, it’s Malaysia’s turn to continue this unforgettable story.\n\nTickets for the Alan Tam “Unforgettable” World Tour in Malaysia slated on November 28 & 29 are officially on sale now!\n\nDecades may pass, but the bond remains. Get yours today!\n\n 情不变，爱依然。❤️\n\n#谭咏麟 #谭校长 #AlanTam #刻骨铭心世界巡回演唱会AlanTamUnforgettableWorldTour #Starplanet星艺娱乐 #MahSing #Spritzer #SOGO",
+   "time": "2026-09-23 12:07",
+   "url": "https://www.instagram.com/reel/DdnaaurD17W/",
+   "hints": [
+    "《谭咏麟与您「刻骨铭心」世界巡回演唱会 — 终极篇》马来西亚站门票已经开售啦！ 🎫",
+    "Tickets for the Alan Tam “Unforgettable” World Tour in Malaysia slated on November 28 & 29 are officially on sale now!"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-e4d7695301e08792",
+   "kind": "IG",
+   "from": "@imcliveglobal",
+   "from_name": "IMC Live Global",
+   "title": "#张韶涵玩家巡回演唱会 第三版海报上线！如果放肆与独特成为了全新魔法世界唯一的入场券，魔法少女Angela angela_zhangshaohan 会在最精妙的游戏入口，等着你前来赴约。",
+   "text": "#张韶涵玩家巡回演唱会 第三版海报上线！如果放肆与独特成为了全新魔法世界唯一的入场券，魔法少女Angela angela_zhangshaohan 会在最精妙的游戏入口，等着你前来赴约。",
+   "time": "2026-09-23 10:56",
+   "url": "https://www.instagram.com/p/DdnSbXgiRXt/",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-0e203eac935fb3b1",
+   "kind": "IG",
+   "from": "@starplanetmy",
+   "from_name": "StarPlanet 星艺娱乐",
+   "title": "⚡ 门票火热疯抢中！抢票手速要快！",
+   "text": "⚡ 门票火热疯抢中！抢票手速要快！\n\n《谭咏麟与您「刻骨铭心」世界巡回演唱会 — 终极篇》在全球掀起空前热潮，势不可挡！\n\n11月28日与29日，这股情怀巨浪即将席卷吉隆坡 Unifi Arena。一连两晚的震撼演出，特别呈献《无言感激》篇与《情不变》篇, 两晚完全不同的精选歌单，首首皆经典！\n\n这不仅是万众期待的海外首站，更是校长最后一次大型巡演。全球高人气見证，错过不再，赶快抢票上车！✨\n\n⚡ 𝗧𝗶𝗰𝗸𝗲𝘁𝘀 𝘀𝗲𝗹𝗹𝗶𝗻𝗴 𝗳𝗮𝘀𝘁—𝗴𝗿𝗮𝗯 𝘆𝗼𝘂𝗿𝘀 𝗻𝗼𝘄!\n\nAlan Tam's \"Unforgettable\" World Tour is creating an unprecedented wave of excitement across the globe!\n\nOn November 28 and 29, this legendary wave sweeps into Kuala Lumpur's Unifi Arena. For two consecutive nights, experience two distinct setlists — The \" 𝐔𝐧𝐬𝐩𝐨𝐤𝐞𝐧 𝐆𝐫𝐚𝐭𝐢𝐭𝐮𝐝𝐞 \" edition and The \" 𝐔𝐧𝐜𝐡𝐚𝐧𝐠𝐢𝐧𝐠 𝐋𝐨𝐯𝐞 \" Edition—featuring back-to-back classic hits.\n\nThis is not only the eagerly anticipated overseas stop, but also Alan Tam's final large-scale concert tour. Backed by massive global demand, tickets are moving fast. Don't miss your chance! ✨\n\n#谭咏麟 #谭校长 #AlanTam #刻骨铭心世界巡回演唱会AlanTamUnforgettableWorldTour #Starplanet星艺娱乐 #MahSing #Spritzer #SOGO",
+   "time": "2026-09-22 17:26",
+   "url": "https://www.instagram.com/p/DdlaN1ITm12/",
+   "hints": [
+    "⚡ 门票火热疯抢中！抢票手速要快！"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-67a45fe4ea901b79",
+   "kind": "IG",
+   "from": "@zeppkualalumpur",
+   "from_name": "Zepp Kuala Lumpur",
+   "title": "Friday | 16 October 2026",
+   "text": "Friday | 16 October 2026\n\nNastia Project Feat Fynn Jamal & Liyana Fizi\n\n📍Zepp Kuala Lumpur\n📆 16 October 2026 [Friday]\n🎫 https://www.ticket2u.com.my/event/51240/nastia-project-concert-feat-fynn-jamal-amir-jahari\n\n#Nastiaproject #Fynnjamal #LiyanaFizi #Zepp #ZeppKL #ZeppKualaLumpur",
+   "time": "2026-09-22 11:26",
+   "url": "https://www.instagram.com/p/DdkxE3nE3a2/",
+   "hints": [
+    "📍Zepp Kuala Lumpur",
+    "🎫 https://www.ticket2u.com.my/event/51240/nastia-project-concert-feat-fynn-jamal-amir-jahari"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-9fe801a879852720",
+   "kind": "IG",
+   "from": "@starplanetmy",
+   "from_name": "StarPlanet 星艺娱乐",
+   "title": "“你们可以唱给我听吗？”😭",
+   "text": "“你们可以唱给我听吗？”😭\n\n这是校长在红馆舞台上，对全场歌迷说的一句话。\n\n熟悉的《朋友》旋律响起，万人大合唱。当歌声响彻红馆，谭校长在台上强忍泪水、一度哽咽——那一刻，仿佛几十年的陪伴、青春与回忆，都随着歌声一起涌上心头。❤️\n\n岁月流转，歌声依旧。香港的感动仍在回荡，而这份感动，也即将延续至吉隆坡！\n\n11月28及29日，巡演海外首站登陆马来西亚——这也是谭校长最后一次大型世界巡演。\n\n从青春岁月一路唱到今天，这场跨越岁月的双向奔赴，我们一定要在 Unifi Arena 相见。❤️\n\n#谭咏麟 #谭校长 #AlanTam #刻骨铭心世界巡回演唱会AlanTamUnforgettableWorldTour #Starplanet星艺娱乐 #MahSing #Spritzer #SOGO",
+   "time": "2026-09-21 20:54",
+   "url": "https://www.instagram.com/reel/DdjM7SPTVDh/",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-896406e0d5f39b7e",
+   "kind": "IG",
+   "from": "@imcliveglobal",
+   "from_name": "IMC Live Global",
+   "title": "2026 陈洁仪 Atrium 巡回演唱会 — 新加坡站 圆满落幕！🇸🇬✨",
+   "text": "2026 陈洁仪 Atrium 巡回演唱会 — 新加坡站 圆满落幕！🇸🇬✨\n\n从熟悉的旋律响起，到全场此起彼落的合唱声，hellokitchan 与大家一起，把藏在一首首歌里的回忆重新唱进这个夜晚。🎶\n\n谢谢每一位来到现场的你，让这一场相聚成为属于彼此的珍贵记忆。❤️\n-\n2026 Kit Chan Atrium Live Tour — Singapore has come to a beautiful close! 🇸🇬✨\n\nFrom the first familiar melody to the voices singing along across the indoor stadium, hellokitchan brought countless memories back to life through music. 🎶\n\nThank you to everyone who joined us and made this night one to remember. ❤️\n\nSingapore, what a night.\nUntil we meet again! ✨\n\n#KitChan #陈洁仪 #KitChanATRIUMLiveTour #IMCGroupAsia #IMCLiveGlobal",
+   "time": "2026-09-21 18:00",
+   "url": "https://www.instagram.com/p/Ddi5WVpDw85/",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-e9e88735f8e04ef7",
+   "kind": "IG",
+   "from": "@imcliveglobal",
+   "from_name": "IMC Live Global",
+   "title": "和weibirdmusic 的九月连线，在广州接通成功！「HI WE1 韦，您好」的巡演主题表达的是人与人之间的连接，在广州站的现场，韦礼安分享了自己关于这份人生课题的新思考。每个人都有自己的Uni Context（单一语境），不同的语境在…",
+   "text": "和weibirdmusic 的九月连线，在广州接通成功！「HI WE1 韦，您好」的巡演主题表达的是人与人之间的连接，在广州站的现场，韦礼安分享了自己关于这份人生课题的新思考。每个人都有自己的Uni Context（单一语境），不同的语境在人生路径上交错，我们用自己的语境认识世界，也被世界用它的方式认识。「HI WE1 韦，您好」每一次的连线，大家因为韦礼安的音乐产生连接，奔赴现场共度这段难忘的旅程。广州连线圆满，下一站继续约定吧！#韦礼安HIWE1韦您好巡回演唱会",
+   "time": "2026-09-21 17:01",
+   "url": "https://www.instagram.com/p/DdiyjwalM6I/",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-de060f6513573506",
+   "kind": "IG",
+   "from": "@imcliveglobal",
+   "from_name": "IMC Live Global",
+   "title": "时隔近三年，angela_zhangshaohan 再度来到合肥开唱。金秋九月，相约大湖名城，和「玩家」们共同开启快乐游戏时间。昨晚的合肥游戏副本中，魔盒开启迎来蝴蝶翩飞🦋，汪汪版🐶《潘朵拉》solo萌趣上线，停电小剧场尖叫蓄能，金发神女带…",
+   "text": "时隔近三年，angela_zhangshaohan 再度来到合肥开唱。金秋九月，相约大湖名城，和「玩家」们共同开启快乐游戏时间。昨晚的合肥游戏副本中，魔盒开启迎来蝴蝶翩飞🦋，汪汪版🐶《潘朵拉》solo萌趣上线，停电小剧场尖叫蓄能，金发神女带你完成《阿刁》高音合唱闯关。「玩家」们的合肥游戏闯关圆满成功👏，下一站，9月26日歌迷之城太原，等你继续约定！#张韶涵玩家巡回演唱会",
+   "time": "2026-09-21 16:21",
+   "url": "https://www.instagram.com/p/DdiuAaHiSnP/",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-29722acba3fd56a2",
+   "kind": "IG",
+   "from": "@starplanetmy",
+   "from_name": "StarPlanet 星艺娱乐",
+   "title": "🎟️ 抢票倒数 1 天！",
+   "text": "🎟️ 抢票倒数 1 天！\n等了这么久，终于要来了！万众期待的《谭咏麟与您「刻骨铭心」世界巡回演唱会 — 终极篇》马来西亚站，即将作为巡演首个海外站与大家见面，明日正式开启售票！\n\n你们准备好抢票了吗？✨\n\n🎟️ 1 DAY TO TICKET LAUNCH!\nThe wait is almost over! Malaysia will be the first overseas stop of Alan Tam “Unforgettable” World Tour, with tickets officially going on sale tomorrow! \n\nGet ready to secure yours! ✨\n\n#谭咏麟 #谭校长 #AlanTam #刻骨铭心世界巡回演唱会AlanTamUnforgettableWorldTour #Starplanet星艺娱乐 #MahSing #Spritzer #SOGO",
+   "time": "2026-09-21 15:03",
+   "url": "https://www.instagram.com/p/DdilB1yTAeW/",
+   "hints": [
+    "🎟️ 抢票倒数 1 天！",
+    "🎟️ 1 DAY TO TICKET LAUNCH!",
+    "The wait is almost over! Malaysia will be the first overseas stop of Alan Tam “Unforgettable” World Tour, with tickets officially going on sale tomorrow!"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-0ba86420c81bac53",
+   "kind": "IG",
+   "from": "@imcliveglobal",
+   "from_name": "IMC Live Global",
+   "title": "🎮各位玩家注意，抢票任务上线❗️",
+   "text": "🎮各位玩家注意，抢票任务上线❗️\n#张韶涵玩家巡回演唱会 👉汕头站\n🔔9月28日 12:18 预售抢票开启🔥\n\t\n👉【汕头站】\n📅 2026/12/19\n🏟️汕头体育中心体育场\n🎫大麦/猫眼/票星球/携程\n\t\n⏰请玩家们提前预约，祝大家抢票顺利！",
+   "time": "2026-09-21 14:21",
+   "url": "https://www.instagram.com/p/DdigUTcCWka/",
+   "hints": [
+    "🔔9月28日 12:18 预售抢票开启🔥",
+    "📅 2026/12/19",
+    "🎫大麦/猫眼/票星球/携程"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-e0ffcb61950bedc7",
+   "kind": "IG",
+   "from": "@ticket2u.official",
+   "from_name": "Ticket2U",
+   "title": "🚨Tiket sudah mula dijual🚨",
+   "text": "🚨Tiket sudah mula dijual🚨\n\n“Akhirnya kita bersama, setelah menanti lama.”\nDapatkan tiket Malam Rawan, Diorama by Rizky Febian anda sekarang! Siapa lambat, rugi 🙂‍↔️\n\n📅 29 November 2026\n🕰️ 8.30 PM\n📍 Zepp, Kuala Lumpur\n🎫 https://www.ticket2u.com.my/event/52284\n\nSampai ketemu! 🤍✨\n\n#amentertainment #malamrawan #rizkyfebian #kualalumpur #concert",
+   "time": "2026-09-21 13:52",
+   "url": "https://www.instagram.com/p/Ddic_DBCV64/",
+   "hints": [
+    "🚨Tiket sudah mula dijual🚨",
+    "Dapatkan tiket Malam Rawan, Diorama by Rizky Febian anda sekarang! Siapa lambat, rugi 🙂‍↔️",
+    "📅 29 November 2026",
+    "📍 Zepp, Kuala Lumpur",
+    "🎫 https://www.ticket2u.com.my/event/52284"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": [
+    "t2u-51768"
+   ]
+  },
+  {
+   "id": "ig-c2c64f7ed6183fcd",
+   "kind": "IG",
+   "from": "@ticket2u.official",
+   "from_name": "Ticket2U",
+   "title": "⚽ The Legends Are Moving Indoors!",
+   "text": "⚽ The Legends Are Moving Indoors!\n\nThe AllStar Legends Exhibition Match is now happening at MITEC KL, Hall 9 & 10 on 3 October 2026!\n\nCatch football icons including Steven Gerrard, Michael Owen, Ryan Giggs, Alessandro Del Piero and more in an exciting 5 vs 5 showdown.\n\n📍 New Venue: MITEC KL, Hall 9 & 10\n📅 3 October 2026\nhttps://www.ticket2u.com.my/event/51242\n\n🎟️ Get your tickets now on Ticket2U!\nDon’t miss your chance to see the legends LIVE.",
+   "time": "2026-09-21 11:16",
+   "url": "https://www.instagram.com/p/DdiLEOAJcSO/",
+   "hints": [
+    "📍 New Venue: MITEC KL, Hall 9 & 10",
+    "📅 3 October 2026",
+    "https://www.ticket2u.com.my/event/51242",
+    "🎟️ Get your tickets now on Ticket2U!"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-d3a0195748b7f50c",
+   "kind": "IG",
+   "from": "@ticket2u.official",
+   "from_name": "Ticket2U",
+   "title": "We’re bringing the sounds and dreams of La La Land to life for a special evening at Filmhouse Singapore 🎞️🤍",
+   "text": "We’re bringing the sounds and dreams of La La Land to life for a special evening at Filmhouse Singapore 🎞️🤍\n\nSurrounded by a thousand lights, experience the melodies you know and love reimagined live 🕯️\n\n📍 Filmhouse at Golden Mile Tower, Redrum\n📅 September 25, 2026\n🕯️ 7:30 PM & 9 PM\n💌 Tickets available now at #Ticket2U!\nwww.ticket2u.com.sg/event/52178",
+   "time": "2026-09-21 10:13",
+   "url": "https://www.instagram.com/p/DdiDowhpbyL/",
+   "hints": [
+    "📍 Filmhouse at Golden Mile Tower, Redrum",
+    "📅 September 25, 2026",
+    "💌 Tickets available now at #Ticket2U!",
+    "www.ticket2u.com.sg/event/52178"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-122e0282dea47f05",
+   "kind": "IG",
+   "from": "@zeppkualalumpur",
+   "from_name": "Zepp Kuala Lumpur",
+   "title": "EST & WESLEY FAN MEETING IN KUALA LUMPUR",
+   "text": "EST & WESLEY FAN MEETING IN KUALA LUMPUR\nMALAYSIA — THIS IS NOT A DRILL. 💙\n\nThe wait ends here.\n\nThis January, Est is finally coming to Malaysia… AND HE’S BRINGING WESLEY ALONG. 🦈🥚\n\nFor the FIRST TIME EVER, Est & Wesley will meet Malaysian fans together on one special stage. 💙\nNo more waiting, no more guessing. We’re bringing you an exclusive day packed with fun games, special stages, never-before-seen surprises, and moments you’ll replay in your heart forever.\nA dream you’ve been waiting for is about to become a reality. ✨\n\nSave the date and get ready to create beautiful memories together.\n\n✨ EVENT DETAILS\n📍 ZEPP Kuala Lumpur\n📅 30 January 2027 | Saturday\n🕕 6:00 PM (MYT)\n\nMalaysia, we can’t wait to see you. 💙\nLet’s make this a day to remember.\n\n#EstWesleyFMinKL #Est_rvp #GMMTV #DAYCON\n#ZeppKualaLumpur",
+   "time": "2026-09-18 11:51",
+   "url": "https://www.instagram.com/p/DdagywXE1Nr/",
+   "hints": [
+    "📍 ZEPP Kuala Lumpur",
+    "📅 30 January 2027 | Saturday"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-588402d2f742aaaa",
+   "kind": "IG",
+   "from": "@zeppkualalumpur",
+   "from_name": "Zepp Kuala Lumpur",
+   "title": "SEA & AVOCEAN FANMEETING IN KUALA LUMPUR MALAYSIA",
+   "text": "SEA & AVOCEAN FANMEETING IN KUALA LUMPUR MALAYSIA\n\nSEA IS COMING TO KL! And yes… Avocean is coming with him! 🐶🥑\n\nKL, are you ready for a day with Sea? Because we’re bringing Sea & Avocean together for the\nvery first time in Kuala Lumpur!\n\n🌊 EVENT DETAILS:\n📅 31 January 2027 (Sunday)\n📍 Zepp Kuala Lumpur\n⏰ 6:00 PM\n\n🎟 TICKETS OPEN:\n📅 28 September 2026 (Monday)\n󰐐 1:00 PM Malaysia Time� / 12:00 PM Thailand Time\n🔗 Ticket Link: https://www.ticketmelon.com/daycon/seaavoceaninkl\n\nKL, see you there!\n\n#SeaAvoceanFMinKL #SeaTawinan\n#GMMTV #Daycon\n#ZeppKualaLumpur",
+   "time": "2026-09-17 13:02",
+   "url": "https://www.instagram.com/p/DdYEFuGH0_H/",
+   "hints": [
+    "📅 31 January 2027 (Sunday)",
+    "📍 Zepp Kuala Lumpur",
+    "🎟 TICKETS OPEN:",
+    "📅 28 September 2026 (Monday)",
+    "🔗 Ticket Link: https://www.ticketmelon.com/daycon/seaavoceaninkl"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-6ada4d5a1b5a79a4",
+   "kind": "IG",
+   "from": "@starplanetmy",
+   "from_name": "StarPlanet 星艺娱乐",
+   "title": "经典多到唱不完！谭咏麟的红馆十场演出正热烈进行中，每晚不同歌单，首首唤起青春回忆。熟悉的前奏一响，全场齐声合唱——那份感动，只有置身现场才能体会！",
+   "text": "经典多到唱不完！谭咏麟的红馆十场演出正热烈进行中，每晚不同歌单，首首唤起青春回忆。熟悉的前奏一响，全场齐声合唱——那份感动，只有置身现场才能体会！\n接下来，这份红馆的热烈与感动，11月28日和29日即将来到大马！让我们相约吉隆坡Unifi Arena，共赴一场与校长“刻骨铭心”的压轴音乐之约。\n\n👇 快在留言区告诉我们：\n\n你心目中那一首，到现场绝对要撕声力竭大合唱的神曲是什么？\n\nEvery night, a different setlist. 🎤✨ Alan Tam’s 10-show run at the Hong Kong Coliseum is in full swing, thrilling fans with fresh surprises each night.\nThis November 28th and 29th, the music, energy and memories make their way to Malaysia as part of his final world tour!!\n\n👇 Which timeless hit are you hoping to hear live?\n\n#谭咏麟 #谭校长 #AlanTam #刻骨铭心世界巡回演唱会AlanTamUnforgettableWorldTour #Starplanet星艺娱乐 #MahSing #Spritzer #SOGO",
+   "time": "2026-09-15 20:46",
+   "url": "https://www.instagram.com/reel/DdTvg8RChJk/",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-282652f7f72e19d2",
+   "kind": "IG",
+   "from": "@golive.asia",
+   "from_name": "Go Live Asia",
+   "title": "🎟️ VIP TICKET GIVEAWAY!",
+   "text": "🎟️ VIP TICKET GIVEAWAY!\n\nWin (2) VIP tickets to experience the 39th AWIT Awards LIVE!\n\nHOW TO JOIN:\n\n1. Follow golive.asia + awitawards\n2. Share the official AWIT Awards poster on your IG Story and tag both accounts\n3. Comment on the giveaway post and tag the ONE person you’re bringing\n\nBONUS: Tell us which Filipino artist you’re most excited to see! 🇵🇭\n\n✨ 10 WINNERS = 20 VIP TICKETS\nWinners announced tomorrow at 9AM.\n\nKeep your account PUBLIC so we can verify your entry.\n\nSEE YOU AT THE BIGGEST NIGHT IN FILIPINO MUSIC. 🔥",
+   "time": "2026-09-14 22:03",
+   "url": "https://www.instagram.com/p/DdRToF4kyK-/",
+   "hints": [
+    "🎟️ VIP TICKET GIVEAWAY!",
+    "Win (2) VIP tickets to experience the 39th AWIT Awards LIVE!",
+    "✨ 10 WINNERS = 20 VIP TICKETS"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-2c4b06f41775438c",
+   "kind": "IG",
+   "from": "@starplanetmy",
+   "from_name": "StarPlanet 星艺娱乐",
+   "title": "✨ 𝐓𝐇𝐀𝐓’𝐒 𝐀 𝐖𝐑𝐀𝐏, 𝐌𝐀𝐋𝐀𝐘𝐒𝐈𝐀! 🇲🇾🙌",
+   "text": "✨ 𝐓𝐇𝐀𝐓’𝐒 𝐀 𝐖𝐑𝐀𝐏, 𝐌𝐀𝐋𝐀𝐘𝐒𝐈𝐀! 🇲🇾🙌\n\nFrom Kuala Lumpur to Kota Kinabalu, Hillsong Worship Nights Asia Tour brought together thousands for two unforgettable nights filled with uplifting music, incredible energy, heartfelt praise and worship. ❤️‍🔥\n\nThank you KL and KK for singing your hearts out and sharing these beautiful moments with us. We hope everyone left feeling blessed, uplifted and inspired, carrying the joy and energy of these nights with you. ✨\n\nUntil we meet again, Malaysia! 🇲🇾❤️\n\n#hillsongworship #hillsongworshipnightsasiatour2026 #starplanet",
+   "time": "2026-09-14 20:29",
+   "url": "https://www.instagram.com/p/DdRIzIhE5R_/",
+   "hints": [],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-5d1413380bf9952f",
+   "kind": "IG",
+   "from": "@starplanetmy",
+   "from_name": "StarPlanet 星艺娱乐",
+   "title": "SABAH, YOU HEARD THEM! 🗣️",
+   "text": "SABAH, YOU HEARD THEM! 🗣️\n\nHillsong Worship is coming your way for the first time ever!\nThey can’t wait to worship with you and experience the incredible faith, energy and voices of Sabah.\nGet ready to lift your voice, raise your hands, and worship together as one. 🙌\n\nSee you later 8PM, Sabah! ❤️\n\n📍 Sabah International Convention Centre (SICC)\n🗓️ 13 September 2026\n\nThis event is open to non-Muslims only.\n\n#HillsongWorship #HillsongWorshipNightsAsiaTour2026 #StarPlanet",
+   "time": "2026-09-13 10:00",
+   "url": "https://www.instagram.com/reel/DdNcEISDFVG/",
+   "hints": [
+    "📍 Sabah International Convention Centre (SICC)"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-3ee2b599eece6970",
+   "kind": "IG",
+   "from": "@zeppkualalumpur",
+   "from_name": "Zepp Kuala Lumpur",
+   "title": "TAKASE TOYA ASIA TOUR 2026 “∞” - KUALA LUMPUR",
+   "text": "TAKASE TOYA ASIA TOUR 2026 “∞” - KUALA LUMPUR\n​\n25 Oct (Sun)\nVenue: zeppkualalumpur\nDoors Open: 17:30\nShow Starts: 18:30\nOpening Act: Fumiya Sato\n​\n▼ Tickets\n* VVIP: MYR 838\n* VIP: MYR 428\n* GA (Level 1): MYR 228\n​\n▼ VVIP Benefits\n* Highest priority entry\n* Guaranteed access to the front-most area\n* Meet & Greet access after the show\n* One-on-one photo session with the artist\n* Handwritten autograph by the artist on your personal item\n* Exclusive VVIP laminated pass\n​\n▼ VIP Benefits\n* Priority entry\n* Access to the front area (※ Does not include the front-most area)\n* Group photo session after the show (artist + several attendees)\n* Exclusive VIP laminated pass\n​\n▼ HI-BYE Wave Session\n​\nA special post-show event where participants can walk past the artist while waving goodbye.\n​\n※ Customers who meet the minimum spending requirement will receive one “HI-BYE Wave Session Participation Tick…",
+   "time": "2026-09-12 18:53",
+   "url": "https://www.instagram.com/p/DdL0OT4FLDV/",
+   "hints": [
+    "▼ Tickets",
+    "※ Customers who meet the minimum spending requirement will receive one “HI-BYE Wave Session Participation Ticket” per transaction.",
+    "▼ Ticket Schedule",
+    "◆ FC “SUGOI TOYADACHI” Priority Sale",
+    "◆ FC “TOYADACHI” Priority Sale"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-dc395a405bb09221",
+   "kind": "IG",
+   "from": "@starplanetmy",
+   "from_name": "StarPlanet 星艺娱乐",
+   "title": "Mega Star Arena came alive as thousands gathered for a powerful night of worship with Hillsong Worship. From singing tog…",
+   "text": "Mega Star Arena came alive as thousands gathered for a powerful night of worship with Hillsong Worship. From singing together as one to moments that moved hearts, the KL show was truly a night to remember.\n\nOne of the standout moments was hearing thousands of voices come together for What a Beautiful Name, a beautiful reminder of the power of worship when we gather as one. 🙏\n\nAnd now, the journey continues…\nKota Kinabalu, you’re next! 🙌❤️‍🔥\nGet ready to lift your voice and worship together.\n\n📍 Sabah International Convention Centre (SICC)\n🗓️ 13 September 2026 (Sun) | 8PM\nSabah, see you soon!\nThis event is open to non-Muslims only.\n\n#HillsongWorship #HillsongWorshipNightsAsiaTour2026 #StarPlanet",
+   "time": "2026-09-12 15:00",
+   "url": "https://www.instagram.com/reel/DdLZn5zkmbj/",
+   "hints": [
+    "📍 Sabah International Convention Centre (SICC)"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  },
+  {
+   "id": "ig-ba3f876f0ef083d0",
+   "kind": "IG",
+   "from": "@zeppkualalumpur",
+   "from_name": "Zepp Kuala Lumpur",
+   "title": "🐼 Calling all PANDAs!",
+   "text": "🐼 Calling all PANDAs!\nJEONG EUNJI SOLO CONCERT ASIA TOUR [SUMMER, I] IN KUALA LUMPUR❤️‍🔥\n\nTICKETING DETAILS\n📅 On-Sale Date: 7 September 2026 (Monday)\n⏰ Time: 12:00PM\n🔗 Official Ticketing Platforms: MAISEAT & TRIP.COM\n🎟️ Purchase Limit: Maximum 4 tickets per transaction\n🎁 Fan Benefits Cut-Off Date: 26 September 2026\n\n#JEONGEUNJI #JEONGEUNJIinKL #JEONGEUNJISOLOCONCERT #SUMMER_I #SUMMERIinKL #TrexStudio\n#Zepp #ZeppKL #ZeppKualaLumpur",
+   "time": "2026-09-09 14:04",
+   "url": "https://www.instagram.com/p/DdDkyTmo2oS/",
+   "hints": [
+    "TICKETING DETAILS",
+    "📅 On-Sale Date: 7 September 2026 (Monday)",
+    "🔗 Official Ticketing Platforms: MAISEAT & TRIP.COM",
+    "🎟️ Purchase Limit: Maximum 4 tickets per transaction"
+   ],
+   "first_seen": "2026-09-29 08:34",
+   "matches": []
+  }
+ ]
+}
