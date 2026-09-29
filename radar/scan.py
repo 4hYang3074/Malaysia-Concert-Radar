@@ -629,8 +629,15 @@ def link_preview(h, url, state, depth=1):
     """读链接的公开预览（og:title / og:description / og:image，FB、IG、新闻网站都有），不用登录。
     预览文字里如果有“全文”链接（例如 FB 贴文转发新闻），再顺着读一层。结果存 state，一个链接只读一次。"""
     cache = state.setdefault("link_previews", {})
-    if url in cache:
+    if cache.get(url):
         return cache[url]
+    # Facebook 会挡 GitHub 机房：优先用你电脑读到的（local_fetch.py 存在 state/local/link_previews.json）
+    local = ROOT / "state" / "local" / "link_previews.json"
+    if local.exists():
+        got = json.loads(local.read_text(encoding="utf-8")).get("previews", {}).get(url)
+        if got and (got.get("title") or got.get("text")):
+            cache[url] = got
+            return got
     out = {}
     try:
         page = h.request(url, headers={"Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8"}, retries=1)
@@ -653,7 +660,10 @@ def link_preview(h, url, state, depth=1):
             out["image"] = out["image"] or sub.get("image")
     except Exception as ex:
         print(f"  link preview {url[:60]}: {ex}", flush=True)
-    cache[url] = out
+    if out.get("title") or out.get("text"):  # 读不到的不存，下次再试
+        cache[url] = out
+    else:
+        cache.pop(url, None)
     return out
 
 
@@ -1207,6 +1217,9 @@ def lead_candidates(l):
         tag = re.sub(r"(?i)(in)?(kl|kualalumpur|malaysia|my|live|concert|tour|worldtour|asiatour)$", "", tag)
         cands.append(re.sub(r"(?<=[a-z])(?=[A-Z])", " ", tag))
     cands += re.findall(r"\b([A-Z][A-Za-z'.-]+(?:\s+[A-Z][A-Za-z'.-]+){0,2})\b", " ".join(text.split("\n")[:3]))
+    # 中英混写的标题（“Alin要来马来西亚…”）：英文字紧贴中文时 \b 不成立，另外抓；以及“要来 / 宣布…”前面的中文名
+    cands += re.findall(r"(?<![A-Za-z])([A-Za-z][A-Za-z'.-]{2,}(?:\s+[A-Za-z][A-Za-z'.-]+){0,2})(?![A-Za-z])", first)
+    cands += re.findall(r"^([一-鿿]{2,4})(?:要|将|將|来|來|宣布|确定|確定|终于|終於|首度|再度|即将|即將)", first)
     # 图片上读出来的字：前几行常是艺人名（例如 “DIOR 大穎 2026 世界巡迴演唱會”）
     img = unicodedata.normalize("NFKC", l.get("image_text") or "").split("\n")[:4]
     for line in img:
@@ -1256,7 +1269,9 @@ def lookup_artist(h, cand, text, cache, budget):
         hit = None
         for a in res.get("data") or []:
             n = norm(a.get("name"))
-            need = 20 if re.search(r"[^\x00-\x7f]", a.get("name", "")) else 5000 if " " not in a.get("name", "").strip() else 300
+            nm = a.get("name", "").strip()
+            # 单一英文字门槛高（避免普通单字）；带 - 或 . 的艺名（A-Lin、G.E.M.）不会是普通单字，门槛放低
+            need = 20 if re.search(r"[^\x00-\x7f]", nm) else 300 if " " in nm or re.search(r"[A-Za-z][-.][A-Za-z]", nm) else 5000
             if n == key and a.get("nb_fan", 0) >= need and "/artist//" not in (a.get("picture_medium") or "/artist//"):
                 hit = {"name": a["name"], "photo_url": a.get("picture_big") or a["picture_medium"], "fans": a["nb_fan"]}
                 break
@@ -1269,7 +1284,8 @@ def group_pending(h, events, leads, state, cfg):
     """待确定的线索（售票平台还没上架）按艺人归类：先看设定里的关注名单，再用 Deezer 确认贴文里提到的名字。
     也把艺人照片与 IG 贴文图片下载成本地图片。回传用到的图片路径。"""
     used = set()
-    cache = state.setdefault("artist_lookup", {})
+    cache = state.setdefault("artist_lookup_v2", {})
+    state.pop("artist_lookup", None)
     budget = [120]  # 每次扫描最多查 120 个新名字
     watch = cfg.get("watch_artists", [])
     by_event = {e["id"] for e in events}
