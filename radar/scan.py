@@ -258,6 +258,42 @@ def ticket2u(h):
     return out
 
 
+def fantopia(h):
+    # 要带 area: MY 才会回传马来西亚场次；Accept-Language 也是必须的（Http 默认有带）
+    r = h.json("https://www.fantopia.io/fanapiWeb/eventsInfo/getEventsInfoPageV2?current=1&size=1000",
+               headers={"area": "MY", "Referer": "https://www.fantopia.io/"})
+    out = []
+    for x in (r.get("data") or {}).get("records") or []:
+        if x.get("symbol") != "MYR" or x.get("deleteFlag"):
+            continue
+        start, end = local(x.get("startTime")), local(x.get("endTime"))
+        dates = [start] if start else []
+        if start and end and end[:10] > start[:10] and not end.endswith("23:59"):
+            dates.append(end)
+        sell = x.get("sellTimeStamp")
+        sale_start = datetime.fromtimestamp(sell / 1000, MYT).strftime("%Y-%m-%d %H:%M") if sell else None
+        url = f"https://www.fantopia.io/events-tickets?eventsKey={x.get('eventsKey')}"
+        out.append({
+            "id": f"fantopia-{x.get('eventsKey') or x.get('id')}",
+            "source": "Fantopia",
+            "name": re.sub(r"^\[[^\]]*\]\s*", "", x.get("title") or "").strip(),
+            "artist": None,
+            "type": None,
+            "venue": x.get("location"),
+            "city": None,
+            "dates": dates,
+            "sales": [{"name": "开售", "start": sale_start, "end": None, "queue": None, "available": True,
+                       "code_required": False, "url": url}] if sale_start else [],
+            "tiers": [],
+            "price_from": f"RM {x['minPrice'] / 100:,.2f}" if x.get("minPrice") else None,
+            "limit": x.get("limitCount") or None,
+            "sold_out": x.get("sellStatus") == 2,
+            "url": url,
+            "poster": x.get("ossUrl") or x.get("ossUrlMini"),
+        })
+    return out
+
+
 def bookmyshow(h):
     # 有 Cloudflare，连续请求会被挡：只请求一次、不重试
     r = h.json("https://my.bookmyshow.com/api/v2/public/live/collections/e/items?lang=en-GB",
@@ -829,6 +865,54 @@ def cleanup_images(used):
                     f.unlink()
 
 
+def detect_platforms(text, cfg):
+    """公告里提到的官方售票平台（网址或名字）。"""
+    t = unicodedata.normalize("NFKC", text or "").lower()
+    return [p["name"] for p in cfg.get("ticket_platforms", []) if any(m in t for m in p["match"])]
+
+
+SOURCE_RANK = {"GoLive": 0, "Fantopia": 1, "BookMyShow": 2, "Ticket2U": 3}
+
+
+def merge_events(events):
+    """同一场演出常同时在几个平台卖：同一天、同一位艺人就合并成一张卡，列出所有售票平台。
+    回传合并后的演出，以及 旧 id → 合并后 id 的对照。"""
+    groups, alone = {}, []
+    for e in events:
+        n = norm(e.get("artist_name"))
+        if e["dates"] and len(n) >= 2:
+            groups.setdefault((e["dates"][0][:10], n), []).append(e)
+        else:
+            alone.append([e])
+    out, idmap = [], {}
+    for g in list(groups.values()) + alone:
+        # 资料最完整的当主卡（有票价、座位图、售票轮次的优先）
+        g.sort(key=lambda e: (-(len(e.get("tiers") or []) + len(e.get("seat_maps") or []) + len(e.get("sales") or [])),
+                              SOURCE_RANK.get(e["source"], 9)))
+        p = dict(g[0])
+        p["platforms"] = [{"source": e["source"], "url": e["url"], "id": e["id"], "sold_out": e.get("sold_out"),
+                           "price_from": e.get("price_from")} for e in g]
+        if len(g) > 1:
+            p["sales"] = [dict(s, name=f"{e['source']} · {s.get('name') or '开售'}") for e in g for s in e.get("sales") or []]
+            p["dates"] = sorted({d for e in g for d in e["dates"]})
+            p["seat_maps"] = list(dict.fromkeys(m for e in g for m in e.get("seat_maps") or []))
+            p["tiers"] = next((e["tiers"] for e in g if e.get("tiers")), [])
+            p["limit"] = p.get("limit") or next((e.get("limit") for e in g if e.get("limit")), None)
+            p["sold_out"] = all(e.get("sold_out") for e in g)
+            p["stop_sales"] = all(e.get("stop_sales") or e.get("sold_out") for e in g)
+            p["first_seen"] = min(e.get("first_seen") or "9999" for e in g)
+            p["updates"] = {k: v for e in g for k, v in (e.get("updates") or {}).items()}
+            if p.get("avatar_kind") != "artist":
+                best = next((e for e in g if e.get("avatar_kind") == "artist"), None)
+                if best:
+                    p["avatar"], p["avatar_kind"] = best["avatar"], "artist"
+        for e in g:
+            idmap[e["id"]] = p["id"]
+        out.append(p)
+    out.sort(key=lambda e: (e["dates"][0] if e["dates"] else "9999", e["name"]))
+    return out, idmap
+
+
 def match_names(ev):
     """用来在贴文里找这场演出的名字片段。"""
     names = set()
@@ -854,7 +938,7 @@ def main():
     h = Http()
     health, events = {}, []
 
-    for name, fn in (("GoLive", golive), ("Ticket2U", ticket2u), ("BookMyShow", bookmyshow)):
+    for name, fn in (("GoLive", golive), ("Fantopia", fantopia), ("BookMyShow", bookmyshow), ("Ticket2U", ticket2u)):
         t0 = time.time()
         try:
             got = fn(h)
@@ -862,11 +946,12 @@ def main():
         except Exception as e:
             got = []
             health[name] = {"ok": False, "error": short(str(e), 160)}
-        if not got:  # 抓不到就沿用上一次的资料，不让页面突然变空
-            old = [e for e in prev.get("events", []) if e.get("source") == name]
-            if old:
-                got = old
-                health[name].update(stale=True, count=len(old))
+        raw = state.setdefault("raw_events", {})
+        if got:
+            raw[name] = json.loads(json.dumps(got))  # 存下各平台的原始资料（合并前的副本），下次被挡时沿用
+        elif raw.get(name):  # 抓不到就沿用上一次的资料，不让页面突然变空
+            got = [dict(e) for e in raw[name]]
+            health[name].update(stale=True, count=len(got))
         print(f"{name}: {health[name]} ({time.time() - t0:.0f}s)", flush=True)
         events += got
 
@@ -929,6 +1014,11 @@ def main():
         if l["kind"] in ("IG", "人工"):  # 旧线索也用最新规则重读开售时间
             l["sale_times"] = sale_times(l.get("text") or "", l.get("time"))
     used = add_avatars(h, events, leads, state, today)
+    # 同一场演出在几个平台卖 → 合并成一张卡；线索里对应的演出 id 也跟着换
+    events, idmap = merge_events(events)
+    for l in leads:
+        l["matches"] = list(dict.fromkeys(idmap.get(m, m) for m in l.get("matches", [])))
+        l["platforms"] = detect_platforms(f"{l.get('title', '')}\n{l.get('text') or ''}", cfg)
     # 用 Deezer 确认过的艺人名再对一次线索（例如贴文写 “Siti Nurhaliza”，演出名称很长）
     for l in leads:
         raw = unicodedata.normalize("NFKC", f"{l.get('title', '')} {l.get('text') or ''}").lower()

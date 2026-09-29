@@ -31,7 +31,7 @@ loadData().then(d => {
       ${avatar(e.avatar, e.artist_name, 120, e.avatar_kind)}
       <h1>${esc(e.artist_name)}</h1>
       <div class="sub">${esc(e.name)}</div>
-      <div style="margin-top:8px">${badges(e, now)}<span class="badge">${esc(e.source)}</span></div>
+      <div style="margin-top:8px">${badges(e, now)}${platformBadges(e)}</div>
       <div class="facts">
         <div class="fact"><div class="k">📅 演出日期</div><div class="v">${e.dates.length ? e.dates.map(s => esc(fmt(s))).join("<br>") : "未公布"}</div></div>
         <div class="fact"><div class="k">📍 场馆</div><div class="v">${esc(e.venue || "未公布")}${e.city ? `<br><small>${esc(e.city)}</small>` : ""}</div></div>
@@ -39,7 +39,9 @@ loadData().then(d => {
         ${e.limit ? `<div class="fact"><div class="k">🎟 限购</div><div class="v">每笔最多 ${e.limit} 张</div></div>` : ""}
       </div>
       <div class="banner ${st.cls}">${esc(st.text)}</div>
-      <a class="btn" href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">到 ${esc(e.source)} 购票 ↗</a>
+      <div class="meta" style="margin-top:14px">${platformsOf(e).length > 1 ? `这场演出在 ${platformsOf(e).length} 个官方平台售票：` : "官方售票平台："}</div>
+      <div class="buybtns">${platformsOf(e).map(p => `<a class="btn ${p.sold_out ? "sold" : ""}" href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener">
+        ${esc(p.source)}${p.sold_out ? "（售罄）" : ""}${p.price_from ? ` · ${esc(p.price_from)} 起` : ""} ↗</a>`).join("")}</div>
     </div>
 
     ${sales.length ? `<h3>⏰ 售票时间</h3><div class="card"><table>

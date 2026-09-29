@@ -15,10 +15,22 @@
   "ig_accounts_global": ["imcliveglobal"],
   "ig_posts_per_account": 10,
 
-  "_watch_artists_说明": "你特别关注的艺人：贴文只要提到任何一个别名，就会归到这位艺人（中英文、繁简体都可以加）",
-  "watch_artists": [
-    {"name": "A-Lin", "aliases": ["A-Lin", "ALin", "黄丽玲", "黃麗玲"]},
-    {"name": "周兴哲", "aliases": ["周兴哲", "周興哲", "Eric Chou"]}
+  "_watch_artists_说明": "（可留空）想固定排在最前面的艺人，例如 {\"name\": \"A-Lin\", \"aliases\": [\"A-Lin\", \"黄丽玲\"]}",
+  "watch_artists": [],
+
+  "_ticket_platforms_说明": "马来西亚官方一手售票平台。公告里出现这些网址或名字，就标注这场演出在哪个平台售票。scraped=true 表示雷达会直接抓这个平台的场次",
+  "ticket_platforms": [
+    {"name": "GoLive", "match": ["golive-asia.com", "golive asia", "golive ticketing", "golive app", "golive"], "scraped": true},
+    {"name": "Fantopia", "match": ["fantopia.io", "fantopia"], "scraped": true},
+    {"name": "BookMyShow", "match": ["bookmyshow", "my.bookmyshow.com"], "scraped": true},
+    {"name": "Ticket2U", "match": ["ticket2u", "t2u.asia"], "scraped": true},
+    {"name": "Ticketek", "match": ["ticketek", "ticketcharge"], "scraped": false},
+    {"name": "Ticketmelon", "match": ["ticketmelon"], "scraped": false},
+    {"name": "Megatix", "match": ["megatix"], "scraped": false},
+    {"name": "Klook", "match": ["klook"], "scraped": false},
+    {"name": "CloudJoi", "match": ["cloudjoi"], "scraped": false},
+    {"name": "Live Nation", "match": ["livenation.my", "live nation presale"], "scraped": false},
+    {"name": "Star Planet", "match": ["starplanet.com.my", "star planet ticketing"], "scraped": false}
   ],
 
   "hashtags": [

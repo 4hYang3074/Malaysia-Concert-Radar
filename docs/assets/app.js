@@ -107,6 +107,10 @@ function calendarHTML(items, now = new Date()) {
   }).join("");
 }
 
+// ---------- 售票平台 ----------
+const platformsOf = e => e.platforms && e.platforms.length ? e.platforms : [{source: e.source, url: e.url, sold_out: e.sold_out}];
+const platformBadges = e => platformsOf(e).map(p => `<span class="badge plat">🎫 ${esc(p.source)}</span>`).join("");
+
 // ---------- 头像 ----------
 function avatar(src, name, size = 56, kind = "") {
   const url = localUrl(src);
@@ -172,7 +176,8 @@ function artistSummary(g) {
   for (const l of g.leads) for (const st of l.sale_times || []) add(sales, `${fmt(st.time.length === 10 ? st.time + " 00:00" : st.time, st.time.length > 10)}：${st.line}`);
   for (const l of g.leads) for (const h of l.hints || []) add(points, h);
   for (const l of g.leads) if (l.kind === "新闻") add(points, l.title.replace(/\s+-\s+[^-]+$/, ""));
-  return {src, sales: sales.slice(0, 3), points: points.slice(0, 4), images: g.leads.filter(l => localUrl(l.image)).slice(0, 4)};
+  const platforms = [...new Set(g.leads.flatMap(l => l.platforms || []))];
+  return {src, platforms, sales: sales.slice(0, 3), points: points.slice(0, 4), images: g.leads.filter(l => localUrl(l.image)).slice(0, 4)};
 }
 
 // ---------- 导航栏与页尾 ----------

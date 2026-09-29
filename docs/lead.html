@@ -29,8 +29,9 @@ loadData().then(d => {
       ${l.artist ? `<div class="meta">关于：<a href="pending.html#a-${encodeURIComponent(l.artist)}">${esc(l.artist)}</a></div>` : ""}
       ${localUrl(l.image) ? `<img class="post-img" src="${esc(localUrl(l.image))}" alt="" onerror="this.remove()">` : ""}
       ${linked.length
-        ? `<div class="banner ok">✓ 已经在售票平台上架：${linked.map(e => `<a href="event.html?id=${encodeURIComponent(e.id)}">${esc(e.artist_name)}（${esc(e.source)}）</a>`).join("、")}</div>`
+        ? `<div class="banner ok">✓ 已经在售票平台上架：${linked.map(e => `<a href="event.html?id=${encodeURIComponent(e.id)}">${esc(e.artist_name)}（${platformsOf(e).map(p => esc(p.source)).join("、")}）</a>`).join("、")}</div>`
         : `<div class="banner warn">待确认：售票平台还没有对应的演出。上架后会自动移到“已确定”并通知你。</div>`}
+      ${(l.platforms || []).length ? `<div class="banner ok" style="margin-top:8px">🎫 公告提到的售票平台：<b>${l.platforms.map(esc).join("、")}</b></div>` : ""}
       ${(l.hints || []).length ? `<h3>重点</h3><ul class="hints" style="font-size:14px;color:var(--ink)">${l.hints.map(h => `<li>${esc(h)}</li>`).join("")}</ul>` : ""}
       ${l.text ? `<h3>原文</h3><div class="fulltext">${esc(l.text)}</div>` : ""}
       <a class="btn" href="${esc(safeUrl(l.url))}" target="_blank" rel="noopener">打开原文 ↗</a>

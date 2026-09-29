@@ -39,7 +39,8 @@ function artistCard(g) {
         <div class="info">${n ? `${n} 条消息 · 最新 ${esc(fmt(g.latest, false) || g.latest)} · ${s.src.map(esc).join("、")}` : live.length ? "目前没有其他待确定的新消息" : "暂时没有新消息，一有 IG 或新闻提到就会出现在这里"}</div>
       </div>
     </div>
-    ${live.map(e => `<a class="banner ok" style="display:block;text-decoration:none" href="event.html?id=${encodeURIComponent(e.id)}">✅ 已在 ${esc(e.source)} 上架：${esc(e.name)} →</a>`).join("")}
+    ${live.map(e => `<a class="banner ok" style="display:block;text-decoration:none" href="event.html?id=${encodeURIComponent(e.id)}">✅ 已在 ${platformsOf(e).map(p => esc(p.source)).join("、")} 上架：${esc(e.name)} →</a>`).join("")}
+    ${s.platforms.length ? `<div class="sum ok" style="margin-top:8px">🎫 公告提到的售票平台：<b>${s.platforms.map(esc).join("、")}</b></div>` : ""}
     ${s.sales.length ? `<div class="sum warn">🎟️ ${s.sales.map(esc).join("<br>🎟️ ")}</div>` : ""}
     ${s.points.length ? `<ul class="hints sum-list">${s.points.map(p => `<li>${esc(p)}</li>`).join("")}</ul>` : ""}
     ${s.images.length ? `<div class="shots">${s.images.map(l => `<a href="lead.html?id=${encodeURIComponent(l.id)}"><img src="${esc(localUrl(l.image))}" alt="" loading="lazy" onerror="this.parentNode.remove()"></a>`).join("")}</div>` : ""}
