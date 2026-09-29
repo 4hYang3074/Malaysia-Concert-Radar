@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-29 18:58",
+ "generated_at": "2026-09-29 19:01",
  "health": {
   "GoLive": {
    "ok": true,
@@ -5312,7 +5312,9 @@
    "hidden": null,
    "news_added": null,
    "added_status": null,
-   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "opened_at": "2026-09-29 19:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
    "sale_evidence": [
     {
      "src": "NOL World 售票轮次",
@@ -6616,7 +6618,8 @@
      "url": "https://www.instagram.com/p/Dd0RNZPR-Tq/",
      "announced": true,
      "added": true,
-     "source_line": "🎟 General sale: 29 September 2026, from 3PM"
+     "source_line": "🎟 General sale: 29 September 2026, from 3PM",
+     "kind": "general"
     }
    ],
    "tiers": [],
@@ -7036,7 +7039,8 @@
      "url": "https://www.orientaldaily.com.my/news/entertainment/2026/09/23/849841",
      "announced": true,
      "added": false,
-     "source_line": "随后于9月22日开启的公开发售"
+     "source_line": "随后于9月22日开启的公开发售",
+     "kind": "general"
     },
     {
      "name": "加场 · 预售（东方日报 娱乐）",
@@ -7048,7 +7052,8 @@
      "url": "https://www.orientaldaily.com.my/news/entertainment/2026/09/23/849841",
      "announced": true,
      "added": true,
-     "source_line": "门票将在9月24日开放V.I.P会员预售"
+     "source_line": "门票将在9月24日开放V.I.P会员预售",
+     "kind": "presale"
     },
     {
      "name": "加场 · 公售（东方日报 娱乐）",
@@ -7060,7 +7065,8 @@
      "url": "https://www.orientaldaily.com.my/news/entertainment/2026/09/23/849841",
      "announced": true,
      "added": true,
-     "source_line": "公售日则是9月29日早上10时"
+     "source_line": "公售日则是9月29日早上10时",
+     "kind": "general"
     }
    ],
    "tiers": [],
@@ -8399,8 +8405,8 @@
    "id": "news-5ebb35decba5f75d",
    "kind": "新闻",
    "country": "SG",
-   "from": "AsiaOne",
-   "title": "Kard return to Singapore after 7 years for final world tour, fans hope this isn't goodbye , Entertainment News - AsiaOne",
+   "from": "asiaone.com",
+   "title": "Kard return to Singapore after 7 years for final world tour, fans hope this isn't goodbye , Entertainment News - asiaone.com",
    "text": null,
    "time": "2026-09-28 18:50",
    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOOGdia05ZMlNCQlNucEVxWE1DemRSaHdyTGhQSjc4X1IxRVNzbHNSdGxaRFJGSGhmc0Eyal82dF9QMDZwbmtZLVV3Y09tTVBTbzFxMFdNOXAxV1lycWpydjAwUEZJQUxkVEdHMzdRcjBzb0JRM0VYdWhFT2F3TlBqX2ZSYW9iTEhWNVVoMkFB?oc=5",
@@ -8484,12 +8490,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
-   "listed": false,
    "artist": "Israel Houghton",
    "artist_fans": 51236,
    "artist_region": "欧美",
-   "artist_photo": "avatars/a-0d38f2cafd68.jpg"
+   "artist_photo": "avatars/a-0d38f2cafd68.jpg",
+   "hidden": null,
+   "listed": false
   },
   {
    "id": "news-e4d41a0f5de5b5d2",
@@ -8506,12 +8512,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
    "artist": "Israel Houghton",
    "artist_fans": 51236,
    "artist_region": "欧美",
-   "artist_photo": "avatars/a-0d38f2cafd68.jpg",
-   "hidden": null,
-   "listed": false
+   "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
   {
    "id": "ig-ad06e147fdd8408f",
@@ -9789,8 +9795,8 @@
    "id": "news-79b630a6cd0697f7",
    "kind": "新闻",
    "country": "SG",
-   "from": "TheSmartLocal",
-   "title": "9 Hotels Near National Stadium, From Affordable To Bougie Options, To Book For Upcoming Concerts In SG - TheSmartLocal",
+   "from": "thesmartlocal.com",
+   "title": "9 Hotels Near National Stadium, From Affordable To Bougie Options, To Book For Upcoming Concerts In SG - thesmartlocal.com",
    "text": null,
    "time": "2026-09-23 17:53",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBkRFZVZ0NiTW54UEZPMV94RlkxdGs5bUpBbVZGSFBlY1Z1bEVOd25GQzlGZ2kyNWxrWXBtVGw1dEpTSzJxU0FtR3B6UWVydERDNFlkU2RaUllEWXlwOWFNRFBfQlpmTW52ZEZoTNIBckFVX3lxTE04ZElvRzdZR2YzOW5nQTJBSVFrNmxtZDFhbGwyZjh5RHdpNVdCbVh0dmhmcWpyOE1ybXFGQ2xhMmstXy1RZ0RxYTlYMmI2aFFUdFJYWEJaOUNGLXFYRHNXZm8yN0lnbzJRTVZsNXdiWG91QQ?oc=5",
