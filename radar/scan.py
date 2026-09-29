@@ -299,6 +299,26 @@ def fantopia_area(h, area, currency):
         sell = x.get("sellTimeStamp")
         sale_start = datetime.fromtimestamp(sell / 1000, MYT).strftime("%Y-%m-%d %H:%M") if sell else None
         url = f"https://www.fantopia.io/events-tickets?eventsKey={x.get('eventsKey')}"
+        # 每一轮售票的名称和开卖时间（例如 “2027/01/10 (General Sale)”）在详细资料里；列表只有一个开卖时间
+        sales = []
+        if not end or end[:10] >= datetime.now(MYT).strftime("%Y-%m-%d"):
+            try:
+                det = h.json("https://www.fantopia.io/fanapiWeb/eventsInfo/inside/getEventsDetailByKey?eventsKey="
+                             + urllib.parse.quote(x.get("eventsKey") or ""), headers={"area": area, "Referer": "https://www.fantopia.io/"},
+                             retries=1)
+                for sess in det.get("data") or []:
+                    if sess.get("sellStartTime"):
+                        sales.append({"name": (sess.get("title") or "开售").strip(), "start": sess["sellStartTime"][:16],
+                                      "end": None, "queue": None, "available": sess.get("status") == 1,
+                                      "code_required": sess.get("sellType") not in (None, 1), "url": url})
+                time.sleep(0.2)
+            except Exception as ex:
+                print(f"  fantopia detail {x.get('eventsKey')}: {ex}", flush=True)
+        # 列表的开卖时间（通常是第一轮）如果不在详细资料里，也保留
+        if sale_start and not any(s["start"][:10] == sale_start[:10] for s in sales):
+            sales.append({"name": "开售", "start": sale_start, "end": None, "queue": None, "available": True,
+                          "code_required": False, "url": url})
+        sales.sort(key=lambda s: s["start"])
         out.append({
             "id": f"fantopia-{x.get('eventsKey') or x.get('id')}",
             "country": area,
@@ -309,8 +329,7 @@ def fantopia_area(h, area, currency):
             "venue": x.get("location"),
             "city": None,
             "dates": dates,
-            "sales": [{"name": "开售", "start": sale_start, "end": None, "queue": None, "available": True,
-                       "code_required": False, "url": url}] if sale_start else [],
+            "sales": sales,
             "tiers": [],
             "price_from": f"{ {'MYR': 'RM', 'SGD': 'S$', 'THB': '฿'}[currency]} {x['minPrice'] / 100:,.2f}" if x.get("minPrice") else None,
             "limit": x.get("limitCount") or None,
