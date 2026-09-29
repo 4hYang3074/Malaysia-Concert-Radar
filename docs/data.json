@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-29 19:01",
+ "generated_at": "2026-09-29 19:06",
  "health": {
   "GoLive": {
    "ok": true,
@@ -1421,7 +1421,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/10/03 7PM",
      "start": "2026-07-17 12:00",
      "end": null,
      "queue": null,
@@ -1462,7 +1462,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/10/03 7PM",
      "time": "2026-07-17 12:00"
     }
    ]
@@ -1481,7 +1481,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/10/03 8PM",
      "start": "2026-09-01 12:00",
      "end": null,
      "queue": null,
@@ -1522,7 +1522,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/10/03 8PM",
      "time": "2026-09-01 12:00"
     }
    ]
@@ -2028,7 +2028,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/10/10 8PM",
      "start": "2026-07-30 12:00",
      "end": null,
      "queue": null,
@@ -2069,7 +2069,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/10/10 8PM",
      "time": "2026-07-30 12:00"
     }
    ]
@@ -2496,8 +2496,17 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/10/24 19:00",
      "start": "2026-09-04 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=5xkjkqxv"
+    },
+    {
+     "name": "2026/10/25 19:00",
+     "start": "2026-09-10 12:00",
      "end": null,
      "queue": null,
      "available": true,
@@ -2537,7 +2546,12 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/10/25 19:00",
+     "time": "2026-09-10 12:00"
+    },
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "2026/10/24 19:00",
      "time": "2026-09-04 12:00"
     }
    ]
@@ -2556,7 +2570,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/10/24 8PM",
      "start": "2026-04-13 12:00",
      "end": null,
      "queue": null,
@@ -2597,7 +2611,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/10/24 8PM",
      "time": "2026-04-13 12:00"
     }
    ]
@@ -2792,7 +2806,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/10/28 7:30pm",
      "start": "2026-05-10 12:00",
      "end": null,
      "queue": null,
@@ -2833,7 +2847,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/10/28 7:30pm",
      "time": "2026-05-10 12:00"
     }
    ]
@@ -3020,7 +3034,7 @@
      "url": "https://www.ticket2u.com.my/event/50832/konsert-muzik-d.r.a.s.-in-kuala-lumpur-2026"
     },
     {
-     "name": "Fantopia · 开售",
+     "name": "Fantopia · 2026/10/31 8PM",
      "start": "2026-07-15 12:00",
      "end": null,
      "queue": null,
@@ -3102,7 +3116,7 @@
    "sale_evidence": [
     {
      "src": "Ticket2U 售票轮次",
-     "text": "Fantopia · 开售",
+     "text": "Fantopia · 2026/10/31 8PM",
      "time": "2026-07-15 12:00"
     }
    ]
@@ -3858,7 +3872,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/11/07 8PM",
      "start": "2026-08-28 12:00",
      "end": null,
      "queue": null,
@@ -3899,7 +3913,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/11/07 8PM",
      "time": "2026-08-28 12:00"
     }
    ]
@@ -3920,6 +3934,15 @@
     {
      "name": "开售",
      "start": "2026-08-30 13:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=ku9ajljg"
+    },
+    {
+     "name": "2026/11/08 19:00",
+     "start": "2026-09-06 13:00",
      "end": null,
      "queue": null,
      "available": true,
@@ -3959,6 +3982,11 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
+     "text": "2026/11/08 19:00",
+     "time": "2026-09-06 13:00"
+    },
+    {
+     "src": "Fantopia 售票轮次",
      "text": "开售",
      "time": "2026-08-30 13:00"
     }
@@ -3978,7 +4006,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/11/07 8PM",
      "start": "2026-08-17 13:28",
      "end": null,
      "queue": null,
@@ -4019,7 +4047,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/11/07 8PM",
      "time": "2026-08-17 13:28"
     }
    ]
@@ -4046,7 +4074,7 @@
      "url": "https://www.ticket2u.com.my/event/51416/cadenza-of-the-soul-noh-salleh-with-aubrey-suwito-orchestra"
     },
     {
-     "name": "Fantopia · 开售",
+     "name": "Fantopia · 2026/11/08 830PM",
      "start": "2026-08-05 12:00",
      "end": null,
      "queue": null,
@@ -4133,7 +4161,7 @@
    "sale_evidence": [
     {
      "src": "Ticket2U 售票轮次",
-     "text": "Fantopia · 开售",
+     "text": "Fantopia · 2026/11/08 830PM",
      "time": "2026-08-05 12:00"
     }
    ]
@@ -4155,6 +4183,24 @@
     {
      "name": "开售",
      "start": "2026-09-11 10:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=4v266ql6"
+    },
+    {
+     "name": "2026/11/10 8pm",
+     "start": "2026-09-15 13:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=4v266ql6"
+    },
+    {
+     "name": "2026/11/09 8PM",
+     "start": "2026-09-15 13:00",
      "end": null,
      "queue": null,
      "available": true,
@@ -4192,6 +4238,16 @@
    "opened_approx": false,
    "sale_state": "SOLD_OUT",
    "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "2026/11/10 8pm",
+     "time": "2026-09-15 13:00"
+    },
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "2026/11/09 8PM",
+     "time": "2026-09-15 13:00"
+    },
     {
      "src": "Fantopia 售票轮次",
      "text": "开售",
@@ -4272,7 +4328,25 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/11/13 20:00",
+     "start": "2026-08-22 14:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=m3vmif9o"
+    },
+    {
+     "name": "2026/11/14 20:00",
+     "start": "2026-08-22 14:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=m3vmif9o"
+    },
+    {
+     "name": "2026/11/15 20:00",
      "start": "2026-08-22 14:00",
      "end": null,
      "queue": null,
@@ -4313,7 +4387,17 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/11/13 20:00",
+     "time": "2026-08-22 14:00"
+    },
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "2026/11/14 20:00",
+     "time": "2026-08-22 14:00"
+    },
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "2026/11/15 20:00",
      "time": "2026-08-22 14:00"
     }
    ]
@@ -4488,7 +4572,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/11/14 8PM",
      "start": "2026-08-14 12:00",
      "end": null,
      "queue": null,
@@ -4529,7 +4613,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/11/14 8PM",
      "time": "2026-08-14 12:00"
     }
    ]
@@ -4548,7 +4632,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/11/14 8PM",
      "start": "2026-08-18 13:28",
      "end": null,
      "queue": null,
@@ -4589,7 +4673,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/11/14 8PM",
      "time": "2026-08-18 13:28"
     }
    ]
@@ -4608,7 +4692,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/11/15 5PM",
      "start": "2026-08-19 12:00",
      "end": null,
      "queue": null,
@@ -4649,7 +4733,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/11/15 5PM",
      "time": "2026-08-19 12:00"
     }
    ]
@@ -4668,7 +4752,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/11/15 7:30PM",
      "start": "2026-08-24 12:00",
      "end": null,
      "queue": null,
@@ -4709,7 +4793,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/11/15 7:30PM",
      "time": "2026-08-24 12:00"
     }
    ]
@@ -5078,6 +5162,15 @@
      "available": true,
      "code_required": false,
      "url": "https://www.fantopia.io/events-tickets?eventsKey=mtqy32gw"
+    },
+    {
+     "name": "2026/11/21 6:30pm",
+     "start": "2026-05-05 11:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=mtqy32gw"
     }
    ],
    "tiers": [],
@@ -5110,6 +5203,11 @@
    "opened_approx": false,
    "sale_state": "ON_SALE",
    "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "2026/11/21 6:30pm",
+     "time": "2026-05-05 11:00"
+    },
     {
      "src": "Fantopia 售票轮次",
      "text": "开售",
@@ -5150,7 +5248,7 @@
      "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=527"
     },
     {
-     "name": "Fantopia · 开售",
+     "name": "Fantopia · 2026/11/22 8:00pm",
      "start": "2026-05-28 11:00",
      "end": null,
      "queue": null,
@@ -5248,7 +5346,7 @@
     },
     {
      "src": "GoLive 售票轮次",
-     "text": "Fantopia · 开售",
+     "text": "Fantopia · 2026/11/22 8:00pm",
      "time": "2026-05-28 11:00"
     },
     {
@@ -5337,7 +5435,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/11/28 18:00",
      "start": "2026-08-15 13:00",
      "end": null,
      "queue": null,
@@ -5378,7 +5476,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/11/28 18:00",
      "time": "2026-08-15 13:00"
     }
    ]
@@ -5709,7 +5807,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/11/28 8PM",
      "start": "2026-08-19 13:28",
      "end": null,
      "queue": null,
@@ -5750,7 +5848,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/11/28 8PM",
      "time": "2026-08-19 13:28"
     }
    ]
@@ -6165,7 +6263,7 @@
      "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=623"
     },
     {
-     "name": "Fantopia · 开售",
+     "name": "Fantopia · 2026/12/09 8PM",
      "start": "2026-07-16 11:00",
      "end": null,
      "queue": null,
@@ -6252,7 +6350,7 @@
     },
     {
      "src": "GoLive 售票轮次",
-     "text": "Fantopia · 开售",
+     "text": "Fantopia · 2026/12/09 8PM",
      "time": "2026-07-16 11:00"
     },
     {
@@ -6898,7 +6996,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/12/26 5PM",
      "start": "2026-07-27 12:00",
      "end": null,
      "queue": null,
@@ -6939,7 +7037,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/12/26 5PM",
      "time": "2026-07-27 12:00"
     }
    ]
@@ -6958,7 +7056,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2027/01/03 8:00pm",
      "start": "2026-07-14 12:00",
      "end": null,
      "queue": null,
@@ -6999,7 +7097,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2027/01/03 8:00pm",
      "time": "2026-07-14 12:00"
     }
    ]
@@ -7030,6 +7128,16 @@
      "kind": "presale"
     },
     {
+     "name": "2027/01/10 (General Sale)",
+     "start": "2026-09-29 10:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=0peucdui",
+     "added": true
+    },
+    {
      "name": "公售（东方日报 娱乐）",
      "start": "2026-09-22",
      "end": null,
@@ -7054,19 +7162,6 @@
      "added": true,
      "source_line": "门票将在9月24日开放V.I.P会员预售",
      "kind": "presale"
-    },
-    {
-     "name": "加场 · 公售（东方日报 娱乐）",
-     "start": "2026-09-29 10:00",
-     "end": null,
-     "queue": null,
-     "available": true,
-     "code_required": false,
-     "url": "https://www.orientaldaily.com.my/news/entertainment/2026/09/23/849841",
-     "announced": true,
-     "added": true,
-     "source_line": "公售日则是9月29日早上10时",
-     "kind": "general"
     }
    ],
    "tiers": [],
@@ -7111,8 +7206,8 @@
    "sale_state": "ON_SALE",
    "sale_evidence": [
     {
-     "src": "加场 · 公售（东方日报 娱乐）",
-     "text": "加场 · 公售（东方日报 娱乐）",
+     "src": "Fantopia 售票轮次",
+     "text": "2027/01/10 (General Sale)",
      "time": "2026-09-29 10:00"
     },
     {
@@ -7441,7 +7536,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2027/01/30 18:00",
      "start": "2026-10-04 13:00",
      "end": null,
      "queue": null,
@@ -7480,7 +7575,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2027/01/30 18:00",
      "time": "2026-10-04 13:00"
     }
    ]
@@ -7556,7 +7651,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2027/02/27 8PM",
      "start": "2026-08-10 12:00",
      "end": null,
      "queue": null,
@@ -7597,7 +7692,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2027/02/27 8PM",
      "time": "2026-08-10 12:00"
     }
    ]
@@ -8190,8 +8285,8 @@
    "id": "news-8ef478dde37d0b0c",
    "kind": "新闻",
    "country": "MY",
-   "from": "SirapLimau.com",
-   "title": "Konsert Ejen Ali Raikan Ulang Tahun Ke-10, Jom Pergi! - SirapLimau.com",
+   "from": "siraplimau.com",
+   "title": "Konsert Ejen Ali Raikan Ulang Tahun Ke-10, Jom Pergi! - siraplimau.com",
    "text": null,
    "time": "2026-09-29 12:07",
    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5SYWFLcElFQ1J1WTlBZVpxa3dXcWZuR3ZrWlpHUXVwTjJBaThSelNnc3ZSSDEwWkJnTE5RYlYtWXRpTDVLLVJqdnJFWDFTU2lYRDR5dllxSmM2ejNmcGtjX3BhUTNkZnZValE?oc=5",
