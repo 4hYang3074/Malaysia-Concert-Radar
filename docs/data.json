@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-29 18:09",
+ "generated_at": "2026-09-29 18:22",
  "health": {
   "GoLive": {
    "ok": true,
@@ -35,7 +35,7 @@
   },
   "东方日报 娱乐": {
    "ok": true,
-   "count": 9
+   "count": 10
   },
   "人工线索": {
    "ok": true,
@@ -6573,9 +6573,20 @@
     }
    ],
    "hidden": null,
+   "added_source": {
+    "title": "SOLD OUT in just 2 hours — and now, there’s another chance. 🎤✨",
+    "url": "https://www.instagram.com/p/Dd0RNZPR-Tq/",
+    "time": "2026-09-28",
+    "from": "#klconcert"
+   },
    "sales_closed": false,
-   "news_added": null,
-   "added_status": null,
+   "news_added": {
+    "title": "SOLD OUT in just 2 hours — and now, there’s another chance. 🎤✨",
+    "url": "https://www.instagram.com/p/Dd0RNZPR-Tq/",
+    "time": "2026-09-28",
+    "from": "#klconcert"
+   },
+   "added_status": "confirmed",
    "opened_at": "2026-09-29 15:00",
    "opened_approx": false,
    "sale_state": "ON_SALE",
@@ -6961,6 +6972,12 @@
     }
    ],
    "hidden": null,
+   "added_source": {
+    "title": "BIGBANG《XX : COSMOS》大马站门票25分钟售罄 1月10日加场！ - orientaldaily.com.my",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE00a284MzV2N1NzOTRiYm1nVFFNUm9VQXlXM0VlVXhfcUpWcEJ3NTdVc1hwdWVVQnV3eHBSRjhBY1F5M3dVV1NFRDNVb2Vld1JMWEctXzN4WGhoaWpuUkdkZHBuUG9VT1c4NGJGb1BRMVdubW5kakdnbQ?oc=5",
+    "time": "2026-09-23",
+    "from": "orientaldaily.com.my"
+   },
    "news_added": {
     "title": "#SHOWBIZ: BIGBANG add second KL show after tickets sell out in minutes - NST Online",
     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTFhRVjNxRWJtWkdvcHRLb19yX1dNa1VrbjcxQVNDbkFCV0VPWmlUYXRPd3FqLWRDcmxrWFJJUF9OQ3JDMG1peTdsX2xaZS1DQUN1ckZURGFVbmsyaC01M1B5MHZFWjVRQjY2cDYwZmE0TjFJUnNHYlNRNzZQeDROZzJDNXIzTVRCX2QwZ3ctY0pPMXhkYXp1NkVPOWtxUG9vLXRhTW00R0h4bEpCYjNoblFzS284R2VXZVdTbEln?oc=5",
@@ -7100,8 +7117,19 @@
     }
    ],
    "hidden": null,
-   "news_added": null,
-   "added_status": null,
+   "added_source": {
+    "title": "Malaysia, 30 MINUTES TO GO! ⏰⁠",
+    "url": "https://www.instagram.com/reel/Dd0HX7XEWsd/",
+    "time": "2026-09-28",
+    "from": "@livenation.my"
+   },
+   "news_added": {
+    "title": "Malaysia, 30 MINUTES TO GO! ⏰⁠",
+    "url": "https://www.instagram.com/reel/Dd0HX7XEWsd/",
+    "time": "2026-09-28",
+    "from": "@livenation.my"
+   },
+   "added_status": "confirmed",
    "opened_at": "2026-07-20 11:00",
    "opened_approx": false,
    "sale_state": "ON_SALE",
@@ -7873,6 +7901,24 @@
  ],
  "leads": [
   {
+   "id": "news-14e98c41ed183f08",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "东方日报 娱乐",
+   "title": "5天前才登台演出　日本8岁偶像练习生流感并发心肌炎离世",
+   "text": "（东京29日讯）日本名古屋偶像团体“DIANNA Project”成员平田琉七（ひらた るな）传出离世消息，得年8岁。据悉，她日前感染流行性感冒，后续并发心肌炎，最终于25日凌晨不幸离世。 经纪公司与家属昨日（28日）发表声明证实噩耗。消息传出后，令大批粉丝及日本网民震惊不已。就在离世前5天，平田琉七才于20日透过X分享演出后的心情，当时她还开心写道：“今天再次感谢大家，真的非常开心，希望第三部分的每一位成员也玩得开心。”未料短短5天后便传出离世消息，让不少粉丝难以接受。 经纪公司与家属...",
+   "time": "2026-09-29 18:14",
+   "url": "https://www.orientaldaily.com.my/news/entertainment/2026/09/29/851336",
+   "hints": [],
+   "sale_times": [],
+   "first_seen": "2026-09-29 18:22",
+   "matches": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
    "id": "news-1849e1035e6b6e5e",
    "kind": "新闻",
    "country": "SG",
@@ -7971,8 +8017,8 @@
    "id": "news-8ef478dde37d0b0c",
    "kind": "新闻",
    "country": "MY",
-   "from": "siraplimau.com",
-   "title": "Konsert Ejen Ali Raikan Ulang Tahun Ke-10, Jom Pergi! - siraplimau.com",
+   "from": "SirapLimau.com",
+   "title": "Konsert Ejen Ali Raikan Ulang Tahun Ke-10, Jom Pergi! - SirapLimau.com",
    "text": null,
    "time": "2026-09-29 12:07",
    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5SYWFLcElFQ1J1WTlBZVpxa3dXcWZuR3ZrWlpHUXVwTjJBaThSelNnc3ZSSDEwWkJnTE5RYlYtWXRpTDVLLVJqdnJFWDFTU2lYRDR5dllxSmM2ejNmcGtjX3BhUTNkZnZValE?oc=5",
@@ -8157,14 +8203,12 @@
    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOcHdwUFdwYVIySWFKdmxSOU1oa3RIVlhKeTJtSWlnbVZkSDFNbUtuZFhlbmdsZHZpUXdOWkgzSEVmUlpkYnhUZVdVRG5kWUVvdTloS0Utak1OMUprQ005SWcyQUdCel9TWEdPTEtyM3hyVGZBV0ptOGxwM1I1ekxqbFo1UUtDZl9HZmYzYVRWX3Q?oc=5",
    "hints": [],
    "first_seen": "2026-09-29 17:13",
-   "matches": [
-    "golive-175"
-   ],
+   "matches": [],
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
-   "listed": true
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
   },
   {
    "id": "news-9a64e28dfee6fe66",
@@ -8177,21 +8221,19 @@
    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOcHdwUFdwYVIySWFKdmxSOU1oa3RIVlhKeTJtSWlnbVZkSDFNbUtuZFhlbmdsZHZpUXdOWkgzSEVmUlpkYnhUZVdVRG5kWUVvdTloS0Utak1OMUprQ005SWcyQUdCel9TWEdPTEtyM3hyVGZBV0ptOGxwM1I1ekxqbFo1UUtDZl9HZmYzYVRWX3Q?oc=5",
    "hints": [],
    "first_seen": "2026-09-29 17:41",
-   "matches": [
-    "golive-175"
-   ],
+   "matches": [],
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
-   "listed": true
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
   },
   {
    "id": "news-5ebb35decba5f75d",
    "kind": "新闻",
    "country": "SG",
-   "from": "asiaone.com",
-   "title": "Kard return to Singapore after 7 years for final world tour, fans hope this isn't goodbye , Entertainment News - asiaone.com",
+   "from": "AsiaOne",
+   "title": "Kard return to Singapore after 7 years for final world tour, fans hope this isn't goodbye , Entertainment News - AsiaOne",
    "text": null,
    "time": "2026-09-28 18:50",
    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOOGdia05ZMlNCQlNucEVxWE1DemRSaHdyTGhQSjc4X1IxRVNzbHNSdGxaRFJGSGhmc0Eyal82dF9QMDZwbmtZLVV3Y09tTVBTbzFxMFdNOXAxV1lycWpydjAwUEZJQUxkVEdHMzdRcjBzb0JRM0VYdWhFT2F3TlBqX2ZSYW9iTEhWNVVoMkFB?oc=5",
@@ -8275,12 +8317,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
    "artist": "Israel Houghton",
    "artist_fans": 51236,
    "artist_region": "欧美",
-   "artist_photo": "avatars/a-0d38f2cafd68.jpg",
-   "hidden": null,
-   "listed": false
+   "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
   {
    "id": "news-e4d41a0f5de5b5d2",
@@ -8297,12 +8339,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
-   "listed": false,
    "artist": "Israel Houghton",
    "artist_fans": 51236,
    "artist_region": "欧美",
-   "artist_photo": "avatars/a-0d38f2cafd68.jpg"
+   "artist_photo": "avatars/a-0d38f2cafd68.jpg",
+   "hidden": null,
+   "listed": false
   },
   {
    "id": "ig-ad06e147fdd8408f",
@@ -8372,10 +8414,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [
-    "bms-BMSATMYS",
-    "fantopia-zk3x1r1c",
-    "fantopia-404os4yr",
-    "fantopia-xngkbueb"
+    "bms-BMSATMYS"
    ],
    "status": "rumor",
    "platforms": [],
@@ -8627,6 +8666,28 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
+   "artist": "izna",
+   "artist_fans": 6990,
+   "artist_region": "K-pop",
+   "artist_photo": "avatars/a-988ff669d789.jpg"
+  },
+  {
+   "id": "news-c5ae4399f3436ab3",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "香港01",
+   "title": "izna演唱會2026吉隆坡｜門票攻略＋購票連結＋座位表 - 香港01",
+   "text": null,
+   "time": "2026-09-28 10:00",
+   "url": "https://news.google.com/rss/articles/CBMixAJBVV95cUxNNVpIbHotMldFVm45Q0hsWnlOVk1MRERHM2hvT1RiX25KX0RBU2s3bGR1YUl4bWZDTmNvMldFaHloUzB5TTN1aVZhSTJvVEM5VV8xWGFZMFRNdGoyRnF2b003LUI1LVdVeXhlbV9PRVRvaUdiZEJIV1hWUUh5MFBzeFlmM1FodlBHV0ZsWDRvVVRPamRNNmVxOFg5cnpqSGNraEpyanYzSm1oZnEycEMza2hycDlHbHZ0OFFNLTg2V1k4YkV5dlJWQmV1M2QyQnVJM3FidVlJM2xad1dNeVVLSi0tWG5qbHZiUW9wMVp3Qldpa0dBTDBzTUVKWkZtdDV4X0VZeVRCMGthQWxmTm0tNEVXY1k4cjkwc2ZhNTFlRHJ1NTdZMGRETElUM0lwNEJXaWRFUVNNc194eFJmM1ZmOXJadjk?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 18:22",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
    "artist": "izna",
    "artist_fans": 6990,
    "artist_region": "K-pop",
@@ -8705,14 +8766,12 @@
    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPY1N1SmFQSFZyZmJnWXU0emt6NzAtNXZ2NTROTzRFajlOMlhYOG40NENEOVgzUGtsdTNmMVd2bjdVb1o1dVZPLUFIRXdNS2c2Z1piYU5VSEhmbTFCQm9kRDNxZGpIcHQ1aWQ3X2hmci1kdjRWYl9rTFNyN1ROM1pfLVF0U3dORktPd19iTGlUREVBX1pMV2Jmd1h6TFJTUjVCcVVoNnFVNi1SVjJWeHJkU0dB?oc=5",
    "hints": [],
    "first_seen": "2026-09-29 17:13",
-   "matches": [
-    "nol-26013626"
-   ],
+   "matches": [],
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
-   "listed": true
+   "hidden": "不是演唱会（theatre）",
+   "listed": false
   },
   {
    "id": "ig-cfabeaf919d43de2",
@@ -8863,8 +8922,8 @@
    "id": "news-64bbd8137cbf1c2d",
    "kind": "新闻",
    "country": "SG",
-   "from": "timesofindia.indiatimes.com",
-   "title": "Anirudh Ravichander surprises fans with unreleased ‘Jailer 2’ song at Singapore concert ahead of Rajinika - timesofindia.indiatimes.com",
+   "from": "The Times of India",
+   "title": "Anirudh Ravichander surprises fans with unreleased ‘Jailer 2’ song at Singapore concert ahead of Rajinika - The Times of India",
    "text": null,
    "time": "2026-09-26 22:13",
    "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxQRjhGcnpSMmt0RUR2dktzbWlneXAyRm8xUWN3Sld5b1dnMjJ4bzdlejJjNVk5R1hrTGxyNUZJLW9FZTB3SWwzU3hqMTVfaWxncEZhUHlQb1BobFpKa25TV3dNeDRSZmVQT3RQVjBhNTdaRDZaY3NoSE5LZ1dlUUdTMWh5OG5tU3kyUzNSOVpNZEwyUmpFbGFHWTJ2WU9XcGh1bVdYbHMwUjF6SW1pZHNLbjFzM3Q0QXZoN0VYWVdFYUloSHd0U3FsTTBOYkV2OG9YbE9iNjdBNFFIY0c2djlCblEyaE5DQlFhV1IxdjBiNzZZeGMyRGd0ZVRmRnBQOUdka3VVM2dTOXJ3N2lfbzZ4QVF1Q3J5Rk9vTWVLcm1xZHptQ0FkYmJscHZ1Q0xKYVJzMkViMWwwUG1xS3NFVGVFQU1B0gHHAkFVX3lxTE0tdkk4cmNXMmN2U2NBRjBOOTZUckRpV0pJTmpVTXBkVXV6STh3VU5iTmVDRXI4M1haVkdBSkxaYmt0NV9ycUdKcEx2NktxTmc5M216aEdzUDM4WDIwd3pVRzY5d3c4c3luUWRFSDVsbndSME13azJiWklIb1VsX19saEtzZ3lfNmJ2R1RkT0Jyem0xeUhLclJQeU4yaWwwaUk3cmtSeU94UEJtQmQ0MUtreWdfUllyNWE3LTQ0RHdVOHUtM1Q5d2JSQVBQcXF3QnNkUWcySTdrLUpuX0RSYm14UTlBbmd0Vk44cHNNNGQ0bGFSd2gzZ18xQlE1a1BmWXlhNGdlb3VLbWdId1lxazFZTDhuQXdGZGZNZmlORkljOFFIZDNDUmNheExzbTJiVDhGQ0ZOakx2NVR3R1pEU1dNWUJ1ak5CWQ?oc=5",
@@ -8987,15 +9046,11 @@
    "hints": [],
    "sale_times": [],
    "first_seen": "2026-09-29 17:48",
-   "matches": [
-    "fantopia-zk3x1r1c",
-    "fantopia-404os4yr",
-    "fantopia-xngkbueb"
-   ],
+   "matches": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
-   "listed": true
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
   },
   {
    "id": "news-5799e3e7d67acf9e",
@@ -9074,6 +9129,26 @@
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5ZUTZldV9mcmJWRjA5YlNVX050OXNRaHF3QXFUbWU2c2xwbmVCMEI1aEVZbUNfc3h4SDk0LUtpUDM5c01MRE1rVWYwcnhOYk1aS2FNSVkzQUZtRUJiOTJtVVUzSUJ5U0lGdXM1ajVqQQ?oc=5",
    "hints": [],
    "first_seen": "2026-09-29 18:09",
+   "matches": [
+    "bms-DIORINKL"
+   ],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": null,
+   "listed": true
+  },
+  {
+   "id": "news-c64b45f44ab09a1e",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "uniteddaily.my",
+   "title": "Dior大穎演唱會2小時售罄 吉隆坡站宣布加場迎一週年 - uniteddaily.my",
+   "text": null,
+   "time": "2026-09-26 12:29",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5ZUTZldV9mcmJWRjA5YlNVX050OXNRaHF3QXFUbWU2c2xwbmVCMEI1aEVZbUNfc3h4SDk0LUtpUDM5c01MRE1rVWYwcnhOYk1aS2FNSVkzQUZtRUJiOTJtVVUzSUJ5U0lGdXM1ajVqQQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 18:22",
    "matches": [
     "bms-DIORINKL"
    ],
@@ -9299,9 +9374,6 @@
    "first_seen": "2026-09-29 08:34",
    "image_text": "ii yy\n再 一\nTats\nue\ned",
    "matches": [
-    "fantopia-zk3x1r1c",
-    "fantopia-404os4yr",
-    "fantopia-xngkbueb",
     "bms-BMSATMYS"
    ],
    "status": "rumor",
@@ -9390,10 +9462,7 @@
    "first_seen": "2026-09-29 08:34",
    "image_text": "iM\n07100\nARENA 289&\nNOVEMBER 2026\nNFORGEY\nBLE\nSr we |\n終極 篇\n马来西亚 外 T MALA\nPag\nIMPACT\nae\nSPRITZER\n조노 스오\ncbs,\n100\ned\nhs\naie\nstarplanet.com.my_| my.bookmyshow.com | trip.com | ctrip.com | damai.cn | maiseat.com | Funtasy",
    "matches": [
-    "bms-BMSATMYS",
-    "fantopia-zk3x1r1c",
-    "fantopia-404os4yr",
-    "fantopia-xngkbueb"
+    "bms-BMSATMYS"
    ],
    "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
@@ -9463,7 +9532,6 @@
    "hints": [],
    "first_seen": "2026-09-29 18:09",
    "matches": [
-    "fantopia-ku9ajljg",
     "fantopia-0peucdui"
    ],
    "sale_times": [],
@@ -9494,8 +9562,8 @@
    "id": "news-79b630a6cd0697f7",
    "kind": "新闻",
    "country": "SG",
-   "from": "thesmartlocal.com",
-   "title": "9 Hotels Near National Stadium, From Affordable To Bougie Options, To Book For Upcoming Concerts In SG - thesmartlocal.com",
+   "from": "TheSmartLocal",
+   "title": "9 Hotels Near National Stadium, From Affordable To Bougie Options, To Book For Upcoming Concerts In SG - TheSmartLocal",
    "text": null,
    "time": "2026-09-23 17:53",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBkRFZVZ0NiTW54UEZPMV94RlkxdGs5bUpBbVZGSFBlY1Z1bEVOd25GQzlGZ2kyNWxrWXBtVGw1dEpTSzJxU0FtR3B6UWVydERDNFlkU2RaUllEWXlwOWFNRFBfQlpmTW52ZEZoTNIBckFVX3lxTE04ZElvRzdZR2YzOW5nQTJBSVFrNmxtZDFhbGwyZjh5RHdpNVdCbVh0dmhmcWpyOE1ybXFGQ2xhMmstXy1RZ0RxYTlYMmI2aFFUdFJYWEJaOUNGLXFYRHNXZm8yN0lnbzJRTVZsNXdiWG91QQ?oc=5",
@@ -9523,12 +9591,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
+   "listed": false,
    "artist": "Rai",
    "artist_fans": 6777,
    "artist_region": "其他",
-   "artist_photo": "avatars/a-d4c498b631b2.jpg",
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
-   "listed": false
+   "artist_photo": "avatars/a-d4c498b631b2.jpg"
   },
   {
    "id": "news-dd81fceb540acadc",
@@ -9545,12 +9613,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
-   "listed": false,
    "artist": "Rai",
    "artist_fans": 6777,
    "artist_region": "其他",
-   "artist_photo": "avatars/a-d4c498b631b2.jpg"
+   "artist_photo": "avatars/a-d4c498b631b2.jpg",
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
+   "listed": false
   },
   {
    "id": "news-bc64519c85c55ec3",
@@ -9587,10 +9655,7 @@
    "first_seen": "2026-09-29 08:34",
    "image_text": "一 一\nEeasa\n土生 用 疾 纪 ，\n18\n网 路 片段",
    "matches": [
-    "bms-BMSATMYS",
-    "fantopia-zk3x1r1c",
-    "fantopia-404os4yr",
-    "fantopia-xngkbueb"
+    "bms-BMSATMYS"
    ],
    "status": "onsale",
    "avatar": "avatars/ig-starplanetmy.jpg",
@@ -9628,7 +9693,6 @@
    "hints": [],
    "first_seen": "2026-09-29 17:13",
    "matches": [
-    "fantopia-ku9ajljg",
     "fantopia-0peucdui"
    ],
    "sale_times": [],
@@ -9650,7 +9714,6 @@
    "sale_times": [],
    "first_seen": "2026-09-29 17:48",
    "matches": [
-    "fantopia-ku9ajljg",
     "fantopia-0peucdui"
    ],
    "status": "rumor",
@@ -9670,7 +9733,6 @@
    "hints": [],
    "first_seen": "2026-09-29 18:09",
    "matches": [
-    "fantopia-ku9ajljg",
     "fantopia-0peucdui"
    ],
    "sale_times": [],
@@ -9691,7 +9753,26 @@
    "hints": [],
    "first_seen": "2026-09-29 18:09",
    "matches": [
-    "fantopia-ku9ajljg",
+    "fantopia-0peucdui"
+   ],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": null,
+   "listed": true
+  },
+  {
+   "id": "news-f6ff050cf285a380",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "uniteddaily.my",
+   "title": "BIGBANG大马站门票25分31秒售罄 11年后重返大马舞台掀抢票狂潮 - uniteddaily.my",
+   "text": null,
+   "time": "2026-09-22 22:57",
+   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB5UFAwM3p2VWZRaDFQMDFOcGhER2NiZzJJaXF0T3dMQ0kyVTl2U0Ntc3RDRHZUamZDbGtwZnlZNzNtWWdsWkFsRDBlQkttR2VvNnV4a1lpU3ZVdHdPZURrSE9YYllpc182Zy0zaXdJaG5HVFdrMkYzdHVEdXE?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 18:22",
+   "matches": [
     "fantopia-0peucdui"
    ],
    "sale_times": [],
@@ -9712,7 +9793,6 @@
    "hints": [],
    "first_seen": "2026-09-29 17:13",
    "matches": [
-    "fantopia-ku9ajljg",
     "fantopia-0peucdui"
    ],
    "sale_times": [],
@@ -9737,10 +9817,7 @@
    "first_seen": "2026-09-29 08:34",
    "image_text": "谭 咏 IB\nJAB\ngE\n+ \"AB Bob\nas\n演 唱\n终极 篇\n马来西亚 站 |MALAYSIA\nsw\nPASS\n‘Na\nVVIP\nVIP\nSELLING FAST!\ntel\nP1\nBi\nCa\ney\nP2 (RV)\nP3\nP4\n14\nP5 (RV)\nLhe\naoe\nstarplanet.com.my | my.\nra)\ntrip.com | ctrip.com | da\neo 1) =",
    "matches": [
-    "bms-BMSATMYS",
-    "fantopia-zk3x1r1c",
-    "fantopia-404os4yr",
-    "fantopia-xngkbueb"
+    "bms-BMSATMYS"
    ],
    "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
@@ -9792,9 +9869,6 @@
    "first_seen": "2026-09-29 08:34",
    "image_text": "LE\nUNFORG\nTAB\n终极 篇\n96\nadh\n7 4\no wat\n[Aas\nLy\nAch\nam\ng CBliseum",
    "matches": [
-    "fantopia-zk3x1r1c",
-    "fantopia-404os4yr",
-    "fantopia-xngkbueb",
     "bms-BMSATMYS"
    ],
    "status": "rumor",
@@ -9821,10 +9895,7 @@
    "first_seen": "2026-09-29 08:34",
    "image_text": "麟 “与\nos 世界 巡\nFOR\nmS +\nyp\n冬 极 篇\nre ity s 3A \\\nae\nhe\nNi as\nTet\nrs\naa)\nTs\n_ Day\nTo Go\nTi\net Launch\n门票 公开 发 售\nSTAR\n22 September 2026 | 2PM\n4&LPLANET",
    "matches": [
-    "bms-BMSATMYS",
-    "fantopia-zk3x1r1c",
-    "fantopia-404os4yr",
-    "fantopia-xngkbueb"
+    "bms-BMSATMYS"
    ],
    "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
@@ -9974,15 +10045,11 @@
    "hints": [],
    "sale_times": [],
    "first_seen": "2026-09-29 18:09",
-   "matches": [
-    "fantopia-zk3x1r1c",
-    "fantopia-404os4yr",
-    "fantopia-xngkbueb"
-   ],
+   "matches": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
-   "listed": true
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
   },
   {
    "id": "news-99002af8662e20cf",
@@ -10091,10 +10158,7 @@
    "first_seen": "2026-09-29 08:34",
    "image_text": "ㆍ ㅇ\nno\nes ‘a\nRe\noe\nist\n一 生\naf\nSS\nWEN\noA\n一 p=\ntus\npear ES",
    "matches": [
-    "bms-BMSATMYS",
-    "fantopia-zk3x1r1c",
-    "fantopia-404os4yr",
-    "fantopia-xngkbueb"
+    "bms-BMSATMYS"
    ],
    "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
