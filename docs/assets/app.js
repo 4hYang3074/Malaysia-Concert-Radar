@@ -158,9 +158,8 @@ function highlights(d, now = new Date(), limit = 8) {
       items.push({...base, tier: 1, tag: "🔥 正在抢票", cls: "bad", line: `${s.name || "开卖"} · ${fmt(s.start)} 开卖`});
     } else if (cat === "tba") {
       items.push({...base, tier: 0, tag: "⏳ 开票时间未公布", cls: "sub", line: `${e.dates[0] ? fmt(e.dates[0], false) + " 演出" : "演出日期未公布"} · ${platformsOf(e).map(p => p.source).join("、")}`});
-    } else if (e.first_seen && now - toDate(e.first_seen) < 7 * 864e5) {
-      items.push({...base, tier: 2, tag: "🆕 新上架", cls: "info", line: `${e.dates[0] ? fmt(e.dates[0], false) + " 演出" : "演出日期未公布"} · ${platformsOf(e).map(p => p.source).join("、")}`});
     }
+    // 已经开票超过一天的不列（首页只看未来要开票的）
   }
   for (const g of pendingGroups(d).groups) {
     if (!g.leads.length || !HOT_REGIONS.includes(g.leads[0].artist_region)) continue;
