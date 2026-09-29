@@ -1564,6 +1564,9 @@ def merge_announcements(leads, events, cfg=None):
         posted = (l.get("time") or "")[:10]
         for st in l.get("sale_times") or []:
             same_day = [s for s in target.get("sales") or [] if (s.get("start") or "")[:10] == st["time"][:10]]
+            for s in same_day:  # 平台的轮次没有名字（只写“开售”）：用公告同一天那一轮的说法补上（例如 VIP 会员预售）
+                if re.fullmatch(r"(开售|开票|開售|開票|sale|on sale)?", (s.get("name") or "").strip(), re.I) and not s.get("source_line"):
+                    s["source_line"], s["kind"] = st.get("line"), st.get("kind")
             if any((s.get("start") or "")[:len(st["time"])] == st["time"] for s in same_day):
                 continue  # 平台（或之前的公告）已经有同一个开票时间
             if same_day and len(st["time"]) > 10 and all(len(s.get("start") or "") == 10 for s in same_day):

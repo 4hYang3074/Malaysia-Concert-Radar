@@ -424,10 +424,25 @@ function saleRound(s) {
   const src = (raw.match(/（([^）]+)）$/) || [])[1];              // 公告来源，例如（东方日报 娱乐）
   const plat = (raw.match(/^([A-Za-z0-9 ]+) · /) || [])[1];       // 合并的平台，例如 GoLive · General Sales
   let name = raw.replace(/^加场 · /, "").replace(/（[^）]+）$/, "").replace(/^[A-Za-z0-9 ]+ · /, "").trim();
-  const kind = /pre-?sale|预售|預售|优先|優先|member|会员|會員|v\.?i\.?p|fan ?club|card ?holder|mastercard|preferred/i.test(name) ? "预售"
+  const kind = s.kind === "presale" ? "预售" : s.kind === "general" ? "公售" : /pre-?sale|预售|預售|优先|優先|member|会员|會員|v\.?i\.?p|fan ?club|card ?holder|mastercard|preferred/i.test(name) ? "预售"
     : /general|public|公售|公开|公開/i.test(name) ? "公售" : "开售";
   if (/^(开售|开票|公售|预售|开卖)$/.test(name)) name = "";
   return {added, kind, name, source: src || plat || null, label: `${added ? "加场 · " : ""}${kind}${name ? " · " + name : ""}`};
+}
+// 轮次名称（像平台的 “Mastercard Presale”、“General Sales”）：
+// 平台的轮次直接用平台名称；新闻 / IG 读到的，从原句挑出资格（VIP、会员、银行卡、粉丝会…）+ 预售 / 公售
+const ROUND_WORDS = [
+  [/v\.?\s?i\.?\s?p\.?/i, "VIP"], [/会员|會員|member/i, "Member"], [/粉丝会|粉絲會|fan ?club/i, "Fan Club"],
+  [/mastercard/i, "Mastercard"], [/visa/i, "Visa"], [/amex|american express/i, "Amex"], [/uob/i, "UOB"],
+  [/maybank/i, "Maybank"], [/cimb/i, "CIMB"], [/hsbc/i, "HSBC"], [/public bank/i, "Public Bank"],
+  [/live ?nation/i, "Live Nation"], [/card ?holder|持卡/i, "Cardholder"], [/early ?bird|早鸟|早鳥/i, "Early Bird"],
+];
+function roundName(s, r = saleRound(s)) {
+  if (!s.announced && (r.name || !s.source_line)) return r.name || "Sale";
+  const line = s.source_line || s.name || "";
+  const quals = ROUND_WORDS.filter(([re]) => re.test(line)).map(([, w]) => w);
+  const base = r.kind === "预售" ? "Presale" : r.kind === "公售" ? "General Sale" : "Sale";
+  return [...new Set(quals)].join(" ") + (quals.length ? " " : "") + base;
 }
 function saleTableHTML(e, now = new Date()) {
   const list = (e.sales || []).filter(s => s.start).sort((a, b) => a.start.localeCompare(b.start));
@@ -442,7 +457,7 @@ function saleTableHTML(e, now = new Date()) {
     return `<tr class="${done ? "past" : ""}">
       <td style="white-space:nowrap">${r.added ? "➕ 加场" : "🎤 首场"}</td>
       <td style="white-space:nowrap"><b>${esc(r.kind)}</b>${s.code_required ? "<br><small>需要预售码</small>" : ""}</td>
-      <td>${esc(s.source_line || r.name || (s.name || "").replace(/（[^）]+）$/, "") || "开售")}</td>
+      <td${s.source_line ? ` title="${esc(s.source_line)}"` : ""}>${esc(roundName(s, r))}</td>
       <td style="white-space:nowrap">${esc(fmt(s.start))}${dateOnly ? "<br><small>几点开还没公布</small>" : ""}</td>
       <td style="white-space:nowrap">${state}</td>
       <td class="meta">${s.url && s.announced ? `<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(src)}</a>` : esc(src)}</td></tr>`;
