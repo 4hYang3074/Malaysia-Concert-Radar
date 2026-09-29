@@ -468,10 +468,11 @@ def sale_times(text, posted):
             continue
         if not year and when < base - timedelta(days=60):  # 例如 12 月贴文讲 1 月开售
             when = when.replace(year=y + 1)
-        if when < base - timedelta(days=1):
-            continue
+        # 已经过去的开售日期也回传（past=True），用来判断这则公告是否已过期
+        now = datetime.now(MYT).replace(tzinfo=None)
+        past = when + timedelta(days=1) < now  # 开卖一天后就当已结束
         out.append({"time": when.strftime("%Y-%m-%d %H:%M") if hh is not None else when.strftime("%Y-%m-%d"),
-                    "line": line.strip(" ⁠⁠")[:140]})
+                    "line": line.strip(" ⁠⁠")[:140], "past": past})
     return out[:4]
 
 
@@ -1012,7 +1013,15 @@ def main():
         blob = f"{l.get('title', '')} {l.get('text') or ''}".lower()
         l["matches"] = [eid for eid, ns in names.items() if any(n in blob for n in ns)][:5]
         if l["kind"] in ("IG", "人工"):  # 旧线索也用最新规则重读开售时间
-            l["sale_times"] = sale_times(l.get("text") or "", l.get("time"))
+            found = sale_times(l.get("text") or "", l.get("time"))
+            l["sale_times"] = [s for s in found if not s["past"]]
+        else:
+            found, l["sale_times"] = [], []
+        # 状态：rumor = 只说要来、还没售票细节（待确定）；announced = 已公布未来开售时间（放抢票日历）；
+        # expired = 公布的开售日期都已经过了（不显示）
+        # onsale = 贴文说已经在卖/售罄（也不算待确定）
+        live_now = ONSALE_NOW.search(unicodedata.normalize("NFKC", f"{l.get('title', '')}\n{l.get('text') or ''}"))
+        l["status"] = "announced" if l["sale_times"] else "expired" if found else "onsale" if live_now else "rumor"
     used = add_avatars(h, events, leads, state, today)
     # 同一场演出在几个平台卖 → 合并成一张卡；线索里对应的演出 id 也跟着换
     events, idmap = merge_events(events)

@@ -44,11 +44,15 @@ loadData().then(d => {
         ${esc(p.source)}${p.sold_out ? "（售罄）" : ""}${p.price_from ? ` · ${esc(p.price_from)} 起` : ""} ↗</a>`).join("")}</div>
     </div>
 
-    ${sales.length ? `<h3>⏰ 售票时间</h3><div class="card"><table>
-      <tr><th>轮次</th><th>开始</th><th>结束</th></tr>
-      ${sales.map(s => `<tr class="${s.end && toDate(s.end) < now ? "past" : ""}">
-        <td><b>${esc(s.name || "")}</b>${s.code_required ? "<br><small>需要预售码</small>" : ""}${s.queue ? `<br><small>排队开放 ${esc(fmt(s.queue))}</small>` : ""}</td>
-        <td>${esc(fmt(s.start) || "—")}</td><td>${esc(fmt(s.end) || "未公布")}</td></tr>`).join("")}
+    ${sales.some(s => s.start) ? `<h3>⏰ 开卖时间</h3><div class="card"><table>
+      <tr><th>轮次</th><th>开卖时间</th><th></th></tr>
+      ${sales.filter(s => s.start).sort((a, b) => a.start.localeCompare(b.start)).map(s => {
+        const t = toDate(s.start), done = t < now - LIVE_MS, live = !done && t <= now;
+        return `<tr class="${done ? "past" : ""}">
+          <td><b>${esc(s.name || "开卖")}</b>${s.code_required ? "<br><small>需要预售码</small>" : ""}</td>
+          <td>${esc(fmt(s.start))}${s.queue ? `<br><small>排队 ${esc(s.queue.slice(11))} 开放</small>` : ""}</td>
+          <td style="white-space:nowrap">${done ? "已结束" : live ? '<span class="soldout">正在抢票</span>' : `<span class="pill warn" style="margin:0">${esc(countdown(t, now))}</span>`}</td></tr>`;
+      }).join("")}
     </table></div>` : ""}
 
     <h3>💺 座位图与票价${fee}</h3>

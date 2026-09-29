@@ -22,32 +22,39 @@ const qs = k => new URLSearchParams(location.search).get(k);
 
 // ---------- 分类：按售票时间 ----------
 const CATS = [
-  {key: "soon", icon: "🔥", label: "即将开售", desc: "已公布开售时间，还没开始卖。按开售时间排序。"},
-  {key: "onsale", icon: "🟢", label: "售票中", desc: "现在就可以买（余票以官网为准）。按演出日期排序。"},
-  {key: "tba", icon: "⏳", label: "开售时间未公布", desc: "演出已经上架，但还没公布什么时候开卖。"},
+  {key: "soon", icon: "🔥", label: "即将开售", desc: "开卖时间还没到，或刚开卖不到一天（正在抢票）。按开卖时间排序。"},
+  {key: "opened", icon: "✔️", label: "已开卖", desc: "开卖时间已经过了一天以上。要不要补票，请到官网看余票。按演出日期排序。"},
+  {key: "tba", icon: "⏳", label: "开售时间未公布", desc: "演出已经上架，但还没公布什么时候开卖。公布后会通知你。"},
   {key: "soldout", icon: "🔴", label: "已售罄", desc: "官方显示售罄或停止售票，可以留意加场或释票。"},
 ];
+const LIVE_MS = 864e5;  // 开卖后一天内算“正在抢票”，之后就当这一轮已经结束
 
+// 还没开卖、或开卖不到一天的轮次（最近的一轮）
 function nextSale(e, now) {
-  return (e.sales || []).filter(s => s.start && toDate(s.start) > now).sort((a, b) => a.start.localeCompare(b.start))[0];
+  return (e.sales || []).filter(s => s.start && toDate(s.start) > now - LIVE_MS).sort((a, b) => a.start.localeCompare(b.start))[0];
+}
+function lastStart(e) {
+  return (e.sales || []).filter(s => s.start).map(s => s.start).sort().pop();
 }
 function category(e, now = new Date()) {
   if (e.sold_out || e.stop_sales) return "soldout";
   if (nextSale(e, now)) return "soon";
-  const open = (e.sales || []).some(s => s.available && s.start && toDate(s.start) <= now && (!s.end || toDate(s.end) > now));
-  if (open || e.source === "Ticket2U" || e.source === "BookMyShow") return "onsale";
+  if (lastStart(e)) return "opened";
+  // Ticket2U、BookMyShow 没有公布开卖时间，但已经上架在卖
+  if (platformsOf(e).some(p => p.source === "Ticket2U" || p.source === "BookMyShow")) return "opened";
   return "tba";
 }
 function status(e, now = new Date()) {
   const c = category(e, now);
   if (c === "soldout") return {cls: "bad", text: e.sold_out ? "已售罄" : "已停止售票"};
   if (c === "soon") {
-    const s = nextSale(e, now);
-    return {cls: "warn", text: `${s.name || "开售"}：${fmt(s.start)}（${countdown(toDate(s.start), now)}）${s.code_required ? " · 需要预售码" : ""}`, short: `${fmt(s.start)} 开售 · ${countdown(toDate(s.start), now)}`};
+    const s = nextSale(e, now), t = toDate(s.start), code = s.code_required ? " · 需要预售码" : "";
+    if (t <= now) return {cls: "bad", text: `🔥 正在抢票：${s.name || "开卖"} ${fmt(s.start)} 开卖${code}`, short: `🔥 正在抢票（${fmt(s.start)} 开卖）`};
+    return {cls: "warn", text: `${s.name || "开卖"}：${fmt(s.start)}（${countdown(t, now)}）${code}`, short: `${fmt(s.start)} 开卖 · ${countdown(t, now)}`};
   }
-  if (c === "onsale") {
-    const end = (e.sales || []).find(s => s.end && toDate(s.end) > now && e.source === "Ticket2U");
-    return {cls: "ok", text: `正在售票${end ? `，${fmt(end.end)} 截止` : ""}（余票以官网为准）`, short: "正在售票"};
+  if (c === "opened") {
+    const last = lastStart(e);
+    return {cls: "sub", text: last ? `已开卖（最后一轮 ${fmt(last)}）· 余票请到官网确认` : "已在平台开卖 · 余票请到官网确认", short: "已开卖"};
   }
   return {cls: "sub", text: "开售时间还没公布，公布后会通知你", short: "开售时间未公布"};
 }
@@ -64,7 +71,7 @@ function saleCalendar(d, now = new Date(), days = 60) {
   for (const e of d.events) for (const s of e.sales || []) {
     for (const [k, what] of [["start", "开售"], ["queue", "排队开放"]]) {
       const t = s[k] && toDate(s[k]);
-      if (!t || t < now - 3 * 3600e3 || t > until) continue;
+      if (!t || t < now - LIVE_MS || t > until) continue;
       items.push({t, s: s[k], confirmed: true, href: `event.html?id=${encodeURIComponent(e.id)}`,
         name: e.artist_name, avatar: e.avatar, kind: e.avatar_kind,
         label: `${s.name || ""} ${what}`.trim() + (s.code_required ? " · 需要预售码" : ""), src: e.source});
@@ -72,7 +79,7 @@ function saleCalendar(d, now = new Date(), days = 60) {
   }
   for (const l of d.leads) for (const st of l.sale_times || []) {
     const t = t0(st.time);
-    if (!t || t < now - 3 * 3600e3 || t > until) continue;
+    if (!t || t < now - LIVE_MS || t > until) continue;
     const ev = (l.matches || []).map(m => d.byId[m]).find(Boolean);
     // 同一场演出、平台已经公布同一天的开售时间，就不重复列
     if (ev && items.some(i => i.confirmed && i.href.endsWith(encodeURIComponent(ev.id)) && i.s.slice(0, 10) === st.time.slice(0, 10))) continue;
@@ -101,7 +108,7 @@ function calendarHTML(items, now = new Date()) {
           <div class="name" style="font-size:15.5px">${esc(i.name)}</div>
           <div class="ev">${esc(i.label)}</div>
           <span class="pill ${i.confirmed ? "ok" : "warn"}">${i.confirmed ? "✅ " + esc(i.src) + " 已公布" : "🕒 " + esc(i.src) + " 公告 · 待平台确认"}</span>
-          ${i.t > now ? `<span class="pill sub">${esc(countdown(i.t, now))}</span>` : `<span class="pill ok">进行中</span>`}
+          ${i.t > now ? `<span class="pill sub">${esc(countdown(i.t, now))}</span>` : `<span class="pill bad">🔥 正在抢票</span>`}
         </div>
       </a>`).join("")}</div>`;
   }).join("");
@@ -140,7 +147,8 @@ async function loadData() {
   d.byId = Object.fromEntries(d.events.map(e => [e.id, e]));
   d.leadsByEvent = {};
   for (const l of d.leads) for (const m of l.matches || []) (d.leadsByEvent[m] ||= []).push(l);
-  d.pending = d.leads.filter(l => !(l.matches || []).some(m => d.byId[m]));
+  // 待确定 = 售票平台还没上架、而且贴文只说要来、还没公布售票细节的（已公布开售时间的在抢票日历，过期或已开卖的不显示）
+  d.pending = d.leads.filter(l => !(l.matches || []).some(m => d.byId[m]) && (l.status || "rumor") === "rumor");
   return d;
 }
 
