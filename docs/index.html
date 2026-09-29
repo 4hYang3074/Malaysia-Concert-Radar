@@ -35,8 +35,6 @@ loadData().then(d => {
   // 1. 即将开票：开票时间还没到（或刚开卖一天内），按开票时间排序
   const soon = d.events.filter(e => category(e, now) === "soon")
     .sort((a, b) => nextSale(a, now).start.localeCompare(nextSale(b, now).start));
-  // 2. 当红歌星（华语/K-pop/欧美，还没开票的优先）
-  const hot = highlights(d, now, 12);
   // 3. 最新上架（7 天内）
   const fresh = d.events.filter(e => e.first_seen && now - toDate(e.first_seen) < 7 * 864e5 && category(e, now) === "soon")
     .sort((a, b) => b.first_seen.localeCompare(a.first_seen) || (b.fans || 0) - (a.fans || 0)).slice(0, 20);
@@ -51,7 +49,6 @@ loadData().then(d => {
     <div class="t">${esc(g.name)}</div><div class="v">传出要来 · 还没开票</div><span class="tag">待确定</span></a>`;
   $("#rails").innerHTML =
     railHTML("🔥 即将开票", soon.map(e => posterCard(e, now)), "confirmed.html?cat=soon" + q) +
-    railHTML("🌟 当红歌星", hot.map(i => i.ev ? posterCard(i.ev, now) : groupCard(i.group))) +
     railHTML("📢 传出加场", added.map(e => posterCard(e, now))) +
     railHTML("🆕 最新上架", fresh.map(e => posterCard(e, now)), "confirmed.html?cat=all" + q) +
     railHTML("🗣️ 传出要来", rumor.map(groupCard), "pending.html") ||
