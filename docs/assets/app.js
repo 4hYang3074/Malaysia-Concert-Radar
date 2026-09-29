@@ -24,14 +24,17 @@ function currentCountry() {
 }
 // 歌星：只看华语、欧美、K-pop；其他（马来、印尼、印度、泰国等）要真的很红（Deezer 100 万粉丝以上）才列
 const HOT_REGIONS = ["华语", "K-pop", "欧美"];
-const isWanted = e => HOT_REGIONS.includes(e.region) || (e.fans || 0) >= 1e6;
+// 过滤结果以扫描程序的 hidden（附原因）为准；旧资料没有 hidden 时才用这里的规则
+const isWanted = e => "hidden" in e ? !e.hidden : (HOT_REGIONS.includes(e.region) || (e.fans || 0) >= 1e6);
 function byCountry(d, c = currentCountry()) {
-  const events = d.events.filter(e => isWanted(e) && (c === "ALL" || (e.country || "MY") === c));
-  if (c === "ALL") return {...d, events, byId: Object.fromEntries(events.map(e => [e.id, e]))};
+  const inCountry = e => c === "ALL" || (e.country || "MY") === c;
+  const events = d.events.filter(e => isWanted(e) && inCountry(e));
+  const filtered = d.events.filter(e => !isWanted(e) && inCountry(e));  // 被过滤的，附原因，可以在“已确定”底部查看
+  if (c === "ALL") return {...d, events, filtered, byId: Object.fromEntries(events.map(e => [e.id, e]))};
   const ids = new Set(events.map(e => e.id));
   // 线索只收录提到马来西亚/新加坡/韩国的；没有标国家的当作马来西亚
   const leads = d.leads.filter(l => (l.country || "MY") === c);
-  return {...d, events, leads, byId: Object.fromEntries(events.map(e => [e.id, e])),
+  return {...d, events, filtered, leads, byId: Object.fromEntries(events.map(e => [e.id, e])),
     pending: d.pending.filter(l => (l.country || "MY") === c), leadsByEvent: d.leadsByEvent, _ids: ids};
 }
 function countryBar() {
@@ -110,7 +113,7 @@ function saleCalendar(d, now = new Date(), days = 60) {
       name: e.artist_name, avatar: e.avatar, kind: e.avatar_kind,
       label: (s.name || "开票") + (s.code_required ? " · 需要预售码" : ""), src: e.source});
   }
-  for (const l of d.leads) for (const st of l.sale_times || []) {
+  for (const l of d.leads) for (const st of (l.hidden ? [] : l.sale_times || [])) {  // 被过滤的线索不进日历
     const t = t0(st.time);
     if (!t || t < now - LIVE_MS || t > until) continue;
     const ev = (l.matches || []).map(m => d.byId[m]).find(Boolean);
@@ -290,8 +293,9 @@ async function loadData(filter = true) {
   d.byId = Object.fromEntries(d.events.map(e => [e.id, e]));
   d.leadsByEvent = {};
   for (const l of d.leads) for (const m of l.matches || []) (d.leadsByEvent[m] ||= []).push(l);
-  // 待确定 = 售票平台还没上架、而且贴文只说要来、还没公布售票细节的（已公布开售时间的在抢票日历，过期或已开卖的不显示）
-  d.pending = d.leads.filter(l => !(l.matches || []).some(m => d.byId[m]) && (l.status || "rumor") === "rumor");
+  // 待确定 = 没被过滤、还没在售票平台上架、而且只说要来还没公布开票细节的（公布了开票时间的在抢票日历；过期或已开卖的不显示）
+  d.pending = d.leads.filter(l => !l.hidden && !l.listed && !(l.matches || []).some(m => d.byId[m]) && (l.status || "rumor") === "rumor");
+  d.filteredLeads = d.leads.filter(l => l.hidden);
   return filter ? byCountry(d) : d;
 }
 

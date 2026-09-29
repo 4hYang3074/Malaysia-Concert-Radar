@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>已确定的演唱会 · 马来西亚演唱会雷达</title>
 <meta name="theme-color" content="#15171c">
-<link rel="stylesheet" href="assets/app.css?v=20260929g">
+<link rel="stylesheet" href="assets/app.css?v=20260929j">
 </head>
 <body>
 <div class="wrap view">
@@ -16,7 +16,7 @@
   <div class="list" id="list"></div>
   <div id="foot"></div>
 </div>
-<script src="assets/app.js?v=20260929g"></script>
+<script src="assets/app.js?v=20260929j"></script>
 <script>
 loadData().then(d => {
   nav(d, "confirmed");
@@ -74,7 +74,17 @@ loadData().then(d => {
   $("#q").value = qs("q") || "";  // 首页搜索框带过来的关键字
   $("#q").addEventListener("input", render);
   render();
-  $("#foot").innerHTML = footer(d);
+  // 被过滤掉的演出和原因（方便检查有没有过滤错）
+  const hid = (d.filtered || []).slice().sort((a, b) => (a.hidden || "").localeCompare(b.hidden || ""));
+  $("#foot").innerHTML = (hid.length ? `
+    <details class="group" style="margin-top:26px">
+      <summary><h2 style="display:inline;margin:0;font-size:15px">🧹 已过滤 ${hid.length} 场 <span class="meta">（点开查看原因）</span></h2></summary>
+      <div class="card" style="margin-top:10px"><table>
+        <tr><th>演出</th><th>过滤原因</th></tr>
+        ${hid.map(e => `<tr><td><a href="event.html?id=${encodeURIComponent(e.id)}">${flag(e.country || "MY")} ${esc(e.artist_name)}</a><br><small class="meta">${esc(e.name)}</small></td>
+          <td class="meta">${esc(e.hidden || "")}</td></tr>`).join("")}
+      </table></div>
+    </details>` : "") + footer(d);
 }).catch(() => { nav(null, "confirmed"); fail($("#list")); });
 </script>
 </body>

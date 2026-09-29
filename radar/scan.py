@@ -550,7 +550,7 @@ def news_leads(h, cfg, health):
             pub = it.findtext("pubDate")
             t = email.utils.parsedate_to_datetime(pub).astimezone(MYT).strftime("%Y-%m-%d %H:%M") if pub else None
             src = it.find("source")
-            leads.append({"id": "news-" + lead_id(key), "kind": "新闻", "from": src.text if src is not None else "Google News",
+            leads.append({"id": "news-" + lead_id(key), "kind": "新闻", "country": q.get("country", "MY"), "from": src.text if src is not None else "Google News",
                           "title": title, "text": None, "time": t, "url": it.findtext("link"), "hints": []})
         time.sleep(SLEEP)
     health["Google News"] = {"ok": errors < len(cfg["news_queries"]), "count": len(leads),
@@ -799,7 +799,7 @@ def title_queries(e):
 
 def deezer_artist(h, e):
     """回传 (艺人名, 头像网址)。只接受名字确实出现在演出名称里的结果，避免认错人。"""
-    title = norm(html.unescape(e["name"]) + " " + (e.get("artist") or ""))
+    raw_title = html.unescape(e["name"]) + " " + (e.get("artist") or "")
     found = {}
     for q in title_queries(e):
         try:
@@ -809,8 +809,10 @@ def deezer_artist(h, e):
         time.sleep(0.3)
         for a in res.get("data") or []:
             n = norm(a.get("name"))
-            if len(n) < 2 or n not in title or not a.get("picture_medium") or "/artist//" in a["picture_medium"]:
-                continue  # 名字要出现在演出名称里；Deezer 没有照片时是预设灰图
+            # 名字要以“完整的词”出现在演出名称里（避免 ASEAN 里的 sean）；Deezer 没有照片时是预设灰图
+            if len(n) < 2 or not mentions(a["name"], raw_title) or n in COMMON_NAMES \
+                    or not a.get("picture_medium") or "/artist//" in a["picture_medium"]:
+                continue
             # 演出名称里的普通单词（Spotlight、Cadenza、Dior…）常撞到同名小账号：用粉丝数把关
             if re.search(r"[^\x00-\x7f]", a["name"]):
                 need = 20            # 中文等名字本身就很特定
@@ -901,7 +903,7 @@ def download_image(h, url, rel, max_bytes=3_000_000):
 def add_avatars(h, events, leads, state, today):
     """每场演出：先找 Deezer 的艺人照片，找不到用官方海报。结果存进 state 避免每次重查；
     没找到的 7 天后再试。图片下载到 docs/avatars/。"""
-    cache = state.setdefault("artists", {})
+    cache = state.setdefault("artists_v3", {})  # v3：艺人名改成“完整的词”比对后重新识别
     used = set()
     for e in events:
         c = cache.get(e["id"])
@@ -917,8 +919,18 @@ def add_avatars(h, events, leads, state, today):
         e["artist_name"] = c.get("name") or e.get("artist") or (guesses[0] if guesses else e["name"])
         e["fans"] = c.get("fans") or 0
         e["region"] = region_of(h, e["artist_name"], e["name"], state.setdefault("regions_v2", {}), MB_BUDGET)
-        if e.get("country") == "KR" and not (e["region"] == "欧美" and e["fans"] >= 100000):
-            e["region"] = "K-pop"  # 韩国场次：除非是知名欧美歌手，否则当作韩国歌手
+        if e["region"] == "其他" and not c.get("name"):
+            # 没有在 Deezer 认出艺人时，用演出名称里的其他候选名再查（例如 “MJ116 OGS TOUR” → MJ116）；
+            # 只接受华语 / K-pop，避免普通单词撞到同名的欧美艺人
+            for g in guesses[:4]:
+                r = region_of(h, g, e["name"], state.setdefault("regions_v2", {}), MB_BUDGET)
+                if r in ("华语", "K-pop"):
+                    e["region"] = r
+                    break
+        # 韩国场次：默认当作韩国歌手；欧美歌手来韩国巡演（名称写 Tour in Seoul / Asia Tour，或很红）才算欧美
+        intl_tour = re.search(r"(?i)\b(tour|live)\b.*\b(in (seoul|korea|busan|incheon))\b|\basia(n)? tour\b|\bworld tour\b", e["name"])
+        if e.get("country") == "KR" and not (e["region"] == "欧美" and (e["fans"] >= 100000 or intl_tour)):
+            e["region"] = "K-pop"
         # 官方海报（直式大图卡片用）：每场都存一份；签名链接会失效，所以存成本地图片
         ext = ".png" if ".png" in (e.get("poster") or "").split("?")[0].lower() else ".jpg"
         poster_rel = f"avatars/p-{e['id']}{ext}"
@@ -1104,6 +1116,144 @@ def detect_platforms(text, cfg):
     return [p["name"] for p in cfg.get("ticket_platforms", []) if any(m in t for m in p["match"])]
 
 
+def keyword_hit(keywords, text):
+    """关键字比对：英文要整个词（避免 “Long Run” 被 run 命中），中文直接找。回传命中的字。"""
+    t = unicodedata.normalize("NFKC", text or "").lower()
+    for kw in keywords:
+        k = kw.lower().strip()
+        if not k:
+            continue
+        if re.search(r"[^\x00-\x7f]", k):
+            if k in t:
+                return kw.strip()
+        elif re.search(rf"(?<![a-z0-9]){re.escape(k)}(?![a-z0-9])", t):
+            return kw.strip()
+    return None
+
+
+def apply_filters(events, cfg):
+    """过滤管线：每场演出依序检查，第一个不通过的原因写进 hidden（网页会隐藏，但可以在“已过滤”里看到原因）。
+      1. 是不是演唱会（脱口秀、体育、展览、音乐剧等排除；粉丝见面会、音乐节保留）
+      2. 歌手类别：只看华语 / K-pop / 欧美；其他类别要够红（Deezer 粉丝数门槛）
+    售票状态（未开票 / 已结束 / 售罄）在网页上按当下时间判断，不在这里过滤。"""
+    f = cfg.get("filters", {})
+    keep = set(f.get("keep_regions", ["华语", "K-pop", "欧美"]))
+    min_fans = f.get("min_fans_other_regions", 1_000_000)
+    overrides = f.get("region_overrides", {})
+    for e in events:
+        e["hidden"] = None
+        text = f"{e['name']} {e.get('artist') or ''}"
+        hit = next((r for k, r in overrides.items() if mentions(k, f"{text} {e.get('artist_name') or ''}")), None)
+        if hit:
+            e["region"] = hit  # 你手动指定的类别优先
+        kw = keyword_hit(f.get("non_concert_keywords", []), text)
+        typ = keyword_hit(f.get("non_concert_types", []), e.get("type") or "")
+        if kw or typ:
+            e["hidden"] = f"不是演唱会（{kw or e.get('type')}）"
+        elif e.get("region") not in keep and (e.get("fans") or 0) < min_fans:
+            e["hidden"] = f"歌手类别：{e.get('region') or '未知'}（只看{'、'.join(sorted(keep))}，其他要 {min_fans // 10000} 万粉丝以上）"
+
+
+def merge_announcements(leads, events):
+    """官方公告（IG / 你提交的）读到的未来开票时间，并入对应的演出——例如平台还没更新的“加场”开票。重复呼叫不会重复加。"""
+    ev_by_id = {e["id"]: e for e in events}
+    for l in leads:
+        target = next((ev_by_id[m] for m in l.get("matches", []) if m in ev_by_id), None)
+        if not target:
+            continue
+        added = re.search(r"(?i)加场|加場|added show|additional show|extra show|new show|another chance", lead_blob(l))
+        for st in l.get("sale_times") or []:
+            if any((s.get("start") or "")[:len(st["time"])] == st["time"] for s in target.get("sales") or []):
+                continue  # 平台（或之前的公告）已经有同一个开票时间
+            target.setdefault("sales", []).append({
+                "name": f"{'加场开票' if added else '开票'}（{l['from']} 公告）", "start": st["time"], "end": None,
+                "queue": None, "available": True, "code_required": False, "url": l.get("url"), "announced": True})
+            target["sales_closed"] = False
+
+
+def apply_lead_filters(leads, events, cfg):
+    """线索（IG、新闻、你提交的）的过滤：hidden 写原因（网页的待确定、抢票日历、首页都按这个过滤）。
+    1. 同一位艺人已经在售票平台上架 → 对应到那场演出（不在待确定重复出现）
+    2. 不是演唱会 / 歌手类别不对 → 排除
+    3. 贴文公布的开票日期已过、或贴文说已开卖 / 售罄 → 排除
+    已公布未来开票时间的（announced）不隐藏：会出现在抢票日历；待确定只放 status = rumor 的。"""
+    f = cfg.get("filters", {})
+    keep = set(f.get("keep_regions", ["华语", "K-pop", "欧美"]))
+    min_fans = f.get("min_fans_other_regions", 1_000_000)
+    by_artist = {}
+    for e in events:
+        if len(norm(e.get("artist_name"))) >= 2:
+            by_artist.setdefault(norm(e["artist_name"]), []).append(e)
+    ev_by_id = {e["id"]: e for e in events}
+    for l in leads:
+        l["hidden"] = None
+        if l.get("artist") and norm(l["artist"]) in by_artist:  # 用艺人名对上已上架的演出
+            for e in by_artist[norm(l["artist"])]:
+                if e["id"] not in l["matches"]:
+                    l["matches"].append(e["id"])
+        linked = [ev_by_id[m] for m in l.get("matches", []) if m in ev_by_id]
+        kw = keyword_hit(f.get("non_concert_keywords", []), f"{l.get('title', '')}\n{l.get('text') or ''}")
+        if linked and all(e.get("hidden") for e in linked):
+            l["hidden"] = f"对应的演出已被过滤（{linked[0]['hidden']}）"
+        elif linked:
+            l["hidden"] = None  # 已上架：显示在那场演出的“相关消息”，不在待确定
+        elif kw:
+            l["hidden"] = f"不是演唱会（{kw}）"
+        elif not l.get("artist"):
+            l["hidden"] = "认不出是哪位明星（待人工或 AI 分析）"
+        elif keyword_hit(f.get("past_event_keywords", []), f"{l.get('title', '')}\n{l.get('text') or ''}"):
+            l["hidden"] = "演出已经结束（回顾 / 感谢贴）"
+        elif l.get("artist") and l.get("artist_region") not in keep and (l.get("artist_fans") or 0) < min_fans:
+            l["hidden"] = f"歌手类别：{l.get('artist_region') or '未知'}（只看{'、'.join(sorted(keep))}）"
+        elif l.get("status") == "expired":
+            l["hidden"] = "公布的开票日期已过"
+        elif l.get("status") == "onsale":
+            l["hidden"] = "贴文说已经开卖或售罄"
+        l["listed"] = bool(linked)
+    return leads
+
+
+def news_verify(h, leads, cfg, state, today):
+    """待确定的明星：再用 Google News 搜“艺人 + 演唱会 + 马来西亚”，看有几篇相关报导、提到哪个售票平台。
+    每位艺人每天查一次（结果存 state）。回传 {艺人: 查证结果}。"""
+    cache = state.setdefault("news_verify", {})
+    artists = []
+    for l in leads:
+        if not l.get("hidden") and not l.get("listed") and l.get("status") == "rumor" and l.get("artist"):
+            if l["artist"] not in artists:
+                artists.append(l["artist"])
+    out = {}
+    for a in artists[:20]:
+        c = cache.get(a)
+        if not c or c.get("checked") != today:
+            q = (f'"{a}" (concert OR tour OR 演唱会 OR 演唱會 OR konsert OR fanmeeting) '
+                 f'(Malaysia OR "Kuala Lumpur" OR 吉隆坡 OR 大马 OR 大馬) when:90d')
+            url = "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": q, "hl": "en-MY", "gl": "MY", "ceid": "MY:en"})
+            items = []
+            try:
+                root = ET.fromstring(h.request(url))
+                for it in root.iter("item"):
+                    title = (it.findtext("title") or "").strip()
+                    # 标题要同时提到这位艺人、演唱会、马来西亚，才算相关报导
+                    if title and mentions(a, title) and relevant(title, cfg["keywords"], need_malaysia=True):
+                        pub = it.findtext("pubDate")
+                        t = email.utils.parsedate_to_datetime(pub).astimezone(MYT).strftime("%Y-%m-%d") if pub else None
+                        items.append({"title": title, "url": it.findtext("link"), "time": t})
+            except Exception as ex:
+                print(f"  news verify {a}: {ex}", flush=True)
+                continue
+            time.sleep(SLEEP)
+            blob = "\n".join(i["title"] for i in items)
+            c = {"checked": today, "count": len(items), "top": items[:3],
+                 "platforms": detect_platforms(blob, cfg),
+                 "sale_times": [s for s in sale_times(blob, today + " 00:00") if not s["past"]]}
+            cache[a] = c
+        out[a] = c
+    for k in [k for k in cache if k not in artists]:
+        del cache[k]
+    return out
+
+
 SOURCE_RANK = {"GoLive": 0, "Fantopia": 1, "BookMyShow": 2, "Ticket2U": 3}
 
 
@@ -1277,6 +1427,7 @@ def main():
     used = add_avatars(h, events, leads, state, today)
     # 同一场演出在几个平台卖 → 合并成一张卡；线索里对应的演出 id 也跟着换
     events, idmap = merge_events(events)
+    apply_filters(events, cfg)
     for l in leads:
         l["matches"] = list(dict.fromkeys(idmap.get(m, m) for m in l.get("matches", [])))
         l["platforms"] = detect_platforms(lead_blob(l), cfg)
@@ -1292,23 +1443,16 @@ def main():
             hit = n in blob if len(n) >= 4 else re.search(rf"(?<![a-z0-9]){re.escape(e['artist_name'].lower())}(?![a-z0-9])", raw)
             if hit:
                 l["matches"].append(e["id"])
-    # 官方公告（IG / 你提交的）读到的未来开票时间，并入对应的演出——例如平台还没更新的“加场”开票
-    ev_by_id = {e["id"]: e for e in events}
-    for l in leads:
-        target = next((ev_by_id[m] for m in l.get("matches", []) if m in ev_by_id), None)
-        if not target:
-            continue
-        added = re.search(r"(?i)加场|加場|added show|additional show|extra show|new show|another chance", lead_blob(l))
-        for st in l.get("sale_times") or []:
-            if any((s.get("start") or "")[:len(st["time"])] == st["time"] for s in target.get("sales") or []):
-                continue  # 平台已经有同一个开票时间
-            target.setdefault("sales", []).append({
-                "name": f"{'加场开票' if added else '开票'}（{l['from']} 公告）", "start": st["time"], "end": None,
-                "queue": None, "available": True, "code_required": False, "url": l.get("url"), "announced": True})
-            target["sales_closed"] = False
+    merge_announcements(leads, events)
     more, watch_out = group_pending(h, events, leads, state, cfg)
     used |= more
     cleanup_images(used)
+    apply_lead_filters(leads, events, cfg)
+    merge_announcements(leads, events)  # 用艺人名新对上的公告，开票时间也并进去
+    checks = news_verify(h, leads, cfg, state, today)  # 待确定的明星再用 Google News 查证
+    for l in leads:  # 只来自新闻、又查证不到马来西亚相关报导的：可信度太低，不放进待确定
+        if not l.get("hidden") and not l.get("listed") and l["kind"] == "新闻" and checks.get(l.get("artist"), {}).get("count", 1) == 0:
+            l["hidden"] = "Google 新闻查证不到马来西亚的相关报导"
 
     out = {
         "generated_at": now.strftime("%Y-%m-%d %H:%M"),
@@ -1317,6 +1461,7 @@ def main():
         "ig_accounts": cfg["ig_accounts"],
         "hashtags": cfg["hashtags"],
         "watch_artists": watch_out,
+        "news_checks": checks,
         "platforms": cfg.get("ticket_platforms", []),
         "events": events,
         "leads": leads,
