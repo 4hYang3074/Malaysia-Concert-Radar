@@ -568,6 +568,30 @@ def news_leads(h, cfg, health):
         time.sleep(SLEEP)
     health["Google News"] = {"ok": errors < len(cfg["news_queries"]), "count": len(leads),
                              "error": f"{errors} 个查询失败" if errors else None}
+    # 本地媒体的 RSS（Google News 没收录马来西亚华文媒体，直接读它们官方的 RSS）
+    for f in cfg.get("rss_feeds", []):
+        n = 0
+        try:
+            root = ET.fromstring(h.request(f["url"], retries=2))
+        except Exception as e:
+            health[f["name"]] = {"ok": False, "error": short(str(e), 120)}
+            continue
+        for it in root.iter("item"):
+            title = (it.findtext("title") or "").strip()
+            key = re.sub(r"\W+", "", title.lower())[:80]
+            if not title or key in seen or not relevant(title, cfg["keywords"], False) \
+                    or (f.get("need_malaysia", True) and not place_hit(title, cfg, f.get("country", "MY"))):
+                continue
+            seen.add(key)
+            pub = it.findtext("pubDate")
+            t = email.utils.parsedate_to_datetime(pub).astimezone(MYT).strftime("%Y-%m-%d %H:%M") if pub else None
+            desc = text_of(it.findtext("description") or "")
+            leads.append({"id": "news-" + lead_id(key), "kind": "新闻", "country": f.get("country", "MY"), "from": f["name"],
+                          "title": title, "text": short(desc, 600) or None, "time": t, "url": it.findtext("link"), "hints": [],
+                          "sale_times": sale_times(f"{title}\n{desc}", t)})
+            n += 1
+        health[f["name"]] = {"ok": True, "count": n}
+        time.sleep(SLEEP)
     return leads
 
 

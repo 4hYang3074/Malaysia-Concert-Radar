@@ -91,6 +91,11 @@
     {"q": "싱가포르 콘서트 OR 싱가포르 공연 when:7d", "hl": "ko", "gl": "KR", "ceid": "KR:ko", "country": "SG"}
   ],
 
+  "_rss_feeds_说明": "本地媒体官方 RSS（Google News 没收录马来西亚华文媒体）。本地媒体不要求标题提到马来西亚",
+  "rss_feeds": [
+    {"name": "东方日报 娱乐", "url": "https://www.orientaldaily.com.my/feeds/rss/entertainment", "need_malaysia": false}
+  ],
+
   "leads_keep_days": 30,
 
   "_filters_说明": "过滤规则：每场演出依序检查，被过滤的会记录原因，网页“已确定”底部可以查看（方便检查有没有过滤错）",
@@ -99,7 +104,7 @@
     "_region_overrides_说明": "系统认不出的歌手类别，手动指定：演出名称里出现左边的字，就归到右边的类别",
     "region_overrides": {"KUN": "华语", "蔡徐坤": "华语", "MJ116": "华语", "ROSETOPIA": "K-pop", "The Rose": "K-pop", "IDOL RADIO": "K-pop"},
     "min_fans_other_regions": 1000000,
-    "non_concert_keywords": ["comedy", "stand-up", "standup", "stand up", "脱口秀", "棟篤笑", "talk show", "football", "friendly match", "足球", "球赛", "友谊赛", "友誼賽", "exhibition", "展览", "展覽", "workshop", "seminar", "conference", "musical", "音乐剧", "音樂劇", "theatre", "theater", "drama", "舞台剧", "magic", "魔术", "circus", "ballet", "芭蕾", "marathon", "fun run", "expo", "carnival ride", "film screening", "放映", "动画", "anime screening", "book signing", "giveaway", "scam", "grand prix", "promo code", "contest", "抽奖", "抽獎", "优惠", "優惠"],
+    "non_concert_keywords": ["comedy", "stand-up", "standup", "stand up", "脱口秀", "棟篤笑", "talk show", "football", "friendly match", "足球", "球赛", "友谊赛", "友誼賽", "exhibition", "展览", "展覽", "workshop", "seminar", "conference", "musical", "音乐剧", "音樂劇", "theatre", "theater", "drama", "舞台剧", "magic", "魔术", "circus", "ballet", "芭蕾", "marathon", "fun run", "expo", "carnival ride", "film screening", "放映", "动画", "anime screening", "book signing", "giveaway", "scam", "grand prix", "promo code", "contest", "抽奖", "抽獎", "优惠", "優惠", "好康", "赢取", "贏取", "首映礼", "首映禮"],
     "past_event_keywords": ["that's a wrap", "that’s a wrap", "thats a wrap", "came alive", "thousands gathered", "concludes", "concluded", "wrapped up", "what a night", "thank you for coming", "thank you malaysia", "last night", "recap", "圆满落幕", "圓滿落幕", "圆满结束", "圓滿結束", "感谢大家", "感謝大家", "昨晚", "berakhir", "terima kasih"],
     "non_concert_types": ["comedy", "sport", "sports", "exhibition", "theatre", "musical", "family", "workshop"]
   },
