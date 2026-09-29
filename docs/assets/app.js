@@ -233,7 +233,8 @@ function dateRange(dates) {
 }
 function posterCard(e, now = new Date()) {
   // 卡片优先用艺人照片（Deezer 头像）；没有才用官方海报
-  const img = (e.avatar_kind === "artist" && localUrl(e.avatar)) || localUrl(e.poster_img) || localUrl(e.avatar);
+  // 这场演出自己的直式海报最好；没有（或只有横幅 / 平台占位图）就用艺人照片
+  const img = (e.poster_portrait && localUrl(e.poster_img)) || (e.avatar_kind === "artist" && localUrl(e.avatar)) || localUrl(e.poster_img) || localUrl(e.avatar);
   const s = nextSale(e, now), cat = category(e, now);
   let cd = "", hot = false;
   // 卡片上直接显示开票日期，不用点进去看

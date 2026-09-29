@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>演出详情 · 马来西亚演唱会雷达</title>
 <meta name="theme-color" content="#15171c">
-<link rel="stylesheet" href="assets/app.css?v=20260929r">
+<link rel="stylesheet" href="assets/app.css?v=20260929s">
 </head>
 <body>
 <div class="wrap view" id="app"></div>
-<script src="assets/app.js?v=20260929r"></script>
+<script src="assets/app.js?v=20260929s"></script>
 <script>
 loadData(false).then(d => {
   nav(d, "confirmed");
@@ -54,16 +54,25 @@ loadData(false).then(d => {
         ${esc(p.source)}${p.sold_out ? "（售罄）" : ""}${p.price_from ? ` · ${esc(p.price_from)} 起` : ""} ↗</a>`).join("")}</div>
     </div>
 
-    ${sales.some(s => s.start) ? `<h3>⏰ 开卖时间</h3><div class="card"><table>
-      <tr><th>轮次</th><th>开卖时间</th><th></th></tr>
-      ${sales.filter(s => s.start).sort((a, b) => a.start.localeCompare(b.start)).map(s => {
-        const t = toDate(s.start), done = t < now - LIVE_MS, live = !done && t <= now;
+    ${sales.some(s => s.start) ? (() => {
+      // 所有开票轮次一次列出：首场（预售、公售…）和加场分开，每轮标来源
+      const row = s => {
+        const t = toDate(s.start.length === 10 ? s.start + " 00:00" : s.start);
+        const done = t < now - (s.start.length === 10 ? 864e5 : LIVE_MS), live = !done && t <= now;
+        const name = (s.name || "开卖").replace(/^加场 · /, "");
         return `<tr class="${done ? "past" : ""}">
-          <td><b>${s.news && s.url ? `<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(s.name)}</a>` : esc(s.name || "开卖")}</b>${s.code_required ? "<br><small>需要预售码</small>" : ""}</td>
-          <td>${esc(fmt(s.start))}</td>
+          <td><b>${s.url && s.announced ? `<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(name)}</a>` : esc(name)}</b>${s.code_required ? "<br><small>需要预售码</small>" : ""}</td>
+          <td>${esc(fmt(s.start))}${s.start.length === 10 ? "<br><small>几点开还没公布</small>" : ""}</td>
           <td style="white-space:nowrap">${done ? "已结束" : live ? '<span class="soldout">正在抢票</span>' : `<span class="pill warn" style="margin:0">${esc(countdown(t, now))}</span>`}</td></tr>`;
-      }).join("")}
-    </table></div>` : ""}
+      };
+      const list = sales.filter(s => s.start).sort((a, b) => a.start.localeCompare(b.start));
+      const first = list.filter(s => !s.added && !/^加场/.test(s.name || "")), extra = list.filter(s => s.added || /^加场/.test(s.name || ""));
+      const table = (title, l) => l.length ? `${title ? `<tr><td colspan="3" class="meta" style="background:var(--card);font-weight:700">${title}</td></tr>` : ""}${l.map(row).join("")}` : "";
+      return `<h3>⏰ 开卖时间</h3><div class="card"><table>
+        <tr><th>轮次（来源）</th><th>开卖时间</th><th></th></tr>
+        ${table(extra.length ? "🎤 首场" : "", first)}${table("➕ 加场", extra)}
+      </table></div>`;
+    })() : ""}
     ${(e.sale_evidence || []).length ? `<h3>🧾 售票状态的根据</h3><div class="card"><table class="evi">
       <tr><th>来源</th><th>内容</th><th>时间</th></tr>
       ${e.sale_evidence.map(x => `<tr><td class="meta" style="white-space:nowrap">${esc(x.src)}</td>

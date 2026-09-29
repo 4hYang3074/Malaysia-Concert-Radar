@@ -489,20 +489,40 @@ def sale_hints(text):
 
 MONTHS = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
 SALE_LINE = re.compile(r"(?i)on-?\s?sale|presale|pre-sale|general sale|ticket(s|ing)? (sale|on sale|go live|available)|"
-                       r"开售|開售|公售|预售|預售|抢票|搶票|开抢|開搶|jualan tiket|tiket dijual|waiting room|queue")
+                       r"开售|開售|公售|预售|預售|抢票|搶票|开抢|開搶|发售|發售|开卖|開賣|售票|jualan tiket|tiket dijual|waiting room|queue|"
+                       r"general\s*(admission\s*)?(sale|on-?sale)|public sale|fan ?club sale|member(ship)? (pre-?)?sale")
 # “已经在卖”的句子里的日期通常是演出日期，不是开售日期
 ONSALE_NOW = re.compile(r"(?i)on sale now|now on sale|available now|selling now|sold out|现正发售|現正發售|火热售票中|熱賣中|售票中")
 EN_DATE = re.compile(r"(?i)\b(\d{1,2})(?:st|nd|rd|th)?\s+(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?(?:,?\s+(20\d\d))?"
                      r"|\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(\d{1,2})(?:st|nd|rd|th)?(?:,?\s+(20\d\d))?")
 ZH_DATE = re.compile(r"(?:(20\d\d)\s*年\s*)?(\d{1,2})\s*月\s*(\d{1,2})\s*[日号號]")
-TIME = re.compile(r"(?i)(上午|中午|下午|晚上)?\s*(\d{1,2})(?:[:：.](\d{2}))?\s*(am|pm|点|點)|(\d{1,2})[:：](\d{2})")
+TIME = re.compile(r"(?i)(凌晨|早上|上午|中午|下午|傍晚|晚上)?\s*(\d{1,2})(?:[:：.](\d{2}))?\s*(am|pm|点|點|时|時)(?!间|間)|(\d{1,2})[:：](\d{2})")
 
 
 def sale_times(text, posted):
     """从官方公告的“开售/预售”行读出开售时间（马来西亚时间）。只看提到售票的行，避免把演出日期当成开售日期。"""
     base = datetime.strptime(posted, "%Y-%m-%d %H:%M") if posted else datetime.now(MYT).replace(tzinfo=None)
     out = []
-    for line in unicodedata.normalize("NFKC", text).split("\n"):  # 𝐎𝐧-𝐒𝐚𝐥𝐞 这类花体字转回普通字母
+    # 先按句子（。！？换行）切，再按分句（，；、）切：一段新闻常同时写预售、公售、加场，还夹着演出日期
+    # 只从“提到售票的分句”拿日期；句子提到加场的，这几轮算加场的票
+    for sent in re.split(r"[\n。！？]", text or ""):
+        sent_added = bool(ADDED_RE.search(unicodedata.normalize("NFKC", sent)))
+        # 中文句子按全形标点切；英文句子只按分号切（英文日期里常有逗号，例如 29 September 2026, from 3PM）
+        parts = re.split(r"[，；、;]", sent) if re.search(r"[㐀-鿿]", sent) else sent.split(";")
+        for clause in parts:
+            out += _clause_sale(unicodedata.normalize("NFKC", clause), base, sent_added)  # 𝐎𝐧-𝐒𝐚𝐥𝐞 这类花体字转回普通字母
+    seen, uniq = set(), []
+    for x in out:
+        if x["time"] not in seen:
+            seen.add(x["time"])
+            uniq.append(x)
+    return uniq[:8]
+
+
+def _clause_sale(line, base, added):
+    """一个分句里的开售时间（没有就回传空）。"""
+    out = []
+    for _ in (0,):
         if not SALE_LINE.search(line) or ONSALE_NOW.search(line):
             continue
         m = EN_DATE.search(line)
@@ -523,7 +543,7 @@ def sale_times(text, posted):
                 hh, mm = int(t.group(5)), int(t.group(6))
             else:
                 hh, mm = int(t.group(2)), int(t.group(3) or 0)
-                if (t.group(4) or "").lower() == "pm" or t.group(1) in ("下午", "晚上"):
+                if (t.group(4) or "").lower() == "pm" or t.group(1) in ("下午", "傍晚", "晚上"):
                     hh = hh % 12 + 12
                 elif (t.group(4) or "").lower() == "am" and hh == 12:
                     hh = 0
@@ -537,9 +557,10 @@ def sale_times(text, posted):
         # 已经过去的开售日期也回传（past=True），用来判断这则公告是否已过期
         now = datetime.now(MYT).replace(tzinfo=None)
         past = when + (timedelta(days=1) if hh is None else timedelta(hours=12)) < now  # 开票半天后就当已结束（只有日期的算一天）
+        kind = "presale" if PRESALE_RE.search(line) and not GENERAL_RE.search(line) else "general" if GENERAL_RE.search(line) else "sale"
         out.append({"time": when.strftime("%Y-%m-%d %H:%M") if hh is not None else when.strftime("%Y-%m-%d"),
-                    "line": line.strip(" ⁠⁠")[:140], "past": past})
-    return out[:4]
+                    "line": line.strip(" ⁠⁠")[:140], "past": past, "kind": kind, "added": added})
+    return out
 
 
 def news_leads(h, cfg, health):
@@ -623,6 +644,56 @@ def manual_leads(h, health, state):
                     "sale_times": sale_times(body_all, local(i.get("created_at")))})
     health["人工线索"] = {"ok": True, "count": len(out)}
     return out
+
+
+def article_text(h, url, state):
+    """读新闻网页的正文（标题和摘要常没有开票时间，正文才有“预售 / 公售 / 加场”几号几点）。
+    从 articleBody 或常见的正文区块开始取段落；遇到以“...”结尾的段落（相关新闻列表）就停。结果存 state。"""
+    cache = state.setdefault("article_texts", {})
+    if url in cache:
+        return cache[url]
+    text = ""
+    try:
+        page = h.request(url, retries=1)
+        page = page.decode("utf-8", "replace") if isinstance(page, bytes) else page
+        start = re.search(r'itemprop="articleBody"|class="[^"]*(?:article-body|article__body|story-body|entry-content|'
+                          r'article-content|news-content|post-content)[^"]*"|<article\b', page)
+        paras = []
+        for p in re.findall(r"<p\b[^>]*>(.*?)</p>", page[start.start() if start else 0:], re.S):
+            p = text_of(p).strip()
+            if p.endswith(("...", "…")):
+                break  # 正文结束，后面是相关新闻
+            if len(p) >= 15:
+                paras.append(p)
+            if len(paras) >= 15:
+                break
+        text = "\n".join(paras)[:4000]
+    except Exception as ex:
+        print(f"  article {url[:60]}: {ex}", flush=True)
+    cache[url] = text
+    return text
+
+
+def enrich_articles(h, leads, state, limit=20):
+    """对上已上架演出的新闻：读正文，重新找开票时间（预售、公售、加场都列出来）。每次最多读 limit 篇新的。"""
+    n = 0
+    cache = state.get("article_texts", {})
+    used = set()
+    for l in leads:
+        url = l.get("url") or ""
+        if l["kind"] != "新闻" or not l.get("matches") or not url.startswith("http") or "news.google.com" in url:
+            continue
+        used.add(url)
+        if url not in cache:
+            if n >= limit:
+                continue
+            n += 1
+        body = article_text(h, url, state)
+        if body and body not in (l.get("text") or ""):
+            l["text"] = short(f"{l.get('text') or ''}\n{body}".strip(), 4000)
+            l["sale_times"] = sale_times(f"{l['title']}\n{l['text']}", l.get("time"))
+    for k in [k for k in state.get("article_texts", {}) if k not in used]:
+        del state["article_texts"][k]
 
 
 def link_preview(h, url, state, depth=1):
@@ -817,8 +888,8 @@ def official_images(h, events, state):
 
 
 SALE_STATES = ["ANNOUNCED", "TICKET_INFO_PENDING", "PRESALE_ANNOUNCED", "GENERAL_SALE_ANNOUNCED", "ON_SALE", "SOLD_OUT"]
-PRESALE_RE = re.compile(r"(?i)pre-?sale|预售|預售|优先|優先|member|fan ?club|fanclub|card ?holder|선예매|팬클럽")
-GENERAL_RE = re.compile(r"(?i)general|public|公售|公開|公开|일반")
+PRESALE_RE = re.compile(r"(?i)pre-?sale|预售|預售|优先|優先|member|会员|會員|v\.?i\.?p\.?|fan ?club|fanclub|card ?holder|선예매|팬클럽")
+GENERAL_RE = re.compile(r"(?i)general|public|公售|公開|公开|一般发售|일반")
 
 
 def sale_status(events, checks, now):
@@ -1196,6 +1267,37 @@ def artist_aliases(events, cfg, state):
     return out
 
 
+def img_size(path):
+    """读图片宽高（PNG / JPEG / WebP / GIF 的档头，不用第三方套件）。读不到回传 None。"""
+    try:
+        b = Path(path).read_bytes()[:65536]
+        if b[:8] == b"\x89PNG\r\n\x1a\n":
+            return int.from_bytes(b[16:20], "big"), int.from_bytes(b[20:24], "big")
+        if b[:6] in (b"GIF87a", b"GIF89a"):
+            return int.from_bytes(b[6:8], "little"), int.from_bytes(b[8:10], "little")
+        if b[:4] == b"RIFF" and b[8:12] == b"WEBP":
+            if b[12:16] == b"VP8X":
+                return int.from_bytes(b[24:27], "little") + 1, int.from_bytes(b[27:30], "little") + 1
+            if b[12:16] == b"VP8 ":
+                return int.from_bytes(b[26:28], "little") & 0x3FFF, int.from_bytes(b[28:30], "little") & 0x3FFF
+            if b[12:16] == b"VP8L":
+                v = int.from_bytes(b[21:25], "little")
+                return (v & 0x3FFF) + 1, ((v >> 14) & 0x3FFF) + 1
+        if b[:2] == b"\xff\xd8":
+            i = 2
+            while i + 9 < len(b):
+                if b[i] != 0xFF:
+                    i += 1
+                    continue
+                marker, seg = b[i + 1], int.from_bytes(b[i + 2:i + 4], "big")
+                if marker in (0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF):
+                    return int.from_bytes(b[i + 7:i + 9], "big"), int.from_bytes(b[i + 5:i + 7], "big")
+                i += 2 + seg
+    except Exception:
+        pass
+    return None
+
+
 def drop_placeholder_posters(events):
     """平台没有海报时会放自己的 logo 当“海报”（例如 Fantopia）：同一张图出现在不同艺人的演出，就当作占位图，
     卡片改用艺人照片。"""
@@ -1211,6 +1313,9 @@ def drop_placeholder_posters(events):
             if e.get("avatar") == e["poster_img"]:
                 e["avatar"], e["avatar_kind"] = None, None
             e["poster_img"] = None
+        # 方形或直式海报适合卡片；横幅（宽比高多很多，裁切后看不清）改用艺人照片
+        size = img_size(ROOT / "docs" / e["poster_img"]) if e.get("poster_img") else None
+        e["poster_portrait"] = bool(size and size[1] >= size[0] * 0.9)
 
 
 def lead_candidates(l):
@@ -1456,12 +1561,23 @@ def merge_announcements(leads, events, cfg=None):
             # 加场的来源（IG / 本地媒体 / 你提交的线索）：“加场”区块和详细页用
             target["added_source"] = {"title": short(l.get("title") or "", 120), "url": l.get("url"), "time": (l.get("time") or "")[:10],
                                       "from": l.get("from")}
+        posted = (l.get("time") or "")[:10]
         for st in l.get("sale_times") or []:
-            if any((s.get("start") or "")[:len(st["time"])] == st["time"] for s in target.get("sales") or []):
+            same_day = [s for s in target.get("sales") or [] if (s.get("start") or "")[:10] == st["time"][:10]]
+            if any((s.get("start") or "")[:len(st["time"])] == st["time"] for s in same_day):
                 continue  # 平台（或之前的公告）已经有同一个开票时间
+            if same_day and len(st["time"]) > 10 and all(len(s.get("start") or "") == 10 for s in same_day):
+                same_day[0]["start"] = st["time"]  # 之前只知道日期，这次有几点开：补上时间
+                continue
+            if same_day:
+                continue
+            # 这一轮是不是加场的：句子里提到加场，或整则公告在讲加场、而且开票日期在公告之后
+            is_added = st.get("added") or (added and st["time"][:10] >= posted)
+            kind = {"presale": "预售", "general": "公售"}.get(st.get("kind"), "开票")
             target.setdefault("sales", []).append({
-                "name": f"{'加场开票' if added else '开票'}（{l['from']} 公告）", "start": st["time"], "end": None,
-                "queue": None, "available": True, "code_required": False, "url": l.get("url"), "announced": True})
+                "name": f"{'加场 · ' if is_added else ''}{kind}（{l['from']}）", "start": st["time"], "end": None,
+                "queue": None, "available": True, "code_required": False, "url": l.get("url"), "announced": True,
+                "added": bool(is_added), "source_line": st.get("line")})
             target["sales_closed"] = False
 
 
@@ -1516,7 +1632,7 @@ PLACES = {
 }
 CONCERT_Q = "(concert OR tour OR 演唱会 OR 演唱會 OR 巡演 OR 开唱 OR 開唱 OR konsert OR fanmeeting OR fancon)"
 SALE_Q = "(tickets OR presale OR 开票 OR 開票 OR 开售 OR 開售 OR 售票 OR 抢票 OR 搶票 OR 加场 OR 加場 OR \"added show\" OR \"additional show\")"
-ADDED_RE = re.compile(r"(?i)加场|加場|加开|加開|\badd(s|ed|ing)? (a )?(second|third|fourth|another|extra|new|more)\b|additional (show|date|concert|night)|extra (show|date|night)|second (show|night|concert)|(show|date)s? added|tambah (hari|tarikh|pertunjukan|show)|추가 공연|추가 회차")
+ADDED_RE = re.compile(r"(?i)加场|加場|加开|加開|第二场|第二場|第三场|第三場|\badd(s|ed|ing)? (a )?(second|third|fourth|another|extra|new|more)\b|additional (show|date|concert|night)|extra (show|date|night)|second (show|night|concert)|(show|date)s? added|tambah (hari|tarikh|pertunjukan|show)|추가 공연|추가 회차")
 LANGS = [("en-MY", "MY", "MY:en"), ("zh-TW", "TW", "TW:zh-Hant"), ("zh-HK", "HK", "HK:zh-Hant"), ("zh-CN", "CN", "CN:zh-Hans")]  # Google News 没有马来西亚/新加坡中文版（会被转去英文版），华文报导要用台湾、香港、中国版搜
 
 
@@ -1747,7 +1863,10 @@ def merge_events(events):
             p["seat_maps"] = list(dict.fromkeys(m for e in g for m in e.get("seat_maps") or []))
             p["tiers"] = next((e["tiers"] for e in g if e.get("tiers")), [])
             p["ocr_tiers"] = next((e["ocr_tiers"] for e in g if e.get("ocr_tiers")), None)
-            p["poster_img"] = p.get("poster_img") or next((e["poster_img"] for e in g if e.get("poster_img")), None)
+            # 几个平台里，优先用方形 / 直式的海报
+            best = next((e for e in g if e.get("poster_img") and e.get("poster_portrait")), None) \
+                or next((e for e in g if e.get("poster_img")), None)
+            p["poster_img"], p["poster_portrait"] = (best["poster_img"], best.get("poster_portrait")) if best else (None, False)
             p["limit"] = p.get("limit") or next((e.get("limit") for e in g if e.get("limit")), None)
             p["sold_out"] = all(e.get("sold_out") for e in g)
             p["stop_sales"] = all(e.get("stop_sales") or e.get("sold_out") for e in g)
@@ -1921,6 +2040,8 @@ def main():
                 if n in blob if zh or len(n) >= 4 else re.search(rf"(?<![a-z0-9]){re.escape(name.lower())}(?![a-z0-9])", raw):
                     l["matches"].append(e["id"])
                     break
+    filter_matches_by_country(leads, events, cfg)
+    enrich_articles(h, leads, state)  # 对上演出的新闻读正文：预售、公售、加场的开票时间
     merge_announcements(leads, events, cfg)
     more, watch_out = group_pending(h, events, leads, state, cfg)
     used |= more
