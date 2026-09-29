@@ -113,8 +113,8 @@ function status(e, now = new Date()) {
   if (c === "soldout") return {cls: "bad", text: e.sold_out || e.sale_state === "SOLD_OUT" ? "已售罄" : "已停止售票"};
   if (c === "soon") {
     const s = nextSale(e, now), t = toDate(s.start), code = s.code_required ? " · 需要预售码" : "";
-    if (t <= now) return {cls: "bad", text: `🔥 正在抢票：${s.name || "开卖"} ${fmt(s.start)} 开卖${code}`, short: `🔥 正在抢票（${fmt(s.start)} 开卖）`};
-    return {cls: "warn", text: `${s.name || "开卖"}：${fmt(s.start)}（${countdown(t, now)}）${code}`, short: `${fmt(s.start)} 开卖 · ${countdown(t, now)}`};
+    if (t <= now) return {cls: "bad", text: `🔥 正在抢票：${saleRound(s).label} ${fmt(s.start)} 开卖${code}`, short: `🔥 正在抢票（${fmt(s.start)} 开卖）`};
+    return {cls: "warn", text: `${saleRound(s).label}：${fmt(s.start)}（${countdown(t, now)}）${code}`, short: `${fmt(s.start)} 开卖 · ${countdown(t, now)}`};
   }
   if (c === "opened") {
     const last = lastStart(e);
@@ -414,4 +414,40 @@ function newsCheckHTML(c, place = "马来西亚") {
     ${(c.sale_times || []).length ? `· 报导里的开票时间 <b>${c.sale_times.map(x => esc(fmt(x.time))).join("、")}</b>` : ""}
     ${c.added ? "· 有提到<b>加场</b>" : ""}
     ${(c.top || []).map(t => `<div style="font-weight:400;margin-top:4px">${t.web ? "🌐" : "📰"} ${(t.countries || []).map(k => FL[k] || "").join("")} <a href="${esc(safeUrl(t.url))}" target="_blank" rel="noopener">${esc(t.title)}</a> <small>${esc(t.time || "")}</small></div>`).join("")}</div>`;
+}
+
+// ---------- 所有售票时间（详细页最上方的表格） ----------
+// 每一轮：场次（首场 / 加场）、轮次（预售 / 公售 / 开售）、来源
+function saleRound(s) {
+  const raw = s.name || "开售";
+  const added = s.added || /^加场/.test(raw) || /added show/i.test(raw);
+  const src = (raw.match(/（([^）]+)）$/) || [])[1];              // 公告来源，例如（东方日报 娱乐）
+  const plat = (raw.match(/^([A-Za-z0-9 ]+) · /) || [])[1];       // 合并的平台，例如 GoLive · General Sales
+  let name = raw.replace(/^加场 · /, "").replace(/（[^）]+）$/, "").replace(/^[A-Za-z0-9 ]+ · /, "").trim();
+  const kind = /pre-?sale|预售|預售|优先|優先|member|会员|會員|v\.?i\.?p|fan ?club|card ?holder|mastercard|preferred/i.test(name) ? "预售"
+    : /general|public|公售|公开|公開/i.test(name) ? "公售" : "开售";
+  if (/^(开售|开票|公售|预售|开卖)$/.test(name)) name = "";
+  return {added, kind, name, source: src || plat || null, label: `${added ? "加场 · " : ""}${kind}${name ? " · " + name : ""}`};
+}
+function saleTableHTML(e, now = new Date()) {
+  const list = (e.sales || []).filter(s => s.start).sort((a, b) => a.start.localeCompare(b.start));
+  if (!list.length) return `<div class="card empty" style="margin-top:12px">🎟️ 还没有任何开票时间（预售、公售都还没公布），一公布就会列在这里并通知你。</div>`;
+  const rows = list.map(s => {
+    const r = saleRound(s);
+    const dateOnly = s.start.length === 10;
+    const t = toDate(dateOnly ? s.start + " 00:00" : s.start);
+    const done = t < now - (dateOnly ? 864e5 : LIVE_MS), live = !done && t <= now;
+    const state = done ? '<span class="meta">已结束</span>' : live ? '<span class="soldout">正在抢票</span>' : `<span class="pill warn" style="margin:0">${esc(countdown(t, now))}</span>`;
+    const src = r.source || e.source;
+    return `<tr class="${done ? "past" : ""}">
+      <td style="white-space:nowrap">${r.added ? "➕ 加场" : "🎤 首场"}</td>
+      <td><b>${esc(r.kind)}</b>${r.name ? `<br><small>${esc(r.name)}</small>` : ""}${s.code_required ? "<br><small>需要预售码</small>" : ""}</td>
+      <td style="white-space:nowrap">${esc(fmt(s.start))}${dateOnly ? "<br><small>几点开还没公布</small>" : ""}</td>
+      <td style="white-space:nowrap">${state}</td>
+      <td class="meta">${s.url && s.announced ? `<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(src)}</a>` : esc(src)}</td></tr>`;
+  }).join("");
+  return `<div style="text-align:left;margin-top:14px"><div style="font-weight:700;margin-bottom:6px">🎟️ 所有售票时间</div>
+    <div style="overflow-x:auto"><table class="saletable">
+      <tr><th>场次</th><th>轮次</th><th>开票时间</th><th>状态</th><th>来源</th></tr>${rows}
+    </table></div></div>`;
 }

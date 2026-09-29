@@ -1802,6 +1802,12 @@ def track_added(events, state):
         grew = n > first
         # 加场来源：Google 新闻，或 IG / 本地媒体 RSS / 你提交的线索（已对上这场演出的）
         e["news_added"] = e.get("news_added") or e.get("added_source")
+        # 加场公布之后才开卖的轮次，算加场的票（平台的轮次名字不一定写“加场”）
+        since = (e.get("news_added") or {}).get("time") or ""
+        if since:
+            for s in e.get("sales") or []:
+                if (s.get("start") or "")[:10] >= since[:10]:
+                    s["added"] = True
         if e.get("news_added") and n >= 2 or grew:
             e["added_status"] = "confirmed"
         elif e.get("news_added"):
