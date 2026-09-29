@@ -9,7 +9,8 @@
     "ticket2u.official",
     "golive.asia",
     "imcliveglobal",
-    "zeppkualalumpur"
+    "zeppkualalumpur",
+    "hellouniversemy"
   ],
   "_ig_accounts_global_说明": "跨国主办/艺人账号：贴文要提到马来西亚才收录",
   "ig_accounts_global": ["imcliveglobal"],
@@ -39,6 +40,19 @@
     {"name": "Trip.com", "url": "https://www.trip.com/events/", "countries": ["MY", "SG"], "match": ["trip.com"], "scraped": false, "note": "公告里出现过"},
     {"name": "Live Nation", "url": "https://www.livenation.my/", "countries": ["MY", "SG"], "match": ["livenation.my", "livenation.sg", "live nation presale"], "scraped": false, "note": "主办方（会员预售），IG 有追踪"},
     {"name": "Star Planet", "url": "https://starplanet.com.my/", "countries": ["MY"], "match": ["starplanet.com.my", "star planet ticketing"], "scraped": false, "note": "主办方，IG 有追踪"}
+  ],
+
+  "_artist_aliases_说明": "艺人别名：贴文 / 新闻用的名字和售票平台不同时，在这里对上（系统也会从新闻标题自动学中英混合艺名的别名）",
+  "artist_aliases": {"DIOR 大穎": ["diorlying", "Dior Tan"]},
+
+  "_promoters_说明": "马来西亚主办方来源登记：发现演出后优先查这些官方来源（IG 贴文会被扫描；GoLive 的主办方栏位会对上这里的名字）",
+  "promoters": [
+    {"name": "Hello Universe", "ig": "hellouniversemy", "site": "https://www.hellouniverse.asia/", "platforms": ["GoLive"], "note": "My Chemical Romance、Muse、ONE OK ROCK"},
+    {"name": "Live Nation Malaysia", "ig": "livenation.my", "site": "https://www.livenation.my/", "platforms": ["GoLive", "Ticketmaster SG"], "note": "前身 PR Worldwide；会员预售"},
+    {"name": "Star Planet", "ig": "starplanetmy", "site": "https://starplanet.com.my/", "platforms": ["BookMyShow", "Ticket2U"], "note": "华语天王天后（周杰伦、张学友、五月天）"},
+    {"name": "IMC Live Global", "ig": "imcliveglobal", "site": "https://imclive-group.com/", "platforms": ["Fantopia", "BookMyShow"], "note": "K-pop、华语，跨国巡演"},
+    {"name": "GoLive", "ig": "golive.asia", "site": "https://www.golive-asia.com/", "platforms": ["GoLive"], "note": "售票平台兼主办"},
+    {"name": "Zepp Kuala Lumpur", "ig": "zeppkualalumpur", "site": "https://www.zepp.co.jp/hall/kualalumpur/", "platforms": [], "note": "场馆"}
   ],
 
   "hashtags": [

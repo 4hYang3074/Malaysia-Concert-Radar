@@ -11,7 +11,8 @@ function fmt(s, withTime = true) {
   const d = toDate(s);
   if (!d) return "";
   const m = new Date(d.getTime() + 8 * 3600e3);
-  return `${m.getUTCMonth() + 1}月${m.getUTCDate()}日（周${WD[m.getUTCDay()]}）` + (withTime && s.length > 10 ? " " + s.slice(11) : "");
+  const y = m.getUTCFullYear() !== new Date().getFullYear() ? `${m.getUTCFullYear()}年` : "";  // 不是今年的加上年份
+  return `${y}${m.getUTCMonth() + 1}月${m.getUTCDate()}日（周${WD[m.getUTCDay()]}）` + (withTime && s.length > 10 ? " " + s.slice(11) : "");
 }
 // ---------- 国家 ----------
 const COUNTRIES = {MY: "🇲🇾 马来西亚", SG: "🇸🇬 新加坡", KR: "🇰🇷 韩国", TH: "🇹🇭 泰国"};
@@ -60,7 +61,7 @@ const qs = k => new URLSearchParams(location.search).get(k);
 const CATS = [
   {key: "soon", icon: "🔥", label: "即将开票", desc: "开票时间还没到，或刚开票不到半天（正在抢票）。按开票时间排序。"},
   {key: "opened", icon: "✔️", label: "已开票", desc: "开票时间已经过了半天以上（抢票已结束）。按演出日期排序。"},
-  {key: "tba", icon: "❔", label: "售票资讯不明", desc: "平台上有这场演出，但没有任何开票资讯。"},
+  {key: "tba", icon: "❔", label: "等待开票资料", desc: "平台上有这场演出，但还没有任何开票资料。已加入监控名单，每次扫描都会重新查官方来源和新闻。"},
   {key: "soldout", icon: "🔴", label: "已售罄", desc: "官方显示售罄或停止售票，可以留意加场或释票。"},
 ];
 const LIVE_MS = 12 * 3600e3;  // 开票后半天（12 小时）内算“正在抢票”，之后就当这一轮已经结束
@@ -70,10 +71,29 @@ function nextSale(e, now) {
   return (e.sales || []).filter(s => s.start && toDate(s.start) > now - LIVE_MS).sort((a, b) => a.start.localeCompare(b.start))[0];
 }
 function lastStart(e) {
-  return (e.sales || []).filter(s => s.start).map(s => s.start).sort().pop();
+  return (e.sales || []).filter(s => s.start).map(s => s.start).sort().pop() || e.opened_at;
+}
+// 售票状态机：ANNOUNCED → TICKET_INFO_PENDING → PRESALE_ANNOUNCED → GENERAL_SALE_ANNOUNCED → ON_SALE → SOLD_OUT
+const SALE_STATES = [
+  {key: "ANNOUNCED", label: "已官宣"},
+  {key: "TICKET_INFO_PENDING", label: "等待开票资料"},
+  {key: "PRESALE_ANNOUNCED", label: "已公布预售"},
+  {key: "GENERAL_SALE_ANNOUNCED", label: "已公布公售"},
+  {key: "ON_SALE", label: "已开票"},
+  {key: "SOLD_OUT", label: "售罄"},
+];
+function saleStateHTML(e) {
+  const st = e.sale_state || "TICKET_INFO_PENDING";
+  const closed = st === "SALE_CLOSED";
+  const idx = closed ? 4 : SALE_STATES.findIndex(s => s.key === st);
+  return `<div class="states">${SALE_STATES.map((s, i) => `<span class="st ${i < idx ? "done" : i === idx ? "cur" : ""}">${i === idx && closed ? "平台已停售" : s.label}</span>`).join('<span class="arr">›</span>')}</div>`;
+}
+function openedText(e) {
+  if (!e.opened_at) return "";
+  return e.opened_approx ? `约 ${fmt(e.opened_at.slice(0, 10) + " 00:00", false)} 开票（推断）` : `${fmt(e.opened_at)} 开票`;
 }
 function category(e, now = new Date()) {
-  if (e.sold_out || e.stop_sales) return "soldout";
+  if (e.sold_out || e.stop_sales || e.sale_state === "SOLD_OUT") return "soldout";
   if (nextSale(e, now)) return "soon";
   if (lastStart(e) || e.sales_closed) return "opened";
   // Ticket2U、BookMyShow 没有公布开卖时间，但已经上架在卖
@@ -82,7 +102,7 @@ function category(e, now = new Date()) {
 }
 function status(e, now = new Date()) {
   const c = category(e, now);
-  if (c === "soldout") return {cls: "bad", text: e.sold_out ? "已售罄" : "已停止售票"};
+  if (c === "soldout") return {cls: "bad", text: e.sold_out || e.sale_state === "SOLD_OUT" ? "已售罄" : "已停止售票"};
   if (c === "soon") {
     const s = nextSale(e, now), t = toDate(s.start), code = s.code_required ? " · 需要预售码" : "";
     if (t <= now) return {cls: "bad", text: `🔥 正在抢票：${s.name || "开卖"} ${fmt(s.start)} 开卖${code}`, short: `🔥 正在抢票（${fmt(s.start)} 开卖）`};
@@ -120,7 +140,7 @@ function saleCalendar(d, now = new Date(), days = 60) {
     // 同一场演出、平台已经公布同一天的开售时间，就不重复列
     if (ev && items.some(i => i.confirmed && i.href.endsWith(encodeURIComponent(ev.id)) && i.s.slice(0, 10) === st.time.slice(0, 10))) continue;
     items.push({t, s: st.time, confirmed: false, href: ev ? `event.html?id=${encodeURIComponent(ev.id)}` : `lead.html?id=${encodeURIComponent(l.id)}`,
-      name: ev ? ev.artist_name : l.title, avatar: ev ? ev.avatar : l.avatar, kind: ev ? ev.avatar_kind : "",
+      name: ev ? ev.artist_name : l.artist || l.title, avatar: ev ? ev.avatar : l.artist_photo || l.avatar, kind: ev ? ev.avatar_kind : l.artist_photo ? "artist" : "",
       label: st.line, src: l.from});
   }
   const seen = new Set();
@@ -210,9 +230,10 @@ function posterCard(e, now = new Date()) {
   // 卡片上直接显示开票日期，不用点进去看
   if (s && toDate(s.start) > now) cd = `⏰ ${fmt(s.start)} 开票<br>${countdown(toDate(s.start), now)}`;
   else if (s) { cd = `🔥 正在抢票 · ${fmt(s.start)} 开票`; hot = true; }
-  else if (cat === "soldout") cd = "🔴 已售罄";
-  else if (cat === "opened") cd = lastStart(e) ? `✔️ ${fmt(lastStart(e))} 已开票` : "✔️ 已开票（抢票已结束）";
-  else cd = "❔ 售票资讯不明";
+  else if (cat === "soldout") cd = `🔴 已售罄${e.opened_at ? "<br>" + openedText(e) : ""}`;
+  else if (cat === "opened") cd = e.sale_state === "SALE_CLOSED" ? `⛔ 平台已停售${e.opened_at ? "<br>" + openedText(e) : ""}`
+    : e.opened_at ? `✔️ ${openedText(e)}` : "✔️ 已开票（抢票已结束）";
+  else cd = `❔ 等待开票资料 · 监控中`;
   // 新闻说要加场，但平台还没公布新的开票时间
   if (e.news_added && !(s && toDate(s.start) > now)) { cd += "<br>📢 新闻：加场，开票时间待公布"; hot = true; }
   return `<a class="pcard" href="event.html?id=${encodeURIComponent(e.id)}">

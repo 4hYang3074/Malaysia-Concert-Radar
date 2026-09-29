@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>售票平台 · 马来西亚演唱会雷达</title>
 <meta name="theme-color" content="#15171c">
-<link rel="stylesheet" href="assets/app.css?v=20260929k">
+<link rel="stylesheet" href="assets/app.css?v=20260929m">
 </head>
 <body>
 <div class="wrap view">
@@ -16,7 +16,7 @@
   <div id="list"></div>
   <div id="foot"></div>
 </div>
-<script src="assets/app.js?v=20260929k"></script>
+<script src="assets/app.js?v=20260929m"></script>
 <script>
 loadData(false).then(d => {
   nav(d, "platforms");
@@ -43,7 +43,13 @@ loadData(false).then(d => {
     const list = ps.filter(p => (p.countries || []).includes(c)).sort((a, b) => (b.scraped - a.scraped) || (count(b) - count(a)));
     return list.length ? `<h2>${label}</h2><div class="list">${list.map(card).join("")}</div>` : "";
   }).join("") || `<div class="card empty">还没有平台资料，下次扫描后会出现。</div>`;
-  $("#foot").innerHTML = footer(d);
+  // 主办方来源登记：发现演出后优先查这些官方来源（IG 贴文每次扫描都会读）
+  const promo = d.promoters || [];
+  $("#foot").innerHTML = (promo.length ? `<h2 style="margin-top:26px">🏢 主办方来源登记 <span class="meta">${promo.length} 个</span></h2>
+    <div class="card"><table><tr><th>主办方</th><th>官方来源</th><th>常用平台</th></tr>
+    ${promo.map(p => `<tr><td><b>${esc(p.name)}</b>${p.note ? `<br><small class="meta">${esc(p.note)}</small>` : ""}</td>
+      <td>${p.ig ? `<a href="https://www.instagram.com/${esc(p.ig)}/" target="_blank" rel="noopener">IG @${esc(p.ig)}</a>` : ""}${p.site ? ` · <a href="${esc(safeUrl(p.site))}" target="_blank" rel="noopener">官网</a>` : ""}</td>
+      <td class="meta">${esc((p.platforms || []).join("、"))}</td></tr>`).join("")}</table></div>` : "") + footer(d);
 }).catch(() => { nav(null, "platforms"); fail($("#list")); });
 </script>
 </body>

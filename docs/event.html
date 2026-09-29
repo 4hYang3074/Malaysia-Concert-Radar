@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>演出详情 · 马来西亚演唱会雷达</title>
 <meta name="theme-color" content="#15171c">
-<link rel="stylesheet" href="assets/app.css?v=20260929k">
+<link rel="stylesheet" href="assets/app.css?v=20260929m">
 </head>
 <body>
 <div class="wrap view" id="app"></div>
-<script src="assets/app.js?v=20260929k"></script>
+<script src="assets/app.js?v=20260929m"></script>
 <script>
 loadData(false).then(d => {
   nav(d, "confirmed");
@@ -38,7 +38,9 @@ loadData(false).then(d => {
         <div class="fact"><div class="k">⏰ 下一个售票节点</div><div class="v">${next ? `${esc(next.name || "开售")}<br>${esc(fmt(next.start))}` : esc(st.short || st.text)}</div></div>
         ${e.limit ? `<div class="fact"><div class="k">🎟 限购</div><div class="v">每笔最多 ${e.limit} 张</div></div>` : ""}
       </div>
-      <div class="banner ${st.cls}">${esc(st.text)}</div>
+      ${saleStateHTML(e)}
+      <div class="banner ${st.cls}">${esc(st.text)}${e.opened_at && cat !== "soon" ? ` · ${esc(openedText(e))}` : ""}</div>
+      ${e.watch ? `<div class="meta" style="margin-top:6px">🔁 监控中：${esc(e.watch.since)} 起已重新查证 ${e.watch.checks} 次（官方图片 + 平台 + Google 新闻），一查到开票资料就通知你。</div>` : ""}
       ${e.news_added ? `<div class="banner warn">📢 新闻报导有加场：<a href="${esc(safeUrl(e.news_added.url))}" target="_blank" rel="noopener">${esc(e.news_added.title)}</a>（${esc(e.news_added.time || "")}）<br>平台还没公布加场的开票时间，公布后会自动更新。</div>` : ""}
       <div class="meta" style="margin-top:14px">${platformsOf(e).length > 1 ? `这场演出在 ${platformsOf(e).length} 个官方平台售票：` : "官方售票平台："}</div>
       <div class="buybtns">${platformsOf(e).map(p => `<a class="btn ${p.sold_out ? "sold" : ""}" href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener">
@@ -55,6 +57,16 @@ loadData(false).then(d => {
           <td style="white-space:nowrap">${done ? "已结束" : live ? '<span class="soldout">正在抢票</span>' : `<span class="pill warn" style="margin:0">${esc(countdown(t, now))}</span>`}</td></tr>`;
       }).join("")}
     </table></div>` : ""}
+    ${(e.sale_evidence || []).length ? `<h3>🧾 售票状态的根据</h3><div class="card"><table class="evi">
+      <tr><th>来源</th><th>内容</th><th>时间</th></tr>
+      ${e.sale_evidence.map(x => `<tr><td class="meta" style="white-space:nowrap">${esc(x.src)}</td>
+        <td>${x.url ? `<a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener">${esc(x.text)}</a>` : esc(x.text)}</td>
+        <td class="meta" style="white-space:nowrap">${esc(x.time ? fmt(x.time.length === 10 ? x.time + " 00:00" : x.time, x.time.length > 10) : "")}</td></tr>`).join("")}
+    </table>${e.official_text ? `<details style="margin-top:8px"><summary class="meta">官方图片上读到的文字（OCR）</summary><pre style="white-space:pre-wrap;font-size:12px;color:var(--sub)">${esc(e.official_text)}</pre></details>` : ""}</div>` : ""}
+    ${(e.organizers || []).length ? `<h3>🏢 主办方</h3><div class="card">${e.organizers.map(o => {
+      const p = (d.promoters || []).find(x => x.name.toLowerCase() === o.toLowerCase());
+      return `<div><b>${esc(o)}</b>${p ? ` · <a href="https://www.instagram.com/${esc(p.ig)}/" target="_blank" rel="noopener">IG @${esc(p.ig)}</a> · <a href="${esc(safeUrl(p.site))}" target="_blank" rel="noopener">官网</a> <small class="meta">（已在来源登记，IG 贴文会被扫描）</small>` : ' <small class="meta">（还没在来源登记）</small>'}</div>`;
+    }).join("")}</div>` : ""}
     ${newsCheckHTML((d.news_checks || {})[e.artist_name])}
 
     <h3>💺 座位图与票价${fee}</h3>

@@ -161,6 +161,15 @@ def golive(h):
                 for u in re.findall(r'<img[^>]+src="([^"]+)"', i.get("description") or "")]
         maps += [u for u in (d.get("seat_map"), d.get("ticket_seat_map")) if isinstance(u, str) and u.startswith("http")]
         venue = d.get("Venue") or {}
+        # 官方资讯图片：海报、票务横幅、“Ticket Benefit”等段落里的图（常直接印着开票日期、SOLD OUT）
+        # 座位图 / 票价段落另外处理；付款合作（BNPL）这类广告图跳过
+        info_imgs = [("poster", d.get("portrait_image")), ("banner", d.get("ticket_banner"))]
+        info_imgs += [(i["title"], im.get("url")) for i in sections
+                      if not re.search(r"(?i)seat|pric|map|bnpl|pay|partner|bank|card", i["title"])
+                      for im in i.get("images") or []]
+        info_imgs += [(i["title"], u) for i in sections if not re.search(r"(?i)seat|pric|map|bnpl|pay|partner", i["title"])
+                      for u in re.findall(r'<img[^>]+src="([^"]+)"', i.get("description") or "")]
+        created = [local(t.get("created_at")) for t in d.get("EventTickets") or [] if t.get("created_at")]
         cats = [c["event_category"]["name"] for c in d.get("EventDetailCategories") or [] if c.get("event_category")]
         out.append({
             "id": f"golive-{d['id']}",
@@ -194,6 +203,9 @@ def golive(h):
             # 没有任何售票轮次、也不能购买：售票已结束（轮次被官方撤下）或根本没公开售票
             "sales_closed": not (d.get("EventSalesDate") or []) and not d.get("is_purchasable"),
             "selling_fast": bool(d.get("is_selling_fast")),
+            "organizers": [o["organizer"]["name"] for o in d.get("EventOrganizers") or [] if (o.get("organizer") or {}).get("name")],
+            "info_images": [[t, u] for t, u in info_imgs if isinstance(u, str) and u.startswith("http")],
+            "tickets_created": min(created) if created else None,
             "url": f"https://www.golive-asia.com/event/{d['id']}",
             "poster": d.get("portrait_image") or (d.get("images") or [None])[0] or d.get("event_logo"),
         })
@@ -559,7 +571,7 @@ def news_leads(h, cfg, health):
     return leads
 
 
-def manual_leads(h, health):
+def manual_leads(h, health, state):
     """GitHub Issue 标题以 [线索] 开头的，当作人工线索（例如小红书链接）。"""
     repo, token = os.environ.get("GITHUB_REPOSITORY"), os.environ.get("GITHUB_TOKEN")
     if not repo:
@@ -576,12 +588,48 @@ def manual_leads(h, health):
             continue
         body = i.get("body") or ""
         link = re.search(r"https?://\S+", body)
+        # 自动读链接内容（FB / IG / 新闻的公开预览文字和图片），再顺着内文里的“全文”链接读一层
+        page = link_preview(h, link.group(0), state) if link else {}
+        body_all = "\n".join(x for x in (body, page.get("title"), page.get("text")) if x)
+        title = i["title"][4:].strip() or page.get("title") or (page.get("text") or "").split("\n")[0][:120] or "（没有标题）"
         out.append({"id": f"manual-{i['number']}", "kind": "人工", "from": "你提交的线索",
-                    "title": i["title"][4:].strip() or "（没有标题）", "text": short(body, 600),
+                    "title": title, "text": short(body_all, 1500), "image_src": page.get("image"),
                     "time": local(i.get("created_at")), "url": link.group(0) if link else i.get("html_url"),
-                    "issue": i.get("html_url"), "hints": sale_hints(body),
-                    "sale_times": sale_times(body, local(i.get("created_at")))})
+                    "issue": i.get("html_url"), "hints": sale_hints(body_all),
+                    "sale_times": sale_times(body_all, local(i.get("created_at")))})
     health["人工线索"] = {"ok": True, "count": len(out)}
+    return out
+
+
+def link_preview(h, url, state, depth=1):
+    """读链接的公开预览（og:title / og:description / og:image，FB、IG、新闻网站都有），不用登录。
+    预览文字里如果有“全文”链接（例如 FB 贴文转发新闻），再顺着读一层。结果存 state，一个链接只读一次。"""
+    cache = state.setdefault("link_previews", {})
+    if url in cache:
+        return cache[url]
+    out = {}
+    try:
+        page = h.request(url, headers={"Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8"}, retries=1)
+        page = page.decode("utf-8", "replace") if isinstance(page, bytes) else page
+        meta = {}
+        for tag in re.findall(r"<meta\b[^>]*>", page[:400000], re.I):
+            k = re.search(r'(?:property|name)\s*=\s*"([^"]+)"', tag)
+            v = re.search(r'content\s*=\s*"([^"]*)"', tag)
+            if k and v:
+                meta.setdefault(k.group(1).lower(), html.unescape(v.group(1)))
+        title = meta.get("og:title") or html.unescape((re.search(r"<title>(.*?)</title>", page, re.S | re.I) or [None, ""])[1]).strip()
+        out = {"title": None if title.lower() in ("facebook", "instagram", "") else title[:200],
+               "text": (meta.get("og:description") or meta.get("description") or "")[:1500],
+               "image": meta.get("og:image") or meta.get("twitter:image")}
+        inner = re.search(r"https?://[^\s\"<>]+", out["text"])
+        if depth and inner and inner.group(0) != url:
+            sub = link_preview(h, inner.group(0), state, depth - 1)
+            out["title"] = out["title"] or sub.get("title")
+            out["text"] = "\n".join(x for x in (out["text"], sub.get("title"), sub.get("text")) if x)[:2500]
+            out["image"] = out["image"] or sub.get("image")
+    except Exception as ex:
+        print(f"  link preview {url[:60]}: {ex}", flush=True)
+    cache[url] = out
     return out
 
 
@@ -678,7 +726,9 @@ def ocr_prices(path):
                     continue
                 seen.add(norm(price))
                 name = line[:m.start()].strip(" -–:：|•*(（[")
-                tiers.append({"name": name if 2 <= len(name) <= 60 else "票区（颜色见座位图）", "price": price})
+                # 名字要像样（至少一个 3 个字母以上的英文字或 2 个中文字），否则是 OCR 乱码（例如 “By E”）
+                ok = len(name) <= 60 and (re.search(r"[A-Za-z]{3,}", name) or re.search(r"[㐀-鿿]{2,}", name))
+                tiers.append({"name": name if ok else "票区（颜色见座位图）", "price": price})
     return sorted(tiers, key=lambda t: -price_value(t["price"]))
 
 
@@ -697,11 +747,137 @@ def ocr_text(path):
     return "\n".join(x for x in lines if len(re.sub(r"[\W_]", "", x)) >= 2)[:800]  # 去掉只有零星乱码的行
 
 
+SOLD_OUT_RE = re.compile(r"(?i)sold\s*-?\s*out|售罄|售謦|完售|매진|全部售完")
+
+
+def official_images(h, events, state):
+    """官方来源优先：把售票平台上的海报、票务说明图用 OCR 读出来（每张图只读一次，图片不存进仓库）。
+    读到的字放进 e["official_text"]，之后由 sale_status() 判断开票时间、是否售罄。"""
+    import tempfile
+    cache = state.setdefault("ocr_official", {})
+    used = set()
+    for e in events:
+        texts = []
+        for title, url in e.pop("info_images", None) or []:
+            key = url.split("?")[0]
+            used.add(key)
+            if key not in cache:
+                with tempfile.TemporaryDirectory() as tmp:
+                    path = Path(tmp) / "img"
+                    try:
+                        with h.opener.open(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=40) as r:
+                            path.write_bytes(r.read(6_000_000))
+                    except Exception as ex:
+                        print(f"  official image {e['id']}: {ex}", flush=True)
+                        continue
+                    text = ocr_text(path)
+                if text is None:  # 没装 OCR（本机测试），下次再读
+                    continue
+                cache[key] = {"title": title, "text": text}
+            if cache[key]["text"]:
+                texts.append(cache[key]["text"])
+        if texts:
+            e["official_text"] = "\n".join(texts)[:3000]
+    for k in [k for k in cache if k not in used]:
+        del cache[k]
+
+
+SALE_STATES = ["ANNOUNCED", "TICKET_INFO_PENDING", "PRESALE_ANNOUNCED", "GENERAL_SALE_ANNOUNCED", "ON_SALE", "SOLD_OUT"]
+PRESALE_RE = re.compile(r"(?i)pre-?sale|预售|預售|优先|優先|member|fan ?club|fanclub|card ?holder|선예매|팬클럽")
+GENERAL_RE = re.compile(r"(?i)general|public|公售|公開|公开|일반")
+
+
+def sale_status(events, checks, now):
+    """每场演出的售票状态（官方来源 > 售票平台 > 新闻），附上证据：
+    TICKET_INFO_PENDING 还没有开票资料 → PRESALE_ANNOUNCED 公布了预售 → GENERAL_SALE_ANNOUNCED 公布了公售
+    → ON_SALE 已开票 → SOLD_OUT 售罄 / 停售。平台下架了售票轮次、又没说售罄的是 SALE_CLOSED。"""
+    now_s = now.strftime("%Y-%m-%d %H:%M")
+    for e in events:
+        ev = []  # 证据：{src, text, time?}
+        text = e.get("official_text") or ""
+        # 官方图片（OCR）：SOLD OUT 标记、开票时间
+        so = SOLD_OUT_RE.findall(text)
+        if so and len(so) >= max(1, len(e.get("dates") or [])):
+            ev.append({"src": f"{e['source']} 官方图片", "text": "图上标示 SOLD OUT（每一场都有）"})
+            e["sold_out"] = True
+        seen_times = {(s.get("start") or "")[:16] for s in e.get("sales") or []}
+        for st in sale_times(text, e.get("tickets_created") or e.get("first_seen")) if text else []:
+            if st["time"][:16] in seen_times:
+                continue
+            seen_times.add(st["time"][:16])
+            e.setdefault("sales", []).append({
+                "name": f"{'公售' if GENERAL_RE.search(st['line']) else '开票'}（{e['source']} 官方图片）", "start": st["time"],
+                "end": None, "queue": None, "available": True, "code_required": False, "announced": True, "official_img": True})
+            ev.append({"src": f"{e['source']} 官方图片", "text": st["line"], "time": st["time"]})
+        for s in e.get("sales") or []:
+            if s.get("start") and not s.get("official_img"):
+                ev.append({"src": s["name"] if s.get("announced") else f"{e['source']} 售票轮次", "text": s.get("name") or "开票", "time": s["start"]})
+        c = checks.get(e.get("artist_name") or "") or {}
+        if c.get("soldout_news"):
+            n = c["soldout_news"]
+            ev.append({"src": "Google 新闻", "text": n["title"], "time": n.get("time"), "url": n.get("url")})
+        if c.get("opened_news") and c["opened_news"] != c.get("soldout_news"):
+            n = c["opened_news"]
+            ev.append({"src": "Google 新闻", "text": n["title"], "time": n.get("time"), "url": n.get("url")})
+        if e.get("tickets_created"):
+            ev.append({"src": f"{e['source']} 票种建立时间", "text": "平台建立票种（通常就是开票前后）", "time": e["tickets_created"]})
+        # 开票时间：平台 / 官方图片的确切时间优先；没有就用新闻、票种建立时间推估
+        starts = sorted(s["start"] for s in e.get("sales") or [] if s.get("start") and s["start"] <= now_s)
+        future = sorted((s for s in e.get("sales") or [] if s.get("start") and s["start"] > now_s), key=lambda s: s["start"])
+        if starts:
+            e["opened_at"], e["opened_approx"] = starts[0], False
+        elif not future and (c.get("opened_news") or e.get("tickets_created")):
+            guess = sorted(x for x in ((c.get("opened_news") or {}).get("time"), (e.get("tickets_created") or "")[:10]) if x)
+            e["opened_at"], e["opened_approx"] = guess[0], True
+        if e.get("sold_out") or e.get("stop_sales"):
+            st = "SOLD_OUT"
+        elif future:
+            # 还没开票的轮次全部是预售（presale / 会员 / 粉丝会）才算“已公布预售”，否则就是公售
+            pre = all(PRESALE_RE.search(s.get("name") or "") and not GENERAL_RE.search(s.get("name") or "") for s in future)
+            st = "PRESALE_ANNOUNCED" if pre else "GENERAL_SALE_ANNOUNCED"
+        elif starts or e.get("opened_approx") or e["source"] in ("Ticket2U", "BookMyShow") and not e.get("sales_closed"):
+            st = "SALE_CLOSED" if e.get("sales_closed") and not starts else "ON_SALE"
+            if st == "SALE_CLOSED" and c.get("soldout_news"):
+                st = "SOLD_OUT"
+        elif e.get("sales_closed"):
+            st = "SALE_CLOSED"
+        else:
+            st = "TICKET_INFO_PENDING"
+        e["sale_state"] = st
+        e["sale_evidence"] = sorted(ev, key=lambda x: x.get("time") or "", reverse=True)[:8]
+
+
+def update_watchlist(events, state, now):
+    """监控名单：还查不到开票资料（TICKET_INFO_PENDING / SALE_CLOSED）的演出，每次扫描都重新查官方来源和新闻，
+    查到了就移出名单并记录状态变化（写进通知）。回传状态有变化的演出。"""
+    wl = state.setdefault("watchlist", {})
+    hist = state.setdefault("sale_states", {})
+    now_s = now.strftime("%Y-%m-%d %H:%M")
+    changes = []
+    for e in events:
+        old = hist.get(e["id"])
+        if old and old != e["sale_state"]:
+            changes.append((e, old))
+        hist[e["id"]] = e["sale_state"]
+        if e["sale_state"] in ("TICKET_INFO_PENDING", "SALE_CLOSED") and not e.get("hidden"):
+            w = wl.setdefault(e["id"], {"since": now_s, "checks": 0})
+            w["checks"] += 1
+            w["last_check"] = now_s
+            e["watch"] = w
+        else:
+            wl.pop(e["id"], None)
+    live = {e["id"] for e in events}
+    for d in (wl, hist):
+        for k in [k for k in d if k not in live]:
+            del d[k]
+    return changes
+
+
 def ocr_leads(h, leads, state):
     """IG 贴文图片：下载到 docs/posts/，用 OCR 读出图上文字存进 image_text（每张图只读一次）。"""
     cache = state.setdefault("ocr_posts", {})
     for l in leads:
-        if l["kind"] != "IG":
+        if l["kind"] not in ("IG", "人工"):
             continue
         rel = f"posts/{l['id']}.jpg"
         src = l.get("image_src")
@@ -958,9 +1134,44 @@ def add_avatars(h, events, leads, state, today):
             if (ROOT / "docs" / rel).exists():
                 l["avatar"] = rel
                 used.add(rel)
+    drop_placeholder_posters(events)
     for k in [k for k in cache if k not in {e["id"] for e in events}]:
         del cache[k]
     return used
+
+
+def artist_aliases(events, cfg, state):
+    """艺人别名：config 的 artist_aliases（手动），加上从新闻标题自动学到的。
+    自动学：中英混合的艺名（例如 “DIOR 大穎”），新闻标题里以它的英文部分开头的较长英文字（“Diorlying”）就当别名。"""
+    out = {k: list(v) for k, v in (cfg.get("artist_aliases") or {}).items()}
+    news = state.get("news_verify_v3", {})
+    for e in events:
+        a = e.get("artist_name") or ""
+        latin = re.findall(r"[A-Za-z]{3,}", a)
+        if not latin or not re.search(r"[㐀-鿿]", a):
+            continue
+        for it in (news.get(a) or {}).get("top") or []:
+            for w in re.findall(r"[A-Za-z]{5,}", it.get("title") or ""):
+                if w.lower().startswith(latin[0].lower()) and w.lower() != latin[0].lower() and w not in out.setdefault(a, []):
+                    out[a].append(w)
+    return out
+
+
+def drop_placeholder_posters(events):
+    """平台没有海报时会放自己的 logo 当“海报”（例如 Fantopia）：同一张图出现在不同艺人的演出，就当作占位图，
+    卡片改用艺人照片。"""
+    owners = {}
+    for e in events:
+        p = e.get("poster_img")
+        if p and (ROOT / "docs" / p).exists():
+            e["_poster_hash"] = hashlib.sha1((ROOT / "docs" / p).read_bytes()).hexdigest()
+            owners.setdefault(e["_poster_hash"], set()).add(norm(e.get("artist_name") or e["name"]))
+    for e in events:
+        hsh = e.pop("_poster_hash", None)
+        if hsh and len(owners[hsh]) > 1:
+            if e.get("avatar") == e["poster_img"]:
+                e["avatar"], e["avatar_kind"] = None, None
+            e["poster_img"] = None
 
 
 def lead_candidates(l):
@@ -1254,10 +1465,12 @@ def place_hit(title, cfg, country):
     return any(k in t for k in cfg["keywords"].get(PLACES.get(country, PLACES["MY"])[1], []))
 
 
-def news_check(h, artist, country, cfg, today, sale=False):
-    """搜“艺人 + 演唱会(+开票) + 国家”，标题要同时提到艺人、演唱会、那个国家才算相关报导。"""
+def news_check(h, artist, country, cfg, today, sale=False, deep=False):
+    """搜“艺人 + 演唱会(+开票) + 国家”，标题要同时提到艺人、演唱会、那个国家才算相关报导。
+    deep：还查不到开票资料的演出，不限时间地搜（开票可能是一年前的事），找“开卖 / 售罄”的报导。"""
     place = PLACES.get(country, PLACES["MY"])[0]
-    q = f'"{artist}" {SALE_Q if sale else CONCERT_Q} {place} when:{30 if sale else 90}d'
+    words = SALE_Q[:-1] + ' OR "sold out" OR 售罄 OR "tiket habis")' if deep else SALE_Q if sale else CONCERT_Q
+    q = f'"{artist}" {words} {place}' + ("" if deep else f" when:{30 if sale else 90}d")
     items = []
     for it in gnews(h, q):
         if mentions(artist, it["title"]) and relevant(it["title"], cfg["keywords"], False) and place_hit(it["title"], cfg, country):
@@ -1270,12 +1483,17 @@ def news_check(h, artist, country, cfg, today, sale=False):
             if not s["past"] and s["time"] not in [x["time"] for x in sts]:
                 sts.append(dict(s, url=it["url"], title=it["title"]))
     added = [i for i in items if ADDED_RE.search(i["title"])]  # 报导说要加场 / 加开新日期
-    return {"checked": today, "country": country, "count": len(items), "top": items[:3],
+    soldout = [i for i in items if SOLD_OUT_RE.search(i["title"]) or re.search(r"(?i)habis dijual|sell(s)? out|snapped up|licin", i["title"])]
+    opened = [i for i in items if re.search(r"(?i)tickets? (now )?(on sale|go on sale|went on sale|available|released)|on sale now|"
+                                            r"presale|ticket sales?|开票|開票|开售|開售|抢票|搶票|tiket", i["title"])]
+    return {"checked": today, "country": country, "deep": deep,
+            "soldout_news": min(soldout, key=lambda i: i["time"] or "9") if soldout else None,
+            "opened_news": min(opened + soldout, key=lambda i: i["time"] or "9") if opened or soldout else None, "count": len(items), "top": items[:3],
             "platforms": detect_platforms(blob, cfg), "sale_times": sts,
             "added": bool(added), "added_news": added[0] if added else None}
 
 
-def news_verify(h, leads, events, cfg, state, today, limit=45):
+def news_verify(h, leads, events, cfg, state, today, limit=45, watch=()):
     """Google 通道：
     1. 待确定的明星 → 查有没有马来西亚（或新加坡）的相关报导、提到哪个售票平台
     2. 已上架、还没结束的演出 → 查新闻有没有公布开票时间 / 加场（平台还没更新时先知道）
@@ -1293,18 +1511,20 @@ def news_verify(h, leads, events, cfg, state, today, limit=45):
         if not e["dates"] or e["dates"][-1][:10] < now_s:
             continue
         todo.append((e["artist_name"], e["artist_name"], e.get("country") or "MY", True))
+    deep = {e["artist_name"] for e in events if e["id"] in watch and e.get("artist_name")}
     out, n = {}, 0
     for key, artist, country, sale in dict.fromkeys(todo):
         if key in out:
             continue
         c = cache.get(key)
-        if not c or c.get("checked") != today or c.get("country") != country:
+        want_deep = sale and key in deep
+        if not c or c.get("checked") != today or c.get("country") != country or want_deep and not c.get("deep"):
             if n >= limit:  # 这次额度用完，剩下的下次再查
                 if c:
                     out[key] = c
                 continue
             n += 1
-            c = cache[key] = news_check(h, artist, country, cfg, today, sale)
+            c = cache[key] = news_check(h, artist, country, cfg, today, sale, deep=want_deep)
         out[key] = c
     for k in [k for k in cache if k not in out]:
         del cache[k]
@@ -1367,6 +1587,9 @@ def merge_events(events):
             p["sales_closed"] = all(e.get("sales_closed") for e in g)  # 所有平台都没在卖才算结束
             p["first_seen"] = min(e.get("first_seen") or "9999" for e in g)
             p["fans"] = max(e.get("fans") or 0 for e in g)
+            p["official_text"] = "\n".join(e["official_text"] for e in g if e.get("official_text")) or None
+            p["tickets_created"] = min((e["tickets_created"] for e in g if e.get("tickets_created")), default=None)
+            p["organizers"] = list(dict.fromkeys(o for e in g for o in e.get("organizers") or []))
             p["updates"] = {k: v for e in g for k, v in (e.get("updates") or {}).items()}
             if p.get("avatar_kind") != "artist":
                 best = next((e for e in g if e.get("avatar_kind") == "artist"), None)
@@ -1446,6 +1669,7 @@ def main():
     now_s = now.strftime("%Y-%m-%d %H:%M")
     changed = save_maps(h, events, state, now_s, first_run) + track_prices(events, state, now_s, first_run)
     add_ocr_tiers(events, state)
+    official_images(h, events, state)  # 官方来源优先：海报、票务说明图上的开票时间 / SOLD OUT
     ups = state.setdefault("updates", {})
     for e in changed:
         ups.setdefault(e["id"], {}).update(e["updates"])
@@ -1458,7 +1682,7 @@ def main():
 
     fresh = ig_leads(h, cfg, os.environ.get("IG_PAGE_TOKEN"), state, health)
     fresh += news_leads(h, cfg, health)
-    fresh += manual_leads(h, health)
+    fresh += manual_leads(h, health, state)
     print(f"leads: {len(fresh)}", flush=True)
 
     store = state.setdefault("leads", {})
@@ -1510,26 +1734,33 @@ def main():
     for l in leads:
         l["matches"] = list(dict.fromkeys(idmap.get(m, m) for m in l.get("matches", [])))
         l["platforms"] = detect_platforms(lead_blob(l), cfg)
-    # 用 Deezer 确认过的艺人名再对一次线索（例如贴文写 “Siti Nurhaliza”，演出名称很长）
+    # 用 Deezer 确认过的艺人名（和别名）再对一次线索（例如贴文写 “Siti Nurhaliza”，演出名称很长）
+    aliases = artist_aliases(events, cfg, state)
     for l in leads:
         raw = unicodedata.normalize("NFKC", lead_blob(l)).lower()
         blob = norm(raw)
         for e in events:
-            n = norm(e.get("artist_name"))
-            if e["id"] in l["matches"] or len(n) < 3:
+            if e["id"] in l["matches"]:
                 continue
-            # 短名字（FKJ、BTS）要整个词出现才算，避免撞到别的字
-            hit = n in blob if len(n) >= 4 else re.search(rf"(?<![a-z0-9]){re.escape(e['artist_name'].lower())}(?![a-z0-9])", raw)
-            if hit:
-                l["matches"].append(e["id"])
+            for name in [e.get("artist_name") or ""] + aliases.get(e.get("artist_name") or "", []):
+                n = norm(name)
+                if len(n) < 3:
+                    continue
+                # 短名字（FKJ、BTS）要整个词出现才算，避免撞到别的字
+                if n in blob if len(n) >= 4 else re.search(rf"(?<![a-z0-9]){re.escape(name.lower())}(?![a-z0-9])", raw):
+                    l["matches"].append(e["id"])
+                    break
     merge_announcements(leads, events)
     more, watch_out = group_pending(h, events, leads, state, cfg)
     used |= more
     cleanup_images(used)
     apply_lead_filters(leads, events, cfg)
     merge_announcements(leads, events)  # 用艺人名新对上的公告，开票时间也并进去
-    checks = news_verify(h, leads, events, cfg, state, today)  # Google 通道：查证待确定的明星、已上架演出的开票 / 加场
+    watch = set(state.get("watchlist", {}))
+    checks = news_verify(h, leads, events, cfg, state, today, watch=watch)  # Google 通道：查证待确定的明星、已上架演出的开票 / 加场
     merge_news_sales(events, checks)
+    sale_status(events, checks, now)  # 售票状态机（附证据）
+    state_changes = update_watchlist(events, state, now)
     for l in leads:  # 只来自新闻、又查证不到马来西亚相关报导的：可信度太低，不放进待确定
         if not l.get("hidden") and not l.get("listed") and l["kind"] == "新闻" and checks.get(l.get("artist"), {}).get("count", 1) == 0:
             l["hidden"] = "Google 新闻查证不到马来西亚的相关报导"
@@ -1543,26 +1774,37 @@ def main():
         "watch_artists": watch_out,
         "news_checks": checks,
         "platforms": cfg.get("ticket_platforms", []),
+        "promoters": cfg.get("promoters", []),
         "events": events,
         "leads": leads,
     }
     data_path.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     state_path.parent.mkdir(exist_ok=True)
     state_path.write_text(json.dumps(state, ensure_ascii=False, indent=1), encoding="utf-8")
-    write_alert(new_events, new_leads, events, changed)
+    write_alert(new_events, new_leads, events, changed, state_changes)
     print(f"events={len(events)} leads={len(leads)} new_events={len(new_events)} new_leads={len(new_leads)}")
 
 
-def write_alert(new_events, new_leads, events, changed):
+STATE_LABEL = {"TICKET_INFO_PENDING": "等待开票资料", "PRESALE_ANNOUNCED": "已公布预售", "GENERAL_SALE_ANNOUNCED": "已公布公售",
+               "ON_SALE": "已开票", "SOLD_OUT": "售罄", "SALE_CLOSED": "平台已停售"}
+
+
+def write_alert(new_events, new_leads, events, changed, state_changes=()):
     """有新演出、票价/座位图更新、新的 IG/人工线索时写 data/alert.md，由 workflow 开 Issue 通知。"""
     path = ROOT / "data" / "alert.md"
     path.parent.mkdir(exist_ok=True)
     if path.exists():
         path.unlink()
-    if not new_events and not new_leads and not changed:
+    state_changes = [(e, o) for e, o in state_changes if not e.get("hidden")]
+    if not new_events and not new_leads and not changed and not state_changes:
         return
     by_id = {e["id"]: e for e in events}
     lines = []
+    if state_changes:
+        lines.append("## 🔄 售票状态更新\n")
+        for e, old in state_changes:
+            lines.append(f"- **{e['name']}**：{STATE_LABEL.get(old, old)} → **{STATE_LABEL.get(e['sale_state'], e['sale_state'])}** · [{e['source']}]({e['url']})")
+        lines.append("")
     if changed:
         lines.append("## 🆕 票价 / 座位图更新\n")
         for e in {x["id"]: x for x in changed}.values():
