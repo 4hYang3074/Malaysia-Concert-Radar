@@ -1580,7 +1580,7 @@ def merge_announcements(leads, events, cfg=None):
             target.setdefault("sales", []).append({
                 "name": f"{'加场 · ' if is_added else ''}{kind}（{l['from']}）", "start": st["time"], "end": None,
                 "queue": None, "available": True, "code_required": False, "url": l.get("url"), "announced": True,
-                "added": bool(is_added), "source_line": st.get("line")})
+                "added": bool(is_added), "source_line": st.get("line"), "kind": st.get("kind")})
             target["sales_closed"] = False
 
 

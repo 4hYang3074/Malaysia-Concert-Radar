@@ -223,3 +223,6 @@ footer { color: var(--sub); font-size: 12.5px; margin-top: 34px; line-height: 1.
 .states .st.cur { background: var(--accent); color: #0b1a14; font-weight: 700; }
 .states .arr { color: var(--sub); font-size: 12px; }
 .evi td { vertical-align: top; }
+
+/* 详细页最上方的售票状态（显眼） */
+.banner.topstatus { font-size: 17px; font-weight: 800; padding: 14px 16px; margin: 8px 0 4px; text-align: center; }

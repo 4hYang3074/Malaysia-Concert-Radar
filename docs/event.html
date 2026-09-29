@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>演出详情 · 马来西亚演唱会雷达</title>
 <meta name="theme-color" content="#15171c">
-<link rel="stylesheet" href="assets/app.css?v=20260929w">
+<link rel="stylesheet" href="assets/app.css?v=20260929x">
 </head>
 <body>
 <div class="wrap view" id="app"></div>
-<script src="assets/app.js?v=20260929w"></script>
+<script src="assets/app.js?v=20260929x"></script>
 <script>
 loadData(false).then(d => {
   nav(d, "confirmed");
@@ -27,6 +27,7 @@ loadData(false).then(d => {
 
   $("#app").innerHTML = `
     <a class="back" href="confirmed.html?cat=${cat}">‹ 返回${esc(CATS.find(c => c.key === cat).label)}</a>
+    <div class="banner ${st.cls} topstatus">${esc(st.text)}${e.opened_at && cat !== "soon" ? ` · ${esc(openedText(e))}` : ""}</div>
     <div class="card hero" style="margin-top:6px">
       ${avatar(e.avatar, e.artist_name, 120, e.avatar_kind)}
       <h1>${esc(e.artist_name)}</h1>
@@ -39,20 +40,6 @@ loadData(false).then(d => {
         ${e.limit ? `<div class="fact"><div class="k">🎟 限购</div><div class="v">每笔最多 ${e.limit} 张</div></div>` : ""}
       </div>
       ${saleTableHTML(e, now)}
-      ${saleStateHTML(e)}
-      <div class="banner ${st.cls}">${esc(st.text)}${e.opened_at && cat !== "soon" ? ` · ${esc(openedText(e))}` : ""}</div>
-      ${e.watch ? `<div class="meta" style="margin-top:6px">🔁 监控中：${esc(e.watch.since)} 起已重新查证 ${e.watch.checks} 次（官方图片 + 平台 + Google 新闻），一查到开票资料就通知你。</div>` : ""}
-      ${(() => {  // 加场消息：这位艺人所有地区的加场状态
-        const same = (addedGroups(d).find(g => g.some(x => x.id === e.id)) || []);
-        if (!same.length) return "";
-        return `<div class="banner warn" style="text-align:left">➕ <b>加场消息</b>${same.map(x => `<div style="margin-top:6px">${flag(x.country || "MY")} <b>${esc(ADDED_LABEL[x.added_status])}</b> · ${esc(x.venue || "")} · ${esc(dateRange(x.dates))}
-          ${x.added_status === "rumor" ? "（新闻说要加场，平台还没上架新场次）" : "（平台已上架加场的场次）"}
-          ${x.news_added ? `<br><small>${x.news_added.from ? esc(x.news_added.from) + " · " : "📰 "}<a href="${esc(safeUrl(x.news_added.url))}" target="_blank" rel="noopener">${esc(x.news_added.title)}</a>（${esc(x.news_added.time || "")}）</small>` : ""}
-          ${x.id !== e.id ? ` <a href="event.html?id=${encodeURIComponent(x.id)}">查看 ›</a>` : ""}</div>`).join("")}</div>`;
-      })()}
-      <div class="meta" style="margin-top:14px">${platformsOf(e).length > 1 ? `这场演出在 ${platformsOf(e).length} 个官方平台售票：` : "官方售票平台："}</div>
-      <div class="buybtns">${platformsOf(e).map(p => `<a class="btn ${p.sold_out ? "sold" : ""}" href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener">
-        ${esc(p.source)}${p.sold_out ? "（售罄）" : ""}${p.price_from ? ` · ${esc(p.price_from)} 起` : ""} ↗</a>`).join("")}</div>
     </div>
 
     <h3>💺 座位图与票价${fee}</h3>
@@ -67,6 +54,22 @@ loadData(false).then(d => {
         : e.price_text ? `<div class="note">${esc(e.price_text)}</div>`
         : e.price_from ? `<div class="note">最低 ${esc(e.price_from)} 起（详细票区请看官网）</div>`
         : `<div class="note">${maps.length ? "官方还没有用文字公布票价（目前只有座位图）。文字票价一公布，这里会自动变成价格表，并通知你。" : "票价还没公布，公布后会自动更新并通知你。"}</div>`}
+    </div>
+
+    <div class="card" style="text-align:center;margin-top:14px">
+      ${saleStateHTML(e)}
+      ${e.watch ? `<div class="meta" style="margin-top:6px">🔁 监控中：${esc(e.watch.since)} 起已重新查证 ${e.watch.checks} 次（官方图片 + 平台 + Google 新闻），一查到开票资料就通知你。</div>` : ""}
+      ${(() => {  // 加场消息：这位艺人所有地区的加场状态
+        const same = (addedGroups(d).find(g => g.some(x => x.id === e.id)) || []);
+        if (!same.length) return "";
+        return `<div class="banner warn" style="text-align:left">➕ <b>加场消息</b>${same.map(x => `<div style="margin-top:6px">${flag(x.country || "MY")} <b>${esc(ADDED_LABEL[x.added_status])}</b> · ${esc(x.venue || "")} · ${esc(dateRange(x.dates))}
+          ${x.added_status === "rumor" ? "（新闻说要加场，平台还没上架新场次）" : "（平台已上架加场的场次）"}
+          ${x.news_added ? `<br><small>${x.news_added.from ? esc(x.news_added.from) + " · " : "📰 "}<a href="${esc(safeUrl(x.news_added.url))}" target="_blank" rel="noopener">${esc(x.news_added.title)}</a>（${esc(x.news_added.time || "")}）</small>` : ""}
+          ${x.id !== e.id ? ` <a href="event.html?id=${encodeURIComponent(x.id)}">查看 ›</a>` : ""}</div>`).join("")}</div>`;
+      })()}
+      <div class="meta" style="margin-top:14px">${platformsOf(e).length > 1 ? `这场演出在 ${platformsOf(e).length} 个官方平台售票：` : "官方售票平台："}</div>
+      <div class="buybtns">${platformsOf(e).map(p => `<a class="btn ${p.sold_out ? "sold" : ""}" href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener">
+        ${esc(p.source)}${p.sold_out ? "（售罄）" : ""}${p.price_from ? ` · ${esc(p.price_from)} 起` : ""} ↗</a>`).join("")}</div>
     </div>
 
     ${(e.organizers || []).length ? `<h3>🏢 主办方</h3><div class="card">${e.organizers.map(o => {
