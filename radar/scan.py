@@ -208,7 +208,8 @@ def ticket2u(h):
         rows += upcoming
         if len(upcoming) < len(batch) or not batch:  # 列表按即将举行排在前面，出现已过期就可以停
             break
-    rows = [r for r in rows if r.get("countryid") == "1" and r.get("online") == "0"]
+    rows = [r for r in rows if r.get("countryid") == "1" and r.get("online") == "0"
+            and "outside" not in (r.get("statename") or "").lower()]
     # “BNPL - xxx” 是同一场演出的分期付款入口，有原版就不重复收录
     names = {r["name"].strip().lower() for r in rows}
     rows = [r for r in rows if not (r["name"].lower().startswith("bnpl - ") and r["name"][7:].strip().lower() in names)]
