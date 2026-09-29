@@ -156,6 +156,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "status": "rumor",
    "avatar": "avatars/ig-livenationmy.jpg",
    "platforms": [
     "Live Nation"
@@ -181,13 +182,15 @@
    "sale_times": [
     {
      "time": "2026-09-28 11:00",
-     "line": "🎫 General On-Sale: Mon, 28 Sept, 11am onwards."
+     "line": "🎫 General On-Sale: Mon, 28 Sept, 11am onwards.",
+     "past": false
     }
    ],
    "first_seen": "2026-09-29 08:34",
    "matches": [
     "golive-179"
    ],
+   "status": "announced",
    "avatar": "avatars/ig-livenationmy.jpg",
    "platforms": [
     "GoLive"
@@ -214,6 +217,7 @@
    "matches": [
     "golive-174"
    ],
+   "status": "rumor",
    "avatar": "avatars/ig-livenationmy.jpg",
    "platforms": [
     "GoLive",
@@ -242,6 +246,7 @@
    "matches": [
     "golive-180"
    ],
+   "status": "rumor",
    "avatar": "avatars/ig-livenationmy.jpg",
    "platforms": [
     "GoLive",
@@ -266,13 +271,15 @@
    "sale_times": [
     {
      "time": "2026-09-28 11:00",
-     "line": "🎫 General On-Sale: Mon, 28 Sept, 11am onwards."
+     "line": "🎫 General On-Sale: Mon, 28 Sept, 11am onwards.",
+     "past": false
     }
    ],
    "first_seen": "2026-09-29 08:34",
    "matches": [
     "golive-179"
    ],
+   "status": "announced",
    "avatar": "avatars/ig-livenationmy.jpg",
    "platforms": [
     "GoLive"
@@ -298,6 +305,7 @@
    "matches": [
     "golive-167"
    ],
+   "status": "rumor",
    "avatar": "avatars/ig-livenationmy.jpg",
    "platforms": [
     "GoLive",
@@ -322,6 +330,7 @@
    "matches": [
     "golive-159"
    ],
+   "status": "rumor",
    "avatar": "avatars/ig-livenationmy.jpg",
    "platforms": [
     "GoLive",
@@ -348,6 +357,7 @@
    "matches": [
     "golive-177"
    ],
+   "status": "rumor",
    "avatar": "avatars/ig-livenationmy.jpg",
    "platforms": [
     "GoLive",
@@ -373,13 +383,15 @@
    "sale_times": [
     {
      "time": "2026-09-28 11:00",
-     "line": "🎫 General On-Sale: Mon, 28 Sept, 11am onwards."
+     "line": "🎫 General On-Sale: Mon, 28 Sept, 11am onwards.",
+     "past": false
     }
    ],
    "first_seen": "2026-09-29 08:34",
    "matches": [
     "golive-179"
    ],
+   "status": "announced",
    "avatar": "avatars/ig-livenationmy.jpg",
    "platforms": [
     "GoLive"
@@ -409,7 +421,8 @@
    "platforms": [
     "GoLive",
     "Live Nation"
-   ]
+   ],
+   "status": "rumor"
   },
   "ig-71c7e57bcbecf581": {
    "id": "ig-71c7e57bcbecf581",
@@ -427,6 +440,7 @@
     "fantopia-zk3x1r1c",
     "fantopia-xngkbueb"
    ],
+   "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
    "platforms": []
   },
@@ -449,6 +463,7 @@
     "fantopia-zk3x1r1c",
     "fantopia-xngkbueb"
    ],
+   "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
    "platforms": []
   },
@@ -471,6 +486,7 @@
     "fantopia-zk3x1r1c",
     "fantopia-xngkbueb"
    ],
+   "status": "onsale",
    "avatar": "avatars/ig-starplanetmy.jpg",
    "platforms": []
   },
@@ -492,6 +508,7 @@
     "fantopia-zk3x1r1c",
     "fantopia-xngkbueb"
    ],
+   "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
    "platforms": []
   },
@@ -511,6 +528,7 @@
     "fantopia-zk3x1r1c",
     "fantopia-xngkbueb"
    ],
+   "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
    "platforms": []
   },
@@ -534,6 +552,7 @@
     "fantopia-zk3x1r1c",
     "fantopia-xngkbueb"
    ],
+   "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
    "platforms": []
   },
@@ -553,6 +572,7 @@
     "fantopia-zk3x1r1c",
     "fantopia-xngkbueb"
    ],
+   "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
    "platforms": []
   },
@@ -569,6 +589,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
    "platforms": [],
    "artist": "Hillsong Worship",
@@ -590,6 +611,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
    "platforms": [],
    "artist": "Hillsong Worship",
@@ -611,6 +633,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
    "platforms": [],
    "artist": "Hillsong Worship",
@@ -635,6 +658,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "status": "rumor",
    "avatar": "avatars/ig-ticket2uofficial.jpg",
    "platforms": [
     "Ticket2U"
@@ -659,6 +683,7 @@
    "matches": [
     "t2u-51955"
    ],
+   "status": "rumor",
    "avatar": "avatars/ig-ticket2uofficial.jpg",
    "platforms": [
     "Ticket2U"
@@ -682,6 +707,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "status": "rumor",
    "avatar": "avatars/ig-ticket2uofficial.jpg",
    "platforms": [
     "Ticket2U"
@@ -709,6 +735,7 @@
    "matches": [
     "t2u-51768"
    ],
+   "status": "rumor",
    "avatar": "avatars/ig-ticket2uofficial.jpg",
    "platforms": [
     "Ticket2U"
@@ -732,6 +759,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "status": "rumor",
    "avatar": "avatars/ig-ticket2uofficial.jpg",
    "platforms": [
     "Ticket2U"
@@ -756,6 +784,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "status": "onsale",
    "avatar": "avatars/ig-ticket2uofficial.jpg",
    "platforms": [
     "Ticket2U"
@@ -781,6 +810,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "status": "rumor",
    "avatar": "avatars/ig-goliveasia.jpg",
    "platforms": [
     "GoLive"
@@ -803,6 +833,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "status": "rumor",
    "avatar": "avatars/ig-zeppkualalumpur.jpg",
    "platforms": [],
    "image": "posts/ig-6ec66f6e17ad7b3e.jpg"
@@ -825,6 +856,7 @@
    "matches": [
     "golive-177"
    ],
+   "status": "rumor",
    "avatar": "avatars/ig-zeppkualalumpur.jpg",
    "platforms": [
     "GoLive"
@@ -849,11 +881,13 @@
    "sale_times": [
     {
      "time": "2026-10-08 12:00",
-     "line": "🎟 General Sale: 12:00 PM 8th Oct. (Local Time)"
+     "line": "🎟 General Sale: 12:00 PM 8th Oct. (Local Time)",
+     "past": false
     }
    ],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "status": "announced",
    "avatar": "avatars/ig-zeppkualalumpur.jpg",
    "platforms": [],
    "artist": "izna",
@@ -878,6 +912,7 @@
    "matches": [
     "t2u-51240"
    ],
+   "status": "rumor",
    "avatar": "avatars/ig-zeppkualalumpur.jpg",
    "platforms": [
     "Ticket2U"
@@ -899,6 +934,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "status": "rumor",
    "avatar": "avatars/ig-zeppkualalumpur.jpg",
    "platforms": [],
    "image": "posts/ig-122e0282dea47f05.jpg"
@@ -922,6 +958,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "status": "rumor",
    "avatar": "avatars/ig-zeppkualalumpur.jpg",
    "platforms": [
     "Ticketmelon"
@@ -947,6 +984,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "status": "rumor",
    "avatar": "avatars/ig-zeppkualalumpur.jpg",
    "platforms": [],
    "image": "posts/ig-3ee2b599eece6970.jpg"
@@ -969,8 +1007,12 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "status": "expired",
    "avatar": "avatars/ig-zeppkualalumpur.jpg",
-   "platforms": [],
+   "platforms": [
+    "MAISEAT",
+    "Trip.com"
+   ],
    "artist": "JEONG EUN JI",
    "artist_photo": "avatars/a-feca6f372bf8.jpg",
    "image": "posts/ig-ba3f876f0ef083d0.jpg"
@@ -989,6 +1031,7 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [],
    "platforms": [],
+   "status": "rumor",
    "image": "posts/ig-deb10a832500b6c7.jpg"
   },
   "ig-e9e4a0a260caf28f": {
@@ -1006,11 +1049,13 @@
    "sale_times": [
     {
      "time": "2026-09-29 15:00",
-     "line": "🎟 General sale: 29 September 2026, from 3PM"
+     "line": "🎟 General sale: 29 September 2026, from 3PM",
+     "past": false
     }
    ],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "status": "announced",
    "platforms": [],
    "image": "posts/ig-e9e4a0a260caf28f.jpg"
   },
@@ -1035,6 +1080,7 @@
     "fantopia-zk3x1r1c",
     "fantopia-xngkbueb"
    ],
+   "status": "rumor",
    "platforms": []
   },
   "news-76088e616d67d232": {
@@ -1048,6 +1094,8 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "sale_times": [],
+   "status": "rumor",
    "platforms": []
   },
   "news-c6d3c2a8d991fa79": {
@@ -1061,6 +1109,8 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "sale_times": [],
+   "status": "onsale",
    "platforms": []
   },
   "news-8f579075eb828492": {
@@ -1074,6 +1124,8 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "sale_times": [],
+   "status": "rumor",
    "platforms": [],
    "artist": "Israel Houghton",
    "artist_photo": "avatars/a-0d38f2cafd68.jpg"
@@ -1089,6 +1141,8 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "sale_times": [],
+   "status": "rumor",
    "platforms": [],
    "artist": "Israel Houghton",
    "artist_photo": "avatars/a-0d38f2cafd68.jpg"
@@ -1104,6 +1158,8 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "sale_times": [],
+   "status": "rumor",
    "platforms": []
   },
   "news-45afdaedd5868897": {
@@ -1117,6 +1173,8 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "sale_times": [],
+   "status": "rumor",
    "platforms": []
   },
   "news-f985c43c8c2ccbec": {
@@ -1130,6 +1188,8 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "sale_times": [],
+   "status": "rumor",
    "platforms": [],
    "artist": "Israel Houghton",
    "artist_photo": "avatars/a-0d38f2cafd68.jpg"
@@ -1145,6 +1205,8 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "sale_times": [],
+   "status": "rumor",
    "platforms": [],
    "artist": "Israel Houghton",
    "artist_photo": "avatars/a-0d38f2cafd68.jpg"
@@ -1160,6 +1222,8 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "sale_times": [],
+   "status": "rumor",
    "platforms": [],
    "artist": "Israel Houghton",
    "artist_photo": "avatars/a-0d38f2cafd68.jpg"
@@ -1175,7 +1239,9 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
-   "platforms": []
+   "platforms": [],
+   "sale_times": [],
+   "status": "rumor"
   },
   "news-13481ebd3810997a": {
    "id": "news-13481ebd3810997a",
@@ -1188,6 +1254,8 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
+   "sale_times": [],
+   "status": "rumor",
    "platforms": []
   },
   "news-b3b14997d36d71c8": {
@@ -1201,6 +1269,8 @@
    "hints": [],
    "first_seen": "2026-09-29 09:32",
    "matches": [],
+   "sale_times": [],
+   "status": "rumor",
    "platforms": []
   },
   "ig-08b56d3d94823b20": {
@@ -1224,6 +1294,7 @@
    "matches": [
     "golive-173"
    ],
+   "status": "rumor",
    "avatar": "avatars/ig-livenationmy.jpg",
    "platforms": [
     "GoLive"
@@ -1244,6 +1315,7 @@
    "matches": [
     "golive-167"
    ],
+   "status": "rumor",
    "platforms": []
   }
  },
