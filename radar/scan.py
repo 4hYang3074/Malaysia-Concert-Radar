@@ -387,6 +387,21 @@ def nolworld(h):
             opens = (datetime.strptime(x["bookingOpenTime"][:16], "%Y-%m-%d %H:%M") - timedelta(hours=1)).strftime("%Y-%m-%d %H:%M")
         start, end = x.get("playStartDate"), x.get("playEndDate")
         url = f"https://world.nol.com/en/ticket/places/{x.get('placeCode')}/products/{x.get('goodsCode')}"
+        # 官方票价表：商品页资料里的 price（座位等级 + 价格，韩币）
+        tiers = []
+        try:
+            pb = h.request(url, retries=1)
+            pt = "".join(json.loads('"' + c + '"') for c in re.findall(r'self\.__next_f\.push\(\[1,"(.*?)"\]\)', pb, re.S))
+            j = pt.find('"price":[')
+            if j >= 0:
+                prices, _ = json.JSONDecoder().raw_decode(pt[j + 8:])
+                for p in prices:
+                    if p.get("seatGradeName") and p.get("salesPrice") is not None:
+                        grade = p["seatGradeName"] + ("" if p.get("priceGradeName") in (None, "", "General", "일반") else f" · {p['priceGradeName']}")
+                        tiers.append({"name": grade, "price": f"₩{p['salesPrice']:,}"})
+            time.sleep(0.3)
+        except Exception as ex:
+            print(f"  nol detail {x.get('goodsCode')}: {ex}", flush=True)
         out.append({
             "id": f"nol-{x.get('goodsCode')}",
             "country": "KR",
@@ -399,7 +414,7 @@ def nolworld(h):
             "dates": [d for d in dict.fromkeys([start, end]) if d],  # 只有日期（YYYY-MM-DD）
             "sales": [{"name": x.get("salesTypeName") if x.get("salesTypeName") not in (None, "일반") else "开票",
                        "start": opens, "end": None, "queue": None, "available": True, "code_required": False, "url": url}] if opens else [],
-            "tiers": [],
+            "tiers": tiers,
             "limit": None,
             "sold_out": False,
             "url": url,
@@ -472,9 +487,12 @@ def ig_leads(h, cfg, token, state, health):
     n = cfg.get("ig_posts_per_account", 10)
     for user in cfg["ig_accounts"]:
         fields = (f"business_discovery.username({user}){{username,name,profile_picture_url,"
-                  f"media.limit({n}){{caption,timestamp,permalink,media_type,media_url,thumbnail_url}}}}")
+                  f"media.limit({n}){{caption,timestamp,permalink,media_type,media_url,thumbnail_url,children{{media_type,media_url}}}}}}")
         try:
-            bd = call(uid, {"fields": fields})["business_discovery"]
+            try:
+                bd = call(uid, {"fields": fields})["business_discovery"]
+            except RuntimeError:  # 多图栏位（children）不被接受时，退回只拿第一张图
+                bd = call(uid, {"fields": fields.replace(",children{media_type,media_url}", "")})["business_discovery"]
             ok += 1
         except Exception as e:
             bad.append({"account": user, "error": short(str(e), 160)})
@@ -493,8 +511,12 @@ def ig_leads(h, cfg, token, state, health):
         try:
             if tag not in tag_ids:  # 每 7 天最多查 30 个不同标签，id 查一次就存起来
                 tag_ids[tag] = call("ig_hashtag_search", {"user_id": uid, "q": tag})["data"][0]["id"]
-            res = call(f"{tag_ids[tag]}/recent_media", {"user_id": uid, "limit": 50,
-                                                        "fields": "caption,timestamp,permalink,media_type,media_url"})
+            try:
+                res = call(f"{tag_ids[tag]}/recent_media", {"user_id": uid, "limit": 50,
+                                                            "fields": "caption,timestamp,permalink,media_type,media_url,children{media_type,media_url}"})
+            except RuntimeError:  # 多图栏位不被接受时，退回只拿第一张图
+                res = call(f"{tag_ids[tag]}/recent_media", {"user_id": uid, "limit": 50,
+                                                            "fields": "caption,timestamp,permalink,media_type,media_url"})
             ok += 1
         except Exception as e:
             bad.append({"account": f"#{tag}", "error": short(str(e), 160)})
@@ -519,7 +541,10 @@ def ig_lead(m, where, name):
             "title": short(cap.split("\n")[0], 120), "text": short(cap, 900), "time": t,
             "url": m.get("permalink"), "hints": sale_hints(cap), "sale_times": sale_times(cap, t),
             # IG 图片网址会过期，下载成本地图片后这个栏位会被移除
-            "image_src": m.get("thumbnail_url") if m.get("media_type") == "VIDEO" else m.get("media_url")}
+            "image_src": m.get("thumbnail_url") if m.get("media_type") == "VIDEO" else m.get("media_url"),
+            # 多图贴文的其他图片（座位图常在第 2、3 张）：只在需要找座位图时才下载
+            "more_images": [c["media_url"] for c in ((m.get("children") or {}).get("data") or [])[1:10]
+                            if c.get("media_type") == "IMAGE" and c.get("media_url")]}
 
 
 def sale_hints(text):
@@ -1781,62 +1806,136 @@ def _search_budget(cfg, state):
     return True
 
 
-def web_seatmaps(h, events, cfg, state, now_s, first_run, limit=10):
-    """售票平台没有座位图的演出（BookMyShow、NOL World 等）：用图片搜索找“艺人 + 场馆 + 座位图”。
-    只收高清图（长边 ≥ 1000 像素），而且 OCR 要读到舞台（STAGE / 舞台 / 무대）或多个票价，确认真的是座位图。
-    每场只搜一次（结果存 state）；需要 SERPAPI_KEY 或 BRAVE_API_KEY。"""
+SEATMAP_RE = re.compile(r"(?i)\bstage\b|舞台|무대|panggung|seat ?map|seating plan|座位图|座位圖|좌석")
+PRICE_TOKEN = re.compile(r"(?i)(?:RM|S\$|MYR|SGD|₩|฿|KRW|THB)\s?\d|\d[\d,]{2,}\s?(?:원|บาท)")
+
+
+def looks_like_seatmap(text):
+    """OCR 文字像不像座位图：提到舞台 / 座位图，而且有多个票价（或至少很多区号）。"""
+    text = text or ""
+    return bool(SEATMAP_RE.search(text)) and (len(PRICE_TOKEN.findall(text)) >= 2 or len(re.findall(r"\b\d{3}\b", text)) >= 6)
+
+
+def extra_seatmaps(h, events, leads, cfg, state, limit=10):
+    """售票平台没有座位图的演出（BookMyShow 有防火墙、NOL World 不提供等），从别的来源补：
+    1. 对上这场演出的 IG 官方贴文图片：OCR 读到舞台 + 票价，就是座位图（主办 / 场馆常贴座位图和票价）
+    2. Google 图片搜索（需要 SERPAPI_KEY；也支援 BRAVE_API_KEY）：只收高清图（长边 ≥ 1000 像素）、OCR 确认是座位图
+    存在 docs/maps-extra/（跟平台官方座位图分开管理），每场只搜一次，结果存 state。"""
     import tempfile
+    folder = ROOT / "docs" / "maps-extra"
+    done = state.setdefault("seatmap_extra", {})
+    need = [e for e in events if not e.get("hidden") and not e.get("seat_maps") and e.get("artist_name")]
+
+    def keep(e, blob, source):
+        folder.mkdir(parents=True, exist_ok=True)
+        ext = ".png" if blob[:8] == b"\x89PNG\r\n\x1a\n" else ".jpg"
+        rel = f"maps-extra/{re.sub(r'[^A-Za-z0-9_.-]', '_', e['id'])}{ext}"
+        (ROOT / "docs" / rel).write_bytes(blob)
+        done[e["id"]] = {"rel": rel, "source": source}
+
+    # 1. IG 贴文图片：第一张已下载在 docs/posts/ 并 OCR 过；多图贴文的其他张（座位图常在后面）这里才下载来读
+    ocr_cache = state.setdefault("ocr_ig_more", {})
+    used_keys = set()
+    for e in need:
+        if (done.get(e["id"]) or {}).get("rel"):
+            continue
+        for l in leads:
+            if l["kind"] != "IG" or e["id"] not in (l.get("matches") or []):
+                continue
+            src = f"IG {l['from']} 贴文（{(l.get('time') or '')[:10]}）"
+            path = ROOT / "docs" / f"posts/{l['id']}.jpg"
+            if looks_like_seatmap(l.get("image_text")) and path.exists():
+                keep(e, path.read_bytes(), src)
+                break
+            hit = False
+            for i, url in enumerate(l.get("more_images") or []):
+                key = f"{l['id']}#{i + 1}"
+                used_keys.add(key)
+                if ocr_cache.get(key) is False:
+                    continue  # 之前读过，不是座位图
+                try:
+                    with h.opener.open(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=30) as resp:
+                        blob = resp.read(8_000_001)
+                except Exception:
+                    continue
+                with tempfile.TemporaryDirectory() as tmp:
+                    tp = Path(tmp) / "img"
+                    tp.write_bytes(blob)
+                    text = ocr_text(tp)
+                if text is None:
+                    break  # 没装 OCR（本机测试）
+                ocr_cache[key] = looks_like_seatmap(text)
+                if ocr_cache[key]:
+                    keep(e, blob, src + f" 第 {i + 2} 张图")
+                    hit = True
+                    break
+            if hit:
+                break
+    for k in [k for k in ocr_cache if k not in used_keys]:
+        del ocr_cache[k]
+
+    # 2. Google 图片搜索
     serp, brave = os.environ.get("SERPAPI_KEY"), os.environ.get("BRAVE_API_KEY")
-    if not serp and not brave:
-        return
-    done = state.setdefault("seatmap_search", {})
-    todo = [e for e in events if not e.get("hidden") and not e.get("seat_maps") and e.get("artist_name")
-            and e.get("venue") and (e.get("country") or "MY") in ("MY", "SG") and e["id"] not in done]
-    found = []
-    for e in todo[:limit]:
+    searched = 0
+    for e in need:
+        if e["id"] in done or not (serp or brave) or not e.get("venue") or searched >= limit:
+            continue
         if not _search_budget(cfg, state):
             break
-        q = f'"{e["artist_name"]}" {e["venue"]} seating plan seat map 座位图'
+        searched += 1
+        done[e["id"]] = None  # 搜过就记下，没找到也不重复搜
+        q = f'{e["artist_name"]} {e["venue"]} seating plan'
         cands = []
         try:
             if serp:
                 r = h.json("https://serpapi.com/search.json?" + urllib.parse.urlencode(
                     {"engine": "google_images", "q": q, "gl": (e.get("country") or "MY").lower(), "api_key": serp}), retries=1)
-                cands = [(x.get("original"), x.get("original_width") or 0, x.get("original_height") or 0) for x in r.get("images_results") or []]
+                cands = [(x.get("original"), x.get("original_width") or 0, x.get("original_height") or 0, x.get("link"))
+                         for x in r.get("images_results") or []]
             else:
                 r = h.json("https://api.search.brave.com/res/v1/images/search?" + urllib.parse.urlencode({"q": q, "count": 30}),
                            headers={"X-Subscription-Token": brave, "Accept": "application/json"}, retries=1)
                 cands = [((x.get("properties") or {}).get("url"), (x.get("properties") or {}).get("width") or 0,
-                          (x.get("properties") or {}).get("height") or 0) for x in r.get("results") or []]
+                          (x.get("properties") or {}).get("height") or 0, x.get("url")) for x in r.get("results") or []]
         except Exception as ex:
             print(f"  seat map search {e['artist_name']}: {ex}", flush=True)
-        done[e["id"]] = None
-        for url, w, hgt in cands[:12]:
-            if not url or max(w, hgt) < 1000:
+        for url, w, hgt, page in cands[:12]:
+            if not url or (w and hgt and max(w, hgt) < 1000):
                 continue  # 只要高清图
+            try:
+                with h.opener.open(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=30) as resp:
+                    blob = resp.read(8_000_001)
+            except Exception:
+                continue
+            if len(blob) > 8_000_000:
+                continue
             with tempfile.TemporaryDirectory() as tmp:
                 path = Path(tmp) / "img"
-                try:
-                    with h.opener.open(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=30) as resp:
-                        path.write_bytes(resp.read(8_000_000))
-                except Exception:
-                    continue
-                size = img_size(path)
-                text = ocr_text(path) or ""
-            prices = re.findall(r"(?i)(?:RM|S\$|MYR|SGD)\s?\d", text)
-            if size and max(size) >= 1000 and (re.search(r"(?i)stage|舞台|무대|panggung", text) or len(prices) >= 3):
-                done[e["id"]] = url
-                e["seat_maps"] = [url]
-                e["seat_map_source"] = "图片搜索（非官方来源，请以官网为准）"
-                found.append(e)
+                path.write_bytes(blob)
+                size, text = img_size(path), ocr_text(path)
+            if size and max(size) >= 1000 and looks_like_seatmap(text) and mentions_any(e, text):
+                keep(e, blob, f"Google 图片（{urllib.parse.urlparse(page or url).netloc}）")
                 break
         time.sleep(SLEEP)
-    if found:
-        save_maps(h, found, state, now_s, first_run)
-        add_ocr_tiers(found, state)
+
+    # 套用（每次扫描都套上之前找到的）并清掉已下架演出的图
     live = {e["id"] for e in events}
+    for e in events:
+        got = done.get(e["id"]) or {}
+        if not e.get("seat_maps") and got.get("rel") and (ROOT / "docs" / got["rel"]).exists():
+            e["seat_maps"] = [got["rel"]]
+            e["seat_map_source"] = got["source"] + "，非售票平台官方图，请以官网为准"
     for k in [k for k in done if k not in live]:
-        del done[k]
+        rel = (done.pop(k) or {}).get("rel")
+        if rel and (ROOT / "docs" / rel).exists():
+            (ROOT / "docs" / rel).unlink()
+
+
+def mentions_any(e, text):
+    """图片文字里要提到这场演出的艺人或场馆（避免抓到别场演出的座位图）。"""
+    t = norm(text)
+    return any(len(norm(x)) >= 3 and norm(x) in t for x in (e.get("artist_name"), e.get("venue"), e.get("name")) if x) \
+        or any(len(w) >= 4 and w.lower() in (text or "").lower() for w in re.findall(r"[A-Za-z]+", e.get("venue") or ""))
 
 
 def web_search(h, artist, country, cfg, state):
@@ -2100,7 +2199,6 @@ def main():
     events.sort(key=lambda e: (e["dates"][0] if e["dates"] else "9999", e["name"]))
     now_s = now.strftime("%Y-%m-%d %H:%M")
     changed = save_maps(h, events, state, now_s, first_run) + track_prices(events, state, now_s, first_run)
-    add_ocr_tiers(events, state)
     official_images(h, events, state)  # 官方来源优先：海报、票务说明图上的开票时间 / SOLD OUT
     ups = state.setdefault("updates", {})
     for e in changed:
@@ -2163,7 +2261,6 @@ def main():
     # 同一场演出在几个平台卖 → 合并成一张卡；线索里对应的演出 id 也跟着换
     events, idmap = merge_events(events)
     apply_filters(events, cfg)
-    web_seatmaps(h, events, cfg, state, now_s, first_run)  # 平台没有座位图的：图片搜索（高清 + OCR 确认）
     for l in leads:
         l["matches"] = list(dict.fromkeys(idmap.get(m, m) for m in l.get("matches", [])))
         l["platforms"] = detect_platforms(lead_blob(l), cfg)
@@ -2200,6 +2297,8 @@ def main():
     merge_news_sales(events, checks)
     track_added(events, state)  # 加场：传出加场（只有新闻）/ 已加场（平台已上架新场次）
     sale_status(events, checks, now)  # 售票状态机（附证据）
+    extra_seatmaps(h, events, leads, cfg, state)  # 平台没有座位图的：IG 贴文 → Google 图片（高清 + OCR 确认）
+    add_ocr_tiers(events, state)  # 座位图上印的票价（包括补来的座位图）
     state_changes = update_watchlist(events, state, now)
     for l in leads:  # 只来自新闻、又查证不到马来西亚相关报导的：可信度太低，不放进待确定
         if not l.get("hidden") and not l.get("listed") and l["kind"] == "新闻" and checks.get(l.get("artist"), {}).get("count", 1) == 0:
