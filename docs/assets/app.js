@@ -244,7 +244,10 @@ function posterCard(e, now = new Date()) {
   else cd = `❔ 等待开票资料 · 监控中`;
   // 新闻说要加场，但平台还没公布新的开票时间
   if (e.added_status && !(s && toDate(s.start) > now)) {
-    cd += e.added_status === "confirmed" ? "<br>➕ 已加场（平台已上架）" : "<br>📢 传出加场 · 平台还没上架";
+    // 显示是哪个地区加场；同一艺人其他地区也有加场的，只提示数量（详细在内页）
+    const where = `${flag(e.country || "MY")} ${esc(e.city || e.venue || COUNTRIES[e.country || "MY"].split(" ")[1])}`;
+    cd += `<br>${e.added_status === "confirmed" ? "➕ 已加场" : "📢 传出加场"} · ${where}`
+      + (e._added_more ? `<br>另有 ${e._added_more} 个地区（点进去看）` : "");
     hot = true;
   }
   return `<a class="pcard" href="event.html?id=${encodeURIComponent(e.id)}">
