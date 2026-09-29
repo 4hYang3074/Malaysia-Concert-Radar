@@ -1877,13 +1877,17 @@ def extra_seatmaps(h, events, leads, cfg, state, limit=10):
     # 2. Google 图片搜索
     serp, brave = os.environ.get("SERPAPI_KEY"), os.environ.get("BRAVE_API_KEY")
     searched = 0
+    today = datetime.now(MYT).strftime("%Y-%m-%d")
+    retry = (datetime.now(MYT) - timedelta(days=3)).strftime("%Y-%m-%d")
     for e in need:
-        if e["id"] in done or not (serp or brave) or not e.get("venue") or searched >= limit:
+        prev = done.get(e["id"]) or {}
+        # 只搜马来西亚、新加坡；已经有座位图的不搜；没找到的 3 天后再试（座位图常在开票前后才公布）
+        if prev.get("rel") or (prev.get("tried") or "") > retry or (e.get("country") or "MY") not in ("MY", "SG")                 or not (serp or brave) or not e.get("venue") or searched >= limit:
             continue
         if not _search_budget(cfg, state):
             break
         searched += 1
-        done[e["id"]] = None  # 搜过就记下，没找到也不重复搜
+        done[e["id"]] = {"rel": None, "tried": today}
         q = f'{e["artist_name"]} {e["venue"]} seating plan'
         cands = []
         try:
