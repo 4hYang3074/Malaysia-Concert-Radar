@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>演唱会雷达</title>
 <meta name="theme-color" content="#121212">
-<link rel="stylesheet" href="assets/app.css?v=20260929j">
+<link rel="stylesheet" href="assets/app.css?v=20260929k">
 <script>
   // 旧版网址（#/e/xxx）转到新的演出页
   const old = location.hash.match(/^#\/e\/(.+)$/);
@@ -26,7 +26,7 @@
   <div id="cal"></div>
   <div id="foot"></div>
 </div>
-<script src="assets/app.js?v=20260929j"></script>
+<script src="assets/app.js?v=20260929k"></script>
 <script>
 loadData().then(d => {
   nav(d, "home");
@@ -40,6 +40,8 @@ loadData().then(d => {
   // 3. 最新上架（7 天内）
   const fresh = d.events.filter(e => e.first_seen && now - toDate(e.first_seen) < 7 * 864e5 && category(e, now) === "soon")
     .sort((a, b) => b.first_seen.localeCompare(a.first_seen) || (b.fans || 0) - (a.fans || 0)).slice(0, 20);
+  // 3b. 新闻传出加场、平台还没公布新场次的开票时间（先留意）
+  const added = d.events.filter(e => e.news_added && category(e, now) !== "soon");
   // 4. 传出要来（待确定，已认出明星的）
   const rumor = pendingGroups(d).groups.filter(g => g.leads.length).slice(0, 15);
   const groupCard = g => `<a class="pcard" href="pending.html#a-${encodeURIComponent(g.name)}">
@@ -50,6 +52,7 @@ loadData().then(d => {
   $("#rails").innerHTML =
     railHTML("🔥 即将开票", soon.map(e => posterCard(e, now)), "confirmed.html?cat=soon" + q) +
     railHTML("🌟 当红歌星", hot.map(i => i.ev ? posterCard(i.ev, now) : groupCard(i.group))) +
+    railHTML("📢 传出加场", added.map(e => posterCard(e, now))) +
     railHTML("🆕 最新上架", fresh.map(e => posterCard(e, now)), "confirmed.html?cat=all" + q) +
     railHTML("🗣️ 传出要来", rumor.map(groupCard), "pending.html") ||
     `<div class="card empty" style="margin-top:20px">这个国家目前还没有资料。</div>`;

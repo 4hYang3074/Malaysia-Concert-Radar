@@ -213,6 +213,8 @@ function posterCard(e, now = new Date()) {
   else if (cat === "soldout") cd = "🔴 已售罄";
   else if (cat === "opened") cd = lastStart(e) ? `✔️ ${fmt(lastStart(e))} 已开票` : "✔️ 已开票（抢票已结束）";
   else cd = "❔ 售票资讯不明";
+  // 新闻说要加场，但平台还没公布新的开票时间
+  if (e.news_added && !(s && toDate(s.start) > now)) { cd += "<br>📢 新闻：加场，开票时间待公布"; hot = true; }
   return `<a class="pcard" href="event.html?id=${encodeURIComponent(e.id)}">
     <div class="ph">
       <div class="ini">${esc((e.artist_name || "?").slice(0, 1))}</div>
@@ -362,4 +364,15 @@ function footer(d) {
 }
 function fail(el) {
   el.innerHTML = `<div class="card empty">资料载入失败，请稍后重新整理。</div>`;
+}
+
+// Google 新闻查证结果（待确定的明星、已上架的演出都用）
+function newsCheckHTML(c, place = "马来西亚") {
+  if (!c) return "";
+  const where = c.country === "SG" ? "新加坡" : place;
+  return `<div class="sum ${c.count ? "ok" : "warn"}" style="margin-top:8px">🔎 Google 新闻查证（${esc(c.checked || "")}）：${c.count ? `${c.count} 篇${where}相关报导` : `没有找到${where}的相关报导`}
+    ${(c.platforms || []).length ? `· 提到 <b>${c.platforms.map(esc).join("、")}</b>` : ""}
+    ${(c.sale_times || []).length ? `· 报导里的开票时间 <b>${c.sale_times.map(x => esc(fmt(x.time))).join("、")}</b>` : ""}
+    ${c.added ? "· 有提到<b>加场</b>" : ""}
+    ${(c.top || []).map(t => `<div style="font-weight:400;margin-top:4px">· <a href="${esc(safeUrl(t.url))}" target="_blank" rel="noopener">${esc(t.title)}</a> <small>${esc(t.time || "")}</small></div>`).join("")}</div>`;
 }

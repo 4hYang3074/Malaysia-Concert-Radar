@@ -48,16 +48,33 @@
     "吉隆坡演唱会"
   ],
 
+  "_news_queries_说明": "Google 新闻（免费）搜索词：中、英、马来、韩文，马来西亚 + 新加坡。标题要提到演唱会、也要提到那个国家才收录（need_malaysia=false 的马来文查询除外）",
   "news_queries": [
     {"q": "concert Kuala Lumpur tickets when:3d", "hl": "en-MY", "gl": "MY", "ceid": "MY:en"},
     {"q": "concert Malaysia presale when:3d", "hl": "en-MY", "gl": "MY", "ceid": "MY:en"},
+    {"q": "concert KL \"on sale\" OR \"ticket sales\" when:7d", "hl": "en-MY", "gl": "MY", "ceid": "MY:en"},
+    {"q": "\"added show\" OR \"additional show\" Malaysia OR \"Kuala Lumpur\" when:7d", "hl": "en-MY", "gl": "MY", "ceid": "MY:en"},
+    {"q": "concert \"Bukit Jalil\" OR \"Axiata Arena\" OR \"Mega Star Arena\" OR \"Zepp Kuala Lumpur\" OR \"MITEC\" when:7d", "hl": "en-MY", "gl": "MY", "ceid": "MY:en"},
+    {"q": "\"fan meeting\" OR fancon Kuala Lumpur OR Malaysia when:7d", "hl": "en-MY", "gl": "MY", "ceid": "MY:en"},
+    {"q": "world tour Asia Kuala Lumpur when:7d", "hl": "en-MY", "gl": "MY", "ceid": "MY:en"},
     {"q": "concert Kuala Lumpur 2027 when:7d", "hl": "en-MY", "gl": "MY", "ceid": "MY:en"},
     {"q": "演唱会 吉隆坡 when:3d", "hl": "zh-CN", "gl": "MY", "ceid": "MY:zh-Hans"},
     {"q": "演唱会 马来西亚 开票 when:7d", "hl": "zh-CN", "gl": "MY", "ceid": "MY:zh-Hans"},
+    {"q": "演唱会 吉隆坡 加场 when:7d", "hl": "zh-CN", "gl": "MY", "ceid": "MY:zh-Hans"},
+    {"q": "抢票 吉隆坡 OR 马来西亚 OR 大马 when:7d", "hl": "zh-CN", "gl": "MY", "ceid": "MY:zh-Hans"},
+    {"q": "巡演 马来西亚站 OR 吉隆坡站 when:7d", "hl": "zh-CN", "gl": "MY", "ceid": "MY:zh-Hans"},
     {"q": "演唱會 大馬 加場 when:7d", "hl": "zh-TW", "gl": "MY", "ceid": "MY:zh-Hant"},
+    {"q": "演唱會 馬來西亞 售票 OR 開賣 when:7d", "hl": "zh-TW", "gl": "MY", "ceid": "MY:zh-Hant"},
     {"q": "konsert tiket when:3d", "hl": "ms", "gl": "MY", "ceid": "MY:ms", "need_malaysia": false},
-    {"q": "concert Singapore tickets when:3d", "hl": "en-SG", "gl": "SG", "ceid": "SG:en", "need_malaysia": false, "country": "SG"},
-    {"q": "演唱会 新加坡 开票 when:7d", "hl": "zh-CN", "gl": "SG", "ceid": "SG:zh-Hans", "need_malaysia": false, "country": "SG"}
+    {"q": "konsert Bukit Jalil OR \"Axiata Arena\" when:7d", "hl": "ms", "gl": "MY", "ceid": "MY:ms", "need_malaysia": false},
+    {"q": "말레이시아 콘서트 OR 쿠알라룸푸르 공연 when:7d", "hl": "ko", "gl": "KR", "ceid": "KR:ko"},
+    {"q": "concert Singapore tickets when:3d", "hl": "en-SG", "gl": "SG", "ceid": "SG:en", "country": "SG"},
+    {"q": "\"added show\" OR \"additional show\" Singapore when:7d", "hl": "en-SG", "gl": "SG", "ceid": "SG:en", "country": "SG"},
+    {"q": "concert \"National Stadium\" OR \"Indoor Stadium\" Singapore when:7d", "hl": "en-SG", "gl": "SG", "ceid": "SG:en", "country": "SG"},
+    {"q": "\"fan meeting\" OR fancon Singapore when:7d", "hl": "en-SG", "gl": "SG", "ceid": "SG:en", "country": "SG"},
+    {"q": "演唱会 新加坡 开票 when:7d", "hl": "zh-CN", "gl": "SG", "ceid": "SG:zh-Hans", "country": "SG"},
+    {"q": "演唱会 新加坡 加场 OR 抢票 when:7d", "hl": "zh-CN", "gl": "SG", "ceid": "SG:zh-Hans", "country": "SG"},
+    {"q": "싱가포르 콘서트 OR 싱가포르 공연 when:7d", "hl": "ko", "gl": "KR", "ceid": "KR:ko", "country": "SG"}
   ],
 
   "leads_keep_days": 30,
@@ -74,7 +91,8 @@
   },
 
   "keywords": {
-    "malaysia": ["malaysia", "kuala lumpur", "in kl", " kl ", "#kl", "kl!", "kl,", "吉隆坡", "马来西亚", "馬來西亞", "大馬", "大马", "bukit jalil", "unifi arena", "axiata arena", "stadium nasional", "zepp kl", "zepp kuala lumpur", "idea live", "mega star arena", "mitec", "genting", "arena of stars", "penang", "槟城", "檳城", "johor", "新山", "sabah", "sicc", "kota kinabalu", "sarawak", "kuching", "setia city", "movement kl"],
-    "concert": ["concert", "tour", "live in", "presale", "pre-sale", "on-sale", "onsale", "on sale", "tickets", "ticketing", "演唱会", "演唱會", "巡演", "巡回", "巡迴", "开售", "開售", "公售", "预售", "預售", "门票", "門票", "konsert", "tiket", "fancon", "fan meeting", "fanmeeting", "showcase"]
+    "malaysia": ["malaysia", "kuala lumpur", "in kl", " kl ", "#kl", "kl!", "kl,", "吉隆坡", "马来西亚", "馬來西亞", "大馬", "大马", "bukit jalil", "unifi arena", "axiata arena", "stadium nasional", "zepp kl", "zepp kuala lumpur", "idea live", "mega star arena", "mitec", "genting", "arena of stars", "penang", "槟城", "檳城", "johor", "新山", "sabah", "sicc", "kota kinabalu", "sarawak", "kuching", "setia city", "movement kl", "mega star arena", "zepp kl", "马来西亚站", "吉隆坡站", "말레이시아", "쿠알라룸푸르"],
+    "concert": ["concert", "tour", "live in", "presale", "pre-sale", "on-sale", "onsale", "on sale", "tickets", "ticketing", "演唱会", "演唱會", "巡演", "巡回", "巡迴", "开售", "開售", "公售", "预售", "預售", "门票", "門票", "konsert", "tiket", "fancon", "fan meeting", "fanmeeting", "showcase", "fancon", "加场", "加場", "开票", "開票", "抢票", "搶票", "售票", "added show", "world tour", "콘서트", "공연", "팬미팅", "투어", "월드투어"],
+    "singapore": ["singapore", "新加坡", "狮城", "獅城", "national stadium", "indoor stadium", "the star theatre", "star theatre", "capitol theatre", "esplanade", "marina bay", "suntec", "싱가포르", " sg "]
   }
 }

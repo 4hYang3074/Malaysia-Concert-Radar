@@ -544,7 +544,8 @@ def news_leads(h, cfg, health):
             title = (it.findtext("title") or "").strip()
             key = re.sub(r"\W+", "", title.lower())[:80]
             # 英文/中文新闻常混进外国演出，要求标题提到马来西亚；马来文查询本身就是本地新闻，不要求
-            if not title or key in seen or not relevant(title, cfg["keywords"], q.get("need_malaysia", True)):
+            # 标题要提到演唱会；也要提到查询的国家（马来西亚 / 新加坡），马来文查询本身就是本地新闻，不要求
+            if not title or key in seen or not relevant(title, cfg["keywords"], False)                     or (q.get("need_malaysia", True) and not place_hit(title, cfg, q.get("country", "MY"))):
                 continue
             seen.add(key)
             pub = it.findtext("pubDate")
@@ -1213,45 +1214,123 @@ def apply_lead_filters(leads, events, cfg):
     return leads
 
 
-def news_verify(h, leads, cfg, state, today):
-    """待确定的明星：再用 Google News 搜“艺人 + 演唱会 + 马来西亚”，看有几篇相关报导、提到哪个售票平台。
+# Google 新闻查证用的地名（查询词 + 标题要出现的字）
+PLACES = {
+    "MY": ('(Malaysia OR "Kuala Lumpur" OR KL OR 吉隆坡 OR 马来西亚 OR 馬來西亞 OR 大马 OR 大馬 OR "Bukit Jalil" OR Axiata)', "malaysia"),
+    "SG": ('(Singapore OR 新加坡 OR 狮城 OR 獅城 OR "National Stadium" OR "Indoor Stadium")', "singapore"),
+}
+CONCERT_Q = "(concert OR tour OR 演唱会 OR 演唱會 OR 巡演 OR konsert OR fanmeeting OR fancon)"
+SALE_Q = "(tickets OR presale OR 开票 OR 開票 OR 开售 OR 開售 OR 售票 OR 抢票 OR 搶票 OR 加场 OR 加場 OR \"added show\" OR \"additional show\")"
+ADDED_RE = re.compile(r"(?i)加场|加場|加开|加開|\badd(s|ed|ing)? (a )?(second|third|fourth|another|extra|new|more)\b|additional (show|date|concert|night)|extra (show|date|night)|second (show|night|concert)|(show|date)s? added|tambah (hari|tarikh|pertunjukan|show)|추가 공연|추가 회차")
+LANGS = [("en-MY", "MY", "MY:en"), ("zh-CN", "MY", "MY:zh-Hans"), ("zh-TW", "MY", "MY:zh-Hant")]
+
+
+def gnews(h, q, langs=LANGS):
+    """Google News RSS 搜索（免费、不用 API key）；几种语言各搜一次，合并去重。"""
+    items, seen = [], set()
+    for hl, gl, ceid in langs:
+        url = "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": q, "hl": hl, "gl": gl, "ceid": ceid})
+        try:
+            root = ET.fromstring(h.request(url))
+        except Exception as ex:
+            print(f"  gnews {q[:40]}: {ex}", flush=True)
+            continue
+        finally:
+            time.sleep(SLEEP)
+        for it in root.iter("item"):
+            title = (it.findtext("title") or "").strip()
+            key = re.sub(r"\W+", "", title.lower())[:80]
+            if not title or key in seen:
+                continue
+            seen.add(key)
+            pub = it.findtext("pubDate")
+            t = email.utils.parsedate_to_datetime(pub).astimezone(MYT).strftime("%Y-%m-%d %H:%M") if pub else None
+            items.append({"title": title, "url": it.findtext("link"), "time": t})
+    return items
+
+
+def place_hit(title, cfg, country):
+    t = f" {title.lower()} "
+    return any(k in t for k in cfg["keywords"].get(PLACES.get(country, PLACES["MY"])[1], []))
+
+
+def news_check(h, artist, country, cfg, today, sale=False):
+    """搜“艺人 + 演唱会(+开票) + 国家”，标题要同时提到艺人、演唱会、那个国家才算相关报导。"""
+    place = PLACES.get(country, PLACES["MY"])[0]
+    q = f'"{artist}" {SALE_Q if sale else CONCERT_Q} {place} when:{30 if sale else 90}d'
+    items = []
+    for it in gnews(h, q):
+        if mentions(artist, it["title"]) and relevant(it["title"], cfg["keywords"], False) and place_hit(it["title"], cfg, country):
+            items.append(dict(it, time=(it["time"] or "")[:10]))
+    items.sort(key=lambda i: i["time"] or "", reverse=True)
+    blob = "\n".join(i["title"] for i in items)
+    sts = []
+    for it in items:  # 每篇报导用它自己的发布日期推算年份
+        for s in sale_times(it["title"], (it["time"] or today) + " 00:00"):
+            if not s["past"] and s["time"] not in [x["time"] for x in sts]:
+                sts.append(dict(s, url=it["url"], title=it["title"]))
+    added = [i for i in items if ADDED_RE.search(i["title"])]  # 报导说要加场 / 加开新日期
+    return {"checked": today, "country": country, "count": len(items), "top": items[:3],
+            "platforms": detect_platforms(blob, cfg), "sale_times": sts,
+            "added": bool(added), "added_news": added[0] if added else None}
+
+
+def news_verify(h, leads, events, cfg, state, today, limit=45):
+    """Google 通道：
+    1. 待确定的明星 → 查有没有马来西亚（或新加坡）的相关报导、提到哪个售票平台
+    2. 已上架、还没结束的演出 → 查新闻有没有公布开票时间 / 加场（平台还没更新时先知道）
     每位艺人每天查一次（结果存 state）。回传 {艺人: 查证结果}。"""
-    cache = state.setdefault("news_verify", {})
-    artists = []
+    cache = state.setdefault("news_verify_v3", {})
+    state.pop("news_verify", None)
+    todo = []  # (key, artist, country, sale)
     for l in leads:
         if not l.get("hidden") and not l.get("listed") and l.get("status") == "rumor" and l.get("artist"):
-            if l["artist"] not in artists:
-                artists.append(l["artist"])
-    out = {}
-    for a in artists[:20]:
-        c = cache.get(a)
-        if not c or c.get("checked") != today:
-            q = (f'"{a}" (concert OR tour OR 演唱会 OR 演唱會 OR konsert OR fanmeeting) '
-                 f'(Malaysia OR "Kuala Lumpur" OR 吉隆坡 OR 大马 OR 大馬) when:90d')
-            url = "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": q, "hl": "en-MY", "gl": "MY", "ceid": "MY:en"})
-            items = []
-            try:
-                root = ET.fromstring(h.request(url))
-                for it in root.iter("item"):
-                    title = (it.findtext("title") or "").strip()
-                    # 标题要同时提到这位艺人、演唱会、马来西亚，才算相关报导
-                    if title and mentions(a, title) and relevant(title, cfg["keywords"], need_malaysia=True):
-                        pub = it.findtext("pubDate")
-                        t = email.utils.parsedate_to_datetime(pub).astimezone(MYT).strftime("%Y-%m-%d") if pub else None
-                        items.append({"title": title, "url": it.findtext("link"), "time": t})
-            except Exception as ex:
-                print(f"  news verify {a}: {ex}", flush=True)
+            todo.append((l["artist"], l["artist"], l.get("country") or "MY", False))
+    now_s = today
+    for e in sorted(events, key=lambda e: -(e.get("fans") or 0)):
+        if e.get("hidden") or e.get("sold_out") or (e.get("country") or "MY") not in PLACES or not e.get("artist_name"):
+            continue
+        if not e["dates"] or e["dates"][-1][:10] < now_s:
+            continue
+        todo.append((e["artist_name"], e["artist_name"], e.get("country") or "MY", True))
+    out, n = {}, 0
+    for key, artist, country, sale in dict.fromkeys(todo):
+        if key in out:
+            continue
+        c = cache.get(key)
+        if not c or c.get("checked") != today or c.get("country") != country:
+            if n >= limit:  # 这次额度用完，剩下的下次再查
+                if c:
+                    out[key] = c
                 continue
-            time.sleep(SLEEP)
-            blob = "\n".join(i["title"] for i in items)
-            c = {"checked": today, "count": len(items), "top": items[:3],
-                 "platforms": detect_platforms(blob, cfg),
-                 "sale_times": [s for s in sale_times(blob, today + " 00:00") if not s["past"]]}
-            cache[a] = c
-        out[a] = c
-    for k in [k for k in cache if k not in artists]:
+            n += 1
+            c = cache[key] = news_check(h, artist, country, cfg, today, sale)
+        out[key] = c
+    for k in [k for k in cache if k not in out]:
         del cache[k]
+    print(f"  Google 新闻查证 {len(out)} 位艺人（今天新查 {n} 位）", flush=True)
     return out
+
+
+def merge_news_sales(events, checks):
+    """Google 新闻报导里读到的未来开票时间（例如加场），平台还没有的，就并进那场演出。"""
+    for e in events:
+        c = checks.get(e.get("artist_name") or "")
+        if not c or e.get("hidden"):
+            continue
+        # 新闻说有加场（最近两星期的报导），平台还没上架新场次 → 卡片和首页先提示
+        a = c.get("added_news")
+        e["news_added"] = a if a and (a.get("time") or "") >= (datetime.now(MYT) - timedelta(days=14)).strftime("%Y-%m-%d") else None
+        last_show = (e["dates"] or ["9999"])[-1][:10]
+        for st in c.get("sale_times") or []:
+            if st["time"][:10] > last_show:
+                continue  # 开票日期在最后一场演出之后，不合理
+            if any((s.get("start") or "")[:len(st["time"])] == st["time"] for s in e.get("sales") or []):
+                continue
+            e.setdefault("sales", []).append({
+                "name": f"{'加场开票' if c.get('added') else '开票'}（Google 新闻报导）", "start": st["time"], "end": None,
+                "queue": None, "available": True, "code_required": False, "url": st.get("url"), "announced": True, "news": True})
+            e["sales_closed"] = False
 
 
 SOURCE_RANK = {"GoLive": 0, "Fantopia": 1, "BookMyShow": 2, "Ticket2U": 3}
@@ -1449,7 +1528,8 @@ def main():
     cleanup_images(used)
     apply_lead_filters(leads, events, cfg)
     merge_announcements(leads, events)  # 用艺人名新对上的公告，开票时间也并进去
-    checks = news_verify(h, leads, cfg, state, today)  # 待确定的明星再用 Google News 查证
+    checks = news_verify(h, leads, events, cfg, state, today)  # Google 通道：查证待确定的明星、已上架演出的开票 / 加场
+    merge_news_sales(events, checks)
     for l in leads:  # 只来自新闻、又查证不到马来西亚相关报导的：可信度太低，不放进待确定
         if not l.get("hidden") and not l.get("listed") and l["kind"] == "新闻" and checks.get(l.get("artist"), {}).get("count", 1) == 0:
             l["hidden"] = "Google 新闻查证不到马来西亚的相关报导"

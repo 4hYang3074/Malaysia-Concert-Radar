@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>待确定的消息 · 马来西亚演唱会雷达</title>
 <meta name="theme-color" content="#15171c">
-<link rel="stylesheet" href="assets/app.css?v=20260929j">
+<link rel="stylesheet" href="assets/app.css?v=20260929k">
 </head>
 <body>
 <div class="wrap view">
@@ -16,7 +16,7 @@
   <a class="btn ghost" href="https://github.com/4hYang3074/Malaysia-Concert-Radar/issues/new?template=lead.yml" target="_blank" rel="noopener">＋ 我看到一个消息（例如小红书），提交给雷达</a>
   <div id="foot"></div>
 </div>
-<script src="assets/app.js?v=20260929j"></script>
+<script src="assets/app.js?v=20260929k"></script>
 <script>
 const ICON = {"IG": "📸", "新闻": "📰", "人工": "✋"};
 const leadRow = l => `
@@ -41,14 +41,7 @@ function artistCard(g) {
     </div>
     ${live.map(e => `<a class="banner ok" style="display:block;text-decoration:none" href="event.html?id=${encodeURIComponent(e.id)}">✅ 已在 ${platformsOf(e).map(p => esc(p.source)).join("、")} 上架：${esc(e.name)} →</a>`).join("")}
     ${s.platforms.length ? `<div class="sum ok" style="margin-top:8px">🎫 公告提到的售票平台：<b>${s.platforms.map(esc).join("、")}</b></div>` : ""}
-    ${(() => {  // Google News 查证：搜“艺人 + 演唱会 + 马来西亚”
-      const c = (DATA.news_checks || {})[g.name];
-      if (!c) return "";
-      return `<div class="sum ${c.count ? "ok" : "warn"}" style="margin-top:8px">🔎 Google 新闻查证：${c.count ? `${c.count} 篇相关报导` : "没有找到相关报导（可信度较低）"}
-        ${(c.platforms || []).length ? `· 提到 <b>${c.platforms.map(esc).join("、")}</b>` : ""}
-        ${(c.sale_times || []).length ? `· 开票 ${c.sale_times.map(x => esc(fmt(x.time.length === 10 ? x.time : x.time))).join("、")}` : ""}
-        ${(c.top || []).map(t => `<div style="font-weight:400;margin-top:4px">· <a href="${esc(safeUrl(t.url))}" target="_blank" rel="noopener">${esc(t.title)}</a> <small>${esc(t.time || "")}</small></div>`).join("")}</div>`;
-    })()}
+    ${newsCheckHTML((DATA.news_checks || {})[g.name])}
     ${s.sales.length ? `<div class="sum warn">🎟️ ${s.sales.map(esc).join("<br>🎟️ ")}</div>` : ""}
     ${s.points.length ? `<ul class="hints sum-list">${s.points.map(p => `<li>${esc(p)}</li>`).join("")}</ul>` : ""}
     ${s.images.length ? `<div class="shots">${s.images.map(l => `<a href="lead.html?id=${encodeURIComponent(l.id)}"><img src="${esc(localUrl(l.image))}" alt="" loading="lazy" onerror="this.parentNode.remove()"></a>`).join("")}</div>` : ""}

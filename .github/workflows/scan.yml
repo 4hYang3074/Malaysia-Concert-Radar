@@ -35,7 +35,13 @@ jobs:
           python-version: "3.12"
 
       - name: Install OCR (read prices printed on seat maps)
-        run: sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-chi-sim tesseract-ocr-chi-tra tesseract-ocr-kor imagemagick > /dev/null
+        # 先更新软件源再装（不更新会 404 失败）；装不起来也继续扫描，只是这次不读图片文字
+        continue-on-error: true
+        run: |
+          for i in 1 2 3; do
+            sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-chi-sim tesseract-ocr-chi-tra tesseract-ocr-kor imagemagick > /dev/null && break
+            sleep 15
+          done
 
       - name: Scan
         env:
@@ -50,8 +56,13 @@ jobs:
           git add -A docs state
           git diff --cached --quiet && exit 0
           git commit -m "Concert scan $(TZ=Asia/Kuala_Lumpur date '+%F %H:%M')"
-          git pull --rebase origin main
-          git push
+          # 你电脑的 BookMyShow 抓取也会推送：推不上去就拉最新的再推，最多试 5 次
+          for i in 1 2 3 4 5; do
+            git pull --rebase -X theirs origin main && git push && exit 0
+            git rebase --abort 2>/dev/null
+            sleep $((i * 10))
+          done
+          exit 1
 
       - name: Notify
         if: hashFiles('data/alert.md') != ''

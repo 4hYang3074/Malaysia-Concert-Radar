@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>演出详情 · 马来西亚演唱会雷达</title>
 <meta name="theme-color" content="#15171c">
-<link rel="stylesheet" href="assets/app.css?v=20260929j">
+<link rel="stylesheet" href="assets/app.css?v=20260929k">
 </head>
 <body>
 <div class="wrap view" id="app"></div>
-<script src="assets/app.js?v=20260929j"></script>
+<script src="assets/app.js?v=20260929k"></script>
 <script>
 loadData(false).then(d => {
   nav(d, "confirmed");
@@ -39,6 +39,7 @@ loadData(false).then(d => {
         ${e.limit ? `<div class="fact"><div class="k">🎟 限购</div><div class="v">每笔最多 ${e.limit} 张</div></div>` : ""}
       </div>
       <div class="banner ${st.cls}">${esc(st.text)}</div>
+      ${e.news_added ? `<div class="banner warn">📢 新闻报导有加场：<a href="${esc(safeUrl(e.news_added.url))}" target="_blank" rel="noopener">${esc(e.news_added.title)}</a>（${esc(e.news_added.time || "")}）<br>平台还没公布加场的开票时间，公布后会自动更新。</div>` : ""}
       <div class="meta" style="margin-top:14px">${platformsOf(e).length > 1 ? `这场演出在 ${platformsOf(e).length} 个官方平台售票：` : "官方售票平台："}</div>
       <div class="buybtns">${platformsOf(e).map(p => `<a class="btn ${p.sold_out ? "sold" : ""}" href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener">
         ${esc(p.source)}${p.sold_out ? "（售罄）" : ""}${p.price_from ? ` · ${esc(p.price_from)} 起` : ""} ↗</a>`).join("")}</div>
@@ -49,11 +50,12 @@ loadData(false).then(d => {
       ${sales.filter(s => s.start).sort((a, b) => a.start.localeCompare(b.start)).map(s => {
         const t = toDate(s.start), done = t < now - LIVE_MS, live = !done && t <= now;
         return `<tr class="${done ? "past" : ""}">
-          <td><b>${esc(s.name || "开卖")}</b>${s.code_required ? "<br><small>需要预售码</small>" : ""}</td>
+          <td><b>${s.news && s.url ? `<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(s.name)}</a>` : esc(s.name || "开卖")}</b>${s.code_required ? "<br><small>需要预售码</small>" : ""}</td>
           <td>${esc(fmt(s.start))}</td>
           <td style="white-space:nowrap">${done ? "已结束" : live ? '<span class="soldout">正在抢票</span>' : `<span class="pill warn" style="margin:0">${esc(countdown(t, now))}</span>`}</td></tr>`;
       }).join("")}
     </table></div>` : ""}
+    ${newsCheckHTML((d.news_checks || {})[e.artist_name])}
 
     <h3>💺 座位图与票价${fee}</h3>
     <div class="card">
