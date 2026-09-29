@@ -325,8 +325,9 @@ def fantopia_area(h, area, currency):
             except Exception as ex:
                 print(f"  fantopia info {x.get('eventsKey')}: {ex}", flush=True)
         desc = html.unescape(re.sub(r"<[^>]+>", "", re.sub(r"(?i)<br\s*/?>|</p>|</div>|</li>", "\n", info.get("description") or "")))
-        posted = (info.get("updateTime") or info.get("createTime") or "")[:16] or None
-        for st in sale_times(desc, posted) if desc else []:
+        # 用活动建立（第一次上架）的时间推算没写年份的日期；最后编辑时间可能是几个月后，会把年份推错
+        posted = (info.get("createTime") or info.get("updateTime") or "")[:16] or None
+        for st in sale_times(desc, posted, latest=(dates or [None])[-1]) if desc else []:
             same = [s for s in sales if s["start"][:16] == st["time"][:16]]
             if same:  # 同一个时间：用官方说明里的轮次名称
                 same[0]["name"] = st.get("name") or same[0]["name"]
@@ -572,8 +573,9 @@ ZH_DATE = re.compile(r"(?:(20\d\d)\s*年\s*)?(\d{1,2})\s*月\s*(\d{1,2})\s*[日�
 TIME = re.compile(r"(?i)(凌晨|早上|上午|中午|下午|傍晚|晚上)?\s*(\d{1,2})(?:[:：.](\d{2}))?\s*(am|pm|点|點|时|時)(?!间|間)|(\d{1,2})[:：](\d{2})")
 
 
-def sale_times(text, posted):
-    """从官方公告的“开售/预售”行读出开售时间（马来西亚时间）。只看提到售票的行，避免把演出日期当成开售日期。"""
+def sale_times(text, posted, latest=None):
+    """从官方公告的“开售/预售”行读出开售时间（马来西亚时间）。只看提到售票的行，避免把演出日期当成开售日期。
+    latest：最后一场演出的日期。没写年份的开售日期不可能在演出之后，推算出来晚于演出就改成前一年。"""
     base = datetime.strptime(posted, "%Y-%m-%d %H:%M") if posted else datetime.now(MYT).replace(tzinfo=None)
     out = []
     # 先按句子（。！？换行）切，再按分句（，；、）切：一段新闻常同时写预售、公售、加场，还夹着演出日期
@@ -601,7 +603,7 @@ def sale_times(text, posted):
         # 中文句子按全形标点切；英文句子只按分号切（英文日期里常有逗号，例如 29 September 2026, from 3PM）
         parts = re.split(r"[，；、;]", sent) if re.search(r"[㐀-鿿]", sent) else sent.split(";")
         for clause in parts:
-            out += _clause_sale(unicodedata.normalize("NFKC", clause), base, sent_added)  # 𝐎𝐧-𝐒𝐚𝐥𝐞 这类花体字转回普通字母
+            out += _clause_sale(unicodedata.normalize("NFKC", clause), base, sent_added, latest)  # 𝐎𝐧-𝐒𝐚𝐥𝐞 这类花体字转回普通字母
     seen, uniq = set(), []
     for x in out:
         if x["time"] not in seen:
@@ -613,10 +615,13 @@ def sale_times(text, posted):
 def round_title(s):
     """日期前面的轮次名称（例如 “BIGBANG V.I.P MEMBERSHIP PRESALE”、“GENERAL ON-SALE”）；不像轮次名称就回传 None。"""
     s = re.sub(r"^[^\w]+|[\s:：\-–—|(（]+$", "", s.strip())
+    # 去掉句尾的连接词（“Public ticket sales will commence on” → “Public ticket sales”）
+    s = re.sub(r"(?i)\s+(?:will\s+)?(?:commences?|starts?|begins?|opens?|goes live|go live|is|are|will be|be)?\s*(?:on|from|at|by)?$|"
+               r"(?:将于|将在|于|在|是|为|從|从)$", "", s).strip(" :：-–—")
     return s if 3 <= len(s) <= 60 and SALE_LINE.search(s) else None
 
 
-def _clause_sale(line, base, added):
+def _clause_sale(line, base, added, latest=None):
     """一个分句里的开售时间（没有就回传空）。"""
     out = []
     for _ in (0,):
@@ -651,6 +656,10 @@ def _clause_sale(line, base, added):
             continue
         if not year and when < base - timedelta(days=60):  # 例如 12 月贴文讲 1 月开售
             when = when.replace(year=y + 1)
+        if not year and latest and when.strftime("%Y-%m-%d") > latest[:10]:
+            when = when.replace(year=when.year - 1)  # 开售不可能在演出之后（没写年份时推算错了）
+        if latest and when.strftime("%Y-%m-%d") > latest[:10]:
+            continue
         # 已经过去的开售日期也回传（past=True），用来判断这则公告是否已过期
         now = datetime.now(MYT).replace(tzinfo=None)
         past = when + (timedelta(days=1) if hh is None else timedelta(hours=12)) < now  # 开票半天后就当已结束（只有日期的算一天）
@@ -1004,7 +1013,7 @@ def sale_status(events, checks, now):
             ev.append({"src": f"{e['source']} 官方图片", "text": "图上标示 SOLD OUT（每一场都有）"})
             e["sold_out"] = True
         seen_times = {(s.get("start") or "")[:16] for s in e.get("sales") or []}
-        for st in sale_times(text, e.get("tickets_created") or e.get("first_seen")) if text else []:
+        for st in sale_times(text, e.get("tickets_created") or e.get("first_seen"), latest=(e.get("dates") or [None])[-1]) if text else []:
             if st["time"][:16] in seen_times:
                 continue
             seen_times.add(st["time"][:16])
@@ -1660,7 +1669,10 @@ def merge_announcements(leads, events, cfg=None):
             target["added_source"] = {"title": short(l.get("title") or "", 120), "url": l.get("url"), "time": (l.get("time") or "")[:10],
                                       "from": l.get("from")}
         posted = (l.get("time") or "")[:10]
+        last_show = (target.get("dates") or ["9999"])[-1][:10]
         for st in l.get("sale_times") or []:
+            if st["time"][:10] > last_show:
+                continue  # 开售不可能在演出之后
             same_day = [s for s in target.get("sales") or [] if (s.get("start") or "")[:10] == st["time"][:10]]
             for s in same_day:  # 平台的轮次没有名字（只写“开售”）：用公告同一天那一轮的说法补上（例如 VIP 会员预售）
                 if re.fullmatch(r"(开售|开票|開售|開票|sale|on sale)?", (s.get("name") or "").strip(), re.I) and not s.get("source_line"):
