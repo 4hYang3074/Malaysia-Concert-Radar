@@ -35,9 +35,6 @@ loadData().then(d => {
   // 1. 即将开票：开票时间还没到（或刚开卖一天内），按开票时间排序
   const soon = d.events.filter(e => category(e, now) === "soon")
     .sort((a, b) => nextSale(a, now).start.localeCompare(nextSale(b, now).start));
-  // 3. 最新上架（7 天内）
-  const fresh = d.events.filter(e => e.first_seen && now - toDate(e.first_seen) < 7 * 864e5 && category(e, now) === "soon")
-    .sort((a, b) => b.first_seen.localeCompare(a.first_seen) || (b.fans || 0) - (a.fans || 0)).slice(0, 20);
   // 3b. 新闻传出加场、平台还没公布新场次的开票时间（先留意）
   const added = addedGroups(d).map(list => ({...list[0], _added_more: list.length - 1}));
   // 4. 传出要来（待确定，已认出明星的）
@@ -50,7 +47,6 @@ loadData().then(d => {
   $("#rails").innerHTML =
     railHTML("🔥 即将开票", soon.map(e => posterCard(e, now)), "confirmed.html?cat=soon" + q) +
     railHTML("➕ 加场", added.map(e => posterCard(e, now))) +
-    railHTML("🆕 最新上架", fresh.map(e => posterCard(e, now)), "confirmed.html?cat=all" + q) +
     railHTML("🗣️ 传出要来", rumor.map(groupCard), "pending.html") ||
     `<div class="card empty" style="margin-top:20px">这个国家目前还没有资料。</div>`;
   $("#cal").innerHTML = calendarHTML(saleCalendar(d, now), now);
