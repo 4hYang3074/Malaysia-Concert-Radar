@@ -325,9 +325,10 @@ def ig_leads(h, cfg, token, state, health):
         except Exception as e:
             bad.append({"account": user, "error": short(str(e), 160)})
             continue
+        global_acct = user in cfg.get("ig_accounts_global", [])
         for m in (bd.get("media") or {}).get("data") or []:
             cap = m.get("caption") or ""
-            if relevant(cap, kw, need_malaysia=False):
+            if relevant(cap, kw, need_malaysia=global_acct):
                 leads.append(ig_lead(m, f"@{bd.get('username', user)}", bd.get("name")))
         time.sleep(SLEEP)
 
@@ -582,6 +583,11 @@ def main():
         if not old and not first_run and l["kind"] in ("IG", "人工"):
             new_leads.append(l)
         store[l["id"]] = l
+    # 设定改了（例如账号改成要求提到马来西亚），旧线索也按新规则重新过滤
+    global_from = {"@" + a for a in cfg.get("ig_accounts_global", [])}
+    for k in [k for k, l in store.items() if l["kind"] == "IG" and l["from"] in global_from
+              and not relevant(l.get("text") or "", cfg["keywords"], need_malaysia=True)]:
+        del store[k]
     keep_after = (now - timedelta(days=cfg.get("leads_keep_days", 30))).strftime("%Y-%m-%d")
     for k in [k for k, l in store.items() if (l.get("time") or l["first_seen"])[:10] < keep_after]:
         del store[k]
