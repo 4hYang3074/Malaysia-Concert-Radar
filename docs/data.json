@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-29 10:48",
+ "generated_at": "2026-09-29 11:12",
  "health": {
   "GoLive": {
    "ok": true,
@@ -10,8 +10,9 @@
    "count": 100
   },
   "BookMyShow": {
-   "ok": false,
-   "error": "HTTP 403"
+   "ok": true,
+   "count": 20,
+   "local": "2026-09-29 11:11"
   },
   "Ticket2U": {
    "ok": true,
@@ -19,7 +20,7 @@
   },
   "Instagram": {
    "ok": true,
-   "count": 39,
+   "count": 40,
    "checked": 10,
    "error": null
   },
@@ -51,6 +52,41 @@
  "watch_artists": [],
  "events": [
   {
+   "id": "bms-MJ116MYS",
+   "source": "BookMyShow",
+   "name": "MJ116 OGS TOUR KUALA LUMPUR",
+   "artist": null,
+   "type": null,
+   "venue": "Mega Star Arena, Sungei Wang Plaza",
+   "city": "Kuala Lumpur",
+   "dates": [
+    "2026-10-02 20:00"
+   ],
+   "sales": [],
+   "tiers": [],
+   "limit": 4,
+   "organiser": "IMC Live Group (M) Sdn Bhd",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/mj116-2026/MJ116MYS",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "MJ116 OGS",
+   "fans": 0,
+   "region": "其他",
+   "avatar": "avatars/p-bms-MJ116MYS.jpg",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/mj116-2026/MJ116MYS",
+     "id": "bms-MJ116MYS",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
    "id": "fantopia-40f309cj",
    "source": "Fantopia",
    "name": "HENRY LAU 2026 “ENJOY THE SHOW” WORLD TOUR — KUALA LUMPUR",
@@ -80,6 +116,8 @@
    "first_seen": "2026-09-29 10:40",
    "seat_maps": [],
    "artist_name": "Henry Lau",
+   "fans": 603,
+   "region": "K-pop",
    "avatar": "avatars/a-27e09d26eb62.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -122,6 +160,8 @@
    "first_seen": "2026-09-29 10:40",
    "seat_maps": [],
    "artist_name": "IDOL RADIO",
+   "fans": 0,
+   "region": "其他",
    "avatar": "avatars/p-fantopia-zmm0u8rr.jpg",
    "avatar_kind": "poster",
    "platforms": [
@@ -200,6 +240,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "Faizal Tahir",
+   "fans": 13870,
+   "region": "其他",
    "avatar": "avatars/a-718c50a0b6ca.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -232,6 +274,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "JIWARASA Nizam Laksamana & Kawan-Kawan 5.0",
+   "fans": 0,
+   "region": "其他",
    "avatar": "avatars/p-t2u-50764.jpg",
    "avatar_kind": "poster",
    "platforms": [
@@ -311,6 +355,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "Anoushka Shankar",
+   "fans": 72397,
+   "region": "欧美",
    "avatar": "avatars/a-d76cdf460109.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -320,6 +366,41 @@
      "id": "t2u-49360",
      "sold_out": false,
      "price_from": "RM 155.00"
+    }
+   ]
+  },
+  {
+   "id": "bms-MOO4WARD",
+   "source": "BookMyShow",
+   "name": "MAMAMOO 2026 WORLD TOUR [4WARD] in KUALA LUMPUR",
+   "artist": null,
+   "type": null,
+   "venue": "Unifi Arena Bukit Jalil",
+   "city": "Kuala Lumpur",
+   "dates": [
+    "2026-10-10 16:00"
+   ],
+   "sales": [],
+   "tiers": [],
+   "limit": 6,
+   "organiser": "CK STAR MALAYSIA SDN. BHD.",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/mamamoo-4ward-2026/MOO4WARD",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "MAMAMOO",
+   "fans": 672313,
+   "region": "K-pop",
+   "avatar": "avatars/a-288863a00fae.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/mamamoo-4ward-2026/MOO4WARD",
+     "id": "bms-MOO4WARD",
+     "sold_out": false,
+     "price_from": null
     }
    ]
   },
@@ -390,6 +471,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "Srinivas Saregama Season 5",
+   "fans": 0,
+   "region": "其他",
    "avatar": "avatars/p-t2u-49422.jpg",
    "avatar_kind": "poster",
    "platforms": [
@@ -457,6 +540,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "GVM",
+   "fans": 0,
+   "region": "其他",
    "avatar": "avatars/p-t2u-51955.jpg",
    "avatar_kind": "poster",
    "platforms": [
@@ -499,6 +584,8 @@
    "first_seen": "2026-09-29 10:40",
    "seat_maps": [],
    "artist_name": "香港明星FC3马来西亚友谊赛   Bridge of Legends Hong Kong Celebrities Football Friendly Match",
+   "fans": 0,
+   "region": "华语",
    "avatar": "avatars/p-fantopia-ij5i3kyk.jpg",
    "avatar_kind": "poster",
    "platforms": [
@@ -587,6 +674,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "Nastia",
+   "fans": 14323,
+   "region": "欧美",
    "avatar": "avatars/a-cfce53b21fa2.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -654,6 +743,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "SPOTLIGHT KLCC Convention Centre",
+   "fans": 0,
+   "region": "其他",
    "avatar": "avatars/p-t2u-50486.jpg",
    "avatar_kind": "poster",
    "platforms": [
@@ -696,6 +787,8 @@
    "first_seen": "2026-09-29 10:40",
    "seat_maps": [],
    "artist_name": "Ghibli Jazz Night Featuring All That Jazz",
+   "fans": 0,
+   "region": "其他",
    "avatar": "avatars/p-fantopia-eh4ddk7l.png",
    "avatar_kind": "poster",
    "platforms": [
@@ -705,6 +798,42 @@
      "id": "fantopia-eh4ddk7l",
      "sold_out": false,
      "price_from": "RM 208.00"
+    }
+   ]
+  },
+  {
+   "id": "bms-ERIC2026",
+   "source": "BookMyShow",
+   "name": "周兴哲《Odyssey · Stars 旅程 · 星空》- 吉隆坡站",
+   "artist": null,
+   "type": null,
+   "venue": "Unifi Arena Bukit Jalil",
+   "city": "Kuala Lumpur",
+   "dates": [
+    "2026-10-24 20:00",
+    "2026-10-25 20:00"
+   ],
+   "sales": [],
+   "tiers": [],
+   "limit": 6,
+   "organiser": "FriedRice Entertainment (M) Sdn Bhd",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/eric-chou-odyssey-stars-2026/ERIC2026",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "周兴哲",
+   "fans": 35,
+   "region": "华语",
+   "avatar": "avatars/a-633eb63d856e.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/eric-chou-odyssey-stars-2026/ERIC2026",
+     "id": "bms-ERIC2026",
+     "sold_out": false,
+     "price_from": null
     }
    ]
   },
@@ -775,6 +904,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "Misha Omar",
+   "fans": 2635,
+   "region": "其他",
    "avatar": "avatars/a-16a79681ebd2.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -784,6 +915,41 @@
      "id": "t2u-52015",
      "sold_out": false,
      "price_from": "RM 188.00"
+    }
+   ]
+  },
+  {
+   "id": "bms-ROSE26KL",
+   "source": "BookMyShow",
+   "name": "ROSETOPIA ASIA TOUR 2026 IN KUALA LUMPUR",
+   "artist": null,
+   "type": null,
+   "venue": "Mega Star Arena, Sungei Wang Plaza",
+   "city": "Kuala Lumpur",
+   "dates": [
+    "2026-10-25 20:00"
+   ],
+   "sales": [],
+   "tiers": [],
+   "limit": 6,
+   "organiser": "CK STAR MALAYSIA SDN. BHD.",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/rosetopia-asia-tour-2026-kl/ROSE26KL",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "ROSETOPIA",
+   "fans": 0,
+   "region": "其他",
+   "avatar": "avatars/p-bms-ROSE26KL.png",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/rosetopia-asia-tour-2026-kl/ROSE26KL",
+     "id": "bms-ROSE26KL",
+     "sold_out": false,
+     "price_from": null
     }
    ]
   },
@@ -817,6 +983,8 @@
    "first_seen": "2026-09-29 10:40",
    "seat_maps": [],
    "artist_name": "Air Supply",
+   "fans": 442942,
+   "region": "欧美",
    "avatar": "avatars/a-907e082a348c.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -826,6 +994,41 @@
      "id": "fantopia-jiyb5116",
      "sold_out": false,
      "price_from": "RM 238.00"
+    }
+   ]
+  },
+  {
+   "id": "bms-AUNTHENN",
+   "source": "BookMyShow",
+   "name": "Aunty Henn 脱口秀专场《笑笑笑笑丧》",
+   "artist": null,
+   "type": null,
+   "venue": "Zepp Kuala Lumpur",
+   "city": "Kuala Lumpur",
+   "dates": [
+    "2026-10-31 20:00"
+   ],
+   "sales": [],
+   "tiers": [],
+   "limit": 8,
+   "organiser": "CK STAR MALAYSIA SDN. BHD.",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/aunty-henn-talkshow/AUNTHENN",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "Aunty Henn 脱口秀专场",
+   "fans": 0,
+   "region": "华语",
+   "avatar": "avatars/p-bms-AUNTHENN.jpg",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/aunty-henn-talkshow/AUNTHENN",
+     "id": "bms-AUNTHENN",
+     "sold_out": false,
+     "price_from": null
     }
    ]
   },
@@ -894,6 +1097,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "Muzik D.R.A.S.",
+   "fans": 0,
+   "region": "其他",
    "avatar": "avatars/p-t2u-50832.jpg",
    "avatar_kind": "poster",
    "platforms": [
@@ -994,6 +1199,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "Vijay Antony",
+   "fans": 6766,
+   "region": "其他",
    "avatar": "avatars/a-6332b22dde1c.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -1003,6 +1210,41 @@
      "id": "t2u-51322",
      "sold_out": false,
      "price_from": "RM 99.00"
+    }
+   ]
+  },
+  {
+   "id": "bms-40FINGER",
+   "source": "BookMyShow",
+   "name": "40FINGERS ASIAN TOUR 2026 LIVE IN MALAYSIA",
+   "artist": null,
+   "type": null,
+   "venue": "Zepp Kuala Lumpur",
+   "city": "Kuala Lumpur",
+   "dates": [
+    "2026-11-01 19:30"
+   ],
+   "sales": [],
+   "tiers": [],
+   "limit": 10,
+   "organiser": "HARMONIE MUSIC MY SDN BHD",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/forty-fingers-kl/40FINGER",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "40 Fingers",
+   "fans": 5474,
+   "region": "欧美",
+   "avatar": "avatars/a-f90c61da1bd0.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/forty-fingers-kl/40FINGER",
+     "id": "bms-40FINGER",
+     "sold_out": false,
+     "price_from": null
     }
    ]
   },
@@ -1084,6 +1326,8 @@
    "url": "https://www.golive-asia.com/event/167",
    "first_seen": "2026-09-29 08:34",
    "artist_name": "LANY",
+   "fans": 104015,
+   "region": "欧美",
    "avatar": "avatars/a-1e4ae86c2335.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -1176,6 +1420,8 @@
    "url": "https://www.golive-asia.com/event/173",
    "first_seen": "2026-09-29 08:34",
    "artist_name": "The Weeknd",
+   "fans": 14706991,
+   "region": "欧美",
    "avatar": "avatars/a-bccb871505ba.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -1261,6 +1507,8 @@
    "url": "https://www.golive-asia.com/event/180",
    "first_seen": "2026-09-29 08:34",
    "artist_name": "Yung Kai",
+   "fans": 8015,
+   "region": "欧美",
    "avatar": "avatars/a-9bdc84268bc0.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -1268,6 +1516,41 @@
      "source": "GoLive",
      "url": "https://www.golive-asia.com/event/180",
      "id": "golive-180",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "bms-QWER2026",
+   "source": "BookMyShow",
+   "name": "QWER 2nd TOUR <ROCKATION : ROCKET LAUNCH!!> IN KUALA LUMPUR",
+   "artist": null,
+   "type": null,
+   "venue": "Mega Star Arena, Sungei Wang Plaza",
+   "city": "Kuala Lumpur",
+   "dates": [
+    "2026-11-07 15:00"
+   ],
+   "sales": [],
+   "tiers": [],
+   "limit": 8,
+   "organiser": "FriedRice Entertainment (M) Sdn Bhd",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/qwer-2026/QWER2026",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "QWER",
+   "fans": 0,
+   "region": "K-pop",
+   "avatar": "avatars/p-bms-QWER2026.png",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/qwer-2026/QWER2026",
+     "id": "bms-QWER2026",
      "sold_out": false,
      "price_from": null
     }
@@ -1303,6 +1586,8 @@
    "first_seen": "2026-09-29 10:40",
    "seat_maps": [],
    "artist_name": "YESUNG",
+   "fans": 6175,
+   "region": "K-pop",
    "avatar": "avatars/a-c78a949018af.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -1345,6 +1630,8 @@
    "first_seen": "2026-09-29 10:40",
    "seat_maps": [],
    "artist_name": "世界巡回演唱会",
+   "fans": 0,
+   "region": "华语",
    "avatar": "avatars/p-fantopia-zk3x1r1c.jpg",
    "avatar_kind": "poster",
    "platforms": [
@@ -1427,6 +1714,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "Cadenza of   Soul",
+   "fans": 0,
+   "region": "其他",
    "avatar": "avatars/p-t2u-51416.jpg",
    "avatar_kind": "poster",
    "platforms": [
@@ -1479,6 +1768,8 @@
    "first_seen": "2026-09-29 10:40",
    "seat_maps": [],
    "artist_name": "Trevor Noah",
+   "fans": 913,
+   "region": "其他",
    "avatar": "avatars/a-7b5867292193.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -1522,6 +1813,8 @@
    "first_seen": "2026-09-29 10:40",
    "seat_maps": [],
    "artist_name": "2026叁缺壹巡演吉隆坡站",
+   "fans": 0,
+   "region": "华语",
    "avatar": "avatars/p-fantopia-m3vmif9o.jpg",
    "avatar_kind": "poster",
    "platforms": [
@@ -1600,6 +1893,8 @@
    "url": "https://www.golive-asia.com/event/176",
    "first_seen": "2026-09-29 08:34",
    "artist_name": "BABYMONSTER",
+   "fans": 217692,
+   "region": "K-pop",
    "avatar": "avatars/a-a8aa1fae8702.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -1642,6 +1937,8 @@
    "first_seen": "2026-09-29 10:40",
    "seat_maps": [],
    "artist_name": "邱鋒澤",
+   "fans": 24,
+   "region": "华语",
    "avatar": "avatars/a-3f068ff661d7.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -1684,6 +1981,8 @@
    "first_seen": "2026-09-29 10:40",
    "seat_maps": [],
    "artist_name": "DOES   “Thanksloving! Overseas”",
+   "fans": 0,
+   "region": "其他",
    "avatar": "avatars/p-fantopia-59ndm2v2.png",
    "avatar_kind": "poster",
    "platforms": [
@@ -1762,6 +2061,8 @@
    "url": "https://www.golive-asia.com/event/171",
    "first_seen": "2026-09-29 08:34",
    "artist_name": "5 Seconds Of Summer",
+   "fans": 1975864,
+   "region": "欧美",
    "avatar": "avatars/a-cea3e2f62602.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -1802,6 +2103,8 @@
    "url": "https://www.golive-asia.com/event/149",
    "first_seen": "2026-09-29 08:34",
    "artist_name": "My Chemical Romance",
+   "fans": 1839271,
+   "region": "欧美",
    "avatar": "avatars/a-0288748996d6.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -1857,6 +2160,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "Thalapathy Saravedi / தளபதி சரவெடி",
+   "fans": 0,
+   "region": "其他",
    "avatar": "avatars/p-t2u-50151.jpg",
    "avatar_kind": "poster",
    "platforms": [
@@ -1899,6 +2204,8 @@
    "first_seen": "2026-09-29 10:40",
    "seat_maps": [],
    "artist_name": "Simple Plan",
+   "fans": 1703216,
+   "region": "欧美",
    "avatar": "avatars/a-87933da598d1.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -1981,6 +2288,8 @@
    "url": "https://www.golive-asia.com/event/174",
    "first_seen": "2026-09-29 08:34",
    "artist_name": "wave to earth",
+   "fans": 43089,
+   "region": "K-pop",
    "avatar": "avatars/a-f89c58d47eef.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -2045,6 +2354,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "ASMARALOKA",
+   "fans": 0,
+   "region": "其他",
    "avatar": "avatars/p-t2u-49498.jpg",
    "avatar_kind": "poster",
    "platforms": [
@@ -2127,6 +2438,8 @@
    "url": "https://www.golive-asia.com/event/172",
    "first_seen": "2026-09-29 08:34",
    "artist_name": "Evanescence",
+   "fans": 3784855,
+   "region": "欧美",
    "avatar": "avatars/a-b7fabeaaf23e.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -2200,6 +2513,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "Sid Sriram",
+   "fans": 18101,
+   "region": "其他",
    "avatar": "avatars/a-e49cedcbacd9.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -2242,6 +2557,8 @@
    "first_seen": "2026-09-29 10:40",
    "seat_maps": [],
    "artist_name": "世界巡回演唱会",
+   "fans": 0,
+   "region": "华语",
    "avatar": "avatars/p-fantopia-xngkbueb.jpg",
    "avatar_kind": "poster",
    "platforms": [
@@ -2330,6 +2647,8 @@
    "url": "https://www.golive-asia.com/event/177",
    "first_seen": "2026-09-29 08:34",
    "artist_name": "FKJ",
+   "fans": 157152,
+   "region": "欧美",
    "avatar": "avatars/a-43f3d68eb130.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -2409,6 +2728,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "Kangen Band",
+   "fans": 17252,
+   "region": "其他",
    "avatar": "avatars/a-727f268331b4.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -2476,6 +2797,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "Rizky Febian",
+   "fans": 15219,
+   "region": "其他",
    "avatar": "avatars/a-07be15b54c67.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -2578,6 +2901,8 @@
    "url": "https://www.golive-asia.com/event/178",
    "first_seen": "2026-09-29 08:34",
    "artist_name": "Khalid",
+   "fans": 1761092,
+   "region": "欧美",
    "avatar": "avatars/a-94ca247fff5a.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -2655,6 +2980,8 @@
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
    "artist_name": "Limp Bizkit",
+   "fans": 2158365,
+   "region": "欧美",
    "avatar": "avatars/a-29cb0f7a11ee.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -2748,6 +3075,8 @@
    "url": "https://www.golive-asia.com/event/181",
    "first_seen": "2026-09-29 08:34",
    "artist_name": "Malcolm Todd",
+   "fans": 30661,
+   "region": "欧美",
    "avatar": "avatars/a-eb5e7c01ca48.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -2755,6 +3084,42 @@
      "source": "GoLive",
      "url": "https://www.golive-asia.com/event/181",
      "id": "golive-181",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "bms-DIORINKL",
+   "source": "BookMyShow",
+   "name": "DIOR 大穎 2026 《KAMPUNG GIRL 普通人》 世界巡回演唱會 - 吉隆坡站",
+   "artist": null,
+   "type": null,
+   "venue": "Unifi Arena Bukit Jalil",
+   "city": "Kuala Lumpur",
+   "dates": [
+    "2026-12-12 17:23",
+    "2026-12-13 17:23"
+   ],
+   "sales": [],
+   "tiers": [],
+   "limit": 4,
+   "organiser": "CK STAR MALAYSIA SDN. BHD.",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/dior-kuala-lumpur-2026/DIORINKL",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "DIOR 大穎",
+   "fans": 39,
+   "region": "华语",
+   "avatar": "avatars/a-95a9b1d6ee20.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/dior-kuala-lumpur-2026/DIORINKL",
+     "id": "bms-DIORINKL",
      "sold_out": false,
      "price_from": null
     }
@@ -2823,6 +3188,8 @@
    "url": "https://www.golive-asia.com/event/175",
    "first_seen": "2026-09-29 08:34",
    "artist_name": "BTS",
+   "fans": 3862648,
+   "region": "K-pop",
    "avatar": "avatars/a-f6ff067421fb.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -2865,6 +3232,8 @@
    "first_seen": "2026-09-29 10:40",
    "seat_maps": [],
    "artist_name": "BOYNEXTDOOR",
+   "fans": 52024,
+   "region": "K-pop",
    "avatar": "avatars/a-348e6d4d6a5c.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -2908,6 +3277,8 @@
    "first_seen": "2026-09-29 10:40",
    "seat_maps": [],
    "artist_name": "BIGBANG",
+   "fans": 727549,
+   "region": "K-pop",
    "avatar": "avatars/a-910706c961d7.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -3015,6 +3386,8 @@
    "url": "https://www.golive-asia.com/event/179",
    "first_seen": "2026-09-29 08:34",
    "artist_name": "Westlife",
+   "fans": 497117,
+   "region": "欧美",
    "avatar": "avatars/a-0e3d1767480e.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -3022,6 +3395,41 @@
      "source": "GoLive",
      "url": "https://www.golive-asia.com/event/179",
      "id": "golive-179",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "bms-JC27WTMY",
+   "source": "BookMyShow",
+   "name": "Jay Chou “Carnival Ⅱ” World Tour 2027 in Malaysia 「稻香 马来西亚 嘉年华Ⅱ」2027 周杰伦世界巡回演唱会",
+   "artist": null,
+   "type": null,
+   "venue": "TM National Stadium Bukit Jalil, Kuala Lumpur",
+   "city": "Kuala Lumpur",
+   "dates": [
+    "2027-01-23 19:30"
+   ],
+   "sales": [],
+   "tiers": [],
+   "limit": 6,
+   "organiser": "Sky Contents",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/jay-chou-2027/JC27WTMY",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "Jay Chou",
+   "fans": 58548,
+   "region": "华语",
+   "avatar": "avatars/a-25b49f3d15e7.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/jay-chou-2027/JC27WTMY",
+     "id": "bms-JC27WTMY",
      "sold_out": false,
      "price_from": null
     }
@@ -3069,6 +3477,8 @@
    "url": "https://www.golive-asia.com/event/159",
    "first_seen": "2026-09-29 08:34",
    "artist_name": "Blue",
+   "fans": 141492,
+   "region": "欧美",
    "avatar": "avatars/a-4c9a82ce72ca.jpg",
    "avatar_kind": "artist",
    "platforms": [
@@ -3111,6 +3521,8 @@
    "first_seen": "2026-09-29 10:40",
    "seat_maps": [],
    "artist_name": "演唱会 Songs That Keep Us Together",
+   "fans": 0,
+   "region": "华语",
    "avatar": "avatars/p-fantopia-rx6i8tz7.jpg",
    "avatar_kind": "poster",
    "platforms": [
@@ -3122,9 +3534,393 @@
      "price_from": "RM 88.00"
     }
    ]
+  },
+  {
+   "id": "bms-BMSYSG26",
+   "source": "BookMyShow",
+   "name": "2026 YESUNG 10TH ANNIVERSARY TOUR - ABOUT THE THINGS WE CALLED ORDINARY IN KUALA LUMPUR",
+   "artist": null,
+   "type": null,
+   "venue": "Zepp Kuala Lumpur",
+   "city": null,
+   "dates": [],
+   "sales": [],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/yesung-2026/BMSYSG26",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "YESUNG",
+   "fans": 6175,
+   "region": "K-pop",
+   "avatar": "avatars/a-c78a949018af.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/yesung-2026/BMSYSG26",
+     "id": "bms-BMSYSG26",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "bms-BMSQFZKL",
+   "source": "BookMyShow",
+   "name": "2026 邱鋒澤 Feng Ze Bend The Lines Concert - Malaysia",
+   "artist": null,
+   "type": null,
+   "venue": "Zepp Kuala Lumpur",
+   "city": null,
+   "dates": [],
+   "sales": [],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/2026-qiu-feng-ze-feng-ze-bend-the-lines-concert-malaysia/BMSQFZKL",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "邱鋒澤",
+   "fans": 24,
+   "region": "华语",
+   "avatar": "avatars/a-3f068ff661d7.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/2026-qiu-feng-ze-feng-ze-bend-the-lines-concert-malaysia/BMSQFZKL",
+     "id": "bms-BMSQFZKL",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "bms-BMSASP26",
+   "source": "BookMyShow",
+   "name": "Air Supply A Matter of Time Tour",
+   "artist": null,
+   "type": null,
+   "venue": "Sibu Indoor Stadium, Sarawak",
+   "city": null,
+   "dates": [],
+   "sales": [],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/air-supply-a-matter-of-time-tour/BMSASP26",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "Air Supply",
+   "fans": 442942,
+   "region": "欧美",
+   "avatar": "avatars/a-907e082a348c.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/air-supply-a-matter-of-time-tour/BMSASP26",
+     "id": "bms-BMSASP26",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "bms-BMSATMYS",
+   "source": "BookMyShow",
+   "name": "Alan Tam《谭咏麟与您「刻骨铭心」世界巡回演唱会 — 终极篇》马来西亚站",
+   "artist": null,
+   "type": null,
+   "venue": "Unifi Arena Bukit Jalil",
+   "city": null,
+   "dates": [],
+   "sales": [],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/tan-yong-lin-2026/BMSATMYS",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "Alan Tam",
+   "fans": 2181,
+   "region": "华语",
+   "avatar": "avatars/a-f1446a3aa5e2.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/tan-yong-lin-2026/BMSATMYS",
+     "id": "bms-BMSATMYS",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "bms-BMSBND26",
+   "source": "BookMyShow",
+   "name": "BOYNEXTDOOR TOUR 'KNOCK ON Vol.2' IN KUALA LUMPUR",
+   "artist": null,
+   "type": null,
+   "venue": "Unifi Arena Bukit Jalil",
+   "city": null,
+   "dates": [],
+   "sales": [],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/boynextdoor-tour-knock-on-vol2-in-kuala-lumpur/BMSBND26",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "BOYNEXTDOOR",
+   "fans": 52024,
+   "region": "K-pop",
+   "avatar": "avatars/a-348e6d4d6a5c.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/boynextdoor-tour-knock-on-vol2-in-kuala-lumpur/BMSBND26",
+     "id": "bms-BMSBND26",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "bms-BMSHENRY",
+   "source": "BookMyShow",
+   "name": "HENRY LAU 2026 \"ENJOY THE SHOW\" WORLD TOUR - KUALA LUMPUR",
+   "artist": null,
+   "type": null,
+   "venue": "IDEA LIVE ARENA",
+   "city": null,
+   "dates": [],
+   "sales": [],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/henry-lau-2026-enjoy-the-show-world-tour-kuala-lumpur/BMSHENRY",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "Henry Lau",
+   "fans": 603,
+   "region": "K-pop",
+   "avatar": "avatars/a-27e09d26eb62.jpg",
+   "avatar_kind": "artist",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/henry-lau-2026-enjoy-the-show-world-tour-kuala-lumpur/BMSHENRY",
+     "id": "bms-BMSHENRY",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "bms-BMSIDOLR",
+   "source": "BookMyShow",
+   "name": "IDOL RADIO LIVE IN KUALA LUMPUR",
+   "artist": null,
+   "type": null,
+   "venue": "Inspire Live Arena",
+   "city": null,
+   "dates": [],
+   "sales": [],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/idol-radio-live-in-kuala-lumpur/BMSIDOLR",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "IDOL RADIO",
+   "fans": 0,
+   "region": "其他",
+   "avatar": "avatars/p-bms-BMSIDOLR.jpg",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/idol-radio-live-in-kuala-lumpur/BMSIDOLR",
+     "id": "bms-BMSIDOLR",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "bms-BMSCAPKL",
+   "source": "BookMyShow",
+   "name": "[KL] 队长 YoungCaptain《I AM WHAT I AM》世界巡回演唱会 - 吉隆玻站",
+   "artist": null,
+   "type": null,
+   "venue": "Unifi Arena Bukit Jalil",
+   "city": null,
+   "dates": [],
+   "sales": [],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/kl-dui-chang-youngcaptaini-am-what-i-am-shi-jie-xun-hui-yan-chang-hui-ji-long-bo-zhan/BMSCAPKL",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "队长 YoungCaptain",
+   "fans": 0,
+   "region": "华语",
+   "avatar": "avatars/p-bms-BMSCAPKL.jpg",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/kl-dui-chang-youngcaptaini-am-what-i-am-shi-jie-xun-hui-yan-chang-hui-ji-long-bo-zhan/BMSCAPKL",
+     "id": "bms-BMSCAPKL",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "bms-BMSCAPPG",
+   "source": "BookMyShow",
+   "name": "[Penang] 队长 YoungCaptain《I AM WHAT I AM》世界巡回演唱会 - 槟城站",
+   "artist": null,
+   "type": null,
+   "venue": "Setia Spice Arena, Penang",
+   "city": null,
+   "dates": [],
+   "sales": [],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/penang-dui-chang-youngcaptaini-am-what-i-am-shi-jie-xun-hui-yan-chang-hui-bin-cheng-zhan/BMSCAPPG",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "队长 YoungCaptain",
+   "fans": 0,
+   "region": "华语",
+   "avatar": "avatars/p-bms-BMSCAPPG.jpg",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/penang-dui-chang-youngcaptaini-am-what-i-am-shi-jie-xun-hui-yan-chang-hui-bin-cheng-zhan/BMSCAPPG",
+     "id": "bms-BMSCAPPG",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "bms-BMSSNG26",
+   "source": "BookMyShow",
+   "name": "【那些年的歌，我们的成名曲】演唱会 Songs That Keep Us Together",
+   "artist": null,
+   "type": null,
+   "venue": "Unifi Arena Bukit Jalil",
+   "city": null,
+   "dates": [],
+   "sales": [],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/na-xie-nian-de-ge-wo-men-de-cheng-ming-qu-yan-chang-hui-songs-that-keep-us-together/BMSSNG26",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "演唱会 Songs That Keep Us Together",
+   "fans": 0,
+   "region": "华语",
+   "avatar": "avatars/p-bms-BMSSNG26.jpg",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/na-xie-nian-de-ge-wo-men-de-cheng-ming-qu-yan-chang-hui-songs-that-keep-us-together/BMSSNG26",
+     "id": "bms-BMSSNG26",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
+  },
+  {
+   "id": "bms-BMS26SSX",
+   "source": "BookMyShow",
+   "name": "孙盛希 Shi Shi [ The Taste Of… ] 世界巡回 吉隆坡站",
+   "artist": null,
+   "type": null,
+   "venue": "Zepp Kuala Lumpur",
+   "city": null,
+   "dates": [],
+   "sales": [],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/sun-sheng-xi-2026/BMS26SSX",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "孙盛希 Shi Shi   世界巡回 吉隆坡站",
+   "fans": 0,
+   "region": "华语",
+   "avatar": "avatars/p-bms-BMS26SSX.jpg",
+   "avatar_kind": "poster",
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/sun-sheng-xi-2026/BMS26SSX",
+     "id": "bms-BMS26SSX",
+     "sold_out": false,
+     "price_from": null
+    }
+   ]
   }
  ],
  "leads": [
+  {
+   "id": "ig-264f034cac979584",
+   "kind": "IG",
+   "from": "@imcliveglobal",
+   "from_name": "IMC Live Global",
+   "title": "顽童 MJ116 《OGS》巡回演唱会 —吉隆坡站即将开启！🔥",
+   "text": "顽童 MJ116 《OGS》巡回演唱会 —吉隆坡站即将开启！🔥\n\n一整晚的音乐、能量和热血现场等你来嗨！🙌\n\n入场前必看【观演须知】！请务必提前阅读，确保顺利入场。\n\n准备好和 mj116_tpc 一起把音量开到最大！🎤🔥\n-\nMJ116 \"OGS\" Tour - Kuala Lumpur is just around the corner! 🔥\n\nA night of music, energy and nonstop hype awaits! 🙌\n\nAll attendees are encouraged to review the [Event Advisory] before arrival to ensure smooth entry.\n\nGet ready to turn the volume up with mj116_tpc ! 🎤🔥\n\n🔗https://bit.ly/MJ116KL26\n🗓️ 2 October 2026 | ⏰ 8PM |📍Mega Star Arena KL\n\n#顽童MJ116 #顽童MJ116OGSTour #IMCGroupAsia #IMCLiveGlobal #CreatingLiveExperiences",
+   "time": "2026-09-29 11:01",
+   "url": "https://www.instagram.com/p/Dd2vtV_DYgC/",
+   "hints": [
+    "🗓️ 2 October 2026 | ⏰ 8PM |📍Mega Star Arena KL"
+   ],
+   "sale_times": [],
+   "first_seen": "2026-09-29 11:12",
+   "matches": [
+    "bms-MJ116MYS"
+   ],
+   "status": "rumor",
+   "avatar": "avatars/ig-imcliveglobal.jpg",
+   "platforms": []
+  },
   {
    "id": "ig-08b56d3d94823b20",
    "kind": "IG",
@@ -3186,6 +3982,21 @@
    "platforms": []
   },
   {
+   "id": "news-aa5e8285cab39b56",
+   "kind": "新闻",
+   "from": "newswav.com",
+   "title": "Polis Sabah nasihat konsert penyanyi AS tidak diadakan buat masa ini - newswav.com",
+   "text": null,
+   "time": "2026-09-28 17:41",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPMURBTU51LWlCaUxxUFJRUmlfZFV1VzIweWdwNzByUlZpb192LW54QzZaVS1nQTRkQzhONTZtUFQ3TjJLQ3hMWFptUk5VNnkzSEZGdW5iRFlSbERMM0FPM0lkZlhuWFBNNVJkWGtYUF9GNG9LTjFJN2tWTjBqX0dCWk94eG1oeVQya3BGVWJZVUNnbTl2VTl4NFFqY0xobkFwaVUzY0N5ZlhUbkkydEE?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 11:12",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": []
+  },
+  {
    "id": "news-0bc4402037ac7817",
    "kind": "新闻",
    "from": "Free Malaysia Today",
@@ -3200,6 +4011,27 @@
    "status": "rumor",
    "platforms": [],
    "artist": "Israel Houghton",
+   "artist_fans": 51236,
+   "artist_region": "欧美",
+   "artist_photo": "avatars/a-0d38f2cafd68.jpg"
+  },
+  {
+   "id": "news-e4d41a0f5de5b5d2",
+   "kind": "新闻",
+   "from": "freemalaysiatoday.com",
+   "title": "Polis Sabah nasihat tangguh konsert Israel Houghton - freemalaysiatoday.com",
+   "text": null,
+   "time": "2026-09-28 17:06",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPakMteDVYNm90bTBXQzA0TlN1emU5TTJKV0Y3Zk1URHhTcmdCU0NtYkthZVYzQ25SOE5JYXYxN0tWb1kwaU9wM2lVZUJ1d241elhibkc4d2pwLThqeEo2RXhXUlBqMUNnbHV1X25Danp6b3dlMWMtWTZyaG9MWmFaOGdNV3dMeVhHcF9ZaDE1NHNfMWROd2l2THV0bFNJX1RXbWhnNTdxUHJmTEJSQkpNZkJhQy1JWWdiNFZ4TGRB?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 11:12",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "Israel Houghton",
+   "artist_fans": 51236,
+   "artist_region": "欧美",
    "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
   {
@@ -3242,6 +4074,8 @@
    "status": "rumor",
    "platforms": [],
    "artist": "Israel Houghton",
+   "artist_fans": 51236,
+   "artist_region": "欧美",
    "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
   {
@@ -3262,6 +4096,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [
+    "bms-BMSATMYS",
     "fantopia-zk3x1r1c",
     "fantopia-xngkbueb"
    ],
@@ -3283,6 +4118,8 @@
    "status": "rumor",
    "platforms": [],
    "artist": "Israel Houghton",
+   "artist_fans": 51236,
+   "artist_region": "欧美",
    "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
   {
@@ -3324,6 +4161,8 @@
    "status": "rumor",
    "platforms": [],
    "artist": "Israel Houghton",
+   "artist_fans": 51236,
+   "artist_region": "欧美",
    "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
   {
@@ -3341,6 +4180,8 @@
    "status": "rumor",
    "platforms": [],
    "artist": "Israel Houghton",
+   "artist_fans": 51236,
+   "artist_region": "欧美",
    "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
   {
@@ -3399,18 +4240,12 @@
     "🎫  www.golive-asia.com",
     "🎫 𝐆𝐞𝐧𝐞𝐫𝐚𝐥 𝐎𝐧-𝐒𝐚𝐥𝐞: Mon, 28 Sept, 11am onwards."
    ],
-   "sale_times": [
-    {
-     "time": "2026-09-28 11:00",
-     "line": "🎫 General On-Sale: Mon, 28 Sept, 11am onwards.",
-     "past": false
-    }
-   ],
+   "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [
     "golive-179"
    ],
-   "status": "announced",
+   "status": "expired",
    "avatar": "avatars/ig-livenationmy.jpg",
    "platforms": [
     "GoLive"
@@ -3501,9 +4336,9 @@
    "hints": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [],
-   "platforms": [],
    "sale_times": [],
-   "status": "rumor"
+   "status": "rumor",
+   "platforms": []
   },
   {
    "id": "news-b3b14997d36d71c8",
@@ -3535,18 +4370,12 @@
     "🎫  www.golive-asia.com",
     "🎫 𝐆𝐞𝐧𝐞𝐫𝐚𝐥 𝐎𝐧-𝐒𝐚𝐥𝐞: Mon, 28 Sept, 11am onwards."
    ],
-   "sale_times": [
-    {
-     "time": "2026-09-28 11:00",
-     "line": "🎫 General On-Sale: Mon, 28 Sept, 11am onwards.",
-     "past": false
-    }
-   ],
+   "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [
     "golive-179"
    ],
-   "status": "announced",
+   "status": "expired",
    "avatar": "avatars/ig-livenationmy.jpg",
    "platforms": [
     "GoLive"
@@ -3692,18 +4521,12 @@
     "🎫  www.golive-asia.com",
     "🎫 𝐆𝐞𝐧𝐞𝐫𝐚𝐥 𝐎𝐧-𝐒𝐚𝐥𝐞: Mon, 28 Sept, 11am onwards."
    ],
-   "sale_times": [
-    {
-     "time": "2026-09-28 11:00",
-     "line": "🎫 General On-Sale: Mon, 28 Sept, 11am onwards.",
-     "past": false
-    }
-   ],
+   "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [
     "golive-179"
    ],
-   "status": "announced",
+   "status": "expired",
    "avatar": "avatars/ig-livenationmy.jpg",
    "platforms": [
     "GoLive"
@@ -3783,6 +4606,8 @@
    "avatar": "avatars/ig-zeppkualalumpur.jpg",
    "platforms": [],
    "artist": "izna",
+   "artist_fans": 6989,
+   "artist_region": "K-pop",
    "artist_photo": "avatars/a-988ff669d789.jpg",
    "image": "posts/ig-8c0ee5a62b633007.jpg"
   },
@@ -3827,7 +4652,8 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [
     "fantopia-zk3x1r1c",
-    "fantopia-xngkbueb"
+    "fantopia-xngkbueb",
+    "bms-BMSATMYS"
    ],
    "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
@@ -3873,6 +4699,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [
+    "bms-BMSATMYS",
     "fantopia-zk3x1r1c",
     "fantopia-xngkbueb"
    ],
@@ -3921,6 +4748,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [
+    "bms-BMSATMYS",
     "fantopia-zk3x1r1c",
     "fantopia-xngkbueb"
    ],
@@ -3943,6 +4771,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [
+    "bms-BMSATMYS",
     "fantopia-zk3x1r1c",
     "fantopia-xngkbueb"
    ],
@@ -3988,7 +4817,8 @@
    "first_seen": "2026-09-29 08:34",
    "matches": [
     "fantopia-zk3x1r1c",
-    "fantopia-xngkbueb"
+    "fantopia-xngkbueb",
+    "bms-BMSATMYS"
    ],
    "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
@@ -4011,6 +4841,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [
+    "bms-BMSATMYS",
     "fantopia-zk3x1r1c",
     "fantopia-xngkbueb"
    ],
@@ -4094,6 +4925,8 @@
     "Ticket2U"
    ],
    "artist": "LA LA LAND",
+   "artist_fans": 2348,
+   "artist_region": "欧美",
    "artist_photo": "avatars/a-5081d27aec33.jpg",
    "image": "posts/ig-d3a0195748b7f50c.jpg"
   },
@@ -4157,6 +4990,7 @@
    "sale_times": [],
    "first_seen": "2026-09-29 08:34",
    "matches": [
+    "bms-BMSATMYS",
     "fantopia-zk3x1r1c",
     "fantopia-xngkbueb"
    ],
@@ -4205,6 +5039,8 @@
    "avatar": "avatars/ig-starplanetmy.jpg",
    "platforms": [],
    "artist": "Hillsong Worship",
+   "artist_fans": 584123,
+   "artist_region": "欧美",
    "artist_photo": "avatars/a-15aedfa2f076.jpg",
    "image": "posts/ig-2c4b06f41775438c.jpg"
   },
@@ -4227,6 +5063,8 @@
    "avatar": "avatars/ig-starplanetmy.jpg",
    "platforms": [],
    "artist": "Hillsong Worship",
+   "artist_fans": 584123,
+   "artist_region": "欧美",
    "artist_photo": "avatars/a-15aedfa2f076.jpg",
    "image": "posts/ig-5d1413380bf9952f.jpg"
   },
@@ -4273,6 +5111,8 @@
    "avatar": "avatars/ig-starplanetmy.jpg",
    "platforms": [],
    "artist": "Hillsong Worship",
+   "artist_fans": 584123,
+   "artist_region": "欧美",
    "artist_photo": "avatars/a-15aedfa2f076.jpg",
    "image": "posts/ig-dc395a405bb09221.jpg"
   },
@@ -4301,6 +5141,8 @@
     "Trip.com"
    ],
    "artist": "JEONG EUN JI",
+   "artist_fans": 6483,
+   "artist_region": "K-pop",
    "artist_photo": "avatars/a-feca6f372bf8.jpg",
    "image": "posts/ig-ba3f876f0ef083d0.jpg"
   }
