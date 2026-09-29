@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-29 20:16",
+ "generated_at": "2026-09-29 21:53",
  "health": {
   "GoLive": {
    "ok": true,
@@ -30,12 +30,12 @@
   },
   "Google News": {
    "ok": true,
-   "count": 41,
+   "count": 40,
    "error": null
   },
   "东方日报 娱乐": {
-   "ok": true,
-   "count": 10
+   "ok": false,
+   "error": "HTTP 403"
   },
   "人工线索": {
    "ok": true,
@@ -1911,7 +1911,9 @@
    "url": "https://my.bookmyshow.com/en/events/mamamoo-4ward-2026/MOO4WARD",
    "country": "MY",
    "first_seen": "2026-09-29 11:12",
-   "seat_maps": [],
+   "seat_maps": [
+    "maps-extra/bms-MOO4WARD.jpg"
+   ],
    "artist_name": "MAMAMOO",
    "fans": 672317,
    "region": "K-pop",
@@ -1932,7 +1934,38 @@
    "news_added": null,
    "added_status": null,
    "sale_state": "ON_SALE",
-   "sale_evidence": []
+   "sale_evidence": [],
+   "seat_map_source": "Google 图片（my.bookmyshow.com），非售票平台官方图，请以官网为准",
+   "ocr_tiers": [
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 1068"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 938"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 838"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 688"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 588"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 488"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 388"
+    }
+   ]
   },
   {
    "id": "t2u-49422",
@@ -2863,7 +2896,9 @@
    "url": "https://my.bookmyshow.com/en/events/eric-chou-odyssey-stars-2026/ERIC2026",
    "country": "MY",
    "first_seen": "2026-09-29 11:12",
-   "seat_maps": [],
+   "seat_maps": [
+    "maps-extra/bms-ERIC2026.jpg"
+   ],
    "artist_name": "周兴哲",
    "fans": 35,
    "region": "华语",
@@ -2884,7 +2919,42 @@
    "news_added": null,
    "added_status": null,
    "sale_state": "ON_SALE",
-   "sale_evidence": []
+   "sale_evidence": [],
+   "seat_map_source": "Google 图片（my.bookmyshow.com），非售票平台官方图，请以官网为准",
+   "ocr_tiers": [
+    {
+     "name": "Mm CAT 1",
+     "price": "RM 988"
+    },
+    {
+     "name": "Me CAT 2",
+     "price": "RM 888"
+    },
+    {
+     "name": "Mmm CAT3",
+     "price": "RM 788"
+    },
+    {
+     "name": "~— CAT4",
+     "price": "RM 688"
+    },
+    {
+     "name": "Mm CAT 5",
+     "price": "RM 588"
+    },
+    {
+     "name": "Ml CAT 6",
+     "price": "RM 498"
+    },
+    {
+     "name": "Mme CAT 7",
+     "price": "RM 398"
+    },
+    {
+     "name": "mss CAT 8",
+     "price": "RM 298"
+    }
+   ]
   },
   {
    "id": "t2u-52015",
@@ -2995,7 +3065,9 @@
    "url": "https://my.bookmyshow.com/en/events/rosetopia-asia-tour-2026-kl/ROSE26KL",
    "country": "MY",
    "first_seen": "2026-09-29 11:12",
-   "seat_maps": [],
+   "seat_maps": [
+    "maps-extra/bms-ROSE26KL.jpg"
+   ],
    "artist_name": "ROSETOPIA",
    "fans": 0,
    "region": "K-pop",
@@ -3016,7 +3088,42 @@
    "news_added": null,
    "added_status": null,
    "sale_state": "ON_SALE",
-   "sale_evidence": []
+   "sale_evidence": [],
+   "seat_map_source": "Google 图片（my.bookmyshow.com），非售票平台官方图，请以官网为准",
+   "ocr_tiers": [
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 968"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 798"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 738"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 638"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 538"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 438"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 388"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 88"
+    }
+   ]
   },
   {
    "id": "fantopia-jiyb5116",
@@ -9434,8 +9541,8 @@
    "id": "news-8ef478dde37d0b0c",
    "kind": "新闻",
    "country": "MY",
-   "from": "siraplimau.com",
-   "title": "Konsert Ejen Ali Raikan Ulang Tahun Ke-10, Jom Pergi! - siraplimau.com",
+   "from": "SirapLimau.com",
+   "title": "Konsert Ejen Ali Raikan Ulang Tahun Ke-10, Jom Pergi! - SirapLimau.com",
    "text": null,
    "time": "2026-09-29 12:07",
    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5SYWFLcElFQ1J1WTlBZVpxa3dXcWZuR3ZrWlpHUXVwTjJBaThSelNnc3ZSSDEwWkJnTE5RYlYtWXRpTDVLLVJqdnJFWDFTU2lYRDR5dllxSmM2ejNmcGtjX3BhUTNkZnZValE?oc=5",
@@ -9509,9 +9616,9 @@
    ],
    "sale_times": [],
    "more_images": [
-    "https://scontent-sea5-1.cdninstagram.com/v/t39.30808-6/828085859_1567473615410808_1305564865304938196_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NCwSR7ARSm0Q7kNvwHlwFjH&_nc_oc=AdpLTyfHjiUT0aEk3tVkcydkyrzD2nAh_nlh1ktEk9CLjJbVUbrx40nTug1HsmhA-Hw&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=CDHWWeP6BVu5UC8Dasx75g&oh=00_AQOZfgi2VyTliR-dkYlMQQ5jKTHcGdmTnb0k0j9rbxlcUw&oe=6AC1649E",
-    "https://scontent-sea5-1.cdninstagram.com/v/t39.30808-6/827410493_1567473608744142_8288965911548098938_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=JyWpzizeWoUQ7kNvwGDQu92&_nc_oc=AdpzuZGaxXpnAq0SLKgQKofFri4N7FmmbohHf34AtjQTpWspkWIc4ru1xi3tUODCRpI&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=CDHWWeP6BVu5UC8Dasx75g&oh=00_AQNjyGlwvq9ug-AweQSnFunfY9Q2ByuowO28aZdOAOw5zQ&oe=6AC19139",
-    "https://scontent-sea5-1.cdninstagram.com/v/t39.30808-6/825274125_1567473612077475_2521521763207252978_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=azH38PjJqqAQ7kNvwFlC4_y&_nc_oc=Adqr5FsYa1qg6vJlDOpm_z-vI_0VKqVS5aWKwzacGKu8dls05luxxtpcELfV04b3fEw&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=CDHWWeP6BVu5UC8Dasx75g&oh=00_AQNg-V-PyKPPFTHpeXTc0vzgum_E2psewdtElFmbM7sTRA&oe=6AC17F38"
+    "https://scontent-iad3-2.cdninstagram.com/v/t39.30808-6/828085859_1567473615410808_1305564865304938196_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=NCwSR7ARSm0Q7kNvwFnYFX0&_nc_oc=AdrYeOiUS2k2_1iycUMW23RvfJD6xr95ouXofc9Nve5CgvBUc4UfNvF46gZ38GokYPs&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=Kn2hVSZZnzVnd0hXuMAzwA&oh=00_AQOtX1j1zjFfN2_0mW6JkvslOb7olXXo8He08ZeNrJR4uQ&oe=6AC19CDE",
+    "https://scontent-iad3-1.cdninstagram.com/v/t39.30808-6/827410493_1567473608744142_8288965911548098938_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=JyWpzizeWoUQ7kNvwFKyqJk&_nc_oc=AdpWOwbT2QrtC_YUAaSK43RGweAsghqu-i_G4bbmOoIbr6pmlpVOW16Elrb0Mhw4bgk&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=Kn2hVSZZnzVnd0hXuMAzwA&oh=00_AQNHgPpMghQr2UNDJsR-pS1qPdD_-vtty_saBofznZebAA&oe=6AC19139",
+    "https://scontent-iad6-1.cdninstagram.com/v/t39.30808-6/825274125_1567473612077475_2521521763207252978_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=azH38PjJqqAQ7kNvwG_ky73&_nc_oc=AdpR9p73mMXgCPCeAgPJ4PQSlKqMqOcxZF7DqIrgNpE21ZD-rniVPncP3euGqXPk6Dg&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=Kn2hVSZZnzVnd0hXuMAzwA&oh=00_AQMAClmPnepBYHifrdUknYBLF2Qz82VN3XbcujGCqBw20w&oe=6AC17F38"
    ],
    "first_seen": "2026-09-29 11:12",
    "image_text": "Rit ©MJ16\n“ 066\"\nma\n60\nLa\nCe”\nsf Advisory\npena va 2 10(2) sem Weiter 내\n§ 688/488 388 288\ncame FYE 개시 wont) 매시 HED guar | 새키 이 개 비록 mens bk 上 how\nsoar MY. XUGn GB",
@@ -9948,28 +10055,6 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
-   "listed": false,
-   "artist": "Israel Houghton",
-   "artist_fans": 51236,
-   "artist_region": "欧美",
-   "artist_photo": "avatars/a-0d38f2cafd68.jpg"
-  },
-  {
-   "id": "news-77bef6f05aa642d3",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "hmetro.com.my",
-   "title": "Konsert Israel Houghton: Polis Sabah pantau, terima dua laporan - hmetro.com.my",
-   "text": null,
-   "time": "2026-09-28 12:43",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPU0VlLU93Ul8xOFpNd2FtSnhPUlRvcEpfNWdlRFR5VTdOTVFBSFFfbDRESUJvR1dCd2pfV2xTTEhUR1VRdHBvVVkxWE12cTM4bFN3aG04S2NSYkg2cGctMG5JdXVIMmdTT3lCZHB1NkxXdUpXSmNZSHNaOG5yUG8xM3FXM2RIeWVXUXktc2ZqNzlLSDlPTTdzUDBJVFNmdGVIdU5ZRFF5N3BNb3IwR0FhRGFn?oc=5",
-   "hints": [],
-   "first_seen": "2026-09-29 20:00",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
    "artist": "Israel Houghton",
    "artist_fans": 51236,
    "artist_region": "欧美",
@@ -9992,12 +10077,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
-   "listed": false,
    "artist": "Israel Houghton",
    "artist_fans": 51236,
    "artist_region": "欧美",
-   "artist_photo": "avatars/a-0d38f2cafd68.jpg"
+   "artist_photo": "avatars/a-0d38f2cafd68.jpg",
+   "hidden": null,
+   "listed": false
   },
   {
    "id": "news-8a35d4d0e350fdd6",
@@ -10014,12 +10099,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
    "artist": "Israel Houghton",
    "artist_fans": 51236,
    "artist_region": "欧美",
-   "artist_photo": "avatars/a-0d38f2cafd68.jpg",
-   "hidden": null,
-   "listed": false
+   "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
   {
    "id": "news-fcdaeab133451b7d",
@@ -10241,12 +10326,12 @@
    "matches": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
    "artist": "Baby Shark",
    "artist_fans": 1974,
    "artist_region": "K-pop",
-   "artist_photo": "avatars/a-0f1ddf6d0f7a.jpg",
-   "hidden": null,
-   "listed": false
+   "artist_photo": "avatars/a-0f1ddf6d0f7a.jpg"
   },
   {
    "id": "news-ad94a09a53d5ce1e",
@@ -10440,7 +10525,7 @@
    "title": "Anirudh Ravichander surprises fans with unreleased ‘Jailer 2’ song at Singapore concert ahead of Rajinika - The Times of India",
    "text": null,
    "time": "2026-09-26 22:13",
-   "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxQRjhGcnpSMmt0RUR2dktzbWlneXAyRm8xUWN3Sld5b1dnMjJ4bzdlejJjNVk5R1hrTGxyNUZJLW9FZTB3SWwzU3hqMTVfaWxncEZhUHlQb1BobFpKa25TV3dNeDRSZmVQT3RQVjBhNTdaRDZaY3NoSE5LZ1dlUUdTMWh5OG5tU3kyUzNSOVpNZEwyUmpFbGFHWTJ2WU9XcGh1bVdYbHMwUjF6SW1pZHNLbjFzM3Q0QXZoN0VYWVdFYUloSHd0U3FsTTBOYkV2OG9YbE9iNjdBNFFIY0c2djlCblEyaE5DQlFhV1IxdjBiNzZZeGMyRGd0ZVRmRnBQOUdka3VVM2dTOXJ3N2lfbzZ4QVF1Q3J5Rk9vTWVLcm1xZHptQ0FkYmJscHZ1Q0xKYVJzMkViMWwwUG1xS3NFVGVFQU1B0gHHAkFVX3lxTE0tdkk4cmNXMmN2U2NBRjBOOTZUckRpV0pJTmpVTXBkVXV6STh3VU5iTmVDRXI4M1haVkdBSkxaYmt0NV9ycUdKcEx2NktxTmc5M216aEdzUDM4WDIwd3pVRzY5d3c4c3luUWRFSDVsbndSME13azJiWklIb1VsX19saEtzZ3lfNmJ2R1RkT0Jyem0xeUhLclJQeU4yaWwwaUk3cmtSeU94UEJtQmQ0MUtreWdfUllyNWE3LTQ0RHdVOHUtM1Q5d2JSQVBQcXF3QnNkUWcySTdrLUpuX0RSYm14UTlBbmd0Vk44cHNNNGQ0bGFSd2gzZ18xQlE1a1BmWXlhNGdlb3VLbWdId1lxazFZTDhuQXdGZGZNZmlORkljOFFIZDNDUmNheExzbTJiVDhGQ0ZOakx2NVR3R1pEU1dNWUJ1ak5CWQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNLXZJOHJjVzJjdlNjQUYwTjk2VHJEaVdKSU5qVU1wZFV1ekk4d1VOYk5lQ0VyODNYWlZHQUpMWmJrdDVfcnFHSnBMdjZLcU5nOTNtemhHc1AzOFgyMHd6VUc2OXd3OHN5blFkRUg1bG53UjBNd2syYlpJSG9VbF9fbGhLc2d5XzZidkdUZE9CcnptMXlIS3JSUHlOMmlsMGlJN3JrUnlPeFBCbUJkNDFLa3lnX1JZcjVhNy00NER3VTh1LTNUOXdiUkFQUHFxd0JzZFFnMkk3ay1Kbl9EUmJteFE5QW5ndFZOOHBzTTRkNGxhUndoM2dfMUJRNWtQZll5YTRnZW91S21nSHdZcWsxWUw4bkF3RmRmTWZpTkZJYzhRSGQzQ1JjYXhMc20yYlQ4RkNGTmpMdjVUd0daRFNXTVlCdWpOQlnSAccCQVVfeXFMTS12SThyY1cyY3ZTY0FGME45NlRyRGlXSklOalVNcGRVdXpJOHdVTmJOZUNFcjgzWFpWR0FKTFpia3Q1X3JxR0pwTHY2S3FOZzkzbXpoR3NQMzhYMjB3elVHNjl3dzhzeW5RZEVINWxud1IwTXdrMmJaSUhvVWxfX2xoS3NneV82YnZHVGRPQnJ6bTF5SEtyUlB5TjJpbDBpSTdya1J5T3hQQm1CZDQxS2t5Z19SWXI1YTctNDREd1U4dS0zVDl3YlJBUFBxcXdCc2RRZzJJN2stSm5fRFJibXhROUFuZ3RWTjhwc000ZDRsYVJ3aDNnXzFCUTVrUGZZeWE0Z2VvdUttZ0h3WXFrMVlMOG5Bd0ZkZk1maU5GSWM4UUhkM0NSY2F4THNtMmJUOEZDRk5qTHY1VHdHWkRTV01ZQnVqTkJZ?oc=5",
    "hints": [],
    "first_seen": "2026-09-29 17:13",
    "matches": [],
@@ -10772,7 +10857,7 @@
    ],
    "sale_times": [],
    "more_images": [
-    "https://scontent-sea5-1.cdninstagram.com/v/t39.30808-6/823798044_1382481467392381_6815551399143568969_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=7lwsBA94USYQ7kNvwHk82NN&_nc_oc=Adriqufcl3ev-7YNAlMFYluWPOU2h7Pk-3wx3ma8UbCPTfQ8QG4Cdj4rVmJycNAN8mg&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=q7Vy6Q-usq-yMG1ObJN-UQ&oh=00_AQP_ETJN4DjdbVa04MtQTa893aENHIIGVkmz0AuODjTyRg&oe=6AC1940E"
+    "https://scontent-iad3-2.cdninstagram.com/v/t39.30808-6/823798044_1382481467392381_6815551399143568969_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=7lwsBA94USYQ7kNvwGT1iML&_nc_oc=Adpf1pMQx-sBi6ojo_1BxqZVpgUHqx6n8V6ATGyaoME0mQv21bAt-I800sO6yG5xiSU&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=-vYqo1mIpoQtyk7J4k2Fqw&oh=00_AQNdbr9QzuJLNSVeUwwxf0SrqTidBV5Oy9XM-t4ITr2x7g&oe=6AC1940E"
    ],
    "first_seen": "2026-09-29 08:34",
    "image_text": "06Dec”™\nMALAYSIA ZEPP Kuala Lumpur\nvy\n죽다 =\nYaz\nar\nSA\nrn\nat\n同 人\nok aed\nLF\nmS,",
@@ -10848,8 +10933,8 @@
     }
    ],
    "more_images": [
-    "https://scontent-sea5-1.cdninstagram.com/v/t39.30808-6/821223775_1382460017394526_7016565473915475398_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=UXS9BRL6N0IQ7kNvwEhSp3V&_nc_oc=AdrnsTC_ozVzDeL2RTH41eA4e2GYYQPwN_VCdaRCSIcUFzUTrwex-oUgD5-KB2AqjiM&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=q7Vy6Q-usq-yMG1ObJN-UQ&oh=00_AQP6KWG32e0WMWruN5IkgKWlCiLs7BYD2oIP6RG32Sf8OA&oe=6AC16CE4",
-    "https://scontent-sea5-1.cdninstagram.com/v/t39.30808-6/824121430_1382460024061192_5704790569313805701_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=a2rLIswrgdQQ7kNvwFaggwe&_nc_oc=Adpc8q312PXFDsdB6x7CrrVsQXvxja82KnQNNyZ5owfscyf-XoWQuWvmkB5tvNhNgYM&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=q7Vy6Q-usq-yMG1ObJN-UQ&oh=00_AQNiCkh0FZwrSbfZaHwPh6JrJ38KJkXTHDC094O-TL9L4g&oe=6AC19991"
+    "https://scontent-iad3-1.cdninstagram.com/v/t39.30808-6/821223775_1382460017394526_7016565473915475398_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=UXS9BRL6N0IQ7kNvwGrgyYl&_nc_oc=AdoNuerp18-W-eNSc3ZwMUU0_NK-Swj38QK04QRGuZWO7LJgW-0t78aQttc2marxY20&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=-vYqo1mIpoQtyk7J4k2Fqw&oh=00_AQPHGieQyOIpof72TNG6cYOcdRPUWyBmzO1PhaZh20t0vw&oe=6AC1A524",
+    "https://scontent-iad6-1.cdninstagram.com/v/t39.30808-6/824121430_1382460024061192_5704790569313805701_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=a2rLIswrgdQQ7kNvwH1AGJg&_nc_oc=AdqS1Onxc-M3dYJOyhvm2ScIycYrGPA-kZAcqiVGWn1UeJx8FJQJLixvsqni1GFitVQ&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=-vYqo1mIpoQtyk7J4k2Fqw&oh=00_AQMwKTyLhXKvb87M5v0Bcg5UqRuHmECF2di0DI2T4dFkAg&oe=6AC19991"
    ],
    "first_seen": "2026-09-29 08:34",
    "image_text": "18\n“on\nIN\nte,\naca 에\n다니\nEe\npy ㆍ\nwe\nen\n“ite\nCy\nDA\nin KUALA LUMPUR\n26:12.05 (SAT) 7PM\nZEPP KL\nWAKEONE cen WAXING 5 加 了 一 Trip.com Group Wetix",
@@ -11217,24 +11302,6 @@
    "listed": false
   },
   {
-   "id": "news-b10ffcbd9e0b15ea",
-   "kind": "新闻",
-   "country": "SG",
-   "from": "sassymamasg.com",
-   "title": "37 Upcoming Singapore Musicals, Theatre Shows, Comedy & Live Concerts In 2026 & 2027 - sassymamasg.com",
-   "text": null,
-   "time": "2026-09-23 15:00",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBfRzBseWREdXQzejVFU2FyblRKOEVUYnZxN3BUOGg3bzRFb0Q3WWpER3pOSFhDUTdaRlQ3bDd4Smk5eHlfeWgwb1BxRlhnY2lXUmJ0X3F6MUZpSWY5dVd0MFhITkpxSGV0aEl4bDhaVzNvUQ?oc=5",
-   "hints": [],
-   "first_seen": "2026-09-29 20:00",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "不是演唱会（comedy）",
-   "listed": false
-  },
-  {
    "id": "ig-dd6ab7404f161b2e",
    "kind": "IG",
    "from": "@starplanetmy",
@@ -11308,40 +11375,7 @@
    "time": "2026-09-23 11:05",
    "url": "https://www.orientaldaily.com.my/news/entertainment/2026/09/23/849841",
    "hints": [],
-   "sale_times": [
-    {
-     "time": "2026-09-17",
-     "line": "BIGBANG V.I.P.会员优先预售于9月17日率先开启",
-     "past": true,
-     "kind": "presale",
-     "added": false,
-     "name": "BIGBANG V.I.P.会员优先预售"
-    },
-    {
-     "time": "2026-09-22",
-     "line": "随后于9月22日开启的公开发售",
-     "past": true,
-     "kind": "general",
-     "added": false,
-     "name": null
-    },
-    {
-     "time": "2026-09-24",
-     "line": "门票将在9月24日开放V.I.P会员预售",
-     "past": true,
-     "kind": "presale",
-     "added": true,
-     "name": null
-    },
-    {
-     "time": "2026-09-29 10:00",
-     "line": "公售日则是9月29日早上10时",
-     "past": false,
-     "kind": "general",
-     "added": true,
-     "name": "公售日则"
-    }
-   ],
+   "sale_times": [],
    "first_seen": "2026-09-29 17:48",
    "matches": [
     "fantopia-0peucdui"
@@ -11564,8 +11598,8 @@
    ],
    "sale_times": [],
    "more_images": [
-    "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/820036986_18460741807185825_536423122202403246_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=y2rXCTfZszwQ7kNvwGaCj6D&_nc_oc=AdqfTLiTQ4PUIOZKpkPOUM--ferpgS_iXXBsfLzBMmqHJ4t1BkcORKMJxVBVtJ_f9-Y&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=5SHmBeaIqj094qIGnpcA6g&oh=00_AQPuek0MsANK3NzQDAvtRch31hyni1QSj4MwWumxa_Xj7w&oe=6AC1703A",
-    "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/800066331_18460741816185825_266681130292063220_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=yi3UOH-ShXUQ7kNvwGRJvO-&_nc_oc=Adql0Sy8w-gGl0dJkDM9oZuCBvlDrUHx_AV1YdD-MG0JG_JWZKalaaXVhBGC41pPGDI&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=5SHmBeaIqj094qIGnpcA6g&oh=00_AQO7AA_sJ5VM6ubtUydjoEpmkW_8suoKphvYkguYzRDVBw&oe=6AC16429"
+    "https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/820036986_18460741807185825_536423122202403246_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=y2rXCTfZszwQ7kNvwFAhVxY&_nc_oc=AdqFcesiFZMwiP03jC8xU0Kp-Pa0Nh9eUwXavn5bGPQXYsR2wRXeS-eSBpuwA0Geg6A&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=EzRe-Mrs4B7noNzh9YUPKg&oh=00_AQN4D6MZPBTeZXQtubAlInCwpZBA7rrcdw7UmyVkL-uh8A&oe=6AC1A87A",
+    "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/800066331_18460741816185825_266681130292063220_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=yi3UOH-ShXUQ7kNvwEXA6AX&_nc_oc=AdqFcgp01JrAvCXVQ9T9OVsL2nfnj4oJR-Ur3NvyCg1cjdoiSD9QxI7oKFqkBtgx4Rw&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=EzRe-Mrs4B7noNzh9YUPKg&oh=00_AQMyce8dN2zcNmHvX1o55DXnSQEZltrBFtLFGDLFkMUkYQ&oe=6AC19C69"
    ],
    "first_seen": "2026-09-29 08:34",
    "image_text": "KUMHO\nINTERNATION\nSilom Q yrvan\nDIORAMA\nLive\nRIZKY\nEla.\naul\nig\nwey\na 84\npy)\nvs\n8.30 PM\n29 November 2026\nKuala Res\n| Bw ae",
@@ -11750,8 +11784,8 @@
    ],
    "sale_times": [],
    "more_images": [
-    "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/814952589_18084002783694627_7800721668559978063_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=sf840kTSQHoQ7kNvwFVY_qK&_nc_oc=AdpEa7KVLu38oCkeuMB5842QjLUVi0bg-FW4uci4a7iCuEC0rgSYG2scPXi-wAOkxpA&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=q7Vy6Q-usq-yMG1ObJN-UQ&oh=00_AQNqHu4P75F1M4e7bTJ65xX6dGe4BW6hpGuTlJueW1Js-A&oe=6AC16BFC",
-    "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/813661074_18084002804694627_2337448610085100589_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Cw6xkmCaYzMQ7kNvwHdEbrL&_nc_oc=Adr6a87OIHd3-18IxZosXb3MwJQy6-Q_Vu6MnUuM-8rJHJ7i2w3uhyx-JqFFZ3mV2P4&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=q7Vy6Q-usq-yMG1ObJN-UQ&oh=00_AQMFVslMF4cnbQ2WeImU13ufL8AjjLq5-MkIvgXqgaXl3w&oe=6AC18A77"
+    "https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/814952589_18084002783694627_7800721668559978063_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=sf840kTSQHoQ7kNvwE8Ufun&_nc_oc=AdqwNkMwZkrk3lYvvN4D6UGITv3LsCqJ2_mnXbjiEp4oeFfhev9yyVPuX7aMuUT3pgY&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=-vYqo1mIpoQtyk7J4k2Fqw&oh=00_AQNTvtSfbM3IOowwvWegcn9CJze58_ZjhmHWocMP2tWQJw&oe=6AC1A43C",
+    "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/813661074_18084002804694627_2337448610085100589_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Cw6xkmCaYzMQ7kNvwFM8HD9&_nc_oc=Adpd5OAikfJcct4648DLM6rd_pY4Wgx0X9G4HpbmaMpssElaxHEmzWT0w9t41MdoEVk&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=-vYqo1mIpoQtyk7J4k2Fqw&oh=00_AQOgWiIbbxLe-9yQAsg-9p9LbcKNKMtbgv6Lc_mbLbicXA&oe=6AC18A77"
    ],
    "first_seen": "2026-09-29 08:34",
    "image_text": "Ze\nan\nnv\nCw\nvox\n24\nxa\n+ = foe\n4°04\nwa\n78\nPiet Site\nwa\nie)\n~…4' tp\ntose\nnet)\n二 一 一\nat\nat\nat\n20222\nie\ni gd\nPx 뿔 과\n11\nee\n20\n네꼬\na aan\nVg F\nSs\nwed 六\nayy\nys\nWid ay\nre\ntay\nee\naS\nae th\na7 lots\nsil\ncs\naa\nME\n改作 位 約\nZa\nths\n24\n카세\n- 아 스테 MEETING IN\nca\nrs\nMPU\nAL\n배나\n보레\nKU\nof)\nSS\nHe\naf\nee\n28\nve\naE\nSET",
@@ -11785,8 +11819,8 @@
    ],
    "sale_times": [],
    "more_images": [
-    "https://scontent-sea5-1.cdninstagram.com/v/t39.30808-6/813901740_1375581714749023_3078432617815808170_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=6pxiGPti5joQ7kNvwEkJgRq&_nc_oc=Adrbij8p-DeD3QYHBts_YAm2R51O9VUW-lBPGQAmx8dIn9CmdP8BhCzRiMfDZwta9lI&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=q7Vy6Q-usq-yMG1ObJN-UQ&oh=00_AQMyZ9L9n1DFxnlTbyOd6ZUzORJQP_EgWLNzBdNg27eHuQ&oe=6AC19764",
-    "https://scontent-sea5-1.cdninstagram.com/v/t39.30808-6/812697180_1375581718082356_2655122274987622981_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=0eZsFob-HsMQ7kNvwFXmFAf&_nc_oc=AdpsNXJ2SEy3RNew9TRpmqYbdo6SdrA3-VNuK_KlRvfCaVpRzUAUimt0IBldEibZmUw&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=q7Vy6Q-usq-yMG1ObJN-UQ&oh=00_AQNugiAUHAnM4cc0hambaLLIBFDYAuScVQedssqN2PdyHw&oe=6AC17F9A"
+    "https://scontent-iad6-1.cdninstagram.com/v/t39.30808-6/813901740_1375581714749023_3078432617815808170_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=6pxiGPti5joQ7kNvwFH01GV&_nc_oc=AdoJP_1yqbnpIF1jsizryUOR9LBchV6XGhJhBRoClmUUKNisp3-Xz0UJu0XtqIkHypg&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=-vYqo1mIpoQtyk7J4k2Fqw&oh=00_AQPo5Lw0-sx65dveVCG7mMMmX6By6RSuRBeXWB1Lr83NvA&oe=6AC19764",
+    "https://scontent-iad3-1.cdninstagram.com/v/t39.30808-6/812697180_1375581718082356_2655122274987622981_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=0eZsFob-HsMQ7kNvwGMI4yb&_nc_oc=AdpkdAKyzmdaoH4qmEDNsL3NDcqVyPQiNNWlzRBh2BKnpH_sd4xYqi8uM6H9CGeaPHc&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=-vYqo1mIpoQtyk7J4k2Fqw&oh=00_AQMV_dp_3_aFqVxMmrK6RXIe4_qig009QoVLKUlUGVUoUA&oe=6AC17F9A"
    ],
    "first_seen": "2026-09-29 08:34",
    "image_text": "一 一 一 ~\naN\nCe Oe,\nANM\nIN\nIN\nzy\nV4\n11]\nLIN SN an SN OE\n2027\nANUARY\nKUALA\nUMPUR\nATZI\n一 一 一 一 ~\n‘el\ngz",
@@ -11839,7 +11873,7 @@
    ],
    "sale_times": [],
    "more_images": [
-    "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/809361250_18147120970556093_5549485484555355334_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=7fG9iGxbz6IQ7kNvwGObNSn&_nc_oc=Adq8J-_O_d3LW7ac8A0UtdhndzjuMp-Ulndwoic54rfPZpM0NjBiRuMbJ4J8IGfvLGI&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=CN8VmWkueO2gPrzpHO9rTQ&oh=00_AQPkSs_9NzavNJ7_Gefl5TCBDN4wufO2HI9ZyXHOkiV6Xg&oe=6AC1889D"
+    "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/809361250_18147120970556093_5549485484555355334_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=7fG9iGxbz6IQ7kNvwHvNz8x&_nc_oc=Adritk2uvkV5mh2Rib1HppC0zVPidZo1dxEiWnjeFF_hvEeSW-Z81JwNJVsZH4SMlWg&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=jqIcYF_M5OKuoh4C3EkilQ&oh=00_AQNGnbQ3Yi09jt_mrT-CT2ADLS-cDFBig9vP_ujmJJX9tQ&oe=6AC1889D"
    ],
    "first_seen": "2026-09-29 08:34",
    "image_text": "zal\nTHE $9\nAWTL\nAWARBS\nVIP TICKET GIVEAWAY\nYour chance to experience the 39th AWIT Awards LIVE.\nHOW TO JOIN\nFOLLOW @golive.asia and @awitawards\nSHARE the official 39th AWIT Awards poster on your\nInstagram Story and tag @golive.asia and @awitawards.\nCOMMENT on the Go Live Asia giveaway post and\ntag the one person you want to bring to Awit Awards\nBONUS: Tell us in your comment which Filipino artist you're most\nexcited to see at the 39th AWIT Awards.\n10 lucky winners will each receive TWO (2) VIP tickets.\nWinners will be announced Tomorrow at 9AM.\nMake sure your account is public so we can verify your entry.\nSEE YOU AT THE BIGGEST NIGHT IN FILIPINO MUSIC.\n406 smricxcrs @",
@@ -11865,15 +11899,15 @@
    "hints": [],
    "sale_times": [],
    "more_images": [
-    "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/810319628_18482669896109963_6021058707698217573_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=QlvEkzpKakoQ7kNvwH_fwbC&_nc_oc=Adq4ssOGshpoJnvLY5-MSofuBUjzb--sl0z8o25Z4NVZPrEOb-IAJi-vDvXao-QcyGo&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=d9rXP2ygo72sDwWbwKas0Q&oh=00_AQMYVHdaph4PelnzvOSPgsfr6Fa-YT4CzB66C10GI4Yk0Q&oe=6AC18E83",
-    "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/809909996_18482669947109963_4510194547590234648_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=cUzpIfWG5n4Q7kNvwH9VMo3&_nc_oc=AdpMkfTdpH70d8KQcDDl-UHZiX25J96P7yVi1U-dy-6KqCvh-4SrASAZb5FuhZP6-ho&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=d9rXP2ygo72sDwWbwKas0Q&oh=00_AQOKa8Z-X0pRpmUkKEdXkRt4kHOrLPI0u2XPHlJIU6K5aA&oe=6AC171E6",
-    "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/809450115_18482670088109963_6753273184727084263_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=fVL4kITj-lMQ7kNvwEqoJKE&_nc_oc=AdqPqgqmga_kvZ7wfXP8itDcJG5fwrPJNmVTNFbPfx4HMtyAxWq1SqzAx-1aJbgECjw&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=d9rXP2ygo72sDwWbwKas0Q&oh=00_AQO2Clq6Ipx7fGxmRgE2kHCuFOLL5ldgY1T9yWqHxdqKhQ&oe=6AC19907",
-    "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/809361250_18482670103109963_316834881087194513_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=zTFa1W4tXLgQ7kNvwEVLqYC&_nc_oc=Adr7nhOGr_w3077sPxAwGP3E-hi1Onvqjpl63zlpvt3LkqWON-zTRCADwaz2n-bzHdk&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=d9rXP2ygo72sDwWbwKas0Q&oh=00_AQM8ZnDdJGCi56bKmSipMIFN-3haPnNhl6OnplSZ4T-EaA&oe=6AC16EB4",
-    "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/809209314_18482670127109963_749763936519909601_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=qAfJiNrF7fIQ7kNvwFO8Ooq&_nc_oc=AdpbDOXGVvIEKxp9PBEiEwpVaUdeXNykkZJTBh9zgzPMcOqbyZVRLcy_r_vqNX6n-Hk&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=d9rXP2ygo72sDwWbwKas0Q&oh=00_AQNU0XABb5HRZJdOhHcoL3nxMbiJtv45w_59OPnWjLml9Q&oe=6AC17189",
-    "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/809209281_18482670166109963_819977820067587470_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=pghg0uSpQ3kQ7kNvwE9aAoV&_nc_oc=AdqXx4F2ejeDx4-Deg2_TyjUUHgsqIuS45a6jlH92nlt4Mt4Kmvm-0HE-Tq0t4Xk84Q&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=d9rXP2ygo72sDwWbwKas0Q&oh=00_AQOKHUSiDzzIQKioz1x9ytBg3wJs6SU7SyXIYdv0LwbbpQ&oe=6AC17948",
-    "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/809209273_18482670172109963_3966912091751615237_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=EC4l1RHWVcsQ7kNvwE_h7lb&_nc_oc=Adr77vuoShAGWJ_FHx8hPnK41l_664rGDg7zfx9j_QMh6DsZ1a5V8gESiiEAIlgdUKc&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=d9rXP2ygo72sDwWbwKas0Q&oh=00_AQM3bWxg2sEAFBvh8Ltcb4sSnVtCW8-blKuFk0jNI0t0Yg&oe=6AC17693",
-    "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/809458666_18482670196109963_8494053256910705616_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=2QOgw7JkpQYQ7kNvwHjiUqf&_nc_oc=AdplYoFIgh3934aZEiY988kjtxIvJEcaJ9Q8FB3VAy5nMdeZMEYdL1qkviZlL1EDK0I&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=d9rXP2ygo72sDwWbwKas0Q&oh=00_AQMMKP2vLXm0ZUxxxwnU7il_AUSAl0t8khexKfiQZhHeZg&oe=6AC187E4",
-    "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/809458666_18482670190109963_7735977043496015984_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=2Wq9g0hUKVcQ7kNvwGBBPsO&_nc_oc=Adq30MehWImNbvACTE_1krLIydoGLSoWIuPUvBubGSVs6oBqMCtY4r0SaRfjN8bZfq8&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=d9rXP2ygo72sDwWbwKas0Q&oh=00_AQPA18sGD5KFwU1tr6Zgmyx1eelsfNarcgx65C_2ujawpg&oe=6AC1851B"
+    "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/810319628_18482669896109963_6021058707698217573_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=QlvEkzpKakoQ7kNvwHxAd8E&_nc_oc=Ado3jmV3PyD7AWTxoWTVq4nuNQgyTbrEaTPlukD60jD0xNaK09VjRs7RhiePQLujmdE&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=l7CDOmw09bwp_XPNE5Ndtg&oh=00_AQOn42iEYPgj_gQRatZ5mSfttncuShABcPHoZeGR-ZrHmw&oe=6AC18E83",
+    "https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/809909996_18482669947109963_4510194547590234648_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=cUzpIfWG5n4Q7kNvwElzAEU&_nc_oc=AdrqnbsN4EevsuwgHWTH2RHo8fsIdaLSOTbU07HdKEpBpkc5-8OacJbOTDEYPy7OgiY&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=l7CDOmw09bwp_XPNE5Ndtg&oh=00_AQMj2wH42w4QnDcwaHi0d0xziT08C9zaIukVR4x_hEnZAg&oe=6AC1AA26",
+    "https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/809450115_18482670088109963_6753273184727084263_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=fVL4kITj-lMQ7kNvwGZ1mYt&_nc_oc=AdqcIVGd6SlLqsdw5SX6hCN21o9mtqt4_nCrw7hSChWSRjRS5pVWyNsKz8ixfaJv_0M&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=l7CDOmw09bwp_XPNE5Ndtg&oh=00_AQM5B9WUNe2HvmSo0v9wXbNzrrDda85x2YUWw_DYGn14Tw&oe=6AC19907",
+    "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/809361250_18482670103109963_316834881087194513_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=zTFa1W4tXLgQ7kNvwEbqq4d&_nc_oc=AdrTiif4MqjwfHM9XASE8zAvPY_VscnfBLlDLRVgl_3VJyDI8XQu78CF1T_RPK-v5_s&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=l7CDOmw09bwp_XPNE5Ndtg&oh=00_AQMaCFcAPEhI-pTqheIg9MT4f7VelgaKfOnEZGqLnTuv9Q&oe=6AC1A6F4",
+    "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/809209314_18482670127109963_749763936519909601_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=qAfJiNrF7fIQ7kNvwG_b-2e&_nc_oc=AdpfTnFoEiHn0IyYemkprWw3nc4c8VFhWk_EVG1GzfmIQiS0d5lXWnvd9ib6aEAfnZI&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=l7CDOmw09bwp_XPNE5Ndtg&oh=00_AQMFnuGiJHfrk4LRy8o8NBhdA8wP8m5LvK62ZIxRKF0aRw&oe=6AC1A9C9",
+    "https://scontent-iad6-1.cdninstagram.com/v/t51.82787-15/809209281_18482670166109963_819977820067587470_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=pghg0uSpQ3kQ7kNvwFxtPje&_nc_oc=AdrJwhvFHtTRuhesDPIOVGR2AGFaei3oWtUjuqdrfLbbfD0MkgZw7Jh6UiZeZc9il-U&_nc_zt=23&_nc_ht=scontent-iad6-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=l7CDOmw09bwp_XPNE5Ndtg&oh=00_AQOqN1n3t0WmpROB-lvDu5Okhc4kZSr7kA714a9lxM6T1Q&oe=6AC1B188",
+    "https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/809209273_18482670172109963_3966912091751615237_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=EC4l1RHWVcsQ7kNvwHeavf4&_nc_oc=Adq_u2u8wA6fV7evnxDz3YkQBBW5eEgY5RiPg1LZj4MQEZBqaaYBgKliWtW0jCJB7Wk&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=l7CDOmw09bwp_XPNE5Ndtg&oh=00_AQMYo2mqB-Tz03dVpVaNISb5tY6TIUKDeZbxo_A9S9GHlg&oe=6AC1AED3",
+    "https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/809458666_18482670196109963_8494053256910705616_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=2QOgw7JkpQYQ7kNvwHcJbcL&_nc_oc=AdoNKj-87dHUWznQoj0tDgB52VLrpAra1UFBVuq9jr8merq11s-KDbQpgfophyEm0Gw&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=l7CDOmw09bwp_XPNE5Ndtg&oh=00_AQPQOVhFpMVmMj9yq1duPI7LnVHIrxFE8smW_N9rjB6w6w&oe=6AC187E4",
+    "https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/809458666_18482670190109963_7735977043496015984_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=2Wq9g0hUKVcQ7kNvwF9NP77&_nc_oc=AdoRxTQ5IU44Rk7vqv7p0vEJDTsGHiaHvE4gQ3uS6tGeWbwnKTHUGsSZNY-hYIBoFVI&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=l7CDOmw09bwp_XPNE5Ndtg&oh=00_AQOCYn5qbG3RJPZogNlyQfORT9-CEN8wTVO4e50QXE2XQg&oe=6AC1851B"
    ],
    "first_seen": "2026-09-29 08:34",
    "image_text": "Bis\nae\nAi\nyo 협",
@@ -12024,8 +12058,8 @@
    ],
    "sale_times": [],
    "more_images": [
-    "https://scontent-sea5-1.cdninstagram.com/v/t39.30808-6/798077748_1368903048750223_4986460642533497711_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=MtYwxta9fcgQ7kNvwGL-nIx&_nc_oc=AdreWfniIFN4J5XR_6C5OqoZkA3TjdqXYtfDsPqrPWeIxwItnfShXOgCOyXIeidV0f4&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=q7Vy6Q-usq-yMG1ObJN-UQ&oh=00_AQOkTnfXm51czNCu6NmpoKpWIx5tiI49PXvwYXc6F_CP-g&oe=6AC191E5",
-    "https://scontent-sea5-1.cdninstagram.com/v/t39.30808-6/796640506_1368903002083561_758889641247104623_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=DQbgBoe2a9QQ7kNvwGBSsie&_nc_oc=Adoe_E68HsZorIuEjVvx24Gb5-qnZnnfXbLLwA9xoMzq5p5v5MmgrsV6-x2-ELH2Qak&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=q7Vy6Q-usq-yMG1ObJN-UQ&oh=00_AQNBq58-8dsY-0DFIyWvJeMniGAGvgzBkiB1gIoyoR3B1w&oe=6AC16D81"
+    "https://scontent-iad3-2.cdninstagram.com/v/t39.30808-6/798077748_1368903048750223_4986460642533497711_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=MtYwxta9fcgQ7kNvwFZbsY6&_nc_oc=AdpHBw1Rr9-7RGyQpzZMux-3iHiyn8KtgkCaYQ8sbv0HBr4rtFqeYvnnU8KtvhaWjCc&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=-vYqo1mIpoQtyk7J4k2Fqw&oh=00_AQPqSD340YG_-9VrwskFn1Dco_8s9CMNgfD74dTxbxgnkA&oe=6AC191E5",
+    "https://scontent-iad3-2.cdninstagram.com/v/t39.30808-6/796640506_1368903002083561_758889641247104623_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=DQbgBoe2a9QQ7kNvwEAAi7x&_nc_oc=Adocj12bknn5QP5UozDW4mHViC_REeu435wrshAu_PtfukrD9Vjwq0V9ib4aAErRRWc&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=AL-3X8kEAAAA&_nc_gid=-vYqo1mIpoQtyk7J4k2Fqw&oh=00_AQOeGaup8k89gfqikWlmnl3AV2xFrWw-neF6467nYAXiLA&oe=6AC1A5C1"
    ],
    "first_seen": "2026-09-29 08:34",
    "image_text": "2026 JEONG EU 90\nVa\nIN KUALA LUMPUR\nZan\nDATE: 2026.10.11 SUN 8PM\n04051 MOTIV] ‘te SEE 5204\nuan ven oe Trip.com Group:\nVENUE: ZEPP KUALA LUMPUR",
