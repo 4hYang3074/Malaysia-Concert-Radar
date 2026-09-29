@@ -1835,10 +1835,11 @@ def extra_seatmaps(h, events, leads, cfg, state, limit=10):
     存在 docs/maps-extra/（跟平台官方座位图分开管理），每场只搜一次，结果存 state。"""
     import tempfile
     folder = ROOT / "docs" / "maps-extra"
-    done = state.setdefault("seatmap_extra", {})
+    state.pop("seatmap_extra", None)  # 旧规则（只看场馆）的结果作废，用新规则重搜
+    done = state.setdefault("seatmap_extra_v2", {})
     need = [e for e in events if not e.get("hidden") and not e.get("seat_maps") and e.get("artist_name")]
 
-    def keep(e, blob, source, text=None):
+    def keep(e, blob, source, text=None, title=""):
         digest = hashlib.sha1(blob).hexdigest()
         if any(v and v.get("hash") == digest and k != e["id"] for k, v in done.items()):
             return False  # 同一张图已经给了别场演出
@@ -1846,7 +1847,7 @@ def extra_seatmaps(h, events, leads, cfg, state, limit=10):
         ext = ".png" if blob[:8] == b"\x89PNG\r\n\x1a\n" else ".jpg"
         rel = f"maps-extra/{re.sub(r'[^A-Za-z0-9_.-]', '_', e['id'])}{ext}"
         (ROOT / "docs" / rel).write_bytes(blob)
-        done[e["id"]] = {"rel": rel, "source": source, "hash": digest, "text": (text or "")[:1500],
+        done[e["id"]] = {"rel": rel, "source": source, "hash": digest, "text": (text or "")[:1500], "title": title or "",
                          "tried": datetime.now(MYT).strftime("%Y-%m-%d")}
         return True
 
@@ -1861,7 +1862,7 @@ def extra_seatmaps(h, events, leads, cfg, state, limit=10):
             text = ocr_text(path)
             if text is None:
                 continue  # 没装 OCR（本机测试），不动
-        if not path.exists() or not seatmap_for_event(by_id[k], text):
+        if not path.exists() or not seatmap_for_event(by_id[k], text, v.get("title") or ""):
             if path.exists():
                 path.unlink()
             done[k] = {"rel": None, "tried": datetime.now(MYT).strftime("%Y-%m-%d")}
@@ -1912,10 +1913,10 @@ def extra_seatmaps(h, events, leads, cfg, state, limit=10):
     serp, brave = os.environ.get("SERPAPI_KEY"), os.environ.get("BRAVE_API_KEY")
     searched = 0
     today = datetime.now(MYT).strftime("%Y-%m-%d")
-    retry = (datetime.now(MYT) - timedelta(days=3)).strftime("%Y-%m-%d")
+    retry = (datetime.now(MYT) - timedelta(days=7)).strftime("%Y-%m-%d")
     for e in need:
         prev = done.get(e["id"]) or {}
-        # 只搜马来西亚、新加坡；已经有座位图的不搜；没找到的 3 天后再试（座位图常在开票前后才公布）
+        # 只搜马来西亚、新加坡；已经有座位图的不搜；没找到的 7 天后再试（座位图常在开票前后才公布）
         if prev.get("rel") or (prev.get("tried") or "") > retry or (e.get("country") or "MY") not in ("MY", "SG")                 or not (serp or brave) or not e.get("venue") or searched >= limit:
             continue
         if not _search_budget(cfg, state):
@@ -1929,16 +1930,16 @@ def extra_seatmaps(h, events, leads, cfg, state, limit=10):
             if serp:
                 r = h.json("https://serpapi.com/search.json?" + urllib.parse.urlencode(
                     {"engine": "google_images", "q": q, "gl": (e.get("country") or "MY").lower(), "api_key": serp}), retries=1)
-                cands = [(x.get("original"), x.get("original_width") or 0, x.get("original_height") or 0, x.get("link"))
+                cands = [(x.get("original"), x.get("original_width") or 0, x.get("original_height") or 0, x.get("link"), x.get("title"))
                          for x in r.get("images_results") or []]
             else:
                 r = h.json("https://api.search.brave.com/res/v1/images/search?" + urllib.parse.urlencode({"q": q, "count": 30}),
                            headers={"X-Subscription-Token": brave, "Accept": "application/json"}, retries=1)
                 cands = [((x.get("properties") or {}).get("url"), (x.get("properties") or {}).get("width") or 0,
-                          (x.get("properties") or {}).get("height") or 0, x.get("url")) for x in r.get("results") or []]
+                          (x.get("properties") or {}).get("height") or 0, x.get("url"), x.get("title")) for x in r.get("results") or []]
         except Exception as ex:
             print(f"  seat map search {e['artist_name']}: {ex}", flush=True)
-        for url, w, hgt, page in cands[:12]:
+        for url, w, hgt, page, title in cands[:12]:
             if not url or (w and hgt and max(w, hgt) < 1000):
                 continue  # 只要高清图
             try:
@@ -1952,8 +1953,8 @@ def extra_seatmaps(h, events, leads, cfg, state, limit=10):
                 path = Path(tmp) / "img"
                 path.write_bytes(blob)
                 size, text = img_size(path), ocr_text(path)
-            if size and max(size) >= 1000 and seatmap_for_event(e, text):
-                if keep(e, blob, f"Google 图片（{urllib.parse.urlparse(page or url).netloc}）", text):
+            if size and max(size) >= 1000 and seatmap_for_event(e, text, title):
+                if keep(e, blob, f"Google 图片（{urllib.parse.urlparse(page or url).netloc}）", text, title):
                     break
         time.sleep(SLEEP)
 
@@ -1970,18 +1971,31 @@ def extra_seatmaps(h, events, leads, cfg, state, limit=10):
             (ROOT / "docs" / rel).unlink()
 
 
-def seatmap_for_event(e, text):
+def identity_words(e):
+    """这场演出的“身份字”：艺人名（整个、中文部分、英文部分），以及演出名称里特别的字（巡演名，例如 Odyssey、4WARD）。"""
+    a = e.get("artist_name") or ""
+    words = [a] + re.findall(r"[㐀-鿿]{2,}", a) + re.findall(r"[A-Za-z][A-Za-z0-9'&.-]*(?:\s+[A-Za-z0-9'&.-]+)*", a)
+    name = GENERIC_NAME.sub(" ", e.get("name") or "")
+    words += [w for w in re.findall(r"[A-Za-z0-9]{5,}", name) if not w.isdigit()]
+    words += re.findall(r"[㐀-鿿]{2,}", name)
+    out = []
+    for w in words:
+        n = norm(w)
+        if (len(n) >= 3 or re.fullmatch(r"[㐀-鿿]{2,}", n)) and not generic_name(w) and n not in out \
+                and n not in {norm(x) for x in re.findall(r"\w+", e.get("venue") or "")}:
+            out.append(n)
+    return out
+
+
+def seatmap_for_event(e, text, title=""):
     """图片是不是“这场演出”的座位图（同一个场馆有很多演出，只看场馆会抓错）：
     1. 像座位图（舞台 + 票价 / 区号）
-    2. 图上要有艺人名（中英混合艺名的中文或英文部分也算）
+    2. 身份：图上的字、或图片所在网页的标题，要提到艺人名或这场的巡演名（场馆不算；花体字 OCR 常读不出艺人名，所以也看网页标题）
     3. 图上写的年份要是这场演出的年份（例如 2024 年的旧座位图不收）"""
     if not looks_like_seatmap(text):
         return False
-    t, low = norm(text), (text or "").lower()
-    a = e.get("artist_name") or ""
-    parts = [a] + re.findall(r"[㐀-鿿]{2,}", a) + [w for w in re.findall(r"[A-Za-z][A-Za-z0-9'&.-]*(?:\s+[A-Za-z0-9'&.-]+)*", a)]
-    named = any((len(norm(x)) >= 3 or re.fullmatch(r"[㐀-鿿]{2,}", x)) and norm(x) in t for x in parts if x and not generic_name(x))
-    if not named:
+    blob = norm(f"{text or ''} {title or ''}")
+    if not any(w in blob for w in identity_words(e)):
         return False
     years = set(re.findall(r"\b(20\d\d)\b", text or ""))
     show_years = {d[:4] for d in e.get("dates") or []}
