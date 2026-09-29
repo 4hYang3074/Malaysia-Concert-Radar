@@ -46,6 +46,9 @@ jobs:
       - name: Scan
         env:
           IG_PAGE_TOKEN: ${{ secrets.IG_PAGE_TOKEN }}
+          # 一般网页搜索（选一个放进 GitHub Secrets 就会启用；都没放就只用 Google News）
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
         run: python radar/scan.py
 

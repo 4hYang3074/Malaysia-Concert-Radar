@@ -1474,11 +1474,13 @@ def apply_lead_filters(leads, events, cfg):
 PLACES = {
     "MY": ('(Malaysia OR "Kuala Lumpur" OR KL OR 吉隆坡 OR 马来西亚 OR 馬來西亞 OR 大马 OR 大馬 OR "Bukit Jalil" OR Axiata)', "malaysia"),
     "SG": ('(Singapore OR 新加坡 OR 狮城 OR 獅城 OR "National Stadium" OR "Indoor Stadium")', "singapore"),
+    "KR": ('(Korea OR Seoul OR 韩国 OR 韓國 OR 首尔 OR 首爾 OR 서울)', "korea"),
+    "TH": ('(Thailand OR Bangkok OR 泰国 OR 泰國 OR 曼谷)', "thailand"),
 }
-CONCERT_Q = "(concert OR tour OR 演唱会 OR 演唱會 OR 巡演 OR konsert OR fanmeeting OR fancon)"
+CONCERT_Q = "(concert OR tour OR 演唱会 OR 演唱會 OR 巡演 OR 开唱 OR 開唱 OR konsert OR fanmeeting OR fancon)"
 SALE_Q = "(tickets OR presale OR 开票 OR 開票 OR 开售 OR 開售 OR 售票 OR 抢票 OR 搶票 OR 加场 OR 加場 OR \"added show\" OR \"additional show\")"
 ADDED_RE = re.compile(r"(?i)加场|加場|加开|加開|\badd(s|ed|ing)? (a )?(second|third|fourth|another|extra|new|more)\b|additional (show|date|concert|night)|extra (show|date|night)|second (show|night|concert)|(show|date)s? added|tambah (hari|tarikh|pertunjukan|show)|추가 공연|추가 회차")
-LANGS = [("en-MY", "MY", "MY:en"), ("zh-CN", "MY", "MY:zh-Hans"), ("zh-TW", "MY", "MY:zh-Hant")]
+LANGS = [("en-MY", "MY", "MY:en"), ("zh-TW", "TW", "TW:zh-Hant"), ("zh-HK", "HK", "HK:zh-Hant"), ("zh-CN", "CN", "CN:zh-Hans")]  # Google News 没有马来西亚/新加坡中文版（会被转去英文版），华文报导要用台湾、香港、中国版搜
 
 
 def gnews(h, q, langs=LANGS):
@@ -1538,6 +1540,63 @@ def news_check(h, artist, country, cfg, today, sale=False, deep=False):
             "added": bool(added), "added_news": added[0] if added else None}
 
 
+def web_search(h, artist, country, cfg, state):
+    """一般网页搜索（Google News 只收新闻网站，XUAN、Facebook 专页等搜不到）。
+    GitHub Secrets 有 SERPAPI_KEY 就用 SerpApi（真的 Google 结果），有 BRAVE_API_KEY 就用 Brave；都没有就跳过。
+    每月有上限（config 的 web_search.monthly_limit），免得超出免费额度。回传 [{title, snippet, url, time}]。"""
+    serp, brave = os.environ.get("SERPAPI_KEY"), os.environ.get("BRAVE_API_KEY")
+    if not serp and not brave:
+        return []
+    month = datetime.now(MYT).strftime("%Y-%m")
+    use = state.setdefault("web_search_usage", {})
+    for k in [k for k in use if k != month]:
+        del use[k]
+    limit = (cfg.get("web_search") or {}).get("monthly_limit", 200)
+    if use.get(month, 0) >= limit:
+        print(f"  web search: 本月额度 {limit} 次已用完", flush=True)
+        return []
+    use[month] = use.get(month, 0) + 1
+    # 一次搜你关注的四个国家（马来西亚、新加坡、韩国、泰国），每个结果再判断提到哪个国家
+    q = (f'"{artist}" (马来西亚 OR 大马 OR 来马 OR Malaysia OR 新加坡 OR Singapore OR 韩国 OR Korea OR 泰国 OR Thailand) '
+         f'(演唱会 OR 演唱會 OR 开唱 OR 開唱 OR 巡演 OR concert OR tour)')
+    out = []
+    try:
+        if serp:
+            r = h.json("https://serpapi.com/search.json?" + urllib.parse.urlencode(
+                {"engine": "google", "q": q, "gl": country.lower(), "hl": "zh-cn", "num": 20, "api_key": serp}), retries=1)
+            for x in r.get("organic_results") or []:
+                out.append({"title": x.get("title") or "", "snippet": x.get("snippet") or "", "url": x.get("link"), "time": x.get("date")})
+        else:
+            r = h.json("https://api.search.brave.com/res/v1/web/search?" + urllib.parse.urlencode({"q": q, "country": country, "count": 20}),
+                       headers={"X-Subscription-Token": brave, "Accept": "application/json"}, retries=1)
+            for x in (r.get("web") or {}).get("results") or []:
+                out.append({"title": x.get("title") or "", "snippet": text_of(x.get("description") or ""), "url": x.get("url"), "time": x.get("age")})
+    except Exception as ex:
+        print(f"  web search {artist}: {ex}", flush=True)
+    return out
+
+
+def add_web_results(c, results, artist, country, cfg):
+    """网页搜索结果：标题或摘要要同时提到艺人、演唱会、那个国家才算相关，并入查证结果。"""
+    hits, countries = [], []
+    for x in results:
+        blob = f"{x['title']}\n{x['snippet']}"
+        where = [k for k in PLACES if place_hit(blob, cfg, k)]  # 提到你关注的哪几个国家
+        if mentions(artist, blob) and relevant(blob, cfg["keywords"], False) and where:
+            hits.append({"title": x["title"], "url": x["url"], "time": (x.get("time") or "")[:20], "web": True,
+                         "countries": where})
+            countries += where
+    if not hits:
+        return
+    c["web_count"] = len(hits)
+    c["countries"] = list(dict.fromkeys((c.get("countries") or []) + countries))
+    c["count"] = c.get("count", 0) + sum(1 for x in hits if country in x["countries"])
+    hits.sort(key=lambda x: country not in x["countries"])  # 同一个国家的排前面
+    c["top"] = (c.get("top") or []) + hits[:3]
+    blob = "\n".join(f"{x['title']}\n{x['snippet']}" for x in results)
+    c["platforms"] = list(dict.fromkeys((c.get("platforms") or []) + detect_platforms(blob, cfg)))
+
+
 def news_verify(h, leads, events, cfg, state, today, limit=45, watch=()):
     """Google 通道：
     1. 待确定的明星 → 查有没有马来西亚（或新加坡）的相关报导、提到哪个售票平台
@@ -1551,7 +1610,7 @@ def news_verify(h, leads, events, cfg, state, today, limit=45, watch=()):
             todo.append((l["artist"], l["artist"], l.get("country") or "MY", False))
     now_s = today
     for e in sorted(events, key=lambda e: -(e.get("fans") or 0)):
-        if e.get("hidden") or e.get("sold_out") or (e.get("country") or "MY") not in PLACES or not e.get("artist_name"):
+        if e.get("hidden") or e.get("sold_out") or (e.get("country") or "MY") not in ("MY", "SG") or not e.get("artist_name"):
             continue
         if not e["dates"] or e["dates"][-1][:10] < now_s:
             continue
@@ -1570,6 +1629,8 @@ def news_verify(h, leads, events, cfg, state, today, limit=45, watch=()):
                 continue
             n += 1
             c = cache[key] = news_check(h, artist, country, cfg, today, sale, deep=want_deep)
+            if not sale or want_deep:  # 待确定的明星、监控名单的演出：再用一般网页搜索（XUAN、FB 等 Google News 没收录的）
+                add_web_results(c, web_search(h, artist, country, cfg, state), artist, country, cfg)
         out[key] = c
     for k in [k for k in cache if k not in out]:
         del cache[k]

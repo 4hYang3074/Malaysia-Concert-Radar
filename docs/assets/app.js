@@ -402,9 +402,11 @@ function fail(el) {
 function newsCheckHTML(c, place = "马来西亚") {
   if (!c) return "";
   const where = c.country === "SG" ? "新加坡" : place;
-  return `<div class="sum ${c.count ? "ok" : "warn"}" style="margin-top:8px">🔎 Google 新闻查证（${esc(c.checked || "")}）：${c.count ? `${c.count} 篇${where}相关报导` : `没有找到${where}的相关报导`}
+  const FL = {MY: "🇲🇾", SG: "🇸🇬", KR: "🇰🇷", TH: "🇹🇭"};
+  return `<div class="sum ${c.count ? "ok" : "warn"}" style="margin-top:8px">🔎 ${c.web_count != null ? "Google 新闻 + 网页" : "Google 新闻"}查证（${esc(c.checked || "")}）：${c.count ? `${c.count} 篇${where}相关报导` : `没有找到${where}的相关报导`}
+    ${(c.countries || []).length ? `· 提到的国家 ${c.countries.map(k => FL[k] || k).join(" ")}` : ""}
     ${(c.platforms || []).length ? `· 提到 <b>${c.platforms.map(esc).join("、")}</b>` : ""}
     ${(c.sale_times || []).length ? `· 报导里的开票时间 <b>${c.sale_times.map(x => esc(fmt(x.time))).join("、")}</b>` : ""}
     ${c.added ? "· 有提到<b>加场</b>" : ""}
-    ${(c.top || []).map(t => `<div style="font-weight:400;margin-top:4px">· <a href="${esc(safeUrl(t.url))}" target="_blank" rel="noopener">${esc(t.title)}</a> <small>${esc(t.time || "")}</small></div>`).join("")}</div>`;
+    ${(c.top || []).map(t => `<div style="font-weight:400;margin-top:4px">${t.web ? "🌐" : "📰"} ${(t.countries || []).map(k => FL[k] || "").join("")} <a href="${esc(safeUrl(t.url))}" target="_blank" rel="noopener">${esc(t.title)}</a> <small>${esc(t.time || "")}</small></div>`).join("")}</div>`;
 }
