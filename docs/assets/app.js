@@ -4,13 +4,38 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
 const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : "#";
 const localUrl = u => /^(maps|avatars|posts)\/[\w./-]+$/.test(u || "") ? u : "";   // 图片只允许仓库里的本地路径
-const toDate = s => s ? new Date(s.replace(" ", "T") + ":00+08:00") : null;   // 资料里的时间都是马来西亚时间
+// 资料里的时间都是马来西亚时间；有些来源（例如韩国）只有日期 YYYY-MM-DD
+const toDate = s => s ? new Date((s.length === 10 ? s + " 00:00" : s).replace(" ", "T") + ":00+08:00") : null;
 const WD = "日一二三四五六";
 function fmt(s, withTime = true) {
   const d = toDate(s);
   if (!d) return "";
   const m = new Date(d.getTime() + 8 * 3600e3);
-  return `${m.getUTCMonth() + 1}月${m.getUTCDate()}日（周${WD[m.getUTCDay()]}）` + (withTime ? " " + s.slice(11) : "");
+  return `${m.getUTCMonth() + 1}月${m.getUTCDate()}日（周${WD[m.getUTCDay()]}）` + (withTime && s.length > 10 ? " " + s.slice(11) : "");
+}
+// ---------- 国家 ----------
+const COUNTRIES = {MY: "🇲🇾 马来西亚", SG: "🇸🇬 新加坡", KR: "🇰🇷 韩国"};
+const flag = c => (COUNTRIES[c] || "").split(" ")[0];
+// 目前选的国家（网址 ?c=MY 优先，其次记在浏览器里；ALL = 全部）
+function currentCountry() {
+  const q = new URLSearchParams(location.search).get("c");
+  if (q && (q === "ALL" || COUNTRIES[q])) { try { localStorage.setItem("country", q); } catch (e) {} return q; }
+  try { return localStorage.getItem("country") || "ALL"; } catch (e) { return "ALL"; }
+}
+function byCountry(d, c = currentCountry()) {
+  if (c === "ALL") return d;
+  const events = d.events.filter(e => (e.country || "MY") === c);
+  const ids = new Set(events.map(e => e.id));
+  // 线索只收录提到马来西亚/新加坡/韩国的；没有标国家的当作马来西亚
+  const leads = d.leads.filter(l => (l.country || "MY") === c);
+  return {...d, events, leads, byId: Object.fromEntries(events.map(e => [e.id, e])),
+    pending: d.pending.filter(l => (l.country || "MY") === c), leadsByEvent: d.leadsByEvent, _ids: ids};
+}
+function countryBar() {
+  const c = currentCountry(), p = new URLSearchParams(location.search);
+  const link = k => { p.set("c", k); return location.pathname.split("/").pop() + "?" + p; };
+  return `<div class="cbar">${[["ALL", "🌏 全部"], ...Object.entries(COUNTRIES)].map(([k, v]) =>
+    `<a class="fbtn ${k === c ? "on" : ""}" href="${esc(link(k))}">${v}</a>`).join("")}</div>`;
 }
 function countdown(target, now = new Date()) {
   const ms = target - now;
@@ -72,7 +97,7 @@ function saleCalendar(d, now = new Date(), days = 60) {
     // 只放开票时间（不列排队开放、结束时间）
     const t = s.start && toDate(s.start);
     if (!t || t < now - LIVE_MS || t > until) continue;
-    items.push({t, s: s.start, confirmed: true, href: `event.html?id=${encodeURIComponent(e.id)}`,
+    items.push({t, s: s.start, confirmed: true, country: e.country || "MY", href: `event.html?id=${encodeURIComponent(e.id)}`,
       name: e.artist_name, avatar: e.avatar, kind: e.avatar_kind,
       label: (s.name || "开票") + (s.code_required ? " · 需要预售码" : ""), src: e.source});
   }
@@ -104,7 +129,7 @@ function calendarHTML(items, now = new Date()) {
         <div class="time">${i.s.length > 10 ? esc(i.s.slice(11)) : "时间<br>未定"}</div>
         ${avatar(i.avatar, i.name, 48, i.kind)}
         <div class="body">
-          <div class="name" style="font-size:15.5px">${esc(i.name)}</div>
+          <div class="name" style="font-size:15.5px">${i.country ? flag(i.country) + " " : ""}${esc(i.name)}</div>
           <div class="ev">${esc(i.label)}</div>
           <span class="pill ${i.confirmed ? "ok" : "warn"}">${i.confirmed ? "✅ " + esc(i.src) + " 已公布" : "🕒 " + esc(i.src) + " 公告 · 待平台确认"}</span>
           ${i.t > now ? `<span class="pill sub">${esc(countdown(i.t, now))}</span>` : `<span class="pill bad">🔥 正在抢票</span>`}
@@ -126,7 +151,7 @@ function highlights(d, now = new Date(), limit = 8) {
   for (const e of d.events) {
     if (e.sold_out || !HOT_REGIONS.includes(e.region)) continue;
     const s = nextSale(e, now), fans = e.fans || 0, cat = category(e, now);
-    const base = {name: e.artist_name, photo: e.avatar, kind: e.avatar_kind, fans, region: e.region, href: `event.html?id=${encodeURIComponent(e.id)}`};
+    const base = {ev: e, name: e.artist_name, photo: e.avatar, kind: e.avatar_kind, fans, region: e.region, country: e.country || "MY", href: `event.html?id=${encodeURIComponent(e.id)}`};
     if (s && toDate(s.start) > now) {
       items.push({...base, tier: 0, tag: "⏰ 即将开卖", cls: "warn", line: `${fmt(s.start)} 开卖 · ${countdown(toDate(s.start), now)}`});
     } else if (s) {
@@ -140,7 +165,7 @@ function highlights(d, now = new Date(), limit = 8) {
   for (const g of pendingGroups(d).groups) {
     if (!g.leads.length || !HOT_REGIONS.includes(g.leads[0].artist_region)) continue;
     const fans = Math.max(0, ...g.leads.map(l => l.artist_fans || 0));
-    items.push({name: g.name, photo: g.photo, fans, region: g.leads[0].artist_region, href: `pending.html#a-${encodeURIComponent(g.name)}`, tier: 0,
+    items.push({group: g, name: g.name, photo: g.photo, fans, region: g.leads[0].artist_region, href: `pending.html#a-${encodeURIComponent(g.name)}`, tier: 0,
       tag: "🗣️ 传出要来", cls: "sub", line: `${g.leads.length} 条消息 · 最新 ${fmt(g.latest, false) || g.latest}`});
   }
   // 同一位歌星只留最优先的一条；排序：先还没开票的，再按人气
@@ -157,12 +182,52 @@ function highlightsHTML(list) {
   return `<div class="hl">${list.map(i => `
     <a class="hlcard" href="${i.href}">
       ${avatar(i.photo, i.name, 76, i.kind)}
-      <div class="n">${esc(i.name)}</div>
+      <div class="n">${i.country ? flag(i.country) + " " : ""}${esc(i.name)}</div>
       <div class="f">${esc(i.region || "")}${i.region && i.fans ? " · " : ""}${esc(fansText(i.fans))}</div>
       <span class="pill ${i.cls}">${esc(i.tag)}</span>
       <div class="l">${esc(i.line)}</div>
     </a>`).join("")}</div>`;
 }
+
+// ---------- GoLive 风格：直式海报卡片、横向轮播 ----------
+function dateRange(dates) {
+  if (!dates || !dates.length) return "日期未公布";
+  const a = fmt(dates[0], false), b = fmt(dates[dates.length - 1], false);
+  return dates.length > 1 && a !== b ? `${a.replace(/（.*）/, "")} – ${b.replace(/（.*）/, "")}` : a;
+}
+function posterCard(e, now = new Date()) {
+  const img = localUrl(e.poster_img) || localUrl(e.avatar);
+  const s = nextSale(e, now), cat = category(e, now);
+  let cd = "", hot = false;
+  if (s && toDate(s.start) > now) cd = `⏰ ${fmt(s.start)} 开票<br>${countdown(toDate(s.start), now)}`;
+  else if (s) { cd = `🔥 正在抢票`; hot = true; }
+  else if (cat === "tba") cd = "⏳ 开票时间未公布";
+  else if (cat === "soldout") cd = "🔴 已售罄";
+  return `<a class="pcard" href="event.html?id=${encodeURIComponent(e.id)}">
+    <div class="ph">
+      <div class="ini">${esc((e.artist_name || "?").slice(0, 1))}</div>
+      ${img ? `<img src="${esc(img)}" alt="${esc(e.artist_name)}" loading="lazy" style="position:relative" onerror="this.remove()">` : ""}
+      <div class="corner"><span>${flag(e.country || "MY")} ${esc(e.region || "")}</span>${badges(e, now).includes("新上架") ? "<span>🆕 新</span>" : ""}</div>
+      ${cd ? `<div class="cd ${hot ? "hot" : ""}">${cd}</div>` : ""}
+    </div>
+    <div class="t">${esc(e.artist_name)}</div>
+    <div class="v">${esc(e.venue || "场馆未公布")}</div>
+    <div class="dd">${esc(dateRange(e.dates))}</div>
+    <span class="tag">${esc(platformsOf(e).map(p => p.source).join(" · "))}</span>
+  </a>`;
+}
+function railHTML(title, cards, moreHref, moreLabel = "查看全部") {
+  if (!cards.length) return "";
+  return `<div class="sec"><div><h2>${title}</h2>${moreHref ? `<a class="more" href="${moreHref}">${moreLabel} ›</a>` : ""}</div>
+    <div class="arrows"><button data-r="-1" aria-label="上一组">‹</button><button data-r="1" aria-label="下一组">›</button></div></div>
+    <div class="rail">${cards.join("")}</div>`;
+}
+document.addEventListener("click", ev => {
+  const b = ev.target.closest(".sec .arrows button");
+  if (!b) return;
+  const rail = b.closest(".sec").nextElementSibling;
+  rail?.scrollBy({left: +b.dataset.r * rail.clientWidth * .9, behavior: "smooth"});
+});
 
 // ---------- 图片放大查看（点座位图、贴文图片 → 全屏看；再点一下放大到原尺寸，可以拖动） ----------
 document.addEventListener("click", ev => {
@@ -212,14 +277,15 @@ function badges(e, now = new Date()) {
 }
 
 // ---------- 资料 ----------
-async function loadData() {
+// filter=true：按目前选的国家筛选（列表页用）；演出/消息详细页用 false，才找得到任何国家的项目
+async function loadData(filter = true) {
   const d = await fetch("data.json?" + Math.floor(Date.now() / 60000)).then(r => r.json());
   d.byId = Object.fromEntries(d.events.map(e => [e.id, e]));
   d.leadsByEvent = {};
   for (const l of d.leads) for (const m of l.matches || []) (d.leadsByEvent[m] ||= []).push(l);
   // 待确定 = 售票平台还没上架、而且贴文只说要来、还没公布售票细节的（已公布开售时间的在抢票日历，过期或已开卖的不显示）
   d.pending = d.leads.filter(l => !(l.matches || []).some(m => d.byId[m]) && (l.status || "rumor") === "rumor");
-  return d;
+  return filter ? byCountry(d) : d;
 }
 
 // ---------- 待确定：按明星分组 ----------
@@ -263,10 +329,13 @@ function nav(d, active) {
   const tab = (href, key, label, n) => `<a class="tab ${active === key ? "on" : ""}" href="${href}">${label}${n != null ? `<span class="n">${n}</span>` : ""}</a>`;
   document.body.insertAdjacentHTML("afterbegin", `<nav class="nav"><div class="in">
     <a class="logo" href="index.html">🎤 演唱会雷达</a>
-    ${tab("index.html", "home", "📅 抢票日历")}
+    ${tab("index.html", "home", "🏠 首页")}
     ${tab("confirmed.html", "confirmed", "已确定", d ? d.events.length : null)}
     ${tab("pending.html", "pending", "待确定", d ? d.pending.length : null)}
+    ${tab("platforms.html", "platforms", "🎫 售票平台")}
   </div></nav>`);
+  // 列表页在导航栏下方显示国家切换
+  if (["home", "confirmed", "pending"].includes(active)) document.querySelector(".wrap")?.insertAdjacentHTML("afterbegin", countryBar());
 }
 function footer(d) {
   const h = Object.entries(d.health).map(([k, v]) =>

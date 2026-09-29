@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>抢票日历 · 马来西亚演唱会雷达</title>
-<meta name="theme-color" content="#15171c">
-<link rel="stylesheet" href="assets/app.css?v=20260929c">
+<title>演唱会雷达</title>
+<meta name="theme-color" content="#121212">
+<link rel="stylesheet" href="assets/app.css?v=20260929e">
 <script>
   // 旧版网址（#/e/xxx）转到新的演出页
   const old = location.hash.match(/^#\/e\/(.+)$/);
@@ -14,45 +14,48 @@
 </head>
 <body>
 <div class="wrap view">
-  <h1>🌟 当红歌星动态</h1>
-  <p class="lede">还没开票的排在最前面（快开卖、开票时间未公布、传出要来），其次是正在抢票、刚上架；同类再按人气（Deezer 粉丝数）排序。只列华语、K-pop、欧美歌星。</p>
-  <div id="hl"></div>
-
-  <h2 style="font-size:22px;margin-top:30px">📅 抢票日历</h2>
-  <p class="lede">未来 60 天所有已公布的开票时间（包括预售，马来西亚时间）。<br>
+  <form action="confirmed.html" style="margin-top:6px">
+    <input class="search" name="q" type="search" placeholder="🔍 搜索明星或演出…">
+    <input type="hidden" name="cat" value="all">
+  </form>
+  <div id="rails"></div>
+  <div class="sec"><div><h2>📅 抢票日历</h2><span class="meta">未来 60 天所有已公布的开票时间（马来西亚时间）</span></div></div>
+  <div class="meta" style="margin:-4px 0 10px">
     <span class="pill ok" style="margin:0">✅ 已公布</span> 售票平台已经上架
-    <span class="pill warn" style="margin:0">🕒 待平台确认</span> 官方 IG 先公布，售票平台还没上架</p>
+    <span class="pill warn" style="margin:0">🕒 待平台确认</span> 官方 IG 先公布，售票平台还没上架</div>
   <div id="cal"></div>
-
-  <h2>浏览全部</h2>
-  <div class="doors" id="doors" style="margin-top:0"></div>
   <div id="foot"></div>
 </div>
-<script src="assets/app.js?v=20260929c"></script>
+<script src="assets/app.js?v=20260929e"></script>
 <script>
 loadData().then(d => {
   nav(d, "home");
-  const now = new Date();
-  $("#hl").innerHTML = highlightsHTML(highlights(d, now));
+  const now = new Date(), c = currentCountry();
+  const q = c === "ALL" ? "" : "&c=" + c;
+  // 1. 即将开票：开票时间还没到（或刚开卖一天内），按开票时间排序
+  const soon = d.events.filter(e => category(e, now) === "soon")
+    .sort((a, b) => nextSale(a, now).start.localeCompare(nextSale(b, now).start));
+  // 2. 当红歌星（华语/K-pop/欧美，还没开票的优先）
+  const hot = highlights(d, now, 12);
+  // 3. 最新上架（7 天内）
+  const fresh = d.events.filter(e => e.first_seen && now - toDate(e.first_seen) < 7 * 864e5)
+    .sort((a, b) => b.first_seen.localeCompare(a.first_seen) || (b.fans || 0) - (a.fans || 0)).slice(0, 20);
+  // 4. 传出要来（待确定，已认出明星的）
+  const rumor = pendingGroups(d).groups.filter(g => g.leads.length).slice(0, 15);
+  const groupCard = g => `<a class="pcard" href="pending.html#a-${encodeURIComponent(g.name)}">
+    <div class="ph"><div class="ini">${esc(g.name.slice(0, 1))}</div>
+      ${localUrl(g.photo) ? `<img src="${esc(localUrl(g.photo))}" alt="" loading="lazy" style="position:relative" onerror="this.remove()">` : ""}
+      <div class="cd">🗣️ ${g.leads.length} 条消息 · ${esc(fmt(g.latest, false))}</div></div>
+    <div class="t">${esc(g.name)}</div><div class="v">传出要来 · 还没开票</div><span class="tag">待确定</span></a>`;
+  $("#rails").innerHTML =
+    railHTML("🔥 即将开票", soon.map(e => posterCard(e, now)), "confirmed.html?cat=soon" + q) +
+    railHTML("🌟 当红歌星", hot.map(i => i.ev ? posterCard(i.ev, now) : groupCard(i.group))) +
+    railHTML("🆕 最新上架", fresh.map(e => posterCard(e, now)), "confirmed.html?cat=all" + q) +
+    railHTML("🗣️ 传出要来", rumor.map(groupCard), "pending.html") ||
+    `<div class="card empty" style="margin-top:20px">这个国家目前还没有资料。</div>`;
   $("#cal").innerHTML = calendarHTML(saleCalendar(d, now), now);
-  const withPhoto = d.events.filter(e => e.avatar_kind === "artist").slice(0, 7);
-  $("#doors").innerHTML = `
-    <a class="door ok" href="confirmed.html">
-      <div class="t">✅ 已确定的演唱会</div>
-      <div class="big">${d.events.length}</div>
-      <div class="d">已经在官方售票平台上架，按售票时间分类，可以看票价和座位图。</div>
-      <div class="stack">${withPhoto.map(e => avatar(e.avatar, e.artist_name, 40, e.avatar_kind)).join("")}</div>
-      <div class="go">查看 →</div>
-    </a>
-    <a class="door wait" href="pending.html">
-      <div class="t">🕒 待确定的消息</div>
-      <div class="big">${d.pending.length}</div>
-      <div class="d">官方 IG、新闻或你提交的线索提到，但售票平台还没上架。按明星整理。</div>
-      <div class="stack">${pendingGroups(d).groups.filter(g => g.photo).slice(0, 8).map(g => avatar(g.photo, g.name, 40)).join("")}</div>
-      <div class="go">查看 →</div>
-    </a>`;
   $("#foot").innerHTML = footer(d);
-}).catch(() => { nav(null, "home"); fail($("#cal")); });
+}).catch(() => { nav(null, "home"); fail($("#rails")); });
 </script>
 </body>
 </html>

@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>演出详情 · 马来西亚演唱会雷达</title>
 <meta name="theme-color" content="#15171c">
-<link rel="stylesheet" href="assets/app.css?v=20260929c">
+<link rel="stylesheet" href="assets/app.css?v=20260929e">
 </head>
 <body>
 <div class="wrap view" id="app"></div>
-<script src="assets/app.js?v=20260929c"></script>
+<script src="assets/app.js?v=20260929e"></script>
 <script>
-loadData().then(d => {
+loadData(false).then(d => {
   nav(d, "confirmed");
   const e = d.byId[qs("id")];
   if (!e) { location.replace("confirmed.html"); return; }   // 找不到（已结束或下架）就回列表
@@ -31,7 +31,7 @@ loadData().then(d => {
       ${avatar(e.avatar, e.artist_name, 120, e.avatar_kind)}
       <h1>${esc(e.artist_name)}</h1>
       <div class="sub">${esc(e.name)}</div>
-      <div style="margin-top:8px">${badges(e, now)}${platformBadges(e)}</div>
+      <div style="margin-top:8px"><span class="badge">${COUNTRIES[e.country || "MY"] || ""}</span>${badges(e, now)}${platformBadges(e)}</div>
       <div class="facts">
         <div class="fact"><div class="k">📅 演出日期</div><div class="v">${e.dates.length ? e.dates.map(s => esc(fmt(s))).join("<br>") : "未公布"}</div></div>
         <div class="fact"><div class="k">📍 场馆</div><div class="v">${esc(e.venue || "未公布")}${e.city ? `<br><small>${esc(e.city)}</small>` : ""}</div></div>

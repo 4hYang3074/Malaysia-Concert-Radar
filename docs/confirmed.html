@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>已确定的演唱会 · 马来西亚演唱会雷达</title>
 <meta name="theme-color" content="#15171c">
-<link rel="stylesheet" href="assets/app.css?v=20260929c">
+<link rel="stylesheet" href="assets/app.css?v=20260929e">
 </head>
 <body>
 <div class="wrap view">
@@ -17,7 +17,7 @@
   <div class="list" id="list"></div>
   <div id="foot"></div>
 </div>
-<script src="assets/app.js?v=20260929c"></script>
+<script src="assets/app.js?v=20260929e"></script>
 <script>
 loadData().then(d => {
   nav(d, "confirmed");
@@ -44,19 +44,14 @@ loadData().then(d => {
   $("#desc").textContent = tabs.find(c => c.key === cat).desc;
   document.querySelector(".seg.on")?.scrollIntoView({inline: "center", block: "nearest"});
 
-  const row = e => {
-    const st = status(e, now);
-    const when = e.dates.length ? e.dates.map(s => fmt(s, false)).join("、") : "日期未公布";
-    return `<a class="row" href="event.html?id=${encodeURIComponent(e.id)}">
-      ${avatar(e.avatar, e.artist_name, 64, e.avatar_kind)}
-      <div class="body">
-        <div class="name">${badges(e, now)}${esc(e.artist_name)} ${e.region ? `<span class="badge">${esc(e.region)}</span>` : ""}</div>
-        <div class="ev">${esc(e.name)}</div>
-        <div class="info">📅 ${esc(when)} · 📍 ${esc(e.city || e.venue || "场馆未公布")}</div>
-        <span class="pill ${st.cls}">${esc(st.short || st.text)}</span>
-      </div>
-      <span class="chev">›</span>
-    </a>`;
+  // GoLive 风格海报网格；选“全部国家”时，每一段再按国家分组（🇲🇾 → 🇸🇬 → 🇰🇷）
+  const grid = list => `<div class="pgrid">${list.map(e => posterCard(e, now)).join("")}</div>`;
+  const byCountryHTML = list => {
+    if (currentCountry() !== "ALL") return grid(list);
+    return Object.entries(COUNTRIES).map(([k, label]) => {
+      const part = list.filter(e => (e.country || "MY") === k);
+      return part.length ? `<h3 style="font-size:16px;color:var(--ink);margin:18px 0 10px">${label} <span class="meta">${part.length} 场</span></h3>${grid(part)}` : "";
+    }).join("");
   };
 
   function render() {
@@ -69,19 +64,20 @@ loadData().then(d => {
       $("#list").innerHTML = `
         <details class="group" open style="margin-top:4px">
           <summary><h2 style="display:inline;margin:0">🔜 还没开票 <span class="meta">${notYet.length} 场</span></h2></summary>
-          <div class="list" style="margin-top:10px">${notYet.length ? notYet.map(row).join("") : `<div class="card empty">${q ? "没有符合搜索的演出。" : "目前没有还没开票的演出。"}</div>`}</div>
+          <div style="margin-top:10px">${notYet.length ? byCountryHTML(notYet) : `<div class="card empty">${q ? "没有符合搜索的演出。" : "目前没有还没开票的演出。"}</div>`}</div>
         </details>
         <details class="group" ${q && !notYet.length ? "open" : ""}>
           <summary><h2 style="display:inline;margin:0">✔️ 已经开票 <span class="meta">${done.length} 场</span></h2></summary>
-          <div class="list" style="margin-top:10px">${done.map(row).join("") || `<div class="card empty">没有符合的演出。</div>`}</div>
+          <div style="margin-top:10px">${done.length ? byCountryHTML(done) : `<div class="card empty">没有符合的演出。</div>`}</div>
         </details>`;
       return;
     }
     const list = sortFor(cat, byCat[cat].filter(match), now);
-    $("#list").innerHTML = list.length ? list.map(row).join("") : `<div class="card empty">${q ? "没有符合搜索的演出。"
+    $("#list").innerHTML = list.length ? byCountryHTML(list) : `<div class="card empty">${q ? "没有符合搜索的演出。"
       : cat === "soon" ? `售票平台上暂时没有“已公布开售时间、还没开卖”的演出。<br>官方 IG 先公布的开售时间，请看 <a href="index.html">📅 抢票日历</a>。`
       : "这一类目前没有演出。"}</div>`;
   }
+  $("#q").value = qs("q") || "";  // 首页搜索框带过来的关键字
   $("#q").addEventListener("input", render);
   render();
   $("#foot").innerHTML = footer(d);

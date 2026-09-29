@@ -259,12 +259,20 @@ def ticket2u(h):
 
 
 def fantopia(h):
-    # 要带 area: MY 才会回传马来西亚场次；Accept-Language 也是必须的（Http 默认有带）
+    out = []
+    for area, cur in (("MY", "MYR"), ("SG", "SGD")):
+        out += fantopia_area(h, area, cur)
+        time.sleep(SLEEP)
+    return out
+
+
+def fantopia_area(h, area, currency):
+    # 要带 area 表头才会回传该国场次；Accept-Language 也是必须的（Http 默认有带）
     r = h.json("https://www.fantopia.io/fanapiWeb/eventsInfo/getEventsInfoPageV2?current=1&size=1000",
-               headers={"area": "MY", "Referer": "https://www.fantopia.io/"})
+               headers={"area": area, "Referer": "https://www.fantopia.io/"})
     out = []
     for x in (r.get("data") or {}).get("records") or []:
-        if x.get("symbol") != "MYR" or x.get("deleteFlag"):
+        if x.get("symbol") != currency or x.get("deleteFlag"):
             continue
         start, end = local(x.get("startTime")), local(x.get("endTime"))
         dates = [start] if start else []
@@ -275,6 +283,7 @@ def fantopia(h):
         url = f"https://www.fantopia.io/events-tickets?eventsKey={x.get('eventsKey')}"
         out.append({
             "id": f"fantopia-{x.get('eventsKey') or x.get('id')}",
+            "country": area,
             "source": "Fantopia",
             "name": re.sub(r"^\[[^\]]*\]\s*", "", x.get("title") or "").strip(),
             "artist": None,
@@ -285,11 +294,50 @@ def fantopia(h):
             "sales": [{"name": "开售", "start": sale_start, "end": None, "queue": None, "available": True,
                        "code_required": False, "url": url}] if sale_start else [],
             "tiers": [],
-            "price_from": f"RM {x['minPrice'] / 100:,.2f}" if x.get("minPrice") else None,
+            "price_from": f"{'RM' if currency == 'MYR' else 'S$'} {x['minPrice'] / 100:,.2f}" if x.get("minPrice") else None,
             "limit": x.get("limitCount") or None,
             "sold_out": x.get("sellStatus") == 2,
             "url": url,
             "poster": x.get("ossUrl") or x.get("ossUrlMini"),
+        })
+    return out
+
+
+def nolworld(h):
+    """韩国 NOL World（Interpark 国际版）演唱会列表。资料写在网页的 Next.js 串流里；开票时间是韩国时间，换成马来西亚时间（-1 小时）。"""
+    b = h.request("https://world.nol.com/en/ticket/genre/CONCERT/products")
+    text = "".join(json.loads('"' + c + '"') for c in re.findall(r'self\.__next_f\.push\(\[1,"(.*?)"\]\)', b, re.S))
+    i = text.find('"pages":[')
+    if i < 0:
+        raise ValueError("NOL World 网页结构变了，找不到场次资料")
+    pages, _ = json.JSONDecoder().raw_decode(text[i + 8:])
+    out = []
+    for x in (it for p in pages for it in (p.get("data") or {}).get("content") or []):
+        name = unicodedata.normalize("NFKC", x.get("goodsName") or "")
+        if "play&stay" in name.lower().replace(" ", "") or not str(x.get("regionCode") or "").startswith("42"):
+            continue  # 酒店套票、韩国以外的场次不收
+        opens = None
+        if x.get("bookingOpenTime"):
+            opens = (datetime.strptime(x["bookingOpenTime"][:16], "%Y-%m-%d %H:%M") - timedelta(hours=1)).strftime("%Y-%m-%d %H:%M")
+        start, end = x.get("playStartDate"), x.get("playEndDate")
+        url = f"https://world.nol.com/en/ticket/places/{x.get('placeCode')}/products/{x.get('goodsCode')}"
+        out.append({
+            "id": f"nol-{x.get('goodsCode')}",
+            "country": "KR",
+            "source": "NOL World",
+            "name": name.strip(),
+            "artist": x.get("mainArtist") or None,
+            "type": x.get("subGenreName") or None,
+            "venue": x.get("placeName"),
+            "city": x.get("regionName"),
+            "dates": [d for d in dict.fromkeys([start, end]) if d],  # 只有日期（YYYY-MM-DD）
+            "sales": [{"name": x.get("salesTypeName") if x.get("salesTypeName") not in (None, "일반") else "开票",
+                       "start": opens, "end": None, "queue": None, "available": True, "code_required": False, "url": url}] if opens else [],
+            "tiers": [],
+            "limit": None,
+            "sold_out": False,
+            "url": url,
+            "poster": x.get("posterImageUrl") or x.get("goodsLargeImageUrl"),
         })
     return out
 
@@ -627,6 +675,47 @@ def ocr_prices(path):
     return sorted(tiers, key=lambda t: -price_value(t["price"]))
 
 
+def ocr_text(path):
+    """读出贴文图片上的文字（中英韩）。很多公告只把艺人名、加场、开票时间印在图上。没装 Tesseract 就回传 None。"""
+    import shutil
+    import subprocess
+    if not shutil.which("tesseract"):
+        return None
+    langs = subprocess.run(["tesseract", "--list-langs"], capture_output=True, text=True).stdout.split()
+    lang = "+".join(x for x in ("eng", "chi_sim", "chi_tra", "kor") if x in langs) or "eng"
+    r = subprocess.run(["tesseract", str(path), "-", "-l", lang, "--psm", "11"], capture_output=True, text=True, encoding="utf-8")
+    if r.returncode != 0:
+        return ""
+    lines = [re.sub(r"\s+", " ", x).strip() for x in r.stdout.split("\n")]
+    return "\n".join(x for x in lines if len(re.sub(r"[\W_]", "", x)) >= 2)[:800]  # 去掉只有零星乱码的行
+
+
+def ocr_leads(h, leads, state):
+    """IG 贴文图片：下载到 docs/posts/，用 OCR 读出图上文字存进 image_text（每张图只读一次）。"""
+    cache = state.setdefault("ocr_posts", {})
+    for l in leads:
+        if l["kind"] != "IG":
+            continue
+        rel = f"posts/{l['id']}.jpg"
+        src = l.get("image_src")
+        if src and not (ROOT / "docs" / rel).exists():
+            download_image(h, src, rel, max_bytes=2_000_000)
+        if l["id"] not in cache and (ROOT / "docs" / rel).exists():
+            text = ocr_text(ROOT / "docs" / rel)
+            if text is not None:
+                cache[l["id"]] = text
+        if cache.get(l["id"]):
+            l["image_text"] = cache[l["id"]]
+    live = {l["id"] for l in leads}
+    for k in [k for k in cache if k not in live]:
+        del cache[k]
+
+
+def lead_blob(l):
+    """线索的全部文字：标题、内文、图片上读出来的字。"""
+    return f"{l.get('title', '')}\n{l.get('text') or ''}\n{l.get('image_text') or ''}"
+
+
 def add_ocr_tiers(events, state):
     """座位图上有、但文字票价没列出的价格，补进 ocr_tiers（页面会标注“从座位图读取”）。同一张图只读一次。"""
     cache = state.setdefault("ocr", {})
@@ -822,16 +911,25 @@ def add_avatars(h, events, leads, state, today):
         e["artist_name"] = c.get("name") or e.get("artist") or (guesses[0] if guesses else e["name"])
         e["fans"] = c.get("fans") or 0
         e["region"] = region_of(h, e["artist_name"], e["name"], state.setdefault("regions_v2", {}), MB_BUDGET)
+        if e.get("country") == "KR" and not (e["region"] == "欧美" and e["fans"] >= 100000):
+            e["region"] = "K-pop"  # 韩国场次：除非是知名欧美歌手，否则当作韩国歌手
+        # 官方海报（直式大图卡片用）：每场都存一份；签名链接会失效，所以存成本地图片
+        ext = ".png" if ".png" in (e.get("poster") or "").split("?")[0].lower() else ".jpg"
+        poster_rel = f"avatars/p-{e['id']}{ext}"
+        poster = download_image(h, e["poster"], poster_rel) if e.get("poster") else None
+        if not poster and (ROOT / "docs" / poster_rel).exists():
+            poster = poster_rel  # 来源这次被挡、沿用上次下载的
+        if not poster and e.get("poster_img") and (ROOT / "docs" / e["poster_img"]).exists():
+            poster = e["poster_img"]
+        e["poster_img"] = poster
         avatar, kind = c.get("photo"), "artist"
-        if not avatar and not e.get("poster") and e.get("avatar") and (ROOT / "docs" / e["avatar"]).exists():
-            avatar, kind = e["avatar"], e.get("avatar_kind") or "poster"  # 来源这次被挡、沿用上次资料
-        elif not avatar and e.get("poster"):
-            ext = ".png" if ".png" in e["poster"].split("?")[0].lower() else ".jpg"
-            avatar, kind = download_image(h, e["poster"], f"avatars/p-{e['id']}{ext}"), "poster"
+        if not avatar and e.get("avatar") and e.get("avatar_kind") == "artist" and (ROOT / "docs" / e["avatar"]).exists():
+            avatar = e["avatar"]
+        if not avatar and poster:
+            avatar, kind = poster, "poster"
         e["avatar"], e["avatar_kind"] = (avatar, kind) if avatar else (None, None)
         e.pop("poster", None)  # 签名链接会失效，不放进输出
-        if avatar:
-            used.add(avatar)
+        used |= {x for x in (avatar, poster) if x}
     for l in leads:
         src = l.pop("avatar_src", None)
         if l["kind"] == "IG" and l["from"].startswith("@"):
@@ -855,13 +953,19 @@ def lead_candidates(l):
         tag = re.sub(r"(?i)(in)?(kl|kualalumpur|malaysia|my|live|concert|tour|worldtour|asiatour)$", "", tag)
         cands.append(re.sub(r"(?<=[a-z])(?=[A-Z])", " ", tag))
     cands += re.findall(r"\b([A-Z][A-Za-z'.-]+(?:\s+[A-Z][A-Za-z'.-]+){0,2})\b", " ".join(text.split("\n")[:3]))
+    # 图片上读出来的字：前几行常是艺人名（例如 “DIOR 大穎 2026 世界巡迴演唱會”）
+    img = unicodedata.normalize("NFKC", l.get("image_text") or "").split("\n")[:4]
+    for line in img:
+        cands.append(re.split(r"\s*[:：《「(（|—]|\s[-–]\s", line)[0])
+        cands += re.findall(r"[一-鿿]{2,4}", line)
+        cands += re.findall(r"\b([A-Z][A-Za-z'.-]+(?:\s+[A-Z][A-Za-z'.-]+){0,2})\b", line)
     seen, out = set(), []
     for c in cands:
         c = re.sub(r"\s+", " ", TITLE_NOISE.sub(" ", c)).strip(" -–'\"!.,")
         if 2 <= len(norm(c)) <= 30 and norm(c) not in seen:
             seen.add(norm(c))
             out.append(c)
-    return out[:8]
+    return out[:12]
 
 
 # 跟艺人同名的普通字词（Deezer 上真的有叫 “Arena”、“WE” 的艺人），贴文里出现不代表是在讲他们
@@ -920,7 +1024,7 @@ def group_pending(h, events, leads, state, cfg):
         for k in ("artist", "artist_photo", "artist_fans", "artist_region", "image"):  # 旧线索存在 state 里，每次按最新规则重新归类
             l.pop(k, None)
         pending = not any(m in by_event for m in l.get("matches", []))
-        text = f"{l.get('title', '')}\n{l.get('text') or ''}"
+        text = lead_blob(l)
         artist = None
         for w in watch:
             if any(mentions(a, text) for a in [w["name"], *w.get("aliases", [])]):
@@ -1021,6 +1125,7 @@ def merge_events(events):
             p["seat_maps"] = list(dict.fromkeys(m for e in g for m in e.get("seat_maps") or []))
             p["tiers"] = next((e["tiers"] for e in g if e.get("tiers")), [])
             p["ocr_tiers"] = next((e["ocr_tiers"] for e in g if e.get("ocr_tiers")), None)
+            p["poster_img"] = p.get("poster_img") or next((e["poster_img"] for e in g if e.get("poster_img")), None)
             p["limit"] = p.get("limit") or next((e.get("limit") for e in g if e.get("limit")), None)
             p["sold_out"] = all(e.get("sold_out") for e in g)
             p["stop_sales"] = all(e.get("stop_sales") or e.get("sold_out") for e in g)
@@ -1063,7 +1168,8 @@ def main():
     h = Http()
     health, events = {}, []
 
-    for name, fn in (("GoLive", golive), ("Fantopia", fantopia), ("BookMyShow", bookmyshow), ("Ticket2U", ticket2u)):
+    for name, fn in (("GoLive", golive), ("Fantopia", fantopia), ("BookMyShow", bookmyshow), ("Ticket2U", ticket2u),
+                     ("NOL World", nolworld)):
         t0 = time.time()
         try:
             got = fn(h)
@@ -1084,6 +1190,8 @@ def main():
         elif raw.get(name):  # 抓不到就沿用上一次的资料，不让页面突然变空
             got = [dict(e) for e in raw[name]]
             health[name].update(stale=True, count=len(got))
+        for e in got:
+            e.setdefault("country", "MY")  # 马来西亚平台的场次没有国家栏位
         print(f"{name}: {health[name]} ({time.time() - t0:.0f}s)", flush=True)
         events += got
 
@@ -1141,8 +1249,9 @@ def main():
 
     names = {e["id"]: match_names(e) for e in events}
     leads = sorted(store.values(), key=lambda l: l.get("time") or l["first_seen"], reverse=True)
+    ocr_leads(h, leads, state)  # 贴文图片上的字（艺人名、加场、平台常只印在图上）
     for l in leads:
-        blob = f"{l.get('title', '')} {l.get('text') or ''}".lower()
+        blob = lead_blob(l).lower()
         l["matches"] = [eid for eid, ns in names.items() if any(n in blob for n in ns)][:5]
         if l["kind"] in ("IG", "人工"):  # 旧线索也用最新规则重读开售时间
             found = sale_times(l.get("text") or "", l.get("time"))
@@ -1159,10 +1268,10 @@ def main():
     events, idmap = merge_events(events)
     for l in leads:
         l["matches"] = list(dict.fromkeys(idmap.get(m, m) for m in l.get("matches", [])))
-        l["platforms"] = detect_platforms(f"{l.get('title', '')}\n{l.get('text') or ''}", cfg)
+        l["platforms"] = detect_platforms(lead_blob(l), cfg)
     # 用 Deezer 确认过的艺人名再对一次线索（例如贴文写 “Siti Nurhaliza”，演出名称很长）
     for l in leads:
-        raw = unicodedata.normalize("NFKC", f"{l.get('title', '')} {l.get('text') or ''}").lower()
+        raw = unicodedata.normalize("NFKC", lead_blob(l)).lower()
         blob = norm(raw)
         for e in events:
             n = norm(e.get("artist_name"))
@@ -1183,6 +1292,7 @@ def main():
         "ig_accounts": cfg["ig_accounts"],
         "hashtags": cfg["hashtags"],
         "watch_artists": watch_out,
+        "platforms": cfg.get("ticket_platforms", []),
         "events": events,
         "leads": leads,
     }

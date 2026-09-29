@@ -35,7 +35,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install OCR (read prices printed on seat maps)
-        run: sudo apt-get install -y -qq tesseract-ocr imagemagick > /dev/null
+        run: sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-chi-sim tesseract-ocr-chi-tra tesseract-ocr-kor imagemagick > /dev/null
 
       - name: Scan
         env:

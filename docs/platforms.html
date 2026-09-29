@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>售票平台 · 马来西亚演唱会雷达</title>
+<meta name="theme-color" content="#15171c">
+<link rel="stylesheet" href="assets/app.css?v=20260929e">
+</head>
+<body>
+<div class="wrap view">
+  <h1>🎫 官方售票平台</h1>
+  <p class="lede">马来西亚、新加坡、韩国的官方一手售票平台（不含二手转售网站）。<br>
+    <span class="pill ok" style="margin:0">🤖 自动追踪</span> 雷达会直接抓这个平台的场次和开票时间
+    <span class="pill sub" style="margin:0">👀 公告识别</span> 官方公告提到这个平台时会标出来</p>
+  <div id="list"></div>
+  <div id="foot"></div>
+</div>
+<script src="assets/app.js?v=20260929e"></script>
+<script>
+loadData(false).then(d => {
+  nav(d, "platforms");
+  const base = n => n.split(" (")[0].toLowerCase();
+  const count = p => d.events.filter(e => platformsOf(e).some(x => base(x.source) === base(p.name))).length;
+  const health = p => Object.entries(d.health).find(([k]) => base(k) === base(p.name))?.[1];
+  const card = p => {
+    const n = count(p), h = health(p);
+    const state = !p.scraped ? `<span class="pill sub">👀 公告识别</span>`
+      : h && !h.ok ? `<span class="pill bad">⚠️ 这次抓取失败</span>`
+      : `<span class="pill ok">🤖 自动追踪${h?.local ? "（你电脑抓）" : ""}</span>`;
+    return `<a class="row" href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener">
+      <span class="av" style="width:52px;height:52px;font-size:20px">${esc(p.name.slice(0, 1))}</span>
+      <div class="body">
+        <div class="name">${esc(p.name)} <span class="badge">${(p.countries || []).map(flag).join(" ")}</span></div>
+        <div class="info">${esc(p.note || "")}</div>
+        ${state} ${n ? `<span class="pill info">${n} 场演出</span>` : ""}
+      </div>
+      <span class="chev">↗</span>
+    </a>`;
+  };
+  const ps = d.platforms || [];
+  $("#list").innerHTML = Object.entries(COUNTRIES).map(([c, label]) => {
+    const list = ps.filter(p => (p.countries || []).includes(c)).sort((a, b) => (b.scraped - a.scraped) || (count(b) - count(a)));
+    return list.length ? `<h2>${label}</h2><div class="list">${list.map(card).join("")}</div>` : "";
+  }).join("") || `<div class="card empty">还没有平台资料，下次扫描后会出现。</div>`;
+  $("#foot").innerHTML = footer(d);
+}).catch(() => { nav(null, "platforms"); fail($("#list")); });
+</script>
+</body>
+</html>
