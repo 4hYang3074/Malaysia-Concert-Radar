@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>抢票日历 · 马来西亚演唱会雷达</title>
 <meta name="theme-color" content="#15171c">
-<link rel="stylesheet" href="assets/app.css">
+<link rel="stylesheet" href="assets/app.css?v=20260929c">
 <script>
   // 旧版网址（#/e/xxx）转到新的演出页
   const old = location.hash.match(/^#\/e\/(.+)$/);
@@ -28,7 +28,7 @@
   <div class="doors" id="doors" style="margin-top:0"></div>
   <div id="foot"></div>
 </div>
-<script src="assets/app.js"></script>
+<script src="assets/app.js?v=20260929c"></script>
 <script>
 loadData().then(d => {
   nav(d, "home");

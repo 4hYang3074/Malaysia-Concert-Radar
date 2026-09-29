@@ -592,6 +592,68 @@ def save_maps(h, events, state, now_s, first_run):
     return updated
 
 
+def ocr_prices(path):
+    """用 Tesseract（开源 OCR）把座位图上印的票价读出来。先用 ImageMagick 放大、转灰阶提高准确度。
+    没装 Tesseract 的环境（例如本机）就跳过。"""
+    import shutil
+    import subprocess
+    import tempfile
+    if not shutil.which("tesseract"):
+        return None
+    texts = []
+    with tempfile.TemporaryDirectory() as tmp:
+        variants = [str(path)]
+        magick = shutil.which("magick") or shutil.which("convert")
+        if magick:
+            for i, extra in enumerate((["-colorspace", "Gray"], ["-colorspace", "Gray", "-negate"])):
+                out = str(Path(tmp) / f"v{i}.png")
+                if subprocess.run([magick, str(path), "-resize", "200%", *extra, out], capture_output=True).returncode == 0:
+                    variants.append(out)
+        for v in variants:
+            r = subprocess.run(["tesseract", v, "-", "--psm", "11"], capture_output=True, text=True, encoding="utf-8")
+            if r.returncode == 0:
+                texts.append(r.stdout)
+    tiers, seen = [], set()
+    for text in texts:
+        for line in text.split("\n"):
+            line = re.sub(r"\s+", " ", line).strip()
+            for m in PRICE_RE.finditer(line):
+                price = re.sub(r"(?i)RM\s?", "RM ", re.sub(r"\s+", " ", m.group(0)))
+                if price_value(price) < 20 or norm(price) in seen:
+                    continue
+                seen.add(norm(price))
+                name = line[:m.start()].strip(" -–:：|•*(（[")
+                tiers.append({"name": name if 2 <= len(name) <= 60 else "票区（颜色见座位图）", "price": price})
+    return sorted(tiers, key=lambda t: -price_value(t["price"]))
+
+
+def add_ocr_tiers(events, state):
+    """座位图上有、但文字票价没列出的价格，补进 ocr_tiers（页面会标注“从座位图读取”）。同一张图只读一次。"""
+    cache = state.setdefault("ocr", {})
+    for e in events:
+        e.pop("ocr_tiers", None)
+        known = {norm(t.get("price")) for t in e.get("tiers") or []}
+        found = []
+        for rel in e.get("seat_maps") or []:
+            path = ROOT / "docs" / rel
+            if not path.exists():
+                continue
+            key = hashlib.sha1(path.read_bytes()).hexdigest()
+            if key not in cache:
+                res = ocr_prices(path)
+                if res is None:  # 没有 OCR 工具
+                    continue
+                cache[key] = res
+            found += [t for t in cache[key] if norm(t["price"]) not in known]
+            known |= {norm(t["price"]) for t in cache[key]}
+        if found:
+            e["ocr_tiers"] = found
+    live = {hashlib.sha1((ROOT / "docs" / r).read_bytes()).hexdigest()
+            for e in events for r in e.get("seat_maps") or [] if (ROOT / "docs" / r).exists()}
+    for k in [k for k in cache if k not in live]:
+        del cache[k]
+
+
 def track_prices(events, state, now_s, first_run):
     """票价从“未公布”变成有价格时记录下来（例如之前只有座位图）。"""
     seen = state.setdefault("tier_counts", {})
@@ -958,6 +1020,7 @@ def merge_events(events):
             p["dates"] = sorted({d for e in g for d in e["dates"]})
             p["seat_maps"] = list(dict.fromkeys(m for e in g for m in e.get("seat_maps") or []))
             p["tiers"] = next((e["tiers"] for e in g if e.get("tiers")), [])
+            p["ocr_tiers"] = next((e["ocr_tiers"] for e in g if e.get("ocr_tiers")), None)
             p["limit"] = p.get("limit") or next((e.get("limit") for e in g if e.get("limit")), None)
             p["sold_out"] = all(e.get("sold_out") for e in g)
             p["stop_sales"] = all(e.get("stop_sales") or e.get("sold_out") for e in g)
@@ -1038,6 +1101,7 @@ def main():
     events.sort(key=lambda e: (e["dates"][0] if e["dates"] else "9999", e["name"]))
     now_s = now.strftime("%Y-%m-%d %H:%M")
     changed = save_maps(h, events, state, now_s, first_run) + track_prices(events, state, now_s, first_run)
+    add_ocr_tiers(events, state)
     ups = state.setdefault("updates", {})
     for e in changed:
         ups.setdefault(e["id"], {}).update(e["updates"])

@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>演出详情 · 马来西亚演唱会雷达</title>
 <meta name="theme-color" content="#15171c">
-<link rel="stylesheet" href="assets/app.css">
+<link rel="stylesheet" href="assets/app.css?v=20260929c">
 </head>
 <body>
 <div class="wrap view" id="app"></div>
-<script src="assets/app.js"></script>
+<script src="assets/app.js?v=20260929c"></script>
 <script>
 loadData().then(d => {
   nav(d, "confirmed");
@@ -18,7 +18,7 @@ loadData().then(d => {
   const now = new Date();
   const cat = category(e, now), st = status(e, now);
   document.title = `${e.artist_name} · 马来西亚演唱会雷达`;
-  const tiers = e.tiers || [];
+  const tiers = e.tiers || [], ocr = e.ocr_tiers || [];
   const maps = (e.seat_maps || []).map(localUrl).filter(Boolean);
   const sales = (e.sales || []).filter(s => s.start);
   const rel = d.leadsByEvent[e.id] || [];
@@ -60,8 +60,10 @@ loadData().then(d => {
       ${maps.length ? `<div class="maps">${maps.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener"><img src="${esc(u)}" alt="官方座位图"></a>`).join("")}
         <div class="meta" style="margin:6px 0 12px">官方座位图（来源：${esc(e.source)}，点图可放大）</div></div>`
         : `<div class="empty">官方座位图还没公布，公布后会自动加上并通知你。</div>`}
-      ${tiers.length ? `<table class="pricetable"><tr><th>票区</th><th style="text-align:right">价格</th></tr>
-        ${tiers.map(t => `<tr><td>${esc(t.name)}${t.desc ? ` <small>· ${esc(t.desc)}</small>` : ""}${t.sold_out ? ' <span class="soldout">售罄</span>' : ""}</td><td class="price">${esc(t.price || "—")}</td></tr>`).join("")}</table>`
+      ${tiers.length || ocr.length ? `<table class="pricetable"><tr><th>票区</th><th style="text-align:right">价格</th></tr>
+        ${tiers.map(t => `<tr><td>${esc(t.name)}${t.desc ? ` <small>· ${esc(t.desc)}</small>` : ""}${t.sold_out ? ' <span class="soldout">售罄</span>' : ""}</td><td class="price">${esc(t.price || "—")}</td></tr>`).join("")}
+        ${ocr.length ? `<tr><td colspan="2" class="meta" style="background:var(--card)">🔍 以下是从官方座位图上读取的票价（自动识别，请以座位图为准）</td></tr>
+          ${ocr.map(t => `<tr><td>${esc(t.name)}</td><td class="price">${esc(t.price)}</td></tr>`).join("")}` : ""}</table>`
         : e.price_text ? `<div class="note">${esc(e.price_text)}</div>`
         : e.price_from ? `<div class="note">最低 ${esc(e.price_from)} 起（详细票区请看官网）</div>`
         : `<div class="note">${maps.length ? "官方还没有用文字公布票价（目前只有座位图）。文字票价一公布，这里会自动变成价格表，并通知你。" : "票价还没公布，公布后会自动更新并通知你。"}</div>`}

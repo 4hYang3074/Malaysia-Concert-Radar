@@ -164,6 +164,26 @@ function highlightsHTML(list) {
     </a>`).join("")}</div>`;
 }
 
+// ---------- 图片放大查看（点座位图、贴文图片 → 全屏看；再点一下放大到原尺寸，可以拖动） ----------
+document.addEventListener("click", ev => {
+  const img = ev.target.closest(".maps img, .shots img, img.post-img");
+  if (!img) return;
+  ev.preventDefault();
+  const box = document.createElement("div");
+  box.className = "lb";
+  box.innerHTML = `<button class="lb-x" aria-label="关闭">✕</button><div class="lb-in"><img alt=""></div><div class="lb-tip">点图片放大 · 点背景或 ✕ 关闭</div>`;
+  box.querySelector("img").src = img.currentSrc || img.src;
+  const close = () => { box.remove(); document.body.style.overflow = ""; document.removeEventListener("keydown", onKey); };
+  const onKey = k => { if (k.key === "Escape") close(); };
+  box.addEventListener("click", e => {
+    if (e.target.tagName === "IMG") { box.classList.toggle("zoom"); return; }
+    close();
+  });
+  document.addEventListener("keydown", onKey);
+  document.body.style.overflow = "hidden";
+  document.body.appendChild(box);
+});
+
 // ---------- 售票平台 ----------
 const platformsOf = e => e.platforms && e.platforms.length ? e.platforms : [{source: e.source, url: e.url, sold_out: e.sold_out}];
 const platformBadges = e => platformsOf(e).map(p => `<span class="badge plat">🎫 ${esc(p.source)}</span>`).join("");
