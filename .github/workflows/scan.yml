@@ -6,6 +6,10 @@ on:
     - cron: "17 0 * * *"
     - cron: "17 12 * * *"
   workflow_dispatch:
+  push:
+    # 扫描程序或设定改了就马上重跑一次（机器人提交的 docs/state 不会触发）
+    branches: [main]
+    paths: ["radar/**", "config.json", ".github/workflows/scan.yml"]
   issues:
     # 提交或关闭 [线索] Issue 时马上更新一次
     types: [opened, closed, reopened]

@@ -26,6 +26,8 @@ loadData().then(d => {
           <div class="meta">${esc(l.kind)} · ${esc(fmt(l.time) || l.first_seen)}</div></div>
       </div>
       <h1 style="font-size:19px">${esc(l.title)}</h1>
+      ${l.artist ? `<div class="meta">关于：<a href="pending.html#a-${encodeURIComponent(l.artist)}">${esc(l.artist)}</a></div>` : ""}
+      ${localUrl(l.image) ? `<img class="post-img" src="${esc(localUrl(l.image))}" alt="" onerror="this.remove()">` : ""}
       ${linked.length
         ? `<div class="banner ok">✓ 已经在售票平台上架：${linked.map(e => `<a href="event.html?id=${encodeURIComponent(e.id)}">${esc(e.artist_name)}（${esc(e.source)}）</a>`).join("、")}</div>`
         : `<div class="banner warn">待确认：售票平台还没有对应的演出。上架后会自动移到“已确定”并通知你。</div>`}

@@ -10,7 +10,7 @@
 <body>
 <div class="wrap view">
   <h1>🕒 待确定的消息</h1>
-  <p class="lede">这些消息提到了演唱会，但售票平台还没上架。上架后会自动移到“已确定”，并通知你。</p>
+  <p class="lede">明星或主办在 IG、新闻里说要来马来西亚，但售票平台还没上架。按明星整理，上架后会自动移到“已确定”，并通知你。</p>
   <div class="segs" id="segs"></div>
   <div class="list" id="list"></div>
   <a class="btn ghost" href="https://github.com/4hYang3074/Malaysia-Concert-Radar/issues/new?template=lead.yml" target="_blank" rel="noopener">＋ 我看到一个消息（例如小红书），提交给雷达</a>
@@ -18,30 +18,50 @@
 </div>
 <script src="assets/app.js"></script>
 <script>
-const KINDS = [
-  {key: "all", label: "📋 全部"},
-  {key: "official", label: "📸 官方 IG", test: l => l.kind === "IG" && l.from.startsWith("@")},
-  {key: "tag", label: "#️⃣ IG 标签", test: l => l.kind === "IG" && l.from.startsWith("#")},
-  {key: "news", label: "📰 新闻", test: l => l.kind === "新闻"},
-  {key: "manual", label: "✋ 你提交的", test: l => l.kind === "人工"},
-];
 const ICON = {"IG": "📸", "新闻": "📰", "人工": "✋"};
-loadData().then(d => {
-  nav(d, "pending");
-  const k = KINDS.find(x => x.key === qs("kind")) || KINDS[0];
-  const count = x => x.test ? d.pending.filter(x.test).length : d.pending.length;
-  $("#segs").innerHTML = KINDS.map(x => `<a class="seg ${x === k ? "on" : ""}" href="pending.html?kind=${x.key}">${x.label}<b>${count(x)}</b></a>`).join("");
-  const list = k.test ? d.pending.filter(k.test) : d.pending;
-  $("#list").innerHTML = list.length ? list.slice(0, 100).map(l => `
-    <a class="row" href="lead.html?id=${encodeURIComponent(l.id)}">
-      ${l.avatar ? avatar(l.avatar, l.from.replace(/^[@#]/, ""), 52) : `<span class="av" style="width:52px;height:52px;font-size:24px">${ICON[l.kind] || "•"}</span>`}
+const leadRow = l => `
+  <a class="mini" href="lead.html?id=${encodeURIComponent(l.id)}">
+    <span class="k">${ICON[l.kind] || "•"}</span>
+    <span class="t">${esc(l.title)}<small>${esc(l.from)} · ${esc(fmt(l.time) || l.first_seen)}</small></span>
+  </a>`;
+
+let DATA;
+function artistCard(g) {
+  const s = artistSummary(g);
+  const n = g.leads.length;
+  // 这位明星已经有演出在售票平台上架（例如关注名单里的明星）
+  const live = DATA.events.filter(e => e.artist_name && e.artist_name.toLowerCase() === g.name.toLowerCase());
+  return `<div class="card artist" id="a-${encodeURIComponent(g.name)}">
+    <div class="ahead">
+      ${avatar(g.photo, g.name, 64)}
       <div class="body">
-        <div class="name" style="font-size:15.5px">${esc(l.title)}</div>
-        <div class="info">${esc(l.from)}${l.from_name ? "（" + esc(l.from_name) + "）" : ""} · ${esc(fmt(l.time) || l.first_seen)}</div>
-        ${(l.hints || []).length ? `<div class="info" style="color:var(--ink)">${esc(l.hints[0])}</div>` : ""}
+        <div class="name">${esc(g.name)} ${g.watched ? '<span class="badge new">⭐ 关注中</span>' : ""}</div>
+        <div class="info">${n ? `${n} 条消息 · 最新 ${esc(fmt(g.latest, false) || g.latest)} · ${s.src.map(esc).join("、")}` : live.length ? "目前没有其他待确定的新消息" : "暂时没有新消息，一有 IG 或新闻提到就会出现在这里"}</div>
       </div>
-      <span class="chev">›</span>
-    </a>`).join("") : `<div class="card empty">这一类目前没有待确定的消息。</div>`;
+    </div>
+    ${live.map(e => `<a class="banner ok" style="display:block;text-decoration:none" href="event.html?id=${encodeURIComponent(e.id)}">✅ 已在 ${esc(e.source)} 上架：${esc(e.name)} →</a>`).join("")}
+    ${s.sales.length ? `<div class="sum warn">🎟️ ${s.sales.map(esc).join("<br>🎟️ ")}</div>` : ""}
+    ${s.points.length ? `<ul class="hints sum-list">${s.points.map(p => `<li>${esc(p)}</li>`).join("")}</ul>` : ""}
+    ${s.images.length ? `<div class="shots">${s.images.map(l => `<a href="lead.html?id=${encodeURIComponent(l.id)}"><img src="${esc(localUrl(l.image))}" alt="" loading="lazy" onerror="this.parentNode.remove()"></a>`).join("")}</div>` : ""}
+    ${n ? `<div class="minis">${g.leads.slice(0, 3).map(leadRow).join("")}</div>` : ""}
+    ${n > 3 ? `<details><summary>再看 ${n - 3} 条</summary><div class="minis">${g.leads.slice(3).map(leadRow).join("")}</div></details>` : ""}
+  </div>`;
+}
+
+loadData().then(d => {
+  DATA = d;
+  nav(d, "pending");
+  const {groups, other} = pendingGroups(d);
+  $("#segs").innerHTML = groups.map(g => `<a class="seg" href="#a-${encodeURIComponent(g.name)}">${esc(g.name)}<b>${g.leads.length}</b></a>`).join("")
+    + (other.length ? `<a class="seg" href="#other">其他<b>${other.length}</b></a>` : "");
+  $("#list").innerHTML = groups.map(artistCard).join("") + (other.length ? `
+    <div class="card artist" id="other">
+      <div class="name" style="font-weight:700;font-size:17px">🗂️ 其他消息</div>
+      <div class="info" style="color:var(--sub);font-size:13px">还没认出是哪位明星的消息</div>
+      <div class="minis">${other.slice(0, 5).map(leadRow).join("")}</div>
+      ${other.length > 5 ? `<details><summary>再看 ${other.length - 5} 条</summary><div class="minis">${other.slice(5, 100).map(leadRow).join("")}</div></details>` : ""}
+    </div>` : "")
+    || `<div class="card empty">目前没有待确定的消息。</div>`;
   $("#foot").innerHTML = footer(d);
 }).catch(() => { nav(null, "pending"); fail($("#list")); });
 </script>

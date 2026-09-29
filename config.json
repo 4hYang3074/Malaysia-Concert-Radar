@@ -15,6 +15,12 @@
   "ig_accounts_global": ["imcliveglobal"],
   "ig_posts_per_account": 10,
 
+  "_watch_artists_说明": "你特别关注的艺人：贴文只要提到任何一个别名，就会归到这位艺人（中英文、繁简体都可以加）",
+  "watch_artists": [
+    {"name": "A-Lin", "aliases": ["A-Lin", "ALin", "黄丽玲", "黃麗玲"]},
+    {"name": "周兴哲", "aliases": ["周兴哲", "周興哲", "Eric Chou"]}
+  ],
+
   "hashtags": [
     "konsertmalaysia",
     "concertmalaysia",

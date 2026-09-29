@@ -42,7 +42,8 @@ loadData().then(d => {
     <a class="door wait" href="pending.html">
       <div class="t">🕒 待确定的消息</div>
       <div class="big">${d.pending.length}</div>
-      <div class="d">官方 IG、新闻或你提交的线索提到，但售票平台还没上架。</div>
+      <div class="d">官方 IG、新闻或你提交的线索提到，但售票平台还没上架。按明星整理。</div>
+      <div class="stack">${pendingGroups(d).groups.filter(g => g.photo).slice(0, 8).map(g => avatar(g.photo, g.name, 40)).join("")}</div>
       <div class="go">查看 →</div>
     </a>`;
   $("#foot").innerHTML = footer(d);

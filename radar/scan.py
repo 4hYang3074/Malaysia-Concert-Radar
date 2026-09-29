@@ -322,7 +322,7 @@ def ig_leads(h, cfg, token, state, health):
     n = cfg.get("ig_posts_per_account", 10)
     for user in cfg["ig_accounts"]:
         fields = (f"business_discovery.username({user}){{username,name,profile_picture_url,"
-                  f"media.limit({n}){{caption,timestamp,permalink,media_type}}}}")
+                  f"media.limit({n}){{caption,timestamp,permalink,media_type,media_url,thumbnail_url}}}}")
         try:
             bd = call(uid, {"fields": fields})["business_discovery"]
             ok += 1
@@ -344,7 +344,7 @@ def ig_leads(h, cfg, token, state, health):
             if tag not in tag_ids:  # 每 7 天最多查 30 个不同标签，id 查一次就存起来
                 tag_ids[tag] = call("ig_hashtag_search", {"user_id": uid, "q": tag})["data"][0]["id"]
             res = call(f"{tag_ids[tag]}/recent_media", {"user_id": uid, "limit": 50,
-                                                        "fields": "caption,timestamp,permalink,media_type"})
+                                                        "fields": "caption,timestamp,permalink,media_type,media_url"})
             ok += 1
         except Exception as e:
             bad.append({"account": f"#{tag}", "error": short(str(e), 160)})
@@ -367,7 +367,9 @@ def ig_lead(m, where, name):
     t = datetime.strptime(ts, "%Y-%m-%dT%H:%M:%S%z").astimezone(MYT).strftime("%Y-%m-%d %H:%M") if ts else None
     return {"id": "ig-" + lead_id(m.get("permalink") or cap), "kind": "IG", "from": where, "from_name": name,
             "title": short(cap.split("\n")[0], 120), "text": short(cap, 900), "time": t,
-            "url": m.get("permalink"), "hints": sale_hints(cap), "sale_times": sale_times(cap, t)}
+            "url": m.get("permalink"), "hints": sale_hints(cap), "sale_times": sale_times(cap, t),
+            # IG 图片网址会过期，下载成本地图片后这个栏位会被移除
+            "image_src": m.get("thumbnail_url") if m.get("media_type") == "VIDEO" else m.get("media_url")}
 
 
 def sale_hints(text):
@@ -684,11 +686,147 @@ def add_avatars(h, events, leads, state, today):
                 used.add(rel)
     for k in [k for k in cache if k not in {e["id"] for e in events}]:
         del cache[k]
-    folder = ROOT / "docs" / "avatars"
-    if folder.exists():
-        for f in folder.iterdir():
-            if f"avatars/{f.name}" not in used:
-                f.unlink()
+    return used
+
+
+def lead_candidates(l):
+    """从贴文猜可能的艺人名：#标签（#AlanTam → Alan Tam）、第一行冒号/书名号前的部分、连续大写开头的英文词。"""
+    text = unicodedata.normalize("NFKC", f"{l.get('title', '')}\n{l.get('text') or ''}")
+    first = text.split("\n")[0]
+    cands = [re.split(r"\s*[:：《「(（|—]|\s[-–]\s", first)[0]]
+    for tag in re.findall(r"#([^\s#]{3,40})", text)[:8]:
+        tag = re.sub(r"(?i)(in)?(kl|kualalumpur|malaysia|my|live|concert|tour|worldtour|asiatour)$", "", tag)
+        cands.append(re.sub(r"(?<=[a-z])(?=[A-Z])", " ", tag))
+    cands += re.findall(r"\b([A-Z][A-Za-z'.-]+(?:\s+[A-Z][A-Za-z'.-]+){0,2})\b", " ".join(text.split("\n")[:3]))
+    seen, out = set(), []
+    for c in cands:
+        c = re.sub(r"\s+", " ", TITLE_NOISE.sub(" ", c)).strip(" -–'\"!.,")
+        if 2 <= len(norm(c)) <= 30 and norm(c) not in seen:
+            seen.add(norm(c))
+            out.append(c)
+    return out[:8]
+
+
+# 跟艺人同名的普通字词（Deezer 上真的有叫 “Arena”、“WE” 的艺人），贴文里出现不代表是在讲他们
+COMMON_NAMES = {"arena", "we", "soldout", "sold out", "say hi", "hello", "love", "live", "concert", "music", "tuesday",
+                "friday", "saturday", "sunday", "today", "tonight", "vip", "ticket", "tickets", "legends", "alpha", "crowd"}
+
+
+def mentions(name, text):
+    """贴文有没有提到这个名字。中文名直接找；英文名要是完整的词（避免 “ALPHA RAIH” 被当成 A-Lin），
+    3 个字母以内的名字还要大小写一致（避免 “We're” 被当成 WE）。"""
+    name = unicodedata.normalize("NFKC", name or "").strip()
+    text = unicodedata.normalize("NFKC", text or "")
+    if not norm(name):
+        return False
+    if re.search(r"[^\x00-\x7f]", name):
+        return norm(name) in norm(text)
+    words = [w for w in re.split(r"[\W_]+", name) if w]
+    pat = r"(?<![A-Za-z0-9])" + r"[\W_]*".join(map(re.escape, words)) + r"(?![A-Za-z0-9])"
+    return bool(re.search(pat, text, 0 if len(norm(name)) <= 3 else re.I))
+
+
+def lookup_artist(h, cand, text, cache, budget):
+    """用 Deezer 确认候选名字真的是艺人；结果存进 cache（包括“不是艺人”），避免重复查询。"""
+    key = norm(cand)
+    if key not in cache:
+        if budget[0] <= 0:
+            return None
+        budget[0] -= 1
+        try:
+            res = h.json("https://api.deezer.com/search/artist?q=" + urllib.parse.quote(cand) + "&limit=5", retries=2)
+            time.sleep(0.3)
+        except Exception:
+            return None
+        hit = None
+        for a in res.get("data") or []:
+            n = norm(a.get("name"))
+            need = 20 if re.search(r"[^\x00-\x7f]", a.get("name", "")) else 5000 if " " not in a.get("name", "").strip() else 300
+            if n == key and a.get("nb_fan", 0) >= need and "/artist//" not in (a.get("picture_medium") or "/artist//"):
+                hit = {"name": a["name"], "photo_url": a.get("picture_big") or a["picture_medium"], "fans": a["nb_fan"]}
+                break
+        cache[key] = hit
+    hit = cache[key]
+    return hit if hit and hit["name"].lower() not in COMMON_NAMES and mentions(hit["name"], text) else None
+
+
+def group_pending(h, events, leads, state, cfg):
+    """待确定的线索（售票平台还没上架）按艺人归类：先看设定里的关注名单，再用 Deezer 确认贴文里提到的名字。
+    也把艺人照片与 IG 贴文图片下载成本地图片。回传用到的图片路径。"""
+    used = set()
+    cache = state.setdefault("artist_lookup", {})
+    budget = [120]  # 每次扫描最多查 120 个新名字
+    watch = cfg.get("watch_artists", [])
+    by_event = {e["id"] for e in events}
+    for l in leads:
+        src = l.pop("image_src", None)
+        for k in ("artist", "artist_photo", "image"):  # 旧线索存在 state 里，每次按最新规则重新归类
+            l.pop(k, None)
+        pending = not any(m in by_event for m in l.get("matches", []))
+        text = f"{l.get('title', '')}\n{l.get('text') or ''}"
+        artist = None
+        for w in watch:
+            if any(mentions(a, text) for a in [w["name"], *w.get("aliases", [])]):
+                artist = {"name": w["name"], "photo_url": None}
+                break
+        if not artist and pending:
+            found = [x for x in (lookup_artist(h, c, text, cache, budget) for c in lead_candidates(l)) if x]
+            if found:
+                artist = max(found, key=lambda a: (a.get("fans", 0), len(a["name"])))
+        if artist:
+            l["artist"] = artist["name"]
+            rel = artist_photo(h, artist, watch, cache)
+            if rel:
+                l["artist_photo"] = rel
+                used.add(rel)
+        # IG 贴文图片（只留待确定的，已上架的看售票平台就好）
+        rel = f"posts/{l['id']}.jpg"
+        if pending and l["kind"] == "IG":
+            if src and not (ROOT / "docs" / rel).exists():
+                download_image(h, src, rel, max_bytes=2_000_000)
+            if (ROOT / "docs" / rel).exists():
+                l["image"] = rel
+                used.add(rel)
+    # 关注名单里的明星就算还没有消息，也在页面上列出来（附照片）
+    watch_out = []
+    for w in watch:
+        rel = artist_photo(h, {"name": w["name"]}, watch, cache)
+        if rel:
+            used.add(rel)
+        watch_out.append({"name": w["name"], "photo": rel})
+    return used, watch_out
+
+
+def artist_photo(h, artist, watch, cache):
+    """艺人照片存成 docs/avatars/a-<名字哈希>.jpg；关注名单的明星会用每个别名去 Deezer 找（例如 周兴哲 → Eric Chou）。"""
+    rel = f"avatars/a-{hashlib.sha1(norm(artist['name']).encode()).hexdigest()[:12]}.jpg"
+    if not (ROOT / "docs" / rel).exists():
+        url = artist.get("photo_url") or (cache.get(norm(artist["name"])) or {}).get("photo_url")
+        w = next((w for w in watch if w["name"] == artist["name"]), None)
+        for n in [artist["name"], *(w or {}).get("aliases", [])]:
+            if url:
+                break
+            if w:  # 你指定的明星：名字完全一样就收，不用粉丝数把关（A-Lin 在 Deezer 粉丝不多）
+                try:
+                    res = h.json("https://api.deezer.com/search/artist?q=" + urllib.parse.quote(n) + "&limit=5", retries=2)
+                except Exception:
+                    res = {}
+                url = next((a.get("picture_big") or a["picture_medium"] for a in res.get("data") or []
+                            if norm(a.get("name")) == norm(n) and "/artist//" not in (a.get("picture_medium") or "/artist//")), None)
+            else:
+                _, url = deezer_artist(h, {"name": n})
+        if url:
+            download_image(h, url, rel)
+    return rel if (ROOT / "docs" / rel).exists() else None
+
+
+def cleanup_images(used):
+    for folder in ("avatars", "posts"):
+        d = ROOT / "docs" / folder
+        if d.exists():
+            for f in d.iterdir():
+                if f"{folder}/{f.name}" not in used:
+                    f.unlink()
 
 
 def match_names(ev):
@@ -790,13 +928,22 @@ def main():
         l["matches"] = [eid for eid, ns in names.items() if any(n in blob for n in ns)][:5]
         if l["kind"] in ("IG", "人工"):  # 旧线索也用最新规则重读开售时间
             l["sale_times"] = sale_times(l.get("text") or "", l.get("time"))
-    add_avatars(h, events, leads, state, today)
+    used = add_avatars(h, events, leads, state, today)
     # 用 Deezer 确认过的艺人名再对一次线索（例如贴文写 “Siti Nurhaliza”，演出名称很长）
     for l in leads:
-        blob = norm(f"{l.get('title', '')} {l.get('text') or ''}")
+        raw = unicodedata.normalize("NFKC", f"{l.get('title', '')} {l.get('text') or ''}").lower()
+        blob = norm(raw)
         for e in events:
-            if e["id"] not in l["matches"] and len(norm(e.get("artist_name"))) >= 4 and norm(e["artist_name"]) in blob:
+            n = norm(e.get("artist_name"))
+            if e["id"] in l["matches"] or len(n) < 3:
+                continue
+            # 短名字（FKJ、BTS）要整个词出现才算，避免撞到别的字
+            hit = n in blob if len(n) >= 4 else re.search(rf"(?<![a-z0-9]){re.escape(e['artist_name'].lower())}(?![a-z0-9])", raw)
+            if hit:
                 l["matches"].append(e["id"])
+    more, watch_out = group_pending(h, events, leads, state, cfg)
+    used |= more
+    cleanup_images(used)
 
     out = {
         "generated_at": now.strftime("%Y-%m-%d %H:%M"),
@@ -804,6 +951,7 @@ def main():
         "ig_bad": state.get("ig_bad", []),
         "ig_accounts": cfg["ig_accounts"],
         "hashtags": cfg["hashtags"],
+        "watch_artists": watch_out,
         "events": events,
         "leads": leads,
     }

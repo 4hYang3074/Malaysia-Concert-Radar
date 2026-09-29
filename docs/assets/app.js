@@ -3,7 +3,7 @@ const REPO = "4hYang3074/Malaysia-Concert-Radar";
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
 const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : "#";
-const localUrl = u => /^(maps|avatars)\/[\w./-]+$/.test(u || "") ? u : "";   // 图片只允许仓库里的本地路径
+const localUrl = u => /^(maps|avatars|posts)\/[\w./-]+$/.test(u || "") ? u : "";   // 图片只允许仓库里的本地路径
 const toDate = s => s ? new Date(s.replace(" ", "T") + ":00+08:00") : null;   // 资料里的时间都是马来西亚时间
 const WD = "日一二三四五六";
 function fmt(s, withTime = true) {
@@ -138,6 +138,41 @@ async function loadData() {
   for (const l of d.leads) for (const m of l.matches || []) (d.leadsByEvent[m] ||= []).push(l);
   d.pending = d.leads.filter(l => !(l.matches || []).some(m => d.byId[m]));
   return d;
+}
+
+// ---------- 待确定：按明星分组 ----------
+// 关注名单里的明星排最前（没消息也列出来），其他按最新消息排序；没认出明星的放 other
+function pendingGroups(d) {
+  const by = {}, other = [], when = l => l.time || l.first_seen || "";
+  for (const l of d.pending) {
+    if (!l.artist) { other.push(l); continue; }
+    const g = by[l.artist] ||= {name: l.artist, leads: [], photo: ""};
+    g.leads.push(l);
+    g.photo ||= l.artist_photo || "";
+  }
+  const watch = d.watch_artists || [];
+  for (const w of watch) {
+    const g = by[w.name] ||= {name: w.name, leads: [], photo: ""};
+    g.photo ||= w.photo || "";
+  }
+  const groups = Object.values(by);
+  for (const g of groups) {
+    g.leads.sort((a, b) => when(b).localeCompare(when(a)));
+    g.latest = g.leads[0] ? when(g.leads[0]) : "";
+    g.watched = watch.some(w => w.name === g.name);
+  }
+  groups.sort((a, b) => (b.watched - a.watched) || b.latest.localeCompare(a.latest));
+  return {groups, other};
+}
+// 一位明星的摘要：来源、开售时间、贴文里的重点行（去重）
+function artistSummary(g) {
+  const src = [...new Set(g.leads.map(l => l.kind === "新闻" ? "新闻" : l.from))];
+  const sales = [], points = [], seen = new Set();
+  const add = (arr, s) => { const k = s.replace(/\s+/g, " ").trim(); if (k && !seen.has(k.toLowerCase())) { seen.add(k.toLowerCase()); arr.push(k); } };
+  for (const l of g.leads) for (const st of l.sale_times || []) add(sales, `${fmt(st.time.length === 10 ? st.time + " 00:00" : st.time, st.time.length > 10)}：${st.line}`);
+  for (const l of g.leads) for (const h of l.hints || []) add(points, h);
+  for (const l of g.leads) if (l.kind === "新闻") add(points, l.title.replace(/\s+-\s+[^-]+$/, ""));
+  return {src, sales: sales.slice(0, 3), points: points.slice(0, 4), images: g.leads.filter(l => localUrl(l.image)).slice(0, 4)};
 }
 
 // ---------- 导航栏与页尾 ----------
