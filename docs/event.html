@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>演出详情 · 马来西亚演唱会雷达</title>
 <meta name="theme-color" content="#15171c">
-<link rel="stylesheet" href="assets/app.css?v=20260929t">
+<link rel="stylesheet" href="assets/app.css?v=20260929u">
 </head>
 <body>
 <div class="wrap view" id="app"></div>
-<script src="assets/app.js?v=20260929t"></script>
+<script src="assets/app.js?v=20260929u"></script>
 <script>
 loadData(false).then(d => {
   nav(d, "confirmed");
@@ -55,18 +55,6 @@ loadData(false).then(d => {
         ${esc(p.source)}${p.sold_out ? "（售罄）" : ""}${p.price_from ? ` · ${esc(p.price_from)} 起` : ""} ↗</a>`).join("")}</div>
     </div>
 
-    ${(e.sale_evidence || []).length ? `<h3>🧾 售票状态的根据</h3><div class="card"><table class="evi">
-      <tr><th>来源</th><th>内容</th><th>时间</th></tr>
-      ${e.sale_evidence.map(x => `<tr><td class="meta" style="white-space:nowrap">${esc(x.src)}</td>
-        <td>${x.url ? `<a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener">${esc(x.text)}</a>` : esc(x.text)}</td>
-        <td class="meta" style="white-space:nowrap">${esc(x.time ? fmt(x.time.length === 10 ? x.time + " 00:00" : x.time, x.time.length > 10) : "")}</td></tr>`).join("")}
-    </table>${e.official_text ? `<details style="margin-top:8px"><summary class="meta">官方图片上读到的文字（OCR）</summary><pre style="white-space:pre-wrap;font-size:12px;color:var(--sub)">${esc(e.official_text)}</pre></details>` : ""}</div>` : ""}
-    ${(e.organizers || []).length ? `<h3>🏢 主办方</h3><div class="card">${e.organizers.map(o => {
-      const p = (d.promoters || []).find(x => x.name.toLowerCase() === o.toLowerCase());
-      return `<div><b>${esc(o)}</b>${p ? ` · <a href="https://www.instagram.com/${esc(p.ig)}/" target="_blank" rel="noopener">IG @${esc(p.ig)}</a> · <a href="${esc(safeUrl(p.site))}" target="_blank" rel="noopener">官网</a> <small class="meta">（已在来源登记，IG 贴文会被扫描）</small>` : ' <small class="meta">（还没在来源登记）</small>'}</div>`;
-    }).join("")}</div>` : ""}
-    ${newsCheckHTML((d.news_checks || {})[e.artist_name])}
-
     <h3>💺 座位图与票价${fee}</h3>
     <div class="card">
       ${maps.length ? `<div class="maps">${maps.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener"><img src="${esc(u)}" alt="官方座位图"></a>`).join("")}
@@ -80,6 +68,13 @@ loadData(false).then(d => {
         : e.price_from ? `<div class="note">最低 ${esc(e.price_from)} 起（详细票区请看官网）</div>`
         : `<div class="note">${maps.length ? "官方还没有用文字公布票价（目前只有座位图）。文字票价一公布，这里会自动变成价格表，并通知你。" : "票价还没公布，公布后会自动更新并通知你。"}</div>`}
     </div>
+
+    ${(e.organizers || []).length ? `<h3>🏢 主办方</h3><div class="card">${e.organizers.map(o => {
+      const p = (d.promoters || []).find(x => x.name.toLowerCase() === o.toLowerCase());
+      return `<div><b>${esc(o)}</b>${p ? ` · <a href="https://www.instagram.com/${esc(p.ig)}/" target="_blank" rel="noopener">IG @${esc(p.ig)}</a> · <a href="${esc(safeUrl(p.site))}" target="_blank" rel="noopener">官网</a> <small class="meta">（已在来源登记，IG 贴文会被扫描）</small>` : ' <small class="meta">（还没在来源登记）</small>'}</div>`;
+    }).join("")}</div>` : ""}
+    ${newsCheckHTML((d.news_checks || {})[e.artist_name])}
+
 
     ${Object.keys(e.notes || {}).length ? `<h3>📋 购票须知（官网原文）</h3><div class="card">${Object.entries(e.notes).map(([k, v]) =>
       `<details><summary>${esc(k)}</summary><div class="note">${esc(v)}</div></details>`).join("")}</div>` : ""}

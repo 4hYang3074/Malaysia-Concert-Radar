@@ -431,7 +431,7 @@ function saleRound(s) {
 }
 function saleTableHTML(e, now = new Date()) {
   const list = (e.sales || []).filter(s => s.start).sort((a, b) => a.start.localeCompare(b.start));
-  if (!list.length) return `<div class="card empty" style="margin-top:12px">🎟️ 还没有任何开票时间（预售、公售都还没公布），一公布就会列在这里并通知你。</div>`;
+  if (!list.length && !(e.sale_evidence || []).length) return `<div class="card empty" style="margin-top:12px">🎟️ 还没有任何开票时间（预售、公售都还没公布），一公布就会列在这里并通知你。</div>`;
   const rows = list.map(s => {
     const r = saleRound(s);
     const dateOnly = s.start.length === 10;
@@ -446,8 +446,17 @@ function saleTableHTML(e, now = new Date()) {
       <td style="white-space:nowrap">${state}</td>
       <td class="meta">${s.url && s.announced ? `<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(src)}</a>` : esc(src)}</td></tr>`;
   }).join("");
+  // 售票状态的其他根据（不是开票轮次的）：售罄新闻、票种建立时间、官方图片 OCR 等
+  const starts = new Set(list.map(s => s.start.slice(0, 16)));
+  const extra = (e.sale_evidence || []).filter(x => !(x.time && starts.has(x.time.slice(0, 16))) && !/售票轮次/.test(x.src));
+  const extraRows = extra.map(x => `<tr>
+      <td style="white-space:nowrap">📌 根据</td>
+      <td colspan="2">${x.url ? `<a href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener">${esc(x.text)}</a>` : esc(x.text)}</td>
+      <td class="meta" style="white-space:nowrap">${esc(x.time ? fmt(x.time.length === 10 ? x.time + " 00:00" : x.time, x.time.length > 10) : "")}</td>
+      <td class="meta">${esc(x.src)}</td></tr>`).join("");
   return `<div style="text-align:left;margin-top:14px"><div style="font-weight:700;margin-bottom:6px">🎟️ 所有售票时间</div>
     <div style="overflow-x:auto"><table class="saletable">
-      <tr><th>场次</th><th>轮次</th><th>开票时间</th><th>状态</th><th>来源</th></tr>${rows}
-    </table></div></div>`;
+      <tr><th>场次</th><th>轮次</th><th>开票时间</th><th>状态</th><th>来源</th></tr>${rows}${extraRows}
+    </table></div>
+    ${e.official_text ? `<details style="margin-top:6px"><summary class="meta">官方图片上读到的文字（OCR）</summary><pre style="white-space:pre-wrap;font-size:12px;color:var(--sub)">${esc(e.official_text)}</pre></details>` : ""}</div>`;
 }
