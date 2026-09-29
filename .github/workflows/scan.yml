@@ -1,0 +1,57 @@
+name: Concert scan
+
+on:
+  schedule:
+    # 马来西亚时间 08:17 与 20:17
+    - cron: "17 0 * * *"
+    - cron: "17 12 * * *"
+  workflow_dispatch:
+  issues:
+    # 提交或关闭 [线索] Issue 时马上更新一次
+    types: [opened, closed, reopened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: concert-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    if: github.event_name != 'issues' || startsWith(github.event.issue.title, '[线索]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scan
+        env:
+          IG_PAGE_TOKEN: ${{ secrets.IG_PAGE_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python radar/scan.py
+
+      - name: Commit
+        run: |
+          git config user.name "concert-radar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A docs state
+          git diff --cached --quiet && exit 0
+          git commit -m "Concert scan $(TZ=Asia/Kuala_Lumpur date '+%F %H:%M')"
+          git pull --rebase origin main
+          git push
+
+      - name: Notify
+        if: hashFiles('data/alert.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --repo "$GITHUB_REPOSITORY" \
+            --title "演唱会雷达 $(TZ=Asia/Kuala_Lumpur date '+%-m/%-d %H:%M')" \
+            --body-file data/alert.md \
+            --assignee "$GITHUB_REPOSITORY_OWNER"

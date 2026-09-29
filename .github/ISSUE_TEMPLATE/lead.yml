@@ -1,0 +1,17 @@
+name: 提交线索
+description: 在小红书、IG、FB 等看到的演唱会消息，贴链接进来，下一轮扫描会自动核对
+title: "[线索] "
+body:
+  - type: input
+    id: link
+    attributes:
+      label: 链接
+      description: 例如小红书的分享链接
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: 备注（可不填）
+      description: 例如艺人名字、日期、开售时间

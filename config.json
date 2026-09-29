@@ -1,0 +1,40 @@
+{
+  "_说明": "扫描设定。IG 账号、标签、新闻关键词都可以直接在这里增删；token 只放在 GitHub Secrets（IG_PAGE_TOKEN），不要写进这里。",
+  "graph_version": "v26.0",
+  "ig_user_id": "17841474311925376",
+
+  "ig_accounts": [
+    "livenation.my",
+    "starplanetmy",
+    "ticket2u.official",
+    "golive.asia",
+    "bookmyshowmy",
+    "imcliveglobal",
+    "prworldwide",
+    "unusualentertainment",
+    "unifiarena",
+    "zeppkualalumpur"
+  ],
+  "ig_posts_per_account": 10,
+
+  "hashtags": [
+    "konsertmalaysia",
+    "concertmalaysia",
+    "klconcert",
+    "吉隆坡演唱会"
+  ],
+
+  "news_queries": [
+    {"q": "concert Kuala Lumpur tickets when:3d", "hl": "en-MY", "gl": "MY", "ceid": "MY:en"},
+    {"q": "concert Malaysia presale when:3d", "hl": "en-MY", "gl": "MY", "ceid": "MY:en"},
+    {"q": "演唱会 吉隆坡 when:3d", "hl": "zh-CN", "gl": "MY", "ceid": "MY:zh-Hans"},
+    {"q": "konsert tiket when:3d", "hl": "ms", "gl": "MY", "ceid": "MY:ms", "need_malaysia": false}
+  ],
+
+  "leads_keep_days": 30,
+
+  "keywords": {
+    "malaysia": ["malaysia", "kuala lumpur", "in kl", " kl ", "#kl", "kl!", "kl,", "吉隆坡", "马来西亚", "馬來西亞", "大馬", "大马", "bukit jalil", "unifi arena", "axiata arena", "stadium nasional", "zepp kl", "zepp kuala lumpur", "idea live", "mega star arena", "mitec", "genting", "arena of stars", "penang", "槟城", "檳城", "johor", "新山", "sabah", "sicc", "kota kinabalu", "sarawak", "kuching", "setia city", "movement kl"],
+    "concert": ["concert", "tour", "live in", "presale", "pre-sale", "on-sale", "onsale", "on sale", "tickets", "ticketing", "演唱会", "演唱會", "巡演", "巡回", "巡迴", "开售", "開售", "公售", "预售", "預售", "门票", "門票", "konsert", "tiket", "fancon", "fan meeting", "fanmeeting", "showcase"]
+  }
+}
