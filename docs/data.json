@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-29 17:48",
+ "generated_at": "2026-09-29 17:57",
  "health": {
   "GoLive": {
    "ok": true,
@@ -76,6 +76,19 @@
    "added": false,
    "added_news": null
   },
+  "A-Lin": {
+   "checked": "2026-09-29",
+   "country": "MY",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": null,
+   "count": 0,
+   "top": [],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null
+  },
   "KARD": {
    "checked": "2026-09-29",
    "country": "SG",
@@ -121,22 +134,6 @@
      "title": "Sabah police recommend deferring gospel singer Israel Houghton's concert - malaysiakini.com",
      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQMnBDVDYyT2tySWlmSXZoUnZWWktFejQxeEp4Y3JEV3E1cGstRElncWRudzdyclVkZHh4elpNTzZHRnpFZEZ4MzNOQ1U0WVFpZjFSXzlnUmJFM2NVWk9VeWprQXgzbmNwa0c5ZjVjRnRLWGVWdjJPaWF2SE9QTHd5RzlYOFpoZVhkNXBrQWd0eGRCeTI5YkxwS3pWbXBVWFZxV1ZGZERoZm5RaDNrY205bnZ3?oc=5",
      "time": "2026-09-28"
-    }
-   ],
-   "platforms": [],
-   "sale_times": [],
-   "added": false,
-   "added_news": null
-  },
-  "Hillsong Worship": {
-   "checked": "2026-09-29",
-   "country": "MY",
-   "count": 1,
-   "top": [
-    {
-     "title": "Top Malaysian singers Nigel Tay and Eylia Guntabid are the opening acts as the Hillsong Worship concert returns to KL and KK - The Star",
-     "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxPWW5aTVIycmxSZkpCNUNTY0RDRGxDamFENWJ5akp0TXZaMWZsTk9NdW9RRmxlVFNWRjYzdEM1cGZ5M29WejgtRGc1cW1qbllvRmFoYndia0VZWjc3TTB0T1oxQnhYd2U3d0xlTnZIV3VFdHh3YjNOUVNodGpGcjVTQ054WlFGUDBYNnRiNUNaeGQ5aTNMTmJDSGh1bWE0dnRUeDRidy1XOEhKajh2SngzNGV2ZUMxa3NpczhDRGVXdWZBaFZpaENwODhXNWZJX3RGbkg0Nm9XNWNFVDE4SjA2d1BJZmVqcDlHVi04SS1qbFZOVHYwaGtnU0lLcFJuNTJWWmVpUnluSjNMT2w4RURkQkhid2ZFdw?oc=5",
-     "time": "2026-09-03"
     }
    ],
    "platforms": [],
@@ -7740,8 +7737,8 @@
    "id": "news-8ef478dde37d0b0c",
    "kind": "新闻",
    "country": "MY",
-   "from": "SirapLimau.com",
-   "title": "Konsert Ejen Ali Raikan Ulang Tahun Ke-10, Jom Pergi! - SirapLimau.com",
+   "from": "siraplimau.com",
+   "title": "Konsert Ejen Ali Raikan Ulang Tahun Ke-10, Jom Pergi! - siraplimau.com",
    "text": null,
    "time": "2026-09-29 12:07",
    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5SYWFLcElFQ1J1WTlBZVpxa3dXcWZuR3ZrWlpHUXVwTjJBaThSelNnc3ZSSDEwWkJnTE5RYlYtWXRpTDVLLVJqdnJFWDFTU2lYRDR5dllxSmM2ejNmcGtjX3BhUTNkZnZValE?oc=5",
@@ -7898,7 +7895,7 @@
    "kind": "人工",
    "from": "你提交的线索",
    "title": "Alin要来马来西亚开演唱会了，但日期不确定",
-   "text": "### 链接\n\nhttps://www.facebook.com/photo/?fbid=1090632037045420&set=a.234679735973992\n\n### 备注（可不填）\n\n_No response_",
+   "text": "### 链接\n\nhttps://www.facebook.com/photo/?fbid=1090632037045420&set=a.234679735973992\n\n### 备注（可不填）\n\n_No response_\n#大块脸：是 A-Lin 亲口说的呀~ 大家坐等更多演唱会消息！\n\n全文：https://xuan.com.my/ent/alin-say-coming-to-malaysia-concert\n\n#XUAN娱乐 #alin #黄丽玲",
    "time": "2026-09-29 09:37",
    "url": "https://www.facebook.com/photo/?fbid=1090632037045420&set=a.234679735973992",
    "issue": "https://github.com/4hYang3074/Malaysia-Concert-Radar/issues/6",
@@ -7908,7 +7905,11 @@
    "matches": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "artist": "A-Lin",
+   "artist_fans": 4601,
+   "artist_region": "华语",
+   "artist_photo": "avatars/a-06dfcd795a5c.jpg",
+   "hidden": null,
    "listed": false
   },
   {
@@ -7955,8 +7956,8 @@
    "id": "news-5ebb35decba5f75d",
    "kind": "新闻",
    "country": "SG",
-   "from": "AsiaOne",
-   "title": "Kard return to Singapore after 7 years for final world tour, fans hope this isn't goodbye , Entertainment News - AsiaOne",
+   "from": "asiaone.com",
+   "title": "Kard return to Singapore after 7 years for final world tour, fans hope this isn't goodbye , Entertainment News - asiaone.com",
    "text": null,
    "time": "2026-09-28 18:50",
    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOOGdia05ZMlNCQlNucEVxWE1DemRSaHdyTGhQSjc4X1IxRVNzbHNSdGxaRFJGSGhmc0Eyal82dF9QMDZwbmtZLVV3Y09tTVBTbzFxMFdNOXAxV1lycWpydjAwUEZJQUxkVEdHMzdRcjBzb0JRM0VYdWhFT2F3TlBqX2ZSYW9iTEhWNVVoMkFB?oc=5",
@@ -7967,7 +7968,7 @@
    "status": "rumor",
    "platforms": [],
    "artist": "KARD",
-   "artist_fans": 138053,
+   "artist_fans": 138054,
    "artist_region": "K-pop",
    "artist_photo": "avatars/a-30cfc141ca14.jpg",
    "hidden": null,
@@ -8489,8 +8490,8 @@
    "id": "news-426726332efd619a",
    "kind": "新闻",
    "country": "SG",
-   "from": "gametrader.sg",
-   "title": "AFA Singapore 2026 Tickets: VIP Sale Opens Monday + Night 2 Finally Revealed - gametrader.sg",
+   "from": "GameTrader.SG",
+   "title": "AFA Singapore 2026 Tickets: VIP Sale Opens Monday + Night 2 Finally Revealed - GameTrader.SG",
    "text": null,
    "time": "2026-09-27 02:19",
    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE8tcHhIbmQ2ZVVONFpaYjAxOWVkNUFPU2dQZFJzZXFlbmo1X1Y1VnlyTW1tYlNZXzJRV1JnQ05Fb0dkb2ZOV1dianpubzZjUklXaGE2MUhyX3A5V0xfV3lNR1MtYmJpdmFuMzAyNTAxSXFiWmZDb280bi1JV0l6UQ?oc=5",
@@ -8507,22 +8508,18 @@
    "id": "news-64bbd8137cbf1c2d",
    "kind": "新闻",
    "country": "SG",
-   "from": "The Times of India",
-   "title": "Anirudh Ravichander surprises fans with unreleased ‘Jailer 2’ song at Singapore concert ahead of Rajinika - The Times of India",
+   "from": "timesofindia.indiatimes.com",
+   "title": "Anirudh Ravichander surprises fans with unreleased ‘Jailer 2’ song at Singapore concert ahead of Rajinika - timesofindia.indiatimes.com",
    "text": null,
    "time": "2026-09-26 22:13",
-   "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNLXZJOHJjVzJjdlNjQUYwTjk2VHJEaVdKSU5qVU1wZFV1ekk4d1VOYk5lQ0VyODNYWlZHQUpMWmJrdDVfcnFHSnBMdjZLcU5nOTNtemhHc1AzOFgyMHd6VUc2OXd3OHN5blFkRUg1bG53UjBNd2syYlpJSG9VbF9fbGhLc2d5XzZidkdUZE9CcnptMXlIS3JSUHlOMmlsMGlJN3JrUnlPeFBCbUJkNDFLa3lnX1JZcjVhNy00NER3VTh1LTNUOXdiUkFQUHFxd0JzZFFnMkk3ay1Kbl9EUmJteFE5QW5ndFZOOHBzTTRkNGxhUndoM2dfMUJRNWtQZll5YTRnZW91S21nSHdZcWsxWUw4bkF3RmRmTWZpTkZJYzhRSGQzQ1JjYXhMc20yYlQ4RkNGTmpMdjVUd0daRFNXTVlCdWpOQlnSAccCQVVfeXFMTS12SThyY1cyY3ZTY0FGME45NlRyRGlXSklOalVNcGRVdXpJOHdVTmJOZUNFcjgzWFpWR0FKTFpia3Q1X3JxR0pwTHY2S3FOZzkzbXpoR3NQMzhYMjB3elVHNjl3dzhzeW5RZEVINWxud1IwTXdrMmJaSUhvVWxfX2xoS3NneV82YnZHVGRPQnJ6bTF5SEtyUlB5TjJpbDBpSTdya1J5T3hQQm1CZDQxS2t5Z19SWXI1YTctNDREd1U4dS0zVDl3YlJBUFBxcXdCc2RRZzJJN2stSm5fRFJibXhROUFuZ3RWTjhwc000ZDRsYVJ3aDNnXzFCUTVrUGZZeWE0Z2VvdUttZ0h3WXFrMVlMOG5Bd0ZkZk1maU5GSWM4UUhkM0NSY2F4THNtMmJUOEZDRk5qTHY1VHdHWkRTV01ZQnVqTkJZ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxQRjhGcnpSMmt0RUR2dktzbWlneXAyRm8xUWN3Sld5b1dnMjJ4bzdlejJjNVk5R1hrTGxyNUZJLW9FZTB3SWwzU3hqMTVfaWxncEZhUHlQb1BobFpKa25TV3dNeDRSZmVQT3RQVjBhNTdaRDZaY3NoSE5LZ1dlUUdTMWh5OG5tU3kyUzNSOVpNZEwyUmpFbGFHWTJ2WU9XcGh1bVdYbHMwUjF6SW1pZHNLbjFzM3Q0QXZoN0VYWVdFYUloSHd0U3FsTTBOYkV2OG9YbE9iNjdBNFFIY0c2djlCblEyaE5DQlFhV1IxdjBiNzZZeGMyRGd0ZVRmRnBQOUdka3VVM2dTOXJ3N2lfbzZ4QVF1Q3J5Rk9vTWVLcm1xZHptQ0FkYmJscHZ1Q0xKYVJzMkViMWwwUG1xS3NFVGVFQU1B0gHHAkFVX3lxTE0tdkk4cmNXMmN2U2NBRjBOOTZUckRpV0pJTmpVTXBkVXV6STh3VU5iTmVDRXI4M1haVkdBSkxaYmt0NV9ycUdKcEx2NktxTmc5M216aEdzUDM4WDIwd3pVRzY5d3c4c3luUWRFSDVsbndSME13azJiWklIb1VsX19saEtzZ3lfNmJ2R1RkT0Jyem0xeUhLclJQeU4yaWwwaUk3cmtSeU94UEJtQmQ0MUtreWdfUllyNWE3LTQ0RHdVOHUtM1Q5d2JSQVBQcXF3QnNkUWcySTdrLUpuX0RSYm14UTlBbmd0Vk44cHNNNGQ0bGFSd2gzZ18xQlE1a1BmWXlhNGdlb3VLbWdId1lxazFZTDhuQXdGZGZNZmlORkljOFFIZDNDUmNheExzbTJiVDhGQ0ZOakx2NVR3R1pEU1dNWUJ1ak5CWQ?oc=5",
    "hints": [],
    "first_seen": "2026-09-29 17:13",
    "matches": [],
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "artist": "Anirudh Ravichander",
-   "artist_fans": 53399,
-   "artist_region": "其他",
-   "artist_photo": "avatars/a-4f2b010fc6d7.jpg",
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
    "listed": false
   },
   {
@@ -8818,12 +8815,8 @@
    "platforms": [
     "Trip.com"
    ],
-   "artist": "izna",
-   "artist_fans": 6989,
-   "artist_region": "K-pop",
-   "artist_photo": "avatars/a-988ff669d789.jpg",
    "image": "posts/ig-8c0ee5a62b633007.jpg",
-   "hidden": null,
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
    "listed": false
   },
   {
@@ -9061,8 +9054,8 @@
    "id": "news-79b630a6cd0697f7",
    "kind": "新闻",
    "country": "SG",
-   "from": "TheSmartLocal",
-   "title": "9 Hotels Near National Stadium, From Affordable To Bougie Options, To Book For Upcoming Concerts In SG - TheSmartLocal",
+   "from": "thesmartlocal.com",
+   "title": "9 Hotels Near National Stadium, From Affordable To Bougie Options, To Book For Upcoming Concerts In SG - thesmartlocal.com",
    "text": null,
    "time": "2026-09-23 17:53",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBkRFZVZ0NiTW54UEZPMV94RlkxdGs5bUpBbVZGSFBlY1Z1bEVOd25GQzlGZ2kyNWxrWXBtVGw1dEpTSzJxU0FtR3B6UWVydERDNFlkU2RaUllEWXlwOWFNRFBfQlpmTW52ZEZoTNIBckFVX3lxTE04ZElvRzdZR2YzOW5nQTJBSVFrNmxtZDFhbGwyZjh5RHdpNVdCbVh0dmhmcWpyOE1ybXFGQ2xhMmstXy1RZ0RxYTlYMmI2aFFUdFJYWEJaOUNGLXFYRHNXZm8yN0lnbzJRTVZsNXdiWG91QQ?oc=5",
@@ -9090,11 +9083,7 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "artist": "Rai",
-   "artist_fans": 6777,
-   "artist_region": "其他",
-   "artist_photo": "avatars/a-d4c498b631b2.jpg",
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
    "listed": false
   },
   {
@@ -9407,10 +9396,6 @@
    "platforms": [
     "Ticket2U"
    ],
-   "artist": "Breaking News",
-   "artist_fans": 367,
-   "artist_region": "其他",
-   "artist_photo": "avatars/a-d30d15d18148.jpg",
    "image": "posts/ig-c2c64f7ed6183fcd.jpg",
    "hidden": "不是演唱会（football）",
    "listed": false
@@ -9439,12 +9424,8 @@
     "Ticket2U"
    ],
    "image_text": "LA LA LAND\nA NIGHT OF DREAMS\nGA EXPERIENCE | SEPTEMBER 25, 2026\nFILMHOUSE AT GOLDEN MILE TOWER\nREDRU IM\nDoe\nEGA experience",
-   "hidden": "贴文说已经开卖或售罄",
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
    "listed": false,
-   "artist": "September",
-   "artist_fans": 18693,
-   "artist_region": "欧美",
-   "artist_photo": "avatars/a-85f2aea244da.jpg",
    "image": "posts/ig-d3a0195748b7f50c.jpg"
   },
   {
@@ -9605,12 +9586,8 @@
    "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
    "platforms": [],
-   "artist": "Hillsong Worship",
-   "artist_fans": 584123,
-   "artist_region": "欧美",
-   "artist_photo": "avatars/a-15aedfa2f076.jpg",
    "image": "posts/ig-2c4b06f41775438c.jpg",
-   "hidden": "演出已经结束（回顾 / 感谢贴）",
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
    "listed": false
   },
   {
@@ -9635,12 +9612,8 @@
     "BookMyShow",
     "Star Planet"
    ],
-   "artist": "Hillsong Worship",
-   "artist_fans": 584123,
-   "artist_region": "欧美",
-   "artist_photo": "avatars/a-15aedfa2f076.jpg",
    "image": "posts/ig-5d1413380bf9952f.jpg",
-   "hidden": null,
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
    "listed": false
   },
   {
@@ -9691,12 +9664,8 @@
    "status": "rumor",
    "avatar": "avatars/ig-starplanetmy.jpg",
    "platforms": [],
-   "artist": "Hillsong Worship",
-   "artist_fans": 584123,
-   "artist_region": "欧美",
-   "artist_photo": "avatars/a-15aedfa2f076.jpg",
    "image": "posts/ig-dc395a405bb09221.jpg",
-   "hidden": "演出已经结束（回顾 / 感谢贴）",
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
    "listed": false
   },
   {
@@ -9752,12 +9721,8 @@
     "MAISEAT",
     "Trip.com"
    ],
-   "artist": "JEONG EUN JI",
-   "artist_fans": 6483,
-   "artist_region": "K-pop",
-   "artist_photo": "avatars/a-feca6f372bf8.jpg",
    "image": "posts/ig-ba3f876f0ef083d0.jpg",
-   "hidden": "公布的开票日期已过",
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
    "listed": false
   }
  ]
