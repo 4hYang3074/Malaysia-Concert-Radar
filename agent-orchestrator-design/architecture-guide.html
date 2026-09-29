@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agent 厨房架构导读</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: single reading column like a kitchen order pad; each section = one "ticket"; diagrams break out slightly wider. */
+:root{
+  --bg:#eef1f4; --paper:#ffffff; --ink:#18212c; --muted:#566273; --line:#cfd7e0; --soft:#e4e9ef;
+  --accent:#2c64d6;
+  --p-pending:#7d8796; --p-research:#7a4fe0; --p-queue:#c58a06; --p-working:#2c64d6; --p-review:#d85a2a; --p-finished:#18925f;
+  --bad:#c9373b; --good:#18925f;
+  --tint-queue:#fbf1d9; --tint-working:#e3ecfc; --tint-review:#fbe6dc; --tint-finished:#dcf3e8; --tint-research:#eee6fd; --tint-pending:#eceef1;
+  --f-display:"Bricolage Grotesque","Noto Sans SC",system-ui,sans-serif;
+  --f-body:"Noto Sans SC",system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#10151c; --paper:#18202a; --ink:#e6ebf1; --muted:#9aa6b5; --line:#2e3a48; --soft:#222c38;
+    --accent:#7aa5ff;
+    --p-pending:#9aa3b1; --p-research:#a98bff; --p-queue:#f0b53a; --p-working:#7aa5ff; --p-review:#ff8a5c; --p-finished:#4fd09a;
+    --bad:#ff6b6f; --good:#4fd09a;
+    --tint-queue:#3a2f12; --tint-working:#1b2a47; --tint-review:#3d2218; --tint-finished:#133426; --tint-research:#2a2144; --tint-pending:#252c36;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10151c; --paper:#18202a; --ink:#e6ebf1; --muted:#9aa6b5; --line:#2e3a48; --soft:#222c38;
+  --accent:#7aa5ff;
+  --p-pending:#9aa3b1; --p-research:#a98bff; --p-queue:#f0b53a; --p-working:#7aa5ff; --p-review:#ff8a5c; --p-finished:#4fd09a;
+  --bad:#ff6b6f; --good:#4fd09a;
+  --tint-queue:#3a2f12; --tint-working:#1b2a47; --tint-review:#3d2218; --tint-finished:#133426; --tint-research:#2a2144; --tint-pending:#252c36;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.75}
+.wrap{max-width:900px;margin:0 auto;padding-inline:16px;padding-block:32px 80px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.25;margin:0}
+h1{font-size:clamp(30px,6vw,48px);font-weight:800;letter-spacing:-.01em}
+h2{font-size:clamp(22px,4vw,30px);font-weight:800}
+h3{font-size:18px;font-weight:600;margin-top:8px}
+p{margin:0;max-width:68ch}
+code,.mono{font-family:var(--f-mono);font-size:.88em}
+code{background:var(--soft);padding:1px 6px;border-radius:4px}
+a{color:var(--accent)}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.hero{display:grid;gap:14px;padding-block:8px 28px;border-bottom:2px dashed var(--line)}
+.hero .lede{font-size:18px;color:var(--muted)}
+.tldr{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);padding:14px 16px;border-radius:6px;max-width:68ch}
+.tldr b{color:var(--accent)}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.toc a{font-size:13px;text-decoration:none;color:var(--ink);background:var(--paper);border:1px solid var(--line);padding:3px 10px;border-radius:999px}
+.toc a:hover{border-color:var(--accent)}
+section{display:grid;gap:16px;padding-block:40px 8px}
+.sec-head{display:grid;gap:4px}
+.ticket-no{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+figure{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px;display:grid;gap:8px;min-width:0}
+figure .scroll{overflow-x:auto}
+figure svg{display:block;width:100%;height:auto;min-width:560px;color:var(--ink)}
+figcaption{font-size:14px;color:var(--muted)}
+.callout{display:grid;gap:6px;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:14px 16px}
+.callout.warn{border-color:var(--p-review)}
+.callout.warn .tag{color:var(--p-review)}
+.callout.good .tag{color:var(--good)}
+.callout .tag{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--accent)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.grid2>*{min-width:0}
+ul.clean{margin:0;padding-left:1.2em;display:grid;gap:4px}
+.tbl{overflow-x:auto;background:var(--paper);border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--soft);vertical-align:top}
+th{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:0}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:12px;padding:1px 8px;border-radius:999px;font-weight:600;white-space:nowrap}
+.pill.pending{background:var(--tint-pending);color:var(--p-pending)}
+.pill.research{background:var(--tint-research);color:var(--p-research)}
+.pill.queue{background:var(--tint-queue);color:var(--p-queue)}
+.pill.working{background:var(--tint-working);color:var(--p-working)}
+.pill.review{background:var(--tint-review);color:var(--p-review)}
+.pill.finished{background:var(--tint-finished);color:var(--p-finished)}
+.notes{font-family:var(--f-mono);font-size:13px;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:14px 16px;white-space:pre-wrap;overflow-x:auto;line-height:1.6}
+pre.mermaid{background:var(--paper);margin:0;overflow-x:auto;font-size:13px;text-align:center}
+.mm-fallback{font-size:13px;color:var(--muted)}
+details{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+details summary{cursor:pointer;font-weight:500}
+details[open] summary{margin-bottom:6px}
+.check li{list-style:none;margin-left:-1.2em}
+.check li::before{content:"☐ ";color:var(--muted)}
+footer{margin-top:48px;padding-top:16px;border-top:2px dashed var(--line);font-size:13px;color:var(--muted)}
+
+/* SVG classes (themed through tokens) */
+svg text{fill:var(--ink);font-family:var(--f-body);font-size:13px}
+svg .sm{font-size:11.5px;fill:var(--muted)}
+svg .mono{font-family:var(--f-mono);font-size:11.5px}
+svg .b{font-weight:700}
+svg .box{fill:var(--paper);stroke:var(--line);stroke-width:1.5}
+svg .box2{fill:var(--soft);stroke:var(--line);stroke-width:1.2}
+svg .ln{stroke:var(--muted);stroke-width:1.6;fill:none}
+svg .ln-d{stroke:var(--muted);stroke-width:1.6;fill:none;stroke-dasharray:5 4}
+svg .ln-bad{stroke:var(--bad);stroke-width:1.8;fill:none;stroke-dasharray:5 4}
+svg .ln-acc{stroke:var(--accent);stroke-width:2;fill:none}
+svg .ah{fill:var(--muted)}
+svg .ah-bad{fill:var(--bad)}
+svg .ah-acc{fill:var(--accent)}
+svg .t-bad{fill:var(--bad)}
+svg .t-good{fill:var(--good)}
+svg .t-acc{fill:var(--accent)}
+svg .f-pending{fill:var(--p-pending)} svg .f-research{fill:var(--p-research)} svg .f-queue{fill:var(--p-queue)}
+svg .f-working{fill:var(--p-working)} svg .f-review{fill:var(--p-review)} svg .f-finished{fill:var(--p-finished)}
+svg .tint-queue{fill:var(--tint-queue)} svg .tint-working{fill:var(--tint-working)} svg .tint-review{fill:var(--tint-review)}
+svg .tint-finished{fill:var(--tint-finished)} svg .tint-research{fill:var(--tint-research)} svg .tint-pending{fill:var(--tint-pending)}
+svg .onfill{fill:#ffffff;font-weight:700}
+svg .axis{stroke:var(--line);stroke-width:1.5}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow">Architecture Guide · 小白友好版 · v1</div>
+  <h1>Agent 厨房：怎么让一堆 AI 自己把活干完</h1>
+  <p class="lede">你想做的东西说白了就是一间<b>全自动厨房</b>：你点菜（idea），大家确认菜单（research），单子挂起来排队（queue），厨师开火（working），主厨试吃（review），上菜（finished）。这份导读用大量图来讲清楚：谁负责什么、出事了怎么办、为什么这样设计。</p>
+  <div class="tldr"><b>一句话 TL;DR：</b>任务状态全部存在<b>数据库</b>；一个<b>普通代码写的调度器</b>负责派单；AI agent 只是<b>随时可以被换掉的临时工</b>，干一段就把进度写进 git 和交接本。这样 agent 崩了、额度用完了，任务都不会丢，时间到了自动接着干。</div>
+  <nav class="toc" aria-label="目录">
+    <a href="#analogy">厨房比喻</a><a href="#memory">AI 没记忆</a><a href="#manager">经理别下厨</a><a href="#arch">全景图</a><a href="#phases">6 个 Phase</a><a href="#uml-state">状态图 UML</a><a href="#life">任务的一生</a><a href="#lease">Lease</a><a href="#quota">额度恢复</a><a href="#handoff">交接本</a><a href="#research">Research</a><a href="#review">Review</a><a href="#routing">选模型</a><a href="#data">数据表</a><a href="#failures">出事了</a><a href="#security">安全</a><a href="#deploy">放哪跑</a><a href="#roadmap">路线图</a><a href="#quiz">小测验</a>
+  </nav>
+</header>
+
+<!-- 1 -->
+<section id="analogy">
+  <div class="sec-head"><span class="ticket-no">TICKET 01</span><h2>先用厨房来想象整个系统</h2></div>
+  <p>别急着想代码。先想象一间餐厅：客人点菜、服务员确认细节、单子挂上铁轨、厨师做菜、主厨试吃、上菜。<b>最关键的一个角色是「厨房经理」</b>：他只负责看单子、派活，<b>自己不下厨</b>。</p>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 900 300" role="img" aria-label="厨房比喻：客人点菜到上菜五个站点，上方厨房经理只负责派单">
+      <defs>
+        <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker>
+      </defs>
+      <!-- manager -->
+      <rect x="400" y="14" width="280" height="56" rx="8" class="box2"/>
+      <text x="540" y="38" text-anchor="middle" class="b">厨房经理 = Scheduler</text>
+      <text x="540" y="58" text-anchor="middle" class="sm">只看单子、派活，自己不下厨</text>
+      <path d="M470,70 L450,118" class="ln-d" marker-end="url(#a1)"/>
+      <path d="M610,70 L630,118" class="ln-d" marker-end="url(#a1)"/>
+      <text x="420" y="100" text-anchor="end" class="sm">取单</text>
+      <text x="650" y="100" class="sm">派给有空的厨师</text>
+      <!-- stations -->
+      <g>
+        <rect x="15" y="120" width="150" height="100" rx="10" class="box"/>
+        <text x="90" y="160" text-anchor="middle" class="b">客人点菜</text>
+        <text x="90" y="182" text-anchor="middle" class="sm">You 丢一个 idea</text>
+        <rect x="195" y="120" width="150" height="100" rx="10" class="box"/>
+        <text x="270" y="160" text-anchor="middle" class="b">确认细节</text>
+        <text x="270" y="182" text-anchor="middle" class="sm">要辣吗？几人份？</text>
+        <rect x="375" y="120" width="150" height="100" rx="10" class="box"/>
+        <text x="450" y="160" text-anchor="middle" class="b">单子挂铁轨</text>
+        <text x="450" y="182" text-anchor="middle" class="sm">排队等厨师</text>
+        <rect x="555" y="120" width="150" height="100" rx="10" class="box"/>
+        <text x="630" y="160" text-anchor="middle" class="b">厨师开火</text>
+        <text x="630" y="182" text-anchor="middle" class="sm">AI agents 干活</text>
+        <rect x="735" y="120" width="150" height="100" rx="10" class="box"/>
+        <text x="810" y="160" text-anchor="middle" class="b">主厨试吃</text>
+        <text x="810" y="182" text-anchor="middle" class="sm">不合格就退回</text>
+      </g>
+      <path d="M165,170 L193,170" class="ln" marker-end="url(#a1)"/>
+      <path d="M345,170 L373,170" class="ln" marker-end="url(#a1)"/>
+      <path d="M525,170 L553,170" class="ln" marker-end="url(#a1)"/>
+      <path d="M705,170 L733,170" class="ln" marker-end="url(#a1)"/>
+      <!-- phase mapping -->
+      <rect x="45" y="238" width="90" height="24" rx="12" class="tint-pending"/><text x="90" y="255" text-anchor="middle" class="mono f-pending">pending</text>
+      <rect x="225" y="238" width="90" height="24" rx="12" class="tint-research"/><text x="270" y="255" text-anchor="middle" class="mono f-research">research</text>
+      <rect x="405" y="238" width="90" height="24" rx="12" class="tint-queue"/><text x="450" y="255" text-anchor="middle" class="mono f-queue">queue</text>
+      <rect x="585" y="238" width="90" height="24" rx="12" class="tint-working"/><text x="630" y="255" text-anchor="middle" class="mono f-working">working</text>
+      <rect x="745" y="238" width="130" height="24" rx="12" class="tint-review"/><text x="810" y="255" text-anchor="middle" class="mono f-review">review→finished</text>
+      <text x="450" y="290" text-anchor="middle" class="sm">下面那排彩色标签 = 你设计的 6 个 phase</text>
+    </svg>
+    </div>
+    <figcaption>每个厨房站点刚好对应你的一个 phase。厨房经理（调度器）横跨 queue 和 working，只负责「谁来做、什么时候做」。</figcaption>
+  </figure>
+</section>
+
+<!-- 2 -->
+<section id="memory">
+  <div class="sec-head"><span class="ticket-no">TICKET 02</span><h2>最重要的观念：AI agent 没有记忆</h2></div>
+  <p>这个一定要先搞懂，后面所有设计都是从这里推出来的。AI 模型每次都是「看一整段对话 → 回一句」，<b>它自己什么都不记得</b>。它的「记忆」其实是一块白板（context），写满了会被压缩、会话断了就没了。</p>
+  <p>所以正确的做法是：<b>重要的东西都写进笔记本（数据库 + git）</b>。白板随便擦，笔记本永远在。</p>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 820 250" role="img" aria-label="左边白板会被擦掉，右边数据库笔记本永久保存，agent 每一步都写进笔记本">
+      <defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="ah-acc"/></marker></defs>
+      <!-- whiteboard -->
+      <rect x="20" y="30" width="300" height="180" rx="8" class="box"/>
+      <text x="170" y="22" text-anchor="middle" class="b">白板 = Agent 的 context</text>
+      <line x1="45" y1="70" x2="260" y2="70" class="ln"/>
+      <line x1="45" y1="95" x2="230" y2="95" class="ln"/>
+      <line x1="45" y1="120" x2="280" y2="120" class="ln-d"/>
+      <line x1="45" y1="145" x2="200" y2="145" class="ln-d"/>
+      <rect x="200" y="150" width="96" height="36" rx="6" class="tint-review"/>
+      <text x="248" y="173" text-anchor="middle" class="f-review b">会被擦掉</text>
+      <text x="170" y="232" text-anchor="middle" class="sm">崩溃 / 额度用完 / 太长被压缩 → 内容没了</text>
+      <!-- arrow -->
+      <path d="M330,120 L480,120" class="ln-acc" marker-end="url(#a2)"/>
+      <text x="405" y="108" text-anchor="middle" class="t-acc b">每一步都抄下来</text>
+      <text x="405" y="142" text-anchor="middle" class="sm">commit + handoff notes</text>
+      <!-- notebook -->
+      <rect x="490" y="30" width="310" height="180" rx="8" class="box"/>
+      <text x="645" y="22" text-anchor="middle" class="b">笔记本 = 数据库 + Git</text>
+      <rect x="490" y="30" width="18" height="180" class="tint-finished"/>
+      <text x="522" y="64" class="mono">#12 · working · try 2</text>
+      <text x="522" y="90" class="mono">done: API 路由</text>
+      <text x="522" y="116" class="mono">next: 写测试</text>
+      <text x="522" y="142" class="mono">branch: task/12-alert</text>
+      <text x="522" y="178" class="t-good b">永久保存，谁来都能接着做</text>
+      <text x="645" y="232" text-anchor="middle" class="sm">新 agent 一来就先读笔记本</text>
+    </svg>
+    </div>
+    <figcaption>白板（context）会丢，笔记本（DB + git）不会。所有「进度」都必须住在右边。</figcaption>
+  </figure>
+  <div class="callout"><span class="tag">这也解释了我（Claude）怎么「自动继续」</span><p>我自己不会醒来。是外面的系统（定时器、webhook、额度恢复后的重试）往会话里<b>丢一条新消息</b>，我读完之前的记录或摘要，就接着干了。你的系统也照这个思路做：「继续」这件事由<b>调度器</b>负责，不由 AI 负责。</p></div>
+</section>
+
+<!-- 3 -->
+<section id="manager">
+  <div class="sec-head"><span class="ticket-no">TICKET 03</span><h2>经理别下厨：把「管理 Agent」换成「调度器」</h2></div>
+  <p>你原本想的是「一个 Agent 管所有子 Agent」。听起来很酷，但有个大坑：让 LLM 当经理，它要一直记着谁在干嘛、谁卡住了、额度剩多少。这些事<b>又贵、又慢、还会记错</b>。派单、重试、数额度都是有标准答案的问题，用几十行普通代码就能做得又稳又便宜。</p>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 900 320" role="img" aria-label="左：LLM 经理靠记忆管理子 agent，容易出错；右：代码调度器读写数据库再派单，稳定">
+      <defs>
+        <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker>
+        <marker id="a3b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="ah-bad"/></marker>
+      </defs>
+      <text x="215" y="24" text-anchor="middle" class="b t-bad">原本的想法：LLM 当经理</text>
+      <text x="665" y="24" text-anchor="middle" class="b t-good">建议：代码当经理</text>
+      <line x1="450" y1="10" x2="450" y2="310" class="axis"/>
+      <!-- left -->
+      <rect x="130" y="44" width="170" height="54" rx="27" class="tint-review"/>
+      <text x="215" y="76" text-anchor="middle" class="b">Manager LLM</text>
+      <rect x="250" y="104" width="180" height="40" rx="8" class="box"/>
+      <text x="340" y="129" text-anchor="middle" class="sm">「B 刚才做到哪了来着？」</text>
+      <rect x="30" y="200" width="110" height="44" rx="8" class="box"/><text x="85" y="227" text-anchor="middle">Agent A</text>
+      <rect x="160" y="200" width="110" height="44" rx="8" class="box"/><text x="215" y="227" text-anchor="middle">Agent B</text>
+      <rect x="290" y="200" width="110" height="44" rx="8" class="box"/><text x="345" y="227" text-anchor="middle">Agent C</text>
+      <path d="M180,98 L95,198" class="ln-bad" marker-end="url(#a3b)"/>
+      <path d="M215,98 L215,198" class="ln-bad" marker-end="url(#a3b)"/>
+      <path d="M250,98 L335,198" class="ln-bad" marker-end="url(#a3b)"/>
+      <text x="215" y="272" text-anchor="middle" class="sm">经理的记忆 = 唯一的状态来源</text>
+      <text x="215" y="294" text-anchor="middle" class="t-bad">经理额度用完，整间厨房停工</text>
+      <!-- right -->
+      <rect x="490" y="44" width="150" height="54" rx="8" class="box2"/>
+      <text x="565" y="68" text-anchor="middle" class="b">Scheduler</text>
+      <text x="565" y="88" text-anchor="middle" class="sm">普通代码 · 每 30s</text>
+      <rect x="710" y="44" width="150" height="54" rx="14" class="tint-finished"/>
+      <text x="785" y="68" text-anchor="middle" class="b">Task DB</text>
+      <text x="785" y="88" text-anchor="middle" class="sm">唯一真相</text>
+      <path d="M640,62 L708,62" class="ln" marker-end="url(#a3)"/>
+      <path d="M708,82 L642,82" class="ln" marker-end="url(#a3)"/>
+      <text x="675" y="54" text-anchor="middle" class="sm">读写</text>
+      <rect x="480" y="200" width="110" height="44" rx="8" class="box"/><text x="535" y="227" text-anchor="middle">Agent A</text>
+      <rect x="610" y="200" width="110" height="44" rx="8" class="box"/><text x="665" y="227" text-anchor="middle">Agent B</text>
+      <rect x="740" y="200" width="110" height="44" rx="8" class="box"/><text x="795" y="227" text-anchor="middle">Agent C</text>
+      <path d="M540,98 L535,198" class="ln" marker-end="url(#a3)"/>
+      <path d="M580,98 L660,198" class="ln" marker-end="url(#a3)"/>
+      <text x="520" y="160" text-anchor="end" class="sm">派单</text>
+      <path d="M795,198 L790,100" class="ln-d" marker-end="url(#a3)"/>
+      <text x="800" y="160" class="sm">回报进度</text>
+      <text x="665" y="272" text-anchor="middle" class="sm">任何一个倒下，DB 里都有记录</text>
+      <text x="665" y="294" text-anchor="middle" class="t-good">Agent 随时可替换</text>
+    </svg>
+    </div>
+    <figcaption>区别只有一条线：状态存在「经理的脑子」还是「数据库」。右边任何一个角色崩了，都能从 DB 恢复。</figcaption>
+  </figure>
+  <div class="callout good"><span class="tag">那 LLM 还能帮忙管事吗？</span><p>可以，但只当<b>顾问</b>：比如帮你把一个大 spec 拆成 5 个子任务、建议用哪个模型。它的输出写进 DB，由你批准；真正派单的还是调度器。</p></div>
+</section>
+
+<!-- 4 -->
+<section id="arch">
+  <div class="sec-head"><span class="ticket-no">TICKET 04</span><h2>全景图：系统里都有谁</h2></div>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 920 400" role="img" aria-label="系统架构：你、看板、API、数据库、调度器、模型路由、worker、git、审查与通知">
+      <defs><marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs>
+      <!-- row 1 -->
+      <rect x="20" y="40" width="140" height="56" rx="28" class="tint-research"/><text x="90" y="73" text-anchor="middle" class="b">你 You</text>
+      <rect x="190" y="40" width="140" height="56" rx="8" class="box"/><text x="260" y="64" text-anchor="middle" class="b">Board UI</text><text x="260" y="84" text-anchor="middle" class="sm">看板 / 聊天</text>
+      <rect x="380" y="40" width="140" height="56" rx="8" class="box"/><text x="450" y="64" text-anchor="middle" class="b">API</text><text x="450" y="84" text-anchor="middle" class="sm">检查每个转换</text>
+      <rect x="570" y="40" width="140" height="56" rx="16" class="tint-finished"/><text x="640" y="64" text-anchor="middle" class="b">Task DB</text><text x="640" y="84" text-anchor="middle" class="sm">唯一真相</text>
+      <!-- row 2 -->
+      <rect x="20" y="170" width="140" height="56" rx="8" class="box"/><text x="90" y="194" text-anchor="middle" class="b">Notifier</text><text x="90" y="214" text-anchor="middle" class="sm">推送到手机</text>
+      <rect x="190" y="170" width="140" height="56" rx="8" class="tint-review"/><text x="260" y="194" text-anchor="middle" class="b">Checks + Reviewer</text><text x="260" y="214" text-anchor="middle" class="sm">测试 + 另一个模型</text>
+      <rect x="570" y="170" width="140" height="56" rx="8" class="box2"/><text x="640" y="194" text-anchor="middle" class="b">Scheduler</text><text x="640" y="214" text-anchor="middle" class="sm">每 30s 巡一次</text>
+      <rect x="760" y="170" width="140" height="56" rx="8" class="box"/><text x="830" y="194" text-anchor="middle" class="b">Router + Quota</text><text x="830" y="214" text-anchor="middle" class="sm">选模型 / 数额度</text>
+      <!-- row 3 -->
+      <rect x="380" y="300" width="140" height="56" rx="8" class="tint-working"/><text x="450" y="324" text-anchor="middle" class="b">Worker A</text><text x="450" y="344" text-anchor="middle" class="sm">Agent + 沙盒</text>
+      <rect x="570" y="300" width="140" height="56" rx="8" class="tint-working"/><text x="640" y="324" text-anchor="middle" class="b">Worker B</text><text x="640" y="344" text-anchor="middle" class="sm">Agent + 沙盒</text>
+      <rect x="760" y="300" width="140" height="56" rx="8" class="box"/><text x="830" y="324" text-anchor="middle" class="b">Git</text><text x="830" y="344" text-anchor="middle" class="sm">1 任务 1 分支</text>
+      <!-- arrows -->
+      <path d="M160,68 L188,68" class="ln" marker-end="url(#a4)"/>
+      <path d="M330,68 L378,68" class="ln" marker-end="url(#a4)"/>
+      <text x="354" y="60" text-anchor="middle" class="sm">HTTP</text>
+      <path d="M520,68 L568,68" class="ln" marker-start="url(#a4)" marker-end="url(#a4)"/>
+      <text x="544" y="60" text-anchor="middle" class="sm">唯一写入</text>
+      <path d="M640,98 L640,168" class="ln" marker-start="url(#a4)" marker-end="url(#a4)"/>
+      <text x="648" y="138" class="sm">读写</text>
+      <path d="M710,198 L758,198" class="ln" marker-end="url(#a4)"/>
+      <text x="734" y="190" text-anchor="middle" class="sm">问</text>
+      <path d="M600,226 L470,298" class="ln" marker-end="url(#a4)"/>
+      <path d="M640,226 L640,298" class="ln" marker-end="url(#a4)"/>
+      <text x="648" y="268" class="sm">派单 + lease</text>
+      <path d="M450,298 L450,98" class="ln-d" marker-end="url(#a4)"/>
+      <text x="458" y="150" class="sm">heartbeat</text>
+      <text x="458" y="166" class="sm">/ 结果</text>
+      <path d="M710,328 L758,328" class="ln" marker-end="url(#a4)"/>
+      <text x="734" y="320" text-anchor="middle" class="sm">commit</text>
+      <path d="M410,98 L410,198 L332,198" class="ln" marker-end="url(#a4)"/>
+      <text x="370" y="190" text-anchor="middle" class="sm">进 review</text>
+      <path d="M190,198 L162,198" class="ln" marker-end="url(#a4)"/>
+      <path d="M90,170 L90,98" class="ln" marker-end="url(#a4)"/>
+      <text x="98" y="138" class="sm">需要你</text>
+    </svg>
+    </div>
+    <figcaption>三条规矩：① 只有 API 能写 DB；② Worker 永远不碰 main 分支；③ 调度器派单时不调用 LLM。</figcaption>
+  </figure>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>组件</th><th>是什么</th><th>厨房里的角色</th></tr></thead>
+      <tbody>
+        <tr><td><b>Board UI</b></td><td>网页或 CLI，看任务、点按钮推进 phase、research 时聊天</td><td>点菜台</td></tr>
+        <tr><td><b>API</b></td><td>唯一能改 DB 的服务，每次改 phase 都检查规则</td><td>收银台（不合规的单子退回）</td></tr>
+        <tr><td><b>Task DB</b></td><td>SQLite 起步，之后换 Postgres</td><td>订单本</td></tr>
+        <tr><td><b>Scheduler</b></td><td>定时循环：回收超时任务、放行等额度的任务、派单</td><td>厨房经理</td></tr>
+        <tr><td><b>Router + Quota</b></td><td>按规则表选模型，记住每个模型还剩多少额度</td><td>排班表</td></tr>
+        <tr><td><b>Worker</b></td><td>一个 agent 在隔离的 git worktree 里做一个任务</td><td>厨师</td></tr>
+        <tr><td><b>Checks + Reviewer</b></td><td>自动测试 + 另一个模型审代码</td><td>试吃主厨</td></tr>
+        <tr><td><b>Notifier</b></td><td>需要你决定、或任务完成时推送给你</td><td>叫号器</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 5 -->
+<section id="phases">
+  <div class="sec-head"><span class="ticket-no">TICKET 05</span><h2>6 个 Phase：谁来推下一格？</h2></div>
+  <p>你的 6 个 phase 设计得很好，但要再补一条规则：<b>每一次移动都要写清楚「谁来推」和「推之前要满足什么」</b>。不然任务会莫名其妙跑到不该去的格子。</p>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 960 330" role="img" aria-label="六列看板，列之间标出由谁推进；下方弧线表示打回与重新排队">
+      <defs>
+        <marker id="a5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker>
+        <marker id="a5b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="ah-bad"/></marker>
+      </defs>
+      <!-- columns -->
+      <g>
+        <rect x="10" y="20" width="135" height="170" rx="8" class="tint-pending"/><rect x="10" y="20" width="135" height="30" rx="8" class="f-pending"/><text x="77" y="41" text-anchor="middle" class="onfill mono">pending</text>
+        <rect x="172" y="20" width="135" height="170" rx="8" class="tint-research"/><rect x="172" y="20" width="135" height="30" rx="8" class="f-research"/><text x="239" y="41" text-anchor="middle" class="onfill mono">research</text>
+        <rect x="334" y="20" width="135" height="170" rx="8" class="tint-queue"/><rect x="334" y="20" width="135" height="30" rx="8" class="f-queue"/><text x="401" y="41" text-anchor="middle" class="onfill mono">queue</text>
+        <rect x="496" y="20" width="135" height="170" rx="8" class="tint-working"/><rect x="496" y="20" width="135" height="30" rx="8" class="f-working"/><text x="563" y="41" text-anchor="middle" class="onfill mono">working</text>
+        <rect x="658" y="20" width="135" height="170" rx="8" class="tint-review"/><rect x="658" y="20" width="135" height="30" rx="8" class="f-review"/><text x="725" y="41" text-anchor="middle" class="onfill mono">review</text>
+        <rect x="820" y="20" width="135" height="170" rx="8" class="tint-finished"/><rect x="820" y="20" width="135" height="30" rx="8" class="f-finished"/><text x="887" y="41" text-anchor="middle" class="onfill mono">finished</text>
+      </g>
+      <!-- cards -->
+      <rect x="22" y="62" width="111" height="34" rx="5" class="box"/><text x="77" y="84" text-anchor="middle" class="sm">演唱会提醒 App</text>
+      <rect x="22" y="104" width="111" height="34" rx="5" class="box"/><text x="77" y="126" text-anchor="middle" class="sm">票价爬虫</text>
+      <rect x="184" y="62" width="111" height="34" rx="5" class="box"/><text x="239" y="84" text-anchor="middle" class="sm">登录系统</text>
+      <rect x="346" y="62" width="111" height="34" rx="5" class="box"/><text x="401" y="84" text-anchor="middle" class="sm">通知模块</text>
+      <rect x="346" y="104" width="111" height="34" rx="5" class="box"/><text x="401" y="126" text-anchor="middle" class="sm">⏳ 等额度</text>
+      <rect x="508" y="62" width="111" height="34" rx="5" class="box"/><text x="563" y="84" text-anchor="middle" class="sm">数据库 schema</text>
+      <rect x="508" y="104" width="111" height="34" rx="5" class="box"/><text x="563" y="126" text-anchor="middle" class="sm">API 路由</text>
+      <rect x="670" y="62" width="111" height="34" rx="5" class="box"/><text x="725" y="84" text-anchor="middle" class="sm">首页 UI</text>
+      <rect x="832" y="62" width="111" height="34" rx="5" class="box"/><text x="887" y="84" text-anchor="middle" class="sm">README</text>
+      <!-- who pushes -->
+      <text x="158" y="212" text-anchor="middle" class="b">你</text>
+      <text x="320" y="212" text-anchor="middle" class="b">你批准</text>
+      <text x="482" y="212" text-anchor="middle" class="b">调度器</text>
+      <text x="644" y="212" text-anchor="middle" class="b">Worker</text>
+      <text x="806" y="212" text-anchor="middle" class="b">审查通过</text>
+      <path d="M145,110 L170,110" class="ln" marker-end="url(#a5)"/>
+      <path d="M307,110 L332,110" class="ln" marker-end="url(#a5)"/>
+      <path d="M469,110 L494,110" class="ln" marker-end="url(#a5)"/>
+      <path d="M631,110 L656,110" class="ln" marker-end="url(#a5)"/>
+      <path d="M793,110 L818,110" class="ln" marker-end="url(#a5)"/>
+      <!-- back arcs -->
+      <path d="M725,192 C725,260 563,260 563,194" class="ln-bad" marker-end="url(#a5b)"/>
+      <text x="644" y="268" text-anchor="middle" class="t-bad sm">打回（最多 3 轮）</text>
+      <path d="M563,192 C563,300 401,300 401,194" class="ln-bad" marker-end="url(#a5b)"/>
+      <text x="482" y="312" text-anchor="middle" class="t-bad sm">额度用完 / 超时 → 回去排队</text>
+    </svg>
+    </div>
+    <figcaption>往右走的箭头下面写着「谁推」；下面两条红弧线是「往回走」的路。你只需要负责最前面两次推动，其他全自动。</figcaption>
+  </figure>
+
+  <h3>别忘了「卡住」的状态：用 Flag，不用新 Phase</h3>
+  <p>Phase 说的是任务<b>在哪一格</b>，Flag 说的是它<b>为什么不动</b>。给卡片贴个小标签就行，看板不用变复杂。</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Flag</th><th>什么时候贴上</th><th>什么时候撕掉</th></tr></thead>
+      <tbody>
+        <tr><td><code>blocked_needs_human</code></td><td>Agent 有问题 spec 里找不到答案</td><td>你在 UI 回答</td></tr>
+        <tr><td><code>waiting_quota</code></td><td>模型回 429 / 额度用完</td><td>到了 <code>not_before</code> 时间</td></tr>
+        <tr><td><code>failed</code></td><td>重试次数用完、预算超了、review 打回太多次</td><td>你改 spec 后重新排队，或取消</td></tr>
+        <tr><td><code>cancelled</code></td><td>你取消</td><td>不会撕（终态）</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 6 -->
+<section id="uml-state">
+  <div class="sec-head"><span class="ticket-no">TICKET 06</span><h2>UML 状态图（正式版）</h2></div>
+  <p>跟上面看板是同一件事，换成工程师看的 UML 标准画法。以后写代码时，这张图就是你的<b>状态机规格</b>：没在图上的箭头，API 一律拒绝。</p>
+  <figure>
+<pre class="mermaid">
+stateDiagram-v2
+    [*] --> pending: 丢一个 idea
+    pending --> research: 你开始讨论
+    research --> pending: 先放着
+    research --> queue: 你批准 spec
+    queue --> working: 调度器派单 (lease)
+    working --> queue: lease 超时 / 额度用完
+    working --> review: 做完 + 已 push
+    review --> working: 测试失败 / 被打回
+    review --> finished: 全部通过
+    finished --> [*]
+</pre>
+    <figcaption>Mermaid 图需要联网加载渲染库；离线时会显示成文字版，内容一样。</figcaption>
+  </figure>
+</section>
+
+<!-- 7 -->
+<section id="life">
+  <div class="sec-head"><span class="ticket-no">TICKET 07</span><h2>一个任务的一生（含额度用完的情况）</h2></div>
+  <p>这张 UML 时序图从上往下读，跟看漫画一样。重点看中间那段：<b>429 额度用完之后，Worker 直接下班</b>，过几个小时换一个全新的 Worker 接手，靠的就是 git 分支和交接本。</p>
+  <figure>
+<pre class="mermaid">
+sequenceDiagram
+    participant S as 调度器 Scheduler
+    participant A as API + DB
+    participant W as Worker (Agent)
+    participant M as 模型供应商
+    participant G as Git 分支
+
+    S->>A: 抢单 claim(task) → 拿到 lease
+    S->>W: 开工 start(task, model)
+    W->>A: 读 spec + 交接本
+    W->>G: checkout 任务分支
+    loop 每做完一步
+        W->>M: 让模型干一步
+        M-->>W: 结果
+        W->>G: commit 存档
+        W->>A: heartbeat + 更新交接本
+    end
+    M-->>W: 429 额度用完 (5 小时后恢复)
+    W->>A: 报告 quota + 写好交接本
+    A->>A: working → queue, not_before = 恢复时间
+    Note over S,A: …… 5 小时过去 ……
+    S->>A: 时间到，再次 claim
+    S->>W: 新 Worker 开工
+    W->>A: 读 spec + 交接本
+    W->>G: checkout 同一分支（从上次 commit 继续）
+    W->>A: 完成 done(summary)
+    A->>A: working → review
+</pre>
+    <figcaption>「额度恢复后自动继续」其实就是：Worker 下班 → 任务回 queue 并记上最早可开工时间 → 调度器到点再派单。</figcaption>
+  </figure>
+</section>
+
+<!-- 8 -->
+<section id="lease">
+  <div class="sec-head"><span class="ticket-no">TICKET 08</span><h2>Lease + Heartbeat：厨师要定时喊一声「我还活着」</h2></div>
+  <p><b>Lease（租约）</b>就像借书证上的到期日：Worker 接单时拿到 10 分钟的租约，每 2 分钟打一次卡（heartbeat）就续期。如果 Worker 突然死掉、不打卡了，租约一到期，调度器就把单子收回去给别人。<b>不用你半夜起来手动救任务。</b></p>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 900 220" role="img" aria-label="时间轴：0 分钟接单，2、4 分钟心跳续约，5 分钟崩溃，14 分钟租约到期回收，15 分钟新 worker 接手">
+      <defs><marker id="a8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs>
+      <!-- axis: x = 60 + t*48 -->
+      <line x1="60" y1="150" x2="860" y2="150" class="axis"/>
+      <g class="sm">
+        <text x="60" y="172" text-anchor="middle" class="sm">0</text>
+        <text x="156" y="172" text-anchor="middle" class="sm">2</text>
+        <text x="252" y="172" text-anchor="middle" class="sm">4</text>
+        <text x="300" y="172" text-anchor="middle" class="sm">5</text>
+        <text x="540" y="172" text-anchor="middle" class="sm">10</text>
+        <text x="732" y="172" text-anchor="middle" class="sm">14</text>
+        <text x="780" y="172" text-anchor="middle" class="sm">15</text>
+        <text x="860" y="172" text-anchor="middle" class="sm">分钟</text>
+      </g>
+      <!-- worker alive -->
+      <rect x="60" y="120" width="240" height="22" rx="4" class="f-working"/>
+      <text x="180" y="136" text-anchor="middle" class="onfill">Worker A 干活中</text>
+      <!-- dead zone -->
+      <rect x="300" y="120" width="432" height="22" rx="4" class="tint-review"/>
+      <text x="516" y="136" text-anchor="middle" class="f-review b">A 已经死了，但租约还没到期</text>
+      <!-- new worker -->
+      <rect x="780" y="120" width="80" height="22" rx="4" class="f-working"/>
+      <text x="820" y="136" text-anchor="middle" class="onfill">Worker B</text>
+      <!-- lease lines -->
+      <line x1="540" y1="60" x2="540" y2="118" class="ln-d"/><text x="540" y="54" text-anchor="middle" class="sm">原租约 10'</text>
+      <line x1="636" y1="80" x2="636" y2="118" class="ln-d"/><text x="636" y="74" text-anchor="middle" class="sm">续到 12'</text>
+      <line x1="732" y1="40" x2="732" y2="118" class="ln-bad"/><text x="732" y="34" text-anchor="middle" class="t-bad b">续到 14' → 到期回收</text>
+      <!-- heartbeats -->
+      <circle cx="156" cy="108" r="6" class="f-finished"/><text x="156" y="96" text-anchor="middle" class="sm">♥</text>
+      <circle cx="252" cy="108" r="6" class="f-finished"/><text x="252" y="96" text-anchor="middle" class="sm">♥</text>
+      <text x="300" y="112" text-anchor="middle" class="t-bad b">✕ 崩溃</text>
+      <path d="M740,190 L776,190" class="ln" marker-end="url(#a8)"/>
+      <text x="660" y="204" text-anchor="middle" class="sm">回 queue → 下一轮派单</text>
+    </svg>
+    </div>
+    <figcaption>绿点是心跳，每跳一次租约往后延 2 分钟。第 5 分钟崩溃后没人续约，第 14 分钟到期，调度器自动收回，第 15 分钟 Worker B 从最后一次 commit 接着做。</figcaption>
+  </figure>
+  <div class="callout"><span class="tag">防止两个厨师抢同一张单</span><p>派单时用一条「对得上版本号才更新」的 SQL（叫 <b>optimistic lock / compare-and-set</b>）。两个调度器同时抢，只有一个会成功，另一个拿到 0 行更新，自动放弃。</p></div>
+</section>
+
+<!-- 9 -->
+<section id="quota">
+  <div class="sec-head"><span class="ticket-no">TICKET 09</span><h2>额度用完了怎么自动继续？</h2></div>
+  <p>这正是你最关心的功能，答案出乎意料地简单：<b>一个时间戳字段 <code>not_before</code></b>。</p>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 900 200" role="img" aria-label="时间线：10 点开始工作，10:40 额度用完，任务在 queue 等到 15 点，15 点自动重新派单，15:50 进入 review">
+      <line x1="40" y1="120" x2="870" y2="120" class="axis"/>
+      <rect x="40" y="90" width="170" height="26" rx="4" class="f-working"/>
+      <text x="125" y="108" text-anchor="middle" class="onfill">working</text>
+      <rect x="210" y="90" width="420" height="26" rx="4" class="tint-queue"/>
+      <text x="420" y="108" text-anchor="middle" class="f-queue b">queue · waiting_quota · not_before = 15:00</text>
+      <rect x="630" y="90" width="170" height="26" rx="4" class="f-working"/>
+      <text x="715" y="108" text-anchor="middle" class="onfill">working（新 Worker）</text>
+      <rect x="800" y="90" width="70" height="26" rx="4" class="f-review"/>
+      <text x="835" y="108" text-anchor="middle" class="onfill">review</text>
+      <text x="40" y="144" class="sm">10:00</text>
+      <text x="210" y="144" text-anchor="middle" class="sm">10:40</text>
+      <text x="630" y="144" text-anchor="middle" class="sm">15:00</text>
+      <text x="800" y="144" text-anchor="middle" class="sm">15:50</text>
+      <line x1="210" y1="50" x2="210" y2="88" class="ln-bad"/>
+      <text x="210" y="42" text-anchor="middle" class="t-bad b">429 额度用完</text>
+      <line x1="630" y1="50" x2="630" y2="88" class="ln-acc"/>
+      <text x="630" y="42" text-anchor="middle" class="t-acc b">额度恢复，调度器自动派单</text>
+      <text x="420" y="180" text-anchor="middle" class="sm">这 4 个多小时里没有任何 agent 在跑，也不花钱，只有 DB 里的一行记录在等</text>
+    </svg>
+    </div>
+    <figcaption>Worker 不需要「等着」，它直接下班。等待这件事交给 DB 里的一个时间戳和每 30 秒巡一次的调度器。</figcaption>
+  </figure>
+  <div class="grid2">
+    <div class="callout"><span class="tag">多个模型额度怎么管</span>
+      <ul class="clean">
+        <li>每个模型记录：还剩多少、几点重置、同时最多跑几个</li>
+        <li>首选模型没额度 → 规则允许的话，换排班表上的下一个</li>
+        <li>research 和 review <b>不准悄悄降级</b>到便宜模型</li>
+      </ul>
+    </div>
+    <div class="callout warn"><span class="tag">预算三道闸</span>
+      <ul class="clean">
+        <li>每个任务一个上限（例：$3）</li>
+        <li>每天一个上限（例：$20）</li>
+        <li>一个总开关 kill switch，一键停掉所有派单</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section id="handoff">
+  <div class="sec-head"><span class="ticket-no">TICKET 10</span><h2>交接本 Handoff Notes：换班不掉链子</h2></div>
+  <p>厨师换班时会留一张纸条：「汤已经熬了一小时，还差下盐」。Agent 也要这样，每次 commit 都顺便更新这份固定格式的笔记，存在任务记录里。新 agent 第一件事就是读它。</p>
+<div class="notes">## Done
+- 建好 concerts 表和 migration
+- GET /concerts 已经能按城市筛选
+
+## Next
+- 写 /concerts 的单元测试（AC2）
+- 加分页
+
+## Decisions made (and why)
+- 用 cursor 分页不用 offset：数据会一直新增，offset 会跳号
+
+## Open questions / blockers
+- （无）</div>
+  <p>格式固定有两个好处：新 agent 一眼就知道从哪继续；review 的模型也能对照 <b>Decisions</b> 判断做法合不合理。</p>
+</section>
+
+<!-- 11 -->
+<section id="research">
+  <div class="sec-head"><span class="ticket-no">TICKET 11</span><h2>Research：整条流水线最值钱的一步</h2></div>
+  <p>垃圾进，垃圾出。Spec 写得模糊，agent 就会<b>很自信地做错</b>。所以 research 用最强的模型，而且必须由<b>你按下批准</b>，任务才能进 queue。</p>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 900 190" role="img" aria-label="research 流程：idea，agent 提问，你回答，agent 写 spec，就绪检查，你批准进 queue">
+      <defs><marker id="a11" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs>
+      <rect x="10" y="50" width="120" height="60" rx="8" class="tint-pending"/><text x="70" y="85" text-anchor="middle" class="b">idea</text>
+      <rect x="160" y="50" width="130" height="60" rx="8" class="tint-research"/><text x="225" y="76" text-anchor="middle" class="b">Agent 提问</text><text x="225" y="96" text-anchor="middle" class="sm">不懂就问</text>
+      <rect x="320" y="50" width="120" height="60" rx="8" class="box"/><text x="380" y="76" text-anchor="middle" class="b">你回答</text><text x="380" y="96" text-anchor="middle" class="sm">UI 里聊</text>
+      <rect x="470" y="50" width="130" height="60" rx="8" class="tint-research"/><text x="535" y="76" text-anchor="middle" class="b">写 spec 草稿</text><text x="535" y="96" text-anchor="middle" class="sm">照模板填</text>
+      <rect x="630" y="50" width="120" height="60" rx="8" class="box2"/><text x="690" y="76" text-anchor="middle" class="b">就绪检查</text><text x="690" y="96" text-anchor="middle" class="sm">自动打勾</text>
+      <rect x="780" y="50" width="110" height="60" rx="8" class="tint-queue"/><text x="835" y="76" text-anchor="middle" class="b">你批准</text><text x="835" y="96" text-anchor="middle" class="sm">→ queue</text>
+      <path d="M130,80 L158,80" class="ln" marker-end="url(#a11)"/>
+      <path d="M290,80 L318,80" class="ln" marker-end="url(#a11)"/>
+      <path d="M440,80 L468,80" class="ln" marker-end="url(#a11)"/>
+      <path d="M600,80 L628,80" class="ln" marker-end="url(#a11)"/>
+      <path d="M750,80 L778,80" class="ln" marker-end="url(#a11)"/>
+      <path d="M380,112 C380,160 225,160 225,114" class="ln-d" marker-end="url(#a11)"/>
+      <text x="302" y="168" text-anchor="middle" class="sm">来回几轮</text>
+      <path d="M690,112 C690,172 535,172 535,114" class="ln-d" marker-end="url(#a11)"/>
+      <text x="612" y="182" text-anchor="middle" class="sm">没通过就补</text>
+    </svg>
+    </div>
+    <figcaption>虚线是循环：问答可以来回好几轮；就绪检查没过就回去补 spec。</figcaption>
+  </figure>
+  <div class="grid2">
+    <div class="callout"><span class="tag">Definition of Ready（进 queue 前必须满足）</span>
+      <ul class="clean check">
+        <li>目标一句话说得清，而且能验证</li>
+        <li>验收标准是一条条能检查的句子</li>
+        <li>写明「不做什么」</li>
+        <li>指定 repo、基础分支、允许改的目录</li>
+        <li>设好任务类型、难度 S/M/L、预算</li>
+        <li>列出依赖（没有也要写「无」）</li>
+        <li>太大就拆成子任务</li>
+      </ul>
+    </div>
+    <div class="callout"><span class="tag">好 vs 坏的验收标准</span>
+      <p><b class="mono" style="color:var(--bad)">坏：</b>「做一个好用的通知功能」</p>
+      <p><b class="mono" style="color:var(--good)">好：</b>「新演唱会上架后 10 分钟内，订阅该歌手的用户收到 1 封邮件；同一场不重复发；有对应的单元测试」</p>
+      <p class="mono" style="font-size:13px;color:var(--muted)">能写成测试的标准 = 机器能自己判断对错</p>
+    </div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section id="review">
+  <div class="sec-head"><span class="ticket-no">TICKET 12</span><h2>Review：三道关卡</h2></div>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 900 230" role="img" aria-label="review 三道关：自动检查、不同模型审查、你最后确认；任一失败打回 working">
+      <defs>
+        <marker id="a12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker>
+        <marker id="a12b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="ah-bad"/></marker>
+      </defs>
+      <rect x="10" y="40" width="130" height="70" rx="8" class="tint-working"/><text x="75" y="70" text-anchor="middle" class="b">Worker 交货</text><text x="75" y="92" text-anchor="middle" class="sm">分支 + 摘要</text>
+      <rect x="180" y="40" width="170" height="70" rx="8" class="box"/><text x="265" y="64" text-anchor="middle" class="b">关 1 · 自动检查</text><text x="265" y="84" text-anchor="middle" class="sm">测试 / lint / 类型</text><text x="265" y="100" text-anchor="middle" class="sm">秘密扫描 / 改动范围</text>
+      <rect x="390" y="40" width="170" height="70" rx="8" class="tint-review"/><text x="475" y="64" text-anchor="middle" class="b">关 2 · Reviewer</text><text x="475" y="84" text-anchor="middle" class="sm">不同家族的模型</text><text x="475" y="100" text-anchor="middle" class="sm">逐条对照验收标准</text>
+      <rect x="600" y="40" width="140" height="70" rx="8" class="tint-research"/><text x="670" y="64" text-anchor="middle" class="b">关 3 · 你</text><text x="670" y="84" text-anchor="middle" class="sm">v1 先保留</text><text x="670" y="100" text-anchor="middle" class="sm">稳定后可关</text>
+      <rect x="780" y="40" width="110" height="70" rx="8" class="tint-finished"/><text x="835" y="80" text-anchor="middle" class="b f-finished">finished</text>
+      <path d="M140,75 L178,75" class="ln" marker-end="url(#a12)"/>
+      <path d="M350,75 L388,75" class="ln" marker-end="url(#a12)"/>
+      <path d="M560,75 L598,75" class="ln" marker-end="url(#a12)"/>
+      <path d="M740,75 L778,75" class="ln" marker-end="url(#a12)"/>
+      <text x="369" y="68" text-anchor="middle" class="sm t-good">✓</text>
+      <text x="579" y="68" text-anchor="middle" class="sm t-good">✓</text>
+      <text x="759" y="68" text-anchor="middle" class="sm t-good">✓</text>
+      <path d="M265,112 C265,180 75,180 75,114" class="ln-bad" marker-end="url(#a12b)"/>
+      <path d="M475,112 C475,200 75,200 75,114" class="ln-bad" marker-end="url(#a12b)"/>
+      <text x="170" y="170" text-anchor="middle" class="t-bad sm">失败 → 带着意见回 working</text>
+      <text x="340" y="218" text-anchor="middle" class="t-bad sm">超过 3 轮 → failed，通知你</text>
+    </svg>
+    </div>
+    <figcaption>便宜又确定的检查放最前面，贵的 AI 审查放后面。只有「blocking」意见会打回；「nit」小建议记下来，不会造成来回拉扯。</figcaption>
+  </figure>
+  <div class="callout warn"><span class="tag">为什么 Reviewer 要换模型？</span><p>同一个模型检查自己的作品，就像自己校对自己写的文章：你会看到你「以为」写了的东西。换一个家族的模型，盲点比较不会重叠。</p></div>
+</section>
+
+<!-- 13 -->
+<section id="routing">
+  <div class="sec-head"><span class="ticket-no">TICKET 13</span><h2>什么活给什么模型</h2></div>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 820 330" role="img" aria-label="任务类型对应模型等级：research、规划、复杂代码用顶级；中等代码用中级；简单任务和摘要用便宜模型；review 用另一家的模型">
+      <text x="120" y="22" text-anchor="middle" class="eyebrow b">任务类型</text>
+      <text x="680" y="22" text-anchor="middle" class="b">模型等级</text>
+      <g>
+        <rect x="20" y="40" width="200" height="36" rx="6" class="tint-research"/><text x="120" y="63" text-anchor="middle">Research / 规划</text>
+        <rect x="20" y="88" width="200" height="36" rx="6" class="box"/><text x="120" y="111" text-anchor="middle">代码 · 难度 L</text>
+        <rect x="20" y="136" width="200" height="36" rx="6" class="box"/><text x="120" y="159" text-anchor="middle">代码 · 难度 M</text>
+        <rect x="20" y="184" width="200" height="36" rx="6" class="box"/><text x="120" y="207" text-anchor="middle">代码 S / 文档 / 格式</text>
+        <rect x="20" y="232" width="200" height="36" rx="6" class="box"/><text x="120" y="255" text-anchor="middle">交接本摘要</text>
+        <rect x="20" y="280" width="200" height="36" rx="6" class="tint-review"/><text x="120" y="303" text-anchor="middle">Review 审查</text>
+      </g>
+      <g>
+        <rect x="580" y="60" width="200" height="50" rx="8" class="box2"/><text x="680" y="82" text-anchor="middle" class="b">顶级模型</text><text x="680" y="100" text-anchor="middle" class="sm">贵，但错不起的地方用</text>
+        <rect x="580" y="140" width="200" height="50" rx="8" class="box2"/><text x="680" y="162" text-anchor="middle" class="b">中级模型</text><text x="680" y="180" text-anchor="middle" class="sm">性价比主力</text>
+        <rect x="580" y="220" width="200" height="50" rx="8" class="box2"/><text x="680" y="242" text-anchor="middle" class="b">便宜快速模型</text><text x="680" y="260" text-anchor="middle" class="sm">机械性工作</text>
+        <rect x="580" y="280" width="200" height="40" rx="8" class="tint-review"/><text x="680" y="305" text-anchor="middle" class="b">另一家的中/顶级</text>
+      </g>
+      <path d="M220,58 L580,85" class="ln"/>
+      <path d="M220,106 L580,85" class="ln"/>
+      <path d="M220,154 L580,165" class="ln"/>
+      <path d="M220,202 L580,245" class="ln"/>
+      <path d="M220,250 L580,245" class="ln"/>
+      <path d="M220,298 L580,300" class="ln-acc"/>
+    </svg>
+    </div>
+    <figcaption>这张对照表写成一个 YAML/JSON 配置文件，不要写死在代码里。以后换模型只改配置，不用重新部署。</figcaption>
+  </figure>
+  <p>另外所有模型都包在同一个 <b>Adapter 接口</b>后面，系统其他部分不需要知道背后是哪一家：</p>
+  <figure>
+<pre class="mermaid">
+classDiagram
+    class AgentAdapter {
+        <<interface>>
+        +start(task, model, worktree, lease) RunHandle
+        +status(handle) RunStatus
+        +cancel(handle)
+        +usage(handle) Usage
+    }
+    class RunStatus {
+        <<enumeration>>
+        running
+        done
+        quota_retry_after
+        needs_human
+        error
+    }
+    AgentAdapter <|.. ProviderAAdapter
+    AgentAdapter <|.. ProviderBAdapter
+    AgentAdapter <|.. LocalModelAdapter
+    AgentAdapter ..> RunStatus
+</pre>
+    <figcaption>UML 类图：一个接口，多个实现。加一家新供应商 = 多写一个 Adapter。</figcaption>
+  </figure>
+</section>
+
+<!-- 14 -->
+<section id="data">
+  <div class="sec-head"><span class="ticket-no">TICKET 14</span><h2>数据库里要放什么</h2></div>
+  <p>最核心的就是 <code>tasks</code> 表。下面 ER 图画出几张表之间的关系（ER 图 = 画数据表关系的图）。</p>
+  <figure>
+<pre class="mermaid">
+erDiagram
+    TASKS ||--o{ TASK_EVENTS : "记录每次变化"
+    TASKS ||--o{ RUNS : "每次开工"
+    TASKS ||--o{ MESSAGES : "research 对话"
+    RUNS }o--|| MODEL_QUOTAS : "消耗额度"
+    TASKS {
+        uuid id
+        enum phase
+        json flags
+        int priority
+        text spec
+        json acceptance_criteria
+        text assigned_model
+        timestamp lease_expires_at
+        timestamp not_before
+        int attempts
+        numeric budget_usd
+        text handoff_notes
+        text branch
+    }
+    RUNS {
+        uuid id
+        text model
+        text outcome
+        int tokens
+        numeric cost_usd
+    }
+    MODEL_QUOTAS {
+        text model
+        int used
+        timestamp resets_at
+        int in_flight
+    }
+</pre>
+    <figcaption><code>task_events</code> 只能新增、不能改，它是你的审计记录：谁在什么时候把任务推到哪里。</figcaption>
+  </figure>
+  <div class="tbl"><table>
+    <thead><tr><th>关键字段</th><th>白话解释</th></tr></thead>
+    <tbody>
+      <tr><td><code>lease_expires_at</code></td><td>这张单借给厨师借到几点</td></tr>
+      <tr><td><code>not_before</code></td><td>这张单最早几点能再派出去（等额度、等退避）</td></tr>
+      <tr><td><code>attempts</code></td><td>派过几次了，超过 5 次就判 failed</td></tr>
+      <tr><td><code>handoff_notes</code></td><td>交接本</td></tr>
+      <tr><td><code>version</code></td><td>防抢单用的版本号</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 15 -->
+<section id="failures">
+  <div class="sec-head"><span class="ticket-no">TICKET 15</span><h2>出事了怎么办？（大部分不用你管）</h2></div>
+  <div class="tbl"><table>
+    <thead><tr><th>出了什么事</th><th>系统怎么发现</th><th>自动怎么处理</th><th>要叫你吗</th></tr></thead>
+    <tbody>
+      <tr><td>Worker 崩溃</td><td>租约过期</td><td>回 queue，从最后一次 commit 继续</td><td>不用</td></tr>
+      <tr><td>额度用完 429</td><td>Adapter 回报</td><td>回 queue，<code>not_before</code> = 重置时间</td><td>不用</td></tr>
+      <tr><td>供应商挂了</td><td>连续报错</td><td>退避重试；规则允许就换模型</td><td>太久才叫</td></tr>
+      <tr><td>Agent 原地打转</td><td>好几次心跳都没新 commit</td><td>停掉重来一次，再不行就 failed</td><td>要</td></tr>
+      <tr><td>超预算</td><td><code>spent ≥ budget</code></td><td>标 failed</td><td>要</td></tr>
+      <tr><td>Review 来回拉扯</td><td>超过 3 轮</td><td>标 failed</td><td>要</td></tr>
+      <tr><td>Agent 有问题要问</td><td>回报 needs_human</td><td>贴 blocked，推送给你</td><td>要</td></tr>
+      <tr><td>调度器自己挂了</td><td>健康检查</td><td>重启，状态都在 DB，不会丢</td><td>不用</td></tr>
+      <tr><td>两边同时抢单</td><td>版本号对不上</td><td>后到的自动放弃</td><td>不用</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>重试的等待时间要越来越长</b>（exponential backoff）：1 分钟、2 分钟、4 分钟…最多 60 分钟，再加一点随机数，避免所有任务同一秒一起冲。</p>
+</section>
+
+<!-- 16 -->
+<section id="security">
+  <div class="sec-head"><span class="ticket-no">TICKET 16</span><h2>安全：Agent 会跑代码，要把门锁好</h2></div>
+  <div class="grid2">
+    <div class="callout warn"><span class="tag">必须做</span>
+      <ul class="clean">
+        <li>每个 Worker 在沙盒（容器）里跑，只看得到自己的 worktree</li>
+        <li>给每个任务一把只能 push 自己分支的钥匙，不能碰 main</li>
+        <li>密钥不进 prompt、不进 log</li>
+        <li>main 分支开保护，合并一定要人批准</li>
+      </ul>
+    </div>
+    <div class="callout"><span class="tag">要小心的坑：Prompt Injection</span>
+      <p>Agent 读到的网页、issue、repo 文件里可能藏着「请删掉所有测试」之类的指令。规则是：<b>这些都只是资料，不是命令</b>。Reviewer 也要检查有没有改到 spec 以外的文件。</p>
+    </div>
+  </div>
+  <p style="font-size:14px;color:var(--muted)">如果以后要让 agent 部署上线、碰正式数据、或者花 API 以外的钱，先停下来做一次 threat model（威胁建模）检查。</p>
+</section>
+
+<!-- 17 -->
+<section id="deploy">
+  <div class="sec-head"><span class="ticket-no">TICKET 17</span><h2>放在哪里跑？电脑要一直开着吗？</h2></div>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 900 220" role="img" aria-label="四种部署方式对比：自己电脑、VPS、Serverless、托管 agent 平台，推荐 VPS">
+      <g>
+        <rect x="10" y="20" width="205" height="180" rx="10" class="box"/>
+        <text x="112" y="50" text-anchor="middle" class="b">自己电脑</text>
+        <text x="112" y="80" text-anchor="middle" class="sm">免费、简单</text>
+        <text x="112" y="104" text-anchor="middle" class="t-bad sm">关机 / 睡眠 = 全停</text>
+        <text x="112" y="170" text-anchor="middle" class="mono">只适合开发</text>
+      </g>
+      <g>
+        <rect x="233" y="20" width="205" height="180" rx="10" class="tint-finished"/>
+        <text x="335" y="50" text-anchor="middle" class="b">小 VPS + Docker</text>
+        <text x="335" y="80" text-anchor="middle" class="sm">24 小时在线、便宜</text>
+        <text x="335" y="104" text-anchor="middle" class="sm">要自己维护</text>
+        <text x="335" y="170" text-anchor="middle" class="mono f-finished b">★ v1 推荐</text>
+      </g>
+      <g>
+        <rect x="456" y="20" width="205" height="180" rx="10" class="box"/>
+        <text x="558" y="50" text-anchor="middle" class="b">Serverless 定时</text>
+        <text x="558" y="80" text-anchor="middle" class="sm">不用管服务器</text>
+        <text x="558" y="104" text-anchor="middle" class="t-bad sm">长时间任务会超时</text>
+        <text x="558" y="170" text-anchor="middle" class="mono">规模大了再说</text>
+      </g>
+      <g>
+        <rect x="679" y="20" width="211" height="180" rx="10" class="box"/>
+        <text x="784" y="50" text-anchor="middle" class="b">托管 Agent 平台</text>
+        <text x="784" y="80" text-anchor="middle" class="sm">会话、定时器都托管</text>
+        <text x="784" y="104" text-anchor="middle" class="sm">控制权较少</text>
+        <text x="784" y="170" text-anchor="middle" class="mono">可当 Worker 层</text>
+      </g>
+    </svg>
+    </div>
+    <figcaption>只要调度器、DB、Worker 都在云上（VPS 或托管平台），<b>你的电脑就可以关机</b>。托管平台可以拿来跑 Worker，但任务 DB 最好还是你自己的。</figcaption>
+  </figure>
+</section>
+
+<!-- 18 -->
+<section id="roadmap">
+  <div class="sec-head"><span class="ticket-no">TICKET 18</span><h2>路线图：一步一步来，每一步都能用</h2></div>
+  <p>最常见的失败是第一天就想做多模型、多并发、漂亮 UI。建议照顺序做，<b>每个里程碑完成时都要能跑起来</b>。</p>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 960 200" role="img" aria-label="路线图 M0 到 M6：骨架、单 worker、额度预算、review、research UI、多模型并发、加固">
+      <line x1="40" y1="70" x2="920" y2="70" class="axis"/>
+      <g>
+        <circle cx="60" cy="70" r="14" class="f-pending"/><text x="60" y="75" text-anchor="middle" class="onfill mono">M0</text>
+        <text x="60" y="110" text-anchor="middle" class="b">骨架</text><text x="60" y="130" text-anchor="middle" class="sm">DB + 状态机</text><text x="60" y="148" text-anchor="middle" class="sm">手动推 phase</text>
+        <circle cx="200" cy="70" r="14" class="f-working"/><text x="200" y="75" text-anchor="middle" class="onfill mono">M1</text>
+        <text x="200" y="110" text-anchor="middle" class="b">单 Worker</text><text x="200" y="130" text-anchor="middle" class="sm">lease + 心跳</text><text x="200" y="148" text-anchor="middle" class="sm">杀掉能续</text>
+        <circle cx="340" cy="70" r="14" class="f-queue"/><text x="340" y="75" text-anchor="middle" class="onfill mono">M2</text>
+        <text x="340" y="110" text-anchor="middle" class="b">额度 + 预算</text><text x="340" y="130" text-anchor="middle" class="sm">not_before</text><text x="340" y="148" text-anchor="middle" class="sm">kill switch</text>
+        <circle cx="480" cy="70" r="14" class="f-review"/><text x="480" y="75" text-anchor="middle" class="onfill mono">M3</text>
+        <text x="480" y="110" text-anchor="middle" class="b">Review 关卡</text><text x="480" y="130" text-anchor="middle" class="sm">测试 + 审查</text><text x="480" y="148" text-anchor="middle" class="sm">打回机制</text>
+        <circle cx="620" cy="70" r="14" class="f-research"/><text x="620" y="75" text-anchor="middle" class="onfill mono">M4</text>
+        <text x="620" y="110" text-anchor="middle" class="b">Research UI</text><text x="620" y="130" text-anchor="middle" class="sm">聊天 + 模板</text><text x="620" y="148" text-anchor="middle" class="sm">就绪检查</text>
+        <circle cx="760" cy="70" r="14" class="f-working"/><text x="760" y="75" text-anchor="middle" class="onfill mono">M5</text>
+        <text x="760" y="110" text-anchor="middle" class="b">多模型并发</text><text x="760" y="130" text-anchor="middle" class="sm">路由配置</text><text x="760" y="148" text-anchor="middle" class="sm">依赖关系</text>
+        <circle cx="900" cy="70" r="14" class="f-finished"/><text x="900" y="75" text-anchor="middle" class="onfill mono">M6</text>
+        <text x="900" y="110" text-anchor="middle" class="b">加固</text><text x="900" y="130" text-anchor="middle" class="sm">沙盒 / 权限</text><text x="900" y="148" text-anchor="middle" class="sm">通知 / 仪表板</text>
+      </g>
+      <text x="60" y="36" text-anchor="middle" class="sm">不接 AI</text>
+      <text x="200" y="36" text-anchor="middle" class="t-acc sm b">最关键</text>
+      <text x="480" y="186" text-anchor="middle" class="sm">到 M3 就已经是能用的自动化系统了</text>
+    </svg>
+    </div>
+    <figcaption>M0 完全不接 AI，先把「状态机 + 数据库」做对。M1 的验收标准：跑到一半把 Worker 杀掉，任务能自己接回来。</figcaption>
+  </figure>
+  <div class="tbl"><table>
+    <thead><tr><th>要决定的事</th><th>我的默认建议</th><th>什么情况下改</th></tr></thead>
+    <tbody>
+      <tr><td>语言</td><td>Python 或 TypeScript，挑你熟的</td><td>—</td></tr>
+      <tr><td>数据库</td><td>先 SQLite，到 M5 换 Postgres</td><td>一开始就要多台机器跑调度器</td></tr>
+      <tr><td>Worker 用什么跑</td><td>现成的 headless coding agent CLI / SDK，包在 Adapter 里</td><td>需要精细控制工具 → 直接用模型 API 自己写</td></tr>
+      <tr><td>部署</td><td>VPS + Docker</td><td>完全不想维护 → 托管平台</td></tr>
+      <tr><td>finished 前要你批准吗</td><td>v1 要</td><td>跑了约 50 个任务都很稳之后</td></tr>
+      <tr><td>同时几个 Worker</td><td>M1 先 1 个，M5 开到 3 个</td><td>额度和预算够的话</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 19 -->
+<section id="quiz">
+  <div class="sec-head"><span class="ticket-no">TICKET 19</span><h2>小测验：用自己的话讲一遍（费曼法）</h2></div>
+  <p>先自己回答，再点开看参考答案。能用一两句话讲给朋友听，才代表真的懂了。</p>
+  <details><summary>Q1. 为什么调度器不用 LLM 来做？</summary><p>派单、重试、数额度都有标准答案，普通代码做起来又快、又便宜、又不会记错。而且 LLM 经理本身也会遇到额度用完、context 丢失，整个系统就会跟着它一起停。</p></details>
+  <details><summary>Q2. Worker 跑到一半崩溃了，任务怎么恢复？</summary><p>它不再发 heartbeat，租约 <code>lease_expires_at</code> 就会过期。调度器巡逻时看到了，把任务放回 queue；下一个 Worker 读 spec、交接本，checkout 同一个分支，从最后一次 commit 继续。</p></details>
+  <details><summary>Q3. 额度下午 3 点才恢复，这段时间谁在「等」？</summary><p>没有人在等。任务在 DB 里 phase = queue、<code>not_before = 15:00</code>。调度器每 30 秒巡一次，时间没到就跳过，到了就派单。</p></details>
+  <details><summary>Q4. 「blocked」为什么做成 flag，而不是第 7 个 phase？</summary><p>Phase 说「在流程的哪一步」，flag 说「为什么没动」。一个任务可能在 queue 卡住（等额度），也可能在 working 卡住（等你回答），做成 flag 就不用为每种情况都多开一列。</p></details>
+  <details><summary>Q5. 自己出一题：如果 Reviewer 跟 Worker 用同一个模型，可能会发生什么？</summary><p>参考：它们的盲点很像，Worker 犯的错 Reviewer 很可能也看不出来，review 变成走过场。试着想一个你项目里的具体例子。</p></details>
+  <div class="callout good"><span class="tag">我的建议</span><p>下一步先做 <b>M0</b>：只建 <code>tasks</code> 表和一个会拒绝非法转换的 API，用 CLI 手动把一个任务从 pending 推到 finished。这一步不花任何 API 费用，却决定了后面所有东西稳不稳。</p></div>
+</section>
+
+<footer>
+  配套英文规格书：<code>PLAN.md</code>（同一个文件夹）。图中的模型等级是通用分类；实际模型名称、价格和额度，请以各供应商当前的官方文档为准。
+</footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script>
+(function(){
+  try{
+    var root=document.documentElement.getAttribute('data-theme');
+    var dark = root ? root==='dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if(window.mermaid){
+      mermaid.initialize({startOnLoad:true,theme:dark?'dark':'neutral',securityLevel:'strict',fontFamily:'"Noto Sans SC",system-ui,sans-serif'});
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
