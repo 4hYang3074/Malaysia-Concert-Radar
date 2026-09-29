@@ -847,6 +847,11 @@ def sale_status(events, checks, now):
             if s.get("start") and not s.get("official_img"):
                 ev.append({"src": s["name"] if s.get("announced") else f"{e['source']} 售票轮次", "text": s.get("name") or "开票", "time": s["start"]})
         c = checks.get(e.get("artist_name") or "") or {}
+        if c.get("country", "MY") != (e.get("country") or "MY"):
+            c = {}  # 新闻查证是按国家搜的，别国的场次不套用
+        so_news, add_news = c.get("soldout_news"), e.get("news_added")
+        if so_news and add_news and (add_news.get("time") or "") >= (so_news.get("time") or ""):
+            c = dict(c, soldout_news=None)  # 售罄之后又加场：加场的票可能还在卖，不算售罄
         if c.get("soldout_news"):
             n = c["soldout_news"]
             ev.append({"src": "Google 新闻", "text": n["title"], "time": n.get("time"), "url": n.get("url")})
@@ -1572,11 +1577,33 @@ def news_verify(h, leads, events, cfg, state, today, limit=45, watch=()):
     return out
 
 
+def track_added(events, state):
+    """加场状态：
+    confirmed 已加场 = 售票平台上的场次比第一次看到时多了，或新闻说加场、平台也已经有两场以上
+    rumor 传出加场 = 只有新闻说加场，平台还只有一场"""
+    seen = state.setdefault("dates_first_seen", {})
+    for e in events:
+        n = len(e.get("dates") or [])
+        first = seen.setdefault(e["id"], n)
+        grew = n > first
+        if e.get("news_added") and n >= 2 or grew:
+            e["added_status"] = "confirmed"
+        elif e.get("news_added"):
+            e["added_status"] = "rumor"
+        else:
+            e["added_status"] = None
+    live = {e["id"] for e in events}
+    for k in [k for k in seen if k not in live]:
+        del seen[k]
+
+
 def merge_news_sales(events, checks):
     """Google 新闻报导里读到的未来开票时间（例如加场），平台还没有的，就并进那场演出。"""
     for e in events:
         c = checks.get(e.get("artist_name") or "")
-        if not c or e.get("hidden"):
+        # 查证是按国家搜的（例如“BIGBANG + 马来西亚”），不能套到同一艺人在别的国家的场次
+        if not c or e.get("hidden") or c.get("country", "MY") != (e.get("country") or "MY"):
+            e["news_added"] = None
             continue
         # 新闻说有加场（最近两星期的报导），平台还没上架新场次 → 卡片和首页先提示
         a = c.get("added_news")
@@ -1799,6 +1826,7 @@ def main():
     watch = set(state.get("watchlist", {}))
     checks = news_verify(h, leads, events, cfg, state, today, watch=watch)  # Google 通道：查证待确定的明星、已上架演出的开票 / 加场
     merge_news_sales(events, checks)
+    track_added(events, state)  # 加场：传出加场（只有新闻）/ 已加场（平台已上架新场次）
     sale_status(events, checks, now)  # 售票状态机（附证据）
     state_changes = update_watchlist(events, state, now)
     for l in leads:  # 只来自新闻、又查证不到马来西亚相关报导的：可信度太低，不放进待确定

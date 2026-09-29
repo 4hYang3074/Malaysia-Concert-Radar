@@ -88,6 +88,14 @@ function saleStateHTML(e) {
   const idx = closed ? 4 : SALE_STATES.findIndex(s => s.key === st);
   return `<div class="states">${SALE_STATES.map((s, i) => `<span class="st ${i < idx ? "done" : i === idx ? "cur" : ""}">${i === idx && closed ? "平台已停售" : s.label}</span>`).join('<span class="arr">›</span>')}</div>`;
 }
+const ADDED_LABEL = {confirmed: "➕ 已加场", rumor: "📢 传出加场"};
+// 加场：同一位艺人只列一张卡（优先已加场、马来西亚），其他地区的放在详细页
+function addedGroups(d) {
+  const by = {};
+  for (const e of d.events) if (e.added_status) (by[(e.artist_name || e.name).toLowerCase()] ||= []).push(e);
+  const rank = e => (e.added_status === "confirmed" ? 0 : 2) + ((e.country || "MY") === "MY" ? 0 : 1);
+  return Object.values(by).map(list => list.sort((a, b) => rank(a) - rank(b)));
+}
 function openedText(e) {
   if (!e.opened_at) return "";
   return e.opened_approx ? `约 ${fmt(e.opened_at.slice(0, 10) + " 00:00", false)} 开票（推断）` : `${fmt(e.opened_at)} 开票`;
@@ -235,7 +243,10 @@ function posterCard(e, now = new Date()) {
     : e.opened_at ? `✔️ ${openedText(e)}` : "✔️ 已开票（抢票已结束）";
   else cd = `❔ 等待开票资料 · 监控中`;
   // 新闻说要加场，但平台还没公布新的开票时间
-  if (e.news_added && !(s && toDate(s.start) > now)) { cd += "<br>📢 新闻：加场，开票时间待公布"; hot = true; }
+  if (e.added_status && !(s && toDate(s.start) > now)) {
+    cd += e.added_status === "confirmed" ? "<br>➕ 已加场（平台已上架）" : "<br>📢 传出加场 · 平台还没上架";
+    hot = true;
+  }
   return `<a class="pcard" href="event.html?id=${encodeURIComponent(e.id)}">
     <div class="ph">
       <div class="ini">${esc((e.artist_name || "?").slice(0, 1))}</div>
