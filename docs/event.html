@@ -20,7 +20,7 @@ loadData().then(d => {
   document.title = `${e.artist_name} · 马来西亚演唱会雷达`;
   const tiers = e.tiers || [];
   const maps = (e.seat_maps || []).map(localUrl).filter(Boolean);
-  const sales = (e.sales || []).filter(s => s.start || s.end || s.queue);
+  const sales = (e.sales || []).filter(s => s.start);
   const rel = d.leadsByEvent[e.id] || [];
   const fee = e.source === "GoLive" || e.source === "Ticket2U" ? "（价格未含手续费）" : "";
   const next = nextSale(e, now);
@@ -50,7 +50,7 @@ loadData().then(d => {
         const t = toDate(s.start), done = t < now - LIVE_MS, live = !done && t <= now;
         return `<tr class="${done ? "past" : ""}">
           <td><b>${esc(s.name || "开卖")}</b>${s.code_required ? "<br><small>需要预售码</small>" : ""}</td>
-          <td>${esc(fmt(s.start))}${s.queue ? `<br><small>排队 ${esc(s.queue.slice(11))} 开放</small>` : ""}</td>
+          <td>${esc(fmt(s.start))}</td>
           <td style="white-space:nowrap">${done ? "已结束" : live ? '<span class="soldout">正在抢票</span>' : `<span class="pill warn" style="margin:0">${esc(countdown(t, now))}</span>`}</td></tr>`;
       }).join("")}
     </table></div>` : ""}

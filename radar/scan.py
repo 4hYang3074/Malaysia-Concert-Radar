@@ -664,9 +664,63 @@ def deezer_artist(h, e):
             if a.get("nb_fan", 0) >= need:
                 found[a["id"]] = a
     if not found:
-        return None, None
+        return None, None, 0
     best = max(found.values(), key=lambda a: (len(norm(a["name"])), a.get("nb_fan", 0)))
-    return best["name"], best.get("picture_big") or best["picture_medium"]
+    return best["name"], best.get("picture_big") or best["picture_medium"], best.get("nb_fan", 0)
+
+
+# ---------- 歌手类别：华语 / K-pop / 欧美 / 其他（马来、印尼、印度等） ----------
+HAN = re.compile(r"[一-鿿]")
+HANGUL = re.compile(r"[가-힯]")
+CHINESE_CC = {"CN", "TW", "HK", "MO", "SG"}
+WESTERN_CC = {"US", "GB", "CA", "AU", "NZ", "IE", "FR", "DE", "NL", "BE", "LU", "SE", "NO", "DK", "FI", "IS",
+              "AT", "CH", "ES", "IT", "PT", "PL", "CZ", "HU", "GR", "RO", "UA", "XE", "XW"}
+MB_BUDGET = [80]  # 每次扫描最多查 80 个新艺人（每秒 1 次）
+MB_UA = "MalaysiaConcertRadar/1.0 ( https://github.com/4hYang3074/Malaysia-Concert-Radar )"
+
+
+def musicbrainz(h, name, cache, budget):
+    """查 MusicBrainz（开放音乐资料库）的艺人国家；同时搜正式名与别名（周杰倫 的别名是 Jay Chou）。结果存 cache。"""
+    key = norm(name)
+    if key in cache:
+        return cache[key]
+    if budget[0] <= 0:
+        return None
+    budget[0] -= 1
+    q = urllib.parse.urlencode({"query": f'artist:"{name}" OR alias:"{name}"', "fmt": "json", "limit": 3})
+    try:
+        res = h.json("https://musicbrainz.org/ws/2/artist/?" + q, headers={"User-Agent": MB_UA}, retries=2)
+    except Exception:
+        return None
+    finally:
+        time.sleep(1.1)  # MusicBrainz 限制每秒 1 次
+    cands = [{"name": a.get("name"), "country": a.get("country")} for a in res.get("artists") or []
+             if a.get("score", 0) >= 80 and a.get("country")]
+    # 同名艺人（例如 izna 有日本和韩国两个）：优先韩国、华语地区
+    hit = next((c for c in cands if c["country"] == "KR"), None) or \
+        next((c for c in cands if c["country"] in CHINESE_CC), None) or (cands[0] if cands else None)
+    cache[key] = hit or {}
+    return cache[key]
+
+
+def region_of(h, name, title, cache, budget):
+    if not name:
+        return "其他"
+    if HAN.search(name):
+        return "华语"
+    if HANGUL.search(name) or HANGUL.search(title or ""):
+        return "K-pop"
+    mb = musicbrainz(h, name, cache, budget) or {}
+    cc = mb.get("country")
+    if cc == "KR":
+        return "K-pop"
+    if cc in CHINESE_CC or (cc == "MY" and HAN.search(mb.get("name") or "")):
+        return "华语"  # 马来西亚华人歌手（资料库登记中文名）也算华语
+    if cc in WESTERN_CC:
+        return "欧美"
+    if HAN.search(title or ""):
+        return "华语"  # 例如演出名称写着 周杰伦
+    return "其他"
 
 
 def download_image(h, url, rel, max_bytes=3_000_000):
@@ -694,14 +748,18 @@ def add_avatars(h, events, leads, state, today):
     used = set()
     for e in events:
         c = cache.get(e["id"])
-        if not c or (not c.get("photo") and c.get("checked", "") < (datetime.fromisoformat(today) - timedelta(days=7)).strftime("%Y-%m-%d")):
-            name, pic = deezer_artist(h, e)
-            c = {"name": name, "photo": None, "checked": today}
+        stale = c and c.get("checked", "") < (datetime.fromisoformat(today) - timedelta(days=7)).strftime("%Y-%m-%d")
+        # 没找到的 7 天后重试；找到的也每 7 天更新一次粉丝数（用来判断当红程度）
+        if not c or "fans" not in c or stale:
+            name, pic, fans = deezer_artist(h, e)
+            c = {"name": name, "photo": None, "checked": today, "fans": fans}
             if pic:
                 c["photo"] = download_image(h, pic, f"avatars/a-{hashlib.sha1(norm(name).encode()).hexdigest()[:12]}.jpg")
             cache[e["id"]] = c
         guesses = title_queries(e)
         e["artist_name"] = c.get("name") or e.get("artist") or (guesses[0] if guesses else e["name"])
+        e["fans"] = c.get("fans") or 0
+        e["region"] = region_of(h, e["artist_name"], e["name"], state.setdefault("regions_v2", {}), MB_BUDGET)
         avatar, kind = c.get("photo"), "artist"
         if not avatar and not e.get("poster") and e.get("avatar") and (ROOT / "docs" / e["avatar"]).exists():
             avatar, kind = e["avatar"], e.get("avatar_kind") or "poster"  # 来源这次被挡、沿用上次资料
@@ -797,7 +855,7 @@ def group_pending(h, events, leads, state, cfg):
     by_event = {e["id"] for e in events}
     for l in leads:
         src = l.pop("image_src", None)
-        for k in ("artist", "artist_photo", "image"):  # 旧线索存在 state 里，每次按最新规则重新归类
+        for k in ("artist", "artist_photo", "artist_fans", "artist_region", "image"):  # 旧线索存在 state 里，每次按最新规则重新归类
             l.pop(k, None)
         pending = not any(m in by_event for m in l.get("matches", []))
         text = f"{l.get('title', '')}\n{l.get('text') or ''}"
@@ -812,6 +870,8 @@ def group_pending(h, events, leads, state, cfg):
                 artist = max(found, key=lambda a: (a.get("fans", 0), len(a["name"])))
         if artist:
             l["artist"] = artist["name"]
+            l["artist_fans"] = artist.get("fans") or (cache.get(norm(artist["name"])) or {}).get("fans") or 0
+            l["artist_region"] = region_of(h, artist["name"], l.get("title"), state.setdefault("regions_v2", {}), MB_BUDGET)
             rel = artist_photo(h, artist, watch, cache)
             if rel:
                 l["artist_photo"] = rel
@@ -851,7 +911,7 @@ def artist_photo(h, artist, watch, cache):
                 url = next((a.get("picture_big") or a["picture_medium"] for a in res.get("data") or []
                             if norm(a.get("name")) == norm(n) and "/artist//" not in (a.get("picture_medium") or "/artist//")), None)
             else:
-                _, url = deezer_artist(h, {"name": n})
+                _, url, _ = deezer_artist(h, {"name": n})
         if url:
             download_image(h, url, rel)
     return rel if (ROOT / "docs" / rel).exists() else None
@@ -902,6 +962,7 @@ def merge_events(events):
             p["sold_out"] = all(e.get("sold_out") for e in g)
             p["stop_sales"] = all(e.get("stop_sales") or e.get("sold_out") for e in g)
             p["first_seen"] = min(e.get("first_seen") or "9999" for e in g)
+            p["fans"] = max(e.get("fans") or 0 for e in g)
             p["updates"] = {k: v for e in g for k, v in (e.get("updates") or {}).items()}
             if p.get("avatar_kind") != "artist":
                 best = next((e for e in g if e.get("avatar_kind") == "artist"), None)
@@ -948,6 +1009,13 @@ def main():
             got = []
             health[name] = {"ok": False, "error": short(str(e), 160)}
         raw = state.setdefault("raw_events", {})
+        local_path = ROOT / "state" / "local" / f"{name.lower()}.json"
+        if not got and local_path.exists():  # GitHub 被挡时，改用你电脑抓的（36 小时内）
+            loc = json.loads(local_path.read_text(encoding="utf-8"))
+            age = now - datetime.strptime(loc.get("fetched_at", "2000-01-01 00:00"), "%Y-%m-%d %H:%M").replace(tzinfo=MYT)
+            if age < timedelta(hours=36) and loc.get("events"):
+                got = loc["events"]
+                health[name] = {"ok": True, "count": len(got), "local": loc["fetched_at"]}
         if got:
             raw[name] = json.loads(json.dumps(got))  # 存下各平台的原始资料（合并前的副本），下次被挡时沿用
         elif raw.get(name):  # 抓不到就沿用上一次的资料，不让页面突然变空

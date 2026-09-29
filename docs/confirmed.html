@@ -12,6 +12,7 @@
   <h1>✅ 已确定的演唱会</h1>
   <p class="lede" id="desc">按售票时间分类，点明星看详细资料。</p>
   <div class="segs" id="segs"></div>
+  <div class="chips" id="regions" style="margin:2px 0 8px"></div>
   <input class="search" id="q" type="search" placeholder="搜索明星、演出、场馆或城市…">
   <div class="list" id="list"></div>
   <div id="foot"></div>
@@ -21,37 +22,63 @@
 loadData().then(d => {
   nav(d, "confirmed");
   const now = new Date();
-  const byCat = {all: d.events};
-  for (const c of CATS) byCat[c.key] = d.events.filter(e => category(e, now) === c.key);
-  // 默认打开“即将开售”（重点是未来抢票日期）
+  // 歌手类别：默认只看华语、K-pop、欧美（网址 ?r=all 可以连其他一起看）
+  const allRegions = qs("r") === "all";
+  const pool = d.events.filter(e => allRegions || HOT_REGIONS.includes(e.region));
+  const keep = new URLSearchParams(location.search);
+  const link = r => { const p = new URLSearchParams(keep); r ? p.set("r", r) : p.delete("r"); return "confirmed.html?" + p; };
+  $("#regions").innerHTML = `<span class="meta" style="align-self:center">只看：</span>` +
+    `<a class="fbtn ${allRegions ? "" : "on"}" href="${link("")}">华语 · K-pop · 欧美</a>` +
+    `<a class="fbtn ${allRegions ? "on" : ""}" href="${link("all")}">全部（含马来、印尼、印度等）</a>`;
+  const byCat = {all: pool};
+  for (const c of CATS) byCat[c.key] = pool.filter(e => category(e, now) === c.key);
+  // 默认打开“全部”
   let cat = qs("cat");
   if (!byCat[cat]) {
-    cat = "soon";
+    cat = "all";
     history.replaceState(null, "", "confirmed.html?cat=" + cat);
   }
-  const tabs = [...CATS, {key: "all", icon: "📋", label: "全部", desc: "所有已上架的演出，按演出日期排序。"}];
-  $("#segs").innerHTML = tabs.map(c => `<a class="seg ${c.key === cat ? "on" : ""}" href="confirmed.html?cat=${c.key}">${c.icon} ${c.label}<b>${byCat[c.key].length}</b></a>`).join("");
+  // 顺序：全部在最前、即将开售在最后
+  const tabs = [{key: "all", icon: "📋", label: "全部", desc: "所有已上架的演出：还没开票的排在前面，已经开票的收在下面。"}, ...CATS.filter(c => c.key !== "soon"), CATS.find(c => c.key === "soon")];
+  $("#segs").innerHTML = tabs.map(c => `<a class="seg ${c.key === cat ? "on" : ""}" href="confirmed.html?cat=${c.key}${allRegions ? "&r=all" : ""}">${c.icon} ${c.label}<b>${byCat[c.key].length}</b></a>`).join("");
   $("#desc").textContent = tabs.find(c => c.key === cat).desc;
   document.querySelector(".seg.on")?.scrollIntoView({inline: "center", block: "nearest"});
 
+  const row = e => {
+    const st = status(e, now);
+    const when = e.dates.length ? e.dates.map(s => fmt(s, false)).join("、") : "日期未公布";
+    return `<a class="row" href="event.html?id=${encodeURIComponent(e.id)}">
+      ${avatar(e.avatar, e.artist_name, 64, e.avatar_kind)}
+      <div class="body">
+        <div class="name">${badges(e, now)}${esc(e.artist_name)} ${e.region ? `<span class="badge">${esc(e.region)}</span>` : ""}</div>
+        <div class="ev">${esc(e.name)}</div>
+        <div class="info">📅 ${esc(when)} · 📍 ${esc(e.city || e.venue || "场馆未公布")}</div>
+        <span class="pill ${st.cls}">${esc(st.short || st.text)}</span>
+      </div>
+      <span class="chev">›</span>
+    </a>`;
+  };
+
   function render() {
     const q = $("#q").value.trim().toLowerCase();
-    const list = sortFor(cat, byCat[cat].filter(e =>
-      !q || `${e.artist_name} ${e.name} ${e.venue || ""} ${e.city || ""}`.toLowerCase().includes(q)), now);
-    $("#list").innerHTML = list.length ? list.map(e => {
-      const st = status(e, now);
-      const when = e.dates.length ? e.dates.map(s => fmt(s, false)).join("、") : "日期未公布";
-      return `<a class="row" href="event.html?id=${encodeURIComponent(e.id)}">
-        ${avatar(e.avatar, e.artist_name, 64, e.avatar_kind)}
-        <div class="body">
-          <div class="name">${badges(e, now)}${esc(e.artist_name)}</div>
-          <div class="ev">${esc(e.name)}</div>
-          <div class="info">📅 ${esc(when)} · 📍 ${esc(e.city || e.venue || "场馆未公布")}</div>
-          <span class="pill ${st.cls}">${esc(st.short || st.text)}</span>
-        </div>
-        <span class="chev">›</span>
-      </a>`;
-    }).join("") : `<div class="card empty">${q ? "没有符合搜索的演出。"
+    const match = e => !q || `${e.artist_name} ${e.name} ${e.venue || ""} ${e.city || ""}`.toLowerCase().includes(q);
+    if (cat === "all") {
+      // “全部”分两段：还没开票的在前面展开（即将开售按开票时间，其次是未公布）；已经开票的收起
+      const notYet = [...sortFor("soon", byCat.soon.filter(match), now), ...sortFor("tba", byCat.tba.filter(match), now)];
+      const done = sortFor("all", [...byCat.opened, ...byCat.soldout].filter(match), now);
+      $("#list").innerHTML = `
+        <details class="group" open style="margin-top:4px">
+          <summary><h2 style="display:inline;margin:0">🔜 还没开票 <span class="meta">${notYet.length} 场</span></h2></summary>
+          <div class="list" style="margin-top:10px">${notYet.length ? notYet.map(row).join("") : `<div class="card empty">${q ? "没有符合搜索的演出。" : "目前没有还没开票的演出。"}</div>`}</div>
+        </details>
+        <details class="group" ${q && !notYet.length ? "open" : ""}>
+          <summary><h2 style="display:inline;margin:0">✔️ 已经开票 <span class="meta">${done.length} 场</span></h2></summary>
+          <div class="list" style="margin-top:10px">${done.map(row).join("") || `<div class="card empty">没有符合的演出。</div>`}</div>
+        </details>`;
+      return;
+    }
+    const list = sortFor(cat, byCat[cat].filter(match), now);
+    $("#list").innerHTML = list.length ? list.map(row).join("") : `<div class="card empty">${q ? "没有符合搜索的演出。"
       : cat === "soon" ? `售票平台上暂时没有“已公布开售时间、还没开卖”的演出。<br>官方 IG 先公布的开售时间，请看 <a href="index.html">📅 抢票日历</a>。`
       : "这一类目前没有演出。"}</div>`;
   }

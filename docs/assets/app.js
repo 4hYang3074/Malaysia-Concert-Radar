@@ -69,13 +69,12 @@ function saleCalendar(d, now = new Date(), days = 60) {
   const until = now.getTime() + days * 864e5, items = [];
   const t0 = s => toDate(s.length === 10 ? s + " 00:00" : s);
   for (const e of d.events) for (const s of e.sales || []) {
-    for (const [k, what] of [["start", "开售"], ["queue", "排队开放"]]) {
-      const t = s[k] && toDate(s[k]);
-      if (!t || t < now - LIVE_MS || t > until) continue;
-      items.push({t, s: s[k], confirmed: true, href: `event.html?id=${encodeURIComponent(e.id)}`,
-        name: e.artist_name, avatar: e.avatar, kind: e.avatar_kind,
-        label: `${s.name || ""} ${what}`.trim() + (s.code_required ? " · 需要预售码" : ""), src: e.source});
-    }
+    // 只放开票时间（不列排队开放、结束时间）
+    const t = s.start && toDate(s.start);
+    if (!t || t < now - LIVE_MS || t > until) continue;
+    items.push({t, s: s.start, confirmed: true, href: `event.html?id=${encodeURIComponent(e.id)}`,
+      name: e.artist_name, avatar: e.avatar, kind: e.avatar_kind,
+      label: (s.name || "开票") + (s.code_required ? " · 需要预售码" : ""), src: e.source});
   }
   for (const l of d.leads) for (const st of l.sale_times || []) {
     const t = t0(st.time);
@@ -99,7 +98,7 @@ function calendarHTML(items, now = new Date()) {
   for (const i of items) (byDay[i.s.slice(0, 10)] ||= []).push(i);
   return Object.entries(byDay).map(([day, list]) => {
     const dd = toDate(day + " 00:00"), diff = Math.round((dd - toDate(new Date(now.getTime() + 8 * 3600e3).toISOString().slice(0, 10) + " 00:00")) / 864e5);
-    const rel = diff === 0 ? "今天" : diff === 1 ? "明天" : diff === 2 ? "后天" : `${diff} 天后`;
+    const rel = diff < 0 ? "昨天" : diff === 0 ? "今天" : diff === 1 ? "明天" : diff === 2 ? "后天" : `${diff} 天后`;
     return `<div class="day"><div class="dayhead"><b>${esc(fmt(day + " 00:00", false))}</b><span class="rel ${diff <= 1 ? "hot" : ""}">${rel}</span></div>
       ${list.map(i => `<a class="row cal" href="${i.href}">
         <div class="time">${i.s.length > 10 ? esc(i.s.slice(11)) : "时间<br>未定"}</div>
@@ -112,6 +111,57 @@ function calendarHTML(items, now = new Date()) {
         </div>
       </a>`).join("")}</div>`;
   }).join("");
+}
+
+// ---------- 🌟 当红歌星动态（首页 Highlights） ----------
+// 用 Deezer 粉丝数判断当红程度；只列有“新动态”的：14 天内开卖 / 正在抢票 / 7 天内新上架 / 传出要来
+function fansText(n) {
+  if (!n) return "";
+  return n >= 1e4 ? `${(n / 1e4).toFixed(n >= 1e5 ? 0 : 1)} 万粉丝` : `${n} 粉丝`;
+}
+const HOT_REGIONS = ["华语", "K-pop", "欧美"];  // Highlights 只看这三类（不含马来、印尼、印度等）
+function highlights(d, now = new Date(), limit = 8) {
+  const items = [];
+  // tier：0 = 还没开票（即将开卖 / 开票时间未公布 / 传出要来），1 = 正在抢票，2 = 已开票的新上架
+  for (const e of d.events) {
+    if (e.sold_out || !HOT_REGIONS.includes(e.region)) continue;
+    const s = nextSale(e, now), fans = e.fans || 0, cat = category(e, now);
+    const base = {name: e.artist_name, photo: e.avatar, kind: e.avatar_kind, fans, region: e.region, href: `event.html?id=${encodeURIComponent(e.id)}`};
+    if (s && toDate(s.start) > now) {
+      items.push({...base, tier: 0, tag: "⏰ 即将开卖", cls: "warn", line: `${fmt(s.start)} 开卖 · ${countdown(toDate(s.start), now)}`});
+    } else if (s) {
+      items.push({...base, tier: 1, tag: "🔥 正在抢票", cls: "bad", line: `${s.name || "开卖"} · ${fmt(s.start)} 开卖`});
+    } else if (cat === "tba") {
+      items.push({...base, tier: 0, tag: "⏳ 开票时间未公布", cls: "sub", line: `${e.dates[0] ? fmt(e.dates[0], false) + " 演出" : "演出日期未公布"} · ${platformsOf(e).map(p => p.source).join("、")}`});
+    } else if (e.first_seen && now - toDate(e.first_seen) < 7 * 864e5) {
+      items.push({...base, tier: 2, tag: "🆕 新上架", cls: "info", line: `${e.dates[0] ? fmt(e.dates[0], false) + " 演出" : "演出日期未公布"} · ${platformsOf(e).map(p => p.source).join("、")}`});
+    }
+  }
+  for (const g of pendingGroups(d).groups) {
+    if (!g.leads.length || !HOT_REGIONS.includes(g.leads[0].artist_region)) continue;
+    const fans = Math.max(0, ...g.leads.map(l => l.artist_fans || 0));
+    items.push({name: g.name, photo: g.photo, fans, region: g.leads[0].artist_region, href: `pending.html#a-${encodeURIComponent(g.name)}`, tier: 0,
+      tag: "🗣️ 传出要来", cls: "sub", line: `${g.leads.length} 条消息 · 最新 ${fmt(g.latest, false) || g.latest}`});
+  }
+  // 同一位歌星只留最优先的一条；排序：先还没开票的，再按人气
+  const rank = (a, b) => (a.tier - b.tier) || (b.fans - a.fans);
+  const best = {};
+  for (const i of items) {
+    const k = i.name.toLowerCase();
+    if (!best[k] || rank(i, best[k]) < 0) best[k] = i;
+  }
+  return Object.values(best).filter(i => i.fans > 0).sort(rank).slice(0, limit);
+}
+function highlightsHTML(list) {
+  if (!list.length) return `<div class="card empty">目前没有当红歌星的新动态。</div>`;
+  return `<div class="hl">${list.map(i => `
+    <a class="hlcard" href="${i.href}">
+      ${avatar(i.photo, i.name, 76, i.kind)}
+      <div class="n">${esc(i.name)}</div>
+      <div class="f">${esc(i.region || "")}${i.region && i.fans ? " · " : ""}${esc(fansText(i.fans))}</div>
+      <span class="pill ${i.cls}">${esc(i.tag)}</span>
+      <div class="l">${esc(i.line)}</div>
+    </a>`).join("")}</div>`;
 }
 
 // ---------- 售票平台 ----------
@@ -200,7 +250,7 @@ function nav(d, active) {
 }
 function footer(d) {
   const h = Object.entries(d.health).map(([k, v]) =>
-    `<span class="chip ${v.ok ? (v.stale ? "warn" : "ok") : "bad"}" title="${esc(v.error || "")}">${v.ok ? (v.stale ? "⏸" : "✓") : "✕"} ${esc(k)}</span>`).join("");
+    `<span class="chip ${v.ok ? (v.stale ? "warn" : "ok") : "bad"}" title="${esc(v.error || (v.local ? "你电脑 " + v.local + " 抓的" : ""))}">${v.ok ? (v.stale ? "⏸" : "✓") : "✕"} ${esc(k)}${v.local ? "（本机抓取）" : ""}</span>`).join("");
   return `<footer>
     <div>最后更新：${esc(d.generated_at)}（马来西亚时间）· 每天 08:17、20:17 自动更新</div>
     <div class="chips" style="margin:6px 0">${h}</div>

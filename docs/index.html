@@ -14,8 +14,12 @@
 </head>
 <body>
 <div class="wrap view">
-  <h1>📅 抢票日历</h1>
-  <p class="lede">未来 60 天所有已公布的开售、预售与排队时间（马来西亚时间）。<br>
+  <h1>🌟 当红歌星动态</h1>
+  <p class="lede">还没开票的排在最前面（快开卖、开票时间未公布、传出要来），其次是正在抢票、刚上架；同类再按人气（Deezer 粉丝数）排序。只列华语、K-pop、欧美歌星。</p>
+  <div id="hl"></div>
+
+  <h2 style="font-size:22px;margin-top:30px">📅 抢票日历</h2>
+  <p class="lede">未来 60 天所有已公布的开票时间（包括预售，马来西亚时间）。<br>
     <span class="pill ok" style="margin:0">✅ 已公布</span> 售票平台已经上架
     <span class="pill warn" style="margin:0">🕒 待平台确认</span> 官方 IG 先公布，售票平台还没上架</p>
   <div id="cal"></div>
@@ -29,6 +33,7 @@
 loadData().then(d => {
   nav(d, "home");
   const now = new Date();
+  $("#hl").innerHTML = highlightsHTML(highlights(d, now));
   $("#cal").innerHTML = calendarHTML(saleCalendar(d, now), now);
   const withPhoto = d.events.filter(e => e.avatar_kind === "artist").slice(0, 7);
   $("#doors").innerHTML = `
