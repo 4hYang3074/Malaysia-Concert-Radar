@@ -162,6 +162,11 @@ td, th { text-align: left; padding: 8px; border-top: 1px solid var(--line); vert
 th { color: var(--sub); font-weight: 500; font-size: 12.5px; border-top: 0; }
 td.price { white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
 .pricetable tr:nth-child(even) td { background: var(--bg); }
+/* 售票时间表：列多，手机上宁可左右滑动，也不要把“内容”“来源”挤成一个字一行 */
+.saletable th { white-space: nowrap; }
+.saletable td { overflow-wrap: break-word; }
+.saletable td:nth-child(3) { min-width: 9em; }
+.saletable td:nth-child(6) { min-width: 6em; }
 .soldout { color: var(--bad); font-size: 12px; font-weight: 600; }
 .past td { color: var(--sub); }
 .maps img { width: 100%; border-radius: 12px; border: 1px solid var(--line); display: block; background: var(--bg); }

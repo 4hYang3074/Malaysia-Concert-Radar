@@ -307,7 +307,8 @@ def fantopia_area(h, area, currency):
                              + urllib.parse.quote(x.get("eventsKey") or ""), headers={"area": area, "Referer": "https://www.fantopia.io/"},
                              retries=1)
                 for sess in det.get("data") or []:
-                    if sess.get("sellStartTime"):
+                    # 开卖时间还没定的场次，Fantopia 会填一个 2099 年之类的占位时间，不算
+                    if sess.get("sellStartTime") and sess["sellStartTime"][:4] < "2090":
                         sales.append({"name": (sess.get("title") or "开售").strip(), "start": sess["sellStartTime"][:16],
                                       "end": None, "queue": None, "available": sess.get("status") == 1,
                                       "code_required": sess.get("sellType") not in (None, 1), "url": url})
