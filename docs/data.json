@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-03 09:23",
+ "generated_at": "2026-10-03 13:26",
  "health": {
   "GoLive": {
    "ok": true,
@@ -30,12 +30,12 @@
   },
   "Google News": {
    "ok": true,
-   "count": 55,
+   "count": 56,
    "error": null
   },
   "东方日报 娱乐": {
    "ok": true,
-   "count": 11
+   "count": 12
   },
   "人工线索": {
    "ok": true,
@@ -569,6 +569,35 @@
    "countries": [
     "MY"
    ]
+  },
+  "Post Malone": {
+   "checked": "2026-10-03",
+   "country": "MY",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": null,
+   "count": 14,
+   "top": [
+    {
+     "title": "Post Malone’s Kuala Lumpur Concert Has Been Postponed - says.com",
+     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNU0pvZnFfZHVFaWNhQU1MQjVSUDZXQjdxZ1ltZHBLMkh0bHZsdS10WlhZWlpDTDVuYlBRQzZYSGpTQUc1TTNLbkFRc18wbVJEWUJRczRVal9fbk16TmV1aGZka29oQUtMdkxNcDBqVUwyS3JYRHVpX0F0aFlicDhrT05zeC1TYVRuSDJlUU5maU5tbFBMRUM4WENjNWRjNFFUTGhjcjdYTzQ?oc=5",
+     "time": "2026-09-27"
+    },
+    {
+     "title": "Post Malone Concert Sadly Been Postponed - BusinessToday Malaysia",
+     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMDVldjJBOHZyV1dPUGZwbFdqcWhNSUVpOEZJcGRha0JFbjJyaVhOOXBsVm5IQnRfSmFWV3d4T2hJOF9xOXM3V3JfRDlSTXJPUVRiWk9NdkM4WENJUDhLNGN0dk5MeFZrUVl1Q2p6WHRRMjExTFdYOFBoNXFHTUlOOE03bWQzZ3VYMEM0YTR3?oc=5",
+     "time": "2026-08-28"
+    },
+    {
+     "title": "Post Malone pushes back Asian leg of BIG Stadium Tour, KL show cancelled - Malay Mail",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQek15WS1iRWJHVjRDYkU5TVZRVVdxNzB6enJvdzhpNkp2bVlQeU9hcFNwYUt5R2o4VDhycnFnS2dERVdILVVjNE84Nm1veUJ3RXB3NEc4dU1URXA3cGlOT0Y3UlVlSmhEdmVBUzNYSE14cVVkcWs0dkJWRmUwV2lzWDh2enNYTWo1Wkx0RGtQeVZLS1FjX0VaNXNFcXdlUWR0eHRaLWV2aFNJS25ZenZYU0M1VHZDNnFxZkZCaVhWS2tqOHhyMEZz0gHMAUFVX3lxTFBaUF9CT2R0ODlrTTFwOWc3YXRKdU1mb05BQ1dZb3pzOW96SmJMWkJKODFSd1pQbmMtV21kR2h5ZzE1cHY4TlE5RF8yR1R3X0lfcUJpbDYzY0gyaVg1MHZKemtfeFo2WVJ3RzhMN2V2c1RqOTkyLWZpOWZTZF82R1BLczZtbW8zVThDdDQ1NjBHdXU0cUx2YnFVLW96NUxGUVpBekVuNTRhNUNiMVlHRWRHMGg3S2J6Q201dE1zRklPU2NXSVNhRk9feUgwRw?oc=5",
+     "time": "2026-08-27"
+    }
+   ],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null
   },
   "E.S.T": {
    "checked": "2026-10-03",
@@ -8779,7 +8808,7 @@
    ],
    "sales": [
     {
-     "name": "开售",
+     "name": "2026/12/19 8PM",
      "start": "2026-10-06 12:00",
      "end": null,
      "queue": null,
@@ -8790,15 +8819,37 @@
    ],
    "tiers": [
     {
-     "name": "STAY TUNED 敬请期待",
-     "price": "RM 0"
+     "name": "CAT 1",
+     "price": "RM 880"
+    },
+    {
+     "name": "CAT 2",
+     "price": "RM 780"
+    },
+    {
+     "name": "CAT 3",
+     "price": "RM 680"
+    },
+    {
+     "name": "CAT 4 (LOWER)",
+     "price": "RM 480"
+    },
+    {
+     "name": "CAT 4 (UPPER)",
+     "price": "RM 480"
+    },
+    {
+     "name": "CAT 5",
+     "price": "RM 280"
     }
    ],
-   "seat_maps": [],
+   "seat_maps": [
+    "maps/fantopia-vuvk8zlu/8dd86929-97f5-4ace-b588-401a832bf427.jpg"
+   ],
    "notes": {
     "官方说明": "华语乐坛「天⽣歌姬」A-Lin（⻩丽玲）正式宣布，《歌迹Journey》世界巡回演唱会即将唱进吉隆坡！阔别 3 年，A-Lin 将于 2026 年 12 ⽉ 19 ⽇（星期六）重返吉隆坡舞台，于 Unifi Arena 举⾏《歌迹 Journey》世界巡回演唱会⻢来⻄亚站，与⼤⻢乐迷再次相⻅。\n\n\nA-Lin 将带着⼀路⾛来的⾳乐⾜迹，与全球乐迷分享 20 年来的⾳乐故事。对于⻢来⻄亚乐迷⽽⾔，这次回归更是久违的相聚，相信将唤起许多属于⼤家的珍贵⾳乐回忆。\n\n\n从《给我⼀个理由忘记》、《有⼀种悲伤》、《失恋⽆罪》，到更多脍炙⼈⼝的经典歌曲， A-Lin 的歌声早已成为华语乐坛不可或缺的⼀部分。她也将通过这次巡演，以更加丰富的舞台呈现，重新诠释陪伴歌迷多年的作品，为⼤家带来⼀场充满回忆与感动的⾳乐盛宴。\n\n\n《歌迹 Journey》世界巡回演唱会⾃今年 1 ⽉在佛⼭启程后，陆续⾛过⽆锡、成都、厦⻔、上海、⾹港、乌鲁⽊⻬，北京等城市，场场演出都获得热烈反响，⻔票更是迅速售罄。A-Lin 凭借稳定⽽强⼤的现场实⼒，将经典歌曲重新演绎，每⼀场都掀起⼤合唱，现场⽓氛热烈，让歌迷沉浸在⼀⾸⾸熟悉的旋律中。\n\n\n此次《歌迹 Journey》世界巡回演唱会，不仅延续 A-Lin ⼀贯强⼤的现场唱功，更在舞台设计与演出编排上加⼊更多不同元素，为观众带来更丰富的现场体验。除了动⼈歌曲与精彩演唱，演出也融⼊唱跳、舞台视觉及互动环节，让整场演唱会在⾳乐情感之外增添更多活⼒与惊喜。A-Lin 也将通过不同的舞台呈现，与现场歌迷近距离互动，让⼤家不只是聆听歌曲，更能参与其中，⼀起感受⾳乐带来的快乐与感动。\n\n\n⼆⼗年，串起⼈⽣中⽆数珍贵的回忆与经历，也⻅证了 A-Lin ⼀路⾛来的成⻓与蜕变。⼀路⾛来，⾳乐始终陪伴着 A-Lin，也⻅证着她从过去⾛到现在的每⼀步。《歌迹 Journey》不仅是对 20 年⾳乐旅程的回望，也是⼀次与歌迷共同重温⽣活、爱与成⻓的相聚。每⼀⾸歌、每⼀个舞台，都是属于 A-Lin 与歌迷共同⾛过的⾜迹，⽽这⼀次，她也希望将这些珍贵的记忆汇聚成⼀晚，与⼤家共同创造⼀段独⼀⽆⼆的⾳乐回忆。\n\n\n近五年来，A-Lin 完成了超过百场演出，⽤歌声陪伴歌迷⾛过⼈⽣中的不同阶段。出道 20 年来，她从「天⽣歌姬」这个称号⼀路⾛来，⽤⾳乐记录⽣活，也唱出了许多⼈⼼中的爱情、遗憾、成⻓与感动。对A-Lin ⽽⾔，舞台不仅是演唱的地⽅，更是她与歌迷分享⾳乐、传递情感的珍贵时刻。⼀⾸歌或许来⾃她的故事，却总能在歌迷的⽣命⾥找到属于⾃⼰的意义。⼀路⾛来，她始终保持着对⾳乐的热爱与对舞台的敬意，珍惜每⼀次与歌迷相聚的机会。⼆⼗年的⾳乐旅程，因为有歌迷⼀路相伴⽽更加完整，⽽A-Lin 也在⼤家的笑声与泪⽔中，找到了属于⾃⼰的⾳乐归属。"
    },
-   "price_from": null,
+   "price_from": "RM 280.00",
    "limit": null,
    "sold_out": false,
    "url": "https://www.fantopia.io/events-tickets?eventsKey=vuvk8zlu",
@@ -8816,7 +8867,7 @@
      "url": "https://www.fantopia.io/events-tickets?eventsKey=vuvk8zlu",
      "id": "fantopia-vuvk8zlu",
      "sold_out": false,
-     "price_from": null
+     "price_from": "RM 280.00"
     }
    ],
    "hidden": null,
@@ -8826,7 +8877,7 @@
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
-     "text": "开售",
+     "text": "2026/12/19 8PM",
      "time": "2026-10-06 12:00"
     }
    ]
@@ -10368,6 +10419,55 @@
  ],
  "leads": [
   {
+   "id": "news-b8e8890b0a443b15",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "orientaldaily.com.my",
+   "title": "A-Lin《歌迹 Journey》1219吉隆坡开唱 门票6日正式启售！ - orientaldaily.com.my",
+   "text": null,
+   "time": "2026-10-03 12:00",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE95Y0RUbjNrYW5PMlZCbnczcGtfOTNma20zTEZZaEhJa2FXMWROQ0YwUGxXck5xeC1UdGx5MkYtTUM1OEdiN2FBVDNhaldlVFdfMC1WRkEzbzRNbnd3NFV6UzQwYzF4MVBmS01CUEVrekRzenhraUlQeg?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-03 13:26",
+   "matches": [
+    "fantopia-vuvk8zlu"
+   ],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": null,
+   "listed": true
+  },
+  {
+   "id": "news-cf392b5764e1b5ce",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "东方日报 娱乐",
+   "title": "A-Lin《歌迹 Journey》1219吉隆坡开唱　门票6日正式启售！",
+   "text": "（吉隆坡3日讯）华语乐坛“天生歌姬”A-Lin（黄丽玲）《歌迹 Journey》世界巡回演唱会即将唱进吉隆坡！阔别3年，A-Lin将于12月19日（星期六）重返吉隆坡舞台，于Unifi Arena万人体育馆举办《歌迹 Journey》世界巡回演唱会马来西亚站，与大马乐迷再次相见！ A-Lin 阔别三年再度唱进吉隆坡万人体育馆！ 此次《歌迹 Journey》世界巡回演唱会，不仅延续A-Lin一贯强大的现场唱功，更在舞台设计与演出编排上加入更多不同元素，为观众带来更丰富的现场体验。除了动人歌曲与精彩...\n（吉隆坡3日讯）华语乐坛“天生歌姬”A-Lin（黄丽玲）《歌迹 Journey》世界巡回演唱会即将唱进吉隆坡！阔别3年，A-Lin将于12月19日（星期六）重返吉隆坡舞台，于Unifi Arena万人体育馆举办《歌迹 Journey》世界巡回演唱会马来西亚站，与大马乐迷再次相见！\n此次《歌迹 Journey》世界巡回演唱会，不仅延续A-Lin一贯强大的现场唱功，更在舞台设计与演出编排上加入更多不同元素，为观众带来更丰富的现场体验。除了动人歌曲与精彩演唱，演出也融入唱跳、舞台视觉及互动环节，让整场演唱会增添更多活力与惊喜。A-Lin也将通过不同的舞台呈现，与现场歌迷近距离互动，让大家不只是聆听歌曲，更能参与其中，一起感受音乐带来的快乐与感动。\n《歌迹 Journey》不仅是对20年音乐旅程的回望，也是一次与歌迷共同重温生活、爱与成长的相聚。A-Lin将带著一路走来的音乐足迹，与全球乐迷分享20年来的音乐故事。\nA-Lin《歌迹 Journey》世界巡回演唱会吉隆坡站将于12月19日（星期六）晚上8时在吉隆坡Unifi Arena盛大开唱！演唱会门票分为880令吉、780令吉、680令吉、480令吉及280令吉，门票将于10月6日通过Fantopia.io正式公开发售。A-Lin歌迷们记得锁定日期，准备好抢票，一起现场见证这场20周年音乐盛会！\n要看最快最熱資訊，請來Follow我們 《東方日報》 WhatsApp Channel .\nIOS： https://odn.my/ios\nGoogle Play： https://odn.my/android\nHUAWEI AppGallery： https://odn.my/appgallery",
+   "time": "2026-10-03 12:00",
+   "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/03/852156",
+   "hints": [],
+   "sale_times": [
+    {
+     "time": "2026-10-06",
+     "line": "门票将于10月6日通过Fantopia.io正式公开发售",
+     "past": false,
+     "kind": "general",
+     "added": false,
+     "name": null
+    }
+   ],
+   "first_seen": "2026-10-03 13:26",
+   "matches": [
+    "fantopia-vuvk8zlu"
+   ],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": null,
+   "listed": true
+  },
+  {
    "id": "news-0165172d843ce7a8",
    "kind": "新闻",
    "country": "MY",
@@ -10415,8 +10515,8 @@
    "id": "news-20594b64f8266c07",
    "kind": "新闻",
    "country": "SG",
-   "from": "CNA Lifestyle",
-   "title": "The Weeknd Singapore concert review: After Hours Til Dawn is a spectacular return after 8 years - CNA Lifestyle",
+   "from": "cnalifestyle.channelnewsasia.com",
+   "title": "The Weeknd Singapore concert review: After Hours Til Dawn is a spectacular return after 8 years - cnalifestyle.channelnewsasia.com",
    "text": null,
    "time": "2026-10-03 07:39",
    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZWV2aWlTYUdieHBickZqWEtBYXVGX3kxaUo0RTJzeWNKVlNnSDN6WVZuQ0JkUGxfNmV1NHE0ZFZfbkE2WGhBcnV2ZU4weVVGRjlGUTFwWUJpV0dCRERGaUM2cVFWRnpvNFZwU1psaFVsX3dtbjZSdjJTeU93ZEJ0ckZyekEzMWx2M3NwS3FPRU1XRXdfR2dRWXJzVFdrOS1yX1pHRnV0OA?oc=5",
@@ -10454,21 +10554,17 @@
    "id": "news-589d1e7e218ea375",
    "kind": "新闻",
    "country": "MY",
-   "from": "Yahoo",
-   "title": "Bumper weekend in Malaysia: F1, football legends, concerts and comedy shows set to pack Klang Valley - Yahoo",
+   "from": "Malay Mail",
+   "title": "Bumper weekend in Malaysia: F1, football legends, concerts and comedy shows set to pack Klang Valley - Malay Mail",
    "text": null,
-   "time": "2026-10-03 07:00",
-   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQUVV0VzdYYzV2bU5zdTNXdXJmekVQSEgxcmJIV010b0NWMDBoVGNhblpBYTk5OFNpMmo2cl9pUl9kNjY0bTFRTlZ1T3NSb0g5Z3FxTV9LUjBPNTdaVkFIeFFZX05adTlPbTBTcFRwd2pobExyV0dxbzdhSzJXQjlvRmp5UTNrOFRtRFE?oc=5",
+   "time": "2026-10-03 07:02",
+   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPa3hlVGFCamlHVDBhU3pSS29xdXExMzRDZU16OHhfRUhTU1FGbzBsa2dScFVreHdkOEdMRk9KOFdJUlNxcHZyVC1OZmtUamtoUVdpU085UWJVODdERzlVbmdhTGFQdTNHaUNNRzA3dWxiOXpsd1ozaUZXZHRwWFZrMVpyZmwtSUNQT3NiNEdCYl83MXhyWjN3NEVJVkJ2R08xTE1pYmdnR0xhT3kwZC1sVXBZWTRaQ1lyWnZ1eEFJc0pkS2FSQ19YdjZaLVJQQ3k1YlVoWGZsa3llNC15aHRvdVVjVDVDaWNCRDNB0gHwAUFVX3lxTE1faUJnZUVNNHotQVdQSzJGemU3NWpONzdkSXZuY1I4S0YyYVJDZ0ZTTlIyWVVqemNtcHVGUzQxZElFOVZJOGlKQ2E5bFZHXzdSbHNUYW1pc3F3TFBBUV80bGdNWE5KMzEwczg2LWg1RzlfZmZ0M2pFUFg3V2JDUkJDcU5aYzc0T2tIanh0UmxxdGxHdW1FYlUteENUTlhXOE10ekUzdWF4dkJaNGJ6dFlOWlhQLVBGcDF4WWFFLTgtbFJGcTRGTGtkSWVjV2FuQmhLRncxMTJUQzVNMHk4cmI2bUtGbGw5UXBWNEx2d1dDZQ?oc=5",
    "hints": [],
    "first_seen": "2026-10-03 09:23",
    "matches": [],
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "artist": "Yahoo",
-   "artist_fans": 6780,
-   "artist_region": "其他",
-   "artist_photo": "avatars/a-f42343e88594.jpg",
    "hidden": "不是演唱会（comedy）",
    "listed": false
   },
@@ -11026,7 +11122,7 @@
    "title": "엑스러브, 싱가포르서 단독 콘서트 개최…'글로벌 핫 루키' 굳힌다 - v.daum.net",
    "text": null,
    "time": "2026-10-01 14:21",
-   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE41Q2NCNDZ6Y2VsR2NaM01HUHBuWTZUVnZXZF9OVE9OZ1Z4d3lDTU85MEloTkZ1ZTExSmQ1SW4teTIxZGZqUVE?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5rdUVjZzNyZEFxSVV3MzMyUjhpU01fd1NpVEZpb25NaGlBSGhaMWFxRlVIUlpPYkNDSzJ0YWp2bDlJMHQ4NXZQVWY3ZEZjVU0?oc=5",
    "hints": [],
    "first_seen": "2026-10-02 02:34",
    "matches": [],
@@ -11468,8 +11564,8 @@
    "id": "news-1ff9cc89e6282fd6",
    "kind": "新闻",
    "country": "MY",
-   "from": "ohbulan.com",
-   "title": "Ejen Ali Sambut Sedekad Perjalanan Dengan Konsert Di KLCC, Hael Husaini Antara Artis Jemputan - ohbulan.com",
+   "from": "OHBULAN!",
+   "title": "Ejen Ali Sambut Sedekad Perjalanan Dengan Konsert Di KLCC, Hael Husaini Antara Artis Jemputan - OHBULAN!",
    "text": null,
    "time": "2026-09-30 17:18",
    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPSDFobUNaZFZHR0dicmJqaEdldWpyUmFpeFk2cFE3THpSUUozeEdsTWxlUnBRUWIzdV9rY29mVTRQZ0FlQkxtMXVpMXV4SWtGYWxrTUZjTXB6cXBHenRYVFFyT0VWRlJQbGdSUV80TnIxcHlETm5ELW1idVExcXlpVlp4SWhQampVRGxocTZHdi0xY182bWJWQWwzbHZIQjFXck1UT2xXYzRySVpaSTZKeHhWc9IBuwFBVV95cUxOaE1sVDVJZVdRNnFhTmJsZE9sTUxSd0RnYllWVDVTSU10LTl6Q2ZYdGtBTnpVS2tSdmpQSGFJTmVnMFdlRUVUZGdBMGhzNDlkcHdqOXBXRURCV0tEejZuV0hHOXEycU9KRGYwaUxTbFB1eUFQaWpVRFdDM2d5d0g0VVJRQ3JfWnBJTl9hSjVTR0FqWWM5OElrN1ZYdVlwMTlldTFxVFUwbnM0eGN6QzZBam9Jdm5lZGtzeVFF?oc=5",
@@ -11590,12 +11686,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
    "artist": "Israel Houghton",
    "artist_fans": 51236,
    "artist_region": "欧美",
-   "artist_photo": "avatars/a-0d38f2cafd68.jpg",
-   "hidden": null,
-   "listed": false
+   "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
   {
    "id": "news-b8233bb4fddb3938",
@@ -12820,12 +12916,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
    "artist": "izna",
    "artist_fans": 6990,
    "artist_region": "K-pop",
-   "artist_photo": "avatars/a-988ff669d789.jpg",
-   "hidden": null,
-   "listed": false
+   "artist_photo": "avatars/a-988ff669d789.jpg"
   },
   {
    "id": "news-574960e8c5a82796",
@@ -12886,12 +12982,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
-   "listed": false,
    "artist": "izna",
    "artist_fans": 6990,
    "artist_region": "K-pop",
-   "artist_photo": "avatars/a-988ff669d789.jpg"
+   "artist_photo": "avatars/a-988ff669d789.jpg",
+   "hidden": null,
+   "listed": false
   },
   {
    "id": "ig-deb10a832500b6c7",
@@ -13004,6 +13100,28 @@
    ],
    "hidden": null,
    "listed": true
+  },
+  {
+   "id": "news-5e4503ceecfa5f14",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "says.com",
+   "title": "Post Malone’s Kuala Lumpur Concert Has Been Postponed - says.com",
+   "text": null,
+   "time": "2026-09-27 15:00",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNU0pvZnFfZHVFaWNhQU1MQjVSUDZXQjdxZ1ltZHBLMkh0bHZsdS10WlhZWlpDTDVuYlBRQzZYSGpTQUc1TTNLbkFRc18wbVJEWUJRczRVal9fbk16TmV1aGZka29oQUtMdkxNcDBqVUwyS3JYRHVpX0F0aFlicDhrT05zeC1TYVRuSDJlUU5maU5tbFBMRUM4WENjNWRjNFFUTGhjcjdYTzQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-03 13:26",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "Post Malone",
+   "artist_fans": 4206043,
+   "artist_region": "欧美",
+   "artist_photo": "avatars/a-3baec3895bc4.jpg",
+   "hidden": null,
+   "listed": false
   },
   {
    "id": "ig-b637c98408e5ff84",
