@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-03 05:17",
+ "generated_at": "2026-10-03 09:23",
  "health": {
   "GoLive": {
    "ok": true,
@@ -10,10 +10,9 @@
    "count": 131
   },
   "BookMyShow": {
-   "ok": false,
-   "error": "HTTP 403",
-   "stale": true,
-   "count": 20
+   "ok": true,
+   "count": 19,
+   "local": "2026-10-03 09:22"
   },
   "Ticket2U": {
    "ok": true,
@@ -31,12 +30,12 @@
   },
   "Google News": {
    "ok": true,
-   "count": 51,
+   "count": 55,
    "error": null
   },
   "东方日报 娱乐": {
    "ok": true,
-   "count": 10
+   "count": 11
   },
   "人工线索": {
    "ok": true,
@@ -106,6 +105,70 @@
  ],
  "watch_artists": [],
  "news_checks": {
+  "Apink": {
+   "checked": "2026-10-03",
+   "country": "MY",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": null,
+   "count": 8,
+   "top": [
+    {
+     "title": "Apink郑恩地10月11日Solo开唱 《SUMMER, I》亚洲巡首站选大马 - orientaldaily.com.my",
+     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5TNG5mT3QwZGw1UUlERE8tbkJEaGJaZjB5SE8wZkUxRnJQaGhvWGgxX3JUMjM0VEJOTTNhZm84UTVCVFZuRTd6TUhvRGRXZy1hTUhnRGl3NDR6a29teENfc1dZa29ha2ExT19YRXJKWGliazRhNnpOMw?oc=5",
+     "time": "2026-10-03"
+    },
+    {
+     "title": "Apink Jeong Eunji To Hold Solo Concert In KL This October - hype.my",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE81bzluVHZVUVJCZG9OOGVycEdCbWwyZWFoaXRTSDF0Wl8wOFN6VnpVVko3RWlDYm1MeXAzQWsxQVVuZ3lFX0Y2U2hxYlhIQ1hjUXNTdnozd1BGZnRURzE5Q3IwLWJBbWFfZnNWcXVMYzFnTFVpZ3JuOWlEQ2lZbGc?oc=5",
+     "time": "2026-08-19"
+    },
+    {
+     "title": "WeverseApink Media - Apink Diary 2026 EP.29 (〈The Origin : APINK〉 - Singapore & Kuala Lumpur Concert Behind) - Weverse",
+     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5lT3Aya2huVmxPR0RHUUFtVlZ3Mzd4WXhNdkxEZmJ3clJ3djMwSTlndHcxWXFGb25ISTdZaE42NFE0Ymp3TzdTdkNDbTdwVGcwOXMxNGhpRk56RjF1aTh6Yw?oc=5",
+     "time": "2026-08-07"
+    },
+    {
+     "title": "Malaysian Kpop Fans (MKF) on X ...",
+     "url": "https://x.com/msiakpopfans/status/2029799966403891294",
+     "time": "",
+     "web": true,
+     "countries": [
+      "MY"
+     ]
+    },
+    {
+     "title": "韩国女团Apink 5月3日来马开唱！座位图、粉丝福利这里看！",
+     "url": "https://www.woah.my/2026/04/01/han-guo-nyu-tuan-apink5-yue-3/",
+     "time": "2026年4月1日",
+     "web": true,
+     "countries": [
+      "MY",
+      "KR"
+     ]
+    },
+    {
+     "title": "위버스 Apink Media - Apink Diary 2026 EP.29 (〈The Origin",
+     "url": "https://weverse.io/apink/media/4-238333136?hl=ko",
+     "time": "",
+     "web": true,
+     "countries": [
+      "MY",
+      "SG"
+     ]
+    }
+   ],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null,
+   "web_count": 7,
+   "countries": [
+    "MY",
+    "KR",
+    "SG"
+   ]
+  },
   "Surprise": {
    "checked": "2026-10-03",
    "country": "MY",
@@ -1313,6 +1376,39 @@
      "title": "Henry Lau To Perform In KL This October; Ticketing Details Unveiled - hype.my",
      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOc01fVDlkOWxoNmRGOGFNMjRMTXdiLUlQV3JnZXRqVDJ4VmFfbkZ0TDdnNzFPcHhXVzQxNXMyX005NUpEN0xxbGQtNFBzNWoxWnZjTXVuQmwzSlNNOWZQR0VSanljY0FuNWxmOU5KZndmRFdZQllmWDQ1RFZfX19DbTNnUVJ3bklmRlhF?oc=5",
      "time": "2026-07-10"
+    }
+   ],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null
+  },
+  "理想混蛋": {
+   "checked": "2026-10-03",
+   "country": "MY",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": {
+    "title": "理想混蛋1121重返吉隆坡开唱 门票101开售 - chinapress.com.my",
+    "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNeHVlSW1zR3FDMXpsM21pR0xFYXF5blJVanUzNkVUaTBXTGZVbm9aaEVqZUo2ZDhlVDI5M3FwWHZuUWpBQUZILUY5NDVsQVVIWDFqSzlFWktlZWdEcjByRzdKMjUwNEc3ZzFzaFNjUEVWSG01RzJkaW9wdmZ0SmpxSXBmYzhMVFQ2T1RrOEthcE5FWWhpQ24tMXlZRTd2OWhOS3AxZ0xtbE45QzF4SzZkM2Z1eE1lQWJTMVpGZE56aHZMZ192M2hNNGRQSWpReW5PaXRQeUpvQjlrU2owRTFKMjZCTVJPaThqa0h6b1BoZTgtT1pMVms1ZzFoR0x2QWl0R3BYSE1OY1VRTjRhSG9oXw?oc=5",
+    "time": "2026-09-25"
+   },
+   "count": 4,
+   "top": [
+    {
+     "title": "理想混蛋携全新创作 1121来马开唱 - 光华日报",
+     "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQWExYS2dPVGRKbS1MR0ZjTk51TTlMaWFNSDVNaXRqTXJCSlNIM3QtRks0MS1iVm1PMlhNbkNRaHJBSy0ycGg3Mmx0bWxFeTZWWlNYbWRwRWVkOE90REtkclZfUkU5M0ZWZHpDUWtlNWZmUFo4bHM5emZmVjVuT3VrdE0xSGMxRUVkQlBRWVR4aF9VT0R1NFduQXZKY09NS0pRX1J6WFpXSDhYd1JBbTBFbzAzaGhfMUxWZGFlY3VjYlo0eGVVUmZJUXBCdG1uVjJRZFlBOThySzhQbFRqSHNZUE9ZODRFZEh1VjlUTjlnNXlVQQ?oc=5",
+     "time": "2026-09-26"
+    },
+    {
+     "title": "理想混蛋守诺 1121重返大马开唱 - 娱乐 - 大马娱乐 - Sin Chew Daily",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUDI1MU5GRzJmcDBFOXlCQTFOWFhaMUtSTTAzek5zNjBYendNdTZKNFRpSHo3a2NXM3A3OHlZWXh1NEdMUElvMzBJTFhfQXotcFB1YThndFhwdVBrOUxQcjR3bWtKT2lzdnAyMzl0ck1MTENUZkNuLUt5X2wtQ3VCTFFmX0U?oc=5",
+     "time": "2026-09-25"
+    },
+    {
+     "title": "理想混蛋1121重返吉隆坡开唱 门票101开售 - chinapress.com.my",
+     "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNeHVlSW1zR3FDMXpsM21pR0xFYXF5blJVanUzNkVUaTBXTGZVbm9aaEVqZUo2ZDhlVDI5M3FwWHZuUWpBQUZILUY5NDVsQVVIWDFqSzlFWktlZWdEcjByRzdKMjUwNEc3ZzFzaFNjUEVWSG01RzJkaW9wdmZ0SmpxSXBmYzhMVFQ2T1RrOEthcE5FWWhpQ24tMXlZRTd2OWhOS3AxZ0xtbE45QzF4SzZkM2Z1eE1lQWJTMVpGZE56aHZMZ192M2hNNGRQSWpReW5PaXRQeUpvQjlrU2owRTFKMjZCTVJPaThqa0h6b1BoZTgtT1pMVms1ZzFoR0x2QWl0R3BYSE1OY1VRTjRhSG9oXw?oc=5",
+     "time": "2026-09-25"
     }
    ],
    "platforms": [],
@@ -5419,73 +5515,6 @@
    ]
   },
   {
-   "id": "nol-26014286",
-   "country": "KR",
-   "source": "NOL World",
-   "name": "Zion.T 2026 LIVE",
-   "artist": null,
-   "type": "Rap/hiphop",
-   "venue": "GS Arts Center ",
-   "city": "Seoul",
-   "dates": [
-    "2026-11-14",
-    "2026-11-15"
-   ],
-   "sales": [
-    {
-     "name": "开票",
-     "start": "2026-10-08 18:00",
-     "end": null,
-     "queue": null,
-     "available": true,
-     "code_required": false,
-     "url": "https://world.nol.com/en/ticket/places/24001634/products/26014286"
-    }
-   ],
-   "tiers": [
-    {
-     "name": "R Seat",
-     "price": "₩165,000"
-    },
-    {
-     "name": "S Seat",
-     "price": "₩154,000"
-    }
-   ],
-   "limit": null,
-   "sold_out": false,
-   "url": "https://world.nol.com/en/ticket/places/24001634/products/26014286",
-   "first_seen": "2026-10-02 13:49",
-   "seat_maps": [],
-   "artist_name": "Zion.T",
-   "fans": 17699,
-   "region": "K-pop",
-   "poster_img": "avatars/p-nol-26014286.jpg",
-   "avatar": "avatars/a-479b280132d4.jpg",
-   "avatar_kind": "artist",
-   "poster_portrait": true,
-   "platforms": [
-    {
-     "source": "NOL World",
-     "url": "https://world.nol.com/en/ticket/places/24001634/products/26014286",
-     "id": "nol-26014286",
-     "sold_out": false,
-     "price_from": null
-    }
-   ],
-   "hidden": null,
-   "news_added": null,
-   "added_status": null,
-   "sale_state": "GENERAL_SALE_ANNOUNCED",
-   "sale_evidence": [
-    {
-     "src": "NOL World 售票轮次",
-     "text": "开票",
-     "time": "2026-10-08 18:00"
-    }
-   ]
-  },
-  {
    "id": "golive-176",
    "source": "GoLive",
    "name": "2026-27 BABYMONSTER WORLD TOUR [춤 (CHOOM)] IN KUALA LUMPUR",
@@ -6595,6 +6624,87 @@
      "text": "#Showbiz: Simple Plan to perform at Zepp KL in March, tickets on sale tomorrow onwards - NST Online",
      "time": "2022-12-27",
      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMEJLbFFhT3RqR1hYMXNGOTR1ckM4UmlvUFg3UW5wQkplWGpqMGl4bk9ZLXlSSXBoVk5iOV9xSVk2LWllcmRkem9pQlFRYnJxeUxoaUpDXzJaNEhpTURGTERBNlJaZmdEZHpaclhzcjhiRHJvNF81OW94emRMY195NmMteWQtcUhEaGxLaUJuWDhXb3V6eFRKSnl5VVZWRnZiUlpCZTFFcDh6Y3ZtcXkzTnp3amxFT21HR2c?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "bms-BTRY26KL",
+   "source": "BookMyShow",
+   "name": "理想混蛋 Bestards 《不是因為天氣晴朗才見面》演唱會吉隆坡站",
+   "artist": null,
+   "type": null,
+   "venue": "Zepp Kuala Lumpur",
+   "city": "Kuala Lumpur",
+   "dates": [
+    "2026-11-21 19:30"
+   ],
+   "sales": [],
+   "tiers": [],
+   "limit": 8,
+   "organiser": "CK STAR MALAYSIA SDN. BHD.",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/bestards-bestory/BTRY26KL",
+   "country": "MY",
+   "first_seen": "2026-10-03 09:23",
+   "seat_maps": [
+    "maps-extra/bms-BTRY26KL.jpg"
+   ],
+   "artist_name": "理想混蛋",
+   "fans": 64,
+   "region": "华语",
+   "poster_img": "avatars/p-bms-BTRY26KL.jpg",
+   "avatar": "avatars/a-52d5fcaeb889.jpg",
+   "avatar_kind": "artist",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/bestards-bestory/BTRY26KL",
+     "id": "bms-BTRY26KL",
+     "sold_out": false,
+     "price_from": null
+    }
+   ],
+   "hidden": null,
+   "news_added": null,
+   "added_status": null,
+   "opened_at": "2026-09-25",
+   "opened_approx": true,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "Google 新闻",
+     "text": "理想混蛋1121重返吉隆坡开唱 门票101开售 - chinapress.com.my",
+     "time": "2026-09-25",
+     "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNeHVlSW1zR3FDMXpsM21pR0xFYXF5blJVanUzNkVUaTBXTGZVbm9aaEVqZUo2ZDhlVDI5M3FwWHZuUWpBQUZILUY5NDVsQVVIWDFqSzlFWktlZWdEcjByRzdKMjUwNEc3ZzFzaFNjUEVWSG01RzJkaW9wdmZ0SmpxSXBmYzhMVFQ2T1RrOEthcE5FWWhpQ24tMXlZRTd2OWhOS3AxZ0xtbE45QzF4SzZkM2Z1eE1lQWJTMVpGZE56aHZMZ192M2hNNGRQSWpReW5PaXRQeUpvQjlrU2owRTFKMjZCTVJPaThqa0h6b1BoZTgtT1pMVms1ZzFoR0x2QWl0R3BYSE1OY1VRTjRhSG9oXw?oc=5"
+    }
+   ],
+   "seat_map_source": "Google 图片（my.bookmyshow.com），非售票平台官方图，请以官网为准",
+   "ocr_tiers": [
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 3888"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 588"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 488"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 388"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 308"
+    },
+    {
+     "name": "票区（颜色见座位图）",
+     "price": "RM 288"
     }
    ]
   },
@@ -8184,6 +8294,70 @@
    ]
   },
   {
+   "id": "nol-26013663",
+   "country": "KR",
+   "source": "NOL World",
+   "name": "2026 Dynamicduo Concert “In The Long Run” - Busan",
+   "artist": null,
+   "type": "Concerts",
+   "venue": "KBS BUSAN HALL",
+   "city": "부산시",
+   "dates": [
+    "2026-12-12"
+   ],
+   "sales": [
+    {
+     "name": "开票",
+     "start": "2026-09-30 18:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://world.nol.com/en/ticket/places/26001097/products/26013663"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "Assigned Seat",
+     "price": "₩143,000"
+    }
+   ],
+   "limit": null,
+   "sold_out": false,
+   "url": "https://world.nol.com/en/ticket/places/26001097/products/26013663",
+   "first_seen": "2026-09-29 17:13",
+   "seat_maps": [],
+   "artist_name": "Dynamicduo",
+   "fans": 15434,
+   "region": "K-pop",
+   "poster_img": "avatars/p-nol-26013663.jpg",
+   "avatar": "avatars/a-b74a9c679454.jpg",
+   "avatar_kind": "artist",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "NOL World",
+     "url": "https://world.nol.com/en/ticket/places/26001097/products/26013663",
+     "id": "nol-26013663",
+     "sold_out": false,
+     "price_from": null
+    }
+   ],
+   "hidden": null,
+   "news_added": null,
+   "added_status": null,
+   "opened_at": "2026-09-30 18:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-09-30 18:00"
+    }
+   ]
+  },
+  {
    "id": "bms-DIORINKL",
    "source": "BookMyShow",
    "name": "DIOR 大穎 2026 《KAMPUNG GIRL 普通人》 世界巡回演唱會 - 吉隆坡站",
@@ -9751,72 +9925,6 @@
    "sale_evidence": []
   },
   {
-   "id": "bms-BMSQFZKL",
-   "source": "BookMyShow",
-   "name": "2026 邱鋒澤 Feng Ze Bend The Lines Concert - Malaysia",
-   "artist": null,
-   "type": null,
-   "venue": "Zepp Kuala Lumpur",
-   "city": null,
-   "dates": [],
-   "sales": [],
-   "tiers": [],
-   "limit": 12,
-   "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
-   "sold_out": false,
-   "stop_sales": false,
-   "url": "https://my.bookmyshow.com/en/events/2026-qiu-feng-ze-feng-ze-bend-the-lines-concert-malaysia/BMSQFZKL",
-   "country": "MY",
-   "first_seen": "2026-09-29 11:12",
-   "seat_maps": [
-    "maps-extra/bms-BMSQFZKL.png"
-   ],
-   "artist_name": "邱鋒澤",
-   "fans": 24,
-   "region": "华语",
-   "poster_img": "avatars/p-bms-BMSQFZKL.jpg",
-   "avatar": "avatars/a-3f068ff661d7.jpg",
-   "avatar_kind": "artist",
-   "poster_portrait": true,
-   "platforms": [
-    {
-     "source": "BookMyShow",
-     "url": "https://my.bookmyshow.com/en/events/2026-qiu-feng-ze-feng-ze-bend-the-lines-concert-malaysia/BMSQFZKL",
-     "id": "bms-BMSQFZKL",
-     "sold_out": false,
-     "price_from": null
-    }
-   ],
-   "hidden": null,
-   "news_added": null,
-   "added_status": null,
-   "sale_state": "ON_SALE",
-   "sale_evidence": [],
-   "seat_map_source": "Google 图片（www.fantopia.io），非售票平台官方图，请以官网为准",
-   "ocr_tiers": [
-    {
-     "name": "VIP BOX",
-     "price": "RM 3104"
-    },
-    {
-     "name": "ROCK ZONE",
-     "price": "RM 488"
-    },
-    {
-     "name": "CAT1",
-     "price": "RM 388"
-    },
-    {
-     "name": "票区（颜色见座位图）",
-     "price": "RM 288"
-    },
-    {
-     "name": "CAT3",
-     "price": "RM 188"
-    }
-   ]
-  },
-  {
    "id": "bms-BMSASP26",
    "source": "BookMyShow",
    "name": "Air Supply A Matter of Time Tour",
@@ -9912,6 +10020,7 @@
     }
    ],
    "hidden": null,
+   "sales_closed": false,
    "news_added": null,
    "added_status": null,
    "sale_state": "GENERAL_SALE_ANNOUNCED",
@@ -10259,11 +10368,134 @@
  ],
  "leads": [
   {
+   "id": "news-0165172d843ce7a8",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "orientaldaily.com.my",
+   "title": "Apink郑恩地10月11日Solo开唱 《SUMMER, I》亚洲巡首站选大马 - orientaldaily.com.my",
+   "text": null,
+   "time": "2026-10-03 09:07",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5TNG5mT3QwZGw1UUlERE8tbkJEaGJaZjB5SE8wZkUxRnJQaGhvWGgxX3JUMjM0VEJOTTNhZm84UTVCVFZuRTd6TUhvRGRXZy1hTUhnRGl3NDR6a29teENfc1dZa29ha2ExT19YRXJKWGliazRhNnpOMw?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-03 09:23",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "Apink",
+   "artist_fans": 64193,
+   "artist_region": "K-pop",
+   "artist_photo": "avatars/a-ae2c39ab02c9.jpg",
+   "hidden": null,
+   "listed": false
+  },
+  {
+   "id": "news-46aa3b69e8fec6b7",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "东方日报 娱乐",
+   "title": "Apink郑恩地10月11日Solo开唱 　《SUMMER, I》亚洲巡首站选大马",
+   "text": "（吉隆坡3日讯）Apink郑恩地今年5月才随团来马演出，如今将于10月11日再度回到吉隆坡举办个人演唱会《2026 JEONG EUNJI SOLO CONCERT 'SUMMER, I' ASIA TOUR in Kuala Lumpur》，大马站更是她此次亚洲巡演的首站！ 郑恩地11日将来马办Solo演出。 郑恩地是韩国人气女团Apink的主唱，以极具爆发力的歌唱实力闻名，曾演唱《回答吧1997》OST《All For You》等多首经典歌曲。她不仅在团体活动中展现稳定的演唱实力，个人音乐发...",
+   "time": "2026-10-03 09:07",
+   "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/03/852153",
+   "hints": [],
+   "sale_times": [],
+   "first_seen": "2026-10-03 09:23",
+   "matches": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "Apink",
+   "artist_fans": 64193,
+   "artist_region": "K-pop",
+   "artist_photo": "avatars/a-ae2c39ab02c9.jpg",
+   "hidden": null,
+   "listed": false
+  },
+  {
+   "id": "news-20594b64f8266c07",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "CNA Lifestyle",
+   "title": "The Weeknd Singapore concert review: After Hours Til Dawn is a spectacular return after 8 years - CNA Lifestyle",
+   "text": null,
+   "time": "2026-10-03 07:39",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZWV2aWlTYUdieHBickZqWEtBYXVGX3kxaUo0RTJzeWNKVlNnSDN6WVZuQ0JkUGxfNmV1NHE0ZFZfbkE2WGhBcnV2ZU4weVVGRjlGUTFwWUJpV0dCRERGaUM2cVFWRnpvNFZwU1psaFVsX3dtbjZSdjJTeU93ZEJ0ckZyekEzMWx2M3NwS3FPRU1XRXdfR2dRWXJzVFdrOS1yX1pHRnV0OA?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-03 09:23",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-c3381257645a0f75",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "starnewskorea.com",
+   "title": "82MAJOR，点燃吉隆坡！今日（3日）亮相《偶像电台吉隆坡现场》（IDOL RADIO LIVE IN KUALA LUMPUR） - starnewskorea.com",
+   "text": null,
+   "time": "2026-10-03 07:15",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1lUTZ1Q0wydjR4eUk0NHN1dEl6TEMyY0ZqZUNaZ0dmZnpyZEdzbHh6TUFpRlQ3eGRVd29sbHhrQTNPaE9VS2dkT093R2E1VVZsSFNKZE1PRnhFbmlHY3EwcElBM3Rwd2RVNHNWRXdSTjU2dGczSExrMQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-03 09:23",
+   "matches": [
+    "fantopia-zmm0u8rr",
+    "bms-BMSIDOLR"
+   ],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": null,
+   "listed": true
+  },
+  {
+   "id": "news-589d1e7e218ea375",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Yahoo",
+   "title": "Bumper weekend in Malaysia: F1, football legends, concerts and comedy shows set to pack Klang Valley - Yahoo",
+   "text": null,
+   "time": "2026-10-03 07:00",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQUVV0VzdYYzV2bU5zdTNXdXJmekVQSEgxcmJIV010b0NWMDBoVGNhblpBYTk5OFNpMmo2cl9pUl9kNjY0bTFRTlZ1T3NSb0g5Z3FxTV9LUjBPNTdaVkFIeFFZX05adTlPbTBTcFRwd2pobExyV0dxbzdhSzJXQjlvRmp5UTNrOFRtRFE?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-03 09:23",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "Yahoo",
+   "artist_fans": 6780,
+   "artist_region": "其他",
+   "artist_photo": "avatars/a-f42343e88594.jpg",
+   "hidden": "不是演唱会（comedy）",
+   "listed": false
+  },
+  {
+   "id": "news-4bb55d0fbb69bab3",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "azat.tv",
+   "title": "Singapore Queues Up Early for The Weeknd Ahead of Stadium Tour Dates - azat.tv",
+   "text": null,
+   "time": "2026-10-03 03:15",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8tREhWYVRzcFVTWTg4MUNDS1R1MVEwelRkRlVVeU5XUEdyT3NfQ3RmNmtfcmN2TzdpYXExdWE2cWh3Zmw2OFRJdVR6RVV1Z21XNjQxc3dRLWFLejk0UUw4SjYxWktCcWQ2ZjdnbTRWMUdIT0dlaFE?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-03 09:23",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
    "id": "news-0f0c042d0e8e2bda",
    "kind": "新闻",
    "country": "SG",
-   "from": "gametrader.sg",
-   "title": "Jujutsu Kaisen in Concert Lands in Singapore on 31 October — Tickets from S$58 - gametrader.sg",
+   "from": "GameTrader.SG",
+   "title": "Jujutsu Kaisen in Concert Lands in Singapore on 31 October — Tickets from S$58 - GameTrader.SG",
    "text": null,
    "time": "2026-10-03 02:24",
    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPU3d2VGN3RzhFUWYtczd1MnBvZ0RUWXhFTzZpMm5KcW1zTTZoakxodXhJTE5UdV90VGx1T3pzcEtPWjlwLWNTZk8yUHpfc3dFZVpmQ3pwRG1xRzdTQzdKX2d2LU5sWjF3MlNTU3pLZnhGWWhxWnNJNGR3TEdoRHZ5VGd6T3d4aWs?oc=5",
@@ -10812,7 +11044,7 @@
    "title": "[공식] 엑스러브(XLOV), 싱가포르 단독 콘서트 'Serving-X' 개최 - v.daum.net",
    "text": null,
    "time": "2026-10-01 13:49",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFAtcUFDRXJGVVN2T2tpSlp6S2F4OGVVbVNVOHNnMXZlMncwdU91cXpDVEhoVWo3c2tBcU5EY1RmekJtcUd6MG9oYTFaRFdRN081eUlSWQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1OUFk5NzZqZXNud3U5alFYQWlrS1g2VjJjR1BuODNvems4TGlxNkwzVjVXaDhTNGx1WmJlenA5UmNTVTl1WHc?oc=5",
    "hints": [],
    "first_seen": "2026-10-02 02:34",
    "matches": [],
@@ -10863,12 +11095,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
    "artist": "XLOV",
    "artist_fans": 23157,
    "artist_region": "K-pop",
-   "artist_photo": "avatars/a-8eb7d20d758b.jpg",
-   "hidden": null,
-   "listed": false
+   "artist_photo": "avatars/a-8eb7d20d758b.jpg"
   },
   {
    "id": "news-d902837cf10d3056",
@@ -11058,8 +11290,8 @@
    "id": "news-4348f28522f51b4d",
    "kind": "新闻",
    "country": "MY",
-   "from": "freemalaysiatoday.com",
-   "title": "Urus risiko keselamatan supaya konsert Houghton berlangsung aman, kata Salleh - freemalaysiatoday.com",
+   "from": "Free Malaysia Today",
+   "title": "Urus risiko keselamatan supaya konsert Houghton berlangsung aman, kata Salleh - Free Malaysia Today",
    "text": null,
    "time": "2026-09-30 22:50",
    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxObW9OSmQ0S0EzTTA5VnVqSlVSNFZqeGFuTV9DOFMzUjJEblM2OE1udXJackdMNTlMczZSWF9XQ180blZwaDg4WW9ocHVuRWNRM0VVbTJ6LUVDS29qX1pfOHh0aUQ4cmJwR2FSa1JybWJhUXZ6a0tNNnNzNnZuRE9mTEJHNEF6RXVFbjNxdXVWNUktWkdUbkdVMGlEb0RnMUhjMWtfLU14NmJFWVVhZDAwbUM5by16UnVsNldrM0Q4dUQ2SzJfbkxOUmktVV94OXZwSklETnB3U09UTlk5d0hZ?oc=5",
@@ -11236,8 +11468,8 @@
    "id": "news-1ff9cc89e6282fd6",
    "kind": "新闻",
    "country": "MY",
-   "from": "OHBULAN!",
-   "title": "Ejen Ali Sambut Sedekad Perjalanan Dengan Konsert Di KLCC, Hael Husaini Antara Artis Jemputan - OHBULAN!",
+   "from": "ohbulan.com",
+   "title": "Ejen Ali Sambut Sedekad Perjalanan Dengan Konsert Di KLCC, Hael Husaini Antara Artis Jemputan - ohbulan.com",
    "text": null,
    "time": "2026-09-30 17:18",
    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPSDFobUNaZFZHR0dicmJqaEdldWpyUmFpeFk2cFE3THpSUUozeEdsTWxlUnBRUWIzdV9rY29mVTRQZ0FlQkxtMXVpMXV4SWtGYWxrTUZjTXB6cXBHenRYVFFyT0VWRlJQbGdSUV80TnIxcHlETm5ELW1idVExcXlpVlp4SWhQampVRGxocTZHdi0xY182bWJWQWwzbHZIQjFXck1UT2xXYzRySVpaSTZKeHhWc9IBuwFBVV95cUxOaE1sVDVJZVdRNnFhTmJsZE9sTUxSd0RnYllWVDVTSU10LTl6Q2ZYdGtBTnpVS2tSdmpQSGFJTmVnMFdlRUVUZGdBMGhzNDlkcHdqOXBXRURCV0tEejZuV0hHOXEycU9KRGYwaUxTbFB1eUFQaWpVRFdDM2d5d0g0VVJRQ3JfWnBJTl9hSjVTR0FqWWM5OElrN1ZYdVlwMTlldTFxVFUwbnM0eGN6QzZBam9Jdm5lZGtzeVFF?oc=5",
@@ -12632,12 +12864,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
-   "listed": false,
    "artist": "izna",
    "artist_fans": 6990,
    "artist_region": "K-pop",
-   "artist_photo": "avatars/a-988ff669d789.jpg"
+   "artist_photo": "avatars/a-988ff669d789.jpg",
+   "hidden": null,
+   "listed": false
   },
   {
    "id": "news-fef85a32bfab8222",
