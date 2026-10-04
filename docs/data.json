@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-04 00:26",
+ "generated_at": "2026-10-04 14:02",
  "health": {
   "GoLive": {
    "ok": true,
@@ -16,7 +16,7 @@
   },
   "Ticket2U": {
    "ok": true,
-   "count": 15
+   "count": 17
   },
   "NOL World": {
    "ok": true,
@@ -35,7 +35,7 @@
   },
   "东方日报 娱乐": {
    "ok": true,
-   "count": 13
+   "count": 12
   },
   "人工线索": {
    "ok": true,
@@ -1596,7 +1596,7 @@
    "added_news": null
   },
   "那些年的歌3 演唱會 Songs": {
-   "checked": "2026-10-03",
+   "checked": "2026-10-04",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -1609,13 +1609,18 @@
    "added_news": null
   },
   "A-Lin": {
-   "checked": "2026-10-03",
+   "checked": "2026-10-04",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 5,
+   "count": 6,
    "top": [
+    {
+     "title": "A-Lin《歌迹 Journey》1219吉隆坡开唱 门票6日正式启售！ - orientaldaily.com.my",
+     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE95Y0RUbjNrYW5PMlZCbnczcGtfOTNma20zTEZZaEhJa2FXMWROQ0YwUGxXck5xeC1UdGx5MkYtTUM1OEdiN2FBVDNhaldlVFdfMC1WRkEzbzRNbnd3NFV6UzQwYzF4MVBmS01CUEVrekRzenhraUlQeg?oc=5",
+     "time": "2026-10-03"
+    },
     {
      "title": "A-Lin《Journey of Songs》World Tour Reunites with Malaysian Fans on December 19 - 联合日报",
      "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxNaE1JRi1jYVlDQWIzcUVzMnpQdGJxa0hPMnpjd0lmbHZ4RldmZHhXUWhSR0o1R1F3bm5yU3diMG1zaU10dXRuODh6SU5CdFRoSFptSjdtcmZZa2xFLWlNd0tYcTluZlFsVjJSZVQ1TGpwU2JVMDJGMU1fVzZuekgwTTdSODBSOEhua1ItN2paSnFjYjdQQzYyMGNBQlI1Y1JmVlJrLXhhWXFPRjlIellfd1FqTU9lUGZfTk1LOElIc1dBT2V3eUNqdVE5cERrMVBNUFVOSFRnd2x1LWZyX2VSaGZEU21fQWpJeUZ6ZlZWV0RsUmx4c0NiMzJhOXVsYlktWlBWTE9QNmNFS3ZvdW1CS1AwNkdReHM0Rnowam4wR1oxazRud2k3ZWhuR2VhUUNweW0xNmN2Ylo?oc=5",
@@ -1625,11 +1630,6 @@
      "title": "首登大马万人体育馆开唱喊压力 A-Lin“剧透”挑战高难度国语歌 - orientaldaily.com.my",
      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBiNy1zNDB6UkEtR3RuRzlMUXRZRUVmRVVoWWc0OHB3Y3l3Q1pLRXRrMnFqdmpKMzEwRHpZSk5KZ2d3d3dUVS1uSlJYbF9RRm4tRzl3YjFWY1lpNlhGRTVEc2hoQzBSOEhqRnVtTlJJSWpYQVAtVDhVQw?oc=5",
      "time": "2023-02-16"
-    },
-    {
-     "title": "“天生歌姬”A-Lin官宣429来马开唱！门票26日启售 - orientaldaily.com.my",
-     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE55eTdwTzY0cW9RT05EWnpfc0R6bUpDak03Z3ZMaTRFSnJkOFpaVHBfbWpOVnNwbldkQ2d6ak9JRGlyYk1GbjFOTXBsMGRwVjB4TW4zd2pLMW5Ja0stM3pCeGVybHRQeHpmYVF0cHh5dUwtNUJhZ3lQMg?oc=5",
-     "time": "2023-01-24"
     }
    ],
    "platforms": [],
@@ -1638,7 +1638,7 @@
    "added_news": null
   },
   "巫启贤": {
-   "checked": "2026-10-03",
+   "checked": "2026-10-04",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -1651,7 +1651,7 @@
    "added_news": null
   },
   "演唱会 Songs That Keep Us Together": {
-   "checked": "2026-10-03",
+   "checked": "2026-10-04",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -6387,6 +6387,83 @@
    ]
   },
   {
+   "id": "t2u-52414",
+   "source": "Ticket2U",
+   "name": "A Season of Lights and Celebrations: Music for Christmas... and a little more",
+   "artist": null,
+   "type": "Concert",
+   "venue": "Eastern & Oriental Hotel",
+   "city": "Pulau Pinang",
+   "dates": [
+    "2026-11-22 17:00"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-11-23 00:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/52414/a-season-of-lights-and-celebrations-music-for-christmas...-and-a-little-more"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "Children under 18",
+     "price": "RM 40.00",
+     "desc": "",
+     "sold_out": false
+    },
+    {
+     "name": "Standard",
+     "price": "RM 80.00",
+     "desc": "",
+     "sold_out": false
+    },
+    {
+     "name": "VIP (Front Two Rows)",
+     "price": "RM 120.00",
+     "desc": "",
+     "sold_out": false
+    },
+    {
+     "name": "Balcony",
+     "price": "RM 150.00",
+     "desc": "",
+     "sold_out": false
+    }
+   ],
+   "price_from": "RM 40.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/52414/a-season-of-lights-and-celebrations-music-for-christmas...-and-a-little-more",
+   "country": "MY",
+   "first_seen": "2026-10-04 14:02",
+   "seat_maps": [],
+   "artist_name": "A Season of Lights and Celebrations",
+   "fans": 0,
+   "region": "其他",
+   "poster_img": "avatars/p-t2u-52414.jpg",
+   "avatar": "avatars/p-t2u-52414.jpg",
+   "avatar_kind": "poster",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/52414/a-season-of-lights-and-celebrations-music-for-christmas...-and-a-little-more",
+     "id": "t2u-52414",
+     "sold_out": false,
+     "price_from": "RM 40.00"
+    }
+   ],
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "news_added": null,
+   "added_status": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
+  },
+  {
    "id": "golive-174",
    "source": "GoLive",
    "name": "wave to earth - the pieces tour",
@@ -7138,6 +7215,65 @@
      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE92SzBxVnJwQ3FiOTQ4cTVMSldUeVlycHJXS3lvYVc4a05HUzNVdTdRLWd5VDA4aDN2emZCcjBmTzNUWllUMHBtcHdKa283WTBTbXNvdk41dTNOd1A0ZV9lSXpOZWdYQWV4OVRwUlFzd002NWdjWDd6MFNLVQ?oc=5"
     }
    ]
+  },
+  {
+   "id": "t2u-52313",
+   "source": "Ticket2U",
+   "name": "Baroque 2 Bebop: Classical Music Reimagined",
+   "artist": null,
+   "type": "Concert",
+   "venue": "Cheong Fatt Tze - The Blue Mansion",
+   "city": "Pulau Pinang",
+   "dates": [
+    "2026-11-29 17:00"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-11-30 00:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/52313/baroque-2-bebop-classical-music-reimagined"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "Regular",
+     "price": "RM 80.00",
+     "desc": "",
+     "sold_out": false
+    }
+   ],
+   "price_from": "RM 80.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/52313/baroque-2-bebop-classical-music-reimagined",
+   "country": "MY",
+   "first_seen": "2026-10-04 14:02",
+   "seat_maps": [],
+   "artist_name": "Baroque 2 Bebop",
+   "fans": 0,
+   "region": "其他",
+   "poster_img": "avatars/p-t2u-52313.jpg",
+   "avatar": "avatars/p-t2u-52313.jpg",
+   "avatar_kind": "poster",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/52313/baroque-2-bebop-classical-music-reimagined",
+     "id": "t2u-52313",
+     "sold_out": false,
+     "price_from": "RM 80.00"
+    }
+   ],
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "news_added": null,
+   "added_status": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "golive-177",
@@ -9321,7 +9457,9 @@
    "hidden": null,
    "news_added": null,
    "added_status": null,
-   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "opened_at": "2026-10-04 12:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
@@ -10068,6 +10206,66 @@
  ],
  "leads": [
   {
+   "id": "news-7b1b64934b8088ad",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "chinapress.com.my",
+   "title": "A-Lin相隔3年重返大马 1219日开唱 - chinapress.com.my",
+   "text": null,
+   "time": "2026-10-04 13:34",
+   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxORk9xbkFqd0JFVGhFbTdOUG05MENFRUphaW4tYTljWUlSa0tWZFFXd1R0RW5ISkNndDVCWGtUSjJZUWxoVll4MlZ5ajJ6c3hjNUhwUDlTQ2pnLXhWYVVZc1RFcU8wMGxYckstbTNXT0tVc3VIT0dWczFBaWRHRFc4dnN4UndDYU54c2pDY0JTeW11SDhvdzFDaTRycXN6NE9CMmF3VDJWN1p1bFRXN1FXZ2JnYl9TNFBmYW9RajdtRDJJVW50QWprLUdjbTNZX2Q2bkV0R21SUFZWWVQ4YkJHNTctVQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-04 14:02",
+   "matches": [
+    "fantopia-vuvk8zlu"
+   ],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": null,
+   "listed": true
+  },
+  {
+   "id": "news-ecdaf5097df79cc8",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "Wake Up Singapore",
+   "title": "BTS Fever Takes Over Bogotá As Thousands Of ARMY Gather For First Colombia Concert - Wake Up Singapore",
+   "text": null,
+   "time": "2026-10-04 12:30",
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9RMVFiazNuWFZjRnZ1QWZ6MHJ1OFI5ZVFmbVpUbXJGWmNuSnBBUWVVM0JXUnRfMVkyNFRaZ3B4MXlSZkpwM2lVOEV1ZWMxZWs?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-04 14:02",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-ba16f0d00b3bfb01",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Berita Harian",
+   "title": "Faizal Tahir terharu Fahmi Fadzil beli sendiri tiket Suara Rakyat - Berita Harian",
+   "text": null,
+   "time": "2026-10-04 12:19",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQY3ZFaHduY0FldHhZWV9RYTBPUU0wbmdxeGk2cWhjc1BjcGdscVFwaEFIejFqU2NnTDEyU0Z5NXVjV0NNWUhuaHhYdV9ITi03OFdOMFltYzR5eGowbFdMSDJUUHlyNmhCNFpLbl9pUF9JSnI5UVZ4bGhIdHlDNVZXX3pHaGltbzQ1SkhzSUl4VExMSGdYaU43dDlLckdSWnlPR2pzZzVNNkhRTm81TkFNeTl1clhsLU02bXlsVlh1RUhFNXBIUjJyci1HaE90ZmxfQkdUX0VnVQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-04 14:02",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "Faizal Tahir",
+   "artist_fans": 13876,
+   "artist_region": "其他",
+   "artist_photo": "avatars/a-718c50a0b6ca.jpg",
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
+   "listed": false
+  },
+  {
    "id": "news-174324aae138a5f7",
    "kind": "新闻",
    "country": "MY",
@@ -10122,6 +10320,24 @@
    "listed": false
   },
   {
+   "id": "news-fe10a1c9cad5529a",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "联合日报",
+   "title": "MJ116 Goes All Out at Concert in Malaysia – E.SO Hints at 'Big Moves' in March Next Year - 联合日报",
+   "text": null,
+   "time": "2026-10-03 17:01",
+   "url": "https://news.google.com/rss/articles/CBMi6AJBVV95cUxPV3RUbmQtZDVFZzJlVnlZaWxlSmU2YkE3MEhURHZld3pFUDZEM3prb3pnaVNtb0JXOTdyNTJLZzJVb1pWbGJtSlY4TWxsT09fZXMtbWZMcHFVTzJwaTY4ckIwdHZjcXR3ajloRUsxbzNsM2Y1bmcyaGJxaVlHRmhPU1V3cHk3dHBnVEhfSXJwZlpMZENPQjhPdEh3NFZDbkJTVktZTGNQOWNLWEVTb200U1pMZnVYT1JxVUdBNjJCYUk4TnQtS2xZMUZmSm5rNzJsMmhrOUNydWNkbjF6elptYlZMLTdrcFM2R0N5djZhR0RfQW1iSzc1cnVRbTdteF9jNk1BczdiT0ZqRHVrejhzX0tTRjR0Y0dEVGhnZU9RQm1vLXVfMzgtSFpPdU02X29BUkk3VlhPRWFGSm1qd0N1S0xyMVdLUkdDZFB1LUV2V2QtQXpPQkcyMmhEclloZlgxVHRtOWVlSUU?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-04 14:02",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
    "id": "news-ca31dbfcccdba337",
    "kind": "新闻",
    "country": "MY",
@@ -10168,6 +10384,24 @@
    "url": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxOX1pvZkJyTzcwcEVRSkRSSmRrOVVpMGNpdnVKVTdmTUpsMXVDWWtPMnZfdjlRYnB2dWNSUzFIM20ybFlhS0FvcmJsUTR1b2JsRnFqRU9YYXlFZWF1ZFFhR2l0NFJ2a1c4c2dQX0lSTFdJSGprb0d4ck1URU4xMGdZbUlERjBWQ3JBdlg0Yy1UZ0czcDE2dGRnZlVfcXViZFJRTXBEdU90a3cwdWhCc3MyVExYUkd6TzVlaDNydl81b0dmUTRZcXN2ckFYZWdPd3lFc0wzYV9Yb21UWlc3VThpT0VMb2U2OV8tS2FDa2w0X2ttM2xOUk9vUF80djk0TFgtVkp6a3psVkxpN3VQbFNNcjFBTGFudkdKakg2bzFiUl85UjRjdVBaZ1QxSDREYzJQRk0yMHMtb1hGUGRHdkluMjVMSmZ5ZUVI?oc=5",
    "hints": [],
    "first_seen": "2026-10-04 00:26",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-f1ff1ac7bc1f2a4c",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "The Straits Times",
+   "title": "The Weeknd hands mic to a screaming fan amongst the 55,000 crowd on his Oct 2 concert in Singapore - The Straits Times",
+   "text": null,
+   "time": "2026-10-03 13:51",
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5hRWlWU1pZWVRZWXlPV2xDU2ZKajI0OTNTajktVmFDM0dfTlIycWotWkgyS3N0bFdZZlU4bDR0Xy1rdXdlMEVXMXBNN202dlJiSnA5Si0zYmM0WGx6eEE?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-04 14:02",
    "matches": [],
    "sale_times": [],
    "status": "rumor",
@@ -10348,17 +10582,21 @@
    "id": "news-589d1e7e218ea375",
    "kind": "新闻",
    "country": "MY",
-   "from": "Malay Mail",
-   "title": "Bumper weekend in Malaysia: F1, football legends, concerts and comedy shows set to pack Klang Valley - Malay Mail",
+   "from": "Yahoo",
+   "title": "Bumper weekend in Malaysia: F1, football legends, concerts and comedy shows set to pack Klang Valley - Yahoo",
    "text": null,
-   "time": "2026-10-03 07:02",
-   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPa3hlVGFCamlHVDBhU3pSS29xdXExMzRDZU16OHhfRUhTU1FGbzBsa2dScFVreHdkOEdMRk9KOFdJUlNxcHZyVC1OZmtUamtoUVdpU085UWJVODdERzlVbmdhTGFQdTNHaUNNRzA3dWxiOXpsd1ozaUZXZHRwWFZrMVpyZmwtSUNQT3NiNEdCYl83MXhyWjN3NEVJVkJ2R08xTE1pYmdnR0xhT3kwZC1sVXBZWTRaQ1lyWnZ1eEFJc0pkS2FSQ19YdjZaLVJQQ3k1YlVoWGZsa3llNC15aHRvdVVjVDVDaWNCRDNB0gHwAUFVX3lxTE1faUJnZUVNNHotQVdQSzJGemU3NWpONzdkSXZuY1I4S0YyYVJDZ0ZTTlIyWVVqemNtcHVGUzQxZElFOVZJOGlKQ2E5bFZHXzdSbHNUYW1pc3F3TFBBUV80bGdNWE5KMzEwczg2LWg1RzlfZmZ0M2pFUFg3V2JDUkJDcU5aYzc0T2tIanh0UmxxdGxHdW1FYlUteENUTlhXOE10ekUzdWF4dkJaNGJ6dFlOWlhQLVBGcDF4WWFFLTgtbFJGcTRGTGtkSWVjV2FuQmhLRncxMTJUQzVNMHk4cmI2bUtGbGw5UXBWNEx2d1dDZQ?oc=5",
+   "time": "2026-10-03 07:00",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQUVV0VzdYYzV2bU5zdTNXdXJmekVQSEgxcmJIV010b0NWMDBoVGNhblpBYTk5OFNpMmo2cl9pUl9kNjY0bTFRTlZ1T3NSb0g5Z3FxTV9LUjBPNTdaVkFIeFFZX05adTlPbTBTcFRwd2pobExyV0dxbzdhSzJXQjlvRmp5UTNrOFRtRFE?oc=5",
    "hints": [],
    "first_seen": "2026-10-03 09:23",
    "matches": [],
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "artist": "Yahoo",
+   "artist_fans": 6780,
+   "artist_region": "其他",
+   "artist_photo": "avatars/a-f42343e88594.jpg",
    "hidden": "不是演唱会（comedy）",
    "listed": false
   },
@@ -10611,11 +10849,29 @@
    "listed": true
   },
   {
+   "id": "news-7f33a48f9b87b6a2",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Artis Rakyat Nguyen Xuan Bac: Jangan hanya menjual tiket persembahan, juallah perjalanan menikmati Da Nang. - Vietnam.vn",
+   "text": null,
+   "time": "2026-10-02 15:00",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOelFJNlJfZElwQTVQaVN5Rk5NdkhOSlo2UEtRU0lmazQ0WjNRQUlIWk45RUVNR3p1bWFZV0xGSjFqUFEyZDlEWWx5cFJqY2tUWWFTYzdfcGUwc0dtWnowNFFER2toS2xuMVBjNDQ3NnozbmZ0ZFVSUFd2LTFOVGo2Wm9tS2QxZmRpRUF1OV8tTVlhTUQwclhENDMwdkh6U2VNLUxKSmpqMlY4czE4NklNWGd0aW5oXzg?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-04 14:02",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
    "id": "news-5cea02caa2f2c40d",
    "kind": "新闻",
    "country": "MY",
-   "from": "vietnam.vn",
-   "title": "马来西亚的目标是成为“演唱会目的地”，以吸引年轻游客。 - vietnam.vn",
+   "from": "Vietnam.vn",
+   "title": "马来西亚的目标是成为“演唱会目的地”，以吸引年轻游客。 - Vietnam.vn",
    "text": null,
    "time": "2026-10-02 12:22",
    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOb3JHaUxPUkw4Q2tjNHVTOC12Y3dnZ0xUdGd0el9aOEdnX21zTUNvWkZYNjJmQ3lOa0lJdFJmVXhFS0kwNzI3SnR3VDBza1hzMUZEbEdCRmhVWmNGdFdXOVlHajZfTXdqd3dORkpQamRKUjYyWTNROVNVSnV1ZFVnU2w5X1JJWFRzd3BOZWVsd0FRZkFC?oc=5",
@@ -10719,6 +10975,24 @@
    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPVEFad0w2OTZ1TmFkbXdjc2tYdk1sWi1TTWxFYllic1RZTjlDZTBrRkxBdU1PN0cwVEFhUk44ZnVBLWRFZEl6VTNLcXNNQVpabXVVOF9na2lNSTc0WjViNE1nUy1Zcm9GMnI3OWcwWmEwQW9RUFhVWmxZU0VFbWZ5OWtzN0hwUmtyM2VpQmVla3A?oc=5",
    "hints": [],
    "first_seen": "2026-10-02 13:49",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-11360d0d79894cea",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "v.daum.net",
+   "title": "엑스러브, 싱가포르 단독 콘서트 ‘Serving-X’ 성료 - v.daum.net",
+   "text": null,
+   "time": "2026-10-02 09:35",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB0MUZhWFpLSE5MSnFKSU5YclJ0ZC1RaUQxM1lvU0FnUzdQdW9RY3pQQkhQdUpvbWFzOHFPQUVlOVRnQU9SeHdtQVhmc3RZcWZ5RmRuWA?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-04 14:02",
    "matches": [],
    "sale_times": [],
    "status": "rumor",
@@ -10837,12 +11111,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
+   "listed": false,
    "artist": "My Tam",
    "artist_fans": 11315,
    "artist_region": "其他",
-   "artist_photo": "avatars/a-67fe92291379.jpg",
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
-   "listed": false
+   "artist_photo": "avatars/a-67fe92291379.jpg"
   },
   {
    "id": "news-a9fa3b6563b61ce6",
@@ -10996,7 +11270,7 @@
    "title": "[공식] 엑스러브(XLOV), 싱가포르 단독 콘서트 'Serving-X' 개최 - v.daum.net",
    "text": null,
    "time": "2026-10-01 13:49",
-   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1OUFk5NzZqZXNud3U5alFYQWlrS1g2VjJjR1BuODNvems4TGlxNkwzVjVXaDhTNGx1WmJlenA5UmNTVTl1WHc?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFAtcUFDRXJGVVN2T2tpSlp6S2F4OGVVbVNVOHNnMXZlMncwdU91cXpDVEhoVWo3c2tBcU5EY1RmekJtcUd6MG9oYTFaRFdRN081eUlSWQ?oc=5",
    "hints": [],
    "first_seen": "2026-10-02 02:34",
    "matches": [],
@@ -11025,12 +11299,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
    "artist": "XLOV",
    "artist_fans": 23157,
    "artist_region": "K-pop",
-   "artist_photo": "avatars/a-8eb7d20d758b.jpg",
-   "hidden": null,
-   "listed": false
+   "artist_photo": "avatars/a-8eb7d20d758b.jpg"
   },
   {
    "id": "news-099a519b6f63cc25",
@@ -11047,12 +11321,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
-   "listed": false,
    "artist": "XLOV",
    "artist_fans": 23157,
    "artist_region": "K-pop",
-   "artist_photo": "avatars/a-8eb7d20d758b.jpg"
+   "artist_photo": "avatars/a-8eb7d20d758b.jpg",
+   "hidden": null,
+   "listed": false
   },
   {
    "id": "news-d902837cf10d3056",
@@ -11420,8 +11694,8 @@
    "id": "news-ccf2aded976530f9",
    "kind": "新闻",
    "country": "SG",
-   "from": "Secret Singapore",
-   "title": "The Weeknd’s Singapore concerts go ahead despite haze—how to stay safe on Oct 2 & 3 - Secret Singapore",
+   "from": "secretsingapore.co",
+   "title": "The Weeknd’s Singapore concerts go ahead despite haze—how to stay safe on Oct 2 & 3 - secretsingapore.co",
    "text": null,
    "time": "2026-09-30 17:51",
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5KQTJQa21qRWc2cWVfM0Npem1uM2hSUVo5d0Q5ekE3NTZXdFpENmVLNzdaaHV4THhpT1BKRTVLUWllMXM0N0pfR2txV3A2X2o4RHU1VkpnU1NLNXZyd3JLVHp5MWhyY1NzV1ZiNkpfQQ?oc=5",
