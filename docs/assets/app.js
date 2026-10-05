@@ -387,7 +387,7 @@ function scrollToHash() {
   if (!el) return;
   const go = () => el.scrollIntoView({block: "start"});
   go();
-  el.classList.add("flash");
+  el.classList.add("flash", "picked");
   setTimeout(() => el.classList.remove("flash"), 2400);
   let moved = false;
   const stop = () => { moved = true; };
