@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>待确定的消息 · 马来西亚演唱会雷达</title>
 <meta name="theme-color" content="#15171c">
-<link rel="stylesheet" href="assets/app.css?v=20261005a">
+<link rel="stylesheet" href="assets/app.css?v=20261005b">
 </head>
 <body>
 <div class="wrap view">
@@ -16,7 +16,7 @@
   <a class="btn ghost" href="https://github.com/4hYang3074/Malaysia-Concert-Radar/issues/new?template=lead.yml" target="_blank" rel="noopener">＋ 我看到一个消息（例如小红书），提交给雷达</a>
   <div id="foot"></div>
 </div>
-<script src="assets/app.js?v=20261005a"></script>
+<script src="assets/app.js?v=20261005b"></script>
 <script>
 const ICON = {"IG": "📸", "新闻": "📰", "人工": "✋"};
 const leadRow = l => `
@@ -54,6 +54,9 @@ loadData().then(d => {
   DATA = d;
   nav(d, "pending");
   const {groups, other} = pendingGroups(d);
+  // 从首页点某位明星进来（网址 #a-明星名）：那位排最前面，其他照原来的顺序
+  const picked = hashArtist(), at = groups.findIndex(g => g.name === picked);
+  if (at > 0) groups.unshift(...groups.splice(at, 1));
   $("#segs").innerHTML = groups.map(g => `<a class="seg" href="#a-${encodeURIComponent(g.name)}">${esc(g.name)}<b>${g.leads.length}</b></a>`).join("")
     + (other.length ? `<a class="seg" href="#other">其他<b>${other.length}</b></a>` : "");
   $("#list").innerHTML = groups.map(artistCard).join("") + (other.length ? `

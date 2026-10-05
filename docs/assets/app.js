@@ -376,8 +376,11 @@ function artistSummary(g) {
 
 // 内容是读完资料才画出来的，浏览器自带的 #锚点 跳转那时找不到目标；画完后再定位并闪一下
 // （网址里的明星名可能是编码过的，也可能被浏览器解码，两种都比对；图片载入后若位置跑掉再对齐一次）
+const decodeHash = s => { try { return decodeURIComponent(s); } catch (e) { return s; } };
+// 网址 #a-明星名 里的明星名（待确定页用）
+const hashArtist = () => { const h = decodeHash(location.hash.slice(1)); return h.startsWith("a-") ? h.slice(2) : ""; };
 function scrollToHash() {
-  const dec = s => { try { return decodeURIComponent(s); } catch (e) { return s; } };
+  const dec = decodeHash;
   const want = dec(location.hash.slice(1));
   if (!want) return;
   const el = [...document.querySelectorAll("[id]")].find(e => dec(e.id) === want);
