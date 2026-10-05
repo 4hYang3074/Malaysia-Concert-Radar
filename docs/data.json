@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-05 07:45",
+ "generated_at": "2026-10-05 13:51",
  "health": {
   "GoLive": {
    "ok": true,
@@ -7,7 +7,7 @@
   },
   "Fantopia": {
    "ok": true,
-   "count": 131
+   "count": 132
   },
   "BookMyShow": {
    "ok": true,
@@ -30,12 +30,12 @@
   },
   "Google News": {
    "ok": true,
-   "count": 54,
+   "count": 53,
    "error": null
   },
   "东方日报 娱乐": {
    "ok": true,
-   "count": 11
+   "count": 14
   },
   "人工线索": {
    "ok": true,
@@ -1627,6 +1627,25 @@
    "opened_news": null,
    "count": 0,
    "top": [],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null
+  },
+  "ULTRAMAN": {
+   "checked": "2026-10-05",
+   "country": "MY",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": null,
+   "count": 1,
+   "top": [
+    {
+     "title": "Ultraman Live in Genting: Revenge of Baltan - thehypedgeek.com",
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1QbVR5ckwwUVFCdm1xYUNINTNHcDJMNnRkUVNHcmNCbGlhOEN5a2NXa3NuUFlCelFTckVKTk05YVJYQS1SZHhza21MeXg0SGNQOWZLRFgtWjdsYWdoRzZCQURLdmtUTzRuMnhpQnZGMGpMb0YySnRB?oc=5",
+     "time": "2016-11-23"
+    }
+   ],
    "platforms": [],
    "sale_times": [],
    "added": false,
@@ -4079,7 +4098,7 @@
     "Ticketing Information": "You may purchase up to 4 tickets per transaction.\nTicket prices shown exclude a Ticket Fee (RM12.96) and Booking Charges (RM12.96) per transaction. All fees are subject to SST.\nA 3% processing fee of the total amount will be charged if you choose to check out using SPaylater.\nYou will need to sign up for a GoLive account before purchasing tickets. Please ensure that you register using a valid and active email address. For security reasons, the email linked to your tickets cannot be changed once the purchase is completed.\nPayment Method: VISA & MASTERCARD CREDIT/DEBIT Card, and SPayLater payments are accepted.\nOnly one principal name on tickets is needed per transaction.\nCustomers are advised…",
     "Important Information": "Reselling your tickets or purchasing from an unauthorised ticket seller or scalper is strictly prohibited. Tickets may not be bought and resold for advertising and/or promotional purposes. The Event Organizer/Promoter reserves the right to cancel such tickets without compensation and/or refuse entry to the event.\nVideo Recording and photo shoots will be taking place on site. Please acknowledge that by entering the site you hereby agree to the possible exposure to the recordings and the photo shoots and the promoter will not be responsible for any violation of tour publicity rights.\nPlease note that each presale provides exclusive or priority access to ticket purchases, but seat assignments a…",
     "Admission Policy": "● Seating is open to ages 6 years old and above. However, attendees below 16 years old must be accompanied by a ticket-bearing legal guardian aged 18 and above.\n● This event operates on a free seating (first-come, first-served) basis within your ticket category:\nVIP Ticket Holder: Rows B – E\nGeneral Ticket Holders: Level 1, Row F onwards\n● Babies and toddlers are strictly not allowed.",
-    "VIP Information": "VIP MEET & GREET PACKAGE [RM 598]\nOne standing ticket\nPre-show individual photo opportunity with Yung Kai\nVIP only exclusive merch item\nVIP laminate and lanyard\nEarly entry into performance hall\nPriority merchandise shopping (if applicable)"
+    "VIP Information": "VIP MEET & GREET PACKAGE [RM 598]\nOne free seating ticket\nPre-show individual photo opportunity with Yung Kai\nVIP only exclusive merch item\nVIP laminate and lanyard\nEarly entry into the performance hall\nPriority merchandise shopping (if applicable)"
    },
    "sold_out": false,
    "sales_closed": false,
@@ -5171,73 +5190,6 @@
      "src": "Fantopia 售票轮次",
      "text": "2026/11/15 20:00",
      "time": "2026-08-22 14:00"
-    }
-   ]
-  },
-  {
-   "id": "nol-26014286",
-   "country": "KR",
-   "source": "NOL World",
-   "name": "Zion.T 2026 LIVE",
-   "artist": null,
-   "type": "Rap/hiphop",
-   "venue": "GS Arts Center ",
-   "city": "Seoul",
-   "dates": [
-    "2026-11-14",
-    "2026-11-15"
-   ],
-   "sales": [
-    {
-     "name": "开票",
-     "start": "2026-10-08 18:00",
-     "end": null,
-     "queue": null,
-     "available": true,
-     "code_required": false,
-     "url": "https://world.nol.com/en/ticket/places/24001634/products/26014286"
-    }
-   ],
-   "tiers": [
-    {
-     "name": "R Seat",
-     "price": "₩165,000"
-    },
-    {
-     "name": "S Seat",
-     "price": "₩154,000"
-    }
-   ],
-   "limit": null,
-   "sold_out": false,
-   "url": "https://world.nol.com/en/ticket/places/24001634/products/26014286",
-   "first_seen": "2026-10-02 13:49",
-   "seat_maps": [],
-   "artist_name": "Zion.T",
-   "fans": 17702,
-   "region": "K-pop",
-   "poster_img": "avatars/p-nol-26014286.jpg",
-   "avatar": "avatars/a-479b280132d4.jpg",
-   "avatar_kind": "artist",
-   "poster_portrait": true,
-   "platforms": [
-    {
-     "source": "NOL World",
-     "url": "https://world.nol.com/en/ticket/places/24001634/products/26014286",
-     "id": "nol-26014286",
-     "sold_out": false,
-     "price_from": null
-    }
-   ],
-   "hidden": null,
-   "news_added": null,
-   "added_status": null,
-   "sale_state": "GENERAL_SALE_ANNOUNCED",
-   "sale_evidence": [
-    {
-     "src": "NOL World 售票轮次",
-     "text": "开票",
-     "time": "2026-10-08 18:00"
     }
    ]
   },
@@ -8157,6 +8109,192 @@
    ]
   },
   {
+   "id": "nol-26013663",
+   "country": "KR",
+   "source": "NOL World",
+   "name": "2026 Dynamicduo Concert “In The Long Run” - Busan",
+   "artist": null,
+   "type": "Concerts",
+   "venue": "KBS BUSAN HALL",
+   "city": "부산시",
+   "dates": [
+    "2026-12-12"
+   ],
+   "sales": [
+    {
+     "name": "开票",
+     "start": "2026-09-30 18:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://world.nol.com/en/ticket/places/26001097/products/26013663"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "Assigned Seat",
+     "price": "₩143,000"
+    }
+   ],
+   "limit": null,
+   "sold_out": false,
+   "url": "https://world.nol.com/en/ticket/places/26001097/products/26013663",
+   "first_seen": "2026-09-29 17:13",
+   "seat_maps": [],
+   "artist_name": "Dynamicduo",
+   "fans": 15441,
+   "region": "K-pop",
+   "poster_img": "avatars/p-nol-26013663.jpg",
+   "avatar": "avatars/a-b74a9c679454.jpg",
+   "avatar_kind": "artist",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "NOL World",
+     "url": "https://world.nol.com/en/ticket/places/26001097/products/26013663",
+     "id": "nol-26013663",
+     "sold_out": false,
+     "price_from": null
+    }
+   ],
+   "hidden": null,
+   "news_added": null,
+   "added_status": null,
+   "opened_at": "2026-09-30 18:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-09-30 18:00"
+    }
+   ]
+  },
+  {
+   "id": "fantopia-3q3sm8je",
+   "country": "MY",
+   "source": "Fantopia",
+   "name": "ULTRAMAN THE LIVE IN MALAYSIA 2026",
+   "artist": null,
+   "type": null,
+   "venue": "Mega Star Arena, KL",
+   "city": null,
+   "dates": [
+    "2026-12-12 13:30"
+   ],
+   "sales": [
+    {
+     "name": "2026/12/12 (Session 1.30pm)",
+     "start": "2026-10-08 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=3q3sm8je"
+    },
+    {
+     "name": "2026/12/12 (Session 4.30pm)",
+     "start": "2026-10-08 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=3q3sm8je"
+    },
+    {
+     "name": "2026/12/12 (Session 7.30pm)",
+     "start": "2026-10-08 12:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=3q3sm8je"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "CAT 1",
+     "price": "RM 438"
+    },
+    {
+     "name": "CAT 2",
+     "price": "RM 338"
+    },
+    {
+     "name": "CAT 3",
+     "price": "RM 238"
+    },
+    {
+     "name": "CAT 4",
+     "price": "RM 138"
+    },
+    {
+     "name": "CAT 5",
+     "price": "RM 88"
+    },
+    {
+     "name": "SOFA with 2 pax",
+     "price": "RM 438"
+    }
+   ],
+   "seat_maps": [
+    "maps/fantopia-3q3sm8je/cdfc1477-9574-4718-a442-6da0eec87a26.jpg"
+   ],
+   "notes": {
+    "官方说明": "Tujuh Ultra Heroes Bakal Menggegarkan Kuala Lumpur!  \nULTRAMAN THE LIVE IN MALAYSIA 2026 \nUltra Heroes Bergabung Menentang Musuh Utama, Belial \n\n\nULTRAMAN THE LIVE IN MALAYSIA 2026 yang dinanti-nantikan akan berlangsung pada 12 Disember 2026 di Mega Star Arena, Kuala Lumpur! Persembahan pentas secara langsung ini bakal membawa aksi, pertempuran hebat serta pertarungan antara kuasa kebaikan dan kejahatan, membawa para penonton ke dalam dunia Ultra Heroes. Mereka akan bergabung untuk menghentikan musuh tradisi mereka yang kuat, Ultraman Belial, daripada kembali menguasai dunia. \n\n\n Belial Mengancam Untuk Kembali \nKisah bermula dengan rancangan gelap Ultraman Tregear apabila Belial yang perkasa mengancam untuk bangkit semula dan membawa kembali kuasa Kegelapan. Berdepan ancaman ini, Ultra Heroes perlu bersatu menghadapi pelbagai cabaran untuk menghentikan Belial. Apabila kuasa kebaikan dan kejahatan bertembung, keempat-empat Ultra Heroes akan berjuang dalam pertempuran hebat demi melindungi dunia dan mengembalikan keamanan. \n\n\n“Ultra Charge” Daripada Para Peminat Akan Memberi Kekuatan Kepada Para Hero \nPertempuran antara kuasa kebaikan dan kejahatan bukan hanya tanggungjawab Ultra Heroes, para peminat juga memainkan peranan penting! Apabila Ultra Heroes berdepan musuh yang kuat, sorakan, jeritan dan sokongan daripada para peminat akan menjadi “Ultra Charge” untuk memberikan kekuatan tambahan kepada mereka. Kali ini, peminat bukan sekadar menonton dari tempat duduk, tetapi turut…"
+   },
+   "price_from": "RM 88.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.fantopia.io/events-tickets?eventsKey=3q3sm8je",
+   "first_seen": "2026-10-05 13:51",
+   "artist_name": "ULTRAMAN",
+   "fans": 0,
+   "region": "欧美",
+   "poster_img": "avatars/p-fantopia-3q3sm8je.jpg",
+   "avatar": "avatars/p-fantopia-3q3sm8je.jpg",
+   "avatar_kind": "poster",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "Fantopia",
+     "url": "https://www.fantopia.io/events-tickets?eventsKey=3q3sm8je",
+     "id": "fantopia-3q3sm8je",
+     "sold_out": false,
+     "price_from": "RM 88.00"
+    }
+   ],
+   "hidden": null,
+   "news_added": null,
+   "added_status": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "2026/12/12 (Session 1.30pm)",
+     "time": "2026-10-08 12:00"
+    },
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "2026/12/12 (Session 4.30pm)",
+     "time": "2026-10-08 12:00"
+    },
+    {
+     "src": "Fantopia 售票轮次",
+     "text": "2026/12/12 (Session 7.30pm)",
+     "time": "2026-10-08 12:00"
+    }
+   ],
+   "ocr_tiers": [
+    {
+     "name": "SOFA",
+     "price": "RM 876"
+    }
+   ]
+  },
+  {
    "id": "bms-DIORINKL",
    "source": "BookMyShow",
    "name": "DIOR 大穎 2026 《KAMPUNG GIRL 普通人》 世界巡回演唱會 - 吉隆坡站",
@@ -10106,6 +10244,118 @@
  ],
  "leads": [
   {
+   "id": "news-b5aa0990fc790638",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "NST Online",
+   "title": "#SHOWBIZ: Faizal Tahir touched as Fahmi Fadzil buys ticket to 'Suara Rakyat' concert - NST Online",
+   "text": null,
+   "time": "2026-10-05 13:30",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQNk4zdG00dnZHbUpjM1Nlamozb3IyNmdXUXFucFZXbWtsdC1Nc3JSdjJMcnAtZUhaUVRBNWtXaWpqekt3VnBDTWVrWEpVTE9CNTZvckVCS01md2pxV0FRZXdEeVhmbzZObEFIQURDLWRDVkl6R3VQeFMwMHJSNDVNcVBSUTJFbEhVbHJfQXBDU3hHVF9xdEZKWU9lSFp4ZDJCVzVvWmtLTjRITnNPNE80VHBMQzZNcVNIdGZkdGppdnU2ZFdRVHl4SUliS2NhQUZfSUE?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-05 13:51",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "Faizal Tahir",
+   "artist_fans": 13876,
+   "artist_region": "其他",
+   "artist_photo": "avatars/a-718c50a0b6ca.jpg",
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
+   "listed": false
+  },
+  {
+   "id": "news-887c26cccaffca32",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "东方日报 娱乐",
+   "title": "【好康】下载东方APP　赢取《齐秦演唱会2026原来的我们》演唱会门票！",
+   "text": "（吉隆坡5日讯）阔别舞台多年，华语乐坛传奇创作歌手齐秦即将重磅回归，携《齐秦演唱会2026原来的我们》于10月24日傍晚6时登上云顶世界云星剧场开唱！齐秦是华语乐坛极具影响力的音乐人之一，从承载时代印记的摇滚经典，到触动心弦的抒情情歌，他的作品陪伴了无数人走过青春、爱情、思念与人生感悟，成为一代又一代人心中难以磨灭的青春记忆。此次重返舞台，齐秦携手全新乐队阵容，以焕然一新的音乐编排重新诠释经典曲目，为历久弥新的经典作品注入更丰富的层次与生命力，与歌迷展开一场久违的音乐重逢。从充满力量的摇滚代表作...",
+   "time": "2026-10-05 13:00",
+   "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/05/852612",
+   "hints": [],
+   "sale_times": [],
+   "first_seen": "2026-10-05 13:51",
+   "matches": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "不是演唱会（好康）",
+   "listed": false
+  },
+  {
+   "id": "news-ec7fb6a320474d04",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Sin Chew Daily",
+   "title": "演唱会惊传火患冒浓烟 阿灿喊停：安全至上 - 娱乐 - 大马娱乐 - Sin Chew Daily",
+   "text": null,
+   "time": "2026-10-05 11:06",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1yMG15RkljUHp4U2FBMHhvWWhVVXRFcmZ6aHFoUGFzdm5QLUZsbGdYMHJCY3Y2ZlNrWEhfWHZlOW5kOEgwVEhjTFhCWkxkWlVTcmZkN1RQVlN0ZWJlVlB0WHlnS3MwRm9Vcnl6TUZBRQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-05 13:51",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-0a5c098393db58c0",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "东方日报 娱乐",
+   "title": "【好康】送何超仪、Iman主演《拾荒法师》首映礼门票",
+   "text": "（吉隆坡5日讯）由彭氏兄弟（彭顺、彭发）执导、何超仪（何超）主演，联同陈家乐、Iman Taheri（二蚊）、张文杰、吴冰等演出的奇幻悬疑惊栗电影《拾荒法师》，将于10月8日在全马戏院上映。《拾荒法师》讲述何超仪饰演的拾荒者蓝沛清发现了一具悬尸，这具尸体唤起了人们对13年前一个悲惨错误的回忆。曾经是灵媒的她，为了钱操纵一名年轻女孩自杀，让她被罪恶感和不安灵魂的幻象所困扰。为了寻求救赎，蓝沛清收集了一些奇怪的物品，据信这些物品承载著非自然死亡者的灵魂。一次在森林公园发现吊尸后，负责调查案件的警官黄...",
+   "time": "2026-10-05 10:00",
+   "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/05/852537",
+   "hints": [],
+   "sale_times": [],
+   "first_seen": "2026-10-05 13:51",
+   "matches": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "不是演唱会（好康）",
+   "listed": false
+  },
+  {
+   "id": "news-e389cd7b235e8702",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "东方日报 娱乐",
+   "title": "携郭雯雯开唱谈人生　演出尾声突发火警 灿神上台急喊停！",
+   "text": "（吉隆坡5日讯）灿神（廖伟雄）与歌手郭雯雯周日晚携手举办《活化经典笑唱人生演唱会》，更邀来多年未有来马的歌手李乐诗、文佩玲同台演出，四人在台上轮番献唱多首经典金曲，令全场观众听出耳油。未料演唱会尾声突发意外，现场突然烟雾弥漫，更传出一阵烧焦味，及后证实停车场的垃圾槽起火，令现场气氛一度紧张！ 灿神分享自己人生经历高高低低的经历，更与大家共勉：“得就多帮人、失则不气馁，积蓄力量找出路。” 事发时，李乐诗与文佩玲正在演唱《感动你》，但现场突然有烟、烧焦味也越来越浓，及后观众见状不对劲，纷纷起身离场。...",
+   "time": "2026-10-05 09:00",
+   "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/05/852517",
+   "hints": [],
+   "sale_times": [],
+   "first_seen": "2026-10-05 13:51",
+   "matches": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-0700cb943c3162e5",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "Yahoo News Singapore",
+   "title": "25 Concert Memes for Fans Spending Half of Their Paycheck To See Their Dream Band - Yahoo News Singapore",
+   "text": null,
+   "time": "2026-10-05 07:45",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE00OWNRU0ROTzQyd0pyQzMzNjVnbURhakFmTXVqUkZ6RzhlNm5ILUhGVXhubl9zSldaVU5jaU5TUmhPSEhsWm9JalBFNWlqb090MnJVSTBwbmoteEZmWmNjenhnal9RY0tVRVB4bFE5ajVzU2dTM3NpdXdyZw?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-05 13:51",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
    "id": "news-74e598ad5cd4b890",
    "kind": "新闻",
    "country": "MY",
@@ -10164,6 +10414,24 @@
    "listed": false
   },
   {
+   "id": "news-8741bba974c914fe",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "TV Sabah News",
+   "title": "Anifah Persoal Laporan Polis Terhadap Konsert Israel Houghton Di Sabah - TV Sabah | Berita Terkini - TV Sabah News",
+   "text": null,
+   "time": "2026-10-04 23:19",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOdnhVOE1FdVhSUW9TUVRhNGtOTGk4MGZJNEFuVHFkemdZVnEzRGFYUS15aElIOXQ1Zkk1dTlkTWZpSmIweDlkZ3FRYVJxUFRuMm81ZjFTSWd1SjB5b0FBOVR0WnFNYnc0T0NSYVRaSVJacTNPRzNHMkdjQy1BdFZKeDkwMHFRazNqY2NNQTNYbmFqUFNxeVVTMzZtLTg?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-05 13:51",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
    "id": "news-ea3836b2cf4c9c3b",
    "kind": "新闻",
    "country": "MY",
@@ -10189,8 +10457,8 @@
    "id": "news-e5316ff8f0f2b5ae",
    "kind": "新闻",
    "country": "MY",
-   "from": "MalaysiaGazette",
-   "title": "Konsert Israel Houghton: Jangan bawa politik agama bersifat tak toleransi ke Sabah – Anifah Aman - MalaysiaGazette",
+   "from": "malaysiagazette.com",
+   "title": "Konsert Israel Houghton: Jangan bawa politik agama bersifat tak toleransi ke Sabah – Anifah Aman - malaysiagazette.com",
    "text": null,
    "time": "2026-10-04 14:30",
    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPWXMwd2QtRGs1V0RkS213RzNMbjlQU2tUUWV5bVN1aHpzMnMzRFlWT1hZY1lXeXh3UXlVSmN1YXNXcG9hM2drSjY2WVZvT1hjX0M1N3pjOFMxVWt0T1c0aExkTWQ1cmpZWDF3Ykt0SzZlNVlpTGFOX0tQTjF6UVFscWZ1QXFEaFdSRjM0SjFERHdoTjdodlE0bkpQN2gxQndoZ0I3UzlQRXh0d1RFQUlKMXF2YzM1M2UxZVk3LWpNLWJTV2N3QjJUeXIwTDFBUQ?oc=5",
@@ -10364,12 +10632,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
-   "listed": false,
    "artist": "Faizal Tahir",
    "artist_fans": 13876,
    "artist_region": "其他",
-   "artist_photo": "avatars/a-718c50a0b6ca.jpg"
+   "artist_photo": "avatars/a-718c50a0b6ca.jpg",
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
+   "listed": false
   },
   {
    "id": "news-9a64e28dfee6fe66",
@@ -10630,8 +10898,8 @@
    "id": "news-c720d1a2436f7879",
    "kind": "新闻",
    "country": "MY",
-   "from": "Vietnam.vn",
-   "title": "\"Semasa musim konsert akhir tahun\" - Vietnam.vn",
+   "from": "vietnam.vn",
+   "title": "\"Semasa musim konsert akhir tahun\" - vietnam.vn",
    "text": null,
    "time": "2026-10-03 08:53",
    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5DVmQ2U2Z4M0x2OXo3cXFLdkloRmFLVXZISHVPbkgyRWRmbkRPRUZubmh6VjBGU3N1dGU2SmN1cGlCS3I2aGVZUnNzMjJ2bHdhWXVkcnJteWc4czQwUUJOMU1pTm5kXzl3ZFE?oc=5",
@@ -11029,6 +11297,24 @@
    "listed": false
   },
   {
+   "id": "news-784f34824258f8a6",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "뉴스와이어",
+   "title": "스트리멕스 CEO 헨리 맥피, 싱가포르·홍콩 주요 행사 참석 위해 아시아 투어 나서 - 뉴스와이어",
+   "text": null,
+   "time": "2026-10-02 13:13",
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB3Z3lnYmN2VEcyS2JsQjBhRkRTVUxXa3hXX3pDTHZtdWZ2T0FQSmhja2NvcmdNRFhuaGtuY2tLN3NqZHNTclE0MGVZaHctWHgxQWFWX21QaUZsSUZGZm1z?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-05 13:51",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
    "id": "news-5cea02caa2f2c40d",
    "kind": "新闻",
    "country": "MY",
@@ -11184,8 +11470,8 @@
    "id": "news-13f96935a87cdd6f",
    "kind": "新闻",
    "country": "SG",
-   "from": "Time Out Worldwide",
-   "title": "The Weeknd at National Stadium 2026: Setlist, last-minute tickets, merch store, and ultimate guide - Time Out Worldwide",
+   "from": "timeout.com",
+   "title": "The Weeknd at National Stadium 2026: Setlist, last-minute tickets, merch store, and ultimate guide - timeout.com",
    "text": null,
    "time": "2026-10-02 04:22",
    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQQnEybnBURl80bEpIODROQWxmUGJEMk15YkNOUWR4WW9oZXQzZExkV0NPWXkwc04yTGVabnRUVzgySUlNc084bWo2V2ZQS3BrM1dyMktGZkZyalFwMmhuRC1jMXlNaTBkcVB5akp6SXFHWlNrMUx5dWF5T2VoQUVWSk5tMUZOS2M1NVgzSzNCVDJfUnJsNTdYWlEzcDdtbnVMNmJTd2h6OXRVdTdoNWpuVkVGeTY0aXhWQ1B1RXR3ZGh5RVUyZmJLVzl3cVFPbnJpNEJZYnctaw?oc=5",
@@ -11454,7 +11740,7 @@
    "title": "엑스러브, 싱가포르서 단독 콘서트 개최…'글로벌 핫 루키' 굳힌다 - v.daum.net",
    "text": null,
    "time": "2026-10-01 14:21",
-   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE41Q2NCNDZ6Y2VsR2NaM01HUHBuWTZUVnZXZF9OVE9OZ1Z4d3lDTU85MEloTkZ1ZTExSmQ1SW4teTIxZGZqUVE?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5SclhxOHBydDE2eEN6LVZoZEJSMlZoTWJOS0M2XzkwdFVpdHByUDYxYnl1QjMwTV9XbVpfMUd0SktjX0dLRFVIZ1k4clAwd3FlckFNdQ?oc=5",
    "hints": [],
    "first_seen": "2026-10-02 02:34",
    "matches": [],
@@ -13248,12 +13534,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
    "artist": "izna",
    "artist_fans": 6990,
    "artist_region": "K-pop",
-   "artist_photo": "avatars/a-988ff669d789.jpg",
-   "hidden": null,
-   "listed": false
+   "artist_photo": "avatars/a-988ff669d789.jpg"
   },
   {
    "id": "news-574960e8c5a82796",
@@ -13292,12 +13578,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
    "artist": "izna",
    "artist_fans": 6990,
    "artist_region": "K-pop",
-   "artist_photo": "avatars/a-988ff669d789.jpg",
-   "hidden": null,
-   "listed": false
+   "artist_photo": "avatars/a-988ff669d789.jpg"
   },
   {
    "id": "news-fef85a32bfab8222",
