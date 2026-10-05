@@ -374,6 +374,25 @@ function artistSummary(g) {
   return {src, platforms, sales: sales.slice(0, 3), points: points.slice(0, 4), images: g.leads.filter(l => localUrl(l.image)).slice(0, 4)};
 }
 
+// 内容是读完资料才画出来的，浏览器自带的 #锚点 跳转那时找不到目标；画完后再定位并闪一下
+// （网址里的明星名可能是编码过的，也可能被浏览器解码，两种都比对；图片载入后若位置跑掉再对齐一次）
+function scrollToHash() {
+  const dec = s => { try { return decodeURIComponent(s); } catch (e) { return s; } };
+  const want = dec(location.hash.slice(1));
+  if (!want) return;
+  const el = [...document.querySelectorAll("[id]")].find(e => dec(e.id) === want);
+  if (!el) return;
+  const go = () => el.scrollIntoView({block: "start"});
+  go();
+  el.classList.add("flash");
+  setTimeout(() => el.classList.remove("flash"), 2400);
+  let moved = false;
+  const stop = () => { moved = true; };
+  ["wheel", "touchmove", "keydown"].forEach(t => addEventListener(t, stop, {once: true, passive: true}));
+  const again = () => { if (!moved) go(); };
+  if (document.readyState === "complete") setTimeout(again, 300); else addEventListener("load", again, {once: true});
+}
+
 // ---------- 导航栏与页尾 ----------
 function nav(d, active) {
   const tab = (href, key, label, n) => `<a class="tab ${active === key ? "on" : ""}" href="${href}">${label}${n != null ? `<span class="n">${n}</span>` : ""}</a>`;

@@ -179,6 +179,8 @@ details summary { cursor: pointer; font-size: 14px; padding: 6px 0; }
 
 /* 待确定：明星卡片 */
 .artist { scroll-margin-top: 64px; }
+.artist.flash { animation: flash 2.4s ease-out; }
+@keyframes flash { 0%, 40% { box-shadow: 0 0 0 2px var(--accent); } 100% { box-shadow: 0 0 0 2px transparent; } }
 .ahead { display: flex; gap: 14px; align-items: center; }
 .ahead .name { font-weight: 700; font-size: 18px; overflow-wrap: anywhere; }
 .ahead .info { font-size: 13px; color: var(--sub); margin-top: 2px; }
