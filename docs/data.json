@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-10 14:01",
+ "generated_at": "2026-10-10 18:59",
  "health": {
   "GoLive": {
    "ok": true,
@@ -10,14 +10,13 @@
    "count": 132
   },
   "BookMyShow": {
-   "ok": false,
-   "error": "HTTP 403",
-   "stale": true,
-   "count": 17
+   "ok": true,
+   "count": 18,
+   "local": "2026-10-10 18:58"
   },
   "Ticket2U": {
    "ok": true,
-   "count": 16
+   "count": 15
   },
   "NOL World": {
    "ok": true,
@@ -31,7 +30,7 @@
   },
   "Google News": {
    "ok": true,
-   "count": 66,
+   "count": 64,
    "error": null
   },
   "东方日报 娱乐": {
@@ -106,6 +105,43 @@
  ],
  "watch_artists": [],
  "news_checks": {
+  "CORTIS": {
+   "checked": "2026-10-10",
+   "country": "SG",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": null,
+   "count": 2,
+   "top": [
+    {
+     "title": "Cortis thrills 60,000 at Singapore F1 concert - CHOSUNBIZ - Chosunbiz",
+     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNalVnTlotMEdzcnFTUDRaSUxlWUhFaEhxcnJZeXZROTRkbTFQc200TzIwbDVSVjlEOWFMUlNHaE1GMG9GaGNLbnhvQTh0WThLWVRLdTNnQWwwVURiU0gzZl9mbmpIODNwZlVweEcwZEJRNVNRaFJMQzdyOGZfamZXQVpnaUpXa3pO0gGcAUFVX3lxTE5zUk81T3dQdHQ5cGtWOEthOGJHaXM5LWhXWG5rODExaFRsYUk3SzVLM1lsOFAzU0dSclRaTFpZdGN3LXBHT0VUYkNQYkdoVlhOS01iTVBnN1E1UEx6a25XSVZUTmdiSE5ibVB0eDM2ODkzdWpLcW5FV05EeF9VRFpKWVZ4ejBGZzJpUWIwa21JV2tsQkZDRXJnYVBhOA?oc=5",
+     "time": "2026-10-10"
+    },
+    {
+     "title": "Singapore Formula 1 2026 Concert Line-Up & Schedule: Lana Del Rey, Cortis, Zara Larsson, Goo Goo Dolls & More - FZINE Singapore",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQa0J0TVF5WExCVjU4ZHFwSlNZalROdnBJTjZoWVJwUmlaVndvRXRLN2VQZEhRU3VWS1NCanNmNEh1SFpXd09PUXNCZU9za2hKcFR3YllPRk5jcUN3QjNUejkyMHFQaEZRek1CVVRuSi0xOXRTbncycFF1MFN4LWpBeDE4Rkh0Z1JHWEcxdi0wWWpmd0RC?oc=5",
+     "time": "2026-10-08"
+    },
+    {
+     "title": "Cortis announces 1st tour",
+     "url": "https://www.koreaherald.com/article/10762089",
+     "time": "2026年6月2日",
+     "web": true,
+     "countries": [
+      "KR"
+     ]
+    }
+   ],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null,
+   "web_count": 1,
+   "countries": [
+    "KR"
+   ]
+  },
   "Europe": {
    "checked": "2026-10-10",
    "country": "MY",
@@ -1360,6 +1396,19 @@
    "added": false,
    "added_news": null
   },
+  "One Love": {
+   "checked": "2026-10-10",
+   "country": "MY",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": null,
+   "count": 0,
+   "top": [],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null
+  },
   "Yung Kai": {
    "checked": "2026-10-10",
    "country": "MY",
@@ -2166,95 +2215,6 @@
    ]
   },
   {
-   "id": "t2u-49422",
-   "source": "Ticket2U",
-   "name": "Srinivas Saregama Season 5 Live Concert",
-   "artist": null,
-   "type": "Concert",
-   "venue": "Regent Hall",
-   "city": "Negeri Sembilan",
-   "dates": [
-    "2026-10-10 18:00"
-   ],
-   "sales": [
-    {
-     "name": "售票",
-     "start": null,
-     "end": "2026-10-10 19:00",
-     "queue": null,
-     "available": true,
-     "code_required": false,
-     "url": "https://www.ticket2u.com.my/event/49422/srinivas-saregama-season-5-live-concert"
-    }
-   ],
-   "tiers": [
-    {
-     "name": "MIP",
-     "price": "RM 1,500.00",
-     "desc": "Free Seating",
-     "sold_out": true
-    },
-    {
-     "name": "VIP",
-     "price": "RM 1,200.00",
-     "desc": "Free Seating",
-     "sold_out": false
-    },
-    {
-     "name": "DIAMOND",
-     "price": "RM 700.00",
-     "desc": "Free Seating",
-     "sold_out": false
-    },
-    {
-     "name": "GOLD",
-     "price": "RM 450.00",
-     "desc": "Free Seating",
-     "sold_out": false
-    },
-    {
-     "name": "SILVER",
-     "price": "RM 350.00",
-     "desc": "Free Seating",
-     "sold_out": false
-    },
-    {
-     "name": "BRONZE",
-     "price": "RM 250.00",
-     "desc": "Free Seating",
-     "sold_out": false
-    }
-   ],
-   "price_from": "RM 150.00",
-   "limit": null,
-   "sold_out": false,
-   "url": "https://www.ticket2u.com.my/event/49422/srinivas-saregama-season-5-live-concert",
-   "country": "MY",
-   "first_seen": "2026-09-29 08:34",
-   "seat_maps": [],
-   "artist_name": "Srinivas Saregama Season 5",
-   "fans": 0,
-   "region": "其他",
-   "poster_img": "avatars/p-t2u-49422.jpg",
-   "avatar": "avatars/p-t2u-49422.jpg",
-   "avatar_kind": "poster",
-   "poster_portrait": false,
-   "platforms": [
-    {
-     "source": "Ticket2U",
-     "url": "https://www.ticket2u.com.my/event/49422/srinivas-saregama-season-5-live-concert",
-     "id": "t2u-49422",
-     "sold_out": false,
-     "price_from": "RM 150.00"
-    }
-   ],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
-   "news_added": null,
-   "added_status": null,
-   "sale_state": "ON_SALE",
-   "sale_evidence": []
-  },
-  {
    "id": "t2u-51955",
    "source": "Ticket2U",
    "name": "GVM 2026 - ONDRA RENDA 25 YEARS CONCERT",
@@ -2293,13 +2253,13 @@
      "name": "PLATINUM",
      "price": "RM 428.00",
      "desc": "Numbered Seated",
-     "sold_out": false
+     "sold_out": true
     },
     {
      "name": "GOLD",
      "price": "RM 328.00",
      "desc": "Numbered Seated",
-     "sold_out": false
+     "sold_out": true
     }
    ],
    "price_from": "RM 238.00",
@@ -9540,6 +9500,51 @@
    ]
   },
   {
+   "id": "bms-OLAFMY27",
+   "source": "BookMyShow",
+   "name": "ONE LOVE ASIA FESTIVAL 2027 - MALAYSIA",
+   "artist": null,
+   "type": null,
+   "venue": "Surf Beach, Sunway Lagoon",
+   "city": "Subang Jaya",
+   "dates": [
+    "2027-01-30 17:00",
+    "2027-01-30 17:00",
+    "2027-01-31 17:00"
+   ],
+   "sales": [],
+   "tiers": [],
+   "limit": 10,
+   "organiser": "IMC Live Group (M) Sdn Bhd",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/one-love-asia-festival-2027/OLAFMY27",
+   "country": "MY",
+   "first_seen": "2026-10-10 18:59",
+   "seat_maps": [],
+   "artist_name": "One Love",
+   "fans": 9772,
+   "region": "欧美",
+   "poster_img": "avatars/p-bms-OLAFMY27.jpg",
+   "avatar": "avatars/a-cdf6b0665beb.jpg",
+   "avatar_kind": "artist",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/one-love-asia-festival-2027/OLAFMY27",
+     "id": "bms-OLAFMY27",
+     "sold_out": false,
+     "price_from": null
+    }
+   ],
+   "hidden": null,
+   "news_added": null,
+   "added_status": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
+  },
+  {
    "id": "fantopia-n0wwcatg",
    "country": "TH",
    "source": "Fantopia",
@@ -10238,6 +10243,7 @@
     }
    ],
    "hidden": null,
+   "sales_closed": false,
    "news_added": null,
    "added_status": null,
    "sale_state": "GENERAL_SALE_ANNOUNCED",
@@ -10500,6 +10506,64 @@
  ],
  "leads": [
   {
+   "id": "news-9bed0e4a9d307330",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "연합뉴스",
+   "title": "코르티스, F1 싱가포르 메인 무대서 공연…6만 관객과 호흡 - 연합뉴스",
+   "text": null,
+   "time": "2026-10-10 14:30",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9GWS02VzRLZlRENHlTWjdIVHYtZlItQjFkaXYzRWx4Y1c2eks2Nmwxb0lqVklTR0FOcjFHY0lKS25GVG5UNW1xUVNLRVFJdFlSb0lBejJhT25NcmNiN3R6Q9IBYEFVX3lxTE9GWS02VzRLZlRENHlTWjdIVHYtZlItQjFkaXYzRWx4Y1c2eks2Nmwxb0lqVklTR0FOcjFHY0lKS25GVG5UNW1xUVNLRVFJdFlSb0lBejJhT25NcmNiN3R6Qw?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-10 18:59",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-28d0eb340f5b2e0f",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "시사투데이",
+   "title": "코르티스, F1 싱가포르 메인 무대서 공연…6만 관객과 호흡 - 시사투데이",
+   "text": null,
+   "time": "2026-10-10 14:30",
+   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBtOEx3OUJzU1Q1QU1FVmpLUG9BcEFoYVRCbGY2blBJQ1VHdnZfbFlkOEpFMWItNFFyNE1UTGs3Mmo0WlMzNUhraHl6R3gzUzhzb0dOTXpWNNIBV0FVX3lxTFBtOEx3OUJzU1Q1QU1FVmpLUG9BcEFoYVRCbGY2blBJQ1VHdnZfbFlkOEpFMWItNFFyNE1UTGs3Mmo0WlMzNUhraHl6R3gzUzhzb0dOTXpWNA?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-10 18:59",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-d44f744e77e86f40",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "Chosunbiz",
+   "title": "Cortis thrills 60,000 at Singapore F1 concert - CHOSUNBIZ - Chosunbiz",
+   "text": null,
+   "time": "2026-10-10 14:20",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNalVnTlotMEdzcnFTUDRaSUxlWUhFaEhxcnJZeXZROTRkbTFQc200TzIwbDVSVjlEOWFMUlNHaE1GMG9GaGNLbnhvQTh0WThLWVRLdTNnQWwwVURiU0gzZl9mbmpIODNwZlVweEcwZEJRNVNRaFJMQzdyOGZfamZXQVpnaUpXa3pO0gGcAUFVX3lxTE5zUk81T3dQdHQ5cGtWOEthOGJHaXM5LWhXWG5rODExaFRsYUk3SzVLM1lsOFAzU0dSclRaTFpZdGN3LXBHT0VUYkNQYkdoVlhOS01iTVBnN1E1UEx6a25XSVZUTmdiSE5ibVB0eDM2ODkzdWpLcW5FV05EeF9VRFpKWVZ4ejBGZzJpUWIwa21JV2tsQkZDRXJnYVBhOA?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-10 18:59",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "CORTIS",
+   "artist_fans": 68143,
+   "artist_region": "K-pop",
+   "artist_photo": "avatars/a-3e6f91cfe0fe.jpg",
+   "hidden": null,
+   "listed": false
+  },
+  {
    "id": "news-7bb47bbf9d171909",
    "kind": "新闻",
    "country": "MY",
@@ -10601,7 +10665,7 @@
    "title": "#SHOWBIZ: From KL to Europe: Dolla announces debut European showcase tour this month - NST Online",
    "text": null,
    "time": "2026-10-09 20:15",
-   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQdzUydklYaVpxN0dtLXA0Q2ZjdWxYMVpkc0ZqTk1VSXZrNmdwc1lmN3lfcUlDQ3ZKNTRscGJGbHlQRlhxQlBMOE5kYm1wUHhORzg3YTFSa3hGY1dxRjZ5TV9iMGxPU09ERjJhejFBLXNlYmxoUW5Pbm1iWWU3T1BSdGR0MFd0NVNhMEVfSV9FX2xIU3ZGdXZsdVhvYlRsOXpoX0c3VUFMQTJZSzZGcURRcl81QmphR1E4MGNIOW8zdmpiLWVGSnZhVlVNUTHSAb8BQVVfeXFMT3ZmOUJxWjRpUTNvcTFpUFRSWUhMcEhfTXdQcFVpQVpiNVlGdzZpRFpoQ0xJSmxRXy1yeWlYSWdQQzVrOFl5VENaUkEzdzl2NWdWUV9rUS1yVUhwQzNLM1k1VEFDRWI1N0dhNjE2bXZwWWtPcHZHSmR5STdScGZUZmJxMi1aNjhlUXV1TC1ZVTdXUThqQXozNkI4Yk9mbDl2VXQ2WDNlOEgzODdfbjJ1VXp6ZUNiOU9ZY3d6UERBMWM?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVm1YUFI0SkxsQzB6V2dYcFJsU0I2cGJvekQ2aVM2ZmNaODRrYzRYZkI1YUg4TmMwRm1ZbXZLTmhLWmxaUEtndmYwcGZuS1ljU0JNUXQzWHZfRktqLWJZNjMyancyUG1MRmRrRUxsbmZDLW9TYUJKcGJuLTZHUGJETkFrTUluMkNNNFkwTmVGWmpoc05pb0RHYU4zOURRUk1paHlScWgyUmc1N1p5dXN4QnNiRkc0MV9NMkHSAb8BQVVfeXFMT3ZmOUJxWjRpUTNvcTFpUFRSWUhMcEhfTXdQcFVpQVpiNVlGdzZpRFpoQ0xJSmxRXy1yeWlYSWdQQzVrOFl5VENaUkEzdzl2NWdWUV9rUS1yVUhwQzNLM1k1VEFDRWI1N0dhNjE2bXZwWWtPcHZHSmR5STdScGZUZmJxMi1aNjhlUXV1TC1ZVTdXUThqQXozNkI4Yk9mbDl2VXQ2WDNlOEgzODdfbjJ1VXp6ZUNiOU9ZY3d6UERBMWM?oc=5",
    "hints": [],
    "first_seen": "2026-10-10 02:23",
    "matches": [],
@@ -10728,12 +10792,14 @@
    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBaeERfYi1GWjBHd01zcTVCRlBZNzE5NUVKUloxVWxGajhBRlIzWUU2S0kyVEQyTHdmZU83bVFqVG1YUnQwTFowVk5yRkY2RU9yRjRkT1Nyd214dzkzalMwMGY3X193SXpFdV9ZY2FMZy1uYy01NWVXZw?oc=5",
    "hints": [],
    "first_seen": "2026-10-10 02:23",
-   "matches": [],
+   "matches": [
+    "bms-OLAFMY27"
+   ],
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
+   "hidden": null,
+   "listed": true
   },
   {
    "id": "news-aa2262b1a6828315",
@@ -10741,17 +10807,19 @@
    "country": "MY",
    "from": "东方日报 娱乐",
    "title": "《One Love Asia Festival 2027》明年1月唱响吉隆坡　任贤齐、张韶涵、卢广仲、徐佳莹领军开唱",
-   "text": "（吉隆坡9日讯）新加坡音乐节《One Love Asia Festival》（OLAF）将于2027年1月30日至31日再度唱进吉隆坡，连续两天在双威水上乐园（Surf Beach, Sunway Lagoon）登场，集结多组华语乐坛实力派歌手轮番开唱。首日由任贤齐、卢广仲等人接力演出，隔天则由张韶涵压轴登场，还有徐佳莹、胡彦斌等歌手同台，为乐迷带来两天的华语音乐盛宴。《One Love Asia Festival》过去已在新加坡、吉隆坡、香港及成都等地举办七届，明年1月将再度回到吉隆坡，迎来第...",
+   "text": "（吉隆坡9日讯）新加坡音乐节《One Love Asia Festival》（OLAF）将于2027年1月30日至31日再度唱进吉隆坡，连续两天在双威水上乐园（Surf Beach, Sunway Lagoon）登场，集结多组华语乐坛实力派歌手轮番开唱。首日由任贤齐、卢广仲等人接力演出，隔天则由张韶涵压轴登场，还有徐佳莹、胡彦斌等歌手同台，为乐迷带来两天的华语音乐盛宴。《One Love Asia Festival》过去已在新加坡、吉隆坡、香港及成都等地举办七届，明年1月将再度回到吉隆坡，迎来第...\n（吉隆坡9日讯）新加坡音乐节《One Love Asia Festival》（OLAF）将于2027年1月30日至31日再度唱进吉隆坡，连续两天在双威水上乐园（Surf Beach, Sunway Lagoon）登场，集结多组华语乐坛实力派歌手轮番开唱。首日由任贤齐、卢广仲等人接力演出，隔天则由张韶涵压轴登场，还有徐佳莹、胡彦斌等歌手同台，为乐迷带来两天的华语音乐盛宴。\n《One Love Asia Festival》过去已在新加坡、吉隆坡、香港及成都等地举办七届，明年1月将再度回到吉隆坡，迎来第八届音乐节。主办单位强调，每位歌手都将带来至少40分钟的完整现场演出，让乐迷近距离感受歌手的演唱实力与舞台魅力。\n首日，新加坡 Simply Retro 率先登台，以精彩演出为音乐节盛大揭幕，为首日令人振奋的华语流行音乐现场演出拉开序幕。随后，卢广仲、吕允、冰球乐团、大颖（Dior）及 MIRROR 成员姜涛将接力献唱，最终由华语乐坛实力巨星任贤齐压轴登场。\n次日精彩延续，吉隆坡 Simply Live 以震撼人心的全乐队现场演出强势开场，将现场气氛再度推向高潮，随后李佩玲、赵泳鑫、菲道尔、徐佳莹及胡彦斌轮番登台，以一首首人气作品带动全场乐迷尽情合唱、舞动。最终，华语乐坛实力天后张韶涵将以极具感染力的压轴现场演出，为两天的音乐盛会掀起最终高潮，震撼收官。\n活动将在明年1月30日及31日下午3时，在吉隆坡双威水上乐园举办，门票价格分为单日门票228令吉、双日套票为428令吉（票价不含订票手续费），门票将在10月12日上午11时在etix.my、onelovetix.com、my.bookmyshow.com 开卖！\n要看最快最熱資訊，請來Follow我們 《東方日報》 WhatsApp Channel .\nIOS： https://odn.my/ios\nGoogle Play： https://odn.my/android\nHUAWEI AppGallery： https://odn.my/appgallery",
    "time": "2026-10-09 16:39",
    "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/09/853805",
    "hints": [],
    "sale_times": [],
    "first_seen": "2026-10-10 02:23",
-   "matches": [],
+   "matches": [
+    "bms-OLAFMY27"
+   ],
    "status": "rumor",
    "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
+   "hidden": null,
+   "listed": true
   },
   {
    "id": "news-d9961e6120491c9d",
