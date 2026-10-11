@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-11 01:22",
+ "generated_at": "2026-10-11 13:58",
  "health": {
   "GoLive": {
    "ok": true,
@@ -30,12 +30,12 @@
   },
   "Google News": {
    "ok": true,
-   "count": 63,
+   "count": 61,
    "error": null
   },
   "东方日报 娱乐": {
    "ok": true,
-   "count": 14
+   "count": 15
   },
   "人工线索": {
    "ok": true,
@@ -105,6 +105,69 @@
  ],
  "watch_artists": [],
  "news_checks": {
+  "MAMAMOO": {
+   "checked": "2026-10-11",
+   "country": "MY",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": null,
+   "count": 7,
+   "top": [
+    {
+     "title": "Mamamoo Proves Global Power With Kuala Lumpur Concert Success - 조선일보",
+     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPVkIxYmxfRC1YYWh1bUE5OUo4ejkzRWVlTmxtU21wMDNIMDlGc0VhcnZYR0ZjdzhzeGtSQkc2UV8tajJ0QUVUUXJnd2RfNWdHN05CdnhfLVlYT1dqdGhLOWdhMURtNVhtbFFSWXR5M1l6bmtiOWRCTF9HaWJtOTc4VjU2cFNFTENQMlJFN2RB?oc=5",
+     "time": "2026-10-11"
+    },
+    {
+     "title": "MAMAMOO大马开唱露“黑裤” 华莎美背破功颂乐蚂蚁腰消失 - China Press",
+     "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxPdVBYQWhtRW5abjViclNQa191SXMxODBTd2I2d0RpMDRncDNaSEtIZ1JIWUNYUzVFN291QUZtWlZpOUpOSmdmcEZobHdjSXphU3BXRnFuZHpleEkwd21QZG4tdjBnQjBMRHJ5dVpVY0Y5VkF2MlJvY0ROMFNfUmVNUUVNdHk5anAxdEd5NlVnY25ya0pxdThrNTRhN0dLbWhCZHA4ZEZvOU5jNHo2WHNKWWFIUTZiNkJ6VlQ1eGFRbW9VR2VvWlVPV0RBT0VBaFlnQ29VRmljZ3UzRzZWeW4tbk44SXJ1blp6bWpoaXNxRGlXNEVsNnpvQVRpR2JhLW45eTY2N0VPTlpyRmdMMkQ4d2c4TmVyeVh4Wjl5elRibGs0RzFNd0NYd0dsR0ppb0FzSjFZWVRneGU3Rl9QaXplcg?oc=5",
+     "time": "2026-10-10"
+    },
+    {
+     "title": "MAMAMOO成军12周年携《4WARD》世界巡演1010唱进吉隆坡| 娱乐 | 東方網馬來西亞東方日報 - 马来西亚东方日报",
+     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5LcFB3WkNieUlVMG9UUHlyTUg1cUMzOW5SRmIxRkVaUjBjd3g3bU0ycm9sN3N3dFZ6TmNLUUo2Yk5qUWg2eGVVY2tqNUJVSlBqeUZqUGFzdUxEM3gyZU80alNaVDRiRkQtNDVJdDg3cjdwRTgzS2hUWg?oc=5",
+     "time": "2026-08-15"
+    },
+    {
+     "title": "MAMAMOO Adds Kuala Lumpur to 2026 World Tour ...",
+     "url": "https://www.chosun.com/english/kpop-culture-en/2026/07/07/2VSY5B4CUFFQNPNIPHDK6XLAO4/",
+     "time": "2026年7月7日",
+     "web": true,
+     "countries": [
+      "MY"
+     ]
+    },
+    {
+     "title": "MAMAMOO - 個人檔案、演出資訊",
+     "url": "https://tw.stagepick.co.kr/artists/detail/2yLsyPe53N813Y5X",
+     "time": "",
+     "web": true,
+     "countries": [
+      "MY"
+     ]
+    },
+    {
+     "title": "时隔4年MAMAMOO 1010来马开唱",
+     "url": "https://www.sinchew.com.my/news/20260708/entertainment/7651161?variant=zh-hant",
+     "time": "2026年7月8日",
+     "web": true,
+     "countries": [
+      "MY",
+      "SG"
+     ]
+    }
+   ],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null,
+   "web_count": 7,
+   "countries": [
+    "MY",
+    "KR",
+    "SG"
+   ]
+  },
   "CORTIS": {
    "checked": "2026-10-11",
    "country": "SG",
@@ -1711,16 +1774,20 @@
    "added_news": null
   },
   "周兴哲": {
-   "checked": "2026-10-10",
+   "checked": "2026-10-11",
    "country": "MY",
    "deep": false,
-   "soldout_news": null,
+   "soldout_news": {
+    "title": "首场开票不到一天即完售 周兴哲演唱会宣布加场 - 马来西亚东方日报",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB4VkEtZXF0aF9PenZNc3pETGNIN0FLX3NvLWZyc2Z4WVB3VVBNaE5fbGdtOG5mQUhZclRRc3dJMXUwWjBDb2dkdUJlUXpjTXFnWVBtS21oU2I4bkVvR3ZTN3Y2cU4yOTI4eERNYTVPVzlxR2ptTXdSTQ?oc=5",
+    "time": "2023-03-03"
+   },
    "opened_news": {
     "title": "周兴哲再度来马开唱！613全面开票 - my.com.my",
     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1fN1BNd0RsWDhfQTkxanVkb3lCdloyMVcwSE1CRHp3TS1rY25zM3lVLWlranFFQnZQYkV4WW9FZnlUT180UjZaYnZwVkJ4Vk9xeVdWVlFMQjNXaFpnbWphRWdudUFFdFhNMnJTZkJkT0p5QQ?oc=5",
     "time": "2018-06-08"
    },
-   "count": 16,
+   "count": 17,
    "top": [
     {
      "title": "周兴哲演唱会2026马来西亚｜门票优先/公售攻略+购票连结+座位表 - 香港01",
@@ -1748,7 +1815,7 @@
    }
   },
   "邱鋒澤": {
-   "checked": "2026-10-10",
+   "checked": "2026-10-11",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1761,7 +1828,7 @@
    "added_news": null
   },
   "ROSETOPIA": {
-   "checked": "2026-10-10",
+   "checked": "2026-10-11",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1780,7 +1847,7 @@
    "added_news": null
   },
   "QWER": {
-   "checked": "2026-10-10",
+   "checked": "2026-10-11",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1809,7 +1876,7 @@
    "added_news": null
   },
   "世界巡回演唱会": {
-   "checked": "2026-10-10",
+   "checked": "2026-10-11",
    "country": "MY",
    "deep": false,
    "soldout_news": {
@@ -1846,7 +1913,7 @@
    "added_news": null
   },
   "2026叁缺壹巡演吉隆坡站": {
-   "checked": "2026-10-10",
+   "checked": "2026-10-11",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1859,7 +1926,7 @@
    "added_news": null
   },
   "那些年的歌3 演唱會 Songs": {
-   "checked": "2026-10-10",
+   "checked": "2026-10-11",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -1872,7 +1939,7 @@
    "added_news": null
   },
   "ULTRAMAN": {
-   "checked": "2026-10-10",
+   "checked": "2026-10-11",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1896,7 +1963,7 @@
    "added_news": null
   },
   "A-Lin": {
-   "checked": "2026-10-10",
+   "checked": "2026-10-11",
    "country": "MY",
    "deep": false,
    "soldout_news": {
@@ -1909,7 +1976,7 @@
     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE16c05XZUhJeEZzOWRUZi1ZZHN3WUZnUV9FQWlOYlFIY0xjNk1rYkZiZ0NGckVLLWtYWXJOaG1PRHRNNzVGWXZDbUhueUlSNllLSG5HZjFkZE5IWVRtVmVWM0Y3R3h3UUJJb2xCa2JyYlNDbGVPM2hreA?oc=5",
     "time": "2023-10-12"
    },
-   "count": 12,
+   "count": 13,
    "top": [
     {
      "title": "A-Lin大马演唱会30分钟售罄 1220宣布加场 - China Press",
@@ -1917,13 +1984,13 @@
      "time": "2026-10-10"
     },
     {
-     "title": "A-Lin大马演唱会加场 本月13日中午12时开售 - 娱乐 - 大马娱乐 - Sin Chew Daily",
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSVVZak1MUmljci1rdkw3TDVkbUU1blNjUHNTYk95S29UOWVYNk9VWkVGREVYMF96UjJVRlozbTRHVEtqQW80R0VVWU5wQ2ktZWg4X2l6c2ozNXVjbFhnMmN0cWIxNlJjaDRjVk5fRTlGcUhEM2xyMzl2RHcwWFVXdF9RRXA?oc=5",
-     "time": "2026-10-08"
+     "title": "出道二十年，A-Lin 把体育馆连开纪录写进了2026|a-lin|歌迹巡演|马来西亚_新浪新闻 - 手机新浪网",
+     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5UMWM1VFZXbU0zNjV0WGFNejlRNEs5ZHV1dUl6eXBWNkhfRzk1Z0xZQ0FMbThIbHRpNGJkNWJhcU03WlJJM2hRc1VhNXQwVG1FTzFhZ2kza1ZqV2NMMFJsZVBSTQ?oc=5",
+     "time": "2026-10-09"
     },
     {
-     "title": "A-Lin 大马站加场| 娱乐 | 2026-10-08 - 光明日报",
-     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNaDduQldmWjlJVVdFU0FRcjFUcjAybTgzWnI0Z1BoZ3UxY2VWeHNlZ3lNdTdhZS04YjItLTVEN0tPSHlCV2phVmExeUlUbXZuYmNjcm5PYmF6YXFZYWdTZWxRVkhNMENyYndsbWh5N0hNSGFrazRfTXpqcWhLckMzSGZn?oc=5",
+     "title": "A-Lin大马演唱会加场 本月13日中午12时开售 - 娱乐 - 大马娱乐 - Sin Chew Daily",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSVVZak1MUmljci1rdkw3TDVkbUU1blNjUHNTYk95S29UOWVYNk9VWkVGREVYMF96UjJVRlozbTRHVEtqQW80R0VVWU5wQ2ktZWg4X2l6c2ozNXVjbFhnMmN0cWIxNlJjaDRjVk5fRTlGcUhEM2xyMzl2RHcwWFVXdF9RRXA?oc=5",
      "time": "2026-10-08"
     }
    ],
@@ -1937,7 +2004,7 @@
    }
   },
   "巫启贤": {
-   "checked": "2026-10-10",
+   "checked": "2026-10-11",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -1950,7 +2017,7 @@
    "added_news": null
   },
   "演唱会 Songs That Keep Us Together": {
-   "checked": "2026-10-10",
+   "checked": "2026-10-11",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -2277,6 +2344,68 @@
   }
  ],
  "events": [
+  {
+   "id": "nol-26014710",
+   "country": "KR",
+   "source": "NOL World",
+   "name": "RAP HOUSE VOL.55",
+   "artist": null,
+   "type": "Rap/hiphop",
+   "venue": "플렉스라운지",
+   "city": "Seoul",
+   "dates": [
+    "2026-10-16"
+   ],
+   "sales": [
+    {
+     "name": "开票",
+     "start": "2026-10-13 17:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://world.nol.com/en/ticket/places/25000510/products/26014710"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "STANDING",
+     "price": "₩38,000"
+    }
+   ],
+   "limit": null,
+   "sold_out": false,
+   "url": "https://world.nol.com/en/ticket/places/25000510/products/26014710",
+   "first_seen": "2026-10-10 14:01",
+   "seat_maps": [],
+   "artist_name": "RAP HOUSE VOL.55",
+   "fans": 0,
+   "region": "K-pop",
+   "poster_img": "avatars/p-nol-26014710.jpg",
+   "avatar": "avatars/p-nol-26014710.jpg",
+   "avatar_kind": "poster",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "NOL World",
+     "url": "https://world.nol.com/en/ticket/places/25000510/products/26014710",
+     "id": "nol-26014710",
+     "sold_out": false,
+     "price_from": null
+    }
+   ],
+   "hidden": null,
+   "news_added": null,
+   "added_status": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-10-13 17:00"
+    }
+   ]
+  },
   {
    "id": "t2u-51240",
    "source": "Ticket2U",
@@ -2632,70 +2761,6 @@
    ]
   },
   {
-   "id": "nol-26014361",
-   "country": "KR",
-   "source": "NOL World",
-   "name": "Happy Hour with Joh Ung & Fabiano do Nascimento - JEJU",
-   "artist": null,
-   "type": "visiting concert",
-   "venue": "House of Refuge",
-   "city": "제주",
-   "dates": [
-    "2026-10-24"
-   ],
-   "sales": [
-    {
-     "name": "开票",
-     "start": "2026-10-08 15:00",
-     "end": null,
-     "queue": null,
-     "available": true,
-     "code_required": false,
-     "url": "https://world.nol.com/en/ticket/places/25000997/products/26014361"
-    }
-   ],
-   "tiers": [
-    {
-     "name": "All Section",
-     "price": "₩33,000"
-    }
-   ],
-   "limit": null,
-   "sold_out": false,
-   "url": "https://world.nol.com/en/ticket/places/25000997/products/26014361",
-   "first_seen": "2026-10-08 14:16",
-   "seat_maps": [],
-   "artist_name": "Happy Hour",
-   "fans": 1203,
-   "region": "K-pop",
-   "poster_img": "avatars/p-nol-26014361.jpg",
-   "avatar": "avatars/a-3a38d1f075fc.jpg",
-   "avatar_kind": "artist",
-   "poster_portrait": true,
-   "platforms": [
-    {
-     "source": "NOL World",
-     "url": "https://world.nol.com/en/ticket/places/25000997/products/26014361",
-     "id": "nol-26014361",
-     "sold_out": false,
-     "price_from": null
-    }
-   ],
-   "hidden": null,
-   "news_added": null,
-   "added_status": null,
-   "opened_at": "2026-10-08 15:00",
-   "opened_approx": false,
-   "sale_state": "ON_SALE",
-   "sale_evidence": [
-    {
-     "src": "NOL World 售票轮次",
-     "text": "开票",
-     "time": "2026-10-08 15:00"
-    }
-   ]
-  },
-  {
    "id": "t2u-50486",
    "source": "Ticket2U",
    "name": "Spotlight KLCC: Orked Farhan & ASHNYZ (24 Oct 2026)",
@@ -3019,6 +3084,12 @@
    "opened_approx": true,
    "sale_state": "ON_SALE",
    "sale_evidence": [
+    {
+     "src": "Google 新闻",
+     "text": "首场开票不到一天即完售 周兴哲演唱会宣布加场 - 马来西亚东方日报",
+     "time": "2023-03-03",
+     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB4VkEtZXF0aF9PenZNc3pETGNIN0FLX3NvLWZyc2Z4WVB3VVBNaE5fbGdtOG5mQUhZclRRc3dJMXUwWjBDb2dkdUJlUXpjTXFnWVBtS21oU2I4bkVvR3ZTN3Y2cU4yOTI4eERNYTVPVzlxR2ptTXdSTQ?oc=5"
+    },
     {
      "src": "Google 新闻",
      "text": "周兴哲再度来马开唱！613全面开票 - my.com.my",
@@ -10408,6 +10479,140 @@
  ],
  "leads": [
   {
+   "id": "news-86d370ad337d3e57",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "조선일보",
+   "title": "Mamamoo Proves Global Power With Kuala Lumpur Concert Success - 조선일보",
+   "text": null,
+   "time": "2026-10-11 08:42",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPVkIxYmxfRC1YYWh1bUE5OUo4ejkzRWVlTmxtU21wMDNIMDlGc0VhcnZYR0ZjdzhzeGtSQkc2UV8tajJ0QUVUUXJnd2RfNWdHN05CdnhfLVlYT1dqdGhLOWdhMURtNVhtbFFSWXR5M1l6bmtiOWRCTF9HaWJtOTc4VjU2cFNFTENQMlJFN2RB?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-11 13:58",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-bbca7a1a3cc4cf82",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "BNT뉴스",
+   "title": "마마무, 쿠알라룸푸르 공연 성료 - BNT뉴스",
+   "text": null,
+   "time": "2026-10-11 08:40",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1EZS0xOHJ5Xzh1SHpmVjV5X2I0LWEtb3hLUHZzbEl2RVlNTExZUkdtUEh6SnMzS0Zpb2dTampvQm9TdHltNlREbS11cUE4VWE0eFJNVXZiOUE0QndfZGszUDR4Y20?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-11 13:58",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-dc42b55a9fbb7b2e",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "The Korea Daily",
+   "title": "MAMAMOO — K-Pop Group Wraps Up Successful Malaysia World Tour Stop - The Korea Daily",
+   "text": null,
+   "time": "2026-10-11 08:30",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1yTkVDNHRTdVNqU1R2TjRpRlJFeG9qa1JvcEs5WFNjQ204OXJEdHlxNzBNT0x0Y2JqQWRRUjNPRVh2SVpIdEdTV1o4Zk1GeTVteFhGeWN3dVVaTDRmbFBWYUtkVE0?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-11 13:58",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "MAMAMOO",
+   "artist_fans": 672621,
+   "artist_region": "K-pop",
+   "artist_photo": "avatars/a-288863a00fae.jpg",
+   "hidden": null,
+   "listed": false
+  },
+  {
+   "id": "news-c1b8a776acb3ed3d",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Chosunbiz",
+   "title": "마마무, 말레이시아 투어 대성황..'믿듣맘무' 파워 - 조선비즈 - Chosunbiz",
+   "text": null,
+   "time": "2026-10-11 08:20",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNeUNNRlZpQldPcGJ6UVVuVmFVeHEzOFR2d29hdjhnXy1lN0ZkNXZFV3daNlZnS1cyTHVNSjdFSnJJVUtyWUE2RGtqMFZrVm1ObFRnQ3BBLWNfODZLejZOUkEtTEtLaHBRS1liRTIyMWQxeEltc2F5R0p1MEdLZEJ4UGc0S3JHUFFzd0FBdlNsNVAwUnJCNXRKUVlIMjdMVk9sN2RIQ3A1b9IBpwFBVV95cUxNeUNNRlZpQldPcGJ6UVVuVmFVeHEzOFR2d29hdjhnXy1lN0ZkNXZFV3daNlZnS1cyTHVNSjdFSnJJVUtyWUE2RGtqMFZrVm1ObFRnQ3BBLWNfODZLejZOUkEtTEtLaHBRS1liRTIyMWQxeEltc2F5R0p1MEdLZEJ4UGc0S3JHUFFzd0FBdlNsNVAwUnJCNXRKUVlIMjdMVk9sN2RIQ3A1bw?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-11 13:58",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-0ccc7dca7479c509",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "东方日报 娱乐",
+   "title": "林俊杰如愿登F1舞台开唱　“宣布明年好消息”　女友台下应援",
+   "text": "（新加坡11日讯）天王林俊杰（JJ）9日晚登上新加坡F1大奖赛主舞台，担任当晚压轴表演嘉宾，为了这场家乡演出，他集结全球百人团队，历经近半年筹备，带来20首歌曲、3套造型及大型烟火特效。女友七七也与林妈妈现身台下应援，还甜蜜地拿起手机拍摄台上的男友，被粉丝直击幸福放闪的一面。据台媒报导，身为资深F1车迷，林俊杰为了这场国际级演出，号召全球百人团队齐聚新加坡，历经近6个月筹备，集结16位国际舞者、海外乐手及国际创意团队，以世界巡演规格打造限定舞台。林俊杰坦言筹备压力不小，“由于目前没有新巡演的计划...",
+   "time": "2026-10-11 08:15",
+   "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/11/854281",
+   "hints": [],
+   "sale_times": [],
+   "first_seen": "2026-10-11 13:58",
+   "matches": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-5f04f77167a6e088",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "톱스타뉴스",
+   "title": "마마무, 쿠알라룸푸르 달군 월드투어…완전체 라이브로 채운 밤 - 톱스타뉴스",
+   "text": null,
+   "time": "2026-10-11 08:04",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE0xZVcyTzVpTGs3Zl94azZCbzZPWlJWbXR2UThmSExYWklqZUN0ZWxENzRTMlRfVUZRcm4xbmdiNmI4Z25ndWpNX2RlS2RmQmVUekFBNDBXQmVvR191eTlnMXNNMG9xeEc1MVNubmR5MnNxZw?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-11 13:58",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-99e92da1037b2af2",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "스포츠경향",
+   "title": "코르티스(CORTIS), F1 경기만큼 짜릿한 공연으로 싱가포르 사로잡아 - 스포츠경향",
+   "text": null,
+   "time": "2026-10-11 07:15",
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5rc0FJMGlzNVZTZW9rYzdqSTZnRkpoVm1Ta2tLV0JjdGYwYTdoRU5uaVZwcU13X1VoZUk5ckZUazRMTjh5bEczUXI2dFBhYm9hYVVDbmEtb3oyYVlFWGfSAWNBVV95cUxQRUhDY09kRHBIUzcxbWc2YWdCSF9HakZTMG1EMHg1U2RBeE5TcndYVF9samliRkhOMlV5Yk5rZWE1bERQbFRuOUFheF9XTkYtN1g0QXRsb05RV3F5ZWNPanI1UU0?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-11 13:58",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "CORTIS",
+   "artist_fans": 68143,
+   "artist_region": "K-pop",
+   "artist_photo": "avatars/a-3e6f91cfe0fe.jpg",
+   "hidden": null,
+   "listed": false
+  },
+  {
    "id": "news-48c4864b4efba1f7",
    "kind": "新闻",
    "country": "MY",
@@ -10433,7 +10638,7 @@
    "title": "코르티스, F1 싱가포르 메인 무대서 공연…6만 관객과 호흡 - 연합뉴스",
    "text": null,
    "time": "2026-10-10 14:30",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9GWS02VzRLZlRENHlTWjdIVHYtZlItQjFkaXYzRWx4Y1c2eks2Nmwxb0lqVklTR0FOcjFHY0lKS25GVG5UNW1xUVNLRVFJdFlSb0lBejJhT25NcmNiN3R6Q9IBYEFVX3lxTE9GWS02VzRLZlRENHlTWjdIVHYtZlItQjFkaXYzRWx4Y1c2eks2Nmwxb0lqVklTR0FOcjFHY0lKS25GVG5UNW1xUVNLRVFJdFlSb0lBejJhT25NcmNiN3R6Qw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBFbXpkQXJQNlRTYVNrMzI5NmpSUnd2ck9YY3dndWd0R2pELWdWNUczSEpPQ1F3VWp6NWdSSVJwall0ckJscmRrVGFhbW14aGp3Q2VUUUNMUEJMaGvSAWBBVV95cUxPRlktNlc0S2ZURDR5U1o3SFR2LWZSLUIxZGl2M0VseGNXNnpLNjZsMW9JalZJU0dBTnIxR2NJSktuRlRuVDVtcVFTS0VRSXRZUm9JQXoyYU9uTXJjYjd0ekM?oc=5",
    "hints": [],
    "first_seen": "2026-10-10 18:59",
    "matches": [],
@@ -10839,7 +11044,7 @@
    "title": "Ain Edruce kena scam tiket F1 harga RM8,000, ingat nak beri kejutan seat ‘best’ buat suami - Suria FM",
    "text": null,
    "time": "2026-10-09 10:52",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOci1nblZhWWgtbFNzQ3RxTmxrWnBJSjJMbDRwdkY1eG9XZnNUeHp1OG9WSUh4UWhJZldsLVI5d0hjX3lDYi1QMl84RG5HanhiNjUxUjA2ajVPbEdpZTFFei1nSWlqanpBaWRycFF4Y01YN2xLSmVHcDlLeEgzMDhWdUZ1UDFDY2VGcllrY1BMMlA0MV8zUDRVMlhEMURMWnc1ZDV0VVdhQnlwU2h4SUxMaG9B?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOMUdVREJ5T2RyemZmdUNXWW5HWnljV1M0NFpjOUlvaldYTzdLcXNMSDRuSkF3Um5hQ3QxOEZCX24yaGUxaHc0aTQwekNHRkxqN215aW92d012bVYzUkxmdFlfZVY5Zks5NDVuaXVWS2JCOG1ldTY4SlVwZ25FZFpOYUhCYzM3R3Bxczh4c0dZN2g1NTQ3VExUc1BPUHR5N1NQeFZ2TzdSV29ZbG1kbnVIS012SHVyaDN4Mldlcw?oc=5",
    "hints": [],
    "first_seen": "2026-10-09 14:23",
    "matches": [],
@@ -12370,6 +12575,24 @@
    "artist_photo": "avatars/a-718c50a0b6ca.jpg"
   },
   {
+   "id": "news-61c71cdea1087b57",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "The Star",
+   "title": "More Sabah leaders want gospel concert to go on - The Star",
+   "text": null,
+   "time": "2026-10-05 13:17",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPVDFqUnBhbUlmOEF5TGd5NVdJTVVXa0tYOGZoZ0EtZlZNWEhWTWVYdl83T2p4MGlLU3JsQUVIU0E3NW5YNG02dkQtRFhEblE4QkZ3eHRnR0xXMUdWUWxZQi1MdmtyR2ZqNlhxbG04Y2l0YjZqVUtHb2RCamlySDFUbnRCOVltWDhSSXZja1JnMVlRWWZ4M1lZd0lYc0FRZw?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-11 13:58",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
    "id": "news-887c26cccaffca32",
    "kind": "新闻",
    "country": "MY",
@@ -12886,12 +13109,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
+   "listed": false,
    "artist": "Faizal Tahir",
    "artist_fans": 13876,
    "artist_region": "其他",
-   "artist_photo": "avatars/a-718c50a0b6ca.jpg",
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
-   "listed": false
+   "artist_photo": "avatars/a-718c50a0b6ca.jpg"
   },
   {
    "id": "news-1d5bc9ae8f84445c",
