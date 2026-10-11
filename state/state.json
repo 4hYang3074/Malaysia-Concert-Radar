@@ -271,7 +271,7 @@
   "t2u-52058": 6,
   "t2u-51768": 4,
   "golive-178": 4,
-  "t2u-50805": 6,
+  "t2u-50805": 5,
   "golive-181": 6,
   "golive-175": 1,
   "golive-179": 5,
@@ -3539,7 +3539,7 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
+   "hidden": "Google 新闻查证不到马来西亚的相关报导",
    "listed": false,
    "artist": "New Boyz",
    "artist_fans": 144957,
@@ -3801,7 +3801,7 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
+   "hidden": "Google 新闻查证不到马来西亚的相关报导",
    "listed": false,
    "artist": "New Boyz",
    "artist_fans": 144957,
@@ -3841,7 +3841,7 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
+   "hidden": "Google 新闻查证不到马来西亚的相关报导",
    "listed": false,
    "artist": "New Boyz",
    "artist_fans": 144957,
@@ -4189,7 +4189,7 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
+   "hidden": "Google 新闻查证不到马来西亚的相关报导",
    "listed": false,
    "artist": "New Boyz",
    "artist_fans": 144957,
@@ -5427,12 +5427,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
    "artist": "Israel Houghton",
    "artist_fans": 51236,
    "artist_region": "欧美",
-   "artist_photo": "avatars/a-0d38f2cafd68.jpg",
-   "hidden": null,
-   "listed": false
+   "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
   "news-e5316ff8f0f2b5ae": {
    "id": "news-e5316ff8f0f2b5ae",
@@ -5449,12 +5449,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
    "artist": "Israel Houghton",
    "artist_fans": 51236,
    "artist_region": "欧美",
-   "artist_photo": "avatars/a-0d38f2cafd68.jpg",
-   "hidden": null,
-   "listed": false
+   "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
   "news-ea3836b2cf4c9c3b": {
    "id": "news-ea3836b2cf4c9c3b",
@@ -5471,12 +5471,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
    "artist": "Israel Houghton",
    "artist_fans": 51236,
    "artist_region": "欧美",
-   "artist_photo": "avatars/a-0d38f2cafd68.jpg",
-   "hidden": null,
-   "listed": false
+   "artist_photo": "avatars/a-0d38f2cafd68.jpg"
   },
   "news-1e37579cb3a30df6": {
    "id": "news-1e37579cb3a30df6",
@@ -5515,7 +5515,7 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
+   "hidden": "Google 新闻查证不到马来西亚的相关报导",
    "listed": false,
    "artist": "New Boyz",
    "artist_fans": 144957,
@@ -5939,12 +5939,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
    "artist": "Anoushka Shankar",
    "artist_fans": 72427,
    "artist_region": "欧美",
-   "artist_photo": "avatars/a-d76cdf460109.jpg",
-   "hidden": null,
-   "listed": false
+   "artist_photo": "avatars/a-d76cdf460109.jpg"
   },
   "news-5399d9d211e8e445": {
    "id": "news-5399d9d211e8e445",
@@ -6399,7 +6399,7 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
+   "hidden": "Google 新闻查证不到马来西亚的相关报导",
    "listed": false,
    "artist": "New Boyz",
    "artist_fans": 144957,
@@ -7398,12 +7398,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
    "artist": "Lana Del Rey",
    "artist_fans": 5820410,
    "artist_region": "欧美",
-   "artist_photo": "avatars/a-09ab80feedba.jpg",
-   "hidden": null,
-   "listed": false
+   "artist_photo": "avatars/a-09ab80feedba.jpg"
   },
   "news-3eb48cfff6886155": {
    "id": "news-3eb48cfff6886155",
@@ -7442,12 +7442,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": true,
    "artist": "BABYMONSTER",
    "artist_fans": 219398,
    "artist_region": "K-pop",
-   "artist_photo": "avatars/a-a8aa1fae8702.jpg",
-   "hidden": null,
-   "listed": true
+   "artist_photo": "avatars/a-a8aa1fae8702.jpg"
   },
   "news-9be9dbd6a9bd71a5": {
    "id": "news-9be9dbd6a9bd71a5",
@@ -8281,6 +8281,172 @@
    "platforms": [],
    "hidden": "认不出是哪位明星（待人工或 AI 分析）",
    "listed": false
+  },
+  "news-406c75fc2936655d": {
+   "id": "news-406c75fc2936655d",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "allkpop",
+   "title": "MAMAMOO brings ‘4WARD’ world tour to Kuala Lumpur - allkpop",
+   "text": null,
+   "time": "2026-10-11 21:54",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxONHlJNk9DaHlrLVhUbzlQcUtRZnNpT3lJUGdLcVJuZjJZd0VwRDRheFFKa0FnSmZISXhxTmI4N29RdDZIbjNqU2ZyQnN1cVRobVU4RllVbC1nYS1QV0JpUmFHaEE5SFYzSE9hbGp6dWFGc0FJSl9RUlZQVkptVVozQXJRMjZ5cTNQQmdRUi1WVkU?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 01:42",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "MAMAMOO",
+   "artist_fans": 672621,
+   "artist_region": "K-pop",
+   "artist_photo": "avatars/a-288863a00fae.jpg",
+   "hidden": null,
+   "listed": false
+  },
+  "news-19dc40fc46cf1f57": {
+   "id": "news-19dc40fc46cf1f57",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Gempak",
+   "title": "Ain Edruce Kongsi Pengalaman Kena Scam Beli 2 Tiket F1 Harga RM8K - “Harga Asal RM2K Seorang” - Gempak",
+   "text": null,
+   "time": "2026-10-09 10:25",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZndzOWVmU0NkTkxOSFFXQ0FBZFIyODUzVVRFSlhKWllEc1RHa1ZuQXlwQ3Z1UXg5d0NISkR1VmQ2Q2Fxc21yMnhEV0RjRXE2UmZlbmJXdExQS2loNWdQR1lmbGVlUlQ3clhmWXZjcElWZmM5amJTcFRNWVczUmN2MTZhbzN6R1F6TDBHTGR5Y09RcnZlMWtZdXF2VXNWYzNGY0FQVWR5VFlGZmh5Y0oxOUJjU3V6SXc?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 01:42",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "不是演唱会（scam）",
+   "listed": false
+  },
+  "news-21c1bf652eb57984": {
+   "id": "news-21c1bf652eb57984",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "OSEN",
+   "title": "마마무, 말레이시아 투어 대성황..'믿듣맘무' 파워 - OSEN",
+   "text": null,
+   "time": "2026-10-11 08:20",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBDclV2YzY3ZWU3cWhxd1U4ZGo5cktJaTlmMllIWjlUNVp1dUd5X2lYcUJNMjYxbjJnUDFYZnNBakNneGU5dUdJWWJ2c1JfVEphQUZOUg?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 01:42",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  "news-f8359e34284a46bf": {
+   "id": "news-f8359e34284a46bf",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "iMBC 연예",
+   "title": "마마무, '4WARD' 쿠알라룸푸르 공연 성료…도쿄로 열기 이어간다 - iMBC 연예",
+   "text": null,
+   "time": "2026-10-11 20:56",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE44OWdUcFh6Y1ZYN3VIcHNzLUxfNmNIOEppM2ZaaVdFQ0hsUkJLNFpOMDhvWHozVzNUc195SHBXbEhzR1h1cU1rZWtSazdVeTYzaG5WcG9veklpN01OTjFTeg?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 01:42",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  "news-dbc69f534015d5ae": {
+   "id": "news-dbc69f534015d5ae",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "스포츠서울",
+   "title": "마마무, 월드투어 ‘4WARD’ 쿠알라룸푸르 공연 성료 - 스포츠서울",
+   "text": null,
+   "time": "2026-10-11 17:04",
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBDMXlwZzBuOFBYWTlrclhOM1hNaW56MW9NOGlpUlVlbnhPS012ZGwzWmtvNWxjMlpUaXVWMFZrQ0lJSEJ4d0FTNGUzMldHUmp6NXJqSzdYNi0?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 01:42",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  "news-4b1bed9315d99320": {
+   "id": "news-4b1bed9315d99320",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "싱글리스트",
+   "title": "마마무, 월드투어 '4WARD' 쿠알라룸푸르 성료...글로벌 인기 입증 - 싱글리스트",
+   "text": null,
+   "time": "2026-10-11 08:36",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5HX1hNUmdPQkg1TzNlYmZ1Nk1ndFpoZXVVT3ZwN1YwVF95OTltYUltM19XczdvQXBjR1RNZ1dWV3FNUm4xdWV0MENLam5iTElkVFlibmtRcjRZamVzeVduWjFpa1VIUQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 01:42",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  "news-50d85861f8acef8c": {
+   "id": "news-50d85861f8acef8c",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "DANAMIC",
+   "title": "beabadoobee brings The Powerlines Tour to Singapore on 4 April 2027 - DANAMIC",
+   "text": null,
+   "time": "2026-10-11 13:01",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMVZoNEllTVNYeGhnYmRZanlMb3lWV1RfZ3FxMlFqMU1fR2JEVUxaelRjUW1lNTZaOUcxd0RRNkMySTh6SnRmX2FXbWRIY1V3aWVOZWtxOEJWVkVIQ05QVmh5d2lsZlRmS29ETjdSWXZZeGZSUXIzaEI0WWJ0dlVvdmZ1WkJHSFBkVUVIMl9oSV9JelpuM011ZG5ORWdhXzlmd3c?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 01:42",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  "news-bcbe2e2dd9aeabee": {
+   "id": "news-bcbe2e2dd9aeabee",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "CNA",
+   "title": "In pictures: F1 Singapore Grand Prix 2026 concert acts - CNA",
+   "text": null,
+   "time": "2026-10-11 16:09",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdmdHQl9oLXNzM1Y2NkpsMFRITnczTUY3clIyWE9Ja19vQVpZS0ZYTF96Y21kTWdMNUJCTmdYc3ZLMkNJWFdVTENYbHRGSW92QjViZVdPRTRxcUVQbl9pTU1LT0J0RDRMOHlZYUo5Qm5rV056X1BWdHhacjlOSmR6Ql9tNkpLZmg0d0QtM2cxQ19lVEYzMkFiaGpiMm55d1l0d1lBRlFQd3ptWENQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 01:42",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "不是演唱会（grand prix）",
+   "listed": false
+  },
+  "news-d1db68338e811e77": {
+   "id": "news-d1db68338e811e77",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "미주한국일보",
+   "title": "코르티스, F1 싱가포르 메인 무대서 공연…6만 관객과 호흡 - 미주한국일보",
+   "text": null,
+   "time": "2026-10-10 09:16",
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4tRzJFNHI5NHE1WmVxcmt6X3QzMTAzYmR5ZExGMnBnV0I5Ty1zc3ZuVUtRTnRFNzJfc0w5a1JBbkp0QnMtVXVMYTl5REQ1NWZwT3ZFYnJFQ3NET1Z0RXNV?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 01:42",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
   }
  },
  "artists": {
@@ -8800,20 +8966,20 @@
     "info_images": [
      [
       "poster",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/183/0745704a-3029-4cf5-b7ca-5aa20534fb7a.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=4b91224693304aeb4b2501eb984b21367bdd3130a89036e8968e0cb68ac30746&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/183/0745704a-3029-4cf5-b7ca-5aa20534fb7a.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=aaf819b8df8f76c5597f22c2f75c450652ecc4ff62106836e268b046d101c53e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "VIP Information",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/288/5810213c-d280-4621-9fc5-b673edb115c2.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=f27c15acf053bf2c2d96ae207250e213eba8fb58a8a9a56ad9fc6c6c30f4cd34&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/288/5810213c-d280-4621-9fc5-b673edb115c2.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=b4fba8e26331f54a0e91eca5146f9792114457cfd3c9f50a76655edd3d11f7ae&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "GoLive Ready",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/293/afdc076c-b0f3-412e-96fe-3658aadf2985.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=3dc347c0edbbf06950da863237e39c61c4f9a32263e9e3d6d03a394215d37f06&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/293/afdc076c-b0f3-412e-96fe-3658aadf2985.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=4c7a553b0e1e553b479cd1bb40a628f68427c06c6dbcbf0c5d224d573a404aed&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": null,
     "url": "https://www.golive-asia.com/event/183",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/183/0745704a-3029-4cf5-b7ca-5aa20534fb7a.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=4b91224693304aeb4b2501eb984b21367bdd3130a89036e8968e0cb68ac30746&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/183/0745704a-3029-4cf5-b7ca-5aa20534fb7a.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=aaf819b8df8f76c5597f22c2f75c450652ecc4ff62106836e268b046d101c53e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    },
    {
     "id": "golive-182",
@@ -8871,7 +9037,7 @@
     "tiers": [],
     "price_text": null,
     "seat_maps": [
-     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/182/35f231e7-ce0e-47dd-b757-9afcd917fa8f.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=8af2b26ffb4d51461cc8480f0acba98f81e4cf693d9e2f78edc35fe085ca28a8&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/182/35f231e7-ce0e-47dd-b757-9afcd917fa8f.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=40b743902311944df868984b3ec94c144a45bb419e86850739ffe277ae0cb542&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     ],
     "limit": null,
     "notes": {
@@ -8887,16 +9053,16 @@
     "info_images": [
      [
       "VIP Information",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/280/fed6d3ea-6401-4692-9f11-76d3d025774f.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=ea1f6948a10ce6d63df98116aebbdacea95abadd6f4de147ac58f721b562bfa3&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/280/fed6d3ea-6401-4692-9f11-76d3d025774f.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=c3c0be1abdb98c76eb51fcce204415fd2846ba0a2a0793fa61dfdcf4892bf7d4&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "GoLive Ready",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/285/89ea45a3-1278-4c1c-a531-bd28ab2ae15c.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=afd016d6d67ba81af26676fb1be4e3536a7b859fe46908ba442c016b0cc50609&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/285/89ea45a3-1278-4c1c-a531-bd28ab2ae15c.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=56e04cf813de9e49284ffba42e75ec8321e5338d8dd1842ee7f482c14788bf8a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": null,
     "url": "https://www.golive-asia.com/event/182",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventBanners/182/b5067153-0474-425e-97e6-e3ba89e820e9.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=5f9681f91840c3be0ee83be0d358bbeaa3802f3db3b97af1d5e9c5e11889df5a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventBanners/182/b5067153-0474-425e-97e6-e3ba89e820e9.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=3fcebbde5e965583f7524980e5d920593302a22734a94dac1a3c7ea925f34265&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    },
    {
     "id": "golive-181",
@@ -8986,20 +9152,20 @@
     "info_images": [
      [
       "poster",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/181/78541a0b-ba58-4911-8d8e-b73d0a6976c5.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=9ef3a0b141a18b5062723fc40bbdb09d807335dbe603ab35a226b147068bea76&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/181/78541a0b-ba58-4911-8d8e-b73d0a6976c5.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=0cf54c65036879fec7f7faafe744f22f0fdb524f0b89654ec1559bf5d5f46633&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "VIP Information",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/276/c1c6d8f1-ee16-4677-89eb-a9e161f5ea09.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=8c556852b9876a35cb5ba5ecd129c3ce012f07baaf698f4bb4da3842987164f1&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/276/c1c6d8f1-ee16-4677-89eb-a9e161f5ea09.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=df44f8ef900ba306f18ea6c8592ecf2e6570634d7c542a91772c99b6758aeef2&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "GoLive Ready",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/277/ef77484a-4d17-4a06-ad17-ee1b03369e83.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=0eefc364b0fa9f1a62b661b92883b4ebf9c53c13563513416bb074b239a137d0&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/277/ef77484a-4d17-4a06-ad17-ee1b03369e83.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=e26a7f9a5abe2a75ad4ff83d444898d89904afdf1f03bfbe8b3b8b8b9b557693&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": null,
     "url": "https://www.golive-asia.com/event/181",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/181/78541a0b-ba58-4911-8d8e-b73d0a6976c5.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=9ef3a0b141a18b5062723fc40bbdb09d807335dbe603ab35a226b147068bea76&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/181/78541a0b-ba58-4911-8d8e-b73d0a6976c5.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=0cf54c65036879fec7f7faafe744f22f0fdb524f0b89654ec1559bf5d5f46633&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    },
    {
     "id": "golive-180",
@@ -9086,16 +9252,16 @@
     "info_images": [
      [
       "poster",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/180/f363aa02-c377-43fc-803e-1997e36e5096.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=04dadebd66932fe192c55a6a55292f14a64196a83d0c593f46400176d9f6fe3b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/180/f363aa02-c377-43fc-803e-1997e36e5096.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=5970be671daea427a948e6e4adb3bc54f7ec79d3d71a81c2e8b8c97dc44b74f2&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "VIP Information",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/268/3c698506-2583-45b9-97c7-6ff18e367841.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=4683f077aa32b992d7670a6c4aec9c594cfc811b2834fd2385f30894b3f1085b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/268/3c698506-2583-45b9-97c7-6ff18e367841.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=c37e65163afd4f03ece8f1ef84c3d79045776df24597b258864a4755b9e4143e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": null,
     "url": "https://www.golive-asia.com/event/180",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/180/f363aa02-c377-43fc-803e-1997e36e5096.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=04dadebd66932fe192c55a6a55292f14a64196a83d0c593f46400176d9f6fe3b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/180/f363aa02-c377-43fc-803e-1997e36e5096.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=5970be671daea427a948e6e4adb3bc54f7ec79d3d71a81c2e8b8c97dc44b74f2&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    },
    {
     "id": "golive-179",
@@ -9201,20 +9367,20 @@
     "info_images": [
      [
       "poster",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/179/e4158b1e-a717-4377-b73e-02491edae65f.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=f8d22a4643b5beea898f8cc1eff70d59dc560ae2d10904a6e98047d65577923b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/179/e4158b1e-a717-4377-b73e-02491edae65f.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=cb83433e4ac8b193e03aab7bcfd392c7c6c4a39d14bd2a506649cf72595cb458&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "VIP Information",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/255/015fe8a7-6cdd-47f6-b858-a4962f9f9e27.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=843f445be4e7287407b0ed889f1fe45a086bc51849909a6455337e8b480de968&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/255/015fe8a7-6cdd-47f6-b858-a4962f9f9e27.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=96e6208664a1ad01afed2620246f8ffc6b5747cac84b6efbe24712dbb7943450&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "GoLive Ready",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/260/0a39a6ed-2bce-44c6-8852-d8c88ba79daa.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=ed90a03ed2bef3737e873d7589107f18690e8bb56cc11efa38342d05dcdf4471&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/260/0a39a6ed-2bce-44c6-8852-d8c88ba79daa.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=540ddc2ebffa0bc094baf6604e2715a7552e4bb474e59cdc1f8e5cd7e0e5cdb8&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": null,
     "url": "https://www.golive-asia.com/event/179",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/179/e4158b1e-a717-4377-b73e-02491edae65f.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=f8d22a4643b5beea898f8cc1eff70d59dc560ae2d10904a6e98047d65577923b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/179/e4158b1e-a717-4377-b73e-02491edae65f.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=cb83433e4ac8b193e03aab7bcfd392c7c6c4a39d14bd2a506649cf72595cb458&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    },
    {
     "id": "golive-178",
@@ -9305,20 +9471,20 @@
     "info_images": [
      [
       "poster",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/178/11b33a8a-2b9d-4db4-bb4a-2c4587df6d3c.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=dccc021d247c443e89734a66be5e5ee63ea7d127aafa0459b84f6e3efc8b76ad&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/178/11b33a8a-2b9d-4db4-bb4a-2c4587df6d3c.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=b6b681999aa99b403d9906038e1d11c3661d5c165b827e87a6478eb1a1a80572&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "VIP Information",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/249/16c29a84-42e1-42db-bf74-fbe0018210dc.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=f94e887deab88f6e8a6143aa3a3e8907932abf053e579f9acb5cac5426b03455&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/249/16c29a84-42e1-42db-bf74-fbe0018210dc.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=d6e1c1483e94bc9cb3c2e5d32caf39e3be9d39cc4bd9f09c88794aba9ebb0c35&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "GoLive Ready",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/250/b312969d-c135-4e88-9adf-d7e24e92cb03.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=9514729fea6d1abede0048a1331cc93ade6e3e5f750737aa5a97e1cd5af34199&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/250/b312969d-c135-4e88-9adf-d7e24e92cb03.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=96c31779cdb7a2b7a1ec3def5b9821c40517a7396001e340fe25cc12fb552428&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": null,
     "url": "https://www.golive-asia.com/event/178",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/178/11b33a8a-2b9d-4db4-bb4a-2c4587df6d3c.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=dccc021d247c443e89734a66be5e5ee63ea7d127aafa0459b84f6e3efc8b76ad&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/178/11b33a8a-2b9d-4db4-bb4a-2c4587df6d3c.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=b6b681999aa99b403d9906038e1d11c3661d5c165b827e87a6478eb1a1a80572&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    },
    {
     "id": "golive-177",
@@ -9404,16 +9570,16 @@
     "info_images": [
      [
       "poster",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/177/850873ea-88ea-4577-8a0c-cdf724be18b3.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=4dc9573d1ebd403aa13136f3ab223814e73ff569f094558a5685ca8af8ce2668&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/177/850873ea-88ea-4577-8a0c-cdf724be18b3.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=88b7f80ed789d740681c4b5dac7c6ac946c3b8e9c3a552e845df4632d98213ae&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "GoLive Ready",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/252/30cc8cda-447a-4116-8c26-906daec2fd5f.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=9a3ada40a7c652038b988555de4dbe995a72d6fa0c05cb6813d9d669ff6495e8&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/252/30cc8cda-447a-4116-8c26-906daec2fd5f.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=e1e3b0717e9604c56e18122b2f409a1d10f708c7dd4428c3f4c37765b361c765&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": null,
     "url": "https://www.golive-asia.com/event/177",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/177/850873ea-88ea-4577-8a0c-cdf724be18b3.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=4dc9573d1ebd403aa13136f3ab223814e73ff569f094558a5685ca8af8ce2668&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/177/850873ea-88ea-4577-8a0c-cdf724be18b3.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=88b7f80ed789d740681c4b5dac7c6ac946c3b8e9c3a552e845df4632d98213ae&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    },
    {
     "id": "golive-176",
@@ -9471,7 +9637,7 @@
     "tiers": [],
     "price_text": null,
     "seat_maps": [
-     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/176/3d0f3dae-d6d4-45ca-95a1-a9d26868f137.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=1bb64fa116c99098a57d8227a2c834308b4beb76441a26b457ea012d9814f2c9&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/176/3d0f3dae-d6d4-45ca-95a1-a9d26868f137.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=15c4491238b03a5401fde562826c664852dfbf872138f1d6e52b06d056c199d5&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     ],
     "limit": 4,
     "notes": {
@@ -9490,16 +9656,16 @@
     "info_images": [
      [
       "VIP Information",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/234/073e11cd-cf34-4c17-8df6-63dd1c31629d.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=b58c425c8a95a29567beacb851dc6e1300395315b1e8e72816892367294f7dd4&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/234/073e11cd-cf34-4c17-8df6-63dd1c31629d.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=d416326dd52eb19c447b83a309ecfa90f876e43a3c3db7c2b7cfdfc115e8ed58&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "GoLive Ready",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/239/85bf1c14-4265-4dfc-9bbe-3cb231304240.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=14d6bd6307d85259e391ec9de56a0cf1954fc5fc985ea2145ef84735f2049966&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/239/85bf1c14-4265-4dfc-9bbe-3cb231304240.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=37b7bc9231626010a6b057a77042bc8f774f74288357639d15127c868ea09685&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": null,
     "url": "https://www.golive-asia.com/event/176",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventBanners/176/7a6fb2ba-1497-4594-afc8-bc8f1e39e450.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=55bb31568eb863d60324ec452c4d0237e2e11dc3a2c414239f7b35e91e682fbf&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventBanners/176/7a6fb2ba-1497-4594-afc8-bc8f1e39e450.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=8e3598f1504c54c5cc8ce4ab335fd0ae07ce8b86f3997b37b1ad5aefef4b9cda&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    },
    {
     "id": "golive-175",
@@ -9553,7 +9719,7 @@
     ],
     "price_text": null,
     "seat_maps": [
-     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/175/2a635df0-53ac-4613-961e-42810f5ce79c.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=3a911086f606167cf7ecd50946dff4e614cb3dd8af9a368fefe97f1175b1f131&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/175/2a635df0-53ac-4613-961e-42810f5ce79c.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=037c8eb85393b2626ee7451b03c86e787ad212c6dfb184f9e90eca3558d94214&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     ],
     "limit": 4,
     "notes": {
@@ -9571,20 +9737,20 @@
     "info_images": [
      [
       "poster",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/175/d8e36d21-f80d-4901-ac22-00b25c5c4629.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=84371608931c35c96271a0694c43cc30cc5733300bb6794029be564e8aab03b5&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/175/d8e36d21-f80d-4901-ac22-00b25c5c4629.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=9b81f196f7c5129e50550880e7c787204176bed8a39d81fb166c583ae8ec0938&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "GoLive Ready",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/231/c5ccf3ef-b0be-455b-98d5-34d39cd8a91f.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=5766e1cb662f40f9613c8337758bfe7e754da4a41011c9350d3ced7a316f7855&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/231/c5ccf3ef-b0be-455b-98d5-34d39cd8a91f.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=ca38033177098d76d77f8f9d6e66c6c2b7aaec18f292f45fdf24af9eae913668&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "VIP Information",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/233/140f46df-fe86-474c-883b-774ac0780d21.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=4b55438d95b5ae72a6afb80764ab75fd9e6e7454f87155dcedae56a016b19ac5&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/233/140f46df-fe86-474c-883b-774ac0780d21.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=c4bee73e8ae19bb38a4b83a7470b5824bfa53809ef4aa68441ceafb81c1b1b00&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": null,
     "url": "https://www.golive-asia.com/event/175",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/175/d8e36d21-f80d-4901-ac22-00b25c5c4629.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=84371608931c35c96271a0694c43cc30cc5733300bb6794029be564e8aab03b5&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/175/d8e36d21-f80d-4901-ac22-00b25c5c4629.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=9b81f196f7c5129e50550880e7c787204176bed8a39d81fb166c583ae8ec0938&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    },
    {
     "id": "golive-174",
@@ -9635,7 +9801,7 @@
     ],
     "price_text": null,
     "seat_maps": [
-     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/174/a076f10d-f900-4216-8013-52e7c360dc95.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=803ebcb6c582ec642f284da0573afdd05d76f212615a980726b065a8ba60aa1e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/174/a076f10d-f900-4216-8013-52e7c360dc95.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=14021571e6d3bf425df7dabaabe8e778b5b35bba0f4405a9b319d038fb92e2a3&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     ],
     "limit": 6,
     "notes": {
@@ -9653,24 +9819,24 @@
     "info_images": [
      [
       "poster",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/174/d74df414-2a15-4545-ab85-7a9dbcfa1a79.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=6ae4b74decf0c5557d06fa9bc03a8632b1cb98a0b5bf3db7cdab40f9ad5f5619&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/174/d74df414-2a15-4545-ab85-7a9dbcfa1a79.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=f70e28a157ddfa2898f2c580dc8459190438f767048b1b33f2151ba2569632a1&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "GoLive Ready",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/224/0ee1f54a-88c4-45b3-a3a0-dd1cfa546872.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=2622a12e9a259c7194c4eaa296e6a6ee0352ec25cd21518c50c4b5fa9d365c26&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/224/0ee1f54a-88c4-45b3-a3a0-dd1cfa546872.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=0b556a3f7af1395532e3a5ac37bbad02a67f1199e7a3d029278e475a4b58320a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "VIP Information",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/226/a116dd86-04f7-4366-ad6d-01c89b862d47.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=b033efd67f497abc814c163f7fa161237ba1daad6a6934be74a00aae6145b922&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/226/a116dd86-04f7-4366-ad6d-01c89b862d47.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=f28ff3bd72bf3f8614c4e06d58cabab785d6b005396fa831dc8d4fbaf95790cc&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "VIP Information",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/226/1521b3b5-9b51-4631-a35d-f89bd4e24d02.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=e48b5172b58381e38db15b3c2833b3c1b908afcfe5decf6975cb5755e95c16e8&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/226/1521b3b5-9b51-4631-a35d-f89bd4e24d02.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=b4a53a9c207e5341ac0bcd3abaa4ed48c6f782985b6bd663d7ac38418262e111&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": "2026-05-18 08:09",
     "url": "https://www.golive-asia.com/event/174",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/174/d74df414-2a15-4545-ab85-7a9dbcfa1a79.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=6ae4b74decf0c5557d06fa9bc03a8632b1cb98a0b5bf3db7cdab40f9ad5f5619&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/174/d74df414-2a15-4545-ab85-7a9dbcfa1a79.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=f70e28a157ddfa2898f2c580dc8459190438f767048b1b33f2151ba2569632a1&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    },
    {
     "id": "golive-173",
@@ -9742,7 +9908,7 @@
     ],
     "price_text": null,
     "seat_maps": [
-     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/173/fe3224cc-704e-43e4-b52e-1e1b3a2ddb3b.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=ba536277d924246f6bf1ae852d277edc06c58b6a62bbd7a77c5b9d5729f6ed58&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/173/fe3224cc-704e-43e4-b52e-1e1b3a2ddb3b.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=d8bb9bd652ba09fc909e0f3b406a5cba604620178b52a73c73ac1b23ae4b852b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     ],
     "limit": 6,
     "notes": {
@@ -9760,24 +9926,24 @@
     "info_images": [
      [
       "GoLive Ready",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/215/3c5f9b0e-ae6f-49aa-85b4-5e6e62ba5f30.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=c0b49957827617dd266d01d1e6260c9a16c0fe85e041673fa18746fef0199722&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/215/3c5f9b0e-ae6f-49aa-85b4-5e6e62ba5f30.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=9b171525bee82708c618ed58fb6aea6ede53dd83ee4e1c32bc545237111ebbc3&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "VIP Entitlements",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/217/59e45cd8-96fd-470c-b315-1acc8f2363c5.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=8d5e7b546ac4dc89f21f8c0c87ad8e38161bbf972fa25a72ba03b8363394de29&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/217/59e45cd8-96fd-470c-b315-1acc8f2363c5.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=4c20a898df38f735b2d15ee74e1e4a9a62e811844799f529cf23a47c2504a910&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "VIP Entitlements",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/217/aaa052fc-3e1a-46e5-b49d-60d0a7c2e3ff.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=7d74e7c636f6cb759fb93a4561c1e0f2f14b71a22f64e8b3e810c11aa7d57fda&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/217/aaa052fc-3e1a-46e5-b49d-60d0a7c2e3ff.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=247ee8f7d685e4e3f704daa8b7f1ba8cc462c28c3b2f3c5d0451b1ab453d88f5&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "VIP Entitlements",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/217/59bed66c-bb53-413d-a1b2-5ffe16dbf64e.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=3970688b4e337a3b6d0f1fd28f87c9274fb47d52e3d79665eae4548ed0c12c58&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/217/59bed66c-bb53-413d-a1b2-5ffe16dbf64e.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=5147e9ed8728344232a440dfd39e1e2d525420257fb2144f10eaed63a8c1b1c4&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": null,
     "url": "https://www.golive-asia.com/event/173",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventBanners/173/843950a4-9bfd-43d5-89e5-b77bde996cf9.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=d10ff860b96457acb8b14d1ddfab12aa33ca5b0ffb85a6fc8d523c1b3618b14d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventBanners/173/843950a4-9bfd-43d5-89e5-b77bde996cf9.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=8348866bb96aa3a2b74a7b0a7761b44932728587c82349ffd43336cc6bd277fd&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    },
    {
     "id": "golive-172",
@@ -9840,7 +10006,7 @@
     ],
     "price_text": null,
     "seat_maps": [
-     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/172/cb15ead1-62cf-4803-856f-1190552ea643?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=92b35c58587be1f0de49737202c48b159ac02f680af26b3a1d3cf4888f0555d8&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/172/cb15ead1-62cf-4803-856f-1190552ea643?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=6950223099a22ae2ed13326dc010053f66e55e18cb83ffa63faf71e607da3ae4&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     ],
     "limit": null,
     "notes": {
@@ -9857,24 +10023,24 @@
     "info_images": [
      [
       "poster",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/172/58379c2a-fac4-42b4-9d1f-ae03b6a58ddc.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=24833f5da410a8f5d6f322c2eaa00cf2e1f910865a34ee6d06073f0dee773809&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/172/58379c2a-fac4-42b4-9d1f-ae03b6a58ddc.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=243f4515fdf69b85c9fa61cb4f107cbf8bff656111aada5e096a8cae37447feb&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "GoLive Ready",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/206/9f14b889-704b-4e15-9707-5f92596d99b7?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=87595ea15dd9eff91f0e9fa2f688152a50c44fba778b4580930ec56082c9232e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/206/9f14b889-704b-4e15-9707-5f92596d99b7?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=f4126a513742f6e15e6534889c3c5fee5ce89fc7e71037063aa9b1ffaa893a78&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "EXCLUSIVE VIP EXPERIENCE (UPGRADE)",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/209/660092d5-b3f6-4fb0-8919-74bc0a659b42?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=afeabb1b39df2ec12c21d33ded05d62c80f12c2ea1a8d8f0f35590189315fb6c&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/209/660092d5-b3f6-4fb0-8919-74bc0a659b42?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=d5bfaa28d263bd73b156b6227f1b8e6c59d56e022742b09b27d24372436dc74a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "Ticket Benefit",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/210/b5bdd294-7b12-4750-8711-96cca9aa24e1?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=5613debbb99a4fcbe3683385bb6773d3d7deee870a93f2635ebdcba6635a5319&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/210/b5bdd294-7b12-4750-8711-96cca9aa24e1?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=c784e046e5e788fe6089b99051abab2f37b46de186fb1b2d24ee36b5ef2a6319&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": "2026-04-27 16:57",
     "url": "https://www.golive-asia.com/event/172",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/172/58379c2a-fac4-42b4-9d1f-ae03b6a58ddc.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=24833f5da410a8f5d6f322c2eaa00cf2e1f910865a34ee6d06073f0dee773809&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/172/58379c2a-fac4-42b4-9d1f-ae03b6a58ddc.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=243f4515fdf69b85c9fa61cb4f107cbf8bff656111aada5e096a8cae37447feb&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    },
    {
     "id": "golive-171",
@@ -9932,7 +10098,7 @@
     ],
     "price_text": null,
     "seat_maps": [
-     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/171/3ec8472c-6111-4093-a0cb-eeb507452c96?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=bcf90802fc69b1d05588c0191ac12c3d0674dee7e79924b8a24833ad107d5658&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/171/3ec8472c-6111-4093-a0cb-eeb507452c96?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=1cb7eeded2617e58d48ea506e34355161483794e644d2035a8b6aa4f74dbf1c9&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     ],
     "limit": null,
     "notes": {
@@ -9949,24 +10115,24 @@
     "info_images": [
      [
       "VIP Package Information",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/197/bb130531-3236-453d-847d-08808b6197c1?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=8ce1a8d1d20f14225701851e61032f8911d7d2a9aaa21263e3b3c74c1348f4c6&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/197/bb130531-3236-453d-847d-08808b6197c1?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=c8b06f458d6811d9eb5c8e25ecf815266d268a74daed7e0719cac2bbc042c8c8&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "VIP Package Information",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/197/fd46c5b6-606d-4a7b-a79f-099c2f6a8631?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=84fa1990ce6a57116a5d2c648d81197c02b39ee79d13f051dd1d1e9332f74907&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/197/fd46c5b6-606d-4a7b-a79f-099c2f6a8631?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=8fce870e99afed87685b78247b8bdd14bfff76b9a99ff1e213cd9b5540afab02&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "VIP Package Information",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/197/1c6c7adf-902c-4327-85e0-e7b0af7666aa?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=d32c18a2fbfa165e8f5ef3419946f33a71556d8eabc4f9e6526812d09f3ea753&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/197/1c6c7adf-902c-4327-85e0-e7b0af7666aa?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=e37be746fa221df3e5a9d73d634fa63e656f66185d6d93f29a49f47be995e553&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "GoLive Ready",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/200/672f73a0-ea64-402e-9ed0-0c5d72c29885?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=04be76307e3ea42ba384575bd89ac09f13eab4ec7aecfa839d43db21d8b44625&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/200/672f73a0-ea64-402e-9ed0-0c5d72c29885?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=d6b38d124beb82eaf46a41afa1c728bdf0cdceaf2132d8e136972abc990a6253&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": "2026-04-27 13:10",
     "url": "https://www.golive-asia.com/event/171",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventBanners/171/520fbf22-afed-48cd-86a8-3869d932d639?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=9787905a5a5a38e67ab70958f2f80ee713a7667b5a666d688f2f648fdc0d8147&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventBanners/171/520fbf22-afed-48cd-86a8-3869d932d639?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=4521044d13c99364bc650c04a458c778200323bfbae5ed04ca70d590468c90f2&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    },
    {
     "id": "golive-169",
@@ -10034,7 +10200,7 @@
     "tiers": [],
     "price_text": null,
     "seat_maps": [
-     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/169/948daaf7-fa09-48f3-996a-0954d9d9780a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=e82ef4ac4c05cd5d0704487143dc043275c5dd2ea70d5a995f0056abc047fb81&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/169/948daaf7-fa09-48f3-996a-0954d9d9780a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=ef678e969eacc83ec9fed5a7fdaf47f5265f53edd71fde438ae6fda54662334d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     ],
     "limit": null,
     "notes": {
@@ -10053,20 +10219,20 @@
     "info_images": [
      [
       "VIP Package Information",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/180/6cd797e3-2ce0-450d-909b-85e8373d640c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=08adedd442ee07c91911d842b0b339475762cc7ec4e8401e47348eb3c9bf9699&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/180/6cd797e3-2ce0-450d-909b-85e8373d640c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=e055a010ce15e61828ebcf099037d17a83c4787a9fadad0a0605b6219bf3ae7b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "GoLive Ready",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/183/c99fd8e8-11df-4137-a4fb-15ea45b2edcc?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=3a6c0c55bc1345a0f4fcccf3ddf74d2085e51e656734483b8b26b2c6d1d8a8b7&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/183/c99fd8e8-11df-4137-a4fb-15ea45b2edcc?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=996018cc94093730e1da444d96c61a2a03f71e8990139cce51d98d747c6a1cc2&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "IMPORTANT NOTICE",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/269/42277f37-3f59-4437-a00a-f4b80cd166f5.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=f9f69f7c716f435d39d1de2faf8ec48f67a8c5b7b33be633946c21daf073c69f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/269/42277f37-3f59-4437-a00a-f4b80cd166f5.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=23e9fe6c708a5dc38d9d7e3951c79e16d07ac1cb6bf5f3984a204769f62f2990&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": null,
     "url": "https://www.golive-asia.com/event/169",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventBanners/169/bb6f7e26-f5be-4d02-8855-fef8c04233b2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=7e3e48fc46217227620e79d2c1d51766d2df70d848e20ce0e22e3877901e9b2c&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventBanners/169/bb6f7e26-f5be-4d02-8855-fef8c04233b2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=2dafd7d4feba5ec9a57c3543e4ca79ceca2f4d8e46fabc940b4ff7400a8828fc&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    },
    {
     "id": "golive-167",
@@ -10155,16 +10321,16 @@
     "info_images": [
      [
       "poster",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/167/d35ae529-e7f9-4718-94b7-d31fc8148b48.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=efb2d8ba28a7e9d8cddd0ac4f04ec32b3a697efadf19475c2f7c18d4622a3199&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/167/d35ae529-e7f9-4718-94b7-d31fc8148b48.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=5db4d55196379035591519740a9efb6d1e7802aaca776ff486284e6e2d4a4bc3&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "GoLive Ready",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/165/3a711baa-100b-4251-b61a-66b0edd22b79?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=68f81fd851f6ecc0c512c2abcfd02a2e07b18f7d8997e425508d4da090a6fe54&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/165/3a711baa-100b-4251-b61a-66b0edd22b79?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=0a68854c053305c094e10ffbff1e772ec4696e6fb14649993529e46ecb5db3dc&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": "2026-03-18 11:07",
     "url": "https://www.golive-asia.com/event/167",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/167/d35ae529-e7f9-4718-94b7-d31fc8148b48.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=efb2d8ba28a7e9d8cddd0ac4f04ec32b3a697efadf19475c2f7c18d4622a3199&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/167/d35ae529-e7f9-4718-94b7-d31fc8148b48.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=5db4d55196379035591519740a9efb6d1e7802aaca776ff486284e6e2d4a4bc3&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    },
    {
     "id": "golive-159",
@@ -10213,20 +10379,20 @@
     "info_images": [
      [
       "VIP Information",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/59/d6058121-2bd7-4ba2-9fce-7226a687723f.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=2a931c43b93b48a86db2f6506126a32780a54e9dbf5cf87fec9bed49cf75d7cd&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/59/d6058121-2bd7-4ba2-9fce-7226a687723f.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=d326032221de7af512b8e2284b99a884c869f1c1e1b01e778144f3a0ad18a173&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "Ticket Protect",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/63/248c9f44-f7f8-4e6f-b23f-80e34d5bd460?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=ae36b3489256cbf5b3ba35a36bdc0bcb388cbff3e667d7660246bbb89d65e8ef&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/63/248c9f44-f7f8-4e6f-b23f-80e34d5bd460?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=27807ea5b0fd9c1047dd7123b8d2cf7782c634e5839c00bb40225342fd055f77&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "Ticket Protect",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/63/5d267b3e-62f9-46f8-8dc4-3c78cdf0e6d7?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=92129d2b730b6601e4bbdaff48e748eee4abcc3eb218b36d7d4b629950652563&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/63/5d267b3e-62f9-46f8-8dc4-3c78cdf0e6d7?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=55f1f56d18f0381b64855a0f3dca0a9fff42d2cd3ba077ed6b8409600b85d4d3&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": "2025-11-03 12:32",
     "url": "https://www.golive-asia.com/event/159",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventBanners/159/6fa1b0f3-0831-4956-912b-d629529d89f4.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=2b85cf109434181cbe1fbc985d5dfb2662088eaa9bdecd4297b8b03fb8b283c9&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventBanners/159/6fa1b0f3-0831-4956-912b-d629529d89f4.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=a23617c1ecdccdc541e9d0726581934e377cdb92616e097155431bae965c449c&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    },
    {
     "id": "golive-149",
@@ -10244,7 +10410,7 @@
     "tiers": [],
     "price_text": null,
     "seat_maps": [
-     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/149/1871b27c-a954-49a1-8c2c-1f8fff9c6bb5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=d1a70a40b58347bb9bb5ee1c9ff809d9bb1b63ee80d941f9d37e86f25af2ab29&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+     "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/149/1871b27c-a954-49a1-8c2c-1f8fff9c6bb5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=8f2dfc2183556e7bff84926f0eb1bc0550df2a2f76c6bcba8931f1bb7fa4914a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
     ],
     "limit": null,
     "notes": {
@@ -10260,20 +10426,20 @@
     "info_images": [
      [
       "banner",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/149/dadfa4a4-f257-4ec9-9c63-5539f4726808?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=d11a0d0c7f59437f844fbc013552e897b4e560192b62ab7f6546200d781df919&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/event/149/dadfa4a4-f257-4ec9-9c63-5539f4726808?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=b11f93569bebac321da980afd2cda63dbfb201443c73bada14e39bb8a771992e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "Ticket Benefit",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/4/b29119d2-86e8-41dc-b483-ee7901acc8ea?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=f279ce5e0ef6a1516f9a17dc78e2a4b653f20b4bb5d996df68ae149c388f50c1&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/4/b29119d2-86e8-41dc-b483-ee7901acc8ea?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=a5cf67807e0b2b3fdf22cc243e9ecd376e4c7009744e7723d9228f0218f70420&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ],
      [
       "Ticket Benefit",
-      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/4/a72cb9ef-075d-4ba9-b805-c0a430869942?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=86d2d602a3659251787c88491c149cf64eadef11d218e8b2bcc6b94a0e3c803e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+      "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventInformations/4/a72cb9ef-075d-4ba9-b805-c0a430869942?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=f180352c078586282aa64acb649b446f8ab72d462c8ec31f3e2047b80f3fca54&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
      ]
     ],
     "tickets_created": "2025-07-09 03:41",
     "url": "https://www.golive-asia.com/event/149",
-    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventBanners/149/a0612305-ad60-4f8e-a628-c31f64d71c5e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T050000Z&X-Amz-Expires=36000&X-Amz-Signature=ebe84c00f0343825f5bc0546c39b9f490dc0ee333d5a8f6452a6120aee55e856&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "poster": "https://golive-webapp-prd-ap-southeast-5.s3.ap-southeast-5.amazonaws.com/eventBanners/149/a0612305-ad60-4f8e-a628-c31f64d71c5e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA36ET3OUILR4SCZN3%2F20261011%2Fap-southeast-5%2Fs3%2Faws4_request&X-Amz-Date=20261011T170000Z&X-Amz-Expires=36000&X-Amz-Signature=b3585b32728db60d61333394008d0d45aaa7e2292a74febf9be89e8b82887743&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
    }
   ],
   "Fantopia": [
@@ -16071,11 +16237,6 @@
       "sold_out": false
      },
      {
-      "name": "Promotion 4+1",
-      "price": "RM 429.56",
-      "sold_out": false
-     },
-     {
       "name": "Block 107, Block 108, Block 109 等 17 区",
       "price": "RM 429.14",
       "sold_out": false
@@ -18905,13 +19066,13 @@
   "t2u-52414": {
    "name": null,
    "photo": null,
-   "checked": "2026-10-04",
+   "checked": "2026-10-12",
    "fans": 0
   },
   "t2u-52313": {
    "name": null,
    "photo": null,
-   "checked": "2026-10-04",
+   "checked": "2026-10-12",
    "fans": 0
   },
   "fantopia-3q3sm8je": {
@@ -19031,7 +19192,7 @@
  },
  "news_verify_v3": {
   "Sleeping With Sirens": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -19050,7 +19211,7 @@
    "added_news": null
   },
   "KARD": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -19059,7 +19220,7 @@
     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNYnNlTzFLM29GaFhFd29iS2U2MXg4djNzZXpUbmw5Q3hfMXBsS0tJMmw4SGhlVlY4aTlTazhSWWtYYng1OUdobGhsS1J6QnhFZTFBVHltdDVtSmpXR3hOTVZ0NkVCTDhfakZRWlBRUkh4Rm10UnBMaHpiS1dYMzJNZjBZQUhGeElTWE1ibHZiMl9PWTE0TG43eWgxZGp6Z1VXV0dheFRyZjJxZWJLU2t0ZEpQaUU3SThQ?oc=5",
     "time": "2026-07-27"
    },
-   "count": 9,
+   "count": 5,
    "top": [
     {
      "title": "Kard return to Singapore after 7 years for final world tour, fans hope this isn't goodbye , Entertainment News - AsiaOne",
@@ -19075,53 +19236,20 @@
      "title": "Ring The Alarm as KARD Is Making Their Way Back To Singapore For KARD 2026 WORLD TOUR 'NOW HERE' IN SINGAPORE On 27 September 2026 - https://kavenyou.com/",
      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBjMS1CSnNsZ1h4X2dFbXNla2dPcXZQZEFrdk9mbWoxdDJoaExoUWtGcFhobzd1SFBUdHN5RWFUT0FSTU1ITU5vVjZjUHd4d1FnQVJMTERhQ2psUmM?oc=5",
      "time": "2026-07-27"
-    },
-    {
-     "title": "2018 wild kard tour in singapore",
-     "url": "http://ssym.weebly.com/upcoming/kardinsg",
-     "time": "2017年12月22日",
-     "web": true,
-     "countries": [
-      "SG"
-     ]
-    },
-    {
-     "title": "KARD 2026世界巡演'NOW HERE'",
-     "url": "https://www.veritickets.com/zh-TW/shows/categoryId-15359",
-     "time": "",
-     "web": true,
-     "countries": [
-      "SG"
-     ]
-    },
-    {
-     "title": "260927 KARD in Singapore🇸🇬 第一次靠实力拿下第五 ...",
-     "url": "https://www.threads.com/@sallyyyyy10/post/Dd1OvKolMrz/260927-kard-in-singapore%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%9D%A0%E5%AE%9E%E5%8A%9B%E6%8B%BF%E4%B8%8B%E7%AC%AC%E4%BA%94%E6%8E%92%E7%AD%94%E5%BA%94%E6%88%91%E4%BB%A5%E5%90%8E%E6%9C%89%E6%9C%BA%E4%BC%9A%E5%86%8D%E6%9D%A5%E6%96%B0%E5%8A%A0%E5%9D%A1%E5%BC%80%E6%BC%94%E5%94%B1%E4%BC%9A%E8%AF%B7%E9%A6%96%E9%80%89%E9%87%91%E6%B2%99%E5%89%A7%E5%9C%BA%E5%A5%BD%E5%90%97%E9%9F%B3%E5%93%8D%E5%A5%BD%E8%B7%9D%E7%A6%BB%E8%BF%91%E5%90%83%E5%96%9D%E4%BA%A4%E9%80%9A%E4%B8%8D%E7%94%A8%E6%84%81%E5%A4%96%E9%9D%A2%E4%B8%8B%E9%9B%A8%E4%B9%9F%E6%B2%A1/",
-     "time": "",
-     "web": true,
-     "countries": [
-      "SG"
-     ]
     }
    ],
    "platforms": [],
    "sale_times": [],
    "added": false,
-   "added_news": null,
-   "web_count": 5,
-   "countries": [
-    "SG",
-    "MY",
-    "KR"
-   ]
+   "added_news": null
   },
   "Israel Houghton": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 15,
+   "count": 14,
    "top": [
     {
      "title": "Anifah urges Sabahans to reject religious intolerance over Israel Houghton concert - Malay Mail",
@@ -19145,7 +19273,7 @@
    "added_news": null
   },
   "The Weeknd": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": {
@@ -19158,7 +19286,7 @@
     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNR1dhQ2EtQUpHSHNfcTluemdXQk5nNmtzMTh4NThqeHZmUzRRSVZOTUJlWWZSMnYzNkUzMWV6QVlzQ3k2WUNoSFYtc1pveUoteWV2alU1MUNDTEdLWFY5d1ZFM2RPdDFSTV9YR2U2ZjlGSjd5N0lEU3JpVEl2TE5TWEtweDMtMkZOcHFQUURzX041QVFvZXd1NHZqX3J0d3V4c3RobjRMdWh0OTFxVllYaWZMSmNoZDdIZmZBblo2dGNIVDBYXzZycUpfb9IB0AFBVV95cUxNSzR0NUUwaVM1NkRwSHVnSklGTDRNTzZQNVRJUm03Z1ZxWGV3WkpSV2F4aXg0VmpCeUM2WGo4eGZCVjJVbVNjOXJZZTZhaXJBTlU5aWtxNkRYTVR1bnlsYXF5SmFqVHprN3dsak5acW1UUlRKUXJCVjMxaDhHZlJuWUc5SGs4bjRRVXZSd3kwbWhhdVRpUmJZUGZFeVY3aDVwQ2pCQTNWMFJzdmxwU0RwNDhTbnRoVnFtUlpxMmxDOG5oNUZlYjNRb2NPRHZ1VlJQ?oc=5",
     "time": "2026-05-18"
    },
-   "count": 17,
+   "count": 16,
    "top": [
     {
      "title": "The Weeknd’s KL concerts sell-out cements city’s bid for global tour spotlight - Malay Mail",
@@ -19171,8 +19299,8 @@
      "time": "2026-05-20"
     },
     {
-     "title": "#SHOWBIZ: The Weeknd adds 2nd KL stadium date after presales sell out in hours - NST Online",
-     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOQWdIZFc3eHYxamJ3OUhLekRIeTloVXlzeE1HYm5CT3pzQjU0OU41eEdnT1NCT2tsRnhzMDJsckJtSzJWb2kxekRFcmhudzBrWHQzam5mT2hHVEtsV3h3TVdFVXhkbEhIVC16ZW1PcERyd0V4cUR5UXNqTExEVndJMjlpSmlJbFhkU1BlT0ZINDdrUXFIajdaTzdYR0lWSUNmaEJ6RVRzb2FXUTR4c1pwbG12RWh1N0RxXzgw0gHAAUFVX3lxTE9JQzdaRndsMFRyVGhNc0xWYXJ3YjJqTVp4UnlRSDU3aVRCVERZRXpoT040THFmdEpMVEk4RzBQdXlEeTBtNG8tRGtkQ21XbzFuazh1TDZhVGtreWxVUDhGeHNWWTRzcGFmOFhfcm5YUjg1NTVNWWpxVkhBd09Dd3VJclowVGtMYUlOMm9SSEYwRjVLbW5uY1RMNVlVOEg0SFU3ckg0S3pJNGdDOW5Ea3VqWXdXdUhnZGhKdFE1czJnNg?oc=5",
+     "title": "The Weeknd adds second KL show after back-to-back presales sell out - Yahoo",
+     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1EYV9EejMzUHo0cnAxNnlUcFlDUUZpeThfVldMSU1ROGdScl9rRHdOZEo0MGlheDl3VE1rbTZoU1FSQ2huczhOXzhDYy04VGRELWZwemVBblFtQkN0cDRhVG4tRXI4ZjJuejg0QU1fZkptbExLellKNjNJclJrQQ?oc=5",
      "time": "2026-05-19"
     }
    ],
@@ -19180,13 +19308,13 @@
    "sale_times": [],
    "added": true,
    "added_news": {
-    "title": "The Weeknd adds second Malaysia show after both pre-sales sell out in minutes - Lifestyle Asia Hong Kong",
-    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNRkRpTXcyRWdnVUNPUXBJeVc2Q2JKUUVLX2h5cFY2NWFLTXppX205UXRETkpaQW8wandqa0Q0OFdDbVNwQXdsaTgyVlBpcTl4LS10M0VpZlExRUloZzVGSGdQWmpjZmtMUEc3c0ZYWUZENVp3X3VaSXBMVVBTNDI1QmszZHNQQlE5RmYtRGpkNEFHR3lQb1lyVHJFcUlWQVBEN2xWVGc4RlRBMmhjODA3V2t0enplam1UZTgyMC0yUU5meDJvNUxud3dFc0lucDE3WlHSAdcBQVVfeXFMUEFaUEk2V1l5VTNHeTljYi1idGpnT2JqMFJsdWZ3dTR4UkJCT0tyWU1NaGV2OGtOR19xeWN1QXg3ZlBJNUtMNGxDaExpM2JhVFYyODFCb1NTQjdzRy01alh1cEFqc2Z1NHJiaVJ1U3dTRDVkbjdlU2JQcFUzRDEzclUxTGxWR2FtbFlwOTJrTEhLTi15Y2RwNjVsaFRxMm1fcktXSnY4TGt1OFk5cXA0dTZwbzF3VHE0N1dJUFZPTUliRjF1a2lCYzhYZFZrSTI0NVBucnNpRGM?oc=5",
+    "title": "The Weeknd adds second KL show after back-to-back presales sell out - Yahoo",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1EYV9EejMzUHo0cnAxNnlUcFlDUUZpeThfVldMSU1ROGdScl9rRHdOZEo0MGlheDl3VE1rbTZoU1FSQ2huczhOXzhDYy04VGRELWZwemVBblFtQkN0cDRhVG4tRXI4ZjJuejg0QU1fZkptbExLellKNjNJclJrQQ?oc=5",
     "time": "2026-05-19"
    }
   },
   "Evanescence": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -19219,7 +19347,7 @@
    "added_news": null
   },
   "Limp Bizkit": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -19248,23 +19376,23 @@
    "added_news": null
   },
   "5 Seconds Of Summer": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": {
-    "title": "5 Seconds Of Summer Adds Second Kuala Lumpur Show After First Concert Sells Out Within Minutes - MYC.my",
+    "title": "5 Seconds Of Summer Adds Second Kuala Lumpur Show After First Concert Sells Out Within Minutes - MYC! Malaysian Youth Community",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPTkwtX05uSUwybElVcjhGM0t5RUtiajNTVEVHWkxIYjZmOTA5NE1ZVXFBX3pSYWVFRER3a1lackxVZmlLbXZ3N3NfZUZhRmtWanR2dVNFRmsyWm5Rd3lDQlBUcGN6Sm9HQXpfamhwRlNDUG9kQ2RoX1FTaUFfZnR5aWVBQmk4c1pkMUdsUmNqVnp1RUpPRXdpb2ptV3dSOElDMDBnOWVzemZrZEJSWklUcW5RRUhwam1KRjNZSHBUc3hEWjhaakE?oc=5",
     "time": "2026-06-17"
    },
    "opened_news": {
-    "title": "5 Seconds Of Summer Adds Second Kuala Lumpur Show After First Concert Sells Out Within Minutes - MYC.my",
+    "title": "5 Seconds Of Summer Adds Second Kuala Lumpur Show After First Concert Sells Out Within Minutes - MYC! Malaysian Youth Community",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPTkwtX05uSUwybElVcjhGM0t5RUtiajNTVEVHWkxIYjZmOTA5NE1ZVXFBX3pSYWVFRER3a1lackxVZmlLbXZ3N3NfZUZhRmtWanR2dVNFRmsyWm5Rd3lDQlBUcGN6Sm9HQXpfamhwRlNDUG9kQ2RoX1FTaUFfZnR5aWVBQmk4c1pkMUdsUmNqVnp1RUpPRXdpb2ptV3dSOElDMDBnOWVzemZrZEJSWklUcW5RRUhwam1KRjNZSHBUc3hEWjhaakE?oc=5",
     "time": "2026-06-17"
    },
    "count": 3,
    "top": [
     {
-     "title": "5 Seconds Of Summer Adds Second Kuala Lumpur Show After First Concert Sells Out Within Minutes - MYC.my",
+     "title": "5 Seconds Of Summer Adds Second Kuala Lumpur Show After First Concert Sells Out Within Minutes - MYC! Malaysian Youth Community",
      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPTkwtX05uSUwybElVcjhGM0t5RUtiajNTVEVHWkxIYjZmOTA5NE1ZVXFBX3pSYWVFRER3a1lackxVZmlLbXZ3N3NfZUZhRmtWanR2dVNFRmsyWm5Rd3lDQlBUcGN6Sm9HQXpfamhwRlNDUG9kQ2RoX1FTaUFfZnR5aWVBQmk4c1pkMUdsUmNqVnp1RUpPRXdpb2ptV3dSOElDMDBnOWVzemZrZEJSWklUcW5RRUhwam1KRjNZSHBUc3hEWjhaakE?oc=5",
      "time": "2026-06-17"
     },
@@ -19283,13 +19411,13 @@
    "sale_times": [],
    "added": true,
    "added_news": {
-    "title": "5 Seconds Of Summer Adds Second Kuala Lumpur Show After First Concert Sells Out Within Minutes - MYC.my",
+    "title": "5 Seconds Of Summer Adds Second Kuala Lumpur Show After First Concert Sells Out Within Minutes - MYC! Malaysian Youth Community",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPTkwtX05uSUwybElVcjhGM0t5RUtiajNTVEVHWkxIYjZmOTA5NE1ZVXFBX3pSYWVFRER3a1lackxVZmlLbXZ3N3NfZUZhRmtWanR2dVNFRmsyWm5Rd3lDQlBUcGN6Sm9HQXpfamhwRlNDUG9kQ2RoX1FTaUFfZnR5aWVBQmk4c1pkMUdsUmNqVnp1RUpPRXdpb2ptV3dSOElDMDBnOWVzemZrZEJSWklUcW5RRUhwam1KRjNZSHBUc3hEWjhaakE?oc=5",
     "time": "2026-06-17"
    }
   },
   "My Chemical Romance": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": {
@@ -19330,7 +19458,7 @@
    }
   },
   "Khalid": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -19359,7 +19487,7 @@
    "added_news": null
   },
   "Simple Plan": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -19392,7 +19520,7 @@
    "added_news": null
   },
   "BIGBANG": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": {
@@ -19433,7 +19561,7 @@
    }
   },
   "Westlife": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": {
@@ -19446,7 +19574,7 @@
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPNDIwaU8zb2dKYTJNa1o1Y1JZNlB5RlFhUWM0X3o4UUJHcmJaZzU5MjV3UUVadDFlYWRUTTMyMGU2eEZ1UHlhLUhLTm1hX1JONFRmR2FOTm5hWnBGLUdRYi1vakpGc3ZDVmRhZER0S3ZSdXd5dkk4c3c4Sl9QRENXNUJ1WWd0U2dvZ3B1LUpQY2lxME5XMDdVNjh3SEl3cUgzUXZUUUtKVlNqWTlsT29uOHNJQWM?oc=5",
     "time": "2019-04-15"
    },
-   "count": 27,
+   "count": 25,
    "top": [
     {
      "title": "Westlife Tickets Go On Sale As Fans Gear Up For 2027 KL Show - BusinessToday Malaysia",
@@ -19470,12 +19598,12 @@
    "added_news": null
   },
   "Air Supply": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 10,
+   "count": 11,
    "top": [
     {
      "title": "Sarawak minister wants agent to sue promoters over cancelled Air Supply concert - NST Online",
@@ -19499,12 +19627,12 @@
    "added_news": null
   },
   "BABYMONSTER": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 9,
+   "count": 10,
    "top": [
     {
      "title": "Babymonster set for Kuala Lumpur concert this November - The Sun Malaysia",
@@ -19528,7 +19656,7 @@
    "added_news": null
   },
   "FKJ": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -19561,7 +19689,7 @@
    "added_news": null
   },
   "Blue": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -19590,7 +19718,7 @@
    "added_news": null
   },
   "LANY": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -19619,12 +19747,12 @@
    "added_news": null
   },
   "Jay Chou": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 22,
+   "count": 21,
    "top": [
     {
      "title": "TMGM Returns as Presenter Sponsor for Jay Chou Malaysia Concert 2027 - Nabalu News",
@@ -19648,7 +19776,7 @@
    "added_news": null
   },
   "BOYNEXTDOOR": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -19681,7 +19809,7 @@
    "added_news": null
   },
   "wave to earth": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -19714,7 +19842,7 @@
    }
   },
   "Nastia": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -19727,7 +19855,7 @@
    "added_news": null
   },
   "Yung Kai": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -19756,18 +19884,13 @@
    "added_news": null
   },
   "YESUNG": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 6,
+   "count": 5,
    "top": [
-    {
-     "title": "Say Yes to Yesung: Super Junior vocalist brings concert to KL - The Sun Malaysia",
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBfU0ZiNlNoZGRBQ1FIc0Y3dUVuWi1HREItdVdUQmpvUXFyVFhmVUZ5dmJPV203amZSelFiN3BXNFUtNGpRSi1ROEtvZmIxU2RvUzV2M2d3WHI2aDNEMnNEVFJsNV9LckxwTkxQaQ?oc=5",
-     "time": "2026-08-25"
-    },
     {
      "title": "藝聲YESUNG演唱會2026馬來西亞｜門票攻略＋購票連結＋座位表 - 香港01",
      "url": "https://news.google.com/rss/articles/CBMi6wJBVV95cUxOdms2OE5CTWQxWjV0SnlFZmw3T0xWb1kzcGJDeXRCTmVCOF9pNjN3RGZxdTM1X0E4YUlLVmdMWUJuR25xYlpSR1UxVkdaREFHdWxodmh3NzBKWnlsbUlmb2VGYTVTWnprOWREa1YtenA0N0pFbHo3dVB1NXg3a2hVSGtBX1hjVE1pcWppdHdBeFlxWU9LeWxCSGZUZ2M5aWxPdFp3Skd0Tl9ReHhVOTNHTHZ0YXVxY3FkcFJRRU5aNW9UTllhTHl3aDVDcFNJM3IxU1FfU2pWSjB4cGtURXVXOWpnN1gzbUZmdFpXczRxdjk2UXVuNjZzak9WNF8zZjBhLXIxNzBDUFFpMWczYlBMSW9nTHVsdzlvaUlyUDVPSUJ4N0NjMDZGTEdhRmE2LS1SR3pxNlNUcmttUS1lbkhkZVhtMEtxaEZVMUJ2cW5CU3VfNkljYnYtUkFPbVJveWU0TGtZWjV5Rl9jcVE?oc=5",
@@ -19777,6 +19900,11 @@
      "title": "艺声YESUNG演唱会2026马来西亚｜门票攻略＋购票连结＋座位表 - 香港01",
      "url": "https://news.google.com/rss/articles/CBMi7wJBVV95cUxPcFFCbnVMZGNKN0Y4OU0xMnZOUVNvTV81aV9ZSTktazN4ZDVCRmQwanJYZGRTc0ljMHUzUE5fck54Z2FRZ0xIR3JkeXNrcU8yWmloSTBIZE1EelFGRXZRMFF4THJuR1ZKYWs1QkJyeTExSjRZZUxfRnBqTWdSLVNEdFZFYUVwZUNmZkNiQXhZbXAyMWF5SnE5a1dHQk5qMVVvaUhKWFNRTXJub3Z1ZTJaSm1VcVVsWHlrUVNTRTgxSW1MbnZ6enlyUEFaYzNlMzgwc0t2YlY4Vmo2WmhoM2FpbTZZWGctYzdHT1hyQkRyeDZsNUxtOTIzM2p2a1haaGsxRXRVY2JlWTVMbGtNY0V1d3NIZEhoeGpYbmZUY3h2VWZWRDJ5VWIzY1NpZDY2bDhuOHR2U3hqVkF5TE1vMFR1bW9LeGNlcGpjNW9TdmJQcFZpOU1XcFlKUDM2dEJpaHpPZElybTNjVDkxRjBPRXhn?oc=5",
      "time": "2026-08-17"
+    },
+    {
+     "title": "Super Junior's Yesung To Celebrate 10th Solo Anniversary With Kuala Lumpur Concert This November - MYC! Malaysian Youth Community",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOajhKRzRQaG5TVmtJQmEyRkpXWVlOMFFLQjVqYlNKTDR1SWJkMFNUaEtTMlBrd003UHAwQXc3dUI2ZGNzdnRqZFpva0NjQmJYM0pyWmh2bS1EWXdtUEZrUFN3VGRfTW8tYU8xWjl1aGxKWXNUc21PNXAxMmNRUk9jME9XUWdMZG9ZOFp0TXBKLU84SmJYVlZyZDd3OVMwLWE4S29xWG9rbTZVWlExNjZ4Q2RHNFBuNjhFRjY4TGZQelZFeXdjNjJn?oc=5",
+     "time": "2026-07-28"
     }
    ],
    "platforms": [],
@@ -19785,7 +19913,7 @@
    "added_news": null
   },
   "40 Fingers": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -20018,12 +20146,12 @@
    "added_news": null
   },
   "izna": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 4,
+   "count": 3,
    "top": [
     {
      "title": "izna演唱會2026吉隆坡｜門票攻略＋購票連結＋座位表 - 香港01",
@@ -20039,47 +20167,15 @@
      "title": "izna announce 'WHO DAT GIRL?' tour spanning Manila, Singapore, Kuala Lumpur & more - Bandwagon",
      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTkFxRlNrUHpkbEJrUERGR1plUmVqazkybnBSYkFINzlzc0RCME5IR0NjVk56NXA1cFdqUXotUVphSmM3X2I2VVVuR3AxeWg4aDktX2hjTWNjOXA4d1RTeHljYmhicXRrWFNyeWY3TUJoYjhFdzV4V2tzSnNzZHQ0SGF1TEc1M1RYckNrbU9jZE4xSXFZNmNRUjRKeHFIRUdFVVJTdmRiR1FWZkZheWNHZA?oc=5",
      "time": "2026-07-20"
-    },
-    {
-     "title": "不懂怎么放链接 翻译Credit: IZONE马来西亚粉丝团",
-     "url": "https://www.facebook.com/izonemalaysiafanclub/videos/%E4%B8%8D%E6%87%82%E6%80%8E%E4%B9%88%E6%94%BE%E9%93%BE%E6%8E%A5%E7%BF%BB%E8%AF%91credit-izone%E9%A9%AC%E6%9D%A5%E8%A5%BF%E4%BA%9A%E7%B2%89%E4%B8%9D%E5%9B%A2/912532202811518/",
-     "time": "",
-     "web": true,
-     "countries": [
-      "MY"
-     ]
-    },
-    {
-     "title": "WHO DAT GIRL？in SEOUL In the Rain 최정은",
-     "url": "https://m.youtube.com/watch?v=TIyjSImLNso",
-     "time": "",
-     "web": true,
-     "countries": [
-      "KR"
-     ]
-    },
-    {
-     "title": "izna携新曲回归",
-     "url": "https://www.sina.cn/news/detail/5307522424507715.html",
-     "time": "2026年6月8日",
-     "web": true,
-     "countries": [
-      "KR"
-     ]
     }
    ],
    "platforms": [],
    "sale_times": [],
    "added": false,
-   "added_news": null,
-   "web_count": 3,
-   "countries": [
-    "KR",
-    "MY"
-   ]
+   "added_news": null
   },
   "Baby Shark": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -20087,86 +20183,46 @@
    "count": 4,
    "top": [
     {
-     "title": "郭富城大馬演唱會激鬥尹景順 《中4》冠軍被點中齊跳〈Baby Shark〉 逼天王出真功夫？ - 星島頭條",
-     "url": "https://news.google.com/rss/articles/CBMiuwNBVV95cUxPU0ZvQ0NyQ0U2M0JzZ2xSQndzR1g3cGI3NHdydnZXX2N4UWE5ekszbGdSVFZOTW9kd3N1REdVYTA4OGp1OXV4Nnd1ZWx2Z3pFUEZDZXNsa1NkMDRyZVVfQlpKZnpzTDNvbjRnbk1yMjVwOWtvVWd0Vnh5OGhHay1tOFNuZ1RCZ1ZNa1VaZFVNalFBZW8zdy03R0h6LTNJcUVicFltNmlYLWlBZVphN0lCamFXTzB2a3Rma0NLYnRyeUVRQTMyTW1lRmxFUUFFRHlfaUYtaHJ3Um9DdDJrNE1wRlZPTm5YbTNWMEpDX3NNMHpOOEdDb3dhZDdWc2hONkFHX29sRFl4QU5taUZKcDFxN2gwS3liR2hQRDljc1hWaV9jSkVzUTFEMGp2c0FFQWVUMi1lNDRLb0RVQmZyUVJzV3pyekVIRVplMjlzXzJvRVBhSDU0czNJUGducS1Oa0hnN0VpaExNMGpMcDdObEtmeXJiQzR2M1p3MzVYeVBTYllOUHlfNW1uX056SkpmVkpjZ3BMZ19TeW5JTXY2OFFDOE5LenJJSEpWdUFYLTZTNWpEbVhGSW1faU9ZNA?oc=5",
+     "title": "郭富城大馬演唱會激鬥尹景順 《中4》冠軍被點中齊跳〈Baby Shark〉 逼天王出真功夫？ - Sing Tao Daily 星島日報加拿大",
+     "url": "https://news.google.com/rss/articles/CBMiigRBVV95cUxNNm1WVm5yRndsWld6eF9OcS0zWFEySzhPN0dGaWFuVHFhZldSQnFYelNFclZCS0d6eW05b3dBeUd0ako0dV9fMGpqZXl6RlVUNWEtbFZsREdFOVpka2VGU0Ftd2htVTdSUDRzWkxmVEhTU3dhYUtMajhkcFhfRGpxcXhWUHhKcjQyaGR4WklrcV9naXlzcTREQzh2b2NKUS1QV0xDa1RzcUpOcXVOcjVidXY2RzI0X1M3U28zdDZuSl9yZUhldldJOHU4TFRobzJ0cThaY0ZoN01JenBWZlR2Zm05c2RUN2pKMU45THFvSXh3MGVPeWlfVGpUZUdvRmRFU2lLdXl0bE5taXQ4cXpYU1NlVWVrSkRfTE4zSUxhcDhGQ294MVpuQTVoQzBYVUVtTFZfdl9PbnNTd0paZDcxb3V4bGh4Z2otUzNJNldzdlZWb3lKemZyZ2dVMHhrVFVfVnVoMmV0WmhISzJxMjlWSHVaMndhTUpIeVpTUEFjVkJFNjNXSVlMOFhYc0sxRWMyQkFkR2ljUEJjOURFVS1MSE54TUVsZkRpWUF1dTJZTzg3RVJYNVFnTnRDbjA5bkQtN1pDZ291NElCMjF5d3hkdVBfVG1sRUI1VlZ6UUhnNlZxN1A4NnZ0YmFObF81a2k4VWxCOENRcXEyZDRkbVpRN2xvOFBzVXMtd3fSAYoBQVVfeXFMUHlScXBjNU1wUm90ajFUNlBiTDNHb0MycUtEM2NIN0M1MjViLXZOWEZfcmI2Q25iSno1dkY4M0JFakNncjN5dXl1bUdSZnpHNVQ4Z0FuOFd6YzJ2OG9vT2tzOE1sZEJnaDdvdDZrOS1rSU1hUHBaNzlMbzNoRC1IZXRyOXlsaWlsNnpn?oc=5",
      "time": "2026-09-13"
     },
     {
-     "title": "郭富城大馬演唱會激鬥尹景順 《中4》冠軍被點中齊跳〈Baby Shark〉 逼天王出真功夫？ - Sing Tao Daily 星島日報加拿大",
-     "url": "https://news.google.com/rss/articles/CBMiigRBVV95cUxNNm1WVm5yRndsWld6eF9OcS0zWFEySzhPN0dGaWFuVHFhZldSQnFYelNFclZCS0d6eW05b3dBeUd0ako0dV9fMGpqZXl6RlVUNWEtbFZsREdFOVpka2VGU0Ftd2htVTdSUDRzWkxmVEhTU3dhYUtMajhkcFhfRGpxcXhWUHhKcjQyaGR4WklrcV9naXlzcTREQzh2b2NKUS1QV0xDa1RzcUpOcXVOcjVidXY2RzI0X1M3U28zdDZuSl9yZUhldldJOHU4TFRobzJ0cThaY0ZoN01JenBWZlR2Zm05c2RUN2pKMU45THFvSXh3MGVPeWlfVGpUZUdvRmRFU2lLdXl0bE5taXQ4cXpYU1NlVWVrSkRfTE4zSUxhcDhGQ294MVpuQTVoQzBYVUVtTFZfdl9PbnNTd0paZDcxb3V4bGh4Z2otUzNJNldzdlZWb3lKemZyZ2dVMHhrVFVfVnVoMmV0WmhISzJxMjlWSHVaMndhTUpIeVpTUEFjVkJFNjNXSVlMOFhYc0sxRWMyQkFkR2ljUEJjOURFVS1MSE54TUVsZkRpWUF1dTJZTzg3RVJYNVFnTnRDbjA5bkQtN1pDZ291NElCMjF5d3hkdVBfVG1sRUI1VlZ6UUhnNlZxN1A4NnZ0YmFObF81a2k4VWxCOENRcXEyZDRkbVpRN2xvOFBzVXMtd3fSAYoBQVVfeXFMUHlScXBjNU1wUm90ajFUNlBiTDNHb0MycUtEM2NIN0M1MjViLXZOWEZfcmI2Q25iSno1dkY4M0JFakNncjN5dXl1bUdSZnpHNVQ4Z0FuOFd6YzJ2OG9vT2tzOE1sZEJnaDdvdDZrOS1rSU1hUHBaNzlMbzNoRC1IZXRyOXlsaWlsNnpn?oc=5",
+     "title": "郭富城大馬演唱會激鬥尹景順 《中4》冠軍被點中齊跳〈Baby Shark〉 逼天王出真功夫？ - 星島頭條",
+     "url": "https://news.google.com/rss/articles/CBMiuwNBVV95cUxPU0ZvQ0NyQ0U2M0JzZ2xSQndzR1g3cGI3NHdydnZXX2N4UWE5ekszbGdSVFZOTW9kd3N1REdVYTA4OGp1OXV4Nnd1ZWx2Z3pFUEZDZXNsa1NkMDRyZVVfQlpKZnpzTDNvbjRnbk1yMjVwOWtvVWd0Vnh5OGhHay1tOFNuZ1RCZ1ZNa1VaZFVNalFBZW8zdy03R0h6LTNJcUVicFltNmlYLWlBZVphN0lCamFXTzB2a3Rma0NLYnRyeUVRQTMyTW1lRmxFUUFFRHlfaUYtaHJ3Um9DdDJrNE1wRlZPTm5YbTNWMEpDX3NNMHpOOEdDb3dhZDdWc2hONkFHX29sRFl4QU5taUZKcDFxN2gwS3liR2hQRDljc1hWaV9jSkVzUTFEMGp2c0FFQWVUMi1lNDRLb0RVQmZyUVJzV3pyekVIRVplMjlzXzJvRVBhSDU0czNJUGducS1Oa0hnN0VpaExNMGpMcDdObEtmeXJiQzR2M1p3MzVYeVBTYllOUHlfNW1uX056SkpmVkpjZ3BMZ19TeW5JTXY2OFFDOE5LenJJSEpWdUFYLTZTNWpEbVhGSW1faU9ZNA?oc=5",
      "time": "2026-09-13"
     },
     {
      "title": "郭富城大马演唱会激斗尹景顺 《中4》冠军被点中齐跳〈Baby Shark〉 逼天王出真功夫？ - 星島頭條",
      "url": "https://news.google.com/rss/articles/CBMixgNBVV95cUxQMFlkZUwyM1pZaHlZRlNhVnB4QlpULTE1VWxPX1lULXZ6amU3ODBSRVhRQ3Y5dk9hQ3YtLTZXb3lWVV8xSFNkdncwQWZWNVdZMGhDRHVic0QwWHV5TjE3V2xybzJUaDNyN1ZheEUwMnRXU2VqUkctWkVldFJxYXFOQmEtRXNELUxXZG13YnRVWGhXaFVTWFJkdXNYcGVGSHlEUjJ4QTd3Y2E4SjZBSDM2bDNMN2wzQzBJQUdLb2VqcmI1TGFkVjlGSDlZRjlJY09UR1E4LXRUMm9kSnBVTHc1bkZTVndGV0VxVVFZVzRjd2lYYnFTR2FVNDMzaUdWakEwTzZBcE5VN213bVdlWkFVXzc2cXZ5M2NqamltWUVzeGFYd0ltWVBBVVhYUkU5TUVVRWE2bDY4NWZlbG1IZlFreHVXTkZZSzdwZ2VmcnB3STF5RFlHUXA3REZFbXZkT2FuTjFPRGNwSkdLRWdHMWpJbFlwRnc0ODBqbF9NajR3dnU0Y0tXUV9Ua2x5bjhod3NsRTFZb3BCZ3FaWHczc0pkNVJET2dqRkg2aWVyUkxjY3FhRk9hNEJTVlppRnNkbm0xYndKNE1n?oc=5",
      "time": "2026-09-13"
-    },
-    {
-     "title": "Baby Shark World Tour ‑ 曲・歌詞：Pinkfong",
-     "url": "https://open.spotify.com/intl-ja/track/16UvjGMoilFUbBrb6BmzSc",
-     "time": "",
-     "web": true,
-     "countries": [
-      "SG"
-     ]
     }
    ],
    "platforms": [],
    "sale_times": [],
    "added": false,
-   "added_news": null,
-   "web_count": 1,
-   "countries": [
-    "SG"
-   ]
+   "added_news": null
   },
   "E.S.T": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 2,
-   "top": [
-    {
-     "title": "EST AND WESLEY FAN MEETING IN KUALA LUMPUR",
-     "url": "https://www.ticketmelon.com/daycon/estandwesleyinkl",
-     "time": "",
-     "web": true,
-     "countries": [
-      "MY",
-      "TH"
-     ]
-    },
-    {
-     "title": "EST & WESLEY FAN MEETING IN KUALA LUMPUR ...",
-     "url": "https://www.instagram.com/p/DbKVN8aDwZG/",
-     "time": "",
-     "web": true,
-     "countries": [
-      "MY"
-     ]
-    }
-   ],
-   "platforms": [
-    "BookMyShow"
-   ],
+   "count": 0,
+   "top": [],
+   "platforms": [],
    "sale_times": [],
    "added": false,
-   "added_news": null,
-   "web_count": 2,
-   "countries": [
-    "MY",
-    "TH"
-   ]
+   "added_news": null
   },
   "Hillsong Worship": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 13,
+   "count": 7,
    "top": [
     {
      "title": "Hillsong Worship World Tour · Kuala Lumpur 🇲🇾✨ - Newswav",
@@ -20182,78 +20238,42 @@
      "title": "Hillsong Worship巡演 9月强势登陆大马 - 光华日报",
      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNTm4yVmN6UnZvd090TEptcncySkZaN2NDdnctdVN0T0hEVW43SVB3U3dvOWpfbUo3MjdwZGdBc21lb2Ryd1kwNWNoY1llVlE3Z0Zhc1dWSmlyeTVWZUxRRjlvVlZqbWZISVlaR3ZYczdsaGc1WTZ6V1FWeUhoT0NMcHFnOWtKcktJU00yeXlZSjVrdFo1ZzlVTlVZdVgzbXhDbkdaeTlQVnpROGFzZ3FZVFhWUENiaDR1dVIzZ0tFUXF6UGxZTGV5S3VaTk8tX252cXlr?oc=5",
      "time": "2026-06-22"
-    },
-    {
-     "title": "Hillsong Worship Announces a Monumental Return to Malaysia",
-     "url": "https://thecover.asia/hillsong-worship-announces-a-monumental-return-to-malaysia/",
-     "time": "2026年6月18日",
-     "web": true,
-     "countries": [
-      "MY"
-     ]
-    },
-    {
-     "title": "备受瞩目的《HILLSONG WORSHIP NIGHTS 2026 亚洲巡回 ...",
-     "url": "https://www.instagram.com/p/DZt0KC4lB3T/",
-     "time": "",
-     "web": true,
-     "countries": [
-      "MY"
-     ]
-    },
-    {
-     "title": "馬來西亞亞庇· Hillsong Worship 亞洲巡演門票【2026】- 預約",
-     "url": "https://hk.trip.com/travel-guide/attraction/kota-kinabalu/kota-kinabalu-hillsong-worship-nights-asia-tour-156364846/",
-     "time": "",
-     "web": true,
-     "countries": [
-      "MY"
-     ]
     }
    ],
-   "platforms": [
-    "BookMyShow",
-    "Trip.com"
-   ],
+   "platforms": [],
    "sale_times": [],
    "added": false,
-   "added_news": null,
-   "web_count": 6,
-   "countries": [
-    "MY",
-    "SG"
-   ]
+   "added_news": null
   },
   "New Boyz": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 1,
+   "count": 0,
    "top": [
     {
-     "title": "KUALA LUMPUR: Selepas lebih dua dekad mewarnai ...",
+     "title": "https://boom-entertainment.com/ms/dua-tahun-menyepi ...",
+     "url": "https://www.threads.com/@boom.malaysia/post/Dd8ttJomohv/",
+     "time": "",
+     "web": true,
+     "countries": [
+      "SG"
+     ]
+    },
+    {
+     "title": "Selepas lebih dua dekad mewarnai industri muzik ...",
      "url": "https://www.instagram.com/p/Dd7jrGmE_T1/",
      "time": "",
      "web": true,
      "countries": [
-      "MY",
       "SG"
      ]
     },
     {
      "title": "Dua tahun New Boyz simpan tenaga, hujung tahun ni ...",
      "url": "https://www.threads.com/@malaysian.updates/post/Dd7to-1kp4V/media",
-     "time": "",
-     "web": true,
-     "countries": [
-      "SG"
-     ]
-    },
-    {
-     "title": "NewBoyz LIVE in SG - playlist by SAH Entertainment",
-     "url": "https://open.spotify.com/playlist/3U99DzK6lBJHaadL3QsLD4",
      "time": "",
      "web": true,
      "countries": [
@@ -20267,17 +20287,16 @@
    "added_news": null,
    "web_count": 5,
    "countries": [
-    "SG",
-    "MY"
+    "SG"
    ]
   },
   "XLOV": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 3,
+   "count": 6,
    "top": [
     {
      "title": "[Official] XLOV to Hold Singapore Solo Concert 'Serving-X' - 스타뉴스",
@@ -20293,20 +20312,55 @@
      "title": "XLOV adds Hong Kong, Taipei, Singapore and Osaka to Asia tour - CHOSUNBIZ - Chosunbiz",
      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQT00yVGZOQzRvS1FLRFZBXzNVRFhkZjRBSV9IaURaOGF0RjdCeTVWMGtaZ2h2czdHWWxUZHBERExYS1Z0NFhrYzJtUkwwMU9kVklMcHlpOTBucXZlWDRtX3djY2RrRGhfNEEtd3FZakhsY0NIU0RBd2VoVmNnbEpaT1FvcEhWRGVi0gGcAUFVX3lxTFBUeHlWN2daTk13NjBoNmJQbnR5NjQ4ZE94YkxNM2NucXl0NmMwMExsZ204S2dPVi1SVFNTOHU2QUxZYmNuNjRRbnhVQlZtUmROeFJlbDVqR3V0SmtJaVpFQlhWT2pwY0paUzZlRGxTRUNsOHhmQlFrRk1TUUZOclVfbTdLSlVGT1RRaGFTSVhQMkQ0clE3emFoUGNzUA?oc=5",
      "time": "2026-07-14"
+    },
+    {
+     "title": "2026 XLOV Asia Tour - SERVING-X In Singapore - Moments",
+     "url": "https://momentsapp.no/event/dc23ce49-60ff-4dc1-b71f-c59d2bb27d3b",
+     "time": "",
+     "web": true,
+     "countries": [
+      "SG"
+     ]
+    },
+    {
+     "title": "10/01/2026.˖⋆ XLOV ASIA TOUR SERVING-X IN ...",
+     "url": "https://www.youtube.com/watch?v=nT1M-k2eWSg",
+     "time": "",
+     "web": true,
+     "countries": [
+      "SG"
+     ]
+    },
+    {
+     "title": "엑스러브, 싱가포르 단독 콘서트 개최",
+     "url": "https://v.daum.net/v/XLWxm7kLLH",
+     "time": "2026年10月1日",
+     "web": true,
+     "countries": [
+      "SG"
+     ]
     }
    ],
-   "platforms": [],
+   "platforms": [
+    "Trip.com"
+   ],
    "sale_times": [],
    "added": false,
-   "added_news": null
+   "added_news": null,
+   "web_count": 6,
+   "countries": [
+    "SG",
+    "TH",
+    "KR"
+   ]
   },
   "Surprise": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 6,
+   "count": 7,
    "top": [
     {
      "title": "Mayday Malaysia Concert Gets Another Surprise Upgrade: Xiao Bing Chih Confirmed as Opening Act - TVB Anywhere",
@@ -20314,51 +20368,28 @@
      "time": "2026-01-28"
     },
     {
+     "title": "Sam Lee to Hold Birthday Concert Night in KL – Spritzer Offers Chinese New Year Ticket Surprise - 联合日报",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE4wa09pVW5IS1hJa3NhU0VWZzd4TE10UlBYb0ZpcHEwemItazZWaXl1Z2ZjaWsyUWJxSm5GUExURnp4UVFxSE9STUxybkNoSmZ2c09pQ2ZEcVJfOUFaZmViQWtOSFFBNkNJU3VLakctcw?oc=5",
+     "time": "2026-01-23"
+    },
+    {
      "title": "Janice Delights Fans at Malaysia Concert with Joyful Performance and Surprise Walk Among the Crowd - TVB Anywhere",
      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPcURrR3JPaWVIbnRRTl80S3NVRlZoWW54eHdLVHZyRXQ4cTg0bnItaGY1YkwxSkJNaFRXbWRRWXRpMTJTanFPWEM0Z3lmbGJfallQZE80Tk04OHNVT0V3d2NpQ3Q4MFF4S1RuenVXby1yU0YwTklVX3hWMEN3eDNFQ3NBLWhPNVF0ZmtjeThQcXBKLW9NWldFcm1IZ1FKN2tETC1KVjljb2pPY2E5c21iQVliSUVQc2M5c2dNYzFMbWwyS2x1LV9XQTVBR0lDQlY2RVhIYjUwbEFXcVVP?oc=5",
      "time": "2025-11-03"
-    },
-    {
-     "title": "KLP48 blooms at Zepp KL as group celebrates first year anniversary with special concert, surprise announcements - Malay Mail",
-     "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNZXMyaFZub1VDbTdYUENpZk5hdlVraHpCSExaLXpYSlRGcW5zYlZQSEtFb1JUNXZwOGhVaFh3UFBnWUVGcTVGV0k3V0xqZ0VBZkpzdFl0b1Ruc1l1WXJVZi12a0I3MTlrQWhuTDFEUHRRWlFPU1RkVURydWh2aTJXWlRMUzlFV0pHNHgyeGw5M2l0ZDV6Q1JxVmg5bU95VVZpVFlaTGNfcDF3WkR3U1plWkd4VG5VT3BTamszY083MlpuSkNoVlJ2V3BzeDdZcUx0VE8xcmJJZDZmbEsyQ0Z1RC04WVpNNWNWamdtMDdKdTJpRTBLWGtKQ0hSVdIBgAJBVV95cUxOU2FtMGZpSW5SenpKTnplNGhNZWRrbkJQRGpXX2o3TXdlVHNWZzJmZWlfZkhSZHhqc0syY0JrMzFMUXpPbnhBQ1ktcTJEMm9xLW1kTWRWODVUSVZaR1F5WU1MLWtqQkJScUtwcEJSNGs0cGZZQjVlZVcwWnZSa3cxemRkSldOcUpmMmJjVV91VWhfVW9QeHF6WFBhbE41MlJGRnZJbzZaMkw0dXB0cVJWc2Z6NzFaSWlfWWZRdG9kOGU0UnNSb1RmYmpCRXdEeTJhZVlmMFptVXdFd0pUb0M5Z29WaDhRN0thMEtGdjIxUG1idFFzVVRmb292a1V0VGpz?oc=5",
-     "time": "2025-08-19"
-    },
-    {
-     "title": "Taekwondo instructor takes down a madman in Thailand",
-     "url": "https://www.reddit.com/r/martialarts/comments/1x1x8z6/taekwondo_instructor_takes_down_a_madman_in/",
-     "time": "",
-     "web": true,
-     "countries": [
-      "TH"
-     ]
-    },
-    {
-     "title": "ROSÉ and Bruno Mars | love their friendship ...",
-     "url": "https://www.instagram.com/reel/DeQ97jZANeY/",
-     "time": "",
-     "web": true,
-     "countries": [
-      "KR"
-     ]
     }
    ],
    "platforms": [],
    "sale_times": [],
    "added": false,
-   "added_news": null,
-   "web_count": 2,
-   "countries": [
-    "TH",
-    "KR"
-   ]
+   "added_news": null
   },
   "Kanye West": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 4,
+   "count": 3,
    "top": [
     {
      "title": "Italy bans Kanye West’s concert over security concerns - Free Malaysia Today",
@@ -20371,8 +20402,8 @@
      "time": "2025-05-19"
     },
     {
-     "title": "‎Kanye West @@year@@ 투어 및 콘서트 일정",
-     "url": "https://music.apple.com/us/concerts/ce.29fc11e4-5e52-440d-b31c-e06a9b3355ba?l=ko",
+     "title": "Kanye West 2026 年巡演和演唱會日期",
+     "url": "https://music.apple.com/tw/concerts/ce.4c431a34-26ff-4136-b9f4-bb8976b6f2c3",
      "time": "",
      "web": true,
      "countries": [
@@ -20380,13 +20411,12 @@
      ]
     },
     {
-     "title": "VIRAL KANYE WEST STAGE STUNS FANS Insane SciFi ...",
-     "url": "https://www.instagram.com/reel/DWvBiQTjHxo/",
+     "title": "Kanye West's first Singapore concert was during the Glow ...",
+     "url": "https://www.instagram.com/p/DVEuKqDk09G/",
      "time": "",
      "web": true,
      "countries": [
-      "MY",
-      "TH"
+      "SG"
      ]
     }
    ],
@@ -20396,12 +20426,12 @@
    "added_news": null,
    "web_count": 2,
    "countries": [
-    "MY",
-    "TH"
+    "SG",
+    "MY"
    ]
   },
   "Young K": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -20430,12 +20460,12 @@
    "added_news": null
   },
   "Apink": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 9,
+   "count": 4,
    "top": [
     {
      "title": "Apink郑恩地10月11日Solo开唱 《SUMMER, I》亚洲巡首站选大马 - 马来西亚东方日报",
@@ -20451,74 +20481,35 @@
      "title": "Apink’s Jeong Eun Ji To Bring Solo Concert To Kuala Lumpur This October - MYC.my",
      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQNjVGRkMzdUpIRndvaEZXYzU2dWVOQzROYnpuRnduMGRZNGxNRmszRURmcnpzZVpiV2hlakRnYzlVT3h2Z2hMRUNvMk1ESXdtdmlOS3Q2el9YX1NlTktXTHFWSTJBMkQtZEJDVTZwX2RWUUpGS2paaHRjQWRBVlVRR21FNmtGa19HbFBQTndxcHdjWkV0TG44MlVhTGstVzl2?oc=5",
      "time": "2026-08-19"
-    },
-    {
-     "title": "APINK' in Kuala Lumpur. 3 May 2026 (Sun) | 7PM",
-     "url": "https://www.instagram.com/reel/DX1248whgCQ/",
-     "time": "",
-     "web": true,
-     "countries": [
-      "MY"
-     ]
-    },
-    {
-     "title": "APINK》亚洲巡演来到吉隆坡🇲🇾！演唱会详情正式释出～ 🐼💖 ...",
-     "url": "https://www.instagram.com/p/DV-rtqkE2kQ/",
-     "time": "",
-     "web": true,
-     "countries": [
-      "MY"
-     ]
-    },
-    {
-     "title": "2026 Apink 8th Concert 'The Origin : APINK' Asia Tour Taipei",
-     "url": "https://www.instagram.com/p/DT90lBygXJ9/",
-     "time": "",
-     "web": true,
-     "countries": [
-      "MY",
-      "SG"
-     ]
     }
    ],
-   "platforms": [
-    "MAISEAT"
-   ],
+   "platforms": [],
    "sale_times": [],
    "added": false,
-   "added_news": null,
-   "web_count": 7,
-   "countries": [
-    "MY",
-    "SG"
-   ]
+   "added_news": null
   },
   "理想混蛋": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
-   "opened_news": {
-    "title": "理想混蛋1121重返吉隆坡开唱 门票101开售 - China Press",
-    "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNeHVlSW1zR3FDMXpsM21pR0xFYXF5blJVanUzNkVUaTBXTGZVbm9aaEVqZUo2ZDhlVDI5M3FwWHZuUWpBQUZILUY5NDVsQVVIWDFqSzlFWktlZWdEcjByRzdKMjUwNEc3ZzFzaFNjUEVWSG01RzJkaW9wdmZ0SmpxSXBmYzhMVFQ2T1RrOEthcE5FWWhpQ24tMXlZRTd2OWhOS3AxZ0xtbE45QzF4SzZkM2Z1eE1lQWJTMVpGZE56aHZMZ192M2hNNGRQSWpReW5PaXRQeUpvQjlrU2owRTFKMjZCTVJPaThqa0h6b1BoZTgtT1pMVms1ZzFoR0x2QWl0R3BYSE1OY1VRTjRhSG9oXw?oc=5",
-    "time": "2026-09-25"
-   },
-   "count": 4,
+   "opened_news": null,
+   "count": 3,
    "top": [
     {
-     "title": "理想混蛋携全新创作 1121来马开唱 - 光华日报",
-     "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQWExYS2dPVGRKbS1MR0ZjTk51TTlMaWFNSDVNaXRqTXJCSlNIM3QtRks0MS1iVm1PMlhNbkNRaHJBSy0ycGg3Mmx0bWxFeTZWWlNYbWRwRWVkOE90REtkclZfUkU5M0ZWZHpDUWtlNWZmUFo4bHM5emZmVjVuT3VrdE0xSGMxRUVkQlBRWVR4aF9VT0R1NFduQXZKY09NS0pRX1J6WFpXSDhYd1JBbTBFbzAzaGhfMUxWZGFlY3VjYlo0eGVVUmZJUXBCdG1uVjJRZFlBOThySzhQbFRqSHNZUE9ZODRFZEh1VjlUTjlnNXlVQQ?oc=5",
+     "title": "理想混蛋攜全新創作 1121來馬開唱 - 联合日报",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9KN0NMekZpcVBFZGtNV0VhdkJNVERsRlRzZ0lHUG5jTUpxd0xpcHVKTE5aOE0tZnlrLTROTVJGdXhwSGtYNDZJRnkyZjNaUGZBSlFidTVjNTJrNnJPdHpjdFVLZFQ0T1dLdGRoRk9Ubw?oc=5",
      "time": "2026-09-26"
     },
     {
-     "title": "理想混蛋1121重返吉隆坡开唱 门票101开售 - China Press",
-     "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNeHVlSW1zR3FDMXpsM21pR0xFYXF5blJVanUzNkVUaTBXTGZVbm9aaEVqZUo2ZDhlVDI5M3FwWHZuUWpBQUZILUY5NDVsQVVIWDFqSzlFWktlZWdEcjByRzdKMjUwNEc3ZzFzaFNjUEVWSG01RzJkaW9wdmZ0SmpxSXBmYzhMVFQ2T1RrOEthcE5FWWhpQ24tMXlZRTd2OWhOS3AxZ0xtbE45QzF4SzZkM2Z1eE1lQWJTMVpGZE56aHZMZ192M2hNNGRQSWpReW5PaXRQeUpvQjlrU2owRTFKMjZCTVJPaThqa0h6b1BoZTgtT1pMVms1ZzFoR0x2QWl0R3BYSE1OY1VRTjRhSG9oXw?oc=5",
+     "title": "理想混蛋守诺 1121重返大马开唱 - 娱乐 - 大马娱乐 - Sin Chew Daily",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUDI1MU5GRzJmcDBFOXlCQTFOWFhaMUtSTTAzek5zNjBYendNdTZKNFRpSHo3a2NXM3A3OHlZWXh1NEdMUElvMzBJTFhfQXotcFB1YThndFhwdVBrOUxQcjR3bWtKT2lzdnAyMzl0ck1MTENUZkNuLUt5X2wtQ3VCTFFmX0U?oc=5",
      "time": "2026-09-25"
     },
     {
-     "title": "理想混蛋守诺 1121重返大马开唱 - 娱乐 - 大马娱乐 - Sin Chew Daily",
-     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5aN0F6RHluNHd6bW5hLVluUE9YMzNuZ05aRl9iQ2s5OWdRUVZGRU80SGh6eTJreUZlVloyc1J5dzRNdl9aQUhmOGhxUHdLZXd5ZURDZFdjcjdBTkl5eFp5d0dvOVFRZXJqSWpTOGZQaw?oc=5",
-     "time": "2026-09-25"
+     "title": "成军6年首访大马开唱❗️理想混蛋11月19日唱响吉隆坡🇲🇾 - my.com.my",
+     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE56MF8xZk5oRTAteGhoazhmaG4zLW4tdGZsS0F0TmhtR2ZqUW1NMWpRbmR1T0c1MGtWNFR0WmpfMjY0N3NVdTF2OGFsMlZoeHBpeUVBRzRyX3NNSFBHWmoyR0dWOFlqLUdvaWlOS1g4X3JlY2ZSZmVuZA?oc=5",
+     "time": "2023-10-19"
     }
    ],
    "platforms": [],
@@ -20527,12 +20518,12 @@
    "added_news": null
   },
   "Post Malone": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 21,
+   "count": 16,
    "top": [
     {
      "title": "Post Malone’s Kuala Lumpur Concert Has Been Postponed - SAYS",
@@ -20548,46 +20539,12 @@
      "title": "Post Malone pushes back Asian leg of BIG Stadium Tour, KL show cancelled - Malay Mail",
      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQek15WS1iRWJHVjRDYkU5TVZRVVdxNzB6enJvdzhpNkp2bVlQeU9hcFNwYUt5R2o4VDhycnFnS2dERVdILVVjNE84Nm1veUJ3RXB3NEc4dU1URXA3cGlOT0Y3UlVlSmhEdmVBUzNYSE14cVVkcWs0dkJWRmUwV2lzWDh2enNYTWo1Wkx0RGtQeVZLS1FjX0VaNXNFcXdlUWR0eHRaLWV2aFNJS25ZenZYU0M1VHZDNnFxZkZCaVhWS2tqOHhyMEZz0gHMAUFVX3lxTFBaUF9CT2R0ODlrTTFwOWc3YXRKdU1mb05BQ1dZb3pzOW96SmJMWkJKODFSd1pQbmMtV21kR2h5ZzE1cHY4TlE5RF8yR1R3X0lfcUJpbDYzY0gyaVg1MHZKemtfeFo2WVJ3RzhMN2V2c1RqOTkyLWZpOWZTZF82R1BLczZtbW8zVThDdDQ1NjBHdXU0cUx2YnFVLW96NUxGUVpBekVuNTRhNUNiMVlHRWRHMGg3S2J6Q201dE1zRklPU2NXSVNhRk9feUgwRw?oc=5",
      "time": "2026-08-27"
-    },
-    {
-     "title": "‎Post Malone - 2026 Asia Tour with Don Toliver ...",
-     "url": "https://music.apple.com/bg/concerts/ce.c753e983-a0ff-457e-96a1-112a1b53b863",
-     "time": "",
-     "web": true,
-     "countries": [
-      "MY",
-      "SG"
-     ]
-    },
-    {
-     "title": "等到了！Post Malone终于带着他的 《BIG ASS World Tour ...",
-     "url": "https://www.instagram.com/p/DWkuoHHErcs/",
-     "time": "",
-     "web": true,
-     "countries": [
-      "MY"
-     ]
-    },
-    {
-     "title": "Post Malone 世界巡演",
-     "url": "https://www.veritickets.com/zh-CN/shows/categoryId-12601",
-     "time": "",
-     "web": true,
-     "countries": [
-      "MY",
-      "SG"
-     ]
     }
    ],
    "platforms": [],
    "sale_times": [],
    "added": false,
-   "added_news": null,
-   "web_count": 7,
-   "countries": [
-    "SG",
-    "MY"
-   ]
+   "added_news": null
   },
   "ULTRAMAN": {
    "checked": "2026-10-11",
@@ -20614,12 +20571,12 @@
    "added_news": null
   },
   "Anoushka Shankar": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 4,
+   "count": 5,
    "top": [
     {
      "title": "Anoushka Shankar continues Asia tour after Singapore, Malaysia performances - Prashant News",
@@ -20632,17 +20589,8 @@
      "time": "2026-04-05"
     },
     {
-     "title": "Anoushka Shankar Live In Kuala Lumpur",
-     "url": "https://www.ticket2u.com.my/event/49360/anoushka-shankar-live-in-kuala-lumpur",
-     "time": "",
-     "web": true,
-     "countries": [
-      "MY"
-     ]
-    },
-    {
-     "title": "Anoushka Shankar (@AnoushkaShankar)",
-     "url": "https://www.facebook.com/AnoushkaShankar/",
+     "title": "‎Anoushka Shankar Concerts & Tours",
+     "url": "https://music.apple.com/kz/concerts/artist/14825884",
      "time": "",
      "web": true,
      "countries": [
@@ -20651,11 +20599,22 @@
      ]
     },
     {
-     "title": "Anoushka Shankar (@anoushkashankarofficial)",
-     "url": "https://www.instagram.com/anoushkashankarofficial/",
+     "title": "ANOUSHKA SHANKAR LIVE DI KUALA LUMPUR Selepas ...",
+     "url": "https://www.instagram.com/p/DWx0w72D2h_/",
      "time": "",
      "web": true,
      "countries": [
+      "MY",
+      "SG"
+     ]
+    },
+    {
+     "title": "‎Jadwal Tur & Konser Anoushka Shankar @@year@@",
+     "url": "https://music.apple.com/id/concerts/ce.65bc2120-ea2a-4f4e-bb61-3e56e08a39dd?l=id",
+     "time": "",
+     "web": true,
+     "countries": [
+      "MY",
       "SG"
      ]
     }
@@ -20664,19 +20623,19 @@
    "sale_times": [],
    "added": false,
    "added_news": null,
-   "web_count": 3,
+   "web_count": 4,
    "countries": [
     "MY",
     "SG"
    ]
   },
   "ITZY": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 9,
+   "count": 6,
    "top": [
     {
      "title": "ITZY wrap up third world tour 'TUNNEL VISION' in Singapore ahead of Chaeryeong's solo debut - allkpop",
@@ -20692,49 +20651,15 @@
      "title": "ITZY announces Singapore stop for their Tunnel Vision world tour - Lifestyle Asia Hong Kong",
      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQdXVMcjZmWVNpR0ItR29LaEhWR3IwUG9adjZLOURhR3dIX0NVMWNtREQ3dEM3ZllyQ2VONEJmMGZtN3lHQ1ozVGpya2ZtLUZXNEJtalRZdld6VXNJTmJ5UFpvMzc2bFNQUUhOMVI1cFl5eU52ZTkzY1BrVk1aZEUwczlrTdIBiAFBVV95cUxOaUJCUXhabmRQa19iWVRGRTFVMGh3Tk5LU0lZUUN2NlJqMnhPcWFOVTdlcDVQVm9FM282bWdMT2F5SE9qVWxDUUFiSDRSZzkzTzgyVlRxUWc2OGJ6V1REd2R6aFZJa2dCWktmZWlLRnQ2VjVzSHZwakdiZFRLS1V4aUxHcjk0dnlC?oc=5",
      "time": "2026-08-07"
-    },
-    {
-     "title": "Spotted - Where is ITZY? Sightings & tour dates",
-     "url": "https://spotted.live/artist/itzy",
-     "time": "2026年9月27日",
-     "web": true,
-     "countries": [
-      "SG"
-     ]
-    },
-    {
-     "title": "粉丝期待ITZY新加坡场",
-     "url": "https://www.sina.cn/news/detail/5315480078516634.html",
-     "time": "2026年6月30日",
-     "web": true,
-     "countries": [
-      "SG"
-     ]
-    },
-    {
-     "title": "🇸🇬 [KPOP CONCERT IN SINGAPORE] ITZY 3RD WORLD ...",
-     "url": "https://www.tiktok.com/@malaysiakpoplovers/video/7651315751940328722?lang=km-KH",
-     "time": "",
-     "web": true,
-     "countries": [
-      "SG"
-     ]
     }
    ],
    "platforms": [],
    "sale_times": [],
    "added": false,
-   "added_news": null,
-   "web_count": 7,
-   "countries": [
-    "MY",
-    "KR",
-    "SG",
-    "TH"
-   ]
+   "added_news": null
   },
   "Dolly Parton": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -20788,7 +20713,7 @@
    }
   },
   "Lana Del Rey": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -20817,7 +20742,7 @@
    "added_news": null
   },
   "Europe": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -20828,15 +20753,28 @@
      "title": "#SHOWBIZ: From KL to Europe: Dolla announces debut European showcase tour this month - NST Online",
      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVm1YUFI0SkxsQzB6V2dYcFJsU0I2cGJvekQ2aVM2ZmNaODRrYzRYZkI1YUg4TmMwRm1ZbXZLTmhLWmxaUEtndmYwcGZuS1ljU0JNUXQzWHZfRktqLWJZNjMyancyUG1MRmRrRUxsbmZDLW9TYUJKcGJuLTZHUGJETkFrTUluMkNNNFkwTmVGWmpoc05pb0RHYU4zOURRUk1paHlScWgyUmc1N1p5dXN4QnNiRkc0MV9NMkHSAb8BQVVfeXFMT3ZmOUJxWjRpUTNvcTFpUFRSWUhMcEhfTXdQcFVpQVpiNVlGdzZpRFpoQ0xJSmxRXy1yeWlYSWdQQzVrOFl5VENaUkEzdzl2NWdWUV9rUS1yVUhwQzNLM1k1VEFDRWI1N0dhNjE2bXZwWWtPcHZHSmR5STdScGZUZmJxMi1aNjhlUXV1TC1ZVTdXUThqQXozNkI4Yk9mbDl2VXQ2WDNlOEgzODdfbjJ1VXp6ZUNiOU9ZY3d6UERBMWM?oc=5",
      "time": "2026-10-09"
+    },
+    {
+     "title": "Thailand's Queen Suthida pilots fighter jet for first-ever solo flight",
+     "url": "https://apnews.com/video/thailands-queen-suthida-pilots-fighter-jet-for-first-ever-solo-flight-7966ee35b28d46d8a4a05112d65d4730",
+     "time": "",
+     "web": true,
+     "countries": [
+      "TH"
+     ]
     }
    ],
    "platforms": [],
    "sale_times": [],
    "added": false,
-   "added_news": null
+   "added_news": null,
+   "web_count": 1,
+   "countries": [
+    "TH"
+   ]
   },
   "Tax Free": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -20855,7 +20793,7 @@
    "added_news": null
   },
   "CORTIS": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -20879,7 +20817,7 @@
    "added_news": null
   },
   "One Love": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -20892,7 +20830,7 @@
    "added_news": null
   },
   "MAMAMOO": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -20905,14 +20843,14 @@
      "time": "2026-10-11"
     },
     {
-     "title": "MAMAMOO大马开唱露“黑裤” 华莎美背破功颂乐蚂蚁腰消失 - China Press",
-     "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxPdVBYQWhtRW5abjViclNQa191SXMxODBTd2I2d0RpMDRncDNaSEtIZ1JIWUNYUzVFN291QUZtWlZpOUpOSmdmcEZobHdjSXphU3BXRnFuZHpleEkwd21QZG4tdjBnQjBMRHJ5dVpVY0Y5VkF2MlJvY0ROMFNfUmVNUUVNdHk5anAxdEd5NlVnY25ya0pxdThrNTRhN0dLbWhCZHA4ZEZvOU5jNHo2WHNKWWFIUTZiNkJ6VlQ1eGFRbW9VR2VvWlVPV0RBT0VBaFlnQ29VRmljZ3UzRzZWeW4tbk44SXJ1blp6bWpoaXNxRGlXNEVsNnpvQVRpR2JhLW45eTY2N0VPTlpyRmdMMkQ4d2c4TmVyeVh4Wjl5elRibGs0RzFNd0NYd0dsR0ppb0FzSjFZWVRneGU3Rl9QaXplcg?oc=5",
-     "time": "2026-10-10"
+     "title": "MAMAMOO — K-Pop Group Wraps Up Successful Malaysia World Tour Stop - The Korea Daily",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1yTkVDNHRTdVNqU1R2TjRpRlJFeG9qa1JvcEs5WFNjQ204OXJEdHlxNzBNT0x0Y2JqQWRRUjNPRVh2SVpIdEdTV1o4Zk1GeTVteFhGeWN3dVVaTDRmbFBWYUtkVE0?oc=5",
+     "time": "2026-10-11"
     },
     {
-     "title": "MAMAMOO成军12周年携《4WARD》世界巡演1010唱进吉隆坡| 娱乐 | 東方網馬來西亞東方日報 - 马来西亚东方日报",
-     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5LcFB3WkNieUlVMG9UUHlyTUg1cUMzOW5SRmIxRkVaUjBjd3g3bU0ycm9sN3N3dFZ6TmNLUUo2Yk5qUWg2eGVVY2tqNUJVSlBqeUZqUGFzdUxEM3gyZU80alNaVDRiRkQtNDVJdDg3cjdwRTgzS2hUWg?oc=5",
-     "time": "2026-08-15"
+     "title": "MAMAMOO brings ‘4WARD’ world tour to Kuala Lumpur - allkpop",
+     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxONHlJNk9DaHlrLVhUbzlQcUtRZnNpT3lJUGdLcVJuZjJZd0VwRDRheFFKa0FnSmZISXhxTmI4N29RdDZIbjNqU2ZyQnN1cVRobVU4RllVbC1nYS1QV0JpUmFHaEE5SFYzSE9hbGp6dWFGc0FJSl9RUlZQVkptVVozQXJRMjZ5cTNQQmdRUi1WVkU?oc=5",
+     "time": "2026-10-11"
     },
     {
      "title": "MAMAMOO Adds Kuala Lumpur to 2026 World Tour ...",
@@ -20924,21 +20862,20 @@
      ]
     },
     {
-     "title": "MAMAMOO - 個人檔案、演出資訊",
-     "url": "https://tw.stagepick.co.kr/artists/detail/2yLsyPe53N813Y5X",
+     "title": "MAMAMOO 2026世界巡迴演唱會",
+     "url": "https://www.veritickets.com/ja-JP/shows/categoryId-13991",
      "time": "",
      "web": true,
      "countries": [
-      "MY"
+      "KR"
      ]
     },
     {
-     "title": "时隔4年MAMAMOO 1010来马开唱",
-     "url": "https://www.sinchew.com.my/news/20260708/entertainment/7651161?variant=zh-hant",
-     "time": "2026年7月8日",
+     "title": "[4K] Mamamoo 2026 World Tour (4WARD) in Singapore",
+     "url": "https://www.youtube.com/watch?v=PIQdmVH_e8I",
+     "time": "",
      "web": true,
      "countries": [
-      "MY",
       "SG"
      ]
     }
@@ -20947,7 +20884,7 @@
    "sale_times": [],
    "added": false,
    "added_news": null,
-   "web_count": 7,
+   "web_count": 6,
    "countries": [
     "MY",
     "KR",
@@ -22698,7 +22635,29 @@
   "코르티스": null,
   "moreleaderswantgospeltogoon": null,
   "moreleaders": null,
-  "wantgospel": null
+  "wantgospel": null,
+  "mamamoobrings4wardto": null,
+  "mamamoobrings": null,
+  "ward": null,
+  "to": null,
+  "allkpop": null,
+  "마마무4ward쿠알라룸푸르공연성료도쿄로열기이어간다": null,
+  "imbc": null,
+  "마마무월드투어4ward쿠알라룸푸르공연성료": null,
+  "inpictures": null,
+  "cna": null,
+  "pictures": null,
+  "acts": null,
+  "beabadoobeebrings": null,
+  "powerlinesto": null,
+  "마마무월드투어4ward쿠알라룸푸르성료글로벌인기입증": null,
+  "osen": null,
+  "ainedrucekongsi": null,
+  "pengalamankenascam": null,
+  "beli": null,
+  "hargaasal": null,
+  "seorang": null,
+  "hargaasalrm": null
  },
  "dates_first_seen": {
   "t2u-51240": 1,
@@ -22802,7 +22761,7 @@
  },
  "ocr_ig_more": {},
  "web_search_usage": {
-  "2026-10": 185
+  "2026-10": 200
  },
  "seatmap_extra_v2": {
   "t2u-51240": {
