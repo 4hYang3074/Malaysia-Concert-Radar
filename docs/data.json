@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-12 01:42",
+ "generated_at": "2026-10-12 14:08",
  "health": {
   "GoLive": {
    "ok": true,
@@ -10,9 +10,10 @@
    "count": 132
   },
   "BookMyShow": {
-   "ok": true,
-   "count": 18,
-   "local": "2026-10-10 18:58"
+   "ok": false,
+   "error": "HTTP 403",
+   "stale": true,
+   "count": 18
   },
   "Ticket2U": {
    "ok": true,
@@ -30,12 +31,12 @@
   },
   "Google News": {
    "ok": true,
-   "count": 59,
+   "count": 57,
    "error": null
   },
   "东方日报 娱乐": {
    "ok": true,
-   "count": 14
+   "count": 13
   },
   "人工线索": {
    "ok": true,
@@ -166,6 +167,25 @@
     "KR",
     "SG"
    ]
+  },
+  "Martin Garrix": {
+   "checked": "2026-10-12",
+   "country": "SG",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": null,
+   "count": 1,
+   "top": [
+    {
+     "title": "Martin Garrix at Marquee Singapore, Singapore - Tickets - KarloBag.eu",
+     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNenE1WTRIY09SS1lHdXVNQXo2YmtSMFh4VXpLZ3gtb2o2VjJCby1qanFtcXNpc05Ha1dDbnJTUlRCeGJZVHlVUVV6ZThUcXFqOFNwUHdiWElwdENZbWFkTEo1U3R6UXZiN2M3Nk83eDhJOFI5eUFLaHhpNmlsVFZtUU4xQTNWWFZFN180eDRCVVUtM29rSU0wVQ?oc=5",
+     "time": "2026-10-11"
+    }
+   ],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null
   },
   "CORTIS": {
    "checked": "2026-10-12",
@@ -1521,18 +1541,13 @@
    "added_news": null
   },
   "DIOR 大穎": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 3,
+   "count": 2,
    "top": [
-    {
-     "title": "八億點擊馬來西亞創作女聲DIOR大穎 演唱會秒殺 再推新單曲〈靠關係〉 - playmusic.tw",
-     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9fT3lrbF80dlhqaUZHN0lmVEo1N20za0NlZEZ6Wm12RkFmOUFkc19RT3F1NERFdzdJRXZLbFV6cWJ4SzJhVmZkbmFpb1FNZU9NS1ZXWUZGRWpUWWgyMUQ1V3VybjF3YVJpLVNv?oc=5",
-     "time": "2026-04-14"
-    },
     {
      "title": "馬來西亞創作女聲DIOR大穎 首度登台舉辦演唱會 4月17日《Kampung Girl 普通人》唱進台北！ - MTV音樂頻道",
      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9fQUF1UG1WMmZjLVZUUE40ai1EcUNaQ2JyZ0xCdjNQYmdKLTJmV2NwLURhd292ZkpSdjN2MUV0Wi1mWlFCdjk5S0F0NVBTOW03WHBEYTZpdw?oc=5",
@@ -1550,7 +1565,7 @@
    "added_news": null
   },
   "周兴哲": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": {
@@ -1591,7 +1606,7 @@
    }
   },
   "邱鋒澤": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1604,7 +1619,7 @@
    "added_news": null
   },
   "ROSETOPIA": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1623,7 +1638,7 @@
    "added_news": null
   },
   "QWER": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1631,7 +1646,7 @@
    "count": 4,
    "top": [
     {
-     "title": "QWER 1107再来马开唱 粉丝享有Hi-Bye福利 - China Press",
+     "title": "QWER 1107再来马开唱 粉丝享有Hi-Bye福利 - chinapress.com.my",
      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNaW1MR01sOW1pNm04X3IyN2RpMHRRVUpqWElhMk51ZUtUNG9SeXNVM2JlcUhHNUNpMjZJSkR0QTlENkZTYW1ybUgzX0VTcTRqajBadUpJR1AyOERmQ0JVcTRnLVpZT09zdDg3WWp1dFo2YUd2TEd6cWlPenJFLTJPWjdJa2RZZHJZRDN2dHUtUWt2M1BxcEdyeDFiNndPaG4yZDh3Ylhad195WWpyVjlHdnJOVDNjTTYzZjBVc3k0MkE5QmgydTZQU3J0OTdrNEYwSktiUHIzUldUY24tbmxxUVpReW1yb0dyVlow?oc=5",
      "time": "2026-09-18"
     },
@@ -1652,7 +1667,7 @@
    "added_news": null
   },
   "世界巡回演唱会": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": {
@@ -1689,7 +1704,7 @@
    "added_news": null
   },
   "2026叁缺壹巡演吉隆坡站": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1702,7 +1717,7 @@
    "added_news": null
   },
   "那些年的歌3 演唱會 Songs": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -1715,7 +1730,7 @@
    "added_news": null
   },
   "ULTRAMAN": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1739,7 +1754,7 @@
    "added_news": null
   },
   "A-Lin": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": {
@@ -1780,7 +1795,7 @@
    }
   },
   "巫启贤": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -1793,7 +1808,7 @@
    "added_news": null
   },
   "演唱会 Songs That Keep Us Together": {
-   "checked": "2026-10-11",
+   "checked": "2026-10-12",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -2380,10 +2395,10 @@
    "artist_name": "TRANCISION",
    "fans": 0,
    "region": "K-pop",
-   "poster_img": null,
-   "avatar": null,
-   "avatar_kind": null,
-   "poster_portrait": false,
+   "poster_img": "avatars/p-nol-26014582.jpg",
+   "avatar": "avatars/p-nol-26014582.jpg",
+   "avatar_kind": "poster",
+   "poster_portrait": true,
    "platforms": [
     {
      "source": "NOL World",
@@ -3468,67 +3483,8 @@
    "dates": [
     "2026-11-01 16:00"
    ],
-   "sales": [
-    {
-     "name": "售票",
-     "start": null,
-     "end": "2026-11-01 22:00",
-     "queue": null,
-     "available": true,
-     "code_required": false,
-     "url": "https://www.ticket2u.com.my/event/51322/vijay-antony-live-in-concert-2026"
-    }
-   ],
-   "tiers": [
-    {
-     "name": "MIP",
-     "price": "RM 1,999.00",
-     "desc": "Free Seating",
-     "sold_out": false
-    },
-    {
-     "name": "VIP",
-     "price": "RM 999.00",
-     "desc": "Free Seating",
-     "sold_out": false
-    },
-    {
-     "name": "NAAKA MUKKA",
-     "price": "RM 299.00",
-     "desc": "Free Standing",
-     "sold_out": false
-    },
-    {
-     "name": "FANPIT",
-     "price": "RM 259.00",
-     "desc": "Free Standing",
-     "sold_out": true
-    },
-    {
-     "name": "PLATINUM",
-     "price": "RM 259.00",
-     "desc": "Free Seating",
-     "sold_out": true
-    },
-    {
-     "name": "GOLD",
-     "price": "RM 209.00",
-     "desc": "Free Seating",
-     "sold_out": true
-    },
-    {
-     "name": "SEXY LADY KITTA VAADI",
-     "price": "RM 159.00",
-     "desc": "Free Standing",
-     "sold_out": true
-    },
-    {
-     "name": "SILVER",
-     "price": "RM 159.00",
-     "desc": "Free Seating",
-     "sold_out": true
-    }
-   ],
+   "sales": [],
+   "tiers": [],
    "price_from": "RM 99.00",
    "limit": null,
    "sold_out": false,
@@ -8522,7 +8478,9 @@
    "hidden": null,
    "news_added": null,
    "added_status": null,
-   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "opened_at": "2026-10-12 11:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
    "sale_evidence": [
     {
      "src": "NOL World 售票轮次",
@@ -9817,6 +9775,8 @@
    "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
    "news_added": null,
    "added_status": null,
+   "opened_at": "2026-10-12 11:00",
+   "opened_approx": false,
    "sale_state": "GENERAL_SALE_ANNOUNCED",
    "sale_evidence": [
     {
@@ -10241,6 +10201,100 @@
  ],
  "leads": [
   {
+   "id": "news-76f3c74fc74d4053",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "비즈엔터",
+   "title": "빅뱅, 20주년 투어 순항…대만 찍고 싱가포르로 - 비즈엔터",
+   "text": null,
+   "time": "2026-10-12 13:22",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE50TnNMc1V2RWtQdTlfMVB3eGZHeDAtOXFLeTNSUGlIX1dMRGUxYVBtZm5oc3hLZjZqMDVYeWxndDQzY3gxRElwajJ3SV9mdENTWWlmYzln?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 14:08",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-b8863c85357ebb17",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "스포츠서울",
+   "title": "솔라, 공연 끝나니 더 예뻐졌네…말레이시아서 포착된 반전 일상 - 스포츠서울",
+   "text": null,
+   "time": "2026-10-12 12:49",
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBCdTh3QXRlOHo1MFlBN1BCME55Z0VoaTZYcThzWkp2Q0ZnNXZfYmJweUk2WFpJUHlDRE1IUWlycVRzcWJEdi1Pd2pvQjFtU3o2X2dkWFpsMUM?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 14:08",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-2b78b0c022809a0a",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "Harper's Bazaar Singapore",
+   "title": "Upcoming K-Pop Concerts In Singapore In 2026 And 2027: Dates and Tickets - Harper's Bazaar Singapore",
+   "text": null,
+   "time": "2026-10-12 11:30",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9sdy1oRkMteXh3N1dOeWxJZWM5cHdpalMxYm1iOEJ3M2JodUd5YVlaM0Z3QnpWckRSQWtMNzhOTnB3dk9iSzZYOUZnNUU0UW5MTU1SWG9CSjk1bkY3OVlWTVFRUVZNV3c4MmU0T2VQQ1F2Rlp5?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 14:08",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-3d06e7e38b66b18d",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "DANAMIC",
+   "title": "ONE OR EIGHT Open Their Asia Tour at Victoria Theatre in Singapore - DANAMIC",
+   "text": null,
+   "time": "2026-10-12 10:04",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPblBnaG5YYkQyZ0x2VXVIM0IwWllpT0pCdHNmTmxOSEpXaW1PZHVLN0d5VURFNWJobl9TR004QUNUdlR2djZPVU44Z1poaVVpV3pDVXJ3MFB3X1NLQmdOQVppczJ6aktRNEs2cVlzdnZGZTFxWkJpSDVzbDNqR0VHY0htZTRHZHgxZ1FWZ3RLRzZ0VThLQml5OHJPYk1tUkZoeGN0dDVfbzdrb0h2dXpWUXRIS04zdw?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 14:08",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "ONE OR EIGHT",
+   "artist_fans": 3024,
+   "artist_region": "其他",
+   "artist_photo": "avatars/a-0cbfcc775ceb.jpg",
+   "hidden": "不是演唱会（theatre）",
+   "listed": false
+  },
+  {
+   "id": "news-192ad3f4898c8127",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "东方日报 娱乐",
+   "title": "【好康】送梁洛施、洪金宝主演《重生2》首映礼门票　得奖者出炉",
+   "text": "（吉隆坡12日讯）由马浴柯执导兼编剧，梁洛施、文俊辉、洪金宝领衔主演，白客友情出演，阿如那、王龙正、陈国坤特别出演，卡斯柏、刘禹泽主演的犯罪动作电影《重生2》，将于10月15日全马正式上映。电影讲述异国罪案频发，希拉（梁洛施饰）的儿子意外成为罪恶产业链的无辜牺牲品，让原本只想过安稳生活的她彻底陷入绝境。面对丧子之痛，希拉决定为儿子复仇，并与同样承受丧亲之痛的苏诚（文俊辉饰）联手，誓要揭开残酷真相，扳倒罪魁祸首佐曼（洪金宝饰）及佐克（白客饰）父子。随著复仇计划一步步展开，希拉暗中布局、反杀恶徒，硬...",
+   "time": "2026-10-12 09:00",
+   "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/12/854512",
+   "hints": [],
+   "sale_times": [],
+   "first_seen": "2026-10-12 14:08",
+   "matches": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "不是演唱会（好康）",
+   "listed": false
+  },
+  {
    "id": "news-406c75fc2936655d",
    "kind": "新闻",
    "country": "MY",
@@ -10273,6 +10327,24 @@
    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE44OWdUcFh6Y1ZYN3VIcHNzLUxfNmNIOEppM2ZaaVdFQ0hsUkJLNFpOMDhvWHozVzNUc195SHBXbEhzR1h1cU1rZWtSazdVeTYzaG5WcG9veklpN01OTjFTeg?oc=5",
    "hints": [],
    "first_seen": "2026-10-12 01:42",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-39044de81916d028",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "MBC",
+   "title": "마마무, '4WARD' 쿠알라룸푸르 공연 성료…도쿄로 열기 이어간다 - MBC",
+   "text": null,
+   "time": "2026-10-11 20:56",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1kSVUzYjB5NEs5U3ZNRjZkbTVkMDN3RS12VmNKNTV1djFxbFowdjAta0hJN2ZlQmNkTUZZWnNNMnpMTkdBenU5VmxnSHdCUFlqUnE4emRDVTFHcUllTXdJdVdHcw?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 14:08",
    "matches": [],
    "sale_times": [],
    "status": "rumor",
@@ -10332,6 +10404,28 @@
    "status": "rumor",
    "platforms": [],
    "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-0560341f3759ffaa",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "KarloBag.eu",
+   "title": "Martin Garrix at Marquee Singapore, Singapore - Tickets - KarloBag.eu",
+   "text": null,
+   "time": "2026-10-11 09:35",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNenE1WTRIY09SS1lHdXVNQXo2YmtSMFh4VXpLZ3gtb2o2VjJCby1qanFtcXNpc05Ha1dDbnJTUlRCeGJZVHlVUVV6ZThUcXFqOFNwUHdiWElwdENZbWFkTEo1U3R6UXZiN2M3Nk83eDhJOFI5eUFLaHhpNmlsVFZtUU4xQTNWWFZFN180eDRCVVUtM29rSU0wVQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 14:08",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "Martin Garrix",
+   "artist_fans": 7597038,
+   "artist_region": "其他",
+   "artist_photo": "avatars/a-fa19160e1363.jpg",
+   "hidden": null,
    "listed": false
   },
   {
@@ -10523,6 +10617,24 @@
    "listed": false
   },
   {
+   "id": "news-5a2ad473f4d643e8",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Budiey Channel",
+   "title": "Vokalis Utama Apink Jeong Eunji Bawa Konsert Solo Pertama Ke Kuala Lumpur - Budiey Channel",
+   "text": null,
+   "time": "2026-10-10 14:47",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQVHBaNlB4cmVDWWRROVBPem9qeG9xNDJSeHBkenlfMmd3MUZhZms5R09udkhZTll5ekczTFpXeFhOQWpvOVJlV0NHY3lOOFFKVkNveXFJMG9KaGhYRUFuSXA2NXJtT0hqT1pHZ1lsZS1JNXdHLUh2ZVJSSGpQRDVKdzJwTWJmM2Jjbkh4WVhiN3JrQUt3THgyVGxRSGE0QQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 14:08",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
    "id": "news-9bed0e4a9d307330",
    "kind": "新闻",
    "country": "SG",
@@ -10599,6 +10711,24 @@
    "platforms": [],
    "hidden": null,
    "listed": true
+  },
+  {
+   "id": "news-687e0a89c3e46cc8",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "KarloBag.eu",
+   "title": "The Weeknd in Bangkok - tickets and concert guide for After Hours Til Dawn at Rajamangala National Stadium - KarloBag.eu",
+   "text": null,
+   "time": "2026-10-10 11:02",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNR1FUb3dFY0dQYk9XVzNLTFdPMlIwc1ZJLXE2RlFHSG13T0NKYkk3V19QdlZYUzlTdzkxOG1WQ1VFcEdHSDVrZjNwWmFyaGhydGV3MjBFTmtwc3JGTFNZWDZNaTBtNnYtTmpMMmFyMTdyNHBTd1phNlJrTjJTLUY1RHBEZ2ROdmk2dlV5dTlxN1dzanZt?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-12 14:08",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
   },
   {
    "id": "news-d1db68338e811e77",
@@ -10743,7 +10873,7 @@
    "from": "e南洋",
    "title": "台东跨年演唱会配套受瞩目 新山包机直飞拓旅游商机 - e南洋",
    "text": null,
-   "time": "2026-10-09 20:01",
+   "time": "2026-10-09 19:31",
    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5abVBUalhJaFp4UHdadTdCRTc5c1hCVEhTdkl3SGRIMFJfRTIxQWFCU3NYREpHZUptQ2RBMm1yUWkzOGZsd2dteVM4Z2JWOE5UdFBUVDZNQ1JvNkV0Z0NGQQ?oc=5",
    "hints": [],
    "first_seen": "2026-10-10 02:23",
@@ -11275,7 +11405,7 @@
    "title": "코르티스, '포뮬러 원 싱가포르 그랑프리' 공연 앞두고 \"에너지 쏟겠다\" - 뉴시스",
    "text": null,
    "time": "2026-10-08 13:29",
-   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1RSjBEREthMWl6SVlFSlpKcHB3VmxTSHdLSzJMRUd0WExSYzFFVmNXejdLaWVqM2IyNi1zY1JrUzVLekVXbWlfNHc4WkZ4VXAxVjRkQ0JUaFVNUFZDenVzN2NUaVd6ckNXS3loMHdMRFNFdTlOLXBQS9IBeEFVX3lxTE1RSjBEREthMWl6SVlFSlpKcHB3VmxTSHdLSzJMRUd0WExSYzFFVmNXejdLaWVqM2IyNi1zY1JrUzVLekVXbWlfNHc4WkZ4VXAxVjRkQ0JUaFVNUFZDenVzN2NUaVd6ckNXS3loMHdMRFNFdTlOLXBQSw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBVcllJZnliNUVfdXNJazBWNXlnOGdDSEFXcTNqeThlWUMtc3FpYXZETm5wOE9ENUFUYTdYcHhwT2Q5cWZPMUl3WmJDMzNiZ0xwcm5IU3dsVkNMeHJvQ0E3bNIBeEFVX3lxTE1RSjBEREthMWl6SVlFSlpKcHB3VmxTSHdLSzJMRUd0WExSYzFFVmNXejdLaWVqM2IyNi1zY1JrUzVLekVXbWlfNHc4WkZ4VXAxVjRkQ0JUaFVNUFZDenVzN2NUaVd6ckNXS3loMHdMRFNFdTlOLXBQSw?oc=5",
    "hints": [],
    "first_seen": "2026-10-08 14:16",
    "matches": [],
@@ -12473,12 +12603,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
+   "listed": false,
    "artist": "Faizal Tahir",
    "artist_fans": 13876,
    "artist_region": "其他",
-   "artist_photo": "avatars/a-718c50a0b6ca.jpg",
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
-   "listed": false
+   "artist_photo": "avatars/a-718c50a0b6ca.jpg"
   },
   {
    "id": "news-cbdb563a346baf4b",
