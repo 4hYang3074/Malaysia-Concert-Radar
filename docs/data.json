@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-20 11:26",
+ "generated_at": "2026-10-20 13:00",
  "health": {
   "GoLive": {
    "ok": true,
@@ -30,12 +30,12 @@
   },
   "Google News": {
    "ok": true,
-   "count": 86,
+   "count": 89,
    "error": null
   },
   "东方日报 娱乐": {
    "ok": true,
-   "count": 10
+   "count": 9
   },
   "人工线索": {
    "ok": true,
@@ -5516,83 +5516,13 @@
    ]
   },
   {
-   "id": "nol-26014350",
-   "country": "KR",
-   "source": "NOL World",
-   "name": "2026 Awesome Stage X FTISLAND : FaTe PE",
-   "artist": null,
-   "type": "Concerts",
-   "venue": "추후공지",
-   "city": "Seoul",
-   "dates": [
-    "2026-11-21",
-    "2026-11-22"
-   ],
-   "sales": [
-    {
-     "name": "开票",
-     "start": "2026-10-23 18:00",
-     "end": null,
-     "queue": null,
-     "available": true,
-     "code_required": false,
-     "url": "https://world.nol.com/en/ticket/places/26001270/products/26014350"
-    }
-   ],
-   "tiers": [
-    {
-     "name": "STANDING",
-     "price": "₩143,000"
-    },
-    {
-     "name": "Assigned Seat",
-     "price": "₩143,000"
-    }
-   ],
-   "limit": null,
-   "sold_out": false,
-   "url": "https://world.nol.com/en/ticket/places/26001270/products/26014350",
-   "first_seen": "2026-10-13 05:18",
-   "seat_maps": [],
-   "updates": {
-    "prices": "2026-10-20 02:44"
-   },
-   "artist_name": "Awesome Stage X FTISLAND",
-   "fans": 0,
-   "region": "K-pop",
-   "poster_img": "avatars/p-nol-26014350.jpg",
-   "avatar": "avatars/p-nol-26014350.jpg",
-   "avatar_kind": "poster",
-   "poster_portrait": true,
-   "platforms": [
-    {
-     "source": "NOL World",
-     "url": "https://world.nol.com/en/ticket/places/26001270/products/26014350",
-     "id": "nol-26014350",
-     "sold_out": false,
-     "price_from": null
-    }
-   ],
-   "hidden": null,
-   "news_added": null,
-   "added_status": null,
-   "sale_state": "GENERAL_SALE_ANNOUNCED",
-   "sale_evidence": [
-    {
-     "src": "NOL World 售票轮次",
-     "text": "开票",
-     "time": "2026-10-23 18:00"
-    }
-   ]
-  },
-  {
    "id": "nol-26015133",
    "country": "KR",
    "source": "NOL World",
    "name": "2026 SUNWOO FANMEETING 〈UNCHAINED〉",
    "artist": null,
    "type": "팬미팅",
-   "venue": "명화라이브홀",
+   "venue": "Myunghwa Live Hall",
    "city": "Seoul",
    "dates": [
     "2026-11-21",
@@ -5671,12 +5601,20 @@
      "url": "https://world.nol.com/en/ticket/places/25000246/products/26014663"
     }
    ],
-   "tiers": [],
+   "tiers": [
+    {
+     "name": "All Section",
+     "price": "₩55,000"
+    }
+   ],
    "limit": null,
    "sold_out": false,
    "url": "https://world.nol.com/en/ticket/places/25000246/products/26014663",
    "first_seen": "2026-10-20 02:44",
    "seat_maps": [],
+   "updates": {
+    "prices": "2026-10-20 13:00"
+   },
    "artist_name": "Nemesis",
    "fans": 8543,
    "region": "K-pop",
@@ -6385,6 +6323,76 @@
      "src": "NOL World 售票轮次",
      "text": "开票",
      "time": "2026-10-19 08:00"
+    }
+   ]
+  },
+  {
+   "id": "nol-26014350",
+   "country": "KR",
+   "source": "NOL World",
+   "name": "2026 Awesome Stage X FTISLAND : FaTe PE",
+   "artist": null,
+   "type": "Concerts",
+   "venue": "BLUESQUARE WOORI WON BANKING HALL",
+   "city": "Seoul",
+   "dates": [
+    "2026-11-28",
+    "2026-11-29"
+   ],
+   "sales": [
+    {
+     "name": "开票",
+     "start": "2026-10-23 18:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://world.nol.com/en/ticket/places/26001270/products/26014350"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "STANDING",
+     "price": "₩143,000"
+    },
+    {
+     "name": "Assigned Seat",
+     "price": "₩143,000"
+    }
+   ],
+   "limit": null,
+   "sold_out": false,
+   "url": "https://world.nol.com/en/ticket/places/26001270/products/26014350",
+   "first_seen": "2026-10-13 05:18",
+   "seat_maps": [],
+   "updates": {
+    "prices": "2026-10-20 02:44"
+   },
+   "artist_name": "Awesome Stage X FTISLAND",
+   "fans": 0,
+   "region": "K-pop",
+   "poster_img": "avatars/p-nol-26014350.jpg",
+   "avatar": "avatars/p-nol-26014350.jpg",
+   "avatar_kind": "poster",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "NOL World",
+     "url": "https://world.nol.com/en/ticket/places/26001270/products/26014350",
+     "id": "nol-26014350",
+     "sold_out": false,
+     "price_from": null
+    }
+   ],
+   "hidden": null,
+   "news_added": null,
+   "added_status": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-10-23 18:00"
     }
    ]
   },
@@ -8409,19 +8417,6 @@
      "code_required": false,
      "url": "https://www.fantopia.io/events-tickets?eventsKey=vuvk8zlu",
      "added": true
-    },
-    {
-     "name": "加场 · 开票（东方日报 娱乐）",
-     "start": "2026-12-20 12:00",
-     "end": null,
-     "queue": null,
-     "available": true,
-     "code_required": false,
-     "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/12/854647",
-     "announced": true,
-     "added": true,
-     "source_line": "而12月20日加场门票将于10月13日(星期二)中午12点通过官方售票平台 Fantopia.io 正式开售",
-     "kind": "sale"
     }
    ],
    "tiers": [
@@ -8487,7 +8482,6 @@
     "time": "2026-10-12",
     "from": "东方日报 娱乐"
    },
-   "sales_closed": false,
    "news_added": {
     "title": "A-Lin《歌迹 Journey》演唱会1220加场　门票明日正式开售！",
     "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/12/854647",
@@ -8499,11 +8493,6 @@
    "opened_approx": false,
    "sale_state": "SOLD_OUT",
    "sale_evidence": [
-    {
-     "src": "加场 · 开票（东方日报 娱乐）",
-     "text": "加场 · 开票（东方日报 娱乐）",
-     "time": "2026-12-20 12:00"
-    },
     {
      "src": "Fantopia 售票轮次",
      "text": "2026/12/20 5PM",
@@ -10554,7 +10543,7 @@
    "from": "东方日报 娱乐",
    "title": "The Weeknd抵达香港准备演唱会　梁朝伟刘嘉玲设宴款待",
    "text": "（香港20日讯）加拿大流行天王The Weeknd日前抵达香港，准备于10月24日起假启德主场馆展开一连两周末共 4 场的《After Hours Til Dawn》巡回演唱会。在万众期待的舞台演出前，影帝影后级夫妇梁朝伟与刘嘉玲特意设宴热情款待。刘嘉玲日前在社交媒体大方公开于维港夜景前的世纪合照，并幽默写下“What a perfect weekend with The Weeknd！”，席间更展示了获得The Weeknd亲笔签名致谢的专属菜单，梦幻联动瞬间掀起网民热烈讨论。随后，The W...\n（香港20日讯）加拿大流行天王The Weeknd日前抵达香港，准备于10月24日起假启德主场馆展开一连两周末共 4 场的《After Hours Til Dawn》巡回演唱会。在万众期待的舞台演出前，影帝影后级夫妇梁朝伟与刘嘉玲特意设宴热情款待。\n刘嘉玲日前在社交媒体大方公开于维港夜景前的世纪合照，并幽默写下“What a perfect weekend with The Weeknd！”，席间更展示了获得The Weeknd亲笔签名致谢的专属菜单，梦幻联动瞬间掀起网民热烈讨论。\n随后，The Weeknd亦在私人帐号分享与梁朝伟的合照，并别出心裁地选用王菲经典歌曲《梦中人》作背景音乐，巧妙致敬梁朝伟与王菲1994年主演、王家卫执导的经典电影《重庆森林》，令广大影迷与乐迷盛赞帖文充满港产片情怀与王家卫式浪漫。\n其实，The Weeknd早已是资深香港文化迷，过去不仅曾公开推介王菲1996年专辑《浮躁》，更屡次坦言香港流行文化对其音乐创作启发深远，今次交流更见深厚文化渊源。\n要看最快最熱資訊，請來Follow我們 《東方日報》 WhatsApp Channel .\nIOS： https://odn.my/ios\nGoogle Play： https://odn.my/android\nHUAWEI AppGallery： https://odn.my/appgallery",
-   "time": "2026-10-20 10:39",
+   "time": "2026-10-20 11:30",
    "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/20/856518",
    "hints": [],
    "sale_times": [],
@@ -10566,6 +10555,44 @@
    "platforms": [],
    "hidden": null,
    "listed": true
+  },
+  {
+   "id": "news-a1f444992a1182f7",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "马来西亚东方日报",
+   "title": "The Weeknd抵达香港准备演唱会 梁朝伟刘嘉玲设宴款待 - 马来西亚东方日报",
+   "text": null,
+   "time": "2026-10-20 11:30",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE02U0ZsTE00OXhZblhyUndBSFNLdnM4ZDJXMUtXUzlyb085Y1pyNlE1UDJNeWM3UllDbTFKVXFocWhpWnh2XzluYnFhQndXX3hnSV80NU9wWG4tLVkzaDRMcWJPNUtXLW92X0JaV0NscmJkMENrS3JrRg?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-20 13:00",
+   "matches": [
+    "golive-173"
+   ],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": null,
+   "listed": true
+  },
+  {
+   "id": "news-dd69e7b535d36cbb",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Lepas konsert tu, ke mana perginya duit tu? - Vietnam.vn",
+   "text": null,
+   "time": "2026-10-20 09:41",
+   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1HTU53b1A1SHlnYkd1SnA3UWJFRU5NV296dHB3RlRCSmthTUZ1R2pZZ3ZHMi1xV01ZRlpMRmI3emU0UVVQSV9GSE9YOEZYbWRmQzNlVE83QnFyMGdvNC1BaHBn?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-20 13:00",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
   },
   {
    "id": "news-22d3aa798780f811",
@@ -12182,6 +12209,24 @@
    "artist_photo": "avatars/a-65b3ec7c1b65.jpg",
    "hidden": null,
    "listed": true
+  },
+  {
+   "id": "news-4f29f300938aa166",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Menetapkan kedudukan rantaian nilai konsert - Vietnam.vn",
+   "text": null,
+   "time": "2026-10-17 15:00",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5aTnFBMlRWTnBtUEF6b0Znbm9wT3ZlSkxiRURPUHNGQlpuRkdzZC1YYTNHWXNhM2pCYk9JVDlKWjFZWTk2MlpLQnhVTkVPc21CbHVlWS1OejFOX1h2WkhWdmxxV2dTUQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-20 13:00",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
   },
   {
    "id": "news-987e6ee7fa55f2df",
@@ -13934,22 +13979,15 @@
    "time": "2026-10-12 17:53",
    "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/12/854647",
    "hints": [],
-   "sale_times": [
-    {
-     "time": "2026-12-20 12:00",
-     "line": "而12月20日加场门票将于10月13日(星期二)中午12点通过官方售票平台 Fantopia.io 正式开售",
-     "past": false,
-     "kind": "sale",
-     "added": true,
-     "name": null
-    }
-   ],
+   "sale_times": [],
    "first_seen": "2026-10-13 05:18",
    "matches": [
     "fantopia-vuvk8zlu"
    ],
    "status": "rumor",
-   "platforms": [],
+   "platforms": [
+    "Fantopia"
+   ],
    "hidden": null,
    "listed": true
   },
