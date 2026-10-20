@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-20 02:44",
+ "generated_at": "2026-10-20 11:26",
  "health": {
   "GoLive": {
    "ok": true,
@@ -10,10 +10,9 @@
    "count": 133
   },
   "BookMyShow": {
-   "ok": false,
-   "error": "HTTP 403",
-   "stale": true,
-   "count": 18
+   "ok": true,
+   "count": 19,
+   "local": "2026-10-20 11:26"
   },
   "Ticket2U": {
    "ok": true,
@@ -31,12 +30,12 @@
   },
   "Google News": {
    "ok": true,
-   "count": 82,
+   "count": 86,
    "error": null
   },
   "东方日报 娱乐": {
    "ok": true,
-   "count": 8
+   "count": 10
   },
   "人工线索": {
    "ok": true,
@@ -106,6 +105,19 @@
  ],
  "watch_artists": [],
  "news_checks": {
+  "Dion": {
+   "checked": "2026-10-20",
+   "country": "MY",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": null,
+   "count": 0,
+   "top": [],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null
+  },
   "NCT": {
    "checked": "2026-10-20",
    "country": "SG",
@@ -289,64 +301,6 @@
      "title": "孙盛希126首攻大马开唱 《The Taste Of…》唱尽人生百味 - China Press",
      "url": "https://news.google.com/rss/articles/CBMiswJBVV95cUxQOFp0Wm9tUnhoc3E5dFFiSTVGSlRYQUFrTl9xZWJWcEV2UUM4bHRJUWhYVDk2NUFBY08taWxYRGhnXzJMXzZxQS1fZzJKenh0dDhIYW1IWlYwUV9KOE9wcU1rUl8tdmUwSFdueXpmalJWRzh2Qk5IYXJFUkRDdGVoSV9HcXlXTS1SMkdVclNmWlBqS1lZNFRXUXRVQ3pLSVZVZXRqVUthcUowSkFkUllNeWN2c0VsNzZXdEgyYXhjNUF1bUZMMmFnZlZqbkIzbHpDTlZFM0RhajNadENtdHhBanhzckUzdGdncTdqZW0zYmlwUkR2OVJTYkVIaVVGVnRGNTJxZ00tcDZXVTZvdUxUNk9Hdkx0cDhsUzJEdEtBUGQ0cVpzT0xEd2VpbkZIUGZuZ3hJ?oc=5",
      "time": "2026-09-01"
-    }
-   ],
-   "platforms": [],
-   "sale_times": [],
-   "added": false,
-   "added_news": null
-  },
-  "姚晓棠": {
-   "checked": "2026-10-20",
-   "country": "MY",
-   "deep": false,
-   "soldout_news": null,
-   "opened_news": null,
-   "count": 5,
-   "top": [
-    {
-     "title": "出道5年首次开启海外巡演 姚晓棠1212云顶开唱 - 娱乐 - 大马娱乐 - Sin Chew Daily",
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOWFppRkxQYVlwYTRpM3pTa2RfUUhiN1hLejM4cDI3REtGcDZ0RWNfRDZEWFEwdmZ6ZW9UUmNoa0J4VGJodVZSRVZockpYY3pHQURiQXBDMzEzTmZmTlhkWkZzQlVCbkx6ZEktZFVxY0pHZXJUWnFBeU1qemhDb0NXemFyOHg?oc=5",
-     "time": "2026-10-19"
-    },
-    {
-     "title": "12 Dec: 姚晓棠 Yao Xiaotang “Breaking Dawn · Bangbangtang” Concert in Malaysia 2026 - Star Planet",
-     "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5kWTZRc1Nvc3QwQVVmT19PcTFVSjZSZVlHUElwbGNsZ3hHNHVVNU04ckc2WmpybEhRY0Y0V2VDRWpfXzhaVFNvaDlJN09YVXZU?oc=5",
-     "time": "2026-10-14"
-    },
-    {
-     "title": "12.12，马来西亚见✌️ #姚晓棠马来西亚演唱会# ​ - 手机新浪网",
-     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1LalRRejZpOWhCY2FDWDFteFgyc0hKT0xwR1pnMlVUTG5UMnNPNnBnSHN6SHcwRDFUMDBGMVlDb0NoenZMTVZRLUtPV28zWThvMzVGX3J6RWlGd3lfSmNwUVR5bw?oc=5",
-     "time": "2026-10-14"
-    }
-   ],
-   "platforms": [],
-   "sale_times": [],
-   "added": false,
-   "added_news": null
-  },
-  "Stars": {
-   "checked": "2026-10-20",
-   "country": "MY",
-   "deep": false,
-   "soldout_news": null,
-   "opened_news": null,
-   "count": 5,
-   "top": [
-    {
-     "title": "MELODY｜《Odyssey · Stars 旅程· 星空》世界巡回演唱会 - 吉隆坡站 ｜探子回报 20261002 - Syok BM",
-     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQSERURTdMMk5wSlZITm5PSzUxMkNMZktXR0tSS2w1SlNxMURRWHFIV0d6aGZ4SnlyNHh3MkdVbTkzSmVhUkNxZThQVElTMjB1VTZGQ3pLT2dtWUtyR0sza0JFTHNJdmJzRVRPR0ViTER6U0lfZEJvdU9lZnppeXVGY1JKaw?oc=5",
-     "time": "2026-10-02"
-    },
-    {
-     "title": "MY FM 演唱会大牌 - 周兴哲《Odyssey · Stars 旅程 · 星空》- 吉隆坡站 - my.com.my",
-     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNSmVBRm84TmxHbHBDUGtyak1MbWRTNVl5X0dKLUdMQWlRaWQ2TkF3bG9sUjY3NmhMem5BVE1pTm9FSWFpWjkxUWQyOERuWHU5SVRxdk83UE9IOFZNODV5Y0g4R3lkX0tndzRhSHhPOE91OVBYQ3dUdmw5TFlaek5XaTFSTUNJRVdJLUt0d2prczZjVjAyUW1lRHlETk5MeXlEVmxsYTBJcmRvMHllZzNZ?oc=5",
-     "time": "2026-09-07"
-    },
-    {
-     "title": "More pickleball stars announced for KL PPA Tour Asia event - NST Online",
-     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQR1BGbE5aSlZkalQycERUQWdQUF9zNkRBTFVKeGd4TVNzUko5NWN3bWlMZ255cGJlZ0FCdXh1bFdlYmRxUWhpaVRtU3hoczdKY0RCR1VWZEI1cnlSaWNkVDNnZGhaV3gwYVA5ZlJ1OTVPdTFLbXNtWEdMQnl2ZTNPemoyWXFXcDBXNGxhclNQaVVhb0N0MmswMEVaS0ZiYngyMWxQbE9oS1LSAa4BQVVfeXFMUDdtdzlVOGhmUlJXbExHZ1RzcmFEcDVWSEd3X1pzVFVITzZtSkZ1TElpVm5TaEgxdThyalo0dkpPSU5HYm9uc0NJOWg3Y0FEQTB2emlJZk43UFZWbkVDWl9lNmtITmxFdmF1RjBocGdodEU1THZkSTNXa0lpVi1xeU00bnEwRU44MUVoZ1FxWUpMYXd5blRENTR1dXRkTGxqc1pYdF96NkJpdjVRQ0xn?oc=5",
-     "time": "2026-09-02"
     }
    ],
    "platforms": [],
@@ -935,6 +889,47 @@
    "added": false,
    "added_news": null
   },
+  "The Weeknd": {
+   "checked": "2026-10-20",
+   "country": "MY",
+   "deep": false,
+   "soldout_news": {
+    "title": "The Weeknd’s KL presale sells out in two hours, fans gear up for next battle - Malay Mail",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNR1dhQ2EtQUpHSHNfcTluemdXQk5nNmtzMTh4NThqeHZmUzRRSVZOTUJlWWZSMnYzNkUzMWV6QVlzQ3k2WUNoSFYtc1pveUoteWV2alU1MUNDTEdLWFY5d1ZFM2RPdDFSTV9YR2U2ZjlGSjd5N0lEU3JpVEl2TE5TWEtweDMtMkZOcHFQUURzX041QVFvZXd1NHZqX3J0d3V4c3RobjRMdWh0OTFxVllYaWZMSmNoZDdIZmZBblo2dGNIVDBYXzZycUpfb9IB0AFBVV95cUxNSzR0NUUwaVM1NkRwSHVnSklGTDRNTzZQNVRJUm03Z1ZxWGV3WkpSV2F4aXg0VmpCeUM2WGo4eGZCVjJVbVNjOXJZZTZhaXJBTlU5aWtxNkRYTVR1bnlsYXF5SmFqVHprN3dsak5acW1UUlRKUXJCVjMxaDhHZlJuWUc5SGs4bjRRVXZSd3kwbWhhdVRpUmJZUGZFeVY3aDVwQ2pCQTNWMFJzdmxwU0RwNDhTbnRoVnFtUlpxMmxDOG5oNUZlYjNRb2NPRHZ1VlJQ?oc=5",
+    "time": "2026-05-18"
+   },
+   "opened_news": {
+    "title": "The Weeknd’s KL presale sells out in two hours, fans gear up for next battle - Malay Mail",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNR1dhQ2EtQUpHSHNfcTluemdXQk5nNmtzMTh4NThqeHZmUzRRSVZOTUJlWWZSMnYzNkUzMWV6QVlzQ3k2WUNoSFYtc1pveUoteWV2alU1MUNDTEdLWFY5d1ZFM2RPdDFSTV9YR2U2ZjlGSjd5N0lEU3JpVEl2TE5TWEtweDMtMkZOcHFQUURzX041QVFvZXd1NHZqX3J0d3V4c3RobjRMdWh0OTFxVllYaWZMSmNoZDdIZmZBblo2dGNIVDBYXzZycUpfb9IB0AFBVV95cUxNSzR0NUUwaVM1NkRwSHVnSklGTDRNTzZQNVRJUm03Z1ZxWGV3WkpSV2F4aXg0VmpCeUM2WGo4eGZCVjJVbVNjOXJZZTZhaXJBTlU5aWtxNkRYTVR1bnlsYXF5SmFqVHprN3dsak5acW1UUlRKUXJCVjMxaDhHZlJuWUc5SGs4bjRRVXZSd3kwbWhhdVRpUmJZUGZFeVY3aDVwQ2pCQTNWMFJzdmxwU0RwNDhTbnRoVnFtUlpxMmxDOG5oNUZlYjNRb2NPRHZ1VlJQ?oc=5",
+    "time": "2026-05-18"
+   },
+   "count": 19,
+   "top": [
+    {
+     "title": "The Weeknd’s KL concerts sell-out cements city’s bid for global tour spotlight - Malay Mail",
+     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPaEVOdm9PMm81ZGVvaTJLbUxGNktDUHNSWDV6VU5QUVp1dkd2ZHBfQld2N2pSNm9OWHJzeVJSbFFXRWlkMG1BUHlidFRlUEJ6d2s4LW1fZkFnZHpaZks0UlFpclJhMkxqSTJ5N0FxbG54TldTRWI3SFNtUmFrUHV0LURFYkZ0Yk1ZRTdwbU9wdnQ2SmhPTXQwQ2dpYk1KeHZZRXFkMlZ6dXNjTmw5N3BPSnFVV3l6TmdDYzRrY3JyLVJyUkJxdHFwVEZEdWQyZ9IB0wFBVV95cUxQRjJabnlmMk9aRFJkLUcteVRFMWdMVVlVWVBfdDRtc3YzXzdyb2s3YmRMc1VSZTZyakVNNUg4OFJ6UWVMektDdUR2VVRFcFVnRjBIWkw0TWpia2tBOEhBSUxyYlc4ZVQ0SjUwTnlUN3dmUkJnbHBZdFBsTWczN1YzV2JWUlpWXzVwbmw2YmxOMy0za3gtV0ZuaGRvWE9UbzBQdjBqTHpHTGZUNGFxRnltREwtWWlaMmpmUWF3TnNlMmFTcWlYZXRTVkNnUkJfdk53SHc4?oc=5",
+     "time": "2026-06-03"
+    },
+    {
+     "title": "Zedex offers \"The Weeknd\" concert tickets to students applying for Malaysian universities - Edition.mv",
+     "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE03YW84OFhpR0FPc0c2bldJZ1djUDFIM25GYXNsNHF0Tl9NSUNBdGZFbkxsZmlZejk5WFFJdmpvRVNRcEk5OV9KTg?oc=5",
+     "time": "2026-05-29"
+    },
+    {
+     "title": "Live Nation MY Adds 2nd Show For The Weeknd’s KL Concert; Tickets Go On Sale 20th May - Hype.MY",
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQSGhCSjlaWWdOZnVyR3llSGFTbmlhcTd2ekp3RDRFSmJybEMycW90R3daUlZYZUU5THB4WUFlYXZkUjFWbTN0WUJYX3lNTjBIcTMtTU9hdjFpNl9QMGhURkRESlN1a1d0YUJLcnp5R0tKd29VWHg4QndnWjRHc2lXeTIzbkQ2ejlUd1poR2s0bDRmNEt2b2dkZTRRenp5NHJtYVE?oc=5",
+     "time": "2026-05-20"
+    }
+   ],
+   "platforms": [],
+   "sale_times": [],
+   "added": true,
+   "added_news": {
+    "title": "The Weeknd adds second Malaysia show after both pre-sales sell out in minutes - Lifestyle Asia Hong Kong",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNRkRpTXcyRWdnVUNPUXBJeVc2Q2JKUUVLX2h5cFY2NWFLTXppX205UXRETkpaQW8wandqa0Q0OFdDbVNwQXdsaTgyVlBpcTl4LS10M0VpZlExRUloZzVGSGdQWmpjZmtMUEc3c0ZYWUZENVp3X3VaSXBMVVBTNDI1QmszZHNQQlE5RmYtRGpkNEFHR3lQb1lyVHJFcUlWQVBEN2xWVGc4RlRBMmhjODA3V2t0enplam1UZTgyMC0yUU5meDJvNUxud3dFc0lucDE3WlE?oc=5",
+    "time": "2026-05-19"
+   }
+  },
   "Evanescence": {
    "checked": "2026-10-20",
    "country": "MY",
@@ -1290,7 +1285,7 @@
    "added_news": null
   },
   "FKJ": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1323,7 +1318,7 @@
    "added_news": null
   },
   "Blue": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1352,7 +1347,7 @@
    "added_news": null
   },
   "LANY": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1366,7 +1361,7 @@
     },
     {
      "title": "LANY concert in Malaysia 2026: Ticket prices, setlist, and more - Lifestyle Asia Hong Kong",
-     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVHFzczVTc2gtbFRrTDd0UHBhUUF0dXk4RDBmakc3bF9hZnlQeTNDNm5jZC0zdGNVME16a3BLOXgzbUEtR2Q2bnZvRXJHdE1kcVdfcFltcFVtRDVXOXBUZkJmREg2ZTV1eklpNEo5bWlnSGNPcXVkeWNKS2o3TEVhNWVsbHdySHI5MVcwSTZUWjdsYklQRXRTVHE4V3VUOEZoTzhEdW9EdUo4b3ZGTXRvQ1dxeTVmY0xHRG1fMzlTNXBmM2vSAcgBQVVfeXFMUHVRMkVvUTI3c0FNOC1CY0hFd0thekowU2xNU2p0WDlwWlpvcGdfVXNidDMxbElLNXU3WHlzNmE2VEItc0NBNUp2eGE2UHRFVnkwdGdVY2JwcG1PeGJadjdYQzNGYm5GTWxJeHB5MXV0a1pZbTU0QUh6OTQyb2JiVlZUQ2ZHQkRBcE9mSlRxR0xaOUJjdmRDTTRvdXhBY3BHYmdXbzJjSnF4amhyU25UVTZXODVVTFp4S1haYmVZMFlWODQxZW1aN2M?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVHFzczVTc2gtbFRrTDd0UHBhUUF0dXk4RDBmakc3bF9hZnlQeTNDNm5jZC0zdGNVME16a3BLOXgzbUEtR2Q2bnZvRXJHdE1kcVdfcFltcFVtRDVXOXBUZkJmREg2ZTV1eklpNEo5bWlnSGNPcXVkeWNKS2o3TEVhNWVsbHdySHI5MVcwSTZUWjdsYklQRXRTVHE4V3VUOEZoTzhEdW9EdUo4b3ZGTXRvQ1dxeTVmY0xHRG1fMzlTNXBmM2s?oc=5",
      "time": "2026-03-25"
     },
     {
@@ -1381,7 +1376,7 @@
    "added_news": null
   },
   "Jay Chou": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1410,7 +1405,7 @@
    "added_news": null
   },
   "BOYNEXTDOOR": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1443,7 +1438,7 @@
    "added_news": null
   },
   "wave to earth": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1476,7 +1471,7 @@
    }
   },
   "One Love": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1489,7 +1484,7 @@
    "added_news": null
   },
   "Yung Kai": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1518,7 +1513,7 @@
    "added_news": null
   },
   "YESUNG": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1547,7 +1542,7 @@
    "added_news": null
   },
   "40 Fingers": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1560,7 +1555,7 @@
    "added_news": null
   },
   "Young K": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1589,7 +1584,7 @@
    "added_news": null
   },
   "理想混蛋": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1622,7 +1617,7 @@
    "added_news": null
   },
   "DIOR 大穎": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": {
@@ -1663,7 +1658,7 @@
    }
   },
   "周兴哲": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": {
@@ -1676,7 +1671,7 @@
     "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxOUnVWWHBjVUhiOVg1UHVESVVqVnNadkI5TXdVbGRpMkpFbjIwZnE2eVI3cUdJV2JBV0NaTUUxdUNtaXN3WXp0UF9UaWVVeWRFTk1IMVZaQ1MwT281c05KNzZnSjlia05Za0ljd3QxTk90OWtZWmFHUU82Z3NMOWw2X1Z2QVY5V0lkQjd0ajRIaGs4N0U5X3ItRHlSSjg5V0Y5emlOZ0R4RGVPOVlNMXN4NTZLcHA0d0VsZXNqWGJNMWZTOWx3UHZyMzVlY1NrZHI3VGRScVZ2VVBiSVVkdUpILTJuLXFXVEtSS3JfeXV3M09CZEd0RDRFeHZ0cktVdTRGMjBObFE5NzRVLW15bkVESjdZYU1MSGpJMlpubHhIZk5pZl9pSTVkWWYzWkpxNXc0NGFCaVR1dDJDRFdhbWY0WHZn?oc=5",
     "time": "2016-11-11"
    },
-   "count": 20,
+   "count": 19,
    "top": [
     {
      "title": "周兴哲演唱会2026马来西亚｜门票优先/公售攻略+购票连结+座位表 - 香港01",
@@ -1698,13 +1693,13 @@
    "sale_times": [],
    "added": true,
    "added_news": {
-    "title": "周兴哲再加场！ 大马演唱会连唱3天 - Sin Chew Daily",
-    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5OUXh5Z09NUmlDNDlYLWk1ZFZnbi1ZWHgtVi1Ec2hUanp5bjhQOUZjV0RBQXF4SU1lcHg4NG9TaEY5VW9hd1ZQbDFoSHUweVdCSmFoZWp0S01CR0JBMk5JWHcxYmJIQnFVOTQ4NkFqUQ?oc=5",
+    "title": "连开3场！周兴哲演唱会大马站再加场 | 精彩大马 - 精彩大马",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNY3ZzYmFnTE9TeXFOMW1reEJQNlFxRnlOTzFvZUdzZUFsSGRGQnhZcFNTdTlROUxoNk45eGg2R2ZuNVRaMkwtLWtJeVlVUTlZV1B5bUw2dXpGYkdJZ05nM3BzaW1JemR6U3pUSG8tcDRLQndlaXl4OVZmbHNJVmEwX2pzekZTRWdmTktjbUVzd25HQjJxVHl3NTRB0gGfAUFVX3lxTE5MZVZxNG05VDMzZjZLZGZTTEx6ZUlpZmltWXZIR3Bhd0p5SGphVVBwZGhuNFV2dGxoekxaQ3V4ZE90ZHktVnR5MzRnTHBmUUlHZElPX1lKX1p5RmVkazFDcHV2MjJMTnNybXpTTk9tX2VyWHozaVY2RGFYeXVGeDhTZ0dBejVVWUgwTnMySkpZYzlJWk1ua21QZmo4SFVKbw?oc=5",
     "time": "2023-03-04"
    }
   },
   "邱鋒澤": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1717,7 +1712,7 @@
    "added_news": null
   },
   "ROSETOPIA": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1736,7 +1731,7 @@
    "added_news": null
   },
   "QWER": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1765,7 +1760,7 @@
    "added_news": null
   },
   "世界巡回演唱会": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": {
@@ -1802,7 +1797,7 @@
    "added_news": null
   },
   "2026叁缺壹巡演吉隆坡站": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1815,7 +1810,7 @@
    "added_news": null
   },
   "那些年的歌3 演唱會 Songs": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -1828,7 +1823,7 @@
    "added_news": null
   },
   "ULTRAMAN": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1852,7 +1847,7 @@
    "added_news": null
   },
   "巫启贤": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -1865,7 +1860,7 @@
    "added_news": null
   },
   "演唱会 Songs That Keep Us Together": {
-   "checked": "2026-10-19",
+   "checked": "2026-10-20",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -3183,8 +3178,61 @@
    "dates": [
     "2026-11-01 16:00"
    ],
-   "sales": [],
-   "tiers": [],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-11-01 21:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/51322/vijay-antony-live-in-concert-2026"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "MIP",
+     "price": "RM 1,999.00",
+     "desc": "Free Seating",
+     "sold_out": false
+    },
+    {
+     "name": "VIP",
+     "price": "RM 999.00",
+     "desc": "Free Seating",
+     "sold_out": true
+    },
+    {
+     "name": "NAAKA MUKKA",
+     "price": "RM 299.00",
+     "desc": "Free Standing",
+     "sold_out": false
+    },
+    {
+     "name": "FANPIT",
+     "price": "RM 259.00",
+     "desc": "Free Standing",
+     "sold_out": true
+    },
+    {
+     "name": "PLATINUM",
+     "price": "RM 259.00",
+     "desc": "Free Seating",
+     "sold_out": true
+    },
+    {
+     "name": "GOLD",
+     "price": "RM 209.00",
+     "desc": "Free Seating",
+     "sold_out": true
+    },
+    {
+     "name": "SEXY LADY KITTA VAADI",
+     "price": "RM 159.00",
+     "desc": "Free Standing",
+     "sold_out": true
+    }
+   ],
    "price_from": "RM 99.00",
    "limit": null,
    "sold_out": false,
@@ -3192,6 +3240,9 @@
    "country": "MY",
    "first_seen": "2026-09-29 08:34",
    "seat_maps": [],
+   "updates": {
+    "prices": "2026-10-20 11:26"
+   },
    "artist_name": "Vijay Antony",
    "fans": 6783,
    "region": "其他",
@@ -3446,11 +3497,11 @@
     },
     {
      "name": "General Sales",
-     "start": "2026-09-29 11:00",
+     "start": "2026-10-20 10:00",
      "end": null,
-     "queue": "2026-09-29 10:30",
-     "available": false,
-     "status": "SOLD_OUT",
+     "queue": null,
+     "available": true,
+     "status": "ACTIVE",
      "code_required": false,
      "url": "https://golive-asia.thaiticketmajor.com/booking/prww/buynow.php?query=467"
     }
@@ -3480,7 +3531,7 @@
     "Admission Policy": "Reserved Seating\nSeated sections are open to ages 6 years old and above. However, attendees below 16 years old must be accompanied by a ticket-bearing legal guardian aged 18 and above.\nBabies and toddlers are strictly not allowed.\nSome seats, including the first row and portions of the second and third rows, may have restricted views due to production equipment, handrails, or safety installations (e.g. stage mechanics, cameras, FOH). Obstruction levels vary by seat location — please carefully consider before purchasing.",
     "VIP Entitlements": "ULTIMATE VIP PACKAGE (RM2,888)\nInclusions:\nOne (1) first-tier floor seated ticket\nUnprecedented stage access for a photo opportunity with your party by a professional photographer from where The Weeknd will perform later*\nExclusive Photo Souvenir: Capture your evening with a special keepsake from The Weeknd Photo Booth*\nLimited edition The Weeknd gift item\nVIP laminate and lanyard\nExclusive VIP only wristband\nPriority merchandise shopping (if applicable)\n*No artist participation\nGOLD VIP PACKAGE (RM2,088)\nInclusions:\nOne (1) first-tier floor seated ticket\nExclusive Photo Souvenir: Capture your evening with a special keepsake from The Weeknd Photo Booth*\nLimited edition The Weeknd gift item\nV…"
    },
-   "sold_out": true,
+   "sold_out": false,
    "sales_closed": false,
    "selling_fast": false,
    "organizers": [
@@ -3503,7 +3554,7 @@
      "source": "GoLive",
      "url": "https://www.golive-asia.com/event/173",
      "id": "golive-173",
-     "sold_out": true,
+     "sold_out": false,
      "price_from": null
     }
    ],
@@ -3512,12 +3563,12 @@
    "added_status": null,
    "opened_at": "2026-05-18 10:00",
    "opened_approx": false,
-   "sale_state": "SOLD_OUT",
+   "sale_state": "ON_SALE",
    "sale_evidence": [
     {
      "src": "GoLive 售票轮次",
      "text": "General Sales",
-     "time": "2026-09-29 11:00"
+     "time": "2026-10-20 10:00"
     },
     {
      "src": "GoLive 售票轮次",
@@ -3533,6 +3584,12 @@
      "src": "GoLive 售票轮次",
      "text": "Artist Presale",
      "time": "2026-05-18 10:00"
+    },
+    {
+     "src": "Google 新闻",
+     "text": "The Weeknd’s KL presale sells out in two hours, fans gear up for next battle - Malay Mail",
+     "time": "2026-05-18",
+     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNR1dhQ2EtQUpHSHNfcTluemdXQk5nNmtzMTh4NThqeHZmUzRRSVZOTUJlWWZSMnYzNkUzMWV6QVlzQ3k2WUNoSFYtc1pveUoteWV2alU1MUNDTEdLWFY5d1ZFM2RPdDFSTV9YR2U2ZjlGSjd5N0lEU3JpVEl2TE5TWEtweDMtMkZOcHFQUURzX041QVFvZXd1NHZqX3J0d3V4c3RobjRMdWh0OTFxVllYaWZMSmNoZDdIZmZBblo2dGNIVDBYXzZycUpfb9IB0AFBVV95cUxNSzR0NUUwaVM1NkRwSHVnSklGTDRNTzZQNVRJUm03Z1ZxWGV3WkpSV2F4aXg0VmpCeUM2WGo4eGZCVjJVbVNjOXJZZTZhaXJBTlU5aWtxNkRYTVR1bnlsYXF5SmFqVHprN3dsak5acW1UUlRKUXJCVjMxaDhHZlJuWUc5SGs4bjRRVXZSd3kwbWhhdVRpUmJZUGZFeVY3aDVwQ2pCQTNWMFJzdmxwU0RwNDhTbnRoVnFtUlpxMmxDOG5oNUZlYjNRb2NPRHZ1VlJQ?oc=5"
     }
    ],
    "ocr_tiers": [
@@ -10030,6 +10087,47 @@
    "sale_evidence": []
   },
   {
+   "id": "bms-BMSQFZKL",
+   "source": "BookMyShow",
+   "name": "2026 邱鋒澤 Feng Ze Bend The Lines Concert - Malaysia",
+   "artist": null,
+   "type": null,
+   "venue": "Zepp Kuala Lumpur",
+   "city": null,
+   "dates": [],
+   "sales": [],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/2026-qiu-feng-ze-feng-ze-bend-the-lines-concert-malaysia/BMSQFZKL",
+   "country": "MY",
+   "first_seen": "2026-09-29 11:12",
+   "seat_maps": [],
+   "artist_name": "邱鋒澤",
+   "fans": 24,
+   "region": "华语",
+   "poster_img": "avatars/p-bms-BMSQFZKL.jpg",
+   "avatar": "avatars/a-3f068ff661d7.jpg",
+   "avatar_kind": "artist",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/2026-qiu-feng-ze-feng-ze-bend-the-lines-concert-malaysia/BMSQFZKL",
+     "id": "bms-BMSQFZKL",
+     "sold_out": false,
+     "price_from": null
+    }
+   ],
+   "hidden": null,
+   "news_added": null,
+   "added_status": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
+  },
+  {
    "id": "bms-BMSASP26",
    "source": "BookMyShow",
    "name": "Air Supply A Matter of Time Tour",
@@ -10125,6 +10223,7 @@
     }
    ],
    "hidden": null,
+   "sales_closed": false,
    "news_added": null,
    "added_status": null,
    "sale_state": "GENERAL_SALE_ANNOUNCED",
@@ -10344,6 +10443,68 @@
    "sale_evidence": []
   },
   {
+   "id": "bms-BMSYXT26",
+   "source": "BookMyShow",
+   "name": "姚晓棠「破晓·棒棒棠」演唱会 — 马来西亚站",
+   "artist": null,
+   "type": null,
+   "venue": "Arena of Stars, Resorts World Genting",
+   "city": null,
+   "dates": [],
+   "sales": [
+    {
+     "name": "开票（东方日报 娱乐）",
+     "start": "2026-10-22",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/14/855063",
+     "announced": true,
+     "added": false,
+     "source_line": "10月22日全面开售",
+     "kind": "sale"
+    }
+   ],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/yao-xiao-tang-2026/BMSYXT26",
+   "country": "MY",
+   "first_seen": "2026-10-20 11:26",
+   "seat_maps": [],
+   "artist_name": "姚晓棠",
+   "fans": 64,
+   "region": "华语",
+   "poster_img": "avatars/p-bms-BMSYXT26.jpg",
+   "avatar": "avatars/a-964465e375fa.jpg",
+   "avatar_kind": "artist",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/yao-xiao-tang-2026/BMSYXT26",
+     "id": "bms-BMSYXT26",
+     "sold_out": false,
+     "price_from": null
+    }
+   ],
+   "hidden": null,
+   "sales_closed": false,
+   "news_added": null,
+   "added_status": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "开票（东方日报 娱乐）",
+     "text": "开票（东方日报 娱乐）",
+     "time": "2026-10-22"
+    }
+   ]
+  },
+  {
    "id": "bms-BMS26SSX",
    "source": "BookMyShow",
    "name": "孙盛希 Shi Shi [ The Taste Of… ] 世界巡回 吉隆坡站",
@@ -10387,6 +10548,212 @@
  ],
  "leads": [
   {
+   "id": "news-12961bb24956f52e",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "东方日报 娱乐",
+   "title": "The Weeknd抵达香港准备演唱会　梁朝伟刘嘉玲设宴款待",
+   "text": "（香港20日讯）加拿大流行天王The Weeknd日前抵达香港，准备于10月24日起假启德主场馆展开一连两周末共 4 场的《After Hours Til Dawn》巡回演唱会。在万众期待的舞台演出前，影帝影后级夫妇梁朝伟与刘嘉玲特意设宴热情款待。刘嘉玲日前在社交媒体大方公开于维港夜景前的世纪合照，并幽默写下“What a perfect weekend with The Weeknd！”，席间更展示了获得The Weeknd亲笔签名致谢的专属菜单，梦幻联动瞬间掀起网民热烈讨论。随后，The W...\n（香港20日讯）加拿大流行天王The Weeknd日前抵达香港，准备于10月24日起假启德主场馆展开一连两周末共 4 场的《After Hours Til Dawn》巡回演唱会。在万众期待的舞台演出前，影帝影后级夫妇梁朝伟与刘嘉玲特意设宴热情款待。\n刘嘉玲日前在社交媒体大方公开于维港夜景前的世纪合照，并幽默写下“What a perfect weekend with The Weeknd！”，席间更展示了获得The Weeknd亲笔签名致谢的专属菜单，梦幻联动瞬间掀起网民热烈讨论。\n随后，The Weeknd亦在私人帐号分享与梁朝伟的合照，并别出心裁地选用王菲经典歌曲《梦中人》作背景音乐，巧妙致敬梁朝伟与王菲1994年主演、王家卫执导的经典电影《重庆森林》，令广大影迷与乐迷盛赞帖文充满港产片情怀与王家卫式浪漫。\n其实，The Weeknd早已是资深香港文化迷，过去不仅曾公开推介王菲1996年专辑《浮躁》，更屡次坦言香港流行文化对其音乐创作启发深远，今次交流更见深厚文化渊源。\n要看最快最熱資訊，請來Follow我們 《東方日報》 WhatsApp Channel .\nIOS： https://odn.my/ios\nGoogle Play： https://odn.my/android\nHUAWEI AppGallery： https://odn.my/appgallery",
+   "time": "2026-10-20 10:39",
+   "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/20/856518",
+   "hints": [],
+   "sale_times": [],
+   "first_seen": "2026-10-20 11:26",
+   "matches": [
+    "golive-173"
+   ],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": null,
+   "listed": true
+  },
+  {
+   "id": "news-22d3aa798780f811",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "매일일보",
+   "title": "대교, 싱가포르서 '넘버블록스' 후속작 공개…해외 공연 확대 - 매일일보",
+   "text": null,
+   "time": "2026-10-20 09:01",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE55OWc0Vk9UMWlNYVJpMkFwclR3R01KNnM3aUdSenJHcVFYQkFadzdtMV9QS3NaM3VySTdPYnJ0b0hFYWlnYURFMXE2cjhLNUhOWmpIcnI0aXJ4dVJfZnVmUHFvUkQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-20 11:26",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-1fefa618b320ffda",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Siakap Keli",
+   "title": "TBS Sokong Langkah Penjualan Tiket Bas Ekspres Hanya Melalui Terminal Berlesen APAD - Siakap Keli",
+   "text": null,
+   "time": "2026-10-20 08:56",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNM0FodklDN3YxUFE3OThjb3M1WlZMS0FETWZvaE94ajhLem5fTmlkZ0RNMUs3NTBHT3IyUTNaamhpdU9QODVjajdjNWs1X296N2Fxdk5QLVJhX2pNbWlMU1F2cm1jNldVSVROR2k5d3ppVkM3ZGRyOG1DNjYwM0ZVNnE0WTFRMEJoektHdnhDNXpubmNId25iNVdCZlhLc044dHRXYUNncDBIdndZbkVfVjhwZC0?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-20 11:26",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-55019d20c7bd0821",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Sin Chew Daily",
+   "title": "Karencici 1219来马开唱 邀“Losers”狂欢 - 娱乐 - 大马娱乐 - Sin Chew Daily",
+   "text": null,
+   "time": "2026-10-20 08:00",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5vQ3c1YV92VDJGZ004dlNOMGg2YlF0TEFoeFhVNVdZdlA1dldaemJqbmxBbFAwYUpKVWJHc2EtSk5IelpNeXNzV1RPVk1TeEJPdWZXOERnLW8tcG53Nm5CcU55UXNGNnl5RnhuT1hSQQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-20 11:26",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-00e986e86e0836d0",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "马来西亚东方日报",
+   "title": "袁咏仪亲为张智霖买衣被“嫌弃” 曝老公演唱会幕后搞笑秘辛 - 马来西亚东方日报",
+   "text": null,
+   "time": "2026-10-20 07:34",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE03OFhha2FCNmVXM0FlTVlVaHBYOVM4UFZBWGFjSURCTG9yVXczOWFnODVpNEFBSDlXYXBldU1VMHRodGZkUjdOLXFZRlowVzczQTNndWg4cUJLN0drWDRMbUlEaUdoeXlHM3J4Z3JObi04QzdmaFZ0Zw?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-20 11:26",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-b20fc156c26164d8",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "东方日报 娱乐",
+   "title": "袁咏仪亲为张智霖买衣被“嫌弃”　曝老公演唱会幕后搞笑秘辛",
+   "text": "（香港20日讯）影后袁咏仪（靓靓）日前作客中国网络访谈节目，大曝老公张智霖（Chilam）筹备演唱会期间的幕后爆笑秘辛。据港媒星岛头条报导，袁咏仪透露整个演唱会花费最多的环节正是服装造型，更笑称张智霖起初曾天真提出“用一套衣服完成整个演唱会”，理由是演唱会主题为“在”，只要歌迷与歌手彼此都在场便已足够。不过此举立即遭到袁咏仪果断否决，袁咏仪更笑言：“这样人家会以为你在骗钱！”为了呈现最佳舞台效果，袁咏仪决定亲力亲为担任服装统筹，为张智霖打理造型，却被丈夫当面“投诉”。 袁咏仪透露曾果断否决张智霖...",
+   "time": "2026-10-20 07:34",
+   "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/20/856489",
+   "hints": [],
+   "sale_times": [],
+   "first_seen": "2026-10-20 11:26",
+   "matches": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-9cd0a0bbc8e3140c",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "GamerBraves",
+   "title": "SONIC Fan Meeting Comes to Kuala Lumpur on November 7 With Two Sonic Team Creators - GamerBraves",
+   "text": null,
+   "time": "2026-10-20 06:02",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTXlqdDBtTXlJRGZGcVRjeHlRdnlONzZZR3RPLTF5X3gwZ3gtUnkxeU10Ri0zeF9mS2ZXMkVVdFpENnA4NDJLVHBtaFRlS1BaTHNmU1ZLSkJETUhKVlhCT2dLMzZCSUVJZXdPb1NveDVlXzBNbmNPWDBPWHUwdEY2ZEhrdGFVX0VXeGx4RTZoOVMxR19FdjJXMndCbkp6ZWNGcU5JbVJIdk9ORERlakpyZA?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-08 02:59",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-9a64e28dfee6fe66",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "TicketNews",
+   "title": "Singapore Police Report At Least 14 BTS Concert Ticket Scams Since June 1 - TicketNews",
+   "text": null,
+   "time": "2026-10-20 03:45",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOcHdwUFdwYVIySWFKdmxSOU1oa3RIVlhKeTJtSWlnbVZkSDFNbUtuZFhlbmdsZHZpUXdOWkgzSEVmUlpkYnhUZVdVRG5kWUVvdTloS0Utak1OMUprQ005SWcyQUdCel9TWEdPTEtyM3hyVGZBV0ptOGxwM1I1ekxqbFo1UUtDZl9HZmYzYVRWX3Q?oc=5",
+   "hints": [],
+   "first_seen": "2026-09-29 17:41",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-19b032e066dd3d88",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Kegilaan konsert: Lombong emas atau gelembung? - Vietnam.vn",
+   "text": null,
+   "time": "2026-10-20 00:22",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1ZWjhoOUtrMUs0d25HSHZIOUsxVy0wUXNad0lOVHk2QlhxVEpLQWFMVVdmak0yZHdfREZKampXRmpCeEhUYkxsUjE3SFZmSmdrbDdYR2tLNmpXUDhhcVZLaWJuVVZydkpxVGxETVB6eDc?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-20 11:26",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-8724ec76d913fb1e",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Gempak",
+   "title": "Pernah Bersaing Di Pentas, Aepul Roza & Asfan Shah Kini Bergabung Dalam Konsert Malam Drama Manusia - Gempak",
+   "text": null,
+   "time": "2026-10-19 23:25",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQU2psc0hhYmxLdThLR3huX3RoOEJqZlRPR0llVHduU0JOOC10U1pacUFsSUJQNURhMFZ6ZUk5UDRkd21IaVBBenJ6MEtKTUhrajk2X25ZdGRWRE1BZTM5UFhvNklOQl9TOFRaZ0ZKNklqTF9BNWhfaG1IQ002bVl4akZuSDhiZmNMdHNkRHp4Rm1la01CWEZYYjVMcVJEODlwVF9oSzVSOWlIYTQ3NGxwTkNKLWFYdXNxZWM4VldPZ2k?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-20 11:26",
+   "matches": [
+    "t2u-52647"
+   ],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "对应的演出已被过滤（不是演唱会（drama））",
+   "listed": true
+  },
+  {
+   "id": "news-fa66d90d23dc491e",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Konsert Céline Dion telah membawa masuk lebih 700 juta euro untuk ekonomi Paris. - Vietnam.vn",
+   "text": null,
+   "time": "2026-10-19 20:21",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPWDc2VWg5V3ZHUkdzYm1iVmVBQ2xzN1pCbUdOS3FEQjZNY3BUUHNwdEp4cVFzdDVjLXBJLVJ2dXRySjZDbWk2bUsxeDNBeWl6ekhhTU8wLVhaaE1LNGE0eEZfTG9CR2wzcHFzZC03UTBFOTZXY25zeTV0Mk9haWJVSDJRdnRQWmVEdnRETl9YMExsanZHYWUtenpDcEYyeGc?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-20 11:26",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "Dion",
+   "artist_fans": 12116,
+   "artist_region": "欧美",
+   "artist_photo": "avatars/a-91ce5ee90429.jpg",
+   "hidden": "Google 新闻查证不到马来西亚的相关报导",
+   "listed": false
+  },
+  {
    "id": "news-67abe0f74d084ddf",
    "kind": "新闻",
    "country": "MY",
@@ -10415,6 +10782,44 @@
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE00Yk9pbVRPWUdTb1BUUGZwTTlDSFNKeHNCT2pLeXdlMnBHTHNBUGpHMVFOR1VUOVJOLXdLX3prVV8xRWtGQzNGcGRTckxob2ZoekFCcndyMmtwSWNoeVBCY00wZUZ5aU5UcDFpQlgxdw?oc=5",
    "hints": [],
    "first_seen": "2026-10-19 19:46",
+   "matches": [
+    "bms-BMSYXT26"
+   ],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": null,
+   "listed": true
+  },
+  {
+   "id": "news-1009873f136747f5",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Supermodel Vo Hoang Yen terkejut dengan peserta yang menerima 'tiket emas'. - Vietnam.vn",
+   "text": null,
+   "time": "2026-10-19 18:10",
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPSGZuUW1DTjM4eFFmSnAyMjBvZUJQdE40MUVXZ3dzb3VRdG9peUx3ekI5c0RHblA1TFBpb2l1bFpsNEVLRVRQZmNXVDRsVm1KS01PNUY5M3hDMUdleTRBZUthLVdYME5mXzdmdUdEZ29OWEQ4RHp3VkJGN1lPOVBnTkRxRXQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-20 11:26",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-c83f24527796da70",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Konsert Tinh Ha “Say Hi” D-2: Versi \"Rain Rushing\" yang ditutup mata menjadi tular. - Vietnam.vn",
+   "text": null,
+   "time": "2026-10-19 18:08",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQQnJIN0tVZDNkMlc4QlEwbU90Ti1mNUJXcmZoWDIySTJNRm9YQVdGOHdyMjZPLXVoUk13LUZZanBXdXV6c3ZPV0RKYXlVWHNJSEUtUWNvenR1b3FrcHpTN2NURzIzOUUtbUZtbXduRWxaaUt1RmZEX0I2bW9hTnhnQ1p1LU5jMmlYbEh4Q2lJUzltUDJlN0Y4X3loVEIwYWxTQmk4?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-20 11:26",
    "matches": [],
    "sale_times": [],
    "status": "rumor",
@@ -10907,6 +11312,24 @@
    "artist_photo": "avatars/a-910706c961d7.jpg",
    "hidden": null,
    "listed": true
+  },
+  {
+   "id": "news-580786add73d1dcf",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Konsert \"Say Hi\" Tinh Ha di Hanoi mengumumkan malam ke-4: Peminat sangat menantikan perkara ini. - Vietnam.vn",
+   "text": null,
+   "time": "2026-10-18 15:00",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOZFgyR3pZS1ZvOGp3NHlDdm9fS3JzdDFZZGd6QjRUS2ltRDZNbkdFUWVRb194R212Yk5DOHo3SU9WMzlMVlRiMGhsNG9yTWtaSVR0dE16b3pPSGZkNk9EQWJRWHdPcktLbzNtS3dBRU1veG9Kd3NKbWgxMW9ienZHRG5wS3ZVS0x4a3FvLTFGR1J4LVNYV1BLV0tHSXdIbm8y?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-20 11:26",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
   },
   {
    "id": "news-44a3f8042e17ca84",
@@ -11891,24 +12314,6 @@
    "listed": false
   },
   {
-   "id": "news-9a64e28dfee6fe66",
-   "kind": "新闻",
-   "country": "SG",
-   "from": "TicketNews",
-   "title": "Singapore Police Report At Least 14 BTS Concert Ticket Scams Since June 1 - TicketNews",
-   "text": null,
-   "time": "2026-10-17 05:04",
-   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOcHdwUFdwYVIySWFKdmxSOU1oa3RIVlhKeTJtSWlnbVZkSDFNbUtuZFhlbmdsZHZpUXdOWkgzSEVmUlpkYnhUZVdVRG5kWUVvdTloS0Utak1OMUprQ005SWcyQUdCel9TWEdPTEtyM3hyVGZBV0ptOGxwM1I1ekxqbFo1UUtDZl9HZmYzYVRWX3Q?oc=5",
-   "hints": [],
-   "first_seen": "2026-09-29 17:41",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
-  },
-  {
    "id": "news-0589238949fefed0",
    "kind": "新闻",
    "country": "SG",
@@ -12479,12 +12884,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
-   "listed": true,
    "artist": "BIGBANG",
    "artist_fans": 727860,
    "artist_region": "K-pop",
-   "artist_photo": "avatars/a-910706c961d7.jpg"
+   "artist_photo": "avatars/a-910706c961d7.jpg",
+   "hidden": null,
+   "listed": true
   },
   {
    "id": "news-99786f1eeea194df",
@@ -12703,12 +13108,14 @@
    "url": "https://news.google.com/rss/articles/CBMivAJBVV95cUxOZGpPSTdLYWtkZ0FoVjZmUmIxNjZxVVM5aFZYSXV3MFpaTENaU2FxSE5qTFFFcVdHQTFxLXZQVHhaQ2U4djd2UGlKekFacVNCSVE5YlZaNHdPUXo3a2p2SE9PcTNXcVJZNG5GZUpVaWhCT2oweGNZN0ZkRkxYNTR5aHFnZG9fSW9jdW40dmRva2ZlemtTdExObThCM2tVeEUwWDg0dXl3aUQ0Y2hqZlB2cTAtNUYxRWUzRTNWdHVjM1pneHI3eDlwSzhGTFdrNVZqa3lwMmFrX2p3VmhCWmlib3RyNFFwNTFzMmdOZnlEWFhpYjRJU3FaN0lhQ0FYLWFuQUc5NlJ4TG5fdFFnODZCMkphQUgxQi0ySVFKSUE0SVBRdk1GZ1BtUDZaVWZXWWNHOUg3NERsZzAwTXNi?oc=5",
    "hints": [],
    "first_seen": "2026-10-15 01:17",
-   "matches": [],
+   "matches": [
+    "bms-BMSYXT26"
+   ],
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
+   "hidden": null,
+   "listed": true
   },
   {
    "id": "news-ef45aa3046768af2",
@@ -12757,16 +13164,14 @@
    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNajAza0EyQ216Xy1rZEtlNE1QMG9vVWFfYmdQT0w2aWQ1bWdqN3ZFcWpvYzVCZHhJVkxpZWpxU3kyVE1pTDJIWGJ2RVNOUzJqVnNJY1lFTGl5RElYTDB3alFIaDZQbFRRaXIwclVpdUswQmhSNllQVDhjd0VXSmJSRDRxRGdmalJPM2pFclBWWlBlMDJCdnlONjFGekxtTXJaSE0zWEx4R190cGxqaFZ2dk84QjVEcnB5QUNLdmFocE3SAcYBQVVfeXFMTjdFZHprbFRTR29qX1VDekw3UlNLc1lGVC1kXzN2SDZueWI2M2J5Q05FbURlSkpXVzFoVUFIaENZOURPYklOaXJYZ08wR2tLMnBBZ0wwOVpwTzI0SDJleTFZelNQVzlJdm1hVklxdkJzOVpaU2E3RWFxaHF3Mm5NdGdGRC1fM2dDbDZUQk90Z0RYbzlsVEs2eWhSOVdCVW1qMV96UHozZVBKSmJiYjVLaXAxclVOVHh2T19UODdESVc4cVYzdl9R?oc=5",
    "hints": [],
    "first_seen": "2026-10-15 01:17",
-   "matches": [],
+   "matches": [
+    "bms-BMSYXT26"
+   ],
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
    "hidden": null,
-   "listed": false,
-   "artist": "姚晓棠",
-   "artist_fans": 64,
-   "artist_region": "华语",
-   "artist_photo": "avatars/a-964465e375fa.jpg"
+   "listed": true
   },
   {
    "id": "news-24e3cbf0324d44f7",
@@ -12810,21 +13215,28 @@
    "country": "MY",
    "from": "东方日报 娱乐",
    "title": "新生代歌手姚晓棠海外首唱来马！　《破晓·棒棒棠》1212云顶开唱",
-   "text": "（吉隆坡14日讯）中国新生代歌手姚晓棠将携自己的《破晓·棒棒棠》个人演唱会，于12月12日（星期六）傍晚6时登上云顶世界云星剧场（Arena of Stars）！这是她出道五年来首次赴海外举办个人演唱会，将与马来西亚歌迷近距离相聚，以歌声开启音乐旅程的崭新篇章。《破晓》巡演自启动以来，已陆续走过北京、上海、深圳、南京、杭州及广州等城市。此次来到马来西亚，姚晓棠将把沿途累积的感动与舞台能量带到云顶，与期待已久的棒棒棠们共赴一场满载惊喜的“破晓之夜”。以细腻歌声打动人心，展现新生代音乐实力凭借清澈细...",
+   "text": "（吉隆坡14日讯）中国新生代歌手姚晓棠将携自己的《破晓·棒棒棠》个人演唱会，于12月12日（星期六）傍晚6时登上云顶世界云星剧场（Arena of Stars）！这是她出道五年来首次赴海外举办个人演唱会，将与马来西亚歌迷近距离相聚，以歌声开启音乐旅程的崭新篇章。《破晓》巡演自启动以来，已陆续走过北京、上海、深圳、南京、杭州及广州等城市。此次来到马来西亚，姚晓棠将把沿途累积的感动与舞台能量带到云顶，与期待已久的棒棒棠们共赴一场满载惊喜的“破晓之夜”。以细腻歌声打动人心，展现新生代音乐实力凭借清澈细...\n（吉隆坡14日讯）中国新生代歌手姚晓棠将携自己的《破晓·棒棒棠》个人演唱会，于12月12日（星期六）傍晚6时登上云顶世界云星剧场（Arena of Stars）！这是她出道五年来首次赴海外举办个人演唱会，将与马来西亚歌迷近距离相聚，以歌声开启音乐旅程的崭新篇章。\n《破晓》巡演自启动以来，已陆续走过北京、上海、深圳、南京、杭州及广州等城市。此次来到马来西亚，姚晓棠将把沿途累积的感动与舞台能量带到云顶，与期待已久的棒棒棠们共赴一场满载惊喜的“破晓之夜”。\n以细腻歌声打动人心，展现新生代音乐实力\n凭借清澈细腻的声线与真挚自然的演唱风格，姚晓棠逐渐在华语乐坛崭露头角。从《已经有我啦》《她的树》《关于你》《失》，到《一天世界》《重》《连带保证人》《一万公里的思念》等作品，她在不同曲风中探索个人表达，展现日益丰富的音乐面貌。她也诠释过不同风格的影视OST《只如初见》《泪念》《愿》《光芒为我存在》《甜蜜配方》等影视OST演唱，以声音呈现出故事中的情感与人物心境。\n近年来，姚晓棠在音乐综艺中的亮眼表现，让更多听众认识了她。在《天赐的声音》中，她演绎的《最后一页》《看着我的眼睛说》《座位》《妥协》《虹之间》等歌曲，充分展现扎实唱功与细腻的情绪掌控。2025年，她首次登上中央广播电视总台春节联欢晚会，同年获颁第32届东方风云榜“东方新人”及微博音乐盛典“拿云飞跃音乐人”荣誉，为音乐事业写下新的里程碑。\n以“破晓”为名，唱出成长与突破\n“破晓”象征划破黑夜的第一道光，也承载着姚晓棠对成长、突破与自由的理解。如果以一天比喻人生的进程，此刻的她正站在自己的日出时分，带着对过往的感恩，迎向未来的无限可能。\n此次巡演以她的成长与蜕变为主线，将音乐、舞台视觉与情绪表达融为一体。从温柔动人的抒情旋律，到充满活力的唱跳表演，姚晓棠将以多元曲风呈现个人音乐世界，让歌迷感受作品之外更鲜明的舞台魅力。\n她也希望将《破晓》打造为一座自在而纯粹的音乐“乌托邦”，让大家暂时放下日常烦扰，尽情合唱、释放情绪，在音乐中共享欢乐与感动。\n10月22日全面开售，云顶会员享优先购票优惠\n由Titans Entertainment、百沐娱乐和Star Planet 星艺娱乐联合主办，姚晓棠“破晓·棒棒棠”演唱会——马来西亚站门票将于10月22日，下午2时正式全面开售。\n云顶云尊金卡及以上的会员可于10月15日起，通过 rwgenting.com 或其指定销售点，以现金、信用卡或云顶积分优先购票，并享有九折优惠。优惠适用于VIP、PS1、PS2及PS3票价，须符合相关条款与条件。\n更多演唱会详情及购票平台浏览： www.starplanet.com.my | titansentertainment.co | rwgenting.com | my.bookmyshow.com | superfootickets.com | damai.cn | maiseat.com\n要看最快最熱資訊，請來Follow我們 《東方日報》 WhatsApp Channel .\nIOS： https://odn.my/ios",
    "time": "2026-10-14 14:30",
    "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/14/855063",
    "hints": [],
-   "sale_times": [],
+   "sale_times": [
+    {
+     "time": "2026-10-22",
+     "line": "10月22日全面开售",
+     "past": false,
+     "kind": "sale",
+     "added": false,
+     "name": null
+    }
+   ],
    "first_seen": "2026-10-15 01:17",
-   "matches": [],
+   "matches": [
+    "bms-BMSYXT26"
+   ],
    "status": "rumor",
    "platforms": [],
-   "artist": "Stars",
-   "artist_fans": 14179,
-   "artist_region": "欧美",
-   "artist_photo": "avatars/a-76147eddebc6.jpg",
    "hidden": null,
-   "listed": false
+   "listed": true
   },
   {
    "id": "news-2737843932229b41",
@@ -13365,12 +13777,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": true,
    "artist": "BIGBANG",
    "artist_fans": 727860,
    "artist_region": "K-pop",
-   "artist_photo": "avatars/a-910706c961d7.jpg",
-   "hidden": null,
-   "listed": true
+   "artist_photo": "avatars/a-910706c961d7.jpg"
   },
   {
    "id": "news-3be3475aab27ba16",
@@ -15133,24 +15545,6 @@
    "listed": false
   },
   {
-   "id": "news-9cd0a0bbc8e3140c",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "GamerBraves",
-   "title": "SONIC Fan Meeting Comes to Kuala Lumpur on November 7 With Two Sonic Team Creators - GamerBraves",
-   "text": null,
-   "time": "2026-10-07 21:56",
-   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTXlqdDBtTXlJRGZGcVRjeHlRdnlONzZZR3RPLTF5X3gwZ3gtUnkxeU10Ri0zeF9mS2ZXMkVVdFpENnA4NDJLVHBtaFRlS1BaTHNmU1ZLSkJETUhKVlhCT2dLMzZCSUVJZXdPb1NveDVlXzBNbmNPWDBPWHUwdEY2ZEhrdGFVX0VXeGx4RTZoOVMxR19FdjJXMndCbkp6ZWNGcU5JbVJIdk9ORERlakpyZA?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-08 02:59",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
-  },
-  {
    "id": "news-7c5fe3fb1e6a4d30",
    "kind": "新闻",
    "country": "MY",
@@ -16830,7 +17224,10 @@
     "nol-26014836"
    ],
    "status": "rumor",
-   "platforms": [],
+   "platforms": [
+    "MAISEAT",
+    "Trip.com"
+   ],
    "hidden": null,
    "listed": true
   },
