@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-26 12:57",
+ "generated_at": "2026-10-26 20:04",
  "health": {
   "GoLive": {
    "ok": true,
@@ -10,14 +10,13 @@
    "count": 133
   },
   "BookMyShow": {
-   "ok": false,
-   "error": "HTTP 403",
-   "stale": true,
-   "count": 19
+   "ok": true,
+   "count": 19,
+   "local": "2026-10-26 19:45"
   },
   "Ticket2U": {
    "ok": true,
-   "count": 14
+   "count": 15
   },
   "NOL World": {
    "ok": true,
@@ -36,7 +35,7 @@
   },
   "东方日报 娱乐": {
    "ok": true,
-   "count": 10
+   "count": 11
   },
   "人工线索": {
    "ok": true,
@@ -106,6 +105,19 @@
  ],
  "watch_artists": [],
  "news_checks": {
+  "VND": {
+   "checked": "2026-10-26",
+   "country": "MY",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": null,
+   "count": 0,
+   "top": [],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null
+  },
   "YouTube": {
    "checked": "2026-10-26",
    "country": "MY",
@@ -463,19 +475,6 @@
    "added_news": null
   },
   "Dari": {
-   "checked": "2026-10-26",
-   "country": "MY",
-   "deep": false,
-   "soldout_news": null,
-   "opened_news": null,
-   "count": 0,
-   "top": [],
-   "platforms": [],
-   "sale_times": [],
-   "added": false,
-   "added_news": null
-  },
-  "VND": {
    "checked": "2026-10-26",
    "country": "MY",
    "deep": false,
@@ -2920,7 +2919,7 @@
    "limit": 10,
    "organiser": "HARMONIE MUSIC MY SDN BHD",
    "sold_out": false,
-   "stop_sales": false,
+   "stop_sales": true,
    "url": "https://my.bookmyshow.com/en/events/forty-fingers-kl/40FINGER",
    "country": "MY",
    "first_seen": "2026-09-29 11:12",
@@ -2944,7 +2943,7 @@
    "hidden": null,
    "news_added": null,
    "added_status": null,
-   "sale_state": "ON_SALE",
+   "sale_state": "SOLD_OUT",
    "sale_evidence": []
   },
   {
@@ -3456,6 +3455,91 @@
    ]
   },
   {
+   "id": "nol-26015421",
+   "country": "KR",
+   "source": "NOL World",
+   "name": "[MD - Venue Pick-up] 2026 JICHANGMIN FANMEETING <Four Season : For Season>",
+   "artist": null,
+   "type": "팬미팅",
+   "venue": "Coex Artium",
+   "city": "Seoul",
+   "dates": [
+    "2026-11-07",
+    "2026-11-08"
+   ],
+   "sales": [
+    {
+     "name": "상시",
+     "start": "2026-10-23 16:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://world.nol.com/en/ticket/places/26000052/products/26015421"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "케이스 키링(CASE KEYRING) TYPE－A",
+     "price": "₩18,000"
+    },
+    {
+     "name": "케이스 키링(CASE KEYRING) TYPE－B",
+     "price": "₩18,000"
+    },
+    {
+     "name": "케이스 키링(CASE KEYRING) TYPE－C",
+     "price": "₩18,000"
+    },
+    {
+     "name": "NFC LP 키링(NFC LP KEYRING)",
+     "price": "₩20,000"
+    },
+    {
+     "name": "아크릴 포토카드 홀더 (ACRYLIC PHOTOCARD HOLDER)",
+     "price": "₩24,000"
+    },
+    {
+     "name": "섬유 탈취제 (FABRIC DEODORIZER)",
+     "price": "₩66,000"
+    }
+   ],
+   "limit": null,
+   "sold_out": false,
+   "url": "https://world.nol.com/en/ticket/places/26000052/products/26015421",
+   "first_seen": "2026-10-26 20:04",
+   "seat_maps": [],
+   "artist_name": "JICHANGMIN FANMEETING",
+   "fans": 0,
+   "region": "K-pop",
+   "poster_img": "avatars/p-nol-26015421.jpg",
+   "avatar": "avatars/p-nol-26015421.jpg",
+   "avatar_kind": "poster",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "NOL World",
+     "url": "https://world.nol.com/en/ticket/places/26000052/products/26015421",
+     "id": "nol-26015421",
+     "sold_out": false,
+     "price_from": null
+    }
+   ],
+   "hidden": null,
+   "news_added": null,
+   "added_status": null,
+   "opened_at": "2026-10-23 16:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "상시",
+     "time": "2026-10-23 16:00"
+    }
+   ]
+  },
+  {
    "id": "bms-QWER2026",
    "source": "BookMyShow",
    "name": "QWER 2nd TOUR <ROCKATION : ROCKET LAUNCH!!> IN KUALA LUMPUR",
@@ -3644,7 +3728,7 @@
     "maps/fantopia-vp48mq9j/63c0715b-1cc6-4d50-92fc-8bdab9672392.jpg"
    ],
    "notes": {
-    "官方说明": "The moments we call ordinary become extraordinary when they're spent with YESUNG. 💙\nYESUNG is returning to Kuala Lumpur with his 10th Anniversary Tour! 🇲🇾\n\n\nWe know Kuala Lumpur E.L.F. have been looking forward to seeing him again 💭 Check out the concert details below and get ready for a memorable night with YESUNG!\n\n\n𝟮𝟬𝟮𝟲 𝗬𝗘𝗦𝗨𝗡𝗚 𝟭𝟬𝗧𝗛 𝗔𝗡𝗡𝗜𝗩𝗘𝗥𝗦𝗔𝗥𝗬 𝗧𝗢𝗨𝗥 – 𝗔𝗕𝗢𝗨𝗧 𝗧𝗛𝗘 𝗧𝗛𝗜𝗡𝗚𝗦 𝗪𝗘 𝗖𝗔𝗟𝗟𝗘𝗗 𝗢𝗥𝗗𝗜𝗡𝗔𝗥𝗬 𝗜𝗡 𝗞𝗨𝗔𝗟𝗔 𝗟𝗨𝗠𝗣𝗨𝗥\nDate: 2026.11.07 (SAT)\nTime: 8:00 PM\nVenue: ZEPP KUALA LUMPUR\n\n\n𝗧𝗜𝗖𝗞𝗘𝗧 𝗦𝗔𝗟𝗘 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡\n𝗘.𝗟.𝗙. 𝗠𝗘𝗠𝗕𝗘𝗥𝗦𝗛𝗜𝗣 𝗣𝗥𝗘𝗦𝗔𝗟𝗘 (𝗪𝗲𝘃𝗲𝗿𝘀𝗲) :\n➫ 2026.08.27 (THUR) 12:00 PM - 6:00 PM (MYT)\n➫ Exclusive for E.L.F. MEMBERSHIP members who registered during the registration period! Your E.L.F. MEMBERSHIP Number will act as your promo code. Each code will be allowed to purchase 2 tickets!\n➫ For more information: https://weverse.io/superjunior/notice\n➫ Ticketing Platform: (FANTOPIA) https://www.fantopia.io/\n\n\n𝗚𝗘𝗡𝗘𝗥𝗔𝗟 𝗢𝗡-𝗦𝗔𝗟𝗘:\n➫ 2026.08.28 (FRI) 12:00 PM (MYT)\n➫ Ticketing Platform: (FANTOPIA) https://www.fantopia.io/\n\n\nTICKET PRICE:\nVIP (SEATED) MYR 798\nVIP BOX MYR 598/PAX (MAX 8 PAX)\nPS1 (SEATED) MYR 698\nPS2 (STANDING) MYR 398\n\n\n✓ All prices are in Ringgit Malaysia (MYR) and do not include the MYR 8.00 booking fee and MYR 10.00 transaction fee.\n✓ Each transaction is limited to 2 tickets only.\n✓ All ticket purchasers’ NAME and ID / Passport NUMBER must match the personal identify cation document (National Identify cation Card/Passport). No changes or transfers allowed once the purchase is successful.…"
+    "官方说明": "The moments we call ordinary become extraordinary when they're spent with YESUNG. 💙\nYESUNG is returning to Kuala Lumpur with his 10th Anniversary Tour! 🇲🇾\n\n\nWe know Kuala Lumpur E.L.F. have been looking forward to seeing him again 💭 Check out the concert details below and get ready for a memorable night with YESUNG!\n\n\n𝟮𝟬𝟮𝟲 𝗬𝗘𝗦𝗨𝗡𝗚 𝟭𝟬𝗧𝗛 𝗔𝗡𝗡𝗜𝗩𝗘𝗥𝗦𝗔𝗥𝗬 𝗧𝗢𝗨𝗥 – 𝗔𝗕𝗢𝗨𝗧 𝗧𝗛𝗘 𝗧𝗛𝗜𝗡𝗚𝗦 𝗪𝗘 𝗖𝗔𝗟𝗟𝗘𝗗 𝗢𝗥𝗗𝗜𝗡𝗔𝗥𝗬 𝗜𝗡 𝗞𝗨𝗔𝗟𝗔 𝗟𝗨𝗠𝗣𝗨𝗥\nDate: 2026.11.07 (SAT)\nTime: 8:00 PM\nVenue: ZEPP KUALA LUMPUR\n\n\n𝗧𝗜𝗖𝗞𝗘𝗧 𝗦𝗔𝗟𝗘 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡\n𝗘.𝗟.𝗙. 𝗠𝗘𝗠𝗕𝗘𝗥𝗦𝗛𝗜𝗣 𝗣𝗥𝗘𝗦𝗔𝗟𝗘 (𝗪𝗲𝘃𝗲𝗿𝘀𝗲) :\n➫ 2026.08.27 (THUR) 12:00 PM - 6:00 PM (MYT)\n➫ Exclusive for E.L.F. MEMBERSHIP members who registered during the registration period! Your E.L.F. MEMBERSHIP Number will act as your promo code. Each code will be allowed to purchase 2 tickets!\n➫ For more information: https://weverse.io/superjunior/notice\n➫ Ticketing Platform: (FANTOPIA) https://www.fantopia.io/\n\n\n𝗚𝗘𝗡𝗘𝗥𝗔𝗟 𝗢𝗡-𝗦𝗔𝗟𝗘:\n➫ 2026.08.28 (FRI) 12:00 PM (MYT)\n➫ Ticketing Platform: (FANTOPIA) https://www.fantopia.io/\n\n\nTICKET PRICE:\nVIP (SEATED) MYR 798\nBOX MYR 598/PAX (MAX 8 PAX)\nPS1 (SEATED) MYR 698\nPS2 (STANDING) MYR 398\n\n\n✓ All prices are in Ringgit Malaysia (MYR) and do not include the MYR 8.00 booking fee and MYR 10.00 transaction fee.\n✓ Each transaction is limited to 2 tickets only.\n✓ All ticket purchasers’ NAME and ID / Passport NUMBER must match the personal identify cation document (National Identify cation Card/Passport). No changes or transfers allowed once the purchase is successful.\n✓ Pl…"
    },
    "price_from": "RM 398.00",
    "limit": 2,
@@ -4502,6 +4586,71 @@
    ]
   },
   {
+   "id": "t2u-52572",
+   "source": "Ticket2U",
+   "name": "Sound of GC VII",
+   "artist": null,
+   "type": "Concert",
+   "venue": "Wisma Wim",
+   "city": "Selangor",
+   "dates": [
+    "2026-11-14 19:45"
+   ],
+   "sales": [
+    {
+     "name": "售票",
+     "start": null,
+     "end": "2026-11-15 19:00",
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://www.ticket2u.com.my/event/52572/sound-of-gc-vii"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "General Admission",
+     "price": "RM 50.00",
+     "desc": "",
+     "sold_out": false
+    },
+    {
+     "name": "General Admission",
+     "price": "RM 50.00",
+     "desc": "",
+     "sold_out": false
+    }
+   ],
+   "price_from": "RM 50.00",
+   "limit": null,
+   "sold_out": false,
+   "url": "https://www.ticket2u.com.my/event/52572/sound-of-gc-vii",
+   "country": "MY",
+   "first_seen": "2026-10-26 20:04",
+   "seat_maps": [],
+   "artist_name": "Sound of GC VII",
+   "fans": 0,
+   "region": "其他",
+   "poster_img": "avatars/p-t2u-52572.jpg",
+   "avatar": "avatars/p-t2u-52572.jpg",
+   "avatar_kind": "poster",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "Ticket2U",
+     "url": "https://www.ticket2u.com.my/event/52572/sound-of-gc-vii",
+     "id": "t2u-52572",
+     "sold_out": false,
+     "price_from": "RM 50.00"
+    }
+   ],
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "news_added": null,
+   "added_status": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
+  },
+  {
    "id": "fantopia-vzov1t8m",
    "country": "MY",
    "source": "Fantopia",
@@ -5102,75 +5251,6 @@
    ]
   },
   {
-   "id": "nol-26014776",
-   "country": "KR",
-   "source": "NOL World",
-   "name": "2026 CLOSE YOUR EYES FANCON [Born to Be an Idol, but I Want to Date CLOSER",
-   "artist": null,
-   "type": "팬미팅",
-   "venue": "Coex Artium",
-   "city": "Seoul",
-   "dates": [
-    "2026-11-20",
-    "2026-11-22"
-   ],
-   "sales": [
-    {
-     "name": "开票",
-     "start": "2026-10-22 18:00",
-     "end": null,
-     "queue": null,
-     "available": true,
-     "code_required": false,
-     "url": "https://world.nol.com/en/ticket/places/26000052/products/26014776"
-    }
-   ],
-   "tiers": [
-    {
-     "name": "VIP Seat",
-     "price": "₩121,000"
-    },
-    {
-     "name": "R Seat",
-     "price": "₩99,000"
-    }
-   ],
-   "limit": null,
-   "sold_out": false,
-   "url": "https://world.nol.com/en/ticket/places/26000052/products/26014776",
-   "first_seen": "2026-10-15 12:50",
-   "seat_maps": [],
-   "artist_name": "Close Your Eyes",
-   "fans": 13639,
-   "region": "K-pop",
-   "poster_img": "avatars/p-nol-26014776.jpg",
-   "avatar": "avatars/a-8f9a25546010.jpg",
-   "avatar_kind": "artist",
-   "poster_portrait": true,
-   "platforms": [
-    {
-     "source": "NOL World",
-     "url": "https://world.nol.com/en/ticket/places/26000052/products/26014776",
-     "id": "nol-26014776",
-     "sold_out": false,
-     "price_from": null
-    }
-   ],
-   "hidden": null,
-   "news_added": null,
-   "added_status": null,
-   "opened_at": "2026-10-22 18:00",
-   "opened_approx": false,
-   "sale_state": "ON_SALE",
-   "sale_evidence": [
-    {
-     "src": "NOL World 售票轮次",
-     "text": "开票",
-     "time": "2026-10-22 18:00"
-    }
-   ]
-  },
-  {
    "id": "nol-26014663",
    "country": "KR",
    "source": "NOL World",
@@ -5578,7 +5658,7 @@
    ],
    "tiers": [
     {
-     "name": "Children under 18",
+     "name": "Children under 18 (standard seating area only)",
      "price": "RM 40.00",
      "desc": "",
      "sold_out": false
@@ -7035,12 +7115,76 @@
    "hidden": null,
    "news_added": null,
    "added_status": null,
-   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "opened_at": "2026-10-26 19:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
    "sale_evidence": [
     {
      "src": "NOL World 售票轮次",
      "text": "开票",
      "time": "2026-10-26 19:00"
+    }
+   ]
+  },
+  {
+   "id": "nol-26015493",
+   "country": "KR",
+   "source": "NOL World",
+   "name": "2026 SONG KANG FANMEETING <PLAY, SONG KANG>",
+   "artist": null,
+   "type": "팬미팅",
+   "venue": "Coex Artium",
+   "city": "Seoul",
+   "dates": [
+    "2026-12-05"
+   ],
+   "sales": [
+    {
+     "name": "开票",
+     "start": "2026-10-30 19:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://world.nol.com/en/ticket/places/26000052/products/26015493"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "All Section",
+     "price": "₩88,000"
+    }
+   ],
+   "limit": null,
+   "sold_out": false,
+   "url": "https://world.nol.com/en/ticket/places/26000052/products/26015493",
+   "first_seen": "2026-10-26 20:04",
+   "seat_maps": [],
+   "artist_name": "SONG KANG FANMEETING",
+   "fans": 0,
+   "region": "K-pop",
+   "poster_img": "avatars/p-nol-26015493.jpg",
+   "avatar": "avatars/p-nol-26015493.jpg",
+   "avatar_kind": "poster",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "NOL World",
+     "url": "https://world.nol.com/en/ticket/places/26000052/products/26015493",
+     "id": "nol-26015493",
+     "sold_out": false,
+     "price_from": null
+    }
+   ],
+   "hidden": null,
+   "news_added": null,
+   "added_status": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-10-30 19:00"
     }
    ]
   },
@@ -8399,6 +8543,116 @@
    ]
   },
   {
+   "id": "bms-FLLNKL26",
+   "source": "BookMyShow",
+   "name": "FILM & LUNAR 1ST FANMEETING IN KUALA LUMPUR",
+   "artist": null,
+   "type": null,
+   "venue": "JIOSPACE, PJ",
+   "city": "Petaling Jaya",
+   "dates": [
+    "2026-12-20 15:30"
+   ],
+   "sales": [],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "HONG KONG GLOW HIVE ENTERTAINMENT LIMITED",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/film-lunar-2026/FLLNKL26",
+   "country": "MY",
+   "first_seen": "2026-10-26 20:04",
+   "seat_maps": [],
+   "artist_name": "FILM & LUNAR   FANMEETING",
+   "fans": 0,
+   "region": "其他",
+   "poster_img": "avatars/p-bms-FLLNKL26.jpg",
+   "avatar": "avatars/p-bms-FLLNKL26.jpg",
+   "avatar_kind": "poster",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/film-lunar-2026/FLLNKL26",
+     "id": "bms-FLLNKL26",
+     "sold_out": false,
+     "price_from": null
+    }
+   ],
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美，其他要 100 万粉丝以上）",
+   "news_added": null,
+   "added_status": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
+  },
+  {
+   "id": "nol-26015287",
+   "country": "KR",
+   "source": "NOL World",
+   "name": "SEO KYUNGSU CONCERT 〈Da Capo〉 : The 20th",
+   "artist": null,
+   "type": "Concerts",
+   "venue": "COEX Auditorium",
+   "city": "Seoul",
+   "dates": [
+    "2026-12-26",
+    "2026-12-27"
+   ],
+   "sales": [
+    {
+     "name": "开票",
+     "start": "2026-10-29 13:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://world.nol.com/en/ticket/places/26001327/products/26015287"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "VIP Seat",
+     "price": "₩143,000"
+    },
+    {
+     "name": "R Seat",
+     "price": "₩121,000"
+    }
+   ],
+   "limit": null,
+   "sold_out": false,
+   "url": "https://world.nol.com/en/ticket/places/26001327/products/26015287",
+   "first_seen": "2026-10-26 20:04",
+   "seat_maps": [],
+   "artist_name": "SEO KYUNGSU   〈Da Capo〉",
+   "fans": 0,
+   "region": "K-pop",
+   "poster_img": "avatars/p-nol-26015287.jpg",
+   "avatar": "avatars/p-nol-26015287.jpg",
+   "avatar_kind": "poster",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "NOL World",
+     "url": "https://world.nol.com/en/ticket/places/26001327/products/26015287",
+     "id": "nol-26015287",
+     "sold_out": false,
+     "price_from": null
+    }
+   ],
+   "hidden": null,
+   "news_added": null,
+   "added_status": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-10-29 13:00"
+    }
+   ]
+  },
+  {
    "id": "fantopia-vi4b75bp",
    "country": "MY",
    "source": "Fantopia",
@@ -8507,79 +8761,6 @@
      "text": "BOYNEXTDOOR KL Concert Details Unveiled; Tickets Go On Sale Next Week - Hype.MY",
      "time": "2026-07-14",
      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZUppOGxlOXVuWUJZTmdjYlFtOE5kWE1udVozS1VEeFpaU054MUZXZlE4UzJGeWVmaW40aFNzOFFTTmJCWGxheDYxYnNkTEF2bDJ5UjBBVXNNX0xLeXpfM09nT2xFUGN2ay1kVnhlZS04bERYUGg0MGdHbm5CNlh6U3d6TE5PcWJnUHhuUmx3?oc=5"
-    }
-   ]
-  },
-  {
-   "id": "nol-26015022",
-   "country": "KR",
-   "source": "NOL World",
-   "name": "Goodbye, Hello in NELL’S ROOM 2026",
-   "artist": null,
-   "type": "rock/metal",
-   "venue": "Jamsil Student Gymnasium",
-   "city": "Seoul",
-   "dates": [
-    "2026-12-31",
-    "2027-01-02"
-   ],
-   "sales": [
-    {
-     "name": "开票",
-     "start": "2026-10-22 18:00",
-     "end": null,
-     "queue": null,
-     "available": true,
-     "code_required": false,
-     "url": "https://world.nol.com/en/ticket/places/26001298/products/26015022"
-    }
-   ],
-   "tiers": [
-    {
-     "name": "R Seat",
-     "price": "₩165,000"
-    },
-    {
-     "name": "S Seat",
-     "price": "₩143,000"
-    },
-    {
-     "name": "A Seat",
-     "price": "₩121,000"
-    }
-   ],
-   "limit": null,
-   "sold_out": false,
-   "url": "https://world.nol.com/en/ticket/places/26001298/products/26015022",
-   "first_seen": "2026-10-22 13:00",
-   "seat_maps": [],
-   "artist_name": "Goodbye, Hello in NELL’S ROOM",
-   "fans": 0,
-   "region": "K-pop",
-   "poster_img": "avatars/p-nol-26015022.jpg",
-   "avatar": "avatars/p-nol-26015022.jpg",
-   "avatar_kind": "poster",
-   "poster_portrait": true,
-   "platforms": [
-    {
-     "source": "NOL World",
-     "url": "https://world.nol.com/en/ticket/places/26001298/products/26015022",
-     "id": "nol-26015022",
-     "sold_out": false,
-     "price_from": null
-    }
-   ],
-   "hidden": null,
-   "news_added": null,
-   "added_status": null,
-   "opened_at": "2026-10-22 18:00",
-   "opened_approx": false,
-   "sale_state": "ON_SALE",
-   "sale_evidence": [
-    {
-     "src": "NOL World 售票轮次",
-     "text": "开票",
-     "time": "2026-10-22 18:00"
     }
    ]
   },
@@ -9055,83 +9236,6 @@
      "text": "You Snooze, You Lose: Westlife Live In Malaysia Concert Tickets Have Sold Out! - Gempak",
      "time": "2019-04-15",
      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPNDIwaU8zb2dKYTJNa1o1Y1JZNlB5RlFhUWM0X3o4UUJHcmJaZzU5MjV3UUVadDFlYWRUTTMyMGU2eEZ1UHlhLUhLTm1hX1JONFRmR2FOTm5hWnBGLUdRYi1vakpGc3ZDVmRhZER0S3ZSdXd5dkk4c3c4Sl9QRENXNUJ1WWd0U2dvZ3B1LUpQY2lxME5XMDdVNjh3SEl3cUgzUXZUUUtKVlNqWTlsT29uOHNJQWM?oc=5"
-    }
-   ]
-  },
-  {
-   "id": "nol-26015024",
-   "country": "KR",
-   "source": "NOL World",
-   "name": "KENSHI YONEZU 2026-2027 WORLD TOUR / GHOST",
-   "artist": null,
-   "type": "visiting concert",
-   "venue": "INSPIRE ARENA",
-   "city": "인천시",
-   "dates": [
-    "2027-01-14",
-    "2027-01-17"
-   ],
-   "sales": [
-    {
-     "name": "开票",
-     "start": "2026-10-22 11:00",
-     "end": null,
-     "queue": null,
-     "available": true,
-     "code_required": false,
-     "url": "https://world.nol.com/en/ticket/places/26001292/products/26015024"
-    }
-   ],
-   "tiers": [
-    {
-     "name": "Floor Seat",
-     "price": "₩172,000"
-    },
-    {
-     "name": "Seat P",
-     "price": "₩165,000"
-    },
-    {
-     "name": "Seat R",
-     "price": "₩154,000"
-    },
-    {
-     "name": "Seat S",
-     "price": "₩143,000"
-    }
-   ],
-   "limit": null,
-   "sold_out": false,
-   "url": "https://world.nol.com/en/ticket/places/26001292/products/26015024",
-   "first_seen": "2026-10-17 12:38",
-   "seat_maps": [],
-   "artist_name": "Kenshi Yonezu",
-   "fans": 69297,
-   "region": "K-pop",
-   "poster_img": "avatars/p-nol-26015024.jpg",
-   "avatar": "avatars/a-65b3ec7c1b65.jpg",
-   "avatar_kind": "artist",
-   "poster_portrait": true,
-   "platforms": [
-    {
-     "source": "NOL World",
-     "url": "https://world.nol.com/en/ticket/places/26001292/products/26015024",
-     "id": "nol-26015024",
-     "sold_out": false,
-     "price_from": null
-    }
-   ],
-   "hidden": null,
-   "news_added": null,
-   "added_status": null,
-   "opened_at": "2026-10-22 11:00",
-   "opened_approx": false,
-   "sale_state": "ON_SALE",
-   "sale_evidence": [
-    {
-     "src": "NOL World 售票轮次",
-     "text": "开票",
-     "time": "2026-10-22 11:00"
     }
    ]
   },
@@ -10156,21 +10260,7 @@
    "venue": "Unifi Arena Bukit Jalil",
    "city": null,
    "dates": [],
-   "sales": [
-    {
-     "name": "开票（@starplanetmy）",
-     "start": "2026-11-28",
-     "end": null,
-     "queue": null,
-     "available": true,
-     "code_required": false,
-     "url": "https://www.instagram.com/p/DdlaN1ITm12/",
-     "announced": true,
-     "added": false,
-     "source_line": "⚡ 门票火热疯抢中!抢票手速要快!: 11月28日与29日,这股情怀巨浪即将席卷吉隆坡 Unifi Arena",
-     "kind": "sale"
-    }
-   ],
+   "sales": [],
    "tiers": [],
    "limit": 12,
    "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
@@ -10201,14 +10291,8 @@
    "hidden": null,
    "news_added": null,
    "added_status": null,
-   "sale_state": "GENERAL_SALE_ANNOUNCED",
-   "sale_evidence": [
-    {
-     "src": "开票（@starplanetmy）",
-     "text": "开票（@starplanetmy）",
-     "time": "2026-11-28"
-    }
-   ],
+   "sale_state": "ON_SALE",
+   "sale_evidence": [],
    "seat_map_source": "Google 图片（starplanet.com.my），非售票平台官方图，请以官网为准",
    "ocr_tiers": [
     {
@@ -10293,6 +10377,47 @@
     }
    ],
    "seat_map_source": "Google 图片（www.fantopia.io），非售票平台官方图，请以官网为准"
+  },
+  {
+   "id": "bms-BMSUTM26",
+   "source": "BookMyShow",
+   "name": "ULTRAMAN THE LIVE IN MALAYSIA 2026",
+   "artist": null,
+   "type": null,
+   "venue": "Mega Star Arena, Sungei Wang Plaza",
+   "city": null,
+   "dates": [],
+   "sales": [],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/ultraman-the-live-in-malaysia-2026/BMSUTM26",
+   "country": "MY",
+   "first_seen": "2026-10-26 20:04",
+   "seat_maps": [],
+   "artist_name": "ULTRAMAN",
+   "fans": 0,
+   "region": "欧美",
+   "poster_img": "avatars/p-bms-BMSUTM26.jpg",
+   "avatar": "avatars/p-bms-BMSUTM26.jpg",
+   "avatar_kind": "poster",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "BookMyShow",
+     "url": "https://my.bookmyshow.com/en/events/ultraman-the-live-in-malaysia-2026/BMSUTM26",
+     "id": "bms-BMSUTM26",
+     "sold_out": false,
+     "price_from": null
+    }
+   ],
+   "hidden": null,
+   "news_added": null,
+   "added_status": null,
+   "sale_state": "ON_SALE",
+   "sale_evidence": []
   },
   {
    "id": "bms-BMSCAPKL",
@@ -10502,6 +10627,80 @@
  ],
  "leads": [
   {
+   "id": "news-a347db6e615ab2dc",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "东方日报 娱乐",
+   "title": "痛失数十年好友　张智霖演唱会上悲恸落泪",
+   "text": "（香港26日讯）香港男星张智霖日前在佛山开唱时谈及挚友离世一事，情绪一度失控，在台上忍不住落泪。张智霖在演唱会上感触表示，希望将歌曲《十年人事》送给一位好友，说著说著便忍不住哽咽。他透露，好友Lawrence近日离世，两人相识多年，也是一起打了几十年麻将的老友，悲痛地说：“以后我都要三缺一了……”眼见丈夫因痛失多年好友而难掩悲伤，袁咏仪也在台下感动落泪，现场观众则纷纷大声为张智霖打气，希望给予他安慰与支持。张智霖与郭富城、邱淑贞丈夫沈嘉伟，以及律师好友Lawrence相识多年，四人从年轻时便建立...",
+   "time": "2026-10-26 18:58",
+   "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/26/858156",
+   "hints": [],
+   "sale_times": [],
+   "first_seen": "2026-10-26 20:04",
+   "matches": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-1dfacac6bbd4e06b",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Quoc Thien dengan teruja pergi menonton BIGBANG, mengumumkan berita baik tentang konsert di Hanoi. - Vietnam.vn",
+   "text": null,
+   "time": "2026-10-26 14:37",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSXdoWEZlNzJKRloyTDA5elljckhUYmNJenhCQ29IUWEtRDJWSzRHNkNibmRJZEYzaFdreUxWdWUwZEgxa2dycWNkejBTZnF1Y3ZtNlE1b2NjRW1SZFlaMkFHekdiNE1WamRSR3pzNUxlNldSSUcxVHg5ZXdGdVctMjQ3NUJnMUJWdzFORE81SDFEOGZMa0k3cS1lS2g?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-26 20:04",
+   "matches": [
+    "fantopia-0peucdui"
+   ],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": null,
+   "listed": true
+  },
+  {
+   "id": "news-846916e63ab8f15f",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Orang muda menghabiskan puluhan juta dong untuk pergi ke konsert: Tiada penyesalan, kenangan tidak ternilai! - Vietnam.vn",
+   "text": null,
+   "time": "2026-10-26 14:34",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQZ3E5cUZJeU4wRllwRHBkcWNKX2tERGFXZjlQak9TR2Y1X0NlQU9xTWh3NEIwMWxKbTFGVjZPOEJmQ0UyaDlvUURNVmFBZElYQkFzN29oOHVfZzlyMFpqUXY3TVlwQU9yQ1hxdFVsb2FFTWY4YWJnV2NHZHYxR2FNX2kwajZSRlU0aDZ2cDRFeE9keE1GcWQxS2NTdVhUQ28?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-26 20:04",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-e094f642ec0d4619",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Vietjet menawarkan berjuta-juta tiket 0-dong sebagai sebahagian daripada promosi pelancongan akhir tahun. - Vietnam.vn",
+   "text": null,
+   "time": "2026-10-26 12:51",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPdnBzMG1fU3BkRmFVNWhKNzNMbWZDbVN3N1RkRjZlUTJ3X29RRHVQX0I2WjFKV09Kd3o4QmxINTBzSjFwUGlpWDllLTBleXl3ZXZrUzlLQUFZV0ZaUTVlWnRHczVIeEtILUFwWkVzU3dQTm9jRXRIYXpEUUVwTU1lNW5pT1FZR19taXJQQ1hTZGpLTnJF?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-26 20:04",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
    "id": "news-a904100f628a364c",
    "kind": "新闻",
    "country": "MY",
@@ -10519,6 +10718,49 @@
    "status": "rumor",
    "platforms": [],
    "hidden": "对应的演出已被过滤（不是演唱会（drama））",
+   "listed": true
+  },
+  {
+   "id": "news-3d1bc1487bb90e1f",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Di manakah tiket loteri Vietlott Power 6/55 yang menang bernilai 199.9 bilion VND dijual? - Vietnam.vn",
+   "text": null,
+   "time": "2026-10-26 08:46",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVWJTcnJHSGZpbmZWQ3I2Ql9QN2x3a1E4aTM4QmFhTXd0eE5YWkR3RVFKYmRZMWc0UlVMZkZScC1RcHQ1eDNDRFNhZnVWdS02bVIxRngxZGM4bFNEQV9FT3pPbXNFcnAzWWdBbnVTeFhESFVWYnVBWkxrUHdQY3JqdThjcmFuRmFqRUhBTmVLai1KTU9zeHVzNXVWVEh0ZFBTenc?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-26 20:04",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "VND",
+   "artist_fans": 10357,
+   "artist_region": "欧美",
+   "artist_photo": "avatars/a-ac54ca663762.jpg",
+   "hidden": "Google 新闻查证不到马来西亚的相关报导",
+   "listed": false
+  },
+  {
+   "id": "news-533f848dd83ddebe",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Bintang-bintang Vietnam berpakaian sangat bergaya untuk konsert BIGBANG, dengan Dam Thu Trang dan Pong Chuan menjadi yang paling berani. - Vietnam.vn",
+   "text": null,
+   "time": "2026-10-26 08:32",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOWlIzSFRJcEVGM0J2T0c2RE9HVWw2aV9lRkFsbHgzcmxrT3dVV2I5Q2FIbTdwZUxJaVdXbFYyOFdXVDhLZ0J2LWZrZ1hxS01HUmZyS1VsWW5pdnVQQU9qSzFTa3RYbXNUeW45X05IV2paVUdpand6TUg5dFNyUnJRb1FlaUVHaVlHMGswY3hNOXVpN2dLQTRGZVB2cjU3V3VhaXdkbjNBSGVrOVhqTUxmYzBzSQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-26 20:04",
+   "matches": [
+    "fantopia-vuvk8zlu",
+    "fantopia-0peucdui"
+   ],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": null,
    "listed": true
   },
   {
@@ -10540,6 +10782,26 @@
    "listed": false
   },
   {
+   "id": "news-9974a12674c6b0d9",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Hampir 2,000 orang telah bergerak untuk memperketatkan kawalan keselamatan menjelang konsert kedua BigBang. - Vietnam.vn",
+   "text": null,
+   "time": "2026-10-26 05:41",
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNYzdhODJodlVyaEpDdGMtU2dMUHFwX1QtTjBtTkJ3b1hKYjNBN2dSUHI0bENIRnVBZVRmdlE0YWlpcldybFRKd1FkSjUtNE9MTGlRNVNnMGZnZ2t4Zk9aNzJjRkZzcXNDMFBRU2p3TVRwQkFoZU14VFRwN3ZKSVFTZ2hzSjBTYmpxLWM0MVc1Ukc2UXVxY3NnYk1kYw?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-26 20:04",
+   "matches": [
+    "fantopia-0peucdui"
+   ],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": null,
+   "listed": true
+  },
+  {
    "id": "news-acf0b30c84afc2be",
    "kind": "新闻",
    "country": "MY",
@@ -10550,6 +10812,46 @@
    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1odC03S1Z2THg5TTlsY09zOVJxV0lMVmxGWkMzdzMzYTROTFJfV3RLaEtqYVhTZG9IdFU1Z3kydzQ2aVR0SkdWSWd2MzZwcGJ2MzMtcmYzdWFicUpUNGRGM2lsZnBLRVJrWUREcW91OG1CTUhtMVJOVA?oc=5",
    "hints": [],
    "first_seen": "2026-10-26 12:57",
+   "matches": [
+    "fantopia-0peucdui"
+   ],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": null,
+   "listed": true
+  },
+  {
+   "id": "news-154028fbcc76e809",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Mengapakah tiket konsert BigBang di Stadium My Dinh habis dijual? - Vietnam.vn",
+   "text": null,
+   "time": "2026-10-26 01:07",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE54cEJzYWIteHJqYXA3a0JMTC1HczdfcFYwa0dyU09yelZHUGtLc1ZYRDNwWFdTR1J3REhsWU9ia3EzbVZ5R0dBaFVlN3BRclVULTVqNkVmc1AydmtLMmZ0cVdRNzZONkYzS0Z1SUpKblJYdGdH?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-26 20:04",
+   "matches": [
+    "fantopia-0peucdui"
+   ],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": null,
+   "listed": true
+  },
+  {
+   "id": "news-9336ce739e578a55",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Tiket-tiket BIGBANG dijual dengan harga yang terlalu tinggi, melonjak dari 7 juta kepada 32 juta VND sejurus sebelum persembahan, mencetuskan pertempuran akal antara penjual tiket dan peminat. - Vietnam.vn",
+   "text": null,
+   "time": "2026-10-26 00:40",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONW1BcW1RUE5vZlJkRnMxVXFRUWUzaW9RRmxacFhyNnFuY0FRYTctY2VYZEZtTzhPYWNGZFVXdURYRU5WU0xlNHYzSGdpd3Y1YTBuS0wtSEQwR2cwMEx3N0ZpX2U4U0Y0LXFoeXNjUld0ajRPTmQtUmtTSnlsOGJGaGNMSmhqeXRpUmkzMmNRblY5c3lfakFKdDRQNnRkOFU?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-26 20:04",
    "matches": [
     "fantopia-0peucdui"
    ],
@@ -11325,7 +11627,7 @@
    "title": "颜人中明年1月再来马开唱 大马站成巡演收官站 - 联合日报",
    "text": null,
    "time": "2026-10-23 16:44",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ZMXNDUnljOGp6SW52V1FVTzR6UE5mRW51VmZvemRyV0pIRFJmYklkZW9wRDNmNnd5MUd2WTliSW5URC12ZDg2MGNJNEJuQTduQkFscnlMNUVuNmtTckpYYzdyV3BJaWN6Wk5Vd2lfZw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxOQndHcjdjUmVlcnZBRktGdHV5M3NXMGZ1ZE9RRUxIMkZQTHRIZVNHemtqSEtDRXJYQkxNMzFJelRSYnYwRFhZRV9IOEFkRFZSNEdna0hPVndkeUFhaGxQOU9PZnZwNWhxSkdZaENqVXpDQ3NUN09JRUNyMVpUd1A2c2xmRThibk8xRGh4T1JBR3IwaU8wb2N1d0dTQlI3TTZXY2Zsb0lGWFVmNDI5bjlyZUxyLXd4V01BZVZISjMzanpqaU1IVlRMaW9WXzZNVHhyczlzdjdIc1pacFlWZnV3S1dIOWM1T21XTXNJejlaeHAtYklpaGhOaURUZGJMb3BrQVRfVnU2cUw3emN4TUNnR01XOXFwRFdVQ05FcHRURUhwcnRJMEwwdW5vUTRzRERwak1nbmdNOUFZZDUtaUtqYzFHWVpNY1c2c085WVF2VkI4cGZkZldmWWhVRW5XSXhfZUE?oc=5",
    "hints": [],
    "first_seen": "2026-10-24 01:13",
    "matches": [],
@@ -13057,7 +13359,7 @@
    "title": "Mahu fokus bertani, Ella bakal rehat panjang lepas konsert terakhir - Harian Metro",
    "text": null,
    "time": "2026-10-21 10:24",
-   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOeWhlMTJFYmlrRS1hNU1TRnQtMVBBQlpfT2M1WWgxYU9WVzlEQVFjUDM5OGJ0bHZNdk5xWGRvMm0yeWJ5c3VLVEN1elQ3UHZLd29yU1BlZWxWcFZhSW52X21kV3pEbFEyNUxDek1ycGVnMU1yV2ktU2FYNXlYc1FaRW5jTmtGWi12Q1ZRQW5mUVpjMDU0T1BpU3VKak9YUXhMVWtHSjFaNUlXRUZIeGlSRFpZMi1FeXZabjVhMk81Yzg2LVluLWw3NlFUbDV1VkNO0gHDAUFVX3lxTFAxUUtmREludmlBQnI3VzBQaW5ucFlqUjFyWVE0bGYxbEVEUFVtbkxHWDAyT2tqbjdDSmJLMFFpSTRmRFNBMzVpdWxzTTZUVXdUSFp6RkN5V1BXNHJBT29RZk1ZbFdRamxrTnQtQ3FCNEgtYVJtRjhCbWNuVUhXdU81V2lVUHRKNE5WeVNTVkFZaDRrX2J1ZlVZS2lxenhnYVhmbkdUWmYyWUpGWG45WVVQUk5CVzBDUDJXdXpoU3NZOGlobw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPWnRfWmc2NV95SFgyQXc1VkozMGdjc0h6bFIwdkJhVXdZd0NDUWJHQmdFQXJiTmV3R0d5U2xDYmtYeHBjaEdhbldyZzI3TkpXRWIzS2tuOXNNNU1tSi1BU2t6WGVybWFNWFpNbUVYMzl0VzNESDg1Mk9nR004SkdIbm5VUjlOWXZPRFM3cGxPYW9ZUUlZT2JwcG5YOWFScTJ0YUp1blphV0xDZ3VsY1Y3M1o1N3RnSjhQdkJZQnhB0gHDAUFVX3lxTFAxUUtmREludmlBQnI3VzBQaW5ucFlqUjFyWVE0bGYxbEVEUFVtbkxHWDAyT2tqbjdDSmJLMFFpSTRmRFNBMzVpdWxzTTZUVXdUSFp6RkN5V1BXNHJBT29RZk1ZbFdRamxrTnQtQ3FCNEgtYVJtRjhCbWNuVUhXdU81V2lVUHRKNE5WeVNTVkFZaDRrX2J1ZlVZS2lxenhnYVhmbkdUWmYyWUpGWG45WVVQUk5CVzBDUDJXdXpoU3NZOGlobw?oc=5",
    "hints": [],
    "first_seen": "2026-10-21 12:59",
    "matches": [],
@@ -13324,12 +13626,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
-   "listed": true,
    "artist": "B.T.S",
    "artist_fans": 4570,
    "artist_region": "K-pop",
-   "artist_photo": "avatars/a-f6ff067421fb.jpg"
+   "artist_photo": "avatars/a-f6ff067421fb.jpg",
+   "hidden": null,
+   "listed": true
   },
   {
    "id": "news-91e896e6f16ad00e",
@@ -13534,6 +13836,24 @@
    "listed": false
   },
   {
+   "id": "news-e109cb759bed0e43",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Astro Awani",
+   "title": "\"Yang tegur itu ‘warak-warak’ tak pernah dengar lagu\" - PM perjelas hadir konsert Siti Nurhaliza - Astro Awani",
+   "text": null,
+   "time": "2026-10-20 13:07",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPdENMWnVjbGZ0R244NGs5bjUyRklwbnFaZ0Vzc3BTb1BfTTkzOVpWcElTZE81REdleGtXU1Y1bEdJVGM3eld1MXpKUGZLUm5la25Yam9QMjlBc1NnWE9hcGRSN3czaGZSMDQzR2pCUFlBa3lxaHVnT3ZnUUowT09NeVZfYkJlTENHWUR1V0liNnp0UHYzamJUWXR3M3gtenNwYlVNX2N4dzZWTFVqTGtTOUN0NkN6NDl2TnkxaDRNbjJldDBVVkdGWS05T1J6dw?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-26 20:04",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
    "id": "news-1fefba7eabb5f8cc",
    "kind": "新闻",
    "country": "MY",
@@ -13544,6 +13864,24 @@
    "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE5NZkIwUDUzMlRGd3l5Z0Q2c2hJZHNLZmhiZXVLSFk1Vk9jZVU2LU5ldlZrS2hvWjB0T200?oc=5",
    "hints": [],
    "first_seen": "2026-10-21 01:15",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-ca4e2652931b9f99",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Berita Harian",
+   "title": "Anwar kagum konsert Siti Nurhaliza angkat kepelbagaian budaya - Berita Harian",
+   "text": null,
+   "time": "2026-10-20 12:28",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPNncyS2ZHRGFCSWtUU2JBa2dFUkxfVTR1REJkNXZTM3ZqRDFQaDZsWVgzQ0ktNEJBWVVESWV4VkRncWU3UmtpMXc0ek5IbUxWeXpVTlkxTE83Z1hOMlRaYnMzcUdrUnJWN0J3ZGpEN1NZNkI2dkxNZFJPeXFXV3lWYlFvTEdhU3JVd0hGMGFKdVlGRDlmaGhmR2JxR0h5aXJNODFYYTZ6YzNFV05pTE92NHgwVm9aUFJIbzNDU25SU3BlQdIBwgFBVV95cUxPNncyS2ZHRGFCSWtUU2JBa2dFUkxfVTR1REJkNXZTM3ZqRDFQaDZsWVgzQ0ktNEJBWVVESWV4VkRncWU3UmtpMXc0ek5IbUxWeXpVTlkxTE83Z1hOMlRaYnMzcUdrUnJWN0J3ZGpEN1NZNkI2dkxNZFJPeXFXV3lWYlFvTEdhU3JVd0hGMGFKdVlGRDlmaGhmR2JxR0h5aXJNODFYYTZ6YzNFV05pTE92NHgwVm9aUFJIbzNDU25SU3BlQQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-10-26 20:04",
    "matches": [],
    "sale_times": [],
    "status": "rumor",
@@ -14096,12 +14434,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
+   "listed": false,
    "artist": "Kenshi Yonezu",
    "artist_fans": 69029,
    "artist_region": "其他",
-   "artist_photo": "avatars/a-65b3ec7c1b65.jpg",
-   "hidden": null,
-   "listed": true
+   "artist_photo": "avatars/a-65b3ec7c1b65.jpg"
   },
   {
    "id": "news-aa3574e8fa9380fd",
@@ -14270,14 +14608,16 @@
    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOQkxjdW85T01JSXAyM1hhUmZET1lqeVp0NEJ4NU1NVGtxUllvbll0S2h4b1hCNUpFZW1WLUhITXR2N0tMNW9pc1NIUVpPYVFrenZnbm54UWRpMldFVHprQ0xTem5FQnF6OHNHYUpLbmUzSzIzaHRCY0NqVkxfZmRUUnVGREp1SmtPY1VoeERMcWlTOGNDT2w1VnVzdlpZQVpabXYwTU9kdzRZek5Da2g3S3BYaXNRaFJSRlE?oc=5",
    "hints": [],
    "first_seen": "2026-10-23 01:16",
-   "matches": [
-    "nol-26015024"
-   ],
+   "matches": [],
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
-   "listed": true
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
+   "listed": false,
+   "artist": "Kenshi Yonezu",
+   "artist_fans": 69029,
+   "artist_region": "其他",
+   "artist_photo": "avatars/a-65b3ec7c1b65.jpg"
   },
   {
    "id": "news-ceefb7a21d176023",
@@ -15742,8 +16082,8 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "hidden": null,
-   "listed": true,
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
+   "listed": false,
    "artist": "Kenshi Yonezu",
    "artist_fans": 69029,
    "artist_region": "其他",
@@ -18896,7 +19236,8 @@
    "hints": [],
    "first_seen": "2026-10-08 14:16",
    "matches": [
-    "fantopia-3q3sm8je"
+    "fantopia-3q3sm8je",
+    "bms-BMSUTM26"
    ],
    "sale_times": [],
    "status": "rumor",
@@ -19244,7 +19585,8 @@
    "hints": [],
    "first_seen": "2026-10-07 02:26",
    "matches": [
-    "fantopia-3q3sm8je"
+    "fantopia-3q3sm8je",
+    "bms-BMSUTM26"
    ],
    "sale_times": [],
    "status": "rumor",
