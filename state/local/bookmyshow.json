@@ -1,47 +1,6 @@
 {
- "fetched_at": "2026-10-20 11:26",
+ "fetched_at": "2026-10-26 19:45",
  "events": [
-  {
-   "id": "bms-ERIC2026",
-   "source": "BookMyShow",
-   "name": "周兴哲《Odyssey · Stars 旅程 · 星空》- 吉隆坡站",
-   "artist": null,
-   "type": null,
-   "venue": "Unifi Arena Bukit Jalil",
-   "city": "Kuala Lumpur",
-   "dates": [
-    "2026-10-24 20:00",
-    "2026-10-25 20:00"
-   ],
-   "sales": [],
-   "tiers": [],
-   "limit": 6,
-   "organiser": "FriedRice Entertainment (M) Sdn Bhd",
-   "sold_out": false,
-   "stop_sales": false,
-   "url": "https://my.bookmyshow.com/en/events/eric-chou-odyssey-stars-2026/ERIC2026",
-   "poster": "https://cdn-sea.bookmyshow.com/prod/images/202608/ef3625b2-8505-40ee-8326-dca1ab072397/og/500x500/Eric_2026_Thumbnail.jpg"
-  },
-  {
-   "id": "bms-ROSE26KL",
-   "source": "BookMyShow",
-   "name": "ROSETOPIA ASIA TOUR 2026 IN KUALA LUMPUR",
-   "artist": null,
-   "type": null,
-   "venue": "Mega Star Arena, Sungei Wang Plaza",
-   "city": "Kuala Lumpur",
-   "dates": [
-    "2026-10-25 20:00"
-   ],
-   "sales": [],
-   "tiers": [],
-   "limit": 6,
-   "organiser": "CK STAR MALAYSIA SDN. BHD.",
-   "sold_out": false,
-   "stop_sales": false,
-   "url": "https://my.bookmyshow.com/en/events/rosetopia-asia-tour-2026-kl/ROSE26KL",
-   "poster": "https://cdn-sea.bookmyshow.com/prod/images/202607/ca8dfbef-c559-4485-9126-99871bbce1e7/og/500x500/The_Rose_Thumbnail.png"
-  },
   {
    "id": "bms-BMSASP26",
    "source": "BookMyShow",
@@ -96,7 +55,7 @@
    "limit": 10,
    "organiser": "HARMONIE MUSIC MY SDN BHD",
    "sold_out": false,
-   "stop_sales": false,
+   "stop_sales": true,
    "url": "https://my.bookmyshow.com/en/events/forty-fingers-kl/40FINGER",
    "poster": "https://cdn-sea.bookmyshow.com/prod/images/202607/5e2d4fd8-c681-4874-99b5-c91a9bc62899/og/500x500/40FINGER_THUMBNAIL.jpeg"
   },
@@ -270,6 +229,24 @@
    "poster": "https://cdn-sea.bookmyshow.com/prod/images/202609/df8c1cab-5671-4815-9596-6d1a4c77538c/og/500x500/Dior_D2_Thumbnail.jpg"
   },
   {
+   "id": "bms-BMSUTM26",
+   "source": "BookMyShow",
+   "name": "ULTRAMAN THE LIVE IN MALAYSIA 2026",
+   "artist": null,
+   "type": null,
+   "venue": "Mega Star Arena, Sungei Wang Plaza",
+   "city": null,
+   "dates": [],
+   "sales": [],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "Big Tree Entertainment Malaysia Sdn. Bhd. (Formerly known as BookMyShow Sdn. Bhd.)",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/ultraman-the-live-in-malaysia-2026/BMSUTM26",
+   "poster": "https://cdn-sea.bookmyshow.com/prod/images/202610/00c07484-9faf-41c5-b15d-1e41bc54449a/og/1000x1000/Ultraman_1000x1000_bms.jpg"
+  },
+  {
    "id": "bms-BMSYXT26",
    "source": "BookMyShow",
    "name": "姚晓棠「破晓·棒棒棠」演唱会 — 马来西亚站",
@@ -286,6 +263,26 @@
    "stop_sales": false,
    "url": "https://my.bookmyshow.com/en/events/yao-xiao-tang-2026/BMSYXT26",
    "poster": "https://cdn-sea.bookmyshow.com/prod/images/202610/a32fd0d7-8917-479e-9552-d4504fa7bdb6/og/1500x1500/BMS_500px_x_500px_v6-min.jpg.jpeg"
+  },
+  {
+   "id": "bms-FLLNKL26",
+   "source": "BookMyShow",
+   "name": "FILM & LUNAR 1ST FANMEETING IN KUALA LUMPUR",
+   "artist": null,
+   "type": null,
+   "venue": "JIOSPACE, PJ",
+   "city": "Petaling Jaya",
+   "dates": [
+    "2026-12-20 15:30"
+   ],
+   "sales": [],
+   "tiers": [],
+   "limit": 12,
+   "organiser": "HONG KONG GLOW HIVE ENTERTAINMENT LIMITED",
+   "sold_out": false,
+   "stop_sales": false,
+   "url": "https://my.bookmyshow.com/en/events/film-lunar-2026/FLLNKL26",
+   "poster": "https://cdn-sea.bookmyshow.com/prod/images/202610/1d46e0c1-b2a3-40d7-8f1e-61c511fa8df3/og/500x500/Poster_500x500.JPEG"
   },
   {
    "id": "bms-BMSBND26",
