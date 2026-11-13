@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-13 14:55",
+ "generated_at": "2026-11-14 03:48",
  "health": {
   "GoLive": {
    "ok": true,
@@ -17,7 +17,7 @@
   },
   "Ticket2U": {
    "ok": true,
-   "count": 20
+   "count": 19
   },
   "NOL World": {
    "ok": true,
@@ -31,12 +31,12 @@
   },
   "Google News": {
    "ok": true,
-   "count": 83,
+   "count": 81,
    "error": null
   },
   "东方日报 娱乐": {
    "ok": true,
-   "count": 11
+   "count": 10
   },
   "人工线索": {
    "ok": true,
@@ -106,13 +106,13 @@
  ],
  "watch_artists": [],
  "news_checks": {
-  "Hayley Williams": {
-   "checked": "2026-11-13",
+  "Paramore": {
+   "checked": "2026-11-14",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 2,
+   "count": 3,
    "top": [
     {
      "title": "Paramore's Hayley Williams to bring solo concert tour to Singapore in February 2027 - CNA Lifestyle",
@@ -120,8 +120,13 @@
      "time": "2026-11-13"
     },
     {
-     "title": "Hayley Williams announces 2027 Asia tour with stops in Manila, Singapore, Seoul & Tokyo - Bandwagon",
-     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQd0t0X29lQU92cHZldmNxYkJFUUdDR1d5RnUxa2RhNE8tRjZjYjFDbEc0X3U1RDlNVDhyNHRqR1d3ZnJxbUVtR1YzMTlLSkZkQXlxeXk5TFZyMFY4SHR5MlplQ05JNlMtaUpHNVljSlI1elhyVEtWYzdJaGRlTTBKd044Q05lNHBDb0ZrRzRjWFRDU1NkSkZEek00REVOcWFCa0NSYklkLW5CNGFkaHY4bGV3VTNybTNYVVE?oc=5",
+     "title": "Paramore’s Hayley Williams announces Asia tour with stop in Singapore - The Straits Times",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPbEVEQTdzX3NBV2FOc2NlSWdvZkRYRkJOTURKd1RuZV9KTmRWVnNXWGlWRkRyTVp6WnA5a0ZWeGcwWmh4OTNXVFFxem5fYk5wY29wSjBKZTVkX3hxZ3RWRDFWWVJnYThSUHNGbWR4Q0E5dkNieS1OZ2xablJ3OEdUZzZ2TUJQbGhqYS1RcTN1OEhWU21taWhUMDBIcmY0am9mN3Q3Q2pmTl9mVnQ3MlBDVkpIYlh5X2c?oc=5",
+     "time": "2026-11-13"
+    },
+    {
+     "title": "Paramore's Hayley Williams Brings Solo Tour to Singapore in 2027 - Tempo.co English",
+     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSGpxUzRKSUctSzktTjRKb3lUQ2hDOEJka2szT3dvelczQmVVMTZlZkc1ZGJyT1FfY1hiVTZYaFdSODg5bFdaRFo1TzFXVkhrLVVXZ2l6czZuazB0anA4Tnl6OTh6dGxVZ0drRjM2Yi1PVzFvVHBtQk5qREtfRzl0aHQzV1JRZktTRHB5c3RodXEwellobTYtV3ZaYmU?oc=5",
      "time": "2026-11-13"
     }
    ],
@@ -131,101 +136,65 @@
    "added_news": null
   },
   "NCT": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
-   "opened_news": null,
-   "count": 2,
+   "opened_news": {
+    "title": "NCT 127明年1月来马开唱 11月20日公开售票 - 亚洲电视新闻",
+    "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNRURZekt6Uk5aY2FJY1ZIc0xrZmt1dTNDMl9HX1VfZG5CbGFnUzBMZXdyX2tiTUJJY21nX2RrWlVsczVyTzhFNFg1TmRXOXp3WjhjQ0pnekluUVlQZzVyeEQ1Q2JNYnZkTEhnOU5WT0pidXVPQXI1NGp3S3VoQWlnWF9RMTI5VnJ3aG1WSHIzeHV6ZzBidGVxeHRNdW1BRDlkRm9wZTlrTVlSXzh1eWVOdzlIWWFyTFdfdDRhdjFGUklraGdXZTZVNDZPejgzdTVCN2R4cDZTZTV4b3BsaWpYVXc3ZWd2eTBNVmU2cE9vUEdKOWZWLXhmcGROMzBnLUll?oc=5",
+    "time": "2026-11-13"
+   },
+   "count": 4,
    "top": [
+    {
+     "title": "K-pop boy group NCT 127 to hold concert in KL on Jan 9 - The Star",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUEI5b1QxQ2VRV3hlckVLLTRXM0p3N3BGRkRvbTZLaGppYm1RSzFYZWNZRFM5ekZVNVNXcHFTMUw5MzlHdUFZYnc4Zjk1S1p4bXN4RW1ZQXN3SnlscGVhQmhFa0pDY1JFQkRyMnZ6UVg4MERJcEFSb0hybWpIWWJobUVZQ1kzNFJteXRMVnB1cm83OFhhU1hKY2RMV3FPMllBLUpZeUxuQ3M1OHRCc0MzcW5jV1J1bFE?oc=5",
+     "time": "2026-11-13"
+    },
     {
      "title": "K-Pop Powerhouse NCT 127 Announces Long-Awaited Debut Malaysia Concert - BusinessToday Malaysia",
      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTFlId0oySWpjVXExdFF3bXFGMERaU1pkaDA5c3NWd01idXlQNjlqZmdsZkZvMGdaMTFld2RTY2lCVHZ5cmNLbGxrYklDTXp2d1RlT3o1NTN3LTJVUXQ4NGllWWlZUXQyYUt0eE1lQWhFM2RnMVctMFNkVHMteVo3NlBIS2Z6QlUySFgwZ0ptQUFNNUNmdFpzdUVtUEkxaXBKR19RZWdOYno2LUFTaUNEb1N3UG56UQ?oc=5",
      "time": "2026-11-13"
     },
     {
-     "title": "NCT 127十周年巡演明年109登录大马！门票1120开卖 | 精彩大马 - 精彩大马",
-     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQRjlJQ3lwbi1KbFRzd2c0S2FGNHVMVG1oUHU5X0ZYS0JsR2lwclFyV0x5SFJmUjhsdEFnRkNvNlc4dGpFVXhZM18tdHV5NGVBcUNfdkZqdXZCbmFVZ1E3NTdnd3JDRms2TXZBNVdadlE3dFRBWE1iSGw0c0N3YTV6TW5xeE4yX1BmTVBDZ0NBd2dVNmR2b2dQSlZpUnTSAaIBQVVfeXFMUGllTWF5M2d2MHNnZ0dEUDdtaUZMOVI0VmVtdVBqMm41R1k2SFhGSWpBT3BySy1qV3lKSHR5bHFoX0hSQXFnS2tjUUVYYkhzTS1vM2ZOR2RuVmlSTUJiM1JuQjlXbExFQmU0dmhTQVhFamJsUDljUEpWNVVEV2p2ZmlteFVqODl5bmdHVFpDZjBvN0Q3eHNSN1ppM0hrcGFRRlZR?oc=5",
+     "title": "NCT 127明年1月来马开唱 11月20日公开售票 - 亚洲电视新闻",
+     "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNRURZekt6Uk5aY2FJY1ZIc0xrZmt1dTNDMl9HX1VfZG5CbGFnUzBMZXdyX2tiTUJJY21nX2RrWlVsczVyTzhFNFg1TmRXOXp3WjhjQ0pnekluUVlQZzVyeEQ1Q2JNYnZkTEhnOU5WT0pidXVPQXI1NGp3S3VoQWlnWF9RMTI5VnJ3aG1WSHIzeHV6ZzBidGVxeHRNdW1BRDlkRm9wZTlrTVlSXzh1eWVOdzlIWWFyTFdfdDRhdjFGUklraGdXZTZVNDZPejgzdTVCN2R4cDZTZTV4b3BsaWpYVXc3ZWd2eTBNVmU2cE9vUEdKOWZWLXhmcGROMzBnLUll?oc=5",
      "time": "2026-11-13"
     }
    ],
    "platforms": [],
-   "sale_times": [],
-   "added": false,
-   "added_news": null
-  },
-  "izna": {
-   "checked": "2026-11-13",
-   "country": "SG",
-   "deep": false,
-   "soldout_news": null,
-   "opened_news": null,
-   "count": 2,
-   "top": [
+   "sale_times": [
     {
-     "title": "K-pop girl group Izna share wish list ahead of Singapore concert: Pork floss buns, chilli crab and MBS - AsiaOne.com",
-     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxON2d6OWZhSVBDdnhRaEs2OGNPSmpDczV1TGtXR1Vnem1zQld6MWpxbUpjZ1RLaDZHcjRUcERBTFRpOFFRZ1liZWdtVlpCTmlyWFJEdnNBWlQxQmc3M3U1SUFjS3dObjh1MjVZaTJMbGVzWEZiWlJmS2FRNElWRVZMODR3?oc=5",
-     "time": "2026-09-11"
-    },
-    {
-     "title": "K-pop group Izna to perform first-ever Singapore concert in November - CNA Lifestyle",
-     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZjNoZm5UTUg5T0E3LW9WNHA5UUNkckFBeDFBaGQ0ZElxSWU4ZFhQV29jWndRdEs1SVhFZkRBLTBXbld5a2FHSVpaZVNhOG4tdUtGWEJEM1YyTFdfNUZxVEtHNXNpekE0dkZmcXZaYUF0TFk2bzljcm5mLWpXZzM2TkNVemh1TXNOMGNJLWxyLXREWXRRX2trSmNtQWxXUFZHTldmQw?oc=5",
-     "time": "2026-09-09"
+     "time": "2026-11-20",
+     "line": "NCT 127明年1月来马开唱 11月20日公开售票 - 亚洲电视新闻",
+     "past": false,
+     "kind": "general",
+     "added": false,
+     "name": null,
+     "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNRURZekt6Uk5aY2FJY1ZIc0xrZmt1dTNDMl9HX1VfZG5CbGFnUzBMZXdyX2tiTUJJY21nX2RrWlVsczVyTzhFNFg1TmRXOXp3WjhjQ0pnekluUVlQZzVyeEQ1Q2JNYnZkTEhnOU5WT0pidXVPQXI1NGp3S3VoQWlnWF9RMTI5VnJ3aG1WSHIzeHV6ZzBidGVxeHRNdW1BRDlkRm9wZTlrTVlSXzh1eWVOdzlIWWFyTFdfdDRhdjFGUklraGdXZTZVNDZPejgzdTVCN2R4cDZTZTV4b3BsaWpYVXc3ZWd2eTBNVmU2cE9vUEdKOWZWLXhmcGROMzBnLUll?oc=5",
+     "title": "NCT 127明年1月来马开唱 11月20日公开售票 - 亚洲电视新闻"
     }
    ],
-   "platforms": [],
-   "sale_times": [],
-   "added": false,
-   "added_news": null
-  },
-  "Naya": {
-   "checked": "2026-11-13",
-   "country": "SG",
-   "deep": false,
-   "soldout_news": null,
-   "opened_news": null,
-   "count": 0,
-   "top": [],
-   "platforms": [],
-   "sale_times": [],
-   "added": false,
-   "added_news": null
-  },
-  "June": {
-   "checked": "2026-11-13",
-   "country": "MY",
-   "deep": false,
-   "soldout_news": null,
-   "opened_news": null,
-   "count": 1,
-   "top": [
-    {
-     "title": "A.R. Rahman To Perform In Kuala Lumpur in June 2027 With ‘The Wonderment Tour’! - Varnam Malaysia",
-     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQcGNDUmE0cWxXdkRiYXotNEFrNmpYYWVpd0Q4cVlUUzdXNnBScUFnbFd2ejJBZmg3WTVfWWdOT2Z6VEVCbldUTm9fd3p2cmlmMS0wYndKNDJkS2pESVYta3ZoUGpkMl85WEVrRGthWVNwZ0xCcnpIME5UUEZWVEFnd1VvLVRrTUhnVS1wQ3hUam1YM2ZlaE5wSVN0bVo2MTA1bU5Z?oc=5",
-     "time": "2026-11-11"
-    }
-   ],
-   "platforms": [],
-   "sale_times": [],
    "added": false,
    "added_news": null
   },
   "Jason Mraz": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": {
-    "title": "Jason Mraz Is Finally Returning To Malaysia After 7 Years. Tickets Go On Sale 11 June - SAYS",
-    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTFBLOHhGVTgxSThQczdsOHBUZlJkMUhtQ1FCUmpRUDczeUxKM0xYc1Q2Y0ZpNTkxamZrNjAtQ29jWS05X1RfUjdZMk1RMkRMM2N4NC1idE9wTno2NVBDeWRNRGUxZnlTLW0yMzRqenBsYlJVY01PUFI2a01jbmhYdzlSV21XVUFLSXBMeU5lbkxkM3RkbVE?oc=5",
-    "time": "2026-06-05"
+    "title": "Jason Mraz阔别7年回归大马开唱 门票6月11日全面开售 - 光华日报",
+    "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxNWGRHUVdaX2k1MS1LZ19TcU9sSkRSMFRpelVyVWtLS0NDSjVEdEx4cVBBb2RteEhxRVRTa0ZKdkEyWmc4WmgzSUpCNFFsaEU4VUNTdmQ1TVBvbDR2bzhiekQtTjc5aGZ1czQ5aXZHblh3UWIyOFJLaEQwYms4RV9oM19Rc1d6NWlwaGdkNHduQ21mZTVIeVJuYmZnakQwLXp0WXhnSVEzcWZxY0pRb3BGSlZBYU9PVkt5TXhvTEpYZklrNnI1VjB5Vzc0WDM5VGs3UUZWQnN6cGRsZDg5d0pVX1pLZkdGTUFWTi1IY1FtXzdkSDRiNndmNzVwc19ndjRmUnVWb3RFNXgwVkdwaVVQeEpYbzBRNWd2bGtBT2dodjJCN0pud3ZyWFI1Skl5QzQ?oc=5",
+    "time": "2026-06-04"
    },
-   "count": 21,
+   "count": 22,
    "top": [
     {
      "title": "Jason Mraz delights 8,000 fans at Bukit Jalil concert - Citizens Journal",
      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE14VDBHZGZDeGpHU04wZTcxMWE4RHZqV2NlTHZWMUdkMHJsTHB5WGlxRnRjTWRPWTBxbFBJT1M0WjZJTlBCTG11ZU5DSnFkLUdWc3E2Z0lhZVBreDlmQUhQLXRyaV9JN1hXSWc4OVZtR2R3enJPWHVGajVMSFVxMkU?oc=5",
-     "time": "2026-11-04"
+     "time": "2026-11-13"
     },
     {
      "title": "睽违7年再来马开唱Jason Mraz自嘲中年心声“能躺为何要坐” | 娱乐 | 2026-11-03 - 光明日报",
@@ -243,8 +212,98 @@
    "added": false,
    "added_news": null
   },
+  "izna": {
+   "checked": "2026-11-14",
+   "country": "SG",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": null,
+   "count": 3,
+   "top": [
+    {
+     "title": "izna — K-Pop Group Lights Up Singapore with Debut Concert Tour - The Korea Daily",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5adS1SUGlOUHVoeFdfLUpaNkpIQ0ZkbG1vcGQtTS1kMUFCaVJuVDNRdFVqOUt4VDV5WTVKc3EyR3ZnSUg5aVhnakhaazRpbXFRSm1vejZjMVRnRTBjdjVnSXQ4T1g?oc=5",
+     "time": "2026-11-13"
+    },
+    {
+     "title": "K-pop girl group Izna share wish list ahead of Singapore concert: Pork floss buns, chilli crab and MBS - AsiaOne.com",
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxON2d6OWZhSVBDdnhRaEs2OGNPSmpDczV1TGtXR1Vnem1zQld6MWpxbUpjZ1RLaDZHcjRUcERBTFRpOFFRZ1liZWdtVlpCTmlyWFJEdnNBWlQxQmc3M3U1SUFjS3dObjh1MjVZaTJMbGVzWEZiWlJmS2FRNElWRVZMODR3?oc=5",
+     "time": "2026-09-11"
+    },
+    {
+     "title": "K-pop group Izna to perform first-ever Singapore concert in November - CNA Lifestyle",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZjNoZm5UTUg5T0E3LW9WNHA5UUNkckFBeDFBaGQ0ZElxSWU4ZFhQV29jWndRdEs1SVhFZkRBLTBXbld5a2FHSVpaZVNhOG4tdUtGWEJEM1YyTFdfNUZxVEtHNXNpekE0dkZmcXZaYUF0TFk2bzljcm5mLWpXZzM2TkNVemh1TXNOMGNJLWxyLXREWXRRX2trSmNtQWxXUFZHTldmQw?oc=5",
+     "time": "2026-09-09"
+    }
+   ],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null
+  },
+  "Hayley Williams": {
+   "checked": "2026-11-14",
+   "country": "SG",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": null,
+   "count": 4,
+   "top": [
+    {
+     "title": "Paramore's Hayley Williams to bring solo concert tour to Singapore in February 2027 - CNA Lifestyle",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTHlBeHhmUTU0dnpud1Z4cG9uN2VFcjQzTThFR2VXSmFYNDc2RHBIUmdMZkVkUmtCQXhZczFldVcyYko2VTJnS3NOdnlVaDFCTTJBWHZtcTlTZ2dUSnhrV0k4VlB3MW5qbVJzME1zeWJKNzF4WXVIQ0plWlNZUTNWTXJnZ0NlY0VRMzNTUFlzaXBnRG80MW8tdC1uTzRadmZ5bE82dHZmRUFqZw?oc=5",
+     "time": "2026-11-13"
+    },
+    {
+     "title": "Hayley Williams announces 2027 Asia tour with stops in Manila, Singapore, Seoul & Tokyo - Bandwagon",
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeTNhYmZSeHF5MVo3ZlRoaEtjalpURG1uRkdPQUNPNHNsRnQ5MF9JRVBhN2o1VTZfLUczbzZQYWF3a2xaUVZJMGsydExsVlVhU2laTVlCQWRzNnFRVkU2enlXdlpsdDZOa2toa0Jvb25sYU15OE1PRzZkbGVPSkhMTTdLMVhJempxVUJ2QTIzMEw3aWtVZHRybnlVSzRkNEdTY1Fla3NwanZLWTZmbWNUVGttcmVNcDRfWDE4?oc=5",
+     "time": "2026-11-13"
+    },
+    {
+     "title": "Paramore’s Hayley Williams announces Asia tour with stop in Singapore - The Straits Times",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPbEVEQTdzX3NBV2FOc2NlSWdvZkRYRkJOTURKd1RuZV9KTmRWVnNXWGlWRkRyTVp6WnA5a0ZWeGcwWmh4OTNXVFFxem5fYk5wY29wSjBKZTVkX3hxZ3RWRDFWWVJnYThSUHNGbWR4Q0E5dkNieS1OZ2xablJ3OEdUZzZ2TUJQbGhqYS1RcTN1OEhWU21taWhUMDBIcmY0am9mN3Q3Q2pmTl9mVnQ3MlBDVkpIYlh5X2c?oc=5",
+     "time": "2026-11-13"
+    }
+   ],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null
+  },
+  "Naya": {
+   "checked": "2026-11-14",
+   "country": "SG",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": null,
+   "count": 0,
+   "top": [],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null
+  },
+  "June": {
+   "checked": "2026-11-14",
+   "country": "MY",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": null,
+   "count": 1,
+   "top": [
+    {
+     "title": "A.R. Rahman To Perform In Kuala Lumpur in June 2027 With ‘The Wonderment Tour’! - Varnam Malaysia",
+     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQcGNDUmE0cWxXdkRiYXotNEFrNmpYYWVpd0Q4cVlUUzdXNnBScUFnbFd2ejJBZmg3WTVfWWdOT2Z6VEVCbldUTm9fd3p2cmlmMS0wYndKNDJkS2pESVYta3ZoUGpkMl85WEVrRGthWVNwZ0xCcnpIME5UUEZWVEFnd1VvLVRrTUhnVS1wQ3hUam1YM2ZlaE5wSVN0bVo2MTA1bU5Z?oc=5",
+     "time": "2026-11-11"
+    }
+   ],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null
+  },
   "Mozart": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -263,7 +322,7 @@
    "added_news": null
   },
   "FIFTY FIFTY": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -287,12 +346,12 @@
    "added_news": null
   },
   "YouTube": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 4,
+   "count": 5,
    "top": [
     {
      "title": "LOVEBITES - Soldier Stands Solitarily [ Outstanding Tour Live In Kuala Lumpur 2026 ] - YouTube",
@@ -305,9 +364,9 @@
      "time": "2026-10-05"
     },
     {
-     "title": "LOVEBITES - Holy War [ Outstanding Tour Live In Kuala Lumpur 2026 ] - YouTube",
-     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9KZUN4UkVkWEhnREF1TUdmU01LM2RpLWNwc3hnMkxudGdkUVFxdkJvUUFtUWlMdHdQcjZwdWVySThPOUJFUU92YjNBMW1rWElhajdreGhUcFg1Um9a?oc=5",
-     "time": "2026-10-04"
+     "title": "LOVEBITES - Reaper's Lullaby [ Outstanding Tour Live In Kuala Lumpur 2026 ] - YouTube",
+     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9ZbHVlT01LMWlFTFZiLTJrZVBYTW1hX2xkbzZKVDRqNjkxbXg3UGUyVnNTalhlTkdrTTJ2N05rcFBFQUxRV25ORDRoRHRDaGlfd0sydkVjTnd4LVVq?oc=5",
+     "time": "2026-10-05"
     }
    ],
    "platforms": [],
@@ -316,7 +375,7 @@
    "added_news": null
   },
   "Kanye West": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -340,7 +399,7 @@
    "added_news": null
   },
   "Highlight": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -364,7 +423,7 @@
    "added_news": null
   },
   "SUPER JUNIOR": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": {
@@ -377,7 +436,7 @@
     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSVprLWJvbzJQUkppMlVUT0dDbHlNVEhDbkNVdFVCN1JBVkdVNUdtNFlaUWVJb3Vub2R1TlpnbGpYTWxSUmdMTFJmWW9lSGFqREp6VUI4ZEtsWmNFNWZncjJyUUN3Ml9ndWJqWmZpczZrRnE4UGNZRGl3Z1FLZkctdjAtTlZwX3M?oc=5",
     "time": "2019-04-11"
    },
-   "count": 48,
+   "count": 50,
    "top": [
     {
      "title": "Super Junior艺声强忍背痛，坐轮椅现身机场赴马来西亚开唱 - vibes by 8world",
@@ -401,7 +460,7 @@
    "added_news": null
   },
   "Abel Tesfaye": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -420,7 +479,7 @@
    "added_news": null
   },
   "Gareth Gates": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -439,7 +498,7 @@
    "added_news": null
   },
   "TVXQ!": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -452,7 +511,7 @@
    "added_news": null
   },
   "Disney": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -496,7 +555,7 @@
    "added_news": null
   },
   "Fantasia": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -515,13 +574,18 @@
    "added_news": null
   },
   "Dream": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 1,
+   "count": 2,
    "top": [
+    {
+     "title": "Joe Hisaishi Singapore: Tickets for World Dream Tour - KarloBag.eu",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQWEhFbkdYREl5dWdGRFBCcXc4eGItUC1vQjYwTHFweUkxV0JVZnBNbjVyWk1BZG80OHplWUtpWTEwYngyOFZHbVE1eExKVURPYmI0aVJNZG8ySkFNRWVHWVlpQ0kzZHl6M1FLdk1SS3l6cUVvMTEycWJydU5LMGd0c3ZKOUZTeUJIXzhsRjFzelRWMFB0X09v?oc=5",
+     "time": "2026-11-04"
+    },
     {
      "title": "Joe Hisaishi’s World Dream Tour Comes to Singapore — Ghibli Music Live at Esplanade in November - GameTrader.SG",
      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOek4tUGlkTGFtQm4zdGkzYzNfcldHWjZYVlhNY1JzeExmOEpZQXozU3EzSzFiMVllNkRZTzR5ZmY4OFlZY2lzazREeFFoOGVjdEdHcC1NN1ZOVnVGNjdCYnFaYkZuMDFtS0JWcjMyRlRVX3ZFQVZLSHlWMTVpYVg0eXk2a19hdFNhMUFlNW1n?oc=5",
@@ -534,7 +598,7 @@
    "added_news": null
   },
   "Harry Potter": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": {
@@ -561,12 +625,16 @@
    "added_news": null
   },
   "F.A.N.S.": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
-   "opened_news": null,
-   "count": 34,
+   "opened_news": {
+    "title": "Westlife Tickets Go On Sale As Fans Gear Up For 2027 KL Show - BusinessToday Malaysia",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOUHBQVTlPQWhrTnBVYUVzUjcxQy1VRk9ocWEwTlhnTFVQYVI4WVJFQzlkRzlLR19SbVFLMExjeUxVcTBMSVAyYkQ5eEJHMEt6cVFqVzRSY1ZiOFhDLTNldkxrMk5yMHZzaXIzaV9yY002TGJFUFY4SFB2Tm5hWTVvSndXWUE1d0RYWjVsaDY0b3dveDVfTUxBcXI1bng5V3hBZEMtcTM5am8?oc=5",
+    "time": "2026-07-21"
+   },
+   "count": 33,
    "top": [
     {
      "title": "KL gets the final Weeknd: 130,000 fans, two nights, one epic ‘After Hours Til Dawn’ tour send-off - Yahoo",
@@ -590,7 +658,7 @@
    "added_news": null
   },
   "Traffic": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -614,7 +682,7 @@
    "added_news": null
   },
   "Ernie Zakri": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -642,8 +710,32 @@
    "added": false,
    "added_news": null
   },
+  "KATSEYE": {
+   "checked": "2026-11-14",
+   "country": "MY",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": null,
+   "count": 2,
+   "top": [
+    {
+     "title": "Katseye skips Malaysia, heads to Singapore and Bangkok instead for The Wildworld Tour - Lifestyle Asia Hong Kong",
+     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQOEJuN2V0UUFta210ZnQ5VlB0NWg1TzJVTVJzQ1d0VVRqTUFkNEVzSWNXUDN3UzkxWnFQMjJWSFZvNVRQUFRyN1hjMTdPaGxXQXhGOU5vSlhTMTRQLTZ6Zk5ZdmRxQVZ5dVFRVUJubmlqTHZzSG9TS212TUhBZjdyUDVqWVNuamlTck12M2M2TTI0aEpjdGpoeXg0eFZzUm11djhVUXEwMXJJdkkwXzNac3JLUUNTdHpZTTE3ajhQbl9qQ0xVbFd6anVOd0lNamM?oc=5",
+     "time": "2026-11-02"
+    },
+    {
+     "title": "KATSEYE Is Bringing Their World Tour To Asia, But Malaysia Is Not On The List - SAYS",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAzbm10cjAxTWJnVVNaN1hMRkl6eTcyTzQ4bnVMc1VDZ0RJMmdpLUVYU3UtLVNFZ3dVVHpvZTcySURIRkpwbU9EMmFEdTI1VExYTTVaOXpuUUdCZVUyVGxDQmpHcEMxUmds?oc=5",
+     "time": "2026-10-29"
+    }
+   ],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null
+  },
   "Asia": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -672,7 +764,7 @@
    "added_news": null
   },
   "Daya": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -685,7 +777,7 @@
    "added_news": null
   },
   "Macklemore": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -704,7 +796,7 @@
    "added_news": null
   },
   "Batu": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -717,7 +809,7 @@
    "added_news": null
   },
   "Dion": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -730,7 +822,7 @@
    "added_news": null
   },
   "Backstreet Boys": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -743,18 +835,13 @@
    "added_news": null
   },
   "Yahoo": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 9,
+   "count": 8,
    "top": [
-    {
-     "title": "Concerts, sports and MICE: Promoters line up for new MBS arena - Yahoo News Singapore",
-     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOTl9ENlZZWlU0TjVTc1lFaGMxSDZ1ZDA1MFF2cjQzNjF6dHlzMGVNSUJMSWFNM25sSEVtc3ltbzVWOEdzX19JeFh6UExkbVlpaGhhN09ORE9LYUdKbDM3Ql9vSWZaZ3FXbTNYRHdwVXRIYUZnaTFvY29RVXY3NWc0eTd3?oc=5",
-     "time": "2026-11-10"
-    },
     {
      "title": "來這買vivo X500、V80 周杰倫限定好禮、新加坡演唱會一次擁有 - Yahoo新聞",
      "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxOVTNocll3aWwyaDM0d3pDVjM5Z3lPU080cDBsc25qaV9IUzRWM19faTBxUHZranZMbFM3WFY4X2tid3dOaW1NN3hWS3Nsc3ZhTHh4LUU5VVNhUXZ0Y0stX19WRE5yZEhGZkRSV0lPcFM1enhfLUd3SFExM3NlLVU5QmdqcmQ1dnpUVVRkel9xSnplQXBRa2Q4MGl5MDF2U3R2dlNIcGx0ZEJvRC1GMVlsblJ6aWpGQjVBTE9LUFlHSnozaXJEVDI3UUpaOHlPcmdkaDJTYk5EUmRfYVJILXYwUXZpMlczWUNLeks1NFRST1hmWFBIYWt6RVpLZU8zMjUyMWU4WkpyaC12N1ZheUZ5dUdQRmdaaUFuTFQwZ05xUlp4eFdyT2VF?oc=5",
@@ -764,6 +851,11 @@
      "title": "邱鋒澤新加坡開唱太鬆！「刀子皮豆子嘴」笑翻鄉親 - Yahoo新聞",
      "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxNdVByMHB0dEJuX1VLQUVvVGptNEsxNEVYZVpaY1pfWUl0SnZkaHl0cWxITEFaeHphS29TM2lZUnE0c3l5ZDFMLXA2S0RpcFN2NW9GRUdYSm95QnpHQUpLVUlqcVhRa2RsanM3dS1FMGZwRURneGUwYzRfVm5zb3RwamhjajRQVk1VdjZlUlJZRDRnd0ptbjlpT1JEZEd2bnVKTW5XS0IycUJwOXhldHc5VkV5SnoyUlVzVDVTRzFpRWNEOFAxVGxFNUl4NktlT2xoVTdLZklvOEp2bG0tUlJRQXRBTmZxTXh5MjVvOFlpV2RLU3l3THh0S0VNOUxhLTBqejhtOTB1ZlJXRU9ObmRqakotWnY0VHhUV2QwMjl6SEpHemtVT1FFdWwwZXFfcFYwcndOd1BZMFRtX0RGYnNjdWs0UXFsdw?oc=5",
      "time": "2026-10-27"
+    },
+    {
+     "title": "BIGBANG新加坡開唱遇霾害！主辦急發N95口罩 太陽台上一句話暖暈全場 - Yahoo新聞",
+     "url": "https://news.google.com/rss/articles/CBMihANBVV95cUxOQWJoQzdiZnZRWWJJWFVKaFhWU2JwbVJwUVcxT2t4OVFLWGVoVXVRTlBHZEt4b0FHdVJzWEoyb3BKMzdvbUxValQzMVNHdF9yVjZ0NmNrM0owcjRPcXd3VUpOUC1WLW11S3l3OGQ3YzhlZzYzaHZvTUY5T2szLWphLUxIZEp5bERNM3lad0ZpMmhCdml4T3dTbkZFaDJwNy1PS3paUGVhS1FoaHd2cUxzSDR0dk0yMnVHRldEbzZPakI1S1JYaHNqVVFaSG0wZTlUYm8yV0NiQ1cyZ3c1dGFNRkExRTZORlRPQkNyN0pOTkQybUZlcXpKcXhvVzk4SWMyRzlZdFRoZUlWbnd4RWZLeXZQdS1EZzJtNlBkd1hXVGNVOHhfbDQwdzZtMjBNbzk3VmRSV3o4OGlzdlFkNS12anFQNVBaSy02aHdRNHZQMDFselB0d3hxOHE1NGI2SVZoTWdlejh6dTV5OFQwZk81aERSN21GdjhQZ3hRYjBfbFFFVXhN?oc=5",
+     "time": "2026-10-18"
     }
    ],
    "platforms": [],
@@ -772,7 +864,7 @@
    "added_news": null
   },
   "Final Fantasy": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -796,7 +888,7 @@
    "added_news": null
   },
   "VND": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -815,12 +907,12 @@
    "added_news": null
   },
   "Five": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
    "opened_news": null,
-   "count": 6,
+   "count": 5,
    "top": [
     {
      "title": "Confessions of a hop-on, hop-off bus tour fan: Five things I learned on board in Kuala Lumpur - Stuff",
@@ -844,7 +936,7 @@
    "added_news": null
   },
   "Pro": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -873,7 +965,7 @@
    "added_news": null
   },
   "Black": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -886,7 +978,7 @@
    "added_news": null
   },
   "P.L.A.N.": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -919,7 +1011,7 @@
    "added_news": null
   },
   "Dari": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -932,7 +1024,7 @@
    "added_news": null
   },
   "Lucy": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "SG",
    "deep": false,
    "soldout_news": null,
@@ -942,7 +1034,7 @@
     {
      "title": "Super Junior's Yesung, Lucy: Singapore concert calendar for 2026, Entertainment News - AsiaOne.com",
      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE00MkpjVGR1TmZIekJNb1dadWhNdUlUbWRCMTJhYnhvTW90b3dieVgtNlNMRWhKMEVIUDRQZ0xDOUstanY0a3RLMzNmYkFTdFJkM1hzNTY4Z2VhbnRYWndQR2RKakduQUNtWUllU1RqMTF0bHJWeDJmdg?oc=5",
-     "time": "2026-10-27"
+     "time": "2026-10-26"
     },
     {
      "title": "Korean band LUCY to make Singapore debut with 'ISLAND Encore' concert this November - Bandwagon",
@@ -956,7 +1048,7 @@
    "added_news": null
   },
   "Stars": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -985,7 +1077,7 @@
    "added_news": null
   },
   "Propaganda": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -998,7 +1090,7 @@
    "added_news": null
   },
   "D.I.V.A": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": {
@@ -1029,8 +1121,37 @@
    "added": false,
    "added_news": null
   },
+  "Timeless": {
+   "checked": "2026-11-14",
+   "country": "MY",
+   "deep": false,
+   "soldout_news": null,
+   "opened_news": null,
+   "count": 7,
+   "top": [
+    {
+     "title": "After nearly two decades, Indonesia’s renowned 3 Diva set to return to Malaysia this November for TIMELESS concert - Malay Mail",
+     "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNbHdVUVJfMm1ESmtfUnZnQURVSG1tX3gyRUJmQlZmd2xWdmFvSExHaTg0Wi1iWXBTQkxsSzUwUzZ2TE0zOFlITTBmQWNRUmpLQmVJVkhSY2tFUnJVbWRublk0NVBNNko1SW50ZEcxd3k5VnpmaGVDSDVxcTQ0VDZMNWdiaHRZbTFSdkZyVVFNVDl2WDZrLWxudEppOVBsSHFVUjdNeDdrNnRXZXkzczBjYmdrTFUzMkNrN29BMWdDRFJrNUphZXBaa1BaWnB2VEZmUWhEaE41dFFUT296WVotUjVWVlJzWmU0eG53eG5DQThiSndsZlFQLXdQb2xUUdIBgwJBVV95cUxPZlFuVGc3RVZpT3VnMXpHbGdIU3VTMkROaDV4WmxaWTZvTlZxc3N5N1UyUGttdG5aa1EzZnV3aW1scGNxaHNZdTR2UUFHNTJ5LXdaNWM3S0V5SkdKay1uaG9aMlkzQ3Q2TzJRX3pMWnFWOEFNem50NGpsS1k4OG9RcUxwQ3E1NGlVNlFDamNZWUNiUWJzZUZtQWF4cnUwTVdVT0NTYTF6ZXpNWnRVdzR6S1l1Y2p3Si1xRFBUemFRbUwtUkJvbjNScDdOQWJ2cW5lamxiazlnWGJ5REZYVmpXZk55QnI1cU5ZWWJSOVViWkZyZk0wOHFLc0UxZHZfOHlMeE1Z?oc=5",
+     "time": "2026-09-01"
+    },
+    {
+     "title": "Concert set to bring P Ramlee’s timeless classics to life - Free Malaysia Today",
+     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQOEpub3pydmJDc1lmQ1llbHlKVi1JUHZ1Y2V2Yy1rSTNGMGM3UWtFN05scjdFa053c1dEdTVYYVFoNnpiUkg2am5OOG5oZmtPYXVXMnJCVHpXank1QzllS05seEhndllpTXY5SzM0WTVaNU5TX1Y5d2c0Q2t5VGM3Ui1BbU03M3FCUVZZSkM4WUNJT3RjaVJIY3dLdTlMVER1S3pSMlRGanEyRDE3blVIbEQwNGdMd2lhbFE?oc=5",
+     "time": "2025-06-28"
+    },
+    {
+     "title": "Boyz II Men prove they’re still the kings of R&B in timeless KL concert - Sinar Daily",
+     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQcG1ENkxCTHhURVE5Yjh6QjE2bC1IZHpwcXA2b2RWQm4taVNUbVFGbi1FQkxfR0NEREJ0SnFqSENqZVhCakZuRXVYX19SNkNyOTJDNGQxWHlQd0MwYTJiQXEwT1c4RkVoYlNGSS1raGNibzNtODlqTVI2TmptcjNmOE5FNElnNTJPbzVzRml4bDdzUWZpMnF5LThXN2x0ekdJYzJvUFUzalM2Mk9fckJEVGdvdVRYMF9kVHZwekwyTjIxckFtRVhLQWJ4dWg?oc=5",
+     "time": "2025-05-27"
+    }
+   ],
+   "platforms": [],
+   "sale_times": [],
+   "added": false,
+   "added_news": null
+  },
   "Armada": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
    "soldout_news": null,
@@ -1043,20 +1164,16 @@
    "added_news": null
   },
   "Journey": {
-   "checked": "2026-11-13",
+   "checked": "2026-11-14",
    "country": "MY",
    "deep": false,
-   "soldout_news": {
-    "title": "A-Lin《歌迹 Journey》大马站两场售罄 10月30日追加释出视线遮挡区及少量门票 - 马来西亚东方日报",
-    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBoS28zTGFxVmYzTzBucDBuU05ybUMtdko2eTZoMnFjSHUzT2pkbXJXT3U1Zl9MLUJzclpyMlZzMHdaQlJUWS1kTGk2cThLVVVfUWl4dGNiZnJudml1ZEJfcU5kR2kwQW1GWFZvbHc4Q1VLQmh0NDJxYQ?oc=5",
-    "time": "2026-10-27"
-   },
+   "soldout_news": null,
    "opened_news": {
     "title": "A-Lin《歌迹 Journey》演唱会1220加场 门票明日正式开售！ - 马来西亚东方日报",
     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1xaHAtWU9TQk1yd3NqbWZWeFVJcWJpcm5IdjdNUmR0a0s3bmM4eTFzVGNZd1g3LVgzM0J0QXB6OGxzZDFqWS14b294Y3RudGtoeFk1Z3RpejFyTEdMV0dELXc1U2NCZHFPM0hRb2FzNDdJNFdXY3IyWA?oc=5",
     "time": "2026-10-12"
    },
-   "count": 14,
+   "count": 12,
    "top": [
     {
      "title": "Plan ahead, travel smart: Live Nation Malaysia’s fan journey guide to The Weeknd’s concert at TM Stadium Nasional - Yahoo",
@@ -1064,14 +1181,14 @@
      "time": "2026-10-27"
     },
     {
-     "title": "A-Lin《歌迹 Journey》大马站两场售罄 10月30日追加释出视线遮挡区及少量门票 - 马来西亚东方日报",
-     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBoS28zTGFxVmYzTzBucDBuU05ybUMtdko2eTZoMnFjSHUzT2pkbXJXT3U1Zl9MLUJzclpyMlZzMHdaQlJUWS1kTGk2cThLVVVfUWl4dGNiZnJudml1ZEJfcU5kR2kwQW1GWFZvbHc4Q1VLQmh0NDJxYQ?oc=5",
-     "time": "2026-10-27"
-    },
-    {
      "title": "A-Lin《歌迹 Journey》世界巡回演唱会大马站 追加释出门票 - 光华日报",
      "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxPRDZRc3A4ODlKNFRYUXYwNkdrR09MV29Cc2RUSHhKQXd5bWEyLU41RXBQaUpPT29iNDRwcnV4MUUxNUpxTGRqaFhQeHhTOHhQeTVKMFE1bDdaNksxUWlGUUpiSE1LaGpzV08xUjFkQ003ZHZVQ0pnTkpzRTNaZE4tSkcxTkJWWko0cVlaS0czaE9KQThUazRfVEU1TVJnMUswTWhIQ01ibS1Wb0gxRGtBU19FUGpIZFNyandwendockNSWHhGY1RueVJiY2hzbUlYQTUxeERpc0w0RmZVLVVPUUdhbzdIVjdlcWJlUjdOTVg2bDdsaDNyOW5PQ2tXYm4xSlRnbUhkckFTV200VG42SlJ0T09tMUdvT0xKVTdGd05zeWh0Z3h5cE1MS05mSUdMTGQ3b2FVNA?oc=5",
      "time": "2026-10-27"
+    },
+    {
+     "title": "A-Lin《歌迹 Journey》演唱会1220加场 门票明日正式开售！ - 马来西亚东方日报",
+     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1xaHAtWU9TQk1yd3NqbWZWeFVJcWJpcm5IdjdNUmR0a0s3bmM4eTFzVGNZd1g3LVgzM0J0QXB6OGxzZDFqWS14b294Y3RudGtoeFk1Z3RpejFyTEdMV0dELXc1U2NCZHFPM0hRb2FzNDdJNFdXY3IyWA?oc=5",
+     "time": "2026-10-12"
     }
    ],
    "platforms": [],
@@ -1243,64 +1360,6 @@
      "title": "BLACKPINK’s Jisoo surprises BIGBANG backstage after their Singapore concert - allkpop",
      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPSmo1UDhsTk5EemZFMi1yZUJURkRISUt4T2xJWWlFeURQdnhRaERfTmtCT3JCbFRheTAyeGt4aHJxYnYwNmFYR2NhZXVOR0lpbm5ZYTJ6dUZLYl8xbnc4YkdZRVVObEJYdGpZcVNYRFdjdHhLNlFmSUJ2UHhtLU5IbzNncktOY0dQQklheUN2T1owaUo2OFNGQUhDbDNkdUFmWDdIdmc3cW1yNnFFOTFaM3Q4LS0?oc=5",
      "time": "2026-10-17"
-    }
-   ],
-   "platforms": [],
-   "sale_times": [],
-   "added": false,
-   "added_news": null
-  },
-  "Avenged Sevenfold": {
-   "checked": "2026-11-13",
-   "country": "SG",
-   "deep": false,
-   "soldout_news": null,
-   "opened_news": null,
-   "count": 3,
-   "top": [
-    {
-     "title": "“Nene Royal” 惊喜助阵 Avenged Sevenfold 新加坡演唱会，现场又唱又秀吉他 Solo - TNN Thailand",
-     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBiQUg1VDN6RnlTNXBqTVBsUmpaaS16eHFuSzFVUm1hdkR6bm9ERUQ1TlJ5c1JmdWRfN1NhUGhmdldrM0pfb3c2RHg1R09mb0gyWHl4dFlIbmlnOF9GWl9TQ2t3?oc=5",
-     "time": "2026-11-07"
-    },
-    {
-     "title": "Thai teen rocker Nene Royal wins over audience at Avenged Sevenfold’s Singapore concert - The Straits Times",
-     "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNV2QzdXNRbTgzRUpkOUl1Tl9LM043MUEyeFRuNld0SVpXNW11SXlZaHZoN0VpS2RjRS1GWC15YzI0RGtTT1l5bkpYTGhqWnE3ekotMEpublZKRDhtZmxYdGZaWDM3ajh4Z2RmT3c0cGZBNERaYXhBbUF4T2ZtaDFCdmNzeTJ6bndraHhQd1FGZ1FRRDhKY3ZoVnM2RnFibVlTaDJEVmpFQUM3QkdUZHVlRXh6UVRtdmxBaG1Bd1RZemdEVTlhMXoxc1lnTWdJTWYyTkh3X3pJZ2pjT1U?oc=5",
-     "time": "2026-10-13"
-    },
-    {
-     "title": "Nene Royal x Avenged Sevenfold A full 12 minutes HD แปลไทย (A7X) 13/10/2026 (Live in Singapore 2026) - YouTube",
-     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE93SGtxSU5ZLVF1eUhHbzQ0WTh0Mm44dmVKSERQSDF6YkZibDFSMmZDMV9GdmlhMEVZbXpWemVyQ2RwZGY3aGx1b3M1Tk4xVXRoeWE5djB0aDd5c1lv?oc=5",
-     "time": "2026-10-13"
-    }
-   ],
-   "platforms": [],
-   "sale_times": [],
-   "added": false,
-   "added_news": null
-  },
-  "Lana Del Rey": {
-   "checked": "2026-11-13",
-   "country": "SG",
-   "deep": false,
-   "soldout_news": null,
-   "opened_news": null,
-   "count": 3,
-   "top": [
-    {
-     "title": "After F1 Singapore Concert, Lana Del Rey Hints at Another Visit to Asia - Billboard",
-     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQbjZMR0Z0SjZhaFpUS0d0a2c0RTJiVm85RllCb3dLemQ2YlljRG9tblNnUHozOU1meEZkdDVKVVlQZ01WakFVekJZWmdwSTljU3BmZ2lSQlVyYTBsT2JkUGJpRTdUQmNjTjJwOUd0aGpwbDRlV3dIbGR3RHQwUGlQUEdROEEzSEgyaDdqdWNySUh3eEVyRHE4ejhpX0h4VTNIV29weXF3?oc=5",
-     "time": "2026-10-13"
-    },
-    {
-     "title": "Singapore Formula 1 2026 Concert Line-Up & Schedule: Lana Del Rey, Cortis, Zara Larsson, Goo Goo Dolls & More - FZINE Singapore",
-     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQa0J0TVF5WExCVjU4ZHFwSlNZalROdnBJTjZoWVJwUmlaVndvRXRLN2VQZEhRU3VWS1NCanNmNEh1SFpXd09PUXNCZU9za2hKcFR3YllPRk5jcUN3QjNUejkyMHFQaEZRek1CVVRuSi0xOXRTbncycFF1MFN4LWpBeDE4Rkh0Z1JHWEcxdi0wWWpmd0RC?oc=5",
-     "time": "2026-10-08"
-    },
-    {
-     "title": "From JJ Lin to The Killers and Lana Del Rey: Guide to Singapore’s must-watch F1 concerts - The Straits Times",
-     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPa0RvM3lfb0hpMzBkd3ZJQkhlcGdyVkdscmI3ZDQ0dVd0RERac2xqYWF5ZEtEUnp4c1hUMUJYUHdlQW91d1BaZWN3akR4Z0UtZ2UzMmJPYm42OTdvQi1ucU1WdU8yQ2swSzVScmRsd2tjczY1Z0ZtdlhjVEVZdEVTUGVwWHp6bHlHN3gxWWxUZXFTYTl2d0pkMVFTOVZJbDhvalNIVnBaYWl5TWlseVd0Z29heEVPaTlBcDZzZUpkd2o4Y0gzTUxaZEdLTHNrSzQ?oc=5",
-     "time": "2026-09-16"
     }
    ],
    "platforms": [],
@@ -1762,35 +1821,6 @@
    "opened_news": null,
    "count": 0,
    "top": [],
-   "platforms": [],
-   "sale_times": [],
-   "added": false,
-   "added_news": null
-  },
-  "Timeless": {
-   "checked": "2026-11-13",
-   "country": "MY",
-   "deep": false,
-   "soldout_news": null,
-   "opened_news": null,
-   "count": 4,
-   "top": [
-    {
-     "title": "After nearly two decades, Indonesia’s renowned 3 Diva set to return to Malaysia this November for TIMELESS concert - Malay Mail",
-     "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNbHdVUVJfMm1ESmtfUnZnQURVSG1tX3gyRUJmQlZmd2xWdmFvSExHaTg0Wi1iWXBTQkxsSzUwUzZ2TE0zOFlITTBmQWNRUmpLQmVJVkhSY2tFUnJVbWRublk0NVBNNko1SW50ZEcxd3k5VnpmaGVDSDVxcTQ0VDZMNWdiaHRZbTFSdkZyVVFNVDl2WDZrLWxudEppOVBsSHFVUjdNeDdrNnRXZXkzczBjYmdrTFUzMkNrN29BMWdDRFJrNUphZXBaa1BaWnB2VEZmUWhEaE41dFFUT296WVotUjVWVlJzWmU0eG53eG5DQThiSndsZlFQLXdQb2xUUdIBgwJBVV95cUxPZlFuVGc3RVZpT3VnMXpHbGdIU3VTMkROaDV4WmxaWTZvTlZxc3N5N1UyUGttdG5aa1EzZnV3aW1scGNxaHNZdTR2UUFHNTJ5LXdaNWM3S0V5SkdKay1uaG9aMlkzQ3Q2TzJRX3pMWnFWOEFNem50NGpsS1k4OG9RcUxwQ3E1NGlVNlFDamNZWUNiUWJzZUZtQWF4cnUwTVdVT0NTYTF6ZXpNWnRVdzR6S1l1Y2p3Si1xRFBUemFRbUwtUkJvbjNScDdOQWJ2cW5lamxiazlnWGJ5REZYVmpXZk55QnI1cU5ZWWJSOVViWkZyZk0wOHFLc0UxZHZfOHlMeE1Z?oc=5",
-     "time": "2026-09-01"
-    },
-    {
-     "title": "Concert set to bring P Ramlee’s timeless classics to life - Free Malaysia Today",
-     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQOEpub3pydmJDc1lmQ1llbHlKVi1JUHZ1Y2V2Yy1rSTNGMGM3UWtFN05scjdFa053c1dEdTVYYVFoNnpiUkg2am5OOG5oZmtPYXVXMnJCVHpXank1QzllS05seEhndllpTXY5SzM0WTVaNU5TX1Y5d2c0Q2t5VGM3Ui1BbU03M3FCUVZZSkM4WUNJT3RjaVJIY3dLdTlMVER1S3pSMlRGanEyRDE3blVIbEQwNGdMd2lhbFE?oc=5",
-     "time": "2025-06-28"
-    },
-    {
-     "title": "11 July (Sabah) – Kenny G “Timeless Legacy” Tour in Malaysia 2025 - Star Planet",
-     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE11RmhhREZpUTJ5ZnpQZjFQeFZaWHpfbG5PZFoyS3RVbF9PZnhJZTE5VVViU1dpZjVpay1jcFNaUnZwS0JVdXNOU2RDMHhPOG1QYlZTbw?oc=5",
-     "time": "2025-04-08"
-    }
-   ],
    "platforms": [],
    "sale_times": [],
    "added": false,
@@ -2433,74 +2463,6 @@
   }
  ],
  "events": [
-  {
-   "id": "t2u-52726",
-   "source": "Ticket2U",
-   "name": "Timeless Love Charity Concert 2026 (Penang)",
-   "artist": null,
-   "type": "Concert",
-   "venue": "SPICE Arena",
-   "city": "Pulau Pinang",
-   "dates": [
-    "2026-11-13 19:00"
-   ],
-   "sales": [
-    {
-     "name": "售票",
-     "start": null,
-     "end": "2026-11-13 22:00",
-     "queue": null,
-     "available": true,
-     "code_required": false,
-     "url": "https://www.ticket2u.com.my/event/52726/timeless-love-charity-concert-2026-(penang)"
-    }
-   ],
-   "tiers": [
-    {
-     "name": "Standard",
-     "price": "RM 88.00",
-     "desc": "",
-     "sold_out": false
-    },
-    {
-     "name": "VIP",
-     "price": "RM 188.00",
-     "desc": "",
-     "sold_out": false
-    }
-   ],
-   "price_from": "RM 88.00",
-   "limit": null,
-   "sold_out": false,
-   "url": "https://www.ticket2u.com.my/event/52726/timeless-love-charity-concert-2026-(penang)",
-   "country": "MY",
-   "first_seen": "2026-10-22 01:17",
-   "seat_maps": [],
-   "updates": {
-    "prices": "2026-11-05 03:49"
-   },
-   "artist_name": "Timeless",
-   "fans": 9444,
-   "region": "欧美",
-   "poster_img": "avatars/p-t2u-52726.png",
-   "avatar": "avatars/a-f2026124fed3.jpg",
-   "avatar_kind": "artist",
-   "poster_portrait": true,
-   "platforms": [
-    {
-     "source": "Ticket2U",
-     "url": "https://www.ticket2u.com.my/event/52726/timeless-love-charity-concert-2026-(penang)",
-     "id": "t2u-52726",
-     "sold_out": false,
-     "price_from": "RM 88.00"
-    }
-   ],
-   "hidden": null,
-   "news_added": null,
-   "added_status": null,
-   "sale_state": "ON_SALE",
-   "sale_evidence": []
-  },
   {
    "id": "fantopia-m3vmif9o",
    "country": "MY",
@@ -4138,7 +4100,9 @@
    "hidden": null,
    "news_added": null,
    "added_status": null,
-   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "opened_at": "2026-11-13 17:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
    "sale_evidence": [
     {
      "src": "NOL World 售票轮次",
@@ -6637,7 +6601,9 @@
    "hidden": null,
    "news_added": null,
    "added_status": null,
-   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "opened_at": "2026-11-13 18:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
    "sale_evidence": [
     {
      "src": "NOL World 售票轮次",
@@ -7603,12 +7569,76 @@
    "hidden": null,
    "news_added": null,
    "added_status": null,
-   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "opened_at": "2026-11-13 17:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
    "sale_evidence": [
     {
      "src": "NOL World 售票轮次",
      "text": "开票",
      "time": "2026-11-13 17:00"
+    }
+   ]
+  },
+  {
+   "id": "nol-26016415",
+   "country": "KR",
+   "source": "NOL World",
+   "name": "「severance」",
+   "artist": null,
+   "type": "rock/metal",
+   "venue": "WEST BRIDGE LIVE HALL",
+   "city": "Seoul",
+   "dates": [
+    "2027-01-02"
+   ],
+   "sales": [
+    {
+     "name": "开票",
+     "start": "2026-11-16 19:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://world.nol.com/en/ticket/places/26000885/products/26016415"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "All Section · advanced booking price",
+     "price": "₩50,000"
+    }
+   ],
+   "limit": null,
+   "sold_out": false,
+   "url": "https://world.nol.com/en/ticket/places/26000885/products/26016415",
+   "first_seen": "2026-11-14 03:48",
+   "seat_maps": [],
+   "artist_name": "severance",
+   "fans": 0,
+   "region": "K-pop",
+   "poster_img": "avatars/p-nol-26016415.jpg",
+   "avatar": "avatars/p-nol-26016415.jpg",
+   "avatar_kind": "poster",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "NOL World",
+     "url": "https://world.nol.com/en/ticket/places/26000885/products/26016415",
+     "id": "nol-26016415",
+     "sold_out": false,
+     "price_from": null
+    }
+   ],
+   "hidden": null,
+   "news_added": null,
+   "added_status": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-11-16 19:00"
     }
    ]
   },
@@ -8365,6 +8395,73 @@
    ]
   },
   {
+   "id": "nol-26016535",
+   "country": "KR",
+   "source": "NOL World",
+   "name": "KIMCHIKURA x ANISAMA SEOUL 2027",
+   "artist": null,
+   "type": "visiting concert",
+   "venue": "BLUESQUARE WOORI WON BANKING HALL",
+   "city": "Seoul",
+   "dates": [
+    "2027-01-23",
+    "2027-01-24"
+   ],
+   "sales": [
+    {
+     "name": "开票",
+     "start": "2026-11-18 18:00",
+     "end": null,
+     "queue": null,
+     "available": true,
+     "code_required": false,
+     "url": "https://world.nol.com/en/ticket/places/26001455/products/26016535"
+    }
+   ],
+   "tiers": [
+    {
+     "name": "STANDING",
+     "price": "₩187,000"
+    },
+    {
+     "name": "Assigned Seat",
+     "price": "₩187,000"
+    }
+   ],
+   "limit": null,
+   "sold_out": false,
+   "url": "https://world.nol.com/en/ticket/places/26001455/products/26016535",
+   "first_seen": "2026-11-14 03:48",
+   "seat_maps": [],
+   "artist_name": "KIMCHIKURA x ANISAMA SEOUL",
+   "fans": 0,
+   "region": "K-pop",
+   "poster_img": "avatars/p-nol-26016535.jpg",
+   "avatar": "avatars/p-nol-26016535.jpg",
+   "avatar_kind": "poster",
+   "poster_portrait": true,
+   "platforms": [
+    {
+     "source": "NOL World",
+     "url": "https://world.nol.com/en/ticket/places/26001455/products/26016535",
+     "id": "nol-26016535",
+     "sold_out": false,
+     "price_from": null
+    }
+   ],
+   "hidden": null,
+   "news_added": null,
+   "added_status": null,
+   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_evidence": [
+    {
+     "src": "NOL World 售票轮次",
+     "text": "开票",
+     "time": "2026-11-18 18:00"
+    }
+   ]
+  },
+  {
    "id": "fantopia-3tq4i8us",
    "country": "SG",
    "source": "Fantopia",
@@ -8754,82 +8851,6 @@
    ]
   },
   {
-   "id": "nol-26016176",
-   "country": "KR",
-   "source": "NOL World",
-   "name": "Steve Gadd BHG Project - Blicher/Hemmer/Gadd",
-   "artist": null,
-   "type": "Jazz/Blues",
-   "venue": "Yonsei University 100th Anniversary Memorial Hall Concert Hall",
-   "city": "Seoul",
-   "dates": [
-    "2027-01-29"
-   ],
-   "sales": [
-    {
-     "name": "开票",
-     "start": "2026-11-12 11:00",
-     "end": null,
-     "queue": null,
-     "available": true,
-     "code_required": false,
-     "url": "https://world.nol.com/en/ticket/places/23001391/products/26016176"
-    }
-   ],
-   "tiers": [
-    {
-     "name": "VIP Seat",
-     "price": "₩130,000"
-    },
-    {
-     "name": "R Seat",
-     "price": "₩110,000"
-    },
-    {
-     "name": "S Seat",
-     "price": "₩90,000"
-    },
-    {
-     "name": "A Seat",
-     "price": "₩70,000"
-    }
-   ],
-   "limit": null,
-   "sold_out": false,
-   "url": "https://world.nol.com/en/ticket/places/23001391/products/26016176",
-   "first_seen": "2026-11-10 06:26",
-   "seat_maps": [],
-   "artist_name": "Steve Gadd",
-   "fans": 11146,
-   "region": "K-pop",
-   "poster_img": "avatars/p-nol-26016176.jpg",
-   "avatar": "avatars/a-3cbc9f4fcc84.jpg",
-   "avatar_kind": "artist",
-   "poster_portrait": true,
-   "platforms": [
-    {
-     "source": "NOL World",
-     "url": "https://world.nol.com/en/ticket/places/23001391/products/26016176",
-     "id": "nol-26016176",
-     "sold_out": false,
-     "price_from": null
-    }
-   ],
-   "hidden": null,
-   "news_added": null,
-   "added_status": null,
-   "opened_at": "2026-11-12 11:00",
-   "opened_approx": false,
-   "sale_state": "ON_SALE",
-   "sale_evidence": [
-    {
-     "src": "NOL World 售票轮次",
-     "text": "开票",
-     "time": "2026-11-12 11:00"
-    }
-   ]
-  },
-  {
    "id": "bms-OLAFMY27",
    "source": "BookMyShow",
    "name": "ONE LOVE ASIA FESTIVAL 2027 - MALAYSIA",
@@ -9037,93 +9058,6 @@
      "src": "NOL World 售票轮次",
      "text": "开票",
      "time": "2026-11-17 11:00"
-    }
-   ]
-  },
-  {
-   "id": "nol-26015604",
-   "country": "KR",
-   "source": "NOL World",
-   "name": "KATSEYE: THE WILDWORLD TOUR",
-   "artist": null,
-   "type": "visiting concert",
-   "venue": "KSPO DOME",
-   "city": "Seoul",
-   "dates": [
-    "2027-02-04"
-   ],
-   "sales": [
-    {
-     "name": "开票",
-     "start": "2026-11-12 11:00",
-     "end": null,
-     "queue": null,
-     "available": true,
-     "code_required": false,
-     "url": "https://world.nol.com/en/ticket/places/26001372/products/26015604"
-    }
-   ],
-   "tiers": [
-    {
-     "name": "STANDING",
-     "price": "₩165,000"
-    },
-    {
-     "name": "Seat P",
-     "price": "₩176,000"
-    },
-    {
-     "name": "Seat R",
-     "price": "₩165,000"
-    },
-    {
-     "name": "Seat S",
-     "price": "₩154,000"
-    },
-    {
-     "name": "Seat A",
-     "price": "₩143,000"
-    },
-    {
-     "name": "Seat B",
-     "price": "₩132,000"
-    }
-   ],
-   "limit": null,
-   "sold_out": false,
-   "url": "https://world.nol.com/en/ticket/places/26001372/products/26015604",
-   "first_seen": "2026-10-30 02:31",
-   "seat_maps": [],
-   "updates": {
-    "prices": "2026-11-08 01:45"
-   },
-   "artist_name": "KATSEYE",
-   "fans": 271045,
-   "region": "欧美",
-   "poster_img": "avatars/p-nol-26015604.jpg",
-   "avatar": "avatars/a-324414a0b834.jpg",
-   "avatar_kind": "artist",
-   "poster_portrait": true,
-   "platforms": [
-    {
-     "source": "NOL World",
-     "url": "https://world.nol.com/en/ticket/places/26001372/products/26015604",
-     "id": "nol-26015604",
-     "sold_out": false,
-     "price_from": null
-    }
-   ],
-   "hidden": null,
-   "news_added": null,
-   "added_status": null,
-   "opened_at": "2026-11-12 11:00",
-   "opened_approx": false,
-   "sale_state": "ON_SALE",
-   "sale_evidence": [
-    {
-     "src": "NOL World 售票轮次",
-     "text": "开票",
-     "time": "2026-11-12 11:00"
     }
    ]
   },
@@ -9681,7 +9615,9 @@
    "hidden": null,
    "news_added": null,
    "added_status": null,
-   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "opened_at": "2026-11-13 17:00",
+   "opened_approx": false,
+   "sale_state": "ON_SALE",
    "sale_evidence": [
     {
      "src": "NOL World 售票轮次",
@@ -9796,7 +9732,7 @@
    "added_status": null,
    "opened_at": "2026-11-13",
    "opened_approx": false,
-   "sale_state": "GENERAL_SALE_ANNOUNCED",
+   "sale_state": "ON_SALE",
    "sale_evidence": [
     {
      "src": "Fantopia 售票轮次",
@@ -10323,6 +10259,224 @@
  ],
  "leads": [
   {
+   "id": "news-b833ebfc36af2258",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "The Straits Times",
+   "title": "Paramore’s Hayley Williams announces Asia tour with stop in Singapore - The Straits Times",
+   "text": null,
+   "time": "2026-11-13 20:25",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPbEVEQTdzX3NBV2FOc2NlSWdvZkRYRkJOTURKd1RuZV9KTmRWVnNXWGlWRkRyTVp6WnA5a0ZWeGcwWmh4OTNXVFFxem5fYk5wY29wSjBKZTVkX3hxZ3RWRDFWWVJnYThSUHNGbWR4Q0E5dkNieS1OZ2xablJ3OEdUZzZ2TUJQbGhqYS1RcTN1OEhWU21taWhUMDBIcmY0am9mN3Q3Q2pmTl9mVnQ3MlBDVkpIYlh5X2c?oc=5",
+   "hints": [],
+   "first_seen": "2026-11-14 03:48",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "Paramore",
+   "artist_fans": 3157067,
+   "artist_region": "其他",
+   "artist_photo": "avatars/a-1e859a58f695.jpg",
+   "hidden": null,
+   "listed": false
+  },
+  {
+   "id": "news-7950d0d770e85392",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "亚洲电视新闻",
+   "title": "NCT 127明年1月来马开唱 11月20日公开售票 - 亚洲电视新闻",
+   "text": null,
+   "time": "2026-11-13 19:00",
+   "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNRURZekt6Uk5aY2FJY1ZIc0xrZmt1dTNDMl9HX1VfZG5CbGFnUzBMZXdyX2tiTUJJY21nX2RrWlVsczVyTzhFNFg1TmRXOXp3WjhjQ0pnekluUVlQZzVyeEQ1Q2JNYnZkTEhnOU5WT0pidXVPQXI1NGp3S3VoQWlnWF9RMTI5VnJ3aG1WSHIzeHV6ZzBidGVxeHRNdW1BRDlkRm9wZTlrTVlSXzh1eWVOdzlIWWFyTFdfdDRhdjFGUklraGdXZTZVNDZPejgzdTVCN2R4cDZTZTV4b3BsaWpYVXc3ZWd2eTBNVmU2cE9vUEdKOWZWLXhmcGROMzBnLUll?oc=5",
+   "hints": [],
+   "first_seen": "2026-11-14 03:48",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "NCT",
+   "artist_fans": 118334,
+   "artist_region": "K-pop",
+   "artist_photo": "avatars/a-e913063e9679.jpg",
+   "hidden": null,
+   "listed": false
+  },
+  {
+   "id": "news-2bcf663918b8fe37",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "The Star",
+   "title": "K-pop boy group NCT 127 to hold concert in KL on Jan 9 - The Star",
+   "text": null,
+   "time": "2026-11-13 18:35",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUEI5b1QxQ2VRV3hlckVLLTRXM0p3N3BGRkRvbTZLaGppYm1RSzFYZWNZRFM5ekZVNVNXcHFTMUw5MzlHdUFZYnc4Zjk1S1p4bXN4RW1ZQXN3SnlscGVhQmhFa0pDY1JFQkRyMnZ6UVg4MERJcEFSb0hybWpIWWJobUVZQ1kzNFJteXRMVnB1cm83OFhhU1hKY2RMV3FPMllBLUpZeUxuQ3M1OHRCc0MzcW5jV1J1bFE?oc=5",
+   "hints": [],
+   "first_seen": "2026-11-14 03:48",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "NCT",
+   "artist_fans": 118334,
+   "artist_region": "K-pop",
+   "artist_photo": "avatars/a-e913063e9679.jpg",
+   "hidden": null,
+   "listed": false
+  },
+  {
+   "id": "news-0135a0b430052f60",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Citizens Journal",
+   "title": "Jason Mraz delights 8,000 fans at Bukit Jalil concert - Citizens Journal",
+   "text": null,
+   "time": "2026-11-13 18:29",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE14VDBHZGZDeGpHU04wZTcxMWE4RHZqV2NlTHZWMUdkMHJsTHB5WGlxRnRjTWRPWTBxbFBJT1M0WjZJTlBCTG11ZU5DSnFkLUdWc3E2Z0lhZVBreDlmQUhQLXRyaV9JN1hXSWc4OVZtR2R3enJPWHVGajVMSFVxMkU?oc=5",
+   "hints": [],
+   "first_seen": "2026-11-04 14:39",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "Jason Mraz",
+   "artist_fans": 2418345,
+   "artist_region": "欧美",
+   "artist_photo": "avatars/a-06b87835dbfb.jpg",
+   "hidden": null,
+   "listed": false
+  },
+  {
+   "id": "news-1396532f924f3f99",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "Tempo.co English",
+   "title": "Paramore's Hayley Williams Brings Solo Tour to Singapore in 2027 - Tempo.co English",
+   "text": null,
+   "time": "2026-11-13 16:36",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSGpxUzRKSUctSzktTjRKb3lUQ2hDOEJka2szT3dvelczQmVVMTZlZkc1ZGJyT1FfY1hiVTZYaFdSODg5bFdaRFo1TzFXVkhrLVVXZ2l6czZuazB0anA4Tnl6OTh6dGxVZ0drRjM2Yi1PVzFvVHBtQk5qREtfRzl0aHQzV1JRZktTRHB5c3RodXEwellobTYtV3ZaYmU?oc=5",
+   "hints": [],
+   "first_seen": "2026-11-14 03:48",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-1af625abe1e7c607",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "The Korea Daily",
+   "title": "izna — K-Pop Group Lights Up Singapore with Debut Concert Tour - The Korea Daily",
+   "text": null,
+   "time": "2026-11-13 16:13",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5adS1SUGlOUHVoeFdfLUpaNkpIQ0ZkbG1vcGQtTS1kMUFCaVJuVDNRdFVqOUt4VDV5WTVKc3EyR3ZnSUg5aVhnakhaazRpbXFRSm1vejZjMVRnRTBjdjVnSXQ4T1g?oc=5",
+   "hints": [],
+   "first_seen": "2026-11-14 03:48",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "izna",
+   "artist_fans": 6990,
+   "artist_region": "K-pop",
+   "artist_photo": "avatars/a-988ff669d789.jpg",
+   "hidden": null,
+   "listed": false
+  },
+  {
+   "id": "news-567883e9af597edc",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "www.xportsnews.com",
+   "title": "'컴백' 루시, 싱가포르서 앙코르 콘서트 피날레…열일 행보 - www.xportsnews.com",
+   "text": null,
+   "time": "2026-11-13 15:50",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE05MWMtWGdlYWtBMFF5Z294LURQYlctcl85YjM0YzNTWl9HdzV6bXE5X3NlbDhJTFpWRDFVSDRpbVBkck5IYndPS3M0RmN4RkhGUW5QWA?oc=5",
+   "hints": [],
+   "first_seen": "2026-11-14 03:48",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-ec667830d445494b",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "일간스포츠",
+   "title": "이즈나, 싱가포르도 반했다…첫 콘서트 투어에 현지 매체 호평 - 일간스포츠",
+   "text": null,
+   "time": "2026-11-13 15:28",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9hb3VUS2JVVXZmSGhKZTZpTFFMVlBiMEJ5T3QtU2JkVkcwZjctRUcxVkFkRl9XVFdNd084ZEw4Mk5mcTl3S3hJb2t6dFVmOVd5TDJITllDamJselM4RjI3Zk5CamlZZU1q?oc=5",
+   "hints": [],
+   "first_seen": "2026-11-14 03:48",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-431572830be8beb8",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Sin Chew Daily",
+   "title": "陆耀荣.大马演唱会经济被保守思维搞砸 - 言路 - 读者观点 - Sin Chew Daily",
+   "text": null,
+   "time": "2026-11-13 14:59",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9HMU5lbVdDcEN0d1UweDg0M3FXSW1DODFrUjdWS290eDV4Z0FlOS0xZTBoQmFGMExrYzNHMjRGVnhadnBvcDh5SmhGNW5DTzBfbW5BbzJFeVliVkx6TTc1QQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-11-14 03:48",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-b233e7a24a945747",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "ZUM 뉴스",
+   "title": "스타들의 인터뷰|이즈나, 싱가포르 공연 마치더니…美 라디오 인터뷰까지 - ZUM 뉴스",
+   "text": null,
+   "time": "2026-11-13 14:59",
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1xN2FIVVZHMTZzbXlqTTVyQTl0TTlHc0lVMTVoWG5Hb2ZhRnhSeDJxNjFFNjRWQnotdi1jd1hNYUNpTE8xUDJVLVU1akM2M0VWZVRDdTF1TTI?oc=5",
+   "hints": [],
+   "first_seen": "2026-11-14 03:48",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-d374c48f418672f7",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "텐아시아",
+   "title": "이즈나, 싱가포르 공연 마치더니…美 라디오 인터뷰까지 - 텐아시아",
+   "text": null,
+   "time": "2026-11-13 14:59",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1jQmJoa2YxakdmY2VZeFZLWDBYWmdFZV8wUGJfa3AzRHJJaHZJUi1Vd1QxV3YtN1hZT0J1OERqTXlPSWN5ZHAycEFPR2FneEZJRTZRQ2pUQl9xM28?oc=5",
+   "hints": [],
+   "first_seen": "2026-11-14 03:48",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
    "id": "news-b9dd418799834ba0",
    "kind": "新闻",
    "country": "MY",
@@ -10477,6 +10631,24 @@
    "listed": true
   },
   {
+   "id": "news-7ffe2bb4891a643f",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "JTBC",
+   "title": "루시, 14일 싱가포르서 앙코르 콘서트 ‘ISLAND’ 개최 - JTBC",
+   "text": null,
+   "time": "2026-11-13 10:29",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBpeFp5R295c3M1MlJ4ZUVNRG1kbEZFaE4zRkZwMlhBdExOV3ktZGk2ajlMNFh4TENkTDk2Mm5qaE0tbHVEYzVwN1FNQWpvc2EtUEZULQ?oc=5",
+   "hints": [],
+   "first_seen": "2026-11-14 03:48",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
    "id": "news-de53a8e4c8d78392",
    "kind": "新闻",
    "country": "SG",
@@ -10523,6 +10695,24 @@
    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBfeklMQ1hyU1dMMXFlZ0tiTkxMNlA3ajVub0g5cGFDWmRmWmczZkxwYTJISEJnVXNKdmFTdWpaYktNcWRHWktzdlg5ZjZBS1liY1c0LVFGQVdjQk90eFQ2ZjMyUW8?oc=5",
    "hints": [],
    "first_seen": "2026-11-13 14:55",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-4164d8f0201008a2",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Mentafsir kegilaan konsert secara langsung dan \"rangsangan\" yang disediakan oleh Anugerah Cakera Emas. - Vietnam.vn",
+   "text": null,
+   "time": "2026-11-13 08:55",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeVVmLU1FVzNpR2V4cDVXaG00aGZWNERZOXZJLVdzYlNTMGFtbXo4Sm91Mm1TcS1BRnJLbzhoNkRVcVJtbVAyRzFRa0V5b2lBVUZTWk1aOGVWSFJHRlBCMnBaMUQ1WS1GZWpNWWFOMkVYNEZaZzAtOUxyODd6cm9PRkE4dDhFalR4NzFTYUlPNXdUVlJvb2huRA?oc=5",
+   "hints": [],
+   "first_seen": "2026-11-14 03:48",
    "matches": [],
    "sale_times": [],
    "status": "rumor",
@@ -10612,24 +10802,6 @@
    "artist_region": "K-pop",
    "artist_photo": "avatars/a-988ff669d789.jpg",
    "hidden": null,
-   "listed": false
-  },
-  {
-   "id": "news-59d1dc898b4692e2",
-   "kind": "新闻",
-   "country": "SG",
-   "from": "싱글리스트",
-   "title": "이즈나, 콘서트 투어 'WHO DAT GIRL?' 싱가포르 공연 성료...현지 매체 호평 - 싱글리스트",
-   "text": null,
-   "time": "2026-11-13 06:35",
-   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1uclBZWTJsTGdVLVN6TTJMWUozMVNuMGpmdXpBT0dBbUhsUS13Tk1VZ1JUNXVlN3RtM2FYU1IzaGRMRXNuSmJCS2NTejkyZlBabVVmaFJhMFhzS0VfdWpPc2pJV2RrZw?oc=5",
-   "hints": [],
-   "first_seen": "2026-11-13 14:55",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
    "listed": false
   },
   {
@@ -10723,6 +10895,28 @@
    "listed": false
   },
   {
+   "id": "news-9724775afd8bebfc",
+   "kind": "新闻",
+   "country": "SG",
+   "from": "The Straits Times",
+   "title": "Haze vs VIPs at BigBang concert in Singapore - The Straits Times",
+   "text": null,
+   "time": "2026-11-12 17:19",
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1ZVTVmYllZMzhpemx1U1JKbDNxb1FaczFTRUdZMXpRaEJLQl9Ca0UyYUJ6b2ZKV2NIN1l1YXhaNVBpWFpUTzVVSVlNQ0FSYjZJNkI1amFVZ09UcWFzQ2c?oc=5",
+   "hints": [],
+   "first_seen": "2026-11-14 03:48",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "artist": "BIGBANG",
+   "artist_fans": 727860,
+   "artist_region": "K-pop",
+   "artist_photo": "avatars/a-910706c961d7.jpg",
+   "hidden": null,
+   "listed": true
+  },
+  {
    "id": "news-7928d081689ffa00",
    "kind": "新闻",
    "country": "SG",
@@ -10733,6 +10927,24 @@
    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBVZHJuWHpPeEpkREFjVkJhYUI2WlI1UmNLYS04enJ2SUx2anJXYmNoVTEtUEQyMVJOV3VMcjRPeUU0VUVsVmx1UFZpbDh4NjJQRTJuUjVaYTVJcEo4U3FYMFJNZ2xPbHlkUndMRGVTUnd2WS1hRkE?oc=5",
    "hints": [],
    "first_seen": "2026-11-13 04:00",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-09781d0f4f2a7236",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Berita Harian",
+   "title": "'Alasan sekadar berhibur tak halalkan konsert berunsur pemujaan, syirik' - Mufti Kelantan - Berita Harian",
+   "text": null,
+   "time": "2026-11-12 14:54",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOZFdiWkp6LTFmVUh5MzdEZlp4NHZqMVkyVWduWXU2WVNtN0M3YU1IYU1SYWxEbjB6LTh6a3ZZbE9henRBeFNEWVhwQTc2NkZETlhCT2Nhc3h2VzNwQW1MeXdyT3RHVUJWZTItdllPeGpFS2dxdW1jYUxCTHdzUWhqa1Fha0xzMGhka2cwZVdUR1pzZ1V3WEwxbDJ1M1AwTHh4M1E1MjFPU2RzWUplcURTdVFxUkozbDZsTjltVzR4QVhtMjDSAcMBQVVfeXFMTmRXYlpKei0xZlVIeTM3RGZaeDR2ajFZMlVnbll1NllTbTdDN2FNSGFNUmFsRG4wei04emt2WWxPYXp0QXhTRFlYcEE3NjZGRE5YQk9jYXN4dlczcEFtTHl3ck90R1VCVmUyLXZZT3hqRUtncXVtY2FMQkx3c1FoamtRYWtMczBoZGtnMGVXVEdac2dVd1hMMWwydTNQMEx4eDNRNTIxT1Nkc1lKZXFEU3VRcVJKM2w2bE45bVc0eEFYbTIw?oc=5",
+   "hints": [],
+   "first_seen": "2026-11-14 03:48",
    "matches": [],
    "sale_times": [],
    "status": "rumor",
@@ -10998,7 +11210,7 @@
    "title": "[공식] 피프티피프티, 오는 12월 말레이시아·싱가포르서 팬콘서트 ‘스틸 로버블’ 개최 - 스포츠경향",
    "text": null,
    "time": "2026-11-11 16:50",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5TWDhoRGNmcXpSdGF0Q25tanVyTF8yQS1VdDRubEE0Z28tTDFDMFBHVV85MXE2UmxXR0RtcmxBWWFVNXQ4LU9Wd3FHRnpaMWk5UHVKS3Rnc3B3T1ExN3FjcjhZUdIBY0FVX3lxTE5TWDhoRGNmcXpSdGF0Q25tanVyTF8yQS1VdDRubEE0Z28tTDFDMFBHVV85MXE2UmxXR0RtcmxBWWFVNXQ4LU9Wd3FHRnpaMWk5UHVKS3Rnc3B3T1ExN3FjcjhZUQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE11Q0ZjSlZqbzJic3ZNb1dvX19Yb3hib1UyY29WR0tld3hBMDlRR09XRFdOUmh5N0VYTWZ1NzhtRDlBcVFuNGRVRFEwLTVJQllzeWs5OFItdVptYm9XYWfSAWNBVV95cUxOU1g4aERjZnF6UnRhdENubWp1ckxfMkEtVXQ0bmxBNGdvLUwxQzBQR1VfOTFxNlJsV0dEbXJsQVlhVTV0OC1PVndxR0Z6WjFpOVB1Skt0Z3Nwd09RMTdxY3I4WVE?oc=5",
    "hints": [],
    "first_seen": "2026-11-12 03:40",
    "matches": [],
@@ -11045,25 +11257,39 @@
    "listed": false
   },
   {
-   "id": "news-0135a0b430052f60",
+   "id": "news-59d1dc898b4692e2",
    "kind": "新闻",
-   "country": "MY",
-   "from": "Citizens Journal",
-   "title": "Jason Mraz delights 8,000 fans at Bukit Jalil concert - Citizens Journal",
+   "country": "SG",
+   "from": "싱글리스트",
+   "title": "이즈나, 콘서트 투어 'WHO DAT GIRL?' 싱가포르 공연 성료...현지 매체 호평 - 싱글리스트",
    "text": null,
    "time": "2026-11-11 16:00",
-   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE14VDBHZGZDeGpHU04wZTcxMWE4RHZqV2NlTHZWMUdkMHJsTHB5WGlxRnRjTWRPWTBxbFBJT1M0WjZJTlBCTG11ZU5DSnFkLUdWc3E2Z0lhZVBreDlmQUhQLXRyaV9JN1hXSWc4OVZtR2R3enJPWHVGajVMSFVxMkU?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1uclBZWTJsTGdVLVN6TTJMWUozMVNuMGpmdXpBT0dBbUhsUS13Tk1VZ1JUNXVlN3RtM2FYU1IzaGRMRXNuSmJCS2NTejkyZlBabVVmaFJhMFhzS0VfdWpPc2pJV2RrZw?oc=5",
    "hints": [],
-   "first_seen": "2026-11-04 14:39",
+   "first_seen": "2026-11-13 14:55",
    "matches": [],
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
-   "artist": "Jason Mraz",
-   "artist_fans": 2418345,
-   "artist_region": "欧美",
-   "artist_photo": "avatars/a-06b87835dbfb.jpg",
-   "hidden": null,
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
+   "listed": false
+  },
+  {
+   "id": "news-cd68f26c5ef2a6d1",
+   "kind": "新闻",
+   "country": "MY",
+   "from": "Vietnam.vn",
+   "title": "Menyebarkan konsert kebangsaan \"Warna-Warna Vietnam\" merentasi ruang digital. - Vietnam.vn",
+   "text": null,
+   "time": "2026-11-11 16:00",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPay0xQm1DRjB4T0lJREJGOXctR0hNWkM4QWNtV3ZTTnNJa3d0Sjk2TmtBYm04b0NtVk0xeW4tcEpDLTd6VHFCVG1VekNkZ044SnFuZ2FKMF95ZFk1ZERPdThKRXE2N2lfdmt4Ri1BYVA1RGR2bFViaTlMOU1IRHFES0oxM0l0RU1YeTVWUXZZR2s?oc=5",
+   "hints": [],
+   "first_seen": "2026-11-14 03:48",
+   "matches": [],
+   "sale_times": [],
+   "status": "rumor",
+   "platforms": [],
+   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
    "listed": false
   },
   {
@@ -11188,7 +11414,7 @@
     {
      "time": "2026-11-13 12:00",
      "line": "门票定于11月13日中午12时通过Fantopia.io正式公开发售",
-     "past": false,
+     "past": true,
      "kind": "general",
      "added": false,
      "name": null
@@ -11428,12 +11654,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": null,
+   "listed": false,
    "artist": "NCT",
    "artist_fans": 118334,
    "artist_region": "K-pop",
-   "artist_photo": "avatars/a-e913063e9679.jpg",
-   "hidden": null,
-   "listed": false
+   "artist_photo": "avatars/a-e913063e9679.jpg"
   },
   {
    "id": "news-8fcf06b9960a44aa",
@@ -11468,12 +11694,12 @@
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
+   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
+   "listed": false,
    "artist": "Mata",
    "artist_fans": 11889,
    "artist_region": "其他",
-   "artist_photo": "avatars/a-347dc4b9869f.jpg",
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
-   "listed": false
+   "artist_photo": "avatars/a-347dc4b9869f.jpg"
   },
   {
    "id": "news-50b779dd7aa48fa3",
@@ -14521,7 +14747,7 @@
    "status": "rumor",
    "platforms": [],
    "hidden": null,
-   "listed": true,
+   "listed": false,
    "artist": "KATSEYE",
    "artist_fans": 267055,
    "artist_region": "欧美",
@@ -15263,7 +15489,7 @@
    "status": "rumor",
    "platforms": [],
    "hidden": null,
-   "listed": true,
+   "listed": false,
    "artist": "KATSEYE",
    "artist_fans": 267055,
    "artist_region": "欧美",
@@ -16285,7 +16511,7 @@
    "status": "rumor",
    "platforms": [],
    "hidden": null,
-   "listed": true,
+   "listed": false,
    "artist": "KATSEYE",
    "artist_fans": 267055,
    "artist_region": "欧美",
@@ -16307,7 +16533,7 @@
    "status": "rumor",
    "platforms": [],
    "hidden": null,
-   "listed": true,
+   "listed": false,
    "artist": "KATSEYE",
    "artist_fans": 267055,
    "artist_region": "欧美",
@@ -16347,7 +16573,7 @@
    "status": "rumor",
    "platforms": [],
    "hidden": null,
-   "listed": true,
+   "listed": false,
    "artist": "KATSEYE",
    "artist_fans": 267055,
    "artist_region": "欧美",
@@ -16369,7 +16595,7 @@
    "status": "rumor",
    "platforms": [],
    "hidden": null,
-   "listed": true,
+   "listed": false,
    "artist": "KATSEYE",
    "artist_fans": 267055,
    "artist_region": "欧美",
@@ -19773,14 +19999,16 @@
    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNMjRQVGdsUXpPUElyM2RidHFDOEVLWGJVd0h6SmJlOUN4ZFBWSGljME1lNU9pazc1UTd5WlJXQjgyR3h5Y0wyYWJ4SUNkVmY3LUVaNGx3QnBrcWxQNGt3T1BjV1dWUUtlc2llUkdhQktzb0dPTzloSHg2dG5raUVRQTN4ZE1FdTVWcUdhYW9UUkN6TE1uRnlmS3pEZlZZVUg1OHY4bkJ0VVFiMnk2aXdMWlVBME7SAbQBQVVfeXFMTTI0UFRnbFF6T1BJcjNkYnRxQzhFS1hiVXdIekpiZTlDeGRQVkhpYzBNZTVPaWs3NVE3eVpSV0I4Mkd4eWNMMmFieElDZFZmNy1FWjRsd0Jwa3FsUDRrd09QY1dXVlFLZXNpZVJHYUJLc29HT085aEh4NnRua2lFUUEzeGRNRXU1VnFHYWFvVFJDekxNbkZ5Zkt6RGZWWVVINTh2OG5CdFVRYjJ5Nml3TFpVQTBO?oc=5",
    "hints": [],
    "first_seen": "2026-10-24 01:13",
-   "matches": [
-    "t2u-52726"
-   ],
+   "matches": [],
    "sale_times": [],
    "status": "rumor",
    "platforms": [],
    "hidden": null,
-   "listed": true
+   "listed": false,
+   "artist": "Timeless",
+   "artist_fans": 9444,
+   "artist_region": "欧美",
+   "artist_photo": "avatars/a-f2026124fed3.jpg"
   },
   {
    "id": "news-892461523db3ce80",
@@ -24551,412 +24779,6 @@
    "platforms": [],
    "hidden": null,
    "listed": true
-  },
-  {
-   "id": "news-7ea072f8be41479e",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "Berita Harian",
-   "title": "Tiket konsert mini Tomok habis selepas 3 jam - Berita Harian",
-   "text": null,
-   "time": "2026-10-14 22:49",
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQT2VxUmNHczBIQ29DOUUyb2F0cG40aGNmQkRGaDFQMjNyQUVyU0M1bEZ2Mjc2b2RWa1haZC1NNlREcWtuMW9Gbmo1ODFRaTFMeWlhTHA5ZGM2eV9BbEJXNnhpMUtIcWlYcWlENDlHUGhOSXd3OTR1N3ZZZ0RXZDQ4ZWpMdmpMMWR2S0Vsa0I3U2RLX0I0dWRsSnRkZVZONEZlMXZPWdIBqgFBVV95cUxOdUdFVUhRVWN6cXRqaUdaVm5Lbm43cjZlUU9pNzNDMVgtQjdacFY5UkpuVnVIeDRYeVJvVEdiazh6ZFZMdVhVSWE2NThaQ1ZvZlNHU2tGX3pRZHpicUI2clZPRG14XzF1MnlXaFl3Vmdib09NR1dpRWdQbU5lWHpPeHUxQVAxcTFiR1lWMUhZMHhuWnNrYjdtYkpPZkZQdHZ5S3hYdVpyM1Nvdw?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-17 12:38",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
-  },
-  {
-   "id": "news-1c6257380f7b7cc0",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "马来西亚东方日报",
-   "title": "兑现承诺重返大马开唱 郑恩地感性喊：你们是我的全部 - 马来西亚东方日报",
-   "text": null,
-   "time": "2026-10-14 21:00",
-   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0xUUxWX2ZIU0dZbmxfUU16d09LYmgwRDFtZFpUSnNWN1BBX0VnbEpsMGJzU2lGdHEyNFZsRnEwR1dGUmE5d3BjRmwxdWhZLUw2RXhZclJWTklUSnA3b2lGTU1MLXVQeTZLQ1hMTUFFdzhUOU5HcUJobg?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-15 01:17",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
-  },
-  {
-   "id": "news-39249e9d5f4e830d",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "东方日报 娱乐",
-   "title": "兑现承诺重返大马开唱　郑恩地感性喊：你们是我的全部",
-   "text": "（吉隆坡14日讯）5月才随组合来马开唱的Apink主唱郑恩地，上周日（11日）晚带着2026个人演唱会亚洲巡演《SUMMER, I》再度与大马PANDA（粉丝昵称）见面。有别于上次演出时感性的“哭包”模样，这次的郑恩地调皮又活泼，面对粉丝接连不断的示爱与赞美，她也大方收下告白，更直呼大家的热情让她感到满满的幸福与开心！ View this post on Instagram A post shared by U玩食 ufoodtravel (@ufoodtravel)首...",
-   "time": "2026-10-14 21:00",
-   "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/14/854557",
-   "hints": [],
-   "sale_times": [],
-   "first_seen": "2026-10-15 01:17",
-   "matches": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
-  },
-  {
-   "id": "news-6a2dbde399eca81b",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "Vietnam.vn",
-   "title": "Konsert BIGBANG tingkatkan pelancongan di Hanoi. - Vietnam.vn",
-   "text": null,
-   "time": "2026-10-14 18:04",
-   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA1dmRGTzlMb2ZzR3J5OERJNzhtZW5SRF9QRE54SlNBMlBwMDRQeVIzamhZaWttNmZrbWNuS0I4dTlVTXozb0EwazRmeTVodXREUkVjalpvTDJqMEVfNTdiVmQ1a0ZQM0p1Zmp1MW8tVURsRmc?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-15 12:50",
-   "matches": [
-    "fantopia-0peucdui"
-   ],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": null,
-   "listed": true
-  },
-  {
-   "id": "news-67049a070a145745",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "Vietnam.vn",
-   "title": "Pelbagai projek sedang menyokong kumpulan Anh Trai menjelang konsert \"Say Hi\" Tinh Ha mereka. - Vietnam.vn",
-   "text": null,
-   "time": "2026-10-14 18:04",
-   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQMlg0T1VYeVo5TWJia0c5OUZhU29lZHVtVk9rOWdOYmhnbVo4a08yMHBNTlhCMlo3TktlYUxSamFRdzBpcUw4c1dHaXlhMHVWVEhNeWwzY0FuUzRrQ0daTTZBcFJxb2xtUmZiNUFuelg3SUs5UWFDUGdVVzJXZUF2N3c5OXVIVzhSQnZqTWlkUWtEVXdCS0MyS1dzTFN2dFE?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-16 01:06",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
-  },
-  {
-   "id": "news-8c0b18d9be5dd920",
-   "kind": "新闻",
-   "country": "SG",
-   "from": "Hypebeast.KR",
-   "title": "‘진격의 거인: 더 뮤지컬’, 월드 투어의 시작을 알리며 싱가포르로 향하다 - Hypebeast.KR",
-   "text": null,
-   "time": "2026-10-14 17:34",
-   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPMmRxM1YxcXg0Z09ZTG1UN0FTNzNVcEF3NXlFMjdJZ0FSREhhZXN2U3dySzBNY1NQdXlENnQ0dHRkUWt3bmFKLXAxTTUyYUR1Zm5VTUNVOUttdVlCR21vWFlJcHppcEprVm9fUnVOZ3diZ1B0Z3VKY1dqR3E1OWdqUmNQajY5VWRsUW1vOWFMZzdhSTg?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-15 01:17",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
-  },
-  {
-   "id": "news-f3707a90026cbd66",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "China Press",
-   "title": "《破晓》巡演首插旗大马 姚晓棠1212登云顶开唱 - China Press",
-   "text": null,
-   "time": "2026-10-14 16:33",
-   "url": "https://news.google.com/rss/articles/CBMivAJBVV95cUxOZGpPSTdLYWtkZ0FoVjZmUmIxNjZxVVM5aFZYSXV3MFpaTENaU2FxSE5qTFFFcVdHQTFxLXZQVHhaQ2U4djd2UGlKekFacVNCSVE5YlZaNHdPUXo3a2p2SE9PcTNXcVJZNG5GZUpVaWhCT2oweGNZN0ZkRkxYNTR5aHFnZG9fSW9jdW40dmRva2ZlemtTdExObThCM2tVeEUwWDg0dXl3aUQ0Y2hqZlB2cTAtNUYxRWUzRTNWdHVjM1pneHI3eDlwSzhGTFdrNVZqa3lwMmFrX2p3VmhCWmlib3RyNFFwNTFzMmdOZnlEWFhpYjRJU3FaN0lhQ0FYLWFuQUc5NlJ4TG5fdFFnODZCMkphQUgxQi0ySVFKSUE0SVBRdk1GZ1BtUDZaVWZXWWNHOUg3NERsZzAwTXNi?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-15 01:17",
-   "matches": [
-    "bms-BMSYXT26"
-   ],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": null,
-   "listed": true
-  },
-  {
-   "id": "news-ef45aa3046768af2",
-   "kind": "新闻",
-   "country": "SG",
-   "from": "더쎈뉴스",
-   "title": "코르티스, ‘GREENGREEN’으로 5억 스트리밍 돌파…‘F1 싱가포르 공연 효과’ 눈길 - 더쎈뉴스",
-   "text": null,
-   "time": "2026-10-14 15:44",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE03OVBCZXlXZUl2WHNIYWx1dGRHRDNuR2VwV0ZZb2luVHZMMTNSTGJVaGtZOW9vQTdaVS1tbmQ0RWZQeGNRUEY5Y0RpXzNJM1dLRHNEOVU0bzZ4U2h2cU5fQ2h1d2M3RHdW?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-15 01:17",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
-  },
-  {
-   "id": "news-f99bfc0bbdf047a3",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "光明日报",
-   "title": "肖战突放大招官宣巡演大马粉丝：抢到是命250万预约抢4场7.5万票| 娱乐 | 2026-10-14 - 光明日报",
-   "text": null,
-   "time": "2026-10-14 15:42",
-   "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxQV2xqRlA1azlHR194Nzh3RTZjSHFjY3MwNUFOcklqWHl3TmUzN2FtcEx3cXBEVmRUc1B1Q0ZtZXZTV1ZoZDF3WkhWTl9vVTZST1B4eUVOa0pnR1MzcGk3bFZPNlRRcmZJejd4UnZZV2RPemQ3SVpLN0RmdWpuOTk1bldDNWVzZ1d5c0hzSkdnZDFVeWRUX2VwSXFtZjRaMXdTdHhNM2pBNnY3TERFOUhUNGcwSjVLTFFHbVctekVqdmRWVHF1VFd0QWhJaUtmbzNlc29LQjFWZm9RSm02ZDhjaWVOMFQzdEQ3N29CaDlEN2U5OWhHTjd4MVAwQ2RSN1BBQmZvN3I3MERydmNqcE4wYW1vZnJ1YnVSSjl4N0wteDE1QTFZVUdHMk4wZVplT1NxeFF5Q0Q3d2ZrX2tPa3Nycw?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-15 01:17",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
-  },
-  {
-   "id": "news-41a173a3097ede1b",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "精彩大马",
-   "title": "姚晓棠将首次海外开唱 《破晓·棒棒棠》12月12日马来西亚见 | 精彩大马 - 精彩大马",
-   "text": null,
-   "time": "2026-10-14 15:12",
-   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNajAza0EyQ216Xy1rZEtlNE1QMG9vVWFfYmdQT0w2aWQ1bWdqN3ZFcWpvYzVCZHhJVkxpZWpxU3kyVE1pTDJIWGJ2RVNOUzJqVnNJY1lFTGl5RElYTDB3alFIaDZQbFRRaXIwclVpdUswQmhSNllQVDhjd0VXSmJSRDRxRGdmalJPM2pFclBWWlBlMDJCdnlONjFGekxtTXJaSE0zWEx4R190cGxqaFZ2dk84QjVEcnB5QUNLdmFocE3SAcYBQVVfeXFMTjdFZHprbFRTR29qX1VDekw3UlNLc1lGVC1kXzN2SDZueWI2M2J5Q05FbURlSkpXVzFoVUFIaENZOURPYklOaXJYZ08wR2tLMnBBZ0wwOVpwTzI0SDJleTFZelNQVzlJdm1hVklxdkJzOVpaU2E3RWFxaHF3Mm5NdGdGRC1fM2dDbDZUQk90Z0RYbzlsVEs2eWhSOVdCVW1qMV96UHozZVBKSmJiYjVLaXAxclVOVHh2T19UODdESVc4cVYzdl9R?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-15 01:17",
-   "matches": [
-    "bms-BMSYXT26"
-   ],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": null,
-   "listed": true
-  },
-  {
-   "id": "news-24e3cbf0324d44f7",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "Vietnam.vn",
-   "title": "Konsert berskala besar sedang meletup di Vietnam, dengan banyak malam tiket habis dijual. - Vietnam.vn",
-   "text": null,
-   "time": "2026-10-14 15:00",
-   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOOEVqLUtGRS01VTJDWGhoZmhpMjBmY2paMWZjbGdXTU9fSHNBLXAweU9nM2QxZnQtWjBpV1dtcE1wckZaQ0ZCeFZEZXFNZ3RyY05JWlk2eWl6SHpzQ2dvOUliRXB0M1MzX2pKc1N2dGNiVTYyaVhBS2ZnNmpKQ3B3amg2VUZqVEJtdFNFeA?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-17 12:38",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
-  },
-  {
-   "id": "news-b4033bc41cc47656",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "Budiey",
-   "title": "Konsert Simfoni Seni Bintang Universe UTM Himpunkan 9 Penyanyi Tersohor - Budiey",
-   "text": null,
-   "time": "2026-10-14 14:56",
-   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRk52NElsenVja25KeDdzd082azctNXMzNzZ2X3ZSQzlKTkdEa3kzMUZ3UTA0UDB2c2c3ZUJGZXhHOVNmU0ttSjZRWFAyeTVHWXJuWEFDdDF3QWhMM1llOXd4YTd0a1prNC1Hd1p2NHZrTHU2UEdFN2dtVWllcmRPb3EweHZ6QjV5a3UzcHpiOGVsWlRsbkc4VXA5MA?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-15 01:17",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
-  },
-  {
-   "id": "news-0761dfe43e493e7d",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "东方日报 娱乐",
-   "title": "新生代歌手姚晓棠海外首唱来马！　《破晓·棒棒棠》1212云顶开唱",
-   "text": "（吉隆坡14日讯）中国新生代歌手姚晓棠将携自己的《破晓·棒棒棠》个人演唱会，于12月12日（星期六）傍晚6时登上云顶世界云星剧场（Arena of Stars）！这是她出道五年来首次赴海外举办个人演唱会，将与马来西亚歌迷近距离相聚，以歌声开启音乐旅程的崭新篇章。《破晓》巡演自启动以来，已陆续走过北京、上海、深圳、南京、杭州及广州等城市。此次来到马来西亚，姚晓棠将把沿途累积的感动与舞台能量带到云顶，与期待已久的棒棒棠们共赴一场满载惊喜的“破晓之夜”。以细腻歌声打动人心，展现新生代音乐实力凭借清澈细...\n（吉隆坡14日讯）中国新生代歌手姚晓棠将携自己的《破晓·棒棒棠》个人演唱会，于12月12日（星期六）傍晚6时登上云顶世界云星剧场（Arena of Stars）！这是她出道五年来首次赴海外举办个人演唱会，将与马来西亚歌迷近距离相聚，以歌声开启音乐旅程的崭新篇章。\n《破晓》巡演自启动以来，已陆续走过北京、上海、深圳、南京、杭州及广州等城市。此次来到马来西亚，姚晓棠将把沿途累积的感动与舞台能量带到云顶，与期待已久的棒棒棠们共赴一场满载惊喜的“破晓之夜”。\n以细腻歌声打动人心，展现新生代音乐实力\n凭借清澈细腻的声线与真挚自然的演唱风格，姚晓棠逐渐在华语乐坛崭露头角。从《已经有我啦》《她的树》《关于你》《失》，到《一天世界》《重》《连带保证人》《一万公里的思念》等作品，她在不同曲风中探索个人表达，展现日益丰富的音乐面貌。她也诠释过不同风格的影视OST《只如初见》《泪念》《愿》《光芒为我存在》《甜蜜配方》等影视OST演唱，以声音呈现出故事中的情感与人物心境。\n近年来，姚晓棠在音乐综艺中的亮眼表现，让更多听众认识了她。在《天赐的声音》中，她演绎的《最后一页》《看着我的眼睛说》《座位》《妥协》《虹之间》等歌曲，充分展现扎实唱功与细腻的情绪掌控。2025年，她首次登上中央广播电视总台春节联欢晚会，同年获颁第32届东方风云榜“东方新人”及微博音乐盛典“拿云飞跃音乐人”荣誉，为音乐事业写下新的里程碑。\n以“破晓”为名，唱出成长与突破\n“破晓”象征划破黑夜的第一道光，也承载着姚晓棠对成长、突破与自由的理解。如果以一天比喻人生的进程，此刻的她正站在自己的日出时分，带着对过往的感恩，迎向未来的无限可能。\n此次巡演以她的成长与蜕变为主线，将音乐、舞台视觉与情绪表达融为一体。从温柔动人的抒情旋律，到充满活力的唱跳表演，姚晓棠将以多元曲风呈现个人音乐世界，让歌迷感受作品之外更鲜明的舞台魅力。\n她也希望将《破晓》打造为一座自在而纯粹的音乐“乌托邦”，让大家暂时放下日常烦扰，尽情合唱、释放情绪，在音乐中共享欢乐与感动。\n10月22日全面开售，云顶会员享优先购票优惠\n由Titans Entertainment、百沐娱乐和Star Planet 星艺娱乐联合主办，姚晓棠“破晓·棒棒棠”演唱会——马来西亚站门票将于10月22日，下午2时正式全面开售。\n云顶云尊金卡及以上的会员可于10月15日起，通过 rwgenting.com 或其指定销售点，以现金、信用卡或云顶积分优先购票，并享有九折优惠。优惠适用于VIP、PS1、PS2及PS3票价，须符合相关条款与条件。\n更多演唱会详情及购票平台浏览： www.starplanet.com.my | titansentertainment.co | rwgenting.com | my.bookmyshow.com | superfootickets.com | damai.cn | maiseat.com\n要看最快最熱資訊，請來Follow我們 《東方日報》 WhatsApp Channel .\nIOS： https://odn.my/ios",
-   "time": "2026-10-14 14:30",
-   "url": "https://www.orientaldaily.com.my/news/entertainment/2026/10/14/855063",
-   "hints": [],
-   "sale_times": [],
-   "first_seen": "2026-10-15 01:17",
-   "matches": [
-    "bms-BMSYXT26"
-   ],
-   "status": "rumor",
-   "platforms": [
-    "BookMyShow",
-    "MAISEAT",
-    "Star Planet"
-   ],
-   "hidden": null,
-   "listed": true
-  },
-  {
-   "id": "news-2737843932229b41",
-   "kind": "新闻",
-   "country": "SG",
-   "from": "The Straits Times",
-   "title": "Nene Royal performs on stage during Avenged Sevenfold concert in Singapore - The Straits Times",
-   "text": null,
-   "time": "2026-10-14 13:44",
-   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5VbUlQMXg5SGZPWC03SDBXeUgyRjg2aTRDbEY2Um9oLXZMaEg1SGNpR3RnaHdqdW5oYUgxeTVYclB3QXFLUTFmSnVLaVdHWlJLSXBicFFEcDRBSGtMY3c?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-15 01:17",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": null,
-   "listed": false,
-   "artist": "Avenged Sevenfold",
-   "artist_fans": 1934422,
-   "artist_region": "欧美",
-   "artist_photo": "avatars/a-ec128b805e29.jpg"
-  },
-  {
-   "id": "news-b17ac9fe739fb87f",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "Vietnam.vn",
-   "title": "Golongan muda di China berpusu-pusu menyewa telefon mewah untuk menonton konsert. - Vietnam.vn",
-   "text": null,
-   "time": "2026-10-14 12:08",
-   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOXzJTX3hvMTJrb0I0RFE2bm9OMjQ2aFF0WFIwSlFEeTkxcGlIcm9XWS1zX2t3R2ZRcmgzOUNsV1NISXBfVmdGX0tfd09pdlJudmNOSzU2NEJOaE1QV185YnZPZk1yaUNqdllsNjZsTnF0ZjluRzZmMzhybm5FbkNYQ2dmR250Qm9mamFlRWFVQVpEbUNC?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-15 12:50",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
-  },
-  {
-   "id": "news-8bb49013e448b5f4",
-   "kind": "新闻",
-   "country": "SG",
-   "from": "Billboard",
-   "title": "After F1 Singapore Concert, Lana Del Rey Hints at Another Visit to Asia - Billboard",
-   "text": null,
-   "time": "2026-10-14 11:11",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQbjZMR0Z0SjZhaFpUS0d0a2c0RTJiVm85RllCb3dLemQ2YlljRG9tblNnUHozOU1meEZkdDVKVVlQZ01WakFVekJZWmdwSTljU3BmZ2lSQlVyYTBsT2JkUGJpRTdUQmNjTjJwOUd0aGpwbDRlV3dIbGR3RHQwUGlQUEdROEEzSEgyaDdqdWNySUh3eEVyRHE4ejhpX0h4VTNIV29weXF3?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-14 13:02",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": null,
-   "listed": false,
-   "artist": "Lana Del Rey",
-   "artist_fans": 5820410,
-   "artist_region": "欧美",
-   "artist_photo": "avatars/a-09ab80feedba.jpg"
-  },
-  {
-   "id": "news-07c422d45682f70c",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "Newswav",
-   "title": "Osaka Comes to KL! Nihon Matsuri 2026 Returns With Japanese Food, Live Concerts & More From RM25 - Newswav",
-   "text": null,
-   "time": "2026-10-14 09:52",
-   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPRU1vLU9ocEdKTGFmZnFOTzFDdW05Z194Y2FpU0hBRHlZZnRZcUZrMjJTMWNycS1BOHZ2R09hR184a2RmTUJHaDlvSFNhYmo0UEVidW8xZjR0Z2M5b0gtRE5PVlU0WGRQMGVrWWFIMmxGdU9wZkJUMm9pc1NPa1FJZkdwSUFnSm1ST255elhTT2Z5QkJwak5TQ3RDanB2UnQwTmRfZmh4RzdOTnk1RzNDTTlWLVdKRU0?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-15 01:17",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
-  },
-  {
-   "id": "news-a23240a04fa65b13",
-   "kind": "新闻",
-   "country": "SG",
-   "from": "The Straits Times",
-   "title": "Still Fantastic: A decade later, Singapore fans gear up for BigBang’s comeback concerts - The Straits Times",
-   "text": null,
-   "time": "2026-10-14 08:00",
-   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPbTd6WEh6VGItZThWeTVpRlFyT2ZVbi1IeVE4U29FbWJCNVl6UlRRc1VyOGxMQ2ZjdnZVRUs5NU9ySnB1SnMzc2NQMmV2WjdZMnoxbjNfOWF0VTBmeW1yRUp5a1ZYWkpKZC1pclYweDVZQl84cEhfQ04wb0NxUk1CcGUzX2dNVFpvc3pOT2hqZm1ZXzhBSzNDanlpSG5ZWU1kZkNKaHZ4cWJycGlIamdHZHh5RFhxNmhPdExyQW1kbjhnUk5XUnVvc1ktVEM?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-15 01:17",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": null,
-   "listed": true,
-   "artist": "BIGBANG",
-   "artist_fans": 727860,
-   "artist_region": "K-pop",
-   "artist_photo": "avatars/a-910706c961d7.jpg"
-  },
-  {
-   "id": "news-600a4e8fb61874ba",
-   "kind": "新闻",
-   "country": "SG",
-   "from": "YouTube",
-   "title": "[4k Full Concert] Avenged Sevenfold Asia Tour 2026 (Live in Singapore) - 13 Oct 2026 - YouTube",
-   "text": null,
-   "time": "2026-10-14 07:43",
-   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBWNVAwX0lOak5FUFI0ZmFfQlo5RTZJNFFVdW95QmMzYkI5ekN4Z3NieVJuWEJkM0FqcWI5ZTViOTE3NnJhcHJYYWRrc2ZZUlFPdVJHamNlSUt2M2NH?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-15 01:17",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "歌手类别：其他（只看K-pop、华语、欧美）",
-   "listed": false,
-   "artist": "YouTube",
-   "artist_fans": 6483,
-   "artist_region": "其他",
-   "artist_photo": "avatars/a-d5244a331aad.jpg"
-  },
-  {
-   "id": "news-6c99b8bc1258bc32",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "Astro Awani",
-   "title": "KPDN akan gubal peraturan khusus bendung kegiatan ulat tiket - Astro Awani",
-   "text": null,
-   "time": "2026-10-14 00:39",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQZFdXMFA3UTRXZVVRNmRVZHk4aDZyRDN5YWRtNDNRRzNyMHRfXy1fOWN0blJpQURwdGxiRURMQ0N4NnRiNHhpeXdjRzdDY1RCbTVqRGxOMkh5WW1DQWFQTWU3Wk5taGhhVXlzOFV2dzFTc1JKYkhQc2hoRjdrUFZrYWJWT0hianlYOHM5bC1UeEY2VXhvVlhfeQ?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-14 03:20",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
-  },
-  {
-   "id": "news-99f30a3e89ff0253",
-   "kind": "新闻",
-   "country": "MY",
-   "from": "NST Online",
-   "title": "#SHOWBIZ: Isyana Sarasvati's KL concert cancelled over low ticket sales - NST Online",
-   "text": null,
-   "time": "2026-10-14 00:00",
-   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNX0hRdVNpRWxBUkZFODlGOXdMMTJpUlJWdVV5dURVUDNaQVpCakFvUU9mY3hlOEVXZVd1WXkwZURUOXZDYkMwN0ZMVHB4SEhpY2VjS1Nmd0dEZHJoVzJKMTVPVERZb3M0eGFWMTdNaE9qUW8yUS00SEZpSTlxRzZSVWM2N2NYVEJvSGZIaFAzV1VUN0lFSnRoV3BOaTdMVDB6YjFkT2FoZlY1QnZPUk1mdjZHRkl4U3RteVHSAb8BQVVfeXFMTU1vb1FweElsZW1haU5IY3BrcUlrUlZkaHJlSEY0MjM0VWQ0RTNycG05SUVxcVduMzhCSFRfakJUMTN5ZHNydDhvYnBILTRxc2ZlbW5JTmp0bkZKLXRUWWpiV242eUxqaFNMTHlRV2lqN196c01Zd0t0ODRfd1phbE9EVGVqWHYzaUF3TDBJSzgzWHRPc0dsVUhiNFZfcU5SZUJ5YlhFTlJhX2lXdmNiOVJERExHeGFxT3c3OG83RW8?oc=5",
-   "hints": [],
-   "first_seen": "2026-10-17 00:43",
-   "matches": [],
-   "sale_times": [],
-   "status": "rumor",
-   "platforms": [],
-   "hidden": "认不出是哪位明星（待人工或 AI 分析）",
-   "listed": false
   }
  ]
 }
